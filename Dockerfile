@@ -47,6 +47,6 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN npx next telemetry disable
 
 # CMD ["yarn", "start"]
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["sh", "/app/entrypoint.sh"]
 
 CMD ["npm", "run", "start"]
