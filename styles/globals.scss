@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./fonts.scss";
+
+.themeShadow {
+    -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
+    filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
+}
+
+.highlightsShadow {
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black !important;
+}
+.dark .swiper-button-next,
+.dark .swiper-button-prev {
+    color: white !important;
+}
+
+.verticalLine {
+    border-left: thin solid rgba(0, 0, 0, 0.15);
+}
+
+.horizontallLine {
+    border-top: thin solid rgba(0, 0, 0, 0.15);
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.dark .homeInfo-shadow {
+    box-shadow: 0 0 #0000 !important;
+}
+.homeInfo-shadow {
+    box-shadow: 0px 0px 46px rgba(214, 214, 214, 0.15), 0px 0px 20px rgba(214, 214, 214, 0.6);
+}
+
+.autolykos-bg {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.dark .autolykos-bg {
+    background: linear-gradient(240.01deg, rgba(255, 255, 255, 0.15) -4.45%, rgba(255, 255, 255, 0) 17.42%), linear-gradient(246.95deg, rgba(255, 255, 255, 0) 65.9%, rgba(255, 255, 255, 0.15) 100%), rgba(18, 18, 18, 0.4);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
+}

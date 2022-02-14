@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA']

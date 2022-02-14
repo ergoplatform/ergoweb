@@ -1,0 +1,302 @@
+{
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "smth new"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "БЛОГ"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к нашим каналам"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Сигнавты"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Внести вклад в Ergo"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Фонд Эрго"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "СООБЩЕСТВО"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Выпуски программного обеспечения"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Гранты и награды"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "Часто задаваемые вопросы"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Эрго Проводник"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Документы"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "ОТКРОЙТЕ ДЛЯ СЕБЯ"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Дорожная карта"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Эргонавт"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "То есть розыгрыш"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Следовательно, реальная жизнь"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "ЭКОСИСТЕМА"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Майнинг"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Калькулятор майнинга"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Биржи"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "ПОЛУЧИТЬ ЭРГ"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Юридический"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "НОВОСТИ"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Политика конфиденциальности"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "ОТКРОЙТЕ ДЛЯ СЕБЯ"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "ЭКОСИСТЕМА"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "ЭРГО СООБЩЕСТВО"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "ПОЛУЧИТЬ ЭРГО"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "Не найдено"
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "Не найдено"
+    }
+  ],
+  "pages.500.hero": [
+    {
+      "type": 0,
+      "value": "Ошибка сервера"
+    }
+  ],
+  "pages.500.title": [
+    {
+      "type": 0,
+      "value": "Ошибка сервера"
+    }
+  ],
+  "pages.community.hero": [
+    {
+      "type": 0,
+      "value": "Сообщество"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Сообщество"
+    }
+  ],
+  "pages.discover.hero": [
+    {
+      "type": 0,
+      "value": "Откройте для себя"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Откройте для себя"
+    }
+  ],
+  "pages.ecosystem.hero": [
+    {
+      "type": 0,
+      "value": "Экосистема"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Экосистема"
+    }
+  ],
+  "pages.get-erg.hero": [
+    {
+      "type": 0,
+      "value": "Получить Erg"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "Получить Erg"
+    }
+  ],
+  "pages.home.hero": [
+    {
+      "type": 0,
+      "value": "Главная"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Главная"
+    }
+  ],
+  "pages.legal.hero": [
+    {
+      "type": 0,
+      "value": "Легально"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Юридический"
+    }
+  ],
+  "pages.post.hero": [
+    {
+      "type": 0,
+      "value": "Опубликовать"
+    }
+  ],
+  "pages.privacy-policy.hero": [
+    {
+      "type": 0,
+      "value": "Политика конфиденциальности"
+    }
+  ],
+  "pages.privacy-policy.title": [
+    {
+      "type": 0,
+      "value": "Политика конфиденциальности"
+    }
+  ]
+}

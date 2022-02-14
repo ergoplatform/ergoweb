@@ -1,0 +1,296 @@
+{
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Únete a nuestros canales"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Sigmanautas"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Contribuir a Ergo"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Fundación Ergo"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "COMUNIDAD"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Versiones de software"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Subvenciones y recompensas"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "Preguntas frecuentes"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Explorador ergonómico"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Documentos"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "DESCUBRIR"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Hoja de ruta"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Ergonauta"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Ergo Rifa"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Ergonomía de la vida real"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "ECOSISTEMA"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Minería"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Calculadora Minera"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Carteras"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Intercambios"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "OBTENER ERG"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Legal"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "NOTICIAS"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Política de Privacidad"
+    }
+  ],
+  "navegación.descubrir": [
+    {
+      "type": 0,
+      "value": "DESCUBRIR"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "ECOSISTEMA"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "COMUNIDAD ERGO"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "OBTENGA ERGO"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "No encontrado"
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "No encontrado"
+    }
+  ],
+  "pages.500.hero": [
+    {
+      "type": 0,
+      "value": "Error del servidor"
+    }
+  ],
+  "pages.500.title": [
+    {
+      "type": 0,
+      "value": "Error del servidor"
+    }
+  ],
+  "pages.community.hero": [
+    {
+      "type": 0,
+      "value": "Comunidad"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Comunidad"
+    }
+  ],
+  "pages.discover.hero": [
+    {
+      "type": 0,
+      "value": "Descubrir"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Descubrir"
+    }
+  ],
+  "pages.ecosystem.hero": [
+    {
+      "type": 0,
+      "value": "Ecosistema"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Ecosistema"
+    }
+  ],
+  "pages.get-erg.hero": [
+    {
+      "type": 0,
+      "value": "GetErg"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "GetErg"
+    }
+  ],
+  "pages.home.hero": [
+    {
+      "type": 0,
+      "value": "Inicio"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Inicio"
+    }
+  ],
+  "pages.legal.hero": [
+    {
+      "type": 0,
+      "value": "Legal"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Legal"
+    }
+  ],
+  "pages.post.hero": [
+    {
+      "type": 0,
+      "value": "Publicar"
+    }
+  ],
+  "pages.privacy-policy.hero": [
+    {
+      "type": 0,
+      "value": "Política de privacidad"
+    }
+  ],
+  "pages.privacy-policy.title": [
+    {
+      "type": 0,
+      "value": "Política de privacidad"
+    }
+  ]
+}
