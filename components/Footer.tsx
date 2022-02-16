@@ -24,7 +24,7 @@ import { BpsaaLogo, LogoWithText } from "./icons"
 export default function Footer() {
     return (
         <footer>
-            <div className="max-w-7xl mx-auto py-12">
+            <div className="max-w-7xl mx-auto py-12 px-4">
                 <div className="md:flex justify-between">
                     <div className="my-6 md:my-auto flex justify-center">
                         <Link href='/'><button><LogoWithText viewBox="0 0 213 82" className='w-40 md:w-52' /></button></Link>

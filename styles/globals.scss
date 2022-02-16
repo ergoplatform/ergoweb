@@ -70,3 +70,24 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+.post {
+    ul {
+        list-style-type: disc;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
