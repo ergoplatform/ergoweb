@@ -11,6 +11,7 @@ export { default as Highlight } from './Highlight'
 export { default as Ledger } from './Ledger'
 export { default as Linkedin } from './Linkedin'
 export { default as Logo } from './Logo'
+export { default as LogoBlack } from './LogoBlack'
 export { default as LogoWhite } from './LogoWhite'
 export { default as LogoWithText } from './LogoWithText'
 export { default as LogoWithTextWhite } from "./LogoWithTextWhite";

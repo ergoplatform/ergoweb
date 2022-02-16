@@ -1,12 +1,19 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router';
 import { FormattedMessage, useIntl } from 'react-intl'
 import Autolykos from '../components/home/Autolykos';
 import Highlights from '../components/home/Highlights';
 import HomeHero from '../components/home/HomeHero';
 import HomeInfo from '../components/home/HomeInfo';
 import Layout from '../components/Layout'
+import Feed from '../components/shared/Feed';
 
-const Home: NextPage = () => {
+type Props = {
+  posts?: any;
+};
+
+
+export default function Home(props:Props) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'pages.home.title', defaultMessage: 'Home' });
   return (
@@ -15,8 +22,17 @@ const Home: NextPage = () => {
       <Highlights />
       <HomeInfo />
       <Autolykos />
+      <Feed posts={props.posts} />
     </Layout>
   )
 }
 
-export default Home;
+export const getStaticProps = async () => {
+    const locale = 'en'
+    const posts = await fetch(
+        process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=" + locale
+    ).then((response) => response.json());
+    return {
+        props: { posts }
+    };
+};

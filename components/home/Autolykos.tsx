@@ -7,7 +7,7 @@ export default function Autolykos() {
 
   return (
     <>
-      <div className="mt-80 px-8 py-12 mx-4 rounded-xl autolykos-bg md:hidden">
+      <div className="mt-80 px-8 py-12 mx-4 rounded-xl card-bg md:hidden">
         <b className="font-roboto text-[14px]"><FormattedMessage defaultMessage="MINING CALCULATOR" id="components.autolykos.header" /></b>
         <p className="font-vinila-extended-bold text-[32px] leading-none mt-4"><FormattedMessage defaultMessage="The Future of Proof of Work" id="components.autolykos.title" /></p>
         <p className="mt-8"><FormattedMessage defaultMessage="<b>Autolykos</b> is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs." id="components.autolykos.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></p>

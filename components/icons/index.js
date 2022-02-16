@@ -18,6 +18,7 @@ export { default as LogoWhite } from "./LogoWhite";
 export { default as LogoWithText } from "./LogoWithText";
 export { default as LogoWithTextWhite } from "./LogoWithTextWhite";
 export { default as Logo } from "./Logo";
+export { default as LogoBlack } from "./LogoBlack";
 export { default as MenuClose } from "./MenuClose";
 export { default as MenuOpen } from "./MenuOpen";
 export { default as Power } from "./Power";

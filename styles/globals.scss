@@ -50,12 +50,23 @@
     box-shadow: 0px 0px 46px rgba(214, 214, 214, 0.15), 0px 0px 20px rgba(214, 214, 214, 0.6);
 }
 
-.autolykos-bg {
+.card-bg {
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
 }
 
-.dark .autolykos-bg {
+.dark .card-bg {
     background: linear-gradient(240.01deg, rgba(255, 255, 255, 0.15) -4.45%, rgba(255, 255, 255, 0) 17.42%), linear-gradient(246.95deg, rgba(255, 255, 255, 0) 65.9%, rgba(255, 255, 255, 0.15) 100%), rgba(18, 18, 18, 0.4);
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
