@@ -1,4 +1,32 @@
 {
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "MINE ERG"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "MINING CALCULATOR"
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+    }
+  ],
   "components.highlights.title": [
     {
       "type": 0,
@@ -21,6 +49,30 @@
     {
       "type": 0,
       "value": "Powering the Future of Finance"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "CIRCULATING SUPPLY"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "HASH RATE"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "TRANSACTIONS PER DAY"
+    }
+  ],
+  "components.homeInfo.version": [
+    {
+      "type": 0,
+      "value": "PROTOCOL VERSION"
     }
   ],
   "footer.blog.title": [
@@ -237,12 +289,6 @@
     {
       "type": 0,
       "value": "Server Error"
-    }
-  ],
-  "pages.community.hero": [
-    {
-      "type": 0,
-      "value": "Community"
     }
   ],
   "pages.community.title": [

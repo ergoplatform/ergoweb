@@ -13,7 +13,7 @@ type Props = {
 };
 
 
-export default function Home(props:Props) {
+export default function Home(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'pages.home.title', defaultMessage: 'Home' });
   return (
@@ -27,12 +27,12 @@ export default function Home(props:Props) {
   )
 }
 
-export const getStaticProps = async () => {
-    const locale = 'en'
-    const posts = await fetch(
-        process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=" + locale
-    ).then((response) => response.json());
-    return {
-        props: { posts }
-    };
+export const getServerSideProps = async () => {
+  const locale = 'en'
+  const posts = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=" + locale
+  ).then((response) => response.json());
+  return {
+    props: { posts }
+  };
 };

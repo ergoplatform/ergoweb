@@ -38,7 +38,7 @@ export default function Post({
                         {type}
                     </b> */}
                     {tags?.split(',').map((item, i) => (
-                        <b className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10">
+                        <b key={item.trim()} className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10">
                             {item.trim()}
                         </b>
                     ))}
@@ -46,7 +46,7 @@ export default function Post({
             </div>
             <div className="flex-1 p-6 h-60 flex flex-col justify-between rounded-b-2xl bg-white">
                 <div className="flex-1">
-                    <a href={type == 'news' ? url : '/blog/' + id} target="_blank" className="block mt-2">
+                    <a href={type == 'news' ? url : '/blog/' + id} target="_blank" rel="noreferrer" className="block mt-2">
                         <p className="font-roboto text-[20px] dark:text-black">{title}</p>
                         <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mt-2">{type == 'news' ? subtitle : removeMd(content)?.split(' ').splice(0,20).join(' ') + '...'}</p>
                     </a>

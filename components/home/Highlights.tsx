@@ -2,8 +2,8 @@ import { FormattedMessage } from "react-intl";
 import { Highlights1, Highlights2, Highlights3 } from "../icons";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-// import "swiper/css";
-// import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/navigation";
 import { getIconComponentByName } from "../../utils/icons-map";
 import Image from 'next/image'
 
