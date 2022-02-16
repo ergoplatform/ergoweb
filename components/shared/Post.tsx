@@ -44,11 +44,11 @@ export default function Post({
                     ))}
                 </div>
             </div>
-            <div className="flex-1 p-6 h-60 flex flex-col justify-between rounded-b-2xl bg-white">
-                <div className="flex-1">
+            <div className="flex-1 p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
+                <div className="flex-1 text-clip overflow-hidden">
                     <a href={type == 'news' ? url : '/blog/' + id} target="_blank" rel="noreferrer" className="block mt-2">
-                        <p className="font-roboto text-[20px] dark:text-black">{title}</p>
-                        <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mt-2">{type == 'news' ? subtitle : removeMd(content)?.split(' ').splice(0,20).join(' ') + '...'}</p>
+                        <p className="font-roboto text-[20px] dark:text-black h-14">{title}</p>
+                        <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mt-2">{type == 'news' ? subtitle : removeMd(content) + '...'}</p>
                     </a>
                 </div>
                 <div className="mt-4 flex items-center">
