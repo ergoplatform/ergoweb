@@ -5,6 +5,7 @@ import Autolykos from '../components/home/Autolykos';
 import Highlights from '../components/home/Highlights';
 import HomeHero from '../components/home/HomeHero';
 import HomeInfo from '../components/home/HomeInfo';
+import News from '../components/home/News';
 import Partners from '../components/home/Partners';
 import Layout from '../components/Layout'
 import Feed from '../components/shared/Feed';
@@ -12,6 +13,7 @@ import Feed from '../components/shared/Feed';
 type Props = {
   posts?: any;
   partners?: any;
+  news?: any;
 };
 
 
@@ -24,6 +26,7 @@ export default function Home(props: Props) {
       <Highlights />
       <HomeInfo />
       <Autolykos />
+      <News news={props.news} />
       <Feed posts={props.posts} />
       <Partners partners={props.partners} />
     </Layout>
@@ -37,8 +40,11 @@ export const getServerSideProps = async (context: any) => {
   const partners = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API + "/api/partners?populate=*"
   ).then((response) => response.json());
+  const news = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news&locale=" + context.locale
+  ).then((response) => response.json());
   
   return {
-    props: { posts, partners }
+    props: { posts, partners, news }
   };
 };

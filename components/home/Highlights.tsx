@@ -49,7 +49,7 @@ function Highlights() {
         <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858]"><FormattedMessage defaultMessage="HIGHLIGHTS" id="components.highlights.title" /></p>
       </div>
 
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper navigation={true} modules={[Navigation]} className="SwiperHighlights">
         {
           slides.map((item, i) => (
             <SwiperSlide key={i}>

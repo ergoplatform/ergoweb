@@ -14,7 +14,7 @@ export default function Autolykos() {
         <div className="my-8"><Button text={button} textColor="black" url="/get-erg" newTab={false} underline={false} background={true} iconColor="black" icon="ArrowRight" /></div>
       </div>
 
-      <div className="hidden md:block px-8 py-12 mx-28 rounded-xl autolykos-bg mt-52">
+      <div className="hidden md:block px-8 py-12 mx-28 rounded-xl card-bg mt-52">
         <b className="font-roboto text-[20px]"><FormattedMessage defaultMessage="MINING CALCULATOR" id="components.autolykos.header" /></b>
         <div className="flex flex-row">
           <div className="w-2/3">

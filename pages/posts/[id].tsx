@@ -25,6 +25,7 @@ export default function Post(props: Props) {
           <p className='mb-20'>by {props.post.data.attributes.author} - <i><FormattedDate value={props.post.data.attributes.date} day="numeric" month="long" year="numeric" /></i></p>
           {props.post.data.attributes.image.data == null ? '' : <img src={props.post.data.attributes.image.data.attributes.formats.large.url} />}
           <a href={props.post.data.attributes.url}>{props.post.data.attributes.url}</a>
+          <p>{props.post.data.attributes.subtitle}</p>
           <ReactMarkdown  remarkPlugins={[remarkGfm,remarkBreaks]} rehypePlugins={[rehypeRaw]} >{props.post.data.attributes.content}</ReactMarkdown>
         </div>
       </div>

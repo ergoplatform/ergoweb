@@ -22,6 +22,24 @@
     color: white !important;
 }
 
+.dark .swiper-pagination-bullet-active-prev-prev,
+.dark .swiper-pagination-bullet-active-prev,
+.dark .swiper-pagination-bullet-active-main,
+.dark .swiper-pagination-bullet-active-next,
+.dark .swiper-pagination-bullet-active-next-next
+{
+    background: white !important;
+}
+
+.swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-main,
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next
+{
+    background: black !important;
+}
+
 .verticalLine {
     border-left: thin solid rgba(0, 0, 0, 0.15);
 }
