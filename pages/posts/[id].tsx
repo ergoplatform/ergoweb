@@ -23,6 +23,8 @@ export default function Post(props: Props) {
             ))}
           </div>
           <p className='mb-20'>by {props.post.data.attributes.author} - <i><FormattedDate value={props.post.data.attributes.date} day="numeric" month="long" year="numeric" /></i></p>
+          {props.post.data.attributes.image.data == null ? '' : <img src={props.post.data.attributes.image.data.attributes.formats.large.url} />}
+          <a href={props.post.data.attributes.url}>{props.post.data.attributes.url}</a>
           <ReactMarkdown  remarkPlugins={[remarkGfm,remarkBreaks]} rehypePlugins={[rehypeRaw]} >{props.post.data.attributes.content}</ReactMarkdown>
         </div>
       </div>
@@ -32,7 +34,7 @@ export default function Post(props: Props) {
 
 export const getServerSideProps = async (context: any) => {
   const post = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts/" + context.query.id
+    process.env.NEXT_PUBLIC_STRAPI_API + "/api/posts/" + context.query.id + "?populate=*"
   ).then((response) => response.json());
   return {
     props: { post }
