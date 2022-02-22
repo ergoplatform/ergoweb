@@ -1,7 +1,8 @@
 {
   "components.autolykos.button": "MINE ERG",
   "components.autolykos.header": "MINING CALCULATOR",
-  "components.autolykos.title": "<b>Autolykos</b> is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs.",
+  "components.autolykos.text": "<b>Autolykos</b> is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs.",
+  "components.autolykos.title": "The Future of Proof of Work",
   "components.highlights.title": "HIGHLIGHTS",
   "components.homeHero.button": "DIVE IN",
   "components.homeHero.text": "Ergo delivers a sophisticated smart contract platform enabling ordinary people to create trustless financial agreements between themselves.",
@@ -56,7 +57,6 @@
   "pages.home.title": "Home",
   "pages.legal.hero": "Legal",
   "pages.legal.title": "Legal",
-  "pages.post.hero": "Post",
   "pages.privacy-policy.hero": "Privacy Policy",
   "pages.privacy-policy.title": "Privacy Policy"
 }

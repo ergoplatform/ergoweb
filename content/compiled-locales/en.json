@@ -11,7 +11,7 @@
       "value": "MINING CALCULATOR"
     }
   ],
-  "components.autolykos.title": [
+  "components.autolykos.text": [
     {
       "children": [
         {
@@ -25,6 +25,12 @@
     {
       "type": 0,
       "value": " is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "The Future of Proof of Work"
     }
   ],
   "components.highlights.title": [
@@ -349,12 +355,6 @@
     {
       "type": 0,
       "value": "Legal"
-    }
-  ],
-  "pages.post.hero": [
-    {
-      "type": 0,
-      "value": "Post"
     }
   ],
   "pages.privacy-policy.hero": [

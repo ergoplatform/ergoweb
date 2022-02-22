@@ -75,7 +75,7 @@ export const parameters = {
   layout: 'fullscreen',
   viewport: {
     viewports: customViewports,
-    defaultViewport: 'someDefault',
+    defaultViewport: 'xl',
   },
   nextRouter: {
     Provider: RouterContext.Provider,
