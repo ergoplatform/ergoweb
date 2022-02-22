@@ -2,8 +2,6 @@ import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
 import Button from "../Button";
-import "swiper/css";
-import "swiper/css/pagination";
 
 type Props = {
   news: any;

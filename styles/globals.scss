@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import "./fonts.scss";
+@import "swiper/scss";
+@import "swiper/scss/navigation";
 
 .themeShadow {
     -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));

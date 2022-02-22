@@ -1,6 +1,6 @@
 
 import Post from "../../components/shared/Post"
-import Dark from "../../components/shared/Dark";
+import Dark from "../../components/Dark";
 
 export default {
   title: 'Components/Post',
@@ -16,8 +16,8 @@ export default {
 
 const Template = (args) => <Post {...args} />;
 
-export const Post = Template.bind({});
-Post.args = {
+export const PostComponent = Template.bind({});
+PostComponent.args = {
   title: 'Testnet 2.2.0 released',
   subtitle: 'Sigma-State language updated, new API methods',
   author: '',
