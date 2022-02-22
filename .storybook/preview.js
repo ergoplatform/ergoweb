@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import * as NextImage from "next/image";
 import { reactIntl } from './reactIntl.js';
+import { RouterContext } from "next/dist/shared/lib/router-context";
 
 const OriginalNextImage = NextImage.default;
 
@@ -75,5 +76,8 @@ export const parameters = {
   viewport: {
     viewports: customViewports,
     defaultViewport: 'someDefault',
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
 }

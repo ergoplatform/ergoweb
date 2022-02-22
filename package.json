@@ -51,6 +51,7 @@
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
     "postcss": "^8.4.5",
+    "storybook-addon-next-router": "^3.1.1",
     "storybook-addon-sass-postcss": "^0.1.0",
     "storybook-react-intl": "^1.0.4",
     "storybook-tailwind-dark-mode": "^1.0.11",

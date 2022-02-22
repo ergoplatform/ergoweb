@@ -12,6 +12,7 @@ module.exports = {
     'storybook-tailwind-dark-mode',
     'storybook-react-intl',
     'storybook-addon-sass-postcss',
+    'storybook-addon-next-router'
   ],
   "framework": "@storybook/react",
   "core": {
