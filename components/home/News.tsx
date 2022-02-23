@@ -15,7 +15,7 @@ export default function News({
   const button = intl.formatMessage({ id: 'components.homeHero.button', defaultMessage: 'DIVE IN' });
 
   return (
-    <div className="max-w-7xl mx-auto px-8">
+    <div className="max-w-7xl mx-auto px-2 md:px-8">
       <div className="mt-36 mb-14 max-w-7xl p-4 md:p-0 flex flex-col lg:flex-row">
         <div className="item lg:w-1/2 mb-8 text-right lg:order-last">
           <h1 className="-mb-8 md:-mb-20"><b>News</b></h1>
@@ -23,7 +23,7 @@ export default function News({
         </div>
         <div className="item lg:w-1/2 card-bg rounded-xl py-8 text-right">
           <p className="font-roboto text-[20px] text-[#585858] dark:text-[#585858] uppercase mx-20">latest news</p>
-          <div className="text-left mt-4 mx-20">
+          <div className="text-left mt-4 mx-8 md:mx-20">
             <Swiper className="SwiperNews" pagination={{ dynamicBullets: true, }} modules={[Pagination]}>
               {news.data.map((post: any, i: number) => (
                 <SwiperSlide key={i} className='p-1'>
