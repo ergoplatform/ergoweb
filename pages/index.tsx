@@ -8,6 +8,7 @@ import HomeInfo from '../components/home/HomeInfo';
 import News from '../components/home/News';
 import Partners from '../components/home/Partners';
 import Layout from '../components/Layout'
+import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
 
 type Props = {
@@ -29,6 +30,7 @@ export default function Home(props: Props) {
       <News news={props.news} />
       <Feed posts={props.posts} />
       <Partners partners={props.partners} />
+      <ContributeForm />
     </Layout>
   )
 }
