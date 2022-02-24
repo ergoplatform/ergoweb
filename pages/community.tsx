@@ -5,6 +5,7 @@ import CommunityHero from '../components/community/CommunityHero';
 import Sigmanauts from '../components/community/Sigmanauts';
 import Spotlight from '../components/community/Spotlight';
 import Layout from '../components/Layout'
+import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
 
 type Props = {
@@ -20,6 +21,7 @@ export default function Community(props: Props) {
       <CommunityHero />
       <CommunityCardsFeed />
       <Sigmanauts />
+      <ContributeForm />
       <Spotlight />
       <Feed posts={props.posts} />
     </Layout>
