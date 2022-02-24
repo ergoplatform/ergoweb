@@ -13,14 +13,14 @@ export default function ContributeForm() {
     const formButton = intl.formatMessage({ id: 'components.Sigmanauts.formInput.button', defaultMessage: 'SEND' });
     return (
         <div className="max-w-[1300px] mx-auto px-4">
-            <div className="flex flex-col mb-10">
-                <h1 className="block-inline font-vinila-extended text-[48px] md:text-[120px] mb-6"><b><FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" /></b></h1>
-                <p className="text-[#989898] dark:text-[#989898] w-56"><FormattedMessage defaultMessage="Ergo operates an open contributor model where <b>anyone is welcome to contribute.</b>" id="components.ContributeForm.text" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></p>
+            <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
+                <h1 className="block-inline font-vinila-extended text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto"><b><FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" /></b></h1>
+                <p className="text-[#989898] dark:text-[#989898] w-56 lg:w-72 lg:mt-auto lg:mb-auto"><FormattedMessage defaultMessage="Ergo operates an open contributor model where <b>anyone is welcome to contribute.</b>" id="components.ContributeForm.text" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></p>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col">
-                    <h3 className="mb-4"><FormattedMessage defaultMessage="I am a <b>developer</b>" id="components.ContributeForm.developer.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
-                    <p className="font-robot text-[14px] md:text-[20px] text-[#989898] dark:text-[#989898] mb-8"><b>
+                    <h3 className="mb-4 lg:leading-none"><FormattedMessage defaultMessage="I am a <b>developer</b>" id="components.ContributeForm.developer.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
+                    <p className="font-robot text-[14px] lg:text-[20px] text-[#989898] dark:text-[#989898] mb-8"><b>
                         <FormattedMessage defaultMessage="HOW CAN I CONTRIBUTE?" id="components.ContributeForm.developer.subTitle" />
                     </b></p>
                     <div>
@@ -31,12 +31,12 @@ export default function ContributeForm() {
                     </div>
                 </div>
                 <div className="flex flex-col">
-                    <h3 className="mb-4"><FormattedMessage defaultMessage="I am a <b>company</b>" id="components.ContributeForm.company.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
-                    <p className="font-robot text-[14px] md:text-[20px] text-[#989898] dark:text-[#989898] mb-10"><FormattedMessage defaultMessage="WANT TO BECOME A PARTNER?" id="components.ContributeForm.company.subTitle" /></p>
+                    <h3 className="mb-4 lg:leading-none"><FormattedMessage defaultMessage="I am a <b>company</b>" id="components.ContributeForm.company.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
+                    <p className="font-robot text-[14px] lg:text-[20px] text-[#989898] dark:text-[#989898] mb-10"><FormattedMessage defaultMessage="WANT TO BECOME A PARTNER?" id="components.ContributeForm.company.subTitle" /></p>
                     <input className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formName} />
                     <input className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formEmail} />
                     <textarea rows={4} className="px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formText} />
-                    <div className="mt-8 md:mt-6">
+                    <div className="mt-8 lg:mt-6">
                         <div className="float-right"><Button text={formButton} textColor="black" url="/discover" newTab={false} underline={false} background={true} iconColor="black" icon="ArrowRight" /></div>
                     </div>
                 </div>
