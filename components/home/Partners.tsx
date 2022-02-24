@@ -16,7 +16,7 @@ export default function Partners({
         <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
           {partners.data.map((partner: any, i: number) => (
             <div key={partner.id} className="col-span-1 flex justify-center py-8 px-8">
-              <a href={partner.attributes.url} target="_blank">
+              <a href={partner.attributes.url} target="_blank" rel="noreferrer">
                 <img
                   width={partner.attributes.image.data.attributes.width}
                   height={partner.attributes.image.data.attributes.height}
