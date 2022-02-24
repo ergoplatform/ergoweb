@@ -45,3 +45,4 @@ export { default as Highlights3 } from "./Highlights3";
 export { default as Highlights1big } from "./Highlights1big";
 export { default as Highlights2big } from "./Highlights2big";
 export { default as Highlights3big } from "./Highlights3big";
+export { default as Sigmanauts } from "./Sigmanauts";
