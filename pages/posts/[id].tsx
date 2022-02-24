@@ -12,7 +12,7 @@ type Props = {
 export default function Post({ post }: Props) {
   return (
     <Layout title={post.attributes.title}>
-      <div className="post max-w-7xl mx-auto p-4 mb-20">
+      <div className="post max-w-[1300px] mx-auto p-4 mb-20">
         <div className='px-14'>
           <h4>{post.attributes.title}</h4>
           <div className='mb-8 mt-4'>

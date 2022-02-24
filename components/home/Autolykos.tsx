@@ -6,7 +6,7 @@ export default function Autolykos() {
   const button = intl.formatMessage({ id: 'components.autolykos.button', defaultMessage: 'MINE ERG' });
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-[1300px] mx-auto">
       <div className="mt-80 px-8 py-12 mx-4 rounded-xl card-bg md:hidden">
         <p className="font-roboto text-[14px]"><b><FormattedMessage defaultMessage="MINING CALCULATOR" id="components.autolykos.header" /></b></p>
         <p className="font-vinila-extended-bold text-[32px] leading-none mt-4"><FormattedMessage defaultMessage="The Future of Proof of Work" id="components.autolykos.title" /></p>

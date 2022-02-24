@@ -42,7 +42,7 @@ function FormattedMessageFixed(props: any) {
 
 function Highlights() {
   return (
-    <div className="mt-40 max-w-7xl mx-auto p-4">
+    <div className="mt-40 max-w-[1300px] mx-auto p-4">
       <div className="text-center">
         <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858]"><FormattedMessage defaultMessage="HIGHLIGHTS" id="components.highlights.title" /></p>
       </div>

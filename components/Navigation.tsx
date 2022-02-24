@@ -16,7 +16,7 @@ function Navigation({ enableLanguages = true }) {
     const discover = intl.formatMessage({ id: 'navigation.discover', defaultMessage: 'DISCOVER' });
     const ecosystem = intl.formatMessage({ id: 'navigation.ecosystem', defaultMessage: 'ECOSYSTEM' });
     return (
-        <Popover className='max-w-7xl mx-auto p-4'>
+        <Popover className='max-w-[1300px] mx-auto p-4'>
             <div className='flex mx-5 mt-2 mb-10 lg:my-10'>
                 <div className='my-auto flex-grow'>
                     <Link href='/'><button><LogoWithText viewBox="0 0 213 82" className='w-24 lg:w-32' /></button></Link>
@@ -52,7 +52,7 @@ function Navigation({ enableLanguages = true }) {
                 leaveTo="opacity-0"
             >
                 <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-10">
-                    <div className='max-w-7xl mx-auto p-4 lg:px-0 lg:my-8'>
+                    <div className='max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8'>
                         <div className='flex mx-5 mt-2 mb-10'>
                             <div className='my-auto flex-grow'>
                                 <Link href='/'><button><LogoWithTextWhite viewBox="0 0 213 82" className='w-24 lg:w-32' /></button></Link>
