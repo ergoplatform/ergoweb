@@ -15,8 +15,8 @@ export default function News({
   const button = intl.formatMessage({ id: 'components.homeHero.button', defaultMessage: 'DIVE IN' });
 
   return (
-    <div className="max-w-[1300px] mx-auto px-2 md:px-8">
-      <div className="mt-36 mb-14 max-w-[1300px] p-4 md:p-0 flex flex-col lg:flex-row">
+    <div className="max-w-7xl mx-auto px-2 md:px-4">
+      <div className="mt-36 mb-14 max-w-7xl p-4 md:p-0 flex flex-col lg:flex-row">
         <div className="item lg:w-1/2 mb-8 text-right lg:order-last">
           <h1 className="-mb-8 md:-mb-20"><b>News</b></h1>
           <h1><b>&Blog</b></h1>
