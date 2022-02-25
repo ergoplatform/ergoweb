@@ -1,4 +1,4 @@
-import Legal from "../../pages/lega";
+import Legal from "../../pages/legal";
 
 export default {
   title: "Pages/Legal",
