@@ -1,4 +1,5 @@
 import { FormattedMessage, useIntl } from "react-intl";
+import { getIconComponentByName } from "../../utils/icons-map";
 import Button from "../Button";
 
 export default function ContributeForm() {
@@ -11,6 +12,27 @@ export default function ContributeForm() {
     const formEmail = intl.formatMessage({ id: 'components.Sigmanauts.formInput.email', defaultMessage: 'E-Mail' });
     const formText = intl.formatMessage({ id: 'components.Sigmanauts.formInput.text', defaultMessage: 'Write us your suggestions and ideas, let’s talk!' });
     const formButton = intl.formatMessage({ id: 'components.Sigmanauts.formInput.button', defaultMessage: 'SEND' });
+
+    const sendMessage = async (event: any) => {
+        event.preventDefault()
+
+        const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
+            body: JSON.stringify({
+                data: {
+                    name: event.target.name.value,
+                    text: event.target.text.value,
+                    email: event.target.email.value,
+                }
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'POST'
+        })
+        const result = await res.json()
+        console.log(result)
+    }
+
     return (
         <div className="max-w-[1300px] mx-auto px-4">
             <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
@@ -33,12 +55,19 @@ export default function ContributeForm() {
                 <div className="flex flex-col">
                     <h3 className="mb-4 lg:leading-none"><FormattedMessage defaultMessage="I am a <b>company</b>" id="components.ContributeForm.company.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
                     <p className="font-robot text-[14px] lg:text-[20px] text-[#989898] dark:text-[#989898] mb-10"><FormattedMessage defaultMessage="WANT TO BECOME A PARTNER?" id="components.ContributeForm.company.subTitle" /></p>
-                    <input className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formName} />
-                    <input className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formEmail} />
-                    <textarea rows={4} className="px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formText} />
-                    <div className="mt-8 lg:mt-6">
-                        <div className="float-right"><Button text={formButton} textColor="black" url="/discover" newTab={false} underline={false} background={true} iconColor="black" icon="ArrowRight" /></div>
-                    </div>
+                    <form className="flex flex-col" onSubmit={sendMessage}>
+                        <input id="name" name="name" type="text" autoComplete="name" required className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formName} />
+                        <input id="email" name="email" type="text" autoComplete="email" required className="mb-6 px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formEmail} />
+                        <textarea id="text" required rows={4} className="px-6 py-4 rounded-xl dark:bg-[#303030] input-shadow" placeholder={formText} />
+                        <div className="mt-8 lg:mt-6">
+                            <div className="float-right">
+                                <button type="submit" className='py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange'>
+                                    <span>{formButton}</span>
+                                    <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
