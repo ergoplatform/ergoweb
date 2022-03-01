@@ -1,4 +1,154 @@
 {
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "WANT TO BECOME A PARTNER?"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "I am a "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "company"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "HOW CAN I CONTRIBUTE?"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "I am a "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "developer"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo operates an open contributor model where "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "anyone is welcome to contribute."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Contribute"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "SIGMANAUTS ONBOARDING"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "VISIT THE DISCORD CHANNEL"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "GRANTS & BOUNTIES"
+    }
+  ],
+  "components.Sigmanauts.button.reportBugs": [
+    {
+      "type": 0,
+      "value": "REPORT BUGS"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "WRITE & REVIEW CODE"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "SEND"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "Name / Company"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Write us your suggestions and ideas, let’s talk!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Ambassador programme"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "There is a rich budding ecosystem budding ontop of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanauts"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "SEE ALL POSTS"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "Spotlight"
+    }
+  ],
   "components.autolykos.button": [
     {
       "type": 0,
@@ -24,13 +174,19 @@
     },
     {
       "type": 0,
-      "value": " is the underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+      "value": " is the underlying Memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
     }
   ],
   "components.autolykos.title": [
     {
       "type": 0,
       "value": "The Future of Proof of Work"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "LETS MAKE GRASSROOTS FINANCE"
     }
   ],
   "components.highlights.title": [
@@ -48,7 +204,7 @@
   "components.homeHero.text": [
     {
       "type": 0,
-      "value": "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
+      "value": "Ergo delivers a sophisticated smart contract platform enabling ordinary people to create trustless financial agreements between themselves."
     }
   ],
   "components.homeHero.title": [
@@ -327,12 +483,6 @@
       "value": "Ecosystem"
     }
   ],
-  "pages.get-erg.hero": [
-    {
-      "type": 0,
-      "value": "GetErg"
-    }
-  ],
   "pages.get-erg.title": [
     {
       "type": 0,
@@ -345,25 +495,13 @@
       "value": "Home"
     }
   ],
-  "pages.legal.hero": [
-    {
-      "type": 0,
-      "value": "Legal"
-    }
-  ],
   "pages.legal.title": [
     {
       "type": 0,
       "value": "Legal"
     }
   ],
-  "pages.privacy-policy.hero": [
-    {
-      "type": 0,
-      "value": "Privacy Policy"
-    }
-  ],
-  "pages.privacy-policy.title": [
+  "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Privacy Policy"
