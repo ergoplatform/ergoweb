@@ -78,36 +78,36 @@ function Navigation({ enableLanguages = true }) {
                         <div className="mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
                             <div><Link href='/community'><h3 className="font-button mt-4 mb-10"><FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" /></h3></Link>
                                 <ul className="hidden md:block">
-                                    <li className='mb-1'><a href="https://linktr.ee/ergoplatform" target="_blank" ><FormattedMessage defaultMessage="Join our channels" id="footer.community.1" /></a></li>
-                                    <li className='mb-1'><a href="https://ergonaut.space/en/Ergo/Contributing" target="_blank" ><FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" /></a></li>
-                                    <li className='mb-1'><a href="https://ergonaut.space/en/Ergo/Contributing" target="_blank" ><FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" /></a></li>
-                                    <li className='mb-1'><a href="https://sigmaverse.io" target="_blank" ><FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.4" /></a></li>
+                                    <li className='mb-1'><a href="https://linktr.ee/ergoplatform" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Join our channels" id="footer.community.1" /></a></li>
+                                    <li className='mb-1'><a href="https://ergonaut.space/en/Ergo/Contributing" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" /></a></li>
+                                    <li className='mb-1'><a href="https://ergonaut.space/en/Ergo/Contributing" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" /></a></li>
+                                    <li className='mb-1'><a href="https://sigmaverse.io" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.4" /></a></li>
                                 </ul>
                             </div>
                             <div><Link href='/get-erg'><h3 className="font-button mt-4 mb-10"><FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" /></h3></Link>
                                 <ul className="hidden md:block">
-                                    <li className='mb-1'><a href="/get-erg" ><FormattedMessage defaultMessage="Mining" id="footer.getErg.1" /></a></li>
-                                    <li className='mb-1'><a href="/get-erg" ><FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" /></a></li>
-                                    <li className='mb-1'><a href="/get-erg" ><FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" /></a></li>
-                                    <li className='mb-1'><a href="/get-erg" ><FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" /></a></li>
+                                    <li className='mb-1'><Link href="/get-erg" ><FormattedMessage defaultMessage="Mining" id="footer.getErg.1" /></Link></li>
+                                    <li className='mb-1'><Link href="/get-erg" ><FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" /></Link></li>
+                                    <li className='mb-1'><Link href="/get-erg" ><FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" /></Link></li>
+                                    <li className='mb-1'><Link href="/get-erg" ><FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" /></Link></li>
                                 </ul>
                             </div>
                             <div><Link href='/discover'><h3 className="font-button mt-4 mb-10"><FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" /></h3></Link>
                                 <ul className="hidden md:block">
-                                    <li className='mb-1'><a href="http://docs.ergoplatform.org/" target="_blank" ><FormattedMessage defaultMessage="Software Releases" id="footer.discover.1" /></a></li>
-                                    <li className='mb-1'><a href="https://docs.ergoplatform.com/contribute/" target="_blank" ><FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" /></a></li>
-                                    <li className='mb-1'><a href="/discover" ><FormattedMessage defaultMessage="FAQ" id="footer.discover.3" /></a></li>
-                                    <li className='mb-1'><a href="https://explorer.ergoplatform.com/" target="_blank" ><FormattedMessage defaultMessage="Ergo Explorer" id="footer.discover.4" /></a></li>
-                                    <li className='mb-1'><a href="/discover" ><FormattedMessage defaultMessage="Documents" id="footer.discover.5" /></a></li>
+                                    <li className='mb-1'><a href="http://docs.ergoplatform.org/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Software Releases" id="footer.discover.1" /></a></li>
+                                    <li className='mb-1'><a href="https://docs.ergoplatform.com/contribute/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" /></a></li>
+                                    <li className='mb-1'><Link href="/discover" ><FormattedMessage defaultMessage="FAQ" id="footer.discover.3" /></Link></li>
+                                    <li className='mb-1'><a href="https://explorer.ergoplatform.com/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergo Explorer" id="footer.discover.4" /></a></li>
+                                    <li className='mb-1'><Link href="/discover" ><FormattedMessage defaultMessage="Documents" id="footer.discover.5" /></Link></li>
                                 </ul>
                             </div>
                             <div><Link href='/ecosystem'><h3 className="font-button mt-4 mb-8 md:mb-10"><FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" /></h3></Link>
                                 <ul className="hidden md:block">
-                                    <li className='mb-1'><a href="/ecosystem" ><FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" /></a></li>
-                                    <li className='mb-1'><a href="/ecosystem" ><FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" /></a></li>
-                                    <li className='mb-1'><a href="https://ergonaut.space" target="_blank" ><FormattedMessage defaultMessage="Ergonaut" id="footer.ecosystem.3" /></a></li>
-                                    <li className='mb-1'><a href="http://ergoraffle.com/" target="_blank" ><FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" /></a></li>
-                                    <li className='mb-1'><a href="/ecosystem" target="_blank" ><FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" /></a></li>
+                                    <li className='mb-1'><Link href="/ecosystem" ><FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" /></Link></li>
+                                    <li className='mb-1'><Link href="/ecosystem" ><FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" /></Link></li>
+                                    <li className='mb-1'><a href="https://ergonaut.space" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergonaut" id="footer.ecosystem.3" /></a></li>
+                                    <li className='mb-1'><a href="http://ergoraffle.com/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" /></a></li>
+                                    <li className='mb-1'><Link href="/ecosystem"><FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" /></Link></li>
                                 </ul>
                             </div>
                             <div className='mt-10 w-80 hidden md:block'>
@@ -124,15 +124,15 @@ function Navigation({ enableLanguages = true }) {
                             </div>
                             <div className="my-6 dark">
                                 <div className="grid overflow-hidden grid-cols-3 gap-2 text-red md:grid-cols-9">
-                                <div className="box mx-auto my-auto"><a href="https://sigmaverse.io" target="_blank" >{getIconComponentByName('Sigmaverse')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://ergonaut.space" target="_blank" >{getIconComponentByName('Ergonaut')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://github.com/ergoplatform" target="_blank" >{getIconComponentByName('Github')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://twitter.com/ergoplatformorg" target="_blank" >{getIconComponentByName('Twitter')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" >{getIconComponentByName('Youtube')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://t.me/ergoplatform" target="_blank" >{getIconComponentByName('Telegram')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://discord.gg/RC8M4Bkgsy" target="_blank" >{getIconComponentByName('Discord')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://reddit.com/r/ergonauts" target="_blank" >{getIconComponentByName('Reddit')}</a></div>
-                        <div className="box mx-auto my-auto"><a href="https://sigmaverse.io" target="_blank" >{getIconComponentByName('Wechat')}</a></div>
+                                <div className="box mx-auto my-auto"><a href="https://sigmaverse.io" target="_blank" rel="noreferrer">{getIconComponentByName('Sigmaverse')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://ergonaut.space" target="_blank" rel="noreferrer">{getIconComponentByName('Ergonaut')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">{getIconComponentByName('Github')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://twitter.com/ergoplatformorg" target="_blank" rel="noreferrer">{getIconComponentByName('Twitter')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" rel="noreferrer">{getIconComponentByName('Youtube')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://t.me/ergoplatform" target="_blank" rel="noreferrer">{getIconComponentByName('Telegram')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://discord.gg/RC8M4Bkgsy" target="_blank" rel="noreferrer">{getIconComponentByName('Discord')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">{getIconComponentByName('Reddit')}</a></div>
+                        <div className="box mx-auto my-auto"><a href="https://sigmaverse.io" target="_blank" rel="noreferrer">{getIconComponentByName('Wechat')}</a></div>
                                 </div>
                             </div>
                         </div>
