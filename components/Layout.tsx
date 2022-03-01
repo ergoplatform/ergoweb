@@ -17,7 +17,7 @@ export default function Layout({
     <main className='dark:bg-brand-black'>
       <Head>
         <meta charSet="utf-8" />
-        <title>{`${title} | Ergo Platform`}</title>
+        <title>{`${title} || Ergo Platform`}</title>
       </Head>
       <Navigation />
       <div className=''>
