@@ -1,17 +1,27 @@
 import type { NextPage } from 'next'
 import { FormattedMessage, useIntl } from 'react-intl'
+import Exchanges from '../components/getErg/Exchanges';
 import Layout from '../components/Layout'
 
-const GetErg: NextPage = () => {
+type Props = {
+  exchanges?: any;
+};
+
+export default function GetErg(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'pages.get-erg.title', defaultMessage: 'GetErg' });
   return (
     <Layout title={title}>
-      <h1 className="text-3xl font-bold">
-        <FormattedMessage defaultMessage="GetErg" id="pages.get-erg.hero" />
-      </h1>
+      <Exchanges exchanges={props.exchanges} />
     </Layout>
   )
 }
 
-export default GetErg;
+export const getServerSideProps = async (context: any) => {
+  const exchanges = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API + "/api/exchanges?populate=*&locale=" + context.locale
+  ).then((response) => response.json());
+  return {
+    props: { exchanges }
+  };
+};

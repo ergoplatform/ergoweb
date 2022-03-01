@@ -19,9 +19,8 @@ const nextConfig = {
     register: true,
     skipWaiting: true,
   },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 }
-
-module.exports = withPWA(nextConfig)
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -32,7 +31,5 @@ const withMDX = require('@next/mdx')({
     // providerImportSource: "@mdx-js/react",
   },
 })
-module.exports = withMDX({
-  // Append the default value with md extensions
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-})
+
+module.exports = withPWA(withMDX(nextConfig))
