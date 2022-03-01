@@ -7,9 +7,9 @@ import Image from 'next/image'
 
 const slides = [
   {
-    titleMessage: <FormattedMessageFixed defaultMessage="A Fair Start {breakingLine}For Everyone" id="components.highlights.slide.1.title" values={{ breakingLine: <br /> }} />,
+    titleMessage: <FormattedMessageFixed defaultMessage="Fairly Created & Community Driven " id="components.highlights.slide.1.title" values={{ breakingLine: <br /> }} />,
     quoteMessage: <FormattedMessageFixed defaultMessage="95.57% {breakingLine}Public Allocation" id="components.highlights.slide.1.quote" values={{ breakingLine: <br /> }} />,
-    textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed to ensure that miners are adequately compensated after block rewards end." id="components.highlights.slide.1.text" values={{ breakingLine: <br /> }} />,
+    //textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed to ensure that miners are adequately compensated after block rewards end." id="components.highlights.slide.1.text" values={{ breakingLine: <br /> }} />,
     svg: 'Highlights1',
     viewBox: '0 0 562 562',
     height: 562 * 0.5,
@@ -18,7 +18,7 @@ const slides = [
   {
     titleMessage: <FormattedMessageFixed defaultMessage="20+ Scientific Contributions" id="components.highlights.slide.2.title" values={{ breakingLine: <br /> }} />,
     quoteMessage: <FormattedMessageFixed defaultMessage="Another quote" id="components.highlights.slide.2.quote" values={{ breakingLine: <br /> }} />,
-    textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed." id="components.highlights.slide.2.text" values={{ breakingLine: <br /> }} />,
+    //textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed." id="components.highlights.slide.2.text" values={{ breakingLine: <br /> }} />,
     svg: 'Highlights2',
     viewBox: '0 0 416 402',
     height: 416 * 0.5,
@@ -27,7 +27,7 @@ const slides = [
   {
     titleMessage: <FormattedMessageFixed defaultMessage="100% Open Source" id="components.highlights.slide.2.title" values={{ breakingLine: <br /> }} />,
     quoteMessage: <FormattedMessageFixed defaultMessage="Another quote" id="components.highlights.slide.3.quote" values={{ breakingLine: <br /> }} />,
-    textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed." id="components.highlights.slide.3.text" values={{ breakingLine: <br /> }} />,
+    //textMessage: <FormattedMessageFixed defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed." id="components.highlights.slide.3.text" values={{ breakingLine: <br /> }} />,
     svg: 'Highlights3',
     viewBox: '0 0 528 257',
     height: 528 * 0.5,
