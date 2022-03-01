@@ -3,3 +3,8 @@ steps:
   args: [ 'build', '-t', 'gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA', '.' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'ergo-platform-frontend', '--image', 'gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA', '--region', 'europe-west4']
+images:
+- gcr.io/ergo-341017/ergo-platform-frontend:$COMMIT_SHA
