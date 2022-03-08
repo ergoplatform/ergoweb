@@ -53,6 +53,9 @@ export const getIconComponentByName = (name: string, props?:any) => {
         Highlights2big: SvgIconsComponent.Highlights2big,
         Highlights3big: SvgIconsComponent.Highlights3big,
         Sigmanauts: SvgIconsComponent.Sigmanauts,
+        UsingErgBuyIt: SvgIconsComponent.UsingErgBuyIt,
+        UsingErgMineIt: SvgIconsComponent.UsingErgMineIt,
+        UsingErgStoreIt: SvgIconsComponent.UsingErgStoreIt,
     };
 
     if (name in ComponentsMap) {

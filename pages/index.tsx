@@ -7,6 +7,7 @@ import HomeHero from '../components/home/HomeHero';
 import HomeInfo from '../components/home/HomeInfo';
 import News from '../components/home/News';
 import Partners from '../components/home/Partners';
+import UsingErg from '../components/home/UsingErg';
 import Layout from '../components/Layout'
 import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
@@ -26,6 +27,7 @@ export default function Home(props: Props) {
       <HomeHero />
       <Highlights />
       <HomeInfo />
+      <UsingErg title='Using ERG' />
       <Autolykos />
       <News news={props.news} />
       <Feed posts={props.posts} />
