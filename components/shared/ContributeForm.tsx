@@ -52,7 +52,7 @@ export default function ContributeForm() {
                         <div className="ml-8 mb-10"><Button text={buttonGrantsAndBounties} url='/url' newTab={true} underline={true} textColor="brand-orange" background={false} icon='ArrowRight' iconColor='orange' /></div>
                     </div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col mt-16">
                     <h3 className="mb-4 lg:leading-none"><FormattedMessage defaultMessage="I am a <b>company</b>" id="components.ContributeForm.company.title" values={{ b: (...chunks: any) => <b>{chunks}</b> }} /></h3>
                     <p className="font-robot text-[14px] lg:text-[20px] text-[#989898] dark:text-[#989898] mb-10"><FormattedMessage defaultMessage="WANT TO BECOME A PARTNER?" id="components.ContributeForm.company.subTitle" /></p>
                     <form className="flex flex-col" onSubmit={sendMessage}>
