@@ -49,3 +49,4 @@ export { default as Sigmanauts } from "./Sigmanauts";
 export { default as UsingErgBuyIt } from "./UsingErgBuyIt";
 export { default as UsingErgMineIt } from "./UsingErgMineIt";
 export { default as UsingErgStoreIt } from "./UsingErgStoreIt";
+export { default as PersonPlaceholder } from "./PersonPlaceholder";

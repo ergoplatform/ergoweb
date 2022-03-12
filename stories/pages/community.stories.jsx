@@ -5,7 +5,7 @@ export default {
   component: Community,
 };
 
-export const CommunityPage = (args, { loaded: { posts } }) => <Community posts={posts}  />
+export const CommunityPage = (args, { loaded: { posts, teamMembers } }) => <Community posts={posts} teamMembers={teamMembers}  />
 
 CommunityPage.loaders = [
   async () => {

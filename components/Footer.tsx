@@ -38,28 +38,28 @@ export default function Footer() {
                     </div>
                     <div className="mx-1"><h3 className="font-button text-[#585858] dark:text-[#989898] my-4"><FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" /></h3>
                         <ul className="hidden md:block">
-                            <li><Link href="/get-erg"><FormattedMessage defaultMessage="Mining" id="footer.getErg.1" /></Link></li>
-                            <li><Link href="/get-erg" ><FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" /></Link></li>
-                            <li><Link href="/get-erg"><FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" /></Link></li>
-                            <li><Link href="/get-erg"><FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" /></Link></li>
+                            <li><Link href="/get-erg"><a><FormattedMessage defaultMessage="Mining" id="footer.getErg.1" /></a></Link></li>
+                            <li><Link href="/get-erg"><a><FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" /></a></Link></li>
+                            <li><Link href="/get-erg"><a><FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" /></a></Link></li>
+                            <li><Link href="/get-erg"><a><FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" /></a></Link></li>
                         </ul>
                     </div>
                     <div className="mx-1"><h3 className="font-button text-[#585858] dark:text-[#989898] my-4"><FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" /></h3>
                         <ul className="hidden md:block">
                             <li><a href="http://docs.ergoplatform.org/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Documentation" id="footer.discover.1" /></a></li>
                             <li><a href="https://docs.ergoplatform.com/contribute/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" /></a></li>
-                            <li><Link href="/discover"><FormattedMessage defaultMessage="FAQ" id="footer.discover.3" /></Link></li>
+                            <li><Link href="/discover"><a><FormattedMessage defaultMessage="FAQ" id="footer.discover.3" /></a></Link></li>
                             <li><a href="https://explorer.ergoplatform.com/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergo Explorer" id="footer.discover.4" /></a></li>
-                            <li><Link href="/discover"><FormattedMessage defaultMessage="Documents" id="footer.discover.5" /></Link></li>
+                            <li><Link href="/discover"><a><FormattedMessage defaultMessage="Documents" id="footer.discover.5" /></a></Link></li>
                         </ul>
                     </div>
                     <div className="mx-1"><h3 className="font-button text-[#585858] dark:text-[#989898] my-4"><FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" /></h3>
                         <ul className="hidden md:block">
                             <li><a href="https://sigmaverse.io" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" /></a></li>
-                            <li><Link href="/discover"><FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" /></Link></li>
+                            <li><Link href="/discover"><a><FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" /></a></Link></li>
                             <li><a href="https://ergonaut.space" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergonaut" id="footer.ecosystem.3" /></a></li>
                             <li><a href="http://ergoraffle.com/" target="_blank" rel="noreferrer"><FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" /></a></li>
-                            <li><Link href="/ecosystem"><FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" /></Link></li>
+                            <li><Link href="/ecosystem"><a><FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" /></a></Link></li>
                         </ul>
                     </div>
                     <div className="mx-1"><h3 className="font-button text-[#585858] dark:text-[#989898] my-4"><FormattedMessage defaultMessage="BLOG" id="footer.blog.title" /></h3></div>
