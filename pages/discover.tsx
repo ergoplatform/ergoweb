@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { FormattedMessage, useIntl } from 'react-intl'
+import DiscoverHero from '../components/discover/DiscoverHero';
 import Layout from '../components/Layout'
 
 const Discover: NextPage = () => {
@@ -7,9 +8,7 @@ const Discover: NextPage = () => {
   const title = intl.formatMessage({ id: 'pages.discover.title', defaultMessage: 'Discover' });
   return (
     <Layout title={title}>
-      <h1 className="text-3xl font-bold">
-        <FormattedMessage defaultMessage="Discover" id="pages.discover.hero" />
-      </h1>
+      <DiscoverHero />
     </Layout>
   )
 }
