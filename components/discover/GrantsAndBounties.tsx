@@ -5,9 +5,9 @@ import { DiscoverErgHero } from "../icons";
 
 export default function GrantsAndBounties() {
   const intl = useIntl();
-  const button1Text = intl.formatMessage({ id: 'components.discoverHero.button1', defaultMessage: 'DEV BOUNTIES' });
-  const button2Text = intl.formatMessage({ id: 'components.discoverHero.button2', defaultMessage: 'GRANTS' });
-  const button3Text = intl.formatMessage({ id: 'components.discoverHero.button3', defaultMessage: 'BUG BOUNTIES' });
+  const button1Text = intl.formatMessage({ id: 'components.grantsAndBounties.button1', defaultMessage: 'DEV BOUNTIES' });
+  const button2Text = intl.formatMessage({ id: 'components.grantsAndBounties.button2', defaultMessage: 'GRANTS' });
+  const button3Text = intl.formatMessage({ id: 'components.grantsAndBounties.button3', defaultMessage: 'BUG BOUNTIES' });
 
   return (
     <div className="max-w-[1300px] mx-auto p-4 mt-40">
