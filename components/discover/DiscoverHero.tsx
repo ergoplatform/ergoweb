@@ -17,7 +17,7 @@ export default function DiscoverHero() {
         <div className="box xl:order-2"><DiscoverErgHero viewBox="0 0 1011 811" className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]" /></div>
         <div className="box xl:order-1">
           <h1 className="max-w-xs leading-tight"><b>Discover Ergo</b></h1>
-          <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">Ergo's pioneering technology enables infinite smartcontract possiblities.</p>
+          <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6"><FormattedMessage defaultMessage="Ergo's pioneering technology enables infinite smartcontract possiblities." id="components.discoverErgo.text.1" /></p>
           <div className="-ml-4 mt-10"><Button text={button1Text} url='/url' newTab={true} underline={true} textColor="brand-orange" background={false} icon='ArrowRight' iconColor='orange' /></div>
           <div className="-ml-4 mt-10"><Button text={button2Text} url='/url' newTab={true} underline={true} textColor="brand-orange" background={false} icon='ArrowRight' iconColor='orange' /></div>
           <div className="-ml-4 mt-10"><Button text={button3Text} url='/url' newTab={true} underline={true} textColor="brand-orange" background={false} icon='ArrowRight' iconColor='orange' /></div>
