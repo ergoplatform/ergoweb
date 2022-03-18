@@ -1,4 +1,4 @@
-import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate } from "react-intl";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
 import Button from "../Button";
@@ -10,9 +10,6 @@ type Props = {
 export default function News({
   news
 }: Props) {
-
-  const intl = useIntl();
-  const button = intl.formatMessage({ id: 'components.homeHero.button', defaultMessage: 'DIVE IN' });
 
   return (
     <div className="max-w-7xl mx-auto px-2 md:px-4">

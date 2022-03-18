@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
 export default function HomeInfo({ protocolVersion = 2, circulatingSupply = 46166151, transactionPerDay = 6266, hashRate = 20.19 }) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });

@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
-import Image from 'next/image'
 import { getIconComponentByName } from "../utils/icons-map"
 import { BpsaaLogo, LogoWithText } from "./icons"
 

@@ -1,6 +1,4 @@
-import type { NextPage } from 'next'
-import { useRouter } from 'next/router';
-import { FormattedMessage, useIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import Autolykos from '../components/home/Autolykos';
 import Highlights from '../components/home/Highlights';
 import HomeHero from '../components/home/HomeHero';

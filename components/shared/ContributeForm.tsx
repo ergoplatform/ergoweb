@@ -16,20 +16,20 @@ export default function ContributeForm() {
     const sendMessage = async (event: any) => {
         event.preventDefault()
 
-        const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
-            body: JSON.stringify({
-                data: {
-                    name: event.target.name.value,
-                    text: event.target.text.value,
-                    email: event.target.email.value,
-                }
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method: 'POST'
-        })
-        const result = await res.json()
+        // const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
+        //     body: JSON.stringify({
+        //         data: {
+        //             name: event.target.name.value,
+        //             text: event.target.text.value,
+        //             email: event.target.email.value,
+        //         }
+        //     }),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     method: 'POST'
+        // })
+        // const result = await res.json()
     }
 
     return (

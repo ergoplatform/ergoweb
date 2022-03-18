@@ -16,7 +16,7 @@ export default function Post({ post }: Props) {
         <div className='px-14'>
           <h4>{post.attributes.title}</h4>
           <div className='mb-8 mt-4'>
-            {post.attributes.tag?.split(',').map((item: string, i: number) => (
+            {post.attributes.tag?.split(',').map((item: string) => (
               <b key={item.trim()} className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black dark:bg-white text-white dark:text-black uppercase z-10">
                 {item.trim()}
               </b>
@@ -38,4 +38,4 @@ export async function getServerSideProps(context: any) {
   return {
     props: { post: post.data }
   };
-};
+}

@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import Footer from './Footer';
-import Navigation from './Navigation';
+import React from 'react';
 
 type Props = {
   children: React.ReactNode;

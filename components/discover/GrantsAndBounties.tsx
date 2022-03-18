@@ -1,7 +1,5 @@
-import { FormattedMessage, useIntl } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
+import { useIntl } from "react-intl";
 import Button from "../Button";
-import { DiscoverErgHero } from "../icons";
 
 export default function GrantsAndBounties() {
   const intl = useIntl();

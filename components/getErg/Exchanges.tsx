@@ -20,7 +20,7 @@ export default function Exchanges({
         </div>
       </div>
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8">
-        {exchanges.data.map((exchange: any, i: number) => (
+        {exchanges.data.map((exchange: any) => (
           <div key={exchange.id} className="col-span-1 flex justify-center py-8 px-8">
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
               <img

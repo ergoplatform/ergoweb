@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { LogoWithText, ThemeLightBig, ThemeDarkBig, ThemeLightSmall, ThemeDarkSmall, Logo, MenuClose, LogoWithTextWhite } from "./icons";
+import { LogoWithText, ThemeLightBig, ThemeDarkBig, ThemeLightSmall, ThemeDarkSmall, LogoWithTextWhite } from "./icons";
 import Button from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
 import { FormattedMessage, useIntl } from 'react-intl'

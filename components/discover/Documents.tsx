@@ -41,7 +41,7 @@ export default function Documents(props: Props) {
           <div key={i} className="border-b-[1px]">
             <div data-bs-toggle="collapse" data-bs-target={"#docs-collapse" + i.toString()} aria-expanded={i == 0 ? "true" : "false"} aria-controls={"docs-collapse" + i.toString()} className="w-full pt-8"><a id={"docs-heading" + i.toString()} className="font-vinila-extended text-[24px] md:text-[32px]"><button type="button" >{section.name}</button></a></div>
             <div id={"docs-collapse" + i.toString()} className={i == 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby={"docs-heading" + i.toString()} data-bs-parent="#docs-accordion">
-              {section.documents.map((doc: any, n: number) => (
+              {section.documents.map((doc: any) => (
                 <div className="my-4" key={doc.title}><a className="font-vinila-extended text-[14px] md:text-[16px] text-brand-orange dark:text-brand-orange underline" href={doc.url} target="_blank" rel="noreferrer">{doc.title}</a></div>
               ))}
             </div>

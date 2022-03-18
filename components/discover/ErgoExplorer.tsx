@@ -1,6 +1,5 @@
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
-import Button from "../Button";
 
 export default function ErgoExplorer() {
   const intl = useIntl();

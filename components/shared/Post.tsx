@@ -1,7 +1,5 @@
-import Link from "next/link";
 import { FormattedDate } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
-import { Logo, LogoBlack } from "../icons";
+import { LogoBlack } from "../icons";
 const removeMd = require('remove-markdown');
 
 type Props = {
@@ -35,7 +33,7 @@ export default function Post({
                 <a href={type == 'news' ? url : '/posts/' + id} target="_blank" rel="noreferrer" className="block mt-2">
                     {image == null ? <div className="h-48 bg-gray-200 w-full object-cover rounded-t-2xl"></div> : <img className="h-48 w-full object-cover rounded-t-2xl" src={image} alt="" />}
                     <div className="absolute left-4 top-4">
-                        {tags?.split(',').map((item, i) => (
+                        {tags?.split(',').map((item) => (
                             <b key={item.trim()} className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10">
                                 {item.trim()}
                             </b>

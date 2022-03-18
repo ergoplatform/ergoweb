@@ -1,5 +1,4 @@
-import type { NextPage } from 'next'
-import { FormattedMessage, useIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import Exchanges from '../components/getErg/Exchanges';
 import UsingErg from '../components/home/UsingErg';
 import Layout from '../components/Layout'
