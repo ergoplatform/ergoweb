@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { getIconComponentByName } from "../utils/icons-map";
+import React from 'react';
 
 type Props = {
-  text: string;
+  text: React.ReactNode;
   url: string;
   icon?: string;
   textColor?: string;

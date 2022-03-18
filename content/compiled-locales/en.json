@@ -189,6 +189,80 @@
       "value": "LETS MAKE GRASSROOTS FINANCE"
     }
   ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo's pioneering technology enables infinite smartcontract possiblities."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "GRANTS & BOUNTIES"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "DOCUMENTS"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "SEE LATEST RELEASES"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "ERGONAUT.SPACE"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "DEV BOUNTIES"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "DID’T FIND WHAT "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " YOU’RE LOOKING FOR?"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "DEV BOUNTIES"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "GRANTS"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "BUG BOUNTIES"
+    }
+  ],
   "components.highlights.title": [
     {
       "type": 0,
@@ -235,6 +309,30 @@
     {
       "type": 0,
       "value": "PROTOCOL VERSION"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo mining is based on Autolykos v.2, a Proof-of-Work algorithm designed to be ASIC resistant. Miners have to perform memory-hard computations - at least 2.5 GB memory is needed, but the current most efficient implementation utilizes around 4 GB of vRAM - that makes Ergo friendly for GPU mining. "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " Unlike Autolykos v.1, Autolykos v.2 does not require access to private keys, thereby allowing mining pool formation. As soon as a correct solution is found, the miner broadcasts the block along with the solution and is able to collect the block reward after a delay of 720 blocks using the secret of his mining address."
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "The rest of the network verifies the solution which can be done efficiently, requiring less than a kilobyte of memory."
     }
   ],
   "footer.blog.title": [
@@ -457,12 +555,6 @@
     {
       "type": 0,
       "value": "Community"
-    }
-  ],
-  "pages.discover.hero": [
-    {
-      "type": 0,
-      "value": "Discover"
     }
   ],
   "pages.discover.title": [

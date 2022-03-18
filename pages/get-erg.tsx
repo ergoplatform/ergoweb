@@ -1,5 +1,6 @@
 import { useIntl } from "react-intl";
 import Exchanges from "../components/getErg/Exchanges";
+import Mining from "../components/getErg/Mining";
 import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
 
@@ -16,6 +17,7 @@ export default function GetErg(props: Props) {
   return (
     <Layout title={title}>
       <UsingErg title="Get ERG" />
+      <Mining />
       <Exchanges exchanges={props.exchanges} />
     </Layout>
   );

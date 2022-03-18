@@ -62,7 +62,7 @@ export default function UsingErg(props: Props) {
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4">
       <div className="flex flex-col xl:flex-row justify-between">
         <div>
-          <p className="text-[#585858] dark:text-[#585858] mb-4">
+          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
             UNSTOPPABLE DEFI
           </p>
           <h2 className="leading-none">

@@ -7,7 +7,7 @@ export default function Exchanges({ exchanges }: Props) {
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="">
-          <p className="text-[#585858] dark:text-[#585858] mb-4">
+          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
             BUY, SELL AND TRADE ERGO
           </p>
           <h2>
