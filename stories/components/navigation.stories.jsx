@@ -1,9 +1,9 @@
-import Navigation from "../../components/Navigation"
+import Navigation from "../../components/Navigation";
 import Dark from "../../components/Dark";
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
 
 export default {
-  title: 'Components/Navigation',
+  title: "Components/Navigation",
   component: Navigation,
   decorators: [
     (Story) => (
@@ -12,8 +12,8 @@ export default {
           <Story />
         </Dark>
       </ThemeProvider>
-    )
-  ]
+    ),
+  ],
 };
 
 const Template = (args) => <Navigation enableLanguages={false} />;

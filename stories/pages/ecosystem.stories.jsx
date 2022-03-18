@@ -5,4 +5,4 @@ export default {
   component: Ecosystem,
 };
 
-export const EcosystemPage = () => <Ecosystem />
+export const EcosystemPage = () => <Ecosystem />;

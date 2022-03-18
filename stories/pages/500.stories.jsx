@@ -5,4 +5,4 @@ export default {
   component: Custom500,
 };
 
-export const Custom500Page = () => <Custom500 />
+export const Custom500Page = () => <Custom500 />;

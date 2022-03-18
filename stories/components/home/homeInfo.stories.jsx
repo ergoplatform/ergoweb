@@ -1,17 +1,16 @@
-
-import HomeInfo from "../../../components/home/HomeInfo"
+import HomeInfo from "../../../components/home/HomeInfo";
 import Dark from "../../../components/Dark";
 
 export default {
-  title: 'Components/Home/HomeInfo',
+  title: "Components/Home/HomeInfo",
   component: HomeInfo,
   decorators: [
     (Story) => (
       <Dark>
         <Story />
       </Dark>
-    )
-  ]
+    ),
+  ],
 };
 
 const Template = (args) => <HomeInfo {...args} />;

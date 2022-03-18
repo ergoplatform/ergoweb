@@ -5,4 +5,4 @@ export default {
   component: Custom404,
 };
 
-export const Custom404Page = () => <Custom404 />
+export const Custom404Page = () => <Custom404 />;

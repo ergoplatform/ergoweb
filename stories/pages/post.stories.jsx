@@ -5,7 +5,9 @@ export default {
   component: Post,
 };
 
-export const PostPage = (args, { loaded: { post }}) => <Post {...args} post={post} />
+export const PostPage = (args, { loaded: { post } }) => (
+  <Post {...args} post={post} />
+);
 
 PostPage.story = {
   parameters: {
@@ -21,7 +23,7 @@ PostPage.story = {
 
 PostPage.loaders = [
   async () => {
-    let data = await getServerSideProps({query:{id:184}});
+    let data = await getServerSideProps({ query: { id: 184 } });
     return data.props;
-  }
-]
+  },
+];

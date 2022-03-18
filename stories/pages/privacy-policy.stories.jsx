@@ -5,4 +5,4 @@ export default {
   component: PrivacyPolicy,
 };
 
-export const PrivacyPolicyPage = () => <PrivacyPolicy />
+export const PrivacyPolicyPage = () => <PrivacyPolicy />;

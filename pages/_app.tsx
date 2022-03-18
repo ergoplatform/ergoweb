@@ -1,15 +1,15 @@
-import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
+import "../styles/globals.scss";
+import type { AppProps } from "next/app";
 import English from "../content/compiled-locales/en.json";
 import Russian from "../content/compiled-locales/ru.json";
 import Spanish from "../content/compiled-locales/es.json";
 import Portuguese from "../content/compiled-locales/pt.json";
 import Italian from "../content/compiled-locales/it.json";
 import Chinese from "../content/compiled-locales/zh.json";
-import { useRouter } from 'next/router';
-import { useMemo } from 'react';
-import { IntlProvider } from 'react-intl';
-import { ThemeProvider } from 'next-themes'
+import { useRouter } from "next/router";
+import { useMemo } from "react";
+import { IntlProvider } from "react-intl";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { locale } = useRouter();
@@ -39,11 +39,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <IntlProvider
         locale={shortLocale}
         messages={messages}
-        onError={() => null}>
+        onError={() => null}
+      >
         <Component {...pageProps} />
       </IntlProvider>
     </ThemeProvider>
   );
 }
 
-export default MyApp
+export default MyApp;

@@ -5,4 +5,4 @@ export default {
   component: Discover,
 };
 
-export const DiscoverPage = () => <Discover />
+export const DiscoverPage = () => <Discover />;

@@ -1,25 +1,24 @@
-
-import Button from "../../components/Button"
+import Button from "../../components/Button";
 import Dark from "../../components/Dark";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   decorators: [
     (Story) => (
       <Dark>
         <Story />
       </Dark>
-    )
-  ]
+    ),
+  ],
 };
 
 const Template = (args) => <Button {...args} />;
 
 export const ButtonWithArrow = Template.bind({});
 ButtonWithArrow.args = {
-  text: 'DIVE IN',
-  url: 'https://google.com',
+  text: "DIVE IN",
+  url: "https://google.com",
   icon: "ArrowRight",
   textColor: "black",
   newTab: false,
@@ -30,8 +29,8 @@ ButtonWithArrow.args = {
 
 export const ButtonWithoutArrowBlack = Template.bind({});
 ButtonWithoutArrowBlack.args = {
-  text: 'GET ERGO',
-  url: 'https://google.com',
+  text: "GET ERGO",
+  url: "https://google.com",
   icon: "none",
   textColor: "black",
   newTab: false,
@@ -42,8 +41,8 @@ ButtonWithoutArrowBlack.args = {
 
 export const ButtonWithoutArrowWhite = Template.bind({});
 ButtonWithoutArrowWhite.args = {
-  text: 'DISCOVER',
-  url: 'https://google.com',
+  text: "DISCOVER",
+  url: "https://google.com",
   icon: "none",
   textColor: "white",
   newTab: false,
@@ -54,8 +53,8 @@ ButtonWithoutArrowWhite.args = {
 
 export const Link = Template.bind({});
 Link.args = {
-  text: 'REPORT BUGS',
-  url: 'https://google.com',
+  text: "REPORT BUGS",
+  url: "https://google.com",
   icon: "ArrowRight",
   textColor: "brand-orange",
   newTab: false,
@@ -66,8 +65,8 @@ Link.args = {
 
 export const LinkLong = Template.bind({});
 LinkLong.args = {
-  text: 'Ergo: The Resilient Platform For Contractual Money',
-  url: 'https://google.com',
+  text: "Ergo: The Resilient Platform For Contractual Money",
+  url: "https://google.com",
   icon: "none",
   textColor: "brand-orange",
   newTab: false,

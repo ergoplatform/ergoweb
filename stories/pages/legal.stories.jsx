@@ -5,4 +5,4 @@ export default {
   component: Legal,
 };
 
-export const LegalPage = () => <Legal />
+export const LegalPage = () => <Legal />;

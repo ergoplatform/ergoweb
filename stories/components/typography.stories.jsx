@@ -9,8 +9,8 @@ export default {
       <Dark>
         <Story />
       </Dark>
-    )
-  ]
+    ),
+  ],
 };
 
-export const TypographyComponent = () => <Typography />
+export const TypographyComponent = () => <Typography />;
