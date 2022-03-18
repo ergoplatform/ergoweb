@@ -30,7 +30,6 @@ export default function ContributeForm() {
             method: 'POST'
         })
         const result = await res.json()
-        console.log(result)
     }
 
     return (
