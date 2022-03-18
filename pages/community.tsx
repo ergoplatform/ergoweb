@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import CommunityCardsFeed from "../components/community/CommunityCardsFeed";
 import CommunityHero from "../components/community/CommunityHero";
-import HallOfFame from "../components/community/HallOfFame";
+// import HallOfFame from "../components/community/HallOfFame";
 import Sigmanauts from "../components/community/Sigmanauts";
 import Spotlight from "../components/community/Spotlight";
 import Layout from "../components/Layout";
@@ -27,7 +27,7 @@ export default function Community(props: Props) {
       <ContributeForm />
       <Spotlight />
       <Feed posts={props.posts} />
-      <HallOfFame teamMembers={props.teamMembers} />
+      {/* <HallOfFame teamMembers={props.teamMembers} /> */}
     </Layout>
   );
 }
