@@ -1,6 +1,7 @@
 import { useIntl } from "react-intl";
 import CommunityCardsFeed from "../components/community/CommunityCardsFeed";
 import CommunityHero from "../components/community/CommunityHero";
+import HallOfFame from "../components/community/HallOfFame";
 // import HallOfFame from "../components/community/HallOfFame";
 import Sigmanauts from "../components/community/Sigmanauts";
 import Spotlight from "../components/community/Spotlight";
@@ -27,7 +28,7 @@ export default function Community(props: Props) {
       <ContributeForm />
       <Spotlight />
       <Feed posts={props.posts} />
-      {/* <HallOfFame teamMembers={props.teamMembers} /> */}
+      <HallOfFame teamMembers={props.teamMembers} />
     </Layout>
   );
 }
@@ -38,11 +39,9 @@ export const getServerSideProps = async (context: any) => {
       "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=" +
       context.locale
   ).then((response) => response.json());
-
   const teamMembers = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API + "/api/team-members?populate=*"
   ).then((response) => response.json());
-
   return {
     props: { posts, teamMembers },
   };

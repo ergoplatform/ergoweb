@@ -15,32 +15,40 @@ type HallOfFamePersonProps = {
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
   return (
-    <div className="h-96 w-60">
-      {props.image && props.image?.length > 0 ? (
-        <img
-          src={props.image}
-          className="hall-of-fame-person-card object-cover h-60 w-60 grayscale"
-        />
-      ) : (
-        <PersonPlaceholder className="hall-of-fame-person-card object-cover h-60 w-60" />
-      )}
-      {/* <div>{props.bio}</div> */}
-      <div className="flex flex-row justify-between mt-5">
-        <p className="font-vinila-extended text-[16px] w-10">{props.name}</p>
+    <div className="h-[400px] w-56 lg:w-80 mx-auto">
+      <div className="flip">
+        <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
+          <div className="flip-front object-cover w-full h-full ">
+            {props.image && props.image?.length > 0 ? (
+              <img
+                src={props.image}
+                className="hall-of-fame-person-card object-cover w-full h-full grayscale"
+              />
+            ) : (
+              <PersonPlaceholder className="hall-of-fame-person-card object-cover w-full h-full" />
+            )}
+          </div>
+          <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80">
+            <p className="text-center text-xs align-middle p-4 mt-8">{props.bio}</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row justify-between mt-5 lg:min-h-[72px]">
+        <p className="font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">{props.name}</p>
         <div className="flex flex-row">
-          <div>
+          <div className="my-auto">
             {props.github && props.github?.length > 0 ? (
-              <a href={props.github} target="_blank" rel="noreferrer">
-                <Github className="fill-brand-orange" />
+              <a href={props.twitter} target="_blank" rel="noreferrer">
+                <Twitter className="fill-brand-orange scale-50 lg:scale-100" />
               </a>
             ) : (
               ""
             )}
           </div>
-          <div className="ml-4">
+          <div className="ml-4 my-auto">
             {props.twitter && props.twitter?.length > 0 ? (
-              <a href={props.twitter} target="_blank" rel="noreferrer">
-                <Twitter className="fill-brand-orange" />
+              <a href={props.github} target="_blank" rel="noreferrer">
+                <Github className="fill-brand-orange scale-50 lg:scale-100" />
               </a>
             ) : (
               ""
@@ -60,16 +68,18 @@ function GroupPersons(data: any, group: string) {
     }
   });
   return (
-    <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10">
+    <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 lg:grid lg:grid-cols-3 lg:justify-around lg:space-x-0 lg:gap-y-20 lg:gap-x-8">
       {persons?.map((person: any, i: number) => (
-        <HallOfFamePerson
-          key={i}
-          name={person.attributes.name}
-          bio={person.attributes.bio}
-          github={person.attributes.github}
-          twitter={person.attributes.twitter}
-          image={person.attributes.image.data?.attributes.formats.thumbnail.url}
-        />
+        <div>
+          <HallOfFamePerson
+            key={i}
+            name={person.attributes.name}
+            bio={person.attributes.bio}
+            github={person.attributes.github}
+            twitter={person.attributes.twitter}
+            image={person.attributes.image.data?.attributes.formats.thumbnail.url}
+          />
+        </div>
       ))}
     </div>
   );

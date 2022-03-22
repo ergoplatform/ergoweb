@@ -151,3 +151,25 @@
     border: 1px solid;
     border-image-source: linear-gradient(76.92deg, #FF5E18 26.64%, rgba(255, 94, 24, 0) 101.05%);
 }
+
+.flip {
+}
+
+.flip-content {
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.flip:hover .flip-content {
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
