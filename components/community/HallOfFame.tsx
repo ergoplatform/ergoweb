@@ -108,7 +108,7 @@ export default function HallOfFame(props: Props) {
                   : "font-subtitle-3-uppercase"
               }
             >
-              ERGO FOUNDATION
+              COMMUNITY
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -117,7 +117,7 @@ export default function HallOfFame(props: Props) {
                   : "font-subtitle-3-uppercase"
               }
             >
-              ERGO FOUNDATION ADVISORS
+              CORE
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -126,18 +126,18 @@ export default function HallOfFame(props: Props) {
                   : "font-subtitle-3-uppercase"
               }
             >
-              ECOSYSTEM CORE
+              FOUNDATION
             </Tab>
           </Tab.List>
           <Tab.Panels className="mt-16">
             <Tab.Panel>
-              {GroupPersons(props.teamMembers, "ergo_foundation")}
-            </Tab.Panel>
-            <Tab.Panel>
-              {GroupPersons(props.teamMembers, "ergo_foundation_advisors")}
+            {GroupPersons(props.teamMembers, "ergo_foundation_advisors")}
             </Tab.Panel>
             <Tab.Panel>
               {GroupPersons(props.teamMembers, "ecosystem_core")}
+            </Tab.Panel>
+            <Tab.Panel>
+              {GroupPersons(props.teamMembers, "ergo_foundation")}
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
