@@ -1,5 +1,4 @@
-import type { NextPage } from "next";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import DApps from "../components/ecosystem/DApps";
 import EcosystemHero from "../components/ecosystem/DiscoverHero";
 import Layout from "../components/Layout";

@@ -70,7 +70,7 @@ function GroupPersons(data: any, group: string) {
   return (
     <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 lg:grid lg:grid-cols-3 lg:justify-around lg:space-x-0 lg:gap-y-20 lg:gap-x-8">
       {persons?.map((person: any, i: number) => (
-        <div>
+        <div key={i}>
           <HallOfFamePerson
             key={i}
             name={person.attributes.name}

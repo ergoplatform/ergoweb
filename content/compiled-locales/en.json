@@ -65,6 +65,12 @@
       "value": "Contribute"
     }
   ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "SEE ALL PROJECTS"
+    }
+  ],
   "components.Sigmanauts.button": [
     {
       "type": 0,
@@ -561,12 +567,6 @@
     {
       "type": 0,
       "value": "Discover"
-    }
-  ],
-  "pages.ecosystem.hero": [
-    {
-      "type": 0,
-      "value": "Ecosystem"
     }
   ],
   "pages.ecosystem.title": [
