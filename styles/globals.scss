@@ -137,3 +137,11 @@
     background: linear-gradient(150.5deg, #343434 6.25%, #070707 104.61%);
     border-radius: 20px;
 }
+
+.mining-calculator-bg {
+    background: linear-gradient(240.01deg, rgba(255, 255, 255, 0.15) -4.45%, rgba(255, 255, 255, 0) 17.42%), linear-gradient(246.95deg, rgba(255, 255, 255, 0) 65.9%, rgba(255, 255, 255, 0.15) 100%), #000000;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 1px solid;
+    border-image-source: linear-gradient(76.92deg, #FF5E18 26.64%, rgba(255, 94, 24, 0) 101.05%);
+}
