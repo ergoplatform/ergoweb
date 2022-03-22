@@ -131,7 +131,7 @@ export default function HallOfFame(props: Props) {
           </Tab.List>
           <Tab.Panels className="mt-16">
             <Tab.Panel>
-            {GroupPersons(props.teamMembers, "ergo_foundation_advisors")}
+            {GroupPersons(props.teamMembers, "community")}
             </Tab.Panel>
             <Tab.Panel>
               {GroupPersons(props.teamMembers, "ecosystem_core")}
