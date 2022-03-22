@@ -40,7 +40,8 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   ).then((response) => response.json());
   const teamMembers = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + "/api/team-members?populate=*"
+    process.env.NEXT_PUBLIC_STRAPI_API + "/api/team-members?populate=*&locale=" +
+    context.locale
   ).then((response) => response.json());
   return {
     props: { posts, teamMembers },
