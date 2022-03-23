@@ -91,6 +91,7 @@ export default function Roadmap(props: Props) {
           />
         </b>
       </p>
+      <p className="mx-auto text-center max-w-lg">Please keep in mind that most applications built on top of Ergo are community-run and have no formal connection to the Ergo Foundation.</p>
       <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10 ">
         {sections.map((section: any, i: number) => (
           <div key={i} className="min-w-[235px] md:w-1/4">
