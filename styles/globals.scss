@@ -173,3 +173,12 @@
 .flip-back {
     transform: rotateY(180deg);
 }
+
+.roadmap-item-bg {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.orange-border {
+    border: 1px solid;
+    border-image-source: linear-gradient(76.92deg, #FF5E18 26.64%, rgba(255, 94, 24, 0) 101.05%);
+}

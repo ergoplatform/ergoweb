@@ -51,3 +51,6 @@ export { default as UsingErgMineIt } from "./UsingErgMineIt";
 export { default as UsingErgStoreIt } from "./UsingErgStoreIt";
 export { default as PersonPlaceholder } from "./PersonPlaceholder";
 export { default as DiscoverErgHero } from "./DiscoverErgHero";
+export { default as RoadmapCompleted } from "./RoadmapCompleted";
+export { default as RoadmapInProgress } from "./RoadmapInProgress";
+export { default as RoadmapPlanned } from "./RoadmapPlanned";
