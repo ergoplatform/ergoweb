@@ -174,8 +174,12 @@
     transform: rotateY(180deg);
 }
 
-.roadmap-item-bg {
+.dark .roadmap-item-bg {
     background: rgba(255, 255, 255, 0.06);
+}
+
+.roadmap-item-bg {
+    background: rgba(18, 18, 18, 0.06);
 }
 
 .orange-border {
