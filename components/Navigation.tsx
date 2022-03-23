@@ -100,7 +100,7 @@ function Navigation({ enableLanguages = true }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-10">
+        <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-50">
           <div className="max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8">
             <div className="flex mx-5 mt-2 mb-10">
               <div className="my-auto flex-grow">
