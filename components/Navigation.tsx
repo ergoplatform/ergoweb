@@ -14,9 +14,11 @@ import { getIconComponentByName } from "../utils/icons-map";
 import { useTheme } from "next-themes";
 import { Fragment } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navigation({ enableLanguages = true }) {
   const { theme, setTheme } = useTheme();
+  const { pathname } = useRouter();
   const intl = useIntl();
   const ergoCommunity = intl.formatMessage({
     id: "navigation.ergoCommunity",
@@ -45,10 +47,10 @@ function Navigation({ enableLanguages = true }) {
           </Link>
         </div>
         <div className="hidden lg:block my-auto flex-grow">
-          <Button text={ergoCommunity} url="/community" background={false} />
-          <Button text={getErg} url="/get-erg" background={true} />
-          <Button text={discover} url="/discover" background={false} />
-          <Button text={ecosystem} url="/ecosystem" background={false} />
+          <Button text={ergoCommunity} url="/community" background={false} underline={pathname == '/community'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2" />
+          <Button text={getErg} url="/get-erg" background={true} underline={pathname == '/get-erg'} customClass=" decoration-black dark:decoration-white underline-offset-2"/>
+          <Button text={discover} url="/discover" background={false} underline={pathname == '/discover'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
+          <Button text={ecosystem} url="/ecosystem" background={false} underline={pathname == '/ecosystem'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
         </div>
         <div className="inline-flex">
           <div className="my-auto">

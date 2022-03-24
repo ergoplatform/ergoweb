@@ -11,6 +11,7 @@ type Props = {
   underline?: boolean;
   background?: boolean;
   iconColor?: string;
+  customClass?: string;
 };
 
 export default function Button({
@@ -22,8 +23,9 @@ export default function Button({
   underline = false,
   background = true,
   iconColor = "black",
+  customClass = ""
 }: Props) {
-  var className = `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${textColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange`;
+  var className = `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${textColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange` + customClass;
   var target = "_self";
 
   if (underline == true) {
