@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 import DApps from "../components/ecosystem/DApps";
-import EcosystemHero from "../components/ecosystem/DiscoverHero";
+import EcosystemHero from "../components/ecosystem/EcosystemHero";
 import FeaturesAndProjects from "../components/ecosystem/FeaturesAndProjects";
 import Roadmap from "../components/ecosystem/Roadmap";
 import Layout from "../components/Layout";

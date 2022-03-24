@@ -6,8 +6,11 @@ export default function EcosystemHero() {
       <h1 className="absolute z-10">
         <b>Ecosystem</b>
       </h1>
-      <div className="flex justify-around -mt-10">
+      <div className=" justify-around -mt-10 hidden dark:flex ecosystem-hero-gradient">
         <Image src={"/assets/ecosystem.png"} width="1100px" height="1100px" />
+      </div>
+      <div className="flex justify-around -mt-10 dark:hidden">
+        <Image src={"/assets/ecosystem-light.png"} width="1100px" height="1100px" />
       </div>
     </div>
   );
