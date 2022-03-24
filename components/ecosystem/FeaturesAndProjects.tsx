@@ -2,20 +2,74 @@ type Props = {
   projects?: any;
 };
 
+function adjustCardPosition(i:number){
+  switch(i){
+    case 0:
+      return " lg:row-span-2"
+      break;
+    case 1:
+      return " lg:col-span-2 lg:flex-row"
+      break;
+    default:
+      return ""
+      break;
+  }
+}
+
+function adjustCardText(i:number){
+  switch(i){
+    case 0:
+      return " h-1/2 lg:h-1/3"
+      break;
+    case 1:
+      return " h-1/2 lg:ml-8"
+      break;
+    case 2:
+      return " h-1/2"
+      break;
+    case 3:
+      return " h-1/2"
+      break;
+    default:
+      return ""
+      break;
+  }
+}
+
+function adjustCardPhoto(i:number){
+  switch(i){
+    case 0:
+      return " h-1/2 lg:h-2/3"
+      break;
+    case 1:
+      return " h-1/2"
+      break;
+    case 2:
+      return " h-1/2"
+      break;
+    case 3:
+      return " h-1/2"
+      break;
+    default:
+      return ""
+      break;
+  }
+}
+
 export default function FeaturesAndProjects(props: Props) {
   return (
     <div className="max-w-[1300px] mx-auto p-4 relative">
       <p className="text-[#585858] dark:text-[#585858] font-bold mb-8">
         NEW FEATURES AND PROJECTS YOU MIGHT LIKE
       </p>
-      <div className="flex overflow-x-auto no-scrollbar gap-5">
+      <div className="flex overflow-x-auto no-scrollbar gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:max-h-[860px]">
         {props.projects.data.map((project: any, i: number) => (
-          <div className="rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4">
+          <div key={i} className={"rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4" + adjustCardPosition(i)} >
             <img
-              className="object-contain items-center h-1/2"
+              className={"object-contain items-center lg:my-auto" + adjustCardPhoto(i)}
               src={project.attributes.image.data?.attributes.url}
             />
-            <div className="h-1/2 flex flex-col">
+            <div className={"flex flex-col lg:my-auto" + adjustCardText(i)}>
               <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">
                 {project.attributes.group}
               </p>
