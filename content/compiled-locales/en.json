@@ -341,6 +341,12 @@
       "value": "The rest of the network verifies the solution which can be done efficiently, requiring less than a kilobyte of memory."
     }
   ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Roadmap"
+    }
+  ],
   "footer.blog.title": [
     {
       "type": 0,

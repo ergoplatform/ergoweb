@@ -6,13 +6,10 @@ function adjustCardPosition(i:number){
   switch(i){
     case 0:
       return " lg:row-span-2"
-      break;
     case 1:
       return " lg:col-span-2 lg:flex-row"
-      break;
     default:
       return ""
-      break;
   }
 }
 
@@ -20,19 +17,14 @@ function adjustCardText(i:number){
   switch(i){
     case 0:
       return " h-1/2 lg:h-1/3"
-      break;
     case 1:
       return " h-1/2 lg:ml-8"
-      break;
     case 2:
       return " h-1/2"
-      break;
     case 3:
       return " h-1/2"
-      break;
     default:
       return ""
-      break;
   }
 }
 
@@ -40,19 +32,14 @@ function adjustCardPhoto(i:number){
   switch(i){
     case 0:
       return " h-1/2 lg:h-2/3"
-      break;
     case 1:
       return " h-1/2"
-      break;
     case 2:
       return " h-1/2"
-      break;
     case 3:
       return " h-1/2"
-      break;
     default:
       return ""
-      break;
   }
 }
 
@@ -84,6 +71,7 @@ export default function FeaturesAndProjects(props: Props) {
                   className="underline text-brand-orange dark:text-brand-orange font-vinila-extended lg:text-[16px]"
                   href={project.attributes.url}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {project.attributes.button_text}
                 </a>
