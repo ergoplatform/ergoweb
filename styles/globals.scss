@@ -187,7 +187,12 @@
     border-image-source: linear-gradient(76.92deg, #FF5E18 26.64%, rgba(255, 94, 24, 0) 101.05%);
 }
 
-.features-and-projects-bg {
+.dark .features-and-projects-bg {
     background: linear-gradient(212.28deg, rgba(0, 0, 0, 0) 2.35%, rgba(0, 0, 0, 0.9) 100%), rgba(40, 40, 40, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.features-and-projects-bg {
+    background: linear-gradient(260.56deg, rgba(255, 255, 255, 0) 10.8%, rgba(255, 255, 255, 0.8) 100%), rgba(246, 246, 246, 0.8);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
