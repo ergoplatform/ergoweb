@@ -59,6 +59,8 @@ export const getIconComponentByName = (name: string, props?: any) => {
     RoadmapPlanned: SvgIconsComponent.RoadmapPlanned,
     RoadmapInProgress: SvgIconsComponent.RoadmapInProgress,
     RoadmapCompleted: SvgIconsComponent.RoadmapCompleted,
+    ErgoFoundationIcon: SvgIconsComponent.ErgoFoundationIcon,
+    ErgoFoundationIconLight: SvgIconsComponent.ErgoFoundationIconLight,
   };
 
   if (name in ComponentsMap) {

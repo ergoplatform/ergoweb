@@ -54,3 +54,5 @@ export { default as DiscoverErgHero } from "./DiscoverErgHero";
 export { default as RoadmapCompleted } from "./RoadmapCompleted";
 export { default as RoadmapInProgress } from "./RoadmapInProgress";
 export { default as RoadmapPlanned } from "./RoadmapPlanned";
+export { default as ErgoFoundationIcon } from "./ErgoFoundationIcon";
+export { default as ErgoFoundationIconLight } from "./ErgoFoundationIconLight";
