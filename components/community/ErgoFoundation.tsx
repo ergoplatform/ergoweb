@@ -1,4 +1,3 @@
-import { getIconComponentByName } from "../../utils/icons-map";
 import { ErgoFoundationIcon, ErgoFoundationIconLight } from "../icons";
 
 export default function ErgoFoundation() {

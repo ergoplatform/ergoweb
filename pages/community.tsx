@@ -3,6 +3,7 @@ import CommunityCardsFeed from "../components/community/CommunityCardsFeed";
 import CommunityHero from "../components/community/CommunityHero";
 import ErgoFoundation from "../components/community/ErgoFoundation";
 import HallOfFame from "../components/community/HallOfFame";
+import OurMission from "../components/community/OurMission";
 // import HallOfFame from "../components/community/HallOfFame";
 import Sigmanauts from "../components/community/Sigmanauts";
 import Spotlight from "../components/community/Spotlight";
@@ -31,6 +32,7 @@ export default function Community(props: Props) {
       <Feed posts={props.posts} />
       <HallOfFame teamMembers={props.teamMembers} />
       <ErgoFoundation />
+      <OurMission />
     </Layout>
   );
 }
