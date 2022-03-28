@@ -24,7 +24,6 @@ export default function Home(props: Props) {
   });
   return (
     <div>
-        <div className="home-blur-1"></div>
         <div className="home-frame-3"></div>
         <div className="home-frame-1"></div>
         <div className="home-frame-2"></div>

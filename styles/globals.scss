@@ -232,7 +232,6 @@
 
 // }
 
-
 .home-frame-1 {
     position: absolute;
     width: 167px;
@@ -331,4 +330,37 @@
     background: no-repeat url("/assets/footer.png");
     z-index: -1;
     background-position: bottom center;
+}
+
+@media screen and (max-width: $md) {
+    .footer-image {
+        background: no-repeat url("/assets/footer-small-light.png");
+        z-index: -1;
+        background-position: bottom center;
+    }
+
+    .dark .footer-image {
+        background: no-repeat url("/assets/footer-small.png");
+        z-index: -1;
+        background-position: bottom center;
+    }
+
+    .home-frame-1 {
+        display: none;
+    }
+    .home-frame-2 {
+        display: none;
+    }
+    .home-frame-3 {
+        transform: scale(0.5);
+        transform-origin: center right;
+    }
+    .home-frame-4 {
+        transform: scale(0.5);
+        transform-origin: center left;
+    }
+    .home-frame-5 {
+        transform: scale(0.5);
+        transform-origin: center right;
+    }
 }
