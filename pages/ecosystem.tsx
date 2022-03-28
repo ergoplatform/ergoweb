@@ -35,7 +35,7 @@ export const getServerSideProps = async (context: any) => {
   ).then((response) => response.json());
   const roadmap = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/roadmaps?populate=*&locale=" +
+      "/api/roadmaps?populate=*&pagination[pageSize]=100&locale=" +
       context.locale
   ).then((response) => response.json());
   const projects = await fetch(
