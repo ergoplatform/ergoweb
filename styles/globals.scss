@@ -128,6 +128,12 @@
 }
 
 .using-erg-card {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F6F6F6 100%);
+    box-shadow: 0px 4px 19px rgba(214, 214, 214, 0.25);
+    border-radius: 20px;
+}
+
+.dark .using-erg-card {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(52, 52, 52, 0) 0%, #343434 100%);
     box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
     border-radius: 20px;

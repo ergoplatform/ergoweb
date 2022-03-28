@@ -74,9 +74,9 @@ export default function UsingErg(props: Props) {
           </p>
         </div>
         <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10">
-          {cards.map((card: any, i: number) => (
+          {cards.map((card: any, i: number) => (  
             <div key={i}>
-              <div className="h-[450px] flex items-end using-erg-card p-4 mb-8">
+              <div className="h-[450px] flex items-end using-erg-card dark:using-erg-card p-4 mb-8">
                 {getIconComponentByName(card.icon)}
               </div>
               <p className="font-subtitle-3 mb-3">{card.title}</p>
