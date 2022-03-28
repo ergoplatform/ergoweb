@@ -29,12 +29,16 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
             )}
           </div>
           <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80">
-            <p className="text-center text-xs align-middle p-4 mt-8">{props.bio}</p>
+            <p className="text-center text-xs align-middle p-4 mt-8">
+              {props.bio}
+            </p>
           </div>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-between mt-5 lg:min-h-[72px]">
-        <p className="font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">{props.name}</p>
+        <p className="font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">
+          {props.name}
+        </p>
         <div className="flex flex-row">
           <div className="my-auto">
             {props.github && props.github?.length > 0 ? (
@@ -77,7 +81,9 @@ function GroupPersons(data: any, group: string) {
             bio={person.attributes.bio}
             github={person.attributes.github}
             twitter={person.attributes.twitter}
-            image={person.attributes.image.data?.attributes.formats.thumbnail.url}
+            image={
+              person.attributes.image.data?.attributes.formats.thumbnail.url
+            }
           />
         </div>
       ))}
@@ -108,7 +114,7 @@ export default function HallOfFame(props: Props) {
                   : "font-subtitle-3-uppercase"
               }
             >
-              COMMUNITY
+              CORE
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -117,7 +123,7 @@ export default function HallOfFame(props: Props) {
                   : "font-subtitle-3-uppercase"
               }
             >
-              CORE
+              COMMUNITY
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -131,10 +137,10 @@ export default function HallOfFame(props: Props) {
           </Tab.List>
           <Tab.Panels className="mt-16">
             <Tab.Panel>
-            {GroupPersons(props.teamMembers, "community")}
+              {GroupPersons(props.teamMembers, "ecosystem_core")}
             </Tab.Panel>
             <Tab.Panel>
-              {GroupPersons(props.teamMembers, "ecosystem_core")}
+              {GroupPersons(props.teamMembers, "community")}
             </Tab.Panel>
             <Tab.Panel>
               {GroupPersons(props.teamMembers, "ergo_foundation")}
