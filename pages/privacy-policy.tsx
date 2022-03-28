@@ -7,7 +7,7 @@ const PrivacyPolicy: NextPage = () => {
   const intl = useIntl();
   const title = intl.formatMessage({
     id: "pages.privacyPolicy.title",
-    defaultMessage: "PrivacyPolicy",
+    defaultMessage: "Privacy Policy",
   });
   return (
     <Layout title={title}>

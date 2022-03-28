@@ -219,7 +219,7 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   <FormattedMessage
-                    defaultMessage="Documentation"
+                    defaultMessage="Software Releases"
                     id="footer.discover.1"
                   />
                 </a>
