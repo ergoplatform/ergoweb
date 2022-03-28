@@ -5,8 +5,8 @@ import { BpsaaLogo, LogoWithText } from "./icons";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="max-w-[1300px] mx-auto py-12 px-4">
+    <footer className="relative z-10">
+      <div className="max-w-[1300px] mx-auto py-12 px-4 footer-image">
         <div className="md:flex justify-between">
           <div className="my-6 md:my-auto flex justify-center">
             <Link href="/">

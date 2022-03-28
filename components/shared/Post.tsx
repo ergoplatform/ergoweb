@@ -28,7 +28,7 @@ export default function Post({
   content,
 }: Props) {
   return (
-    <div className="w-96 flex-shrink-0 shadow-xl rounded-2xl">
+    <div className="w-96 flex-shrink-0 shadow-xl rounded-2xl relative z-10">
       <div className="flex-shrink-0 relative">
         <a
           href={type == "news" ? url : "/posts/" + id}

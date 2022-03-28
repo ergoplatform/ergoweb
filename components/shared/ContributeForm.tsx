@@ -57,7 +57,7 @@ export default function ContributeForm() {
   };
 
   return (
-    <div className="max-w-[1300px] mx-auto px-4">
+    <div className="max-w-[1300px] mx-auto px-4 relative z-10">
       <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
         <h1 className="block-inline font-vinila-extended text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto">
           <b>

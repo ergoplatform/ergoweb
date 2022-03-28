@@ -9,7 +9,7 @@ export default function HomeHero() {
   });
 
   return (
-    <div className="mt-36 max-w-[1300px] mx-auto p-4">
+    <div className="mt-36 max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="max-w-lg leading-none md:max-w-4xl">
         <h1 className="md:hidden">
           <b>

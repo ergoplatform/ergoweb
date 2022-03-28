@@ -9,7 +9,7 @@ export default function Autolykos() {
   });
 
   return (
-    <div className="max-w-[1300px] mx-auto">
+    <div className="max-w-[1300px] mx-auto relative z-10">
       <div className="mt-80 px-4 py-12 mx-4 rounded-xl card-bg md:hidden">
         <p className="font-roboto text-[14px]">
           <b>

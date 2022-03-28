@@ -86,7 +86,7 @@ function Navigation({ enableLanguages = true }) {
               </div>
             </div>
           </div>
-          <div className="my-auto ml-5 lg:ml-10">
+          <div className="my-auto ml-5 lg:ml-10 z-40">
             <Popover.Button className="focus:outline-none">
               {getIconComponentByName("MenuOpen")}
             </Popover.Button>
