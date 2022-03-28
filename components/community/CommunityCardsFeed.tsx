@@ -95,17 +95,17 @@ const cards = [
   {
     title: (
       <FormattedMessageFixed
-        defaultMessage="WeChat"
-        id="components.communityHero.WeChat.title"
+        defaultMessage="Forum"
+        id="components.communityHero.Discourse.title"
       />
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Send a message for us on WeChat."
-        id="components.communityHero.WeChat.text"
+        defaultMessage="Join the discussion on the Ergo forum."
+        id="components.communityHero.Discourse.text"
       />
     ),
-    icon: "WeChat",
+    icon: "Discourse",
   },
   {
     title: (

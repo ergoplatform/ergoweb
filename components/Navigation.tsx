@@ -515,7 +515,7 @@ function Navigation({ enableLanguages = true }) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {getIconComponentByName("Wechat")}
+                      {getIconComponentByName("Discourse")}
                     </a>
                   </div>
                 </div>

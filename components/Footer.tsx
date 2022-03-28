@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
             <div className="box mx-auto my-auto">
               <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
-                {getIconComponentByName("Wechat")}
+                {getIconComponentByName("Discourse")}
               </a>
             </div>
           </div>
