@@ -23,17 +23,29 @@ export default function Community(props: Props) {
     defaultMessage: "Community",
   });
   return (
-    <Layout title={title}>
-      <CommunityHero />
-      <CommunityCardsFeed />
-      <Sigmanauts />
-      <ContributeForm />
-      <Spotlight />
-      <Feed posts={props.posts} />
-      <HallOfFame teamMembers={props.teamMembers} />
-      <ErgoFoundation />
-      <OurMission />
-    </Layout>
+    <div>
+      <div className="community-frame-3"></div>
+      <div className="community-frame-1"></div>
+      <div className="community-frame-2"></div>
+      <div className="community-frame-4"></div>
+      <div className="community-frame-5"></div>
+      <div className="community-frame-6"></div>
+      <div className="community-frame-7"></div>
+      <div className="community-frame-8"></div>
+      <div className="community-frame-9"></div>
+      <div className="community-frame-10"></div>
+      <Layout title={title}>
+        <CommunityHero />
+        <CommunityCardsFeed />
+        <Sigmanauts />
+        <ContributeForm />
+        <Spotlight />
+        <Feed posts={props.posts} />
+        <HallOfFame teamMembers={props.teamMembers} />
+        <ErgoFoundation />
+        <OurMission />
+      </Layout>
+    </div>
   );
 }
 
@@ -44,8 +56,9 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   ).then((response) => response.json());
   const teamMembers = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + "/api/team-members?populate=*&locale=" +
-    context.locale
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/team-members?populate=*&locale=" +
+      context.locale
   ).then((response) => response.json());
   return {
     props: { posts, teamMembers },

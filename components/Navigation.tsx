@@ -39,14 +39,14 @@ function Navigation({ enableLanguages = true }) {
   return (
     <Popover className="max-w-[1300px] mx-auto p-4">
       <div className="flex mx-5 mt-2 mb-10 lg:my-10">
-        <div className="my-auto flex-grow">
+        <div className="my-auto flex-grow z-10">
           <Link href="/">
             <button>
               <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
             </button>
           </Link>
         </div>
-        <div className="hidden lg:block my-auto flex-grow">
+        <div className="hidden lg:block my-auto flex-grow z-10">
           <Button text={ergoCommunity} url="/community" background={false} underline={pathname == '/community'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2" />
           <Button text={getErg} url="/get-erg" background={true} underline={pathname == '/get-erg'} customClass=" decoration-black dark:decoration-white underline-offset-2"/>
           <Button text={discover} url="/discover" background={false} underline={pathname == '/discover'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>

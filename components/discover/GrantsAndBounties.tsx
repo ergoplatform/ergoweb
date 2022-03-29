@@ -17,7 +17,7 @@ export default function GrantsAndBounties() {
   });
 
   return (
-    <div className="max-w-[1300px] mx-auto p-4 mt-40">
+    <div className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <h1 className="leading-tight xl:ml-72">
         <b>Grants & Bounties</b>
       </h1>

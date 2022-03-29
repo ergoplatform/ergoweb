@@ -12,7 +12,7 @@ export default function DApps(props: Props) {
     defaultMessage: "SEE ALL PROJECTS",
   });
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative -mt-60 lg:-mt-[500px]">
+    <div className="max-w-[1300px] mx-auto p-4 relative -mt-60 lg:-mt-[500px] z-10">
       <div className="lg:inline-flex">
         <h1>
           <b>DApps</b>

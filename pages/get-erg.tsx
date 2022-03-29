@@ -16,12 +16,23 @@ export default function GetErg(props: Props) {
     defaultMessage: "GetErg",
   });
   return (
-    <Layout title={title}>
-      <UsingErg title="Get ERG" />
-      <Mining />
-      <MiningCalculator currentBlockReward={67.5} currentPrice={4.10} networkHashrate={15.74} />
-      <Exchanges exchanges={props.exchanges} />
-    </Layout>
+    <div>
+      <div className="geterg-frame-1"></div>
+      <div className="geterg-frame-2"></div>
+      <div className="geterg-frame-3"></div>
+      <div className="geterg-frame-4"></div>
+      <div className="geterg-frame-5"></div>
+      <Layout title={title}>
+        <UsingErg title="Get ERG" />
+        <Mining />
+        <MiningCalculator
+          currentBlockReward={67.5}
+          currentPrice={4.1}
+          networkHashrate={15.74}
+        />
+        <Exchanges exchanges={props.exchanges} />
+      </Layout>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import { ErgoFoundationIcon, ErgoFoundationIconLight } from "../icons";
 
 export default function ErgoFoundation() {
   return (
-    <div className="max-w-[1300px] mx-auto p-4">
+    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="flex flex-col md:flex-row mb-14">
         <div className="mb-12 md:my-auto">
           <ErgoFoundationIcon className="h-40 md:h-60 hidden dark:block" viewBox="0 0 248 248" />

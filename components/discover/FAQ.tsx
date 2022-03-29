@@ -22,7 +22,7 @@ export default function FAQ(props: Props) {
   }, []);
   const questions = processFaq(props.faq);
   return (
-    <div className="max-w-[1300px] mx-auto p-4 mt-40">
+    <div className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/3">
           <b>

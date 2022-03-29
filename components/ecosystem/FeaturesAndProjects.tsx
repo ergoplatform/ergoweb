@@ -45,7 +45,7 @@ function adjustCardPhoto(i:number){
 
 export default function FeaturesAndProjects(props: Props) {
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative">
+    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
       <p className="text-[#585858] dark:text-[#585858] font-bold mb-8">
         NEW FEATURES AND PROJECTS YOU MIGHT LIKE
       </p>

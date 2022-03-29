@@ -10,18 +10,21 @@ const Legal: NextPage = () => {
     defaultMessage: "Legal",
   });
   return (
-    <Layout title={title}>
-      <div className="max-w-[1300px] mx-auto p-4">
-        <div className="flex flex-col md:flex-row">
-          <p className="font-vinila-extended text-[48px] md:text-[96px] mb-16 md:w-1/3 md:-mt-8">
-            <FormattedMessage defaultMessage="Legal" id="pages.legal.title" />
-          </p>
-          <div className="mdPage  md:w-2/3">
-            <LegalContent />
+    <div>
+      <div className="legal-frame-1"></div>
+      <Layout title={title}>
+        <div className="max-w-[1300px] mx-auto p-4">
+          <div className="flex flex-col md:flex-row">
+            <p className="font-vinila-extended text-[48px] md:text-[96px] mb-16 md:w-1/3 md:-mt-8">
+              <FormattedMessage defaultMessage="Legal" id="pages.legal.title" />
+            </p>
+            <div className="mdPage  md:w-2/3">
+              <LegalContent />
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 };
 

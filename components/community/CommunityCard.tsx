@@ -8,7 +8,7 @@ type Props = {
 
 export default function CommunityCard({ title, icon, text }: Props) {
   return (
-    <div className="rounded-xl px-9 py-8 card-bg dark:border-brand-orange border">
+    <div className="rounded-xl px-9 py-8 card-bg dark:border-brand-orange border relative z-10">
       <div className="w-56 h-28">
         <div className="flex mb-4">
           <span className="mt-auto mb-auto">

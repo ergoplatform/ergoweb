@@ -18,13 +18,18 @@ export default function Discover(props: Props) {
     defaultMessage: "Discover",
   });
   return (
-    <Layout title={title}>
-      <DiscoverHero />
-      <GrantsAndBounties />
-      <FAQ faq={props.faq} />
-      <ErgoExplorer />
-      <Documents documents={props.documents} />
-    </Layout>
+    <div>
+      <div className="discover-frame-1"></div>
+      <div className="discover-frame-2"></div>
+      <div className="discover-frame-3"></div>
+      <Layout title={title}>
+        <DiscoverHero />
+        <GrantsAndBounties />
+        <FAQ faq={props.faq} />
+        <ErgoExplorer />
+        <Documents documents={props.documents} />
+      </Layout>
+    </div>
   );
 }
 

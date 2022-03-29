@@ -1,0 +1,70 @@
+@import "./_variables.scss";
+
+.discover-frame-1 {
+  position: absolute;
+  width: 925px;
+  height: 1456px;
+  top: 0px;
+  right: 0px;
+  background: no-repeat url("/assets/discover/frame-1-light.png");
+}
+
+.dark .discover-frame-1 {
+  position: absolute;
+  width: 925px;
+  height: 1456px;
+  top: 0px;
+  right: 0px;
+  background: no-repeat url("/assets/discover/frame-1.png");
+}
+
+.discover-frame-2 {
+  position: absolute;
+  width: 535px;
+  height: 1427px;
+  left: 0px;
+  top: 1300px;
+  background: no-repeat url("/assets/discover/frame-2-light.png");
+}
+
+.dark .discover-frame-2 {
+  position: absolute;
+  width: 537px;
+  height: 1420px;
+  left: 0px;
+  top: 1300px;
+  background: no-repeat url("/assets/discover/frame-2.png");
+}
+
+.discover-frame-3 {
+  position: absolute;
+  width: 1058px;
+  height: 1508px;
+  top: 3500px;
+  right: 0px;
+  background: no-repeat url("/assets/discover/frame-3-light.png");
+}
+
+.dark .discover-frame-3 {
+  position: absolute;
+  width: 760px;
+  height: 999px;
+  top: 3500px;
+  right: 0px;
+  background: no-repeat url("/assets/discover/frame-3.png");
+}
+
+@media screen and (max-width: $md) {
+  .discover-frame-1 {
+    transform: scale(0.5);
+    transform-origin: top right;
+  }
+  .discover-frame-2 {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+  .discover-frame-3 {
+    transform: scale(0.5);
+    transform-origin: top right;
+  }
+}

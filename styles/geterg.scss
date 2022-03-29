@@ -1,0 +1,116 @@
+@import "./_variables.scss";
+
+.geterg-frame-1 {
+  position: absolute;
+  width: 576px;
+  height: 771px;
+  top: 0px;
+  left: 0px;
+  background: no-repeat url("/assets/geterg/frame-1-light.png");
+}
+
+.dark .geterg-frame-1 {
+  position: absolute;
+  width: 573px;
+  height: 763px;
+  top: 0px;
+  left: 0px;
+  background: no-repeat url("/assets/geterg/frame-1.png");
+}
+
+.geterg-frame-2 {
+  position: absolute;
+  width: 690px;
+  height: 689px;
+  left: 120px;
+  top: 50px;
+  background: no-repeat url("/assets/geterg/frame-2-light.png");
+}
+
+.dark .geterg-frame-2 {
+  position: absolute;
+  width: 690px;
+  height: 689px;
+  left: 120px;
+  top: 50px;
+  background: no-repeat url("/assets/geterg/frame-2.png");
+}
+
+.geterg-frame-3 {
+  position: absolute;
+  width: 254px;
+  height: 1054px;
+  top: 1000px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-3-light.png");
+}
+
+.dark .geterg-frame-3 {
+  position: absolute;
+  width: 254px;
+  height: 1054px;
+  top: 1000px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-3.png");
+}
+
+.geterg-frame-4 {
+  position: absolute;
+  width: 401px;
+  height: 401px;
+  top: 2500px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-4-light.png");
+}
+
+.dark .geterg-frame-4 {
+  position: absolute;
+  width: 401px;
+  height: 401px;
+  top: 2500px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-4.png");
+}
+
+.geterg-frame-5 {
+  position: absolute;
+  width: 370px;
+  height: 582px;
+  top: 3200px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-5-light.png");
+}
+
+.dark .geterg-frame-5 {
+  position: absolute;
+  width: 370px;
+  height: 582px;
+  top: 3200px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/frame-5.png");
+}
+
+
+@media screen and (max-width: $md) {
+  .geterg-frame-1 {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+  .dark .geterg-frame-2, .geterg-frame-2 {
+    transform: scale(0.5);
+    transform-origin: top left;
+    left: 60px;
+  }
+  .geterg-frame-3 {
+    transform: scale(0.5);
+    transform-origin: top right;
+  }
+  .geterg-frame-4 {
+    transform: scale(0.5);
+    transform-origin: center right;
+  }
+  .geterg-frame-5 {
+    transform: scale(0.5);
+    transform-origin: center right;
+  }
+}

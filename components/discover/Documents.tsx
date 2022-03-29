@@ -36,7 +36,7 @@ export default function Documents(props: Props) {
   }, []);
   const processedDocs = processDocs(props.documents);
   return (
-    <div className="max-w-[1300px] mx-auto p-4 mt-40">
+    <div className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <div className="flex flex-col lg:flex-row mb-12">
         <a className="font-vinila-extended text-[48px] md:text-[96px] lg:w-2/3">
           <b>Documents</b>

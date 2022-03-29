@@ -18,14 +18,21 @@ export default function Ecosystem(props: Props) {
     defaultMessage: "Ecosystem",
   });
   return (
-    <Layout title={title}>
-      <EcosystemHero />
-      <DApps apps={props.apps}/>
-      <Roadmap roadmapItems={props.roadmap}/>
-      <FeaturesAndProjects projects={props.projects} />
-    </Layout>
+    <div>
+      <div className="ecosystem-frame-1"></div>
+      <div className="ecosystem-frame-2"></div>
+      <div className="ecosystem-frame-3"></div>
+      <div className="ecosystem-frame-4"></div>
+      <div className="ecosystem-frame-5"></div>
+      <Layout title={title}>
+        <EcosystemHero />
+        <DApps apps={props.apps} />
+        <Roadmap roadmapItems={props.roadmap} />
+        <FeaturesAndProjects projects={props.projects} />
+      </Layout>
+    </div>
   );
-};
+}
 
 export const getServerSideProps = async (context: any) => {
   const apps = await fetch(
@@ -47,4 +54,3 @@ export const getServerSideProps = async (context: any) => {
     props: { apps, roadmap, projects },
   };
 };
-

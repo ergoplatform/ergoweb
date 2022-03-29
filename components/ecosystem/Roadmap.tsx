@@ -82,7 +82,7 @@ export default function Roadmap(props: Props) {
     { name: "THIS YEAR", tag: "this_year" },
   ];
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative">
+    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
       <p className="font-vinila-extended-bold text-[48px] lg:text-[120px] text-center">
         <b>
           <FormattedMessage

@@ -145,7 +145,7 @@ export default function Mining() {
   );
 
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 flex flex-col lg:flex-row">
+    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 flex flex-col lg:flex-row relative z-10">
       <div className="lg:w-1/2">
         <h1 className="font-vinila-extended text-bold text-[48px] lg:text-[120px]">
           Mining
