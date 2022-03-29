@@ -21,7 +21,9 @@ export default function GetErg(props: Props) {
       <div className="geterg-frame-2"></div>
       <div className="geterg-frame-3"></div>
       <div className="geterg-frame-4"></div>
-      <div className="geterg-frame-5"></div>
+      <div className="geterg-blur-1"></div>
+      <div className="geterg-blur-2"></div>
+      <div className="geterg-blur-3"></div>
       <Layout title={title}>
         <UsingErg title="Get ERG" />
         <Mining />

@@ -54,6 +54,34 @@
   background: no-repeat url("/assets/discover/frame-3.png");
 }
 
+.discover-blur-1 {
+  position: absolute;
+  width: 470px;
+  height: 2396px;
+  top: 1500px;
+  left: 0px;
+  background: no-repeat url("/assets/discover/blur-1-light.svg");
+}
+
+.dark .discover-blur-1 {
+  position: absolute;
+  width: 470px;
+  height: 2396px;
+  top: 1500px;
+  left: 0px;
+  background: no-repeat url("/assets/discover/blur-1.svg");
+}
+
+.discover-blur-2 {
+  position: absolute;
+  width: 527px;
+  height: 1598px;
+  top: 3500px;
+  left: 0px;
+  background: no-repeat url("/assets/discover/blur-2.svg");
+}
+
+
 @media screen and (max-width: $md) {
   .discover-frame-1 {
     transform: scale(0.5);
@@ -66,5 +94,22 @@
   .discover-frame-3 {
     transform: scale(0.5);
     transform-origin: top right;
+  }
+
+  .discover-blur-1, .discover-blur-2 {
+    display: none;
+  }
+
+  .discover-blur-3 {
+    position: absolute;
+    width: 375px;
+    height: 340px;
+    top: 0px;
+    left: 0px;
+    background: no-repeat url("/assets/discover/blur-3.svg");
+  }
+
+  .dark .discover-blur-3 {
+    display: none;
   }
 }

@@ -242,8 +242,17 @@
     background: no-repeat url("/assets/legal-frame-1.png");
 }
 
+.legal-blur-1 {
+    position: absolute;
+    width: 610px;
+    height: 2236px;
+    top: 0px;
+    left: 0px;
+    background: no-repeat url("/assets/legal-blur-1.svg");
+  }
+
 @media screen and (max-width: $md) {
-    .dark .legal-frame-1, .legal-frame-1 {
+    .dark .legal-frame-1, .legal-frame-1, .legal-blur-1 {
         display: none;
     }    
 }

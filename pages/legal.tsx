@@ -12,6 +12,7 @@ const Legal: NextPage = () => {
   return (
     <div>
       <div className="legal-frame-1"></div>
+      <div className="legal-blur-1"></div>
       <Layout title={title}>
         <div className="max-w-[1300px] mx-auto p-4">
           <div className="flex flex-col md:flex-row">

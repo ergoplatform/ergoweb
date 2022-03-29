@@ -56,6 +56,34 @@
 
 .dark .ecosystem-frame-4, .dark .ecosystem-frame-5, .ecosystem-frame-4, .ecosystem-frame-5 { display: none ;}
 
+.ecosystem-blur-1 {
+  position: absolute;
+  width: 793px;
+  height: 1014px;
+  top: 0px;
+  right: 0px;
+  background: no-repeat url("/assets/ecosystem/blur-1.svg");
+}
+
+.ecosystem-blur-2 {
+  position: absolute;
+  width: 619px;
+  height: 1598px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url("/assets/ecosystem/blur-2-light.svg");
+}
+
+.dark .ecosystem-blur-2 {
+  position: absolute;
+  width: 619px;
+  height: 1598px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url("/assets/ecosystem/blur-2.svg");
+}
+
+
 @media screen and (max-width: $md) {
   .ecosystem-frame-1 {
     display: none;
@@ -84,4 +112,18 @@
     right: 0px;  
     background: no-repeat url("/assets/ecosystem/frame-5.png");
   }
+
+  .ecosystem-blur-1, .ecosystem-blur-2 {
+    display: none;
+  }
+
+  .ecosystem-blur-3 {
+    position: absolute;
+    width: 298px; 
+    height: 541px;
+    top: 0px;
+    left: 0px;
+    background: no-repeat url("/assets/ecosystem/blur-3.svg");
+  }
+  
 }

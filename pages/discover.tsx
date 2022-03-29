@@ -22,6 +22,9 @@ export default function Discover(props: Props) {
       <div className="discover-frame-1"></div>
       <div className="discover-frame-2"></div>
       <div className="discover-frame-3"></div>
+      <div className="discover-blur-1"></div>
+      <div className="discover-blur-2"></div>
+      <div className="discover-blur-3"></div>
       <Layout title={title}>
         <DiscoverHero />
         <GrantsAndBounties />

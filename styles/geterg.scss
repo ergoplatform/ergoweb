@@ -90,6 +90,42 @@
   background: no-repeat url("/assets/geterg/frame-5.png");
 }
 
+.geterg-blur-1 {
+  position: absolute;
+  width: 641px;
+  height: 720px;
+  top: 0px;
+  left: 0px;
+  background: no-repeat url("/assets/geterg/blur-1.svg");
+}
+
+.geterg-blur-2 {
+  position: absolute;
+  width: 541px;
+  height: 1944px;
+  top: 2400px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/blur-2-light.svg");
+}
+
+.dark .geterg-blur-2 {
+  position: absolute;
+  width: 519px;
+  height: 2396px;
+  top: 400px;
+  right: 0px;
+  background: no-repeat url("/assets/geterg/blur-2.svg");
+}
+
+.geterg-blur-3 {
+  position: absolute;
+  width: 492px;
+  height: 1419px;
+  top: 2000px;
+  left: 0px;
+  background: no-repeat url("/assets/geterg/blur-3.svg");
+}
+
 
 @media screen and (max-width: $md) {
   .geterg-frame-1 {
@@ -112,5 +148,17 @@
   .geterg-frame-5 {
     transform: scale(0.5);
     transform-origin: center right;
+  }
+  .geterg-blur-1 {
+    transform: scale(0.5);
+    transform-origin: top left;        
+  }
+  .geterg-blur-2 {
+    transform: scale(0.5);
+    transform-origin: center right;        
+  }
+  .geterg-blur-3 {
+    transform: scale(0.5);
+    transform-origin: center left;        
   }
 }

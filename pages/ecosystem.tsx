@@ -24,6 +24,9 @@ export default function Ecosystem(props: Props) {
       <div className="ecosystem-frame-3"></div>
       <div className="ecosystem-frame-4"></div>
       <div className="ecosystem-frame-5"></div>
+      <div className="ecosystem-blur-1"></div>
+      <div className="ecosystem-blur-2"></div>
+      <div className="ecosystem-blur-3"></div>
       <Layout title={title}>
         <EcosystemHero />
         <DApps apps={props.apps} />
