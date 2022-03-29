@@ -180,6 +180,42 @@
   background: no-repeat url("/assets/community/frame-10.png");
 }
 
+.community-blur-1 {
+  position: absolute;
+  width: 844px;
+  height: 1058px;
+  top: 0px;
+  right: 0px;
+  background: no-repeat url("/assets/community/blur-1-light.svg");
+}
+
+.dark .community-blur-1 {
+  position: absolute;
+  width: 847px;
+  height: 1058px;
+  top: 0px;
+  right: 0px;
+  background: no-repeat url("/assets/community/blur-1.svg");
+}
+
+.community-blur-2 {
+  position: absolute;
+  width: 599px;
+  height: 1677px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url("/assets/community/blur-2-light.svg");
+}
+
+.dark .community-blur-2 {
+  position: absolute;
+  width: 645px;
+  height: 1677px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url("/assets/community/blur-2.svg");
+}
+
 @media screen and (max-width: $md) {
   .community-frame-1 {
     transform: scale(0.5);
@@ -230,5 +266,13 @@
     transform: scale(0.5);
     transform-origin: center left;
     top: 4600px;
+  }
+  .community-blur-1 {
+    transform: scale(0.5);
+    transform-origin: top right;        
+  }
+  .community-blur-2 {
+    transform: scale(0.5);
+    transform-origin: center left;        
   }
 }

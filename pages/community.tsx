@@ -24,6 +24,7 @@ export default function Community(props: Props) {
   });
   return (
     <div>
+      <div className="community-blur-2"></div>
       <div className="community-frame-3"></div>
       <div className="community-frame-1"></div>
       <div className="community-frame-2"></div>
@@ -34,6 +35,7 @@ export default function Community(props: Props) {
       <div className="community-frame-8"></div>
       <div className="community-frame-9"></div>
       <div className="community-frame-10"></div>
+      <div className="community-blur-1"></div>
       <Layout title={title}>
         <CommunityHero />
         <CommunityCardsFeed />
