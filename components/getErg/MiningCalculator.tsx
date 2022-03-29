@@ -1,10 +1,24 @@
+import { useState } from "react";
+
 type Props = {
   currentPrice: number;
   currentBlockReward: number;
   networkHashrate: number;
+  difficulty: number;
 };
 
 export default function MiningCalculator(props: Props) {
+  const [hashRate, setHashRate] = useState("");
+  let dailyRevenueERG = 0;
+  const blockTime = 120;
+  const blocksPerDay = 86400 / blockTime;
+
+  if (!isNaN(parseFloat(hashRate))) {
+    dailyRevenueERG =
+      ((1000000 * props.currentBlockReward * parseFloat(hashRate) * blockTime) /
+        props.difficulty) *
+      blocksPerDay;
+  }
   return (
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="mining-calculator-bg mx-auto max-w-[1167px] grid gap-14 grid-cols-1 lg:grid-cols-2 py-12 lg:py-24 px-10 lg:px-20">
@@ -17,15 +31,18 @@ export default function MiningCalculator(props: Props) {
             (PoW) algorithm oriented towards GPUs.
           </p>
           <div className="lg:mb-4">
-            <p className="text-[16px] lg:text-[20px] mb-4 lg:my-auto lg:pr-2">Your hashrate</p>
+            <p className="text-[16px] lg:text-[20px] mb-4 lg:my-auto lg:pr-2">
+              Your hashrate
+            </p>
             <div>
               <div className="relative">
                 <input
-                  type="text"
+                  type="number"
                   name="hashrate"
                   id="hashrate"
                   className="block w-full h-12 pl-4 pr-10 sm:text-sm rounded-2xl bg-transparent border-[1px] border-white"
                   placeholder="Hashrate value"
+                  onChange={(e) => setHashRate(e.target.value)}
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                   MH/s
@@ -39,33 +56,45 @@ export default function MiningCalculator(props: Props) {
           </p>
         </div>
         <div>
-          <p className="mb-6 lg:mb text-[16px] lg:mt-[92px] lg:text-[20px]">Daily revenue</p>
-          <p className="text-[32px] lg:text-[40px]">0.00 ERG</p>
+          <p className="mb-6 lg:mb text-[16px] lg:mt-[92px] lg:text-[20px]">
+            Daily revenue
+          </p>
+          <p className="text-[32px] lg:text-[40px]">
+            {dailyRevenueERG.toFixed(2)} ERG
+          </p>
           <p className="mb-16 text-[32px] lg:text-[40px]">
             ={" "}
             <span className="text-brand-orange dark:text-brand-orange">
-              $0.00
+              ${(dailyRevenueERG * props.currentPrice).toFixed(2)}
             </span>
           </p>
           <div className="flex flex-row justify-between">
             <div>
               <p>Current Price</p>
-              <p>1 ERG =</p>
-              <p className="text-brand-orange dark:text-brand-orange">
-                ${props.currentPrice}
-              </p>
+              <div className="flex flex-col lg:flex-row">
+                <p>1 ERG =&nbsp;</p>
+                <p className="text-brand-orange dark:text-brand-orange">
+                  ${props.currentPrice.toFixed(2)}
+                </p>
+              </div>
             </div>
             <div>
-              <p>Current Price</p>
-              <p>${props.currentBlockReward} ERG =</p>
-              <p className="text-brand-orange dark:text-brand-orange">
-                ${props.currentBlockReward * props.currentPrice}
-              </p>
+              <p>Current block reward</p>
+              <div className="flex flex-col lg:flex-row">
+                <p>{props.currentBlockReward.toFixed(2)} ERG =&nbsp;</p>
+                <p className="text-brand-orange dark:text-brand-orange">
+                  ${(props.currentBlockReward * props.currentPrice).toFixed(2)}
+                </p>
+              </div>
             </div>
             <div>
-              <p>Current Price</p>
-              <p>${props.networkHashrate}</p>
-              <p>TH/s</p>
+              <p>Network hashrate</p>
+              <div className="flex flex-col lg:flex-row">
+                <p>
+                  {(props.networkHashrate / 1000000000000).toFixed(2)}&nbsp;
+                </p>
+                <p>TH/s</p>
+              </div>
             </div>
           </div>
         </div>

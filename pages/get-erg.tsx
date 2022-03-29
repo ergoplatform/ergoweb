@@ -4,11 +4,17 @@ import Mining from "../components/getErg/Mining";
 import MiningCalculator from "../components/getErg/MiningCalculator";
 import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
-import dynamic from 'next/dynamic'
-const Exchanges = dynamic(() => import("../components/getErg/Exchanges"),{ ssr: false })
+import dynamic from "next/dynamic";
+const Exchanges = dynamic(() => import("../components/getErg/Exchanges"), {
+  ssr: false,
+});
 
 type Props = {
   exchanges?: any;
+  price?: any;
+  hashRate?: any;
+  currentBlockReward?: any;
+  difficulty?: any;
 };
 
 export default function GetErg(props: Props) {
@@ -30,9 +36,10 @@ export default function GetErg(props: Props) {
         <UsingErg title="Get ERG" />
         <Mining />
         <MiningCalculator
-          currentBlockReward={67.5}
-          currentPrice={4.1}
-          networkHashrate={15.74}
+          currentBlockReward={props.currentBlockReward}
+          currentPrice={props.price}
+          networkHashrate={props.hashRate}
+          difficulty={props.difficulty}
         />
         <Exchanges exchanges={props.exchanges} />
       </Layout>
@@ -46,7 +53,26 @@ export const getServerSideProps = async (context: any) => {
       "/api/exchanges?populate=*&locale=" +
       context.locale
   ).then((response) => response.json());
+  const price = await fetch(
+    "https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD"
+  )
+    .then((response) => response.json())
+    .then((data) => data.ergo.usd);
+  const hashRate = await fetch("https://api.ergoplatform.com/info/").then(
+    (response) => response.json().then((data) => data.hashRate)
+  );
+  const info = await fetch("https://api.ergoplatform.com/blocks").then(
+    (response) =>
+      response.json().then((data) => {
+        return {
+          currentBlockReward: data.items[0].minerReward / 1000000000,
+          difficulty: data.items[0].difficulty,
+        };
+      })
+  );
+  const currentBlockReward = info.currentBlockReward;
+  const difficulty = info.difficulty;
   return {
-    props: { exchanges },
+    props: { exchanges, price, hashRate, currentBlockReward, difficulty },
   };
 };
