@@ -35,7 +35,7 @@ export default function Exchanges({ exchanges }: Props) {
         {exchanges.data.map((exchange: any) => (
           <div
             key={exchange.id}
-            className="col-span-1 flex justify-center py-8 px-8"
+            className="col-span-1 flex justify-center py-8 px-8 m-auto"
           >
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
               {theme == "dark" && exchange.attributes.image_dark.data != null ? (

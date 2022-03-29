@@ -15,7 +15,7 @@ export default function Partners({ partners }: Props) {
         {partners.data.map((partner: any) => (
           <div
             key={partner.id}
-            className="col-span-1 flex justify-center py-8 px-8"
+            className="col-span-1 flex justify-center py-8 px-8 m-auto"
           >
             <a href={partner.attributes.url} target="_blank" rel="noreferrer">
               {theme == "dark" && partner.attributes.image_dark.data != null ? (
