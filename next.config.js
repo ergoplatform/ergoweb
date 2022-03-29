@@ -20,6 +20,9 @@ const nextConfig = {
     skipWaiting: true,
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  images: {
+    domains: ['storage.googleapis.com'],
+  },
 }
 
 const withMDX = require('@next/mdx')({

@@ -1,4 +1,5 @@
 import { Tab } from "@headlessui/react";
+import Image from "next/image";
 import { Github, PersonPlaceholder, Twitter } from "../icons";
 
 type Props = {
@@ -20,7 +21,8 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
             {props.image && props.image?.length > 0 ? (
-              <img
+              <Image
+                layout='fill'
                 src={props.image}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
               />

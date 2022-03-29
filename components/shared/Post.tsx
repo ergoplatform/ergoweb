@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FormattedDate } from "react-intl";
 import { LogoBlack } from "../icons";
 const removeMd = require("remove-markdown");
@@ -39,10 +40,12 @@ export default function Post({
           {image == null ? (
             <div className="h-48 bg-gray-200 w-full object-cover rounded-t-2xl"></div>
           ) : (
-            <img
+            <Image
               className="h-48 w-full object-cover rounded-t-2xl"
               src={image}
               alt=""
+              height="186px"
+              width="384px"
             />
           )}
           <div className="absolute left-4 top-4">

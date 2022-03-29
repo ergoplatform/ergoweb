@@ -16,10 +16,6 @@ function processFaq(questions: any) {
   return result;
 }
 
-function FormattedMessageFixed(props: any) {
-  return <FormattedMessage {...props} />;
-}
-
 export default function FAQ(props: Props) {
   useEffect(() => {
     require("tw-elements");

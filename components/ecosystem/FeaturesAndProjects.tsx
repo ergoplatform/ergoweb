@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Props = {
   projects?: any;
 };
@@ -52,9 +54,11 @@ export default function FeaturesAndProjects(props: Props) {
       <div className="flex overflow-x-auto no-scrollbar gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:max-h-[860px] p-4">
         {props.projects.data.map((project: any, i: number) => (
           <div key={i} className={"rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4" + adjustCardPosition(i)} >
-            <img
+            <Image
               className={"object-contain items-center lg:my-auto" + adjustCardPhoto(i)}
               src={project.attributes.image.data?.attributes.url}
+              width={project.attributes.image.data?.attributes.width}
+              height={project.attributes.image.data?.attributes.height}
             />
             <div className={"flex flex-col lg:my-auto" + adjustCardText(i)}>
               <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">

@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 type Props = {
   exchanges: any;
@@ -39,7 +40,7 @@ export default function Exchanges({ exchanges }: Props) {
           >
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
               {theme == "dark" && exchange.attributes.image_dark.data != null ? (
-                <img
+                <Image
                   width={exchange.attributes.image_dark.data?.attributes.width}
                   height={
                     exchange.attributes.image_dark.data?.attributes.height
@@ -48,7 +49,7 @@ export default function Exchanges({ exchanges }: Props) {
                   alt={exchange.attributes.name}
                 />
               ) : (
-                <img
+                <Image
                   width={exchange.attributes.image.data?.attributes.width}
                   height={exchange.attributes.image.data?.attributes.height}
                   src={exchange.attributes.image.data?.attributes.url}

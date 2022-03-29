@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useIntl } from "react-intl";
 import Button from "../Button";
 
@@ -38,7 +39,7 @@ export default function DApps(props: Props) {
                 <div className="h-[200px] w-[200px] rounded-md dapps-erg-card"></div>
               ) : (
                 <div className="h-[200px] w-[200px]">
-                  <img
+                  <Image
                     className="h-[200px] w-[200px]"
                     width={app.attributes.image.data?.attributes.width}
                     height={app.attributes.image.data?.attributes.height}

@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 type Props = {
   partners: any;
@@ -19,14 +20,14 @@ export default function Partners({ partners }: Props) {
           >
             <a href={partner.attributes.url} target="_blank" rel="noreferrer">
               {theme == "dark" && partner.attributes.image_dark.data != null ? (
-                <img
+                <Image
                   width={partner.attributes.image_dark.data.attributes.width}
                   height={partner.attributes.image_dark.data.attributes.height}
                   src={partner.attributes.image_dark.data.attributes.url}
                   alt={partner.attributes.name}
                 />
               ) : (
-                <img
+                <Image
                   width={partner.attributes.image.data.attributes.width}
                   height={partner.attributes.image.data.attributes.height}
                   src={partner.attributes.image.data.attributes.url}

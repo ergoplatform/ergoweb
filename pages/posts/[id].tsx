@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeRaw from "rehype-raw";
+import Image from "next/image";
 
 type Props = {
   post?: any;
@@ -36,11 +37,16 @@ export default function Post({ post }: Props) {
               />
             </i>
           </p>
+
           {post.attributes.image.data == null ? (
             ""
           ) : (
-            <img
+            <Image
               src={post.attributes.image.data.attributes.formats.large.url}
+              height={
+                post.attributes.image.data.attributes.formats.large.height
+              }
+              width={post.attributes.image.data.attributes.formats.large.width}
             />
           )}
           <a href={post.attributes.url}>{post.attributes.url}</a>
