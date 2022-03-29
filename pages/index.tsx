@@ -17,6 +17,7 @@ type Props = {
   posts?: any;
   partners?: any;
   news?: any;
+  info?: any;
 };
 
 export default function Home(props: Props) {
@@ -39,7 +40,12 @@ export default function Home(props: Props) {
       <Layout title={title}>
         <HomeHero />
         <Highlights />
-        <HomeInfo />
+        <HomeInfo
+          circulatingSupply={props.info.supply}
+          hashRate={props.info.hashRate}
+          protocolVersion={parseInt(props.info.version)}
+          transactionPerDay={props.info.transactionAverage}
+        />
         <UsingErg title="Using ERG" />
         <Autolykos />
         <News news={props.news} />
@@ -66,7 +72,11 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   ).then((response) => response.json());
 
+  const info = await fetch("https://api.ergoplatform.com/info/").then(
+    (response) => response.json()
+  );
+
   return {
-    props: { posts, partners, news },
+    props: { posts, partners, news, info },
   };
 };
