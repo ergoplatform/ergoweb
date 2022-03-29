@@ -24,22 +24,26 @@ export default function Home(props: Props) {
   });
   return (
     <div>
-        <div className="home-frame-3"></div>
-        <div className="home-frame-1"></div>
-        <div className="home-frame-2"></div>
-        <div className="home-frame-4"></div>
-        <div className="home-frame-5"></div>
-        <Layout title={title}>
-          <HomeHero />
-          <Highlights />
-          <HomeInfo />
-          <UsingErg title="Using ERG" />
-          <Autolykos />
-          <News news={props.news} />
-          <Feed posts={props.posts} />
-          <Partners partners={props.partners} />
-          <ContributeForm />
-        </Layout>
+      <div className="home-blur-1"></div>
+      <div className="home-blur-2"></div>
+      <div className="home-blur-3"></div>
+      <div className="home-blur-4"></div>
+      <div className="home-frame-3"></div>
+      <div className="home-frame-1"></div>
+      <div className="home-frame-2"></div>
+      <div className="home-frame-4"></div>
+      <div className="home-frame-5"></div>
+      <Layout title={title}>
+        <HomeHero />
+        <Highlights />
+        <HomeInfo />
+        <UsingErg title="Using ERG" />
+        <Autolykos />
+        <News news={props.news} />
+        <Feed posts={props.posts} />
+        <Partners partners={props.partners} />
+        <ContributeForm />
+      </Layout>
     </div>
   );
 }
