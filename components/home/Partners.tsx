@@ -1,8 +1,11 @@
+import { useTheme } from "next-themes";
+
 type Props = {
   partners: any;
 };
 
 export default function Partners({ partners }: Props) {
+  const { theme } = useTheme();
   return (
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <h3 className="text-center">
@@ -15,12 +18,21 @@ export default function Partners({ partners }: Props) {
             className="col-span-1 flex justify-center py-8 px-8"
           >
             <a href={partner.attributes.url} target="_blank" rel="noreferrer">
-              <img
-                width={partner.attributes.image.data.attributes.width}
-                height={partner.attributes.image.data.attributes.height}
-                src={partner.attributes.image.data.attributes.url}
-                alt={partner.attributes.name}
-              />
+              {theme == "dark" && partner.attributes.image_dark.data != null ? (
+                <img
+                  width={partner.attributes.image_dark.data.attributes.width}
+                  height={partner.attributes.image_dark.data.attributes.height}
+                  src={partner.attributes.image_dark.data.attributes.url}
+                  alt={partner.attributes.name}
+                />
+              ) : (
+                <img
+                  width={partner.attributes.image.data.attributes.width}
+                  height={partner.attributes.image.data.attributes.height}
+                  src={partner.attributes.image.data.attributes.url}
+                  alt={partner.attributes.name}
+                />
+              )}
             </a>
           </div>
         ))}

@@ -1,8 +1,12 @@
+import { useTheme } from "next-themes";
+
 type Props = {
   exchanges: any;
 };
 
 export default function Exchanges({ exchanges }: Props) {
+  const { theme } = useTheme();
+
   return (
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="flex flex-col md:flex-row justify-between">
@@ -34,12 +38,23 @@ export default function Exchanges({ exchanges }: Props) {
             className="col-span-1 flex justify-center py-8 px-8"
           >
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
-              <img
-                width={exchange.attributes.image.data?.attributes.width}
-                height={exchange.attributes.image.data?.attributes.height}
-                src={exchange.attributes.image.data?.attributes.url}
-                alt={exchange.attributes.name}
-              />
+              {theme == "dark" && exchange.attributes.image_dark.data != null ? (
+                <img
+                  width={exchange.attributes.image_dark.data?.attributes.width}
+                  height={
+                    exchange.attributes.image_dark.data?.attributes.height
+                  }
+                  src={exchange.attributes.image_dark.data?.attributes.url}
+                  alt={exchange.attributes.name}
+                />
+              ) : (
+                <img
+                  width={exchange.attributes.image.data?.attributes.width}
+                  height={exchange.attributes.image.data?.attributes.height}
+                  src={exchange.attributes.image.data?.attributes.url}
+                  alt={exchange.attributes.name}
+                />
+              )}
             </a>
           </div>
         ))}

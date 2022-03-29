@@ -1,9 +1,11 @@
 import { useIntl } from "react-intl";
-import Exchanges from "../components/getErg/Exchanges";
+// import Exchanges from "../components/getErg/Exchanges";
 import Mining from "../components/getErg/Mining";
 import MiningCalculator from "../components/getErg/MiningCalculator";
 import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
+import dynamic from 'next/dynamic'
+const Exchanges = dynamic(() => import("../components/getErg/Exchanges"),{ ssr: false })
 
 type Props = {
   exchanges?: any;

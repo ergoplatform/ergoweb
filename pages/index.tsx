@@ -4,11 +4,14 @@ import Highlights from "../components/home/Highlights";
 import HomeHero from "../components/home/HomeHero";
 import HomeInfo from "../components/home/HomeInfo";
 import News from "../components/home/News";
-import Partners from "../components/home/Partners";
 import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
 import ContributeForm from "../components/shared/ContributeForm";
 import Feed from "../components/shared/Feed";
+import dynamic from "next/dynamic";
+const Partners = dynamic(() => import("../components/home/Partners"), {
+  ssr: false,
+});
 
 type Props = {
   posts?: any;
