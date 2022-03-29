@@ -28,10 +28,12 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
               <PersonPlaceholder className="hall-of-fame-person-card object-cover w-full h-full" />
             )}
           </div>
-          <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80">
-            <p className="text-center text-xs align-middle p-4 mt-8">
-              {props.bio}
-            </p>
+          <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80 flex flex-col-reverse">
+            <div className="my-auto px-2">
+              <p className="text-center text-xs align-middle text-white">
+                {props.bio}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -49,7 +51,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
               ""
             )}
           </div>
-          <div className="ml-4 my-auto">
+          <div className="my-auto">
             {props.twitter && props.twitter?.length > 0 ? (
               <a href={props.github} target="_blank" rel="noreferrer">
                 <Github className="fill-brand-orange scale-50 lg:scale-100" />
