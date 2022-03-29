@@ -1,6 +1,10 @@
 import * as _ from "lodash";
 import { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
+import rehypeRaw from "rehype-raw";
 
 type Props = {
   faq?: any;
@@ -83,13 +87,13 @@ export default function FAQ(props: Props) {
                   aria-labelledby={"faq-heading" + i.toString()}
                   data-bs-parent="#faq-accordion"
                 >
-                  <p className="text-[#585858] dark:text-[#989898] mt-10">
-                    <FormattedMessageFixed
-                      defaultMessage={question.attributes.answer}
-                      id={"components.faq.questions." + i.toString() + ".text"}
-                      values={{ breakingLine: <br /> }}
-                    />
-                  </p>
+                  <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkBreaks]}
+                      rehypePlugins={[rehypeRaw]}
+                      className="faq-answer"
+                    >
+                      {question.attributes.answer}
+                    </ReactMarkdown>
                 </div>
                 <div
                   data-bs-toggle="collapse"
