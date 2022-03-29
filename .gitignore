@@ -36,3 +36,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 package-lock.json
+
+sw.js
+sw.js.map
+workbox*.js
+workbox*.js.map
