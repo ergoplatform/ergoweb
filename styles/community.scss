@@ -216,6 +216,25 @@
   background: no-repeat url("/assets/community/blur-2.svg");
 }
 
+@media screen and (max-width: $xl) {
+  .dark .community-frame-8,
+  .community-frame-8 {
+    transform: scale(0.5);
+    transform-origin: center left;
+    top: 5400px;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .dark .community-frame-8,
+  .community-frame-8 {
+    transform: scale(0.4);
+    transform-origin: center left;
+    top: 5400px;
+  }
+}
+
+
 @media screen and (max-width: $md) {
   .community-frame-1 {
     transform: scale(0.5);
