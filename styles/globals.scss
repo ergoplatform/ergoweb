@@ -9,6 +9,7 @@
 @import "./ecosystem.scss";
 @import "swiper/scss";
 @import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
 
 .themeShadow {
   -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
@@ -35,6 +36,8 @@
 .dark .swiper-pagination-bullet-active-next,
 .dark .swiper-pagination-bullet-active-next-next {
   background: white !important;
+  margin-bottom: 15px !important;
+
 }
 
 .swiper-pagination-bullet-active-prev-prev,

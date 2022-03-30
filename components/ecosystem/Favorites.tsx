@@ -11,7 +11,6 @@ type Props = {
 };
 
 export default function Favorites(props: Props) {
-  console.log(props.favorites.data[1].attributes.image.data);
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: "components.favorites.button1",
@@ -54,7 +53,7 @@ export default function Favorites(props: Props) {
         <div className="lg:w-2/3">
           <Swiper
             className="SwiperFavorites"
-            pagination={true}
+            pagination={{ dynamicBullets: true }}
             modules={[Pagination]}
           >
             {props.favorites.data.map((post: any, i: number) => (
