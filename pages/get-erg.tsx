@@ -5,6 +5,7 @@ import MiningCalculator from "../components/getErg/MiningCalculator";
 import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
 import dynamic from "next/dynamic";
+import Wallets from "../components/getErg/Wallets";
 const Exchanges = dynamic(() => import("../components/getErg/Exchanges"), {
   ssr: false,
 });
@@ -41,6 +42,7 @@ export default function GetErg(props: Props) {
           networkHashrate={props.hashRate}
           difficulty={props.difficulty}
         />
+        <Wallets />
         <Exchanges exchanges={props.exchanges} />
       </Layout>
     </div>

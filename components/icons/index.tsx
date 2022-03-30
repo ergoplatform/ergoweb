@@ -11,6 +11,7 @@ export { default as Highlight } from './Highlight'
 export { default as Ledger } from './Ledger'
 export { default as Linkedin } from './Linkedin'
 export { default as Logo } from './Logo'
+export { default as LogoCustom } from './LogoCustom'
 export { default as LogoBlack } from './LogoBlack'
 export { default as LogoWhite } from './LogoWhite'
 export { default as LogoWithText } from './LogoWithText'
@@ -57,3 +58,13 @@ export { default as RoadmapPlanned } from "./RoadmapPlanned";
 export { default as ErgoFoundationIcon } from "./ErgoFoundationIcon";
 export { default as ErgoFoundationIconLight } from "./ErgoFoundationIconLight";
 export { default as Discourse } from "./Discourse";
+export { default as WalletDesktop } from "./WalletDesktop";
+export { default as WalletLedger } from "./WalletLedger";
+export { default as WalletMark } from "./WalletMark";
+export { default as WalletMobile } from "./WalletMobile";
+export { default as WalletStatusWithMark } from "./WalletStatusWithMark";
+export { default as WalletWeb } from "./WalletWeb";
+export { default as WalletX } from "./WalletX";
+export { default as WalletXGray } from "./WalletXGray";
+export { default as WalletYoroi } from "./WalletYoroi";
+export { default as WalletCheck } from "./WalletCheck";
