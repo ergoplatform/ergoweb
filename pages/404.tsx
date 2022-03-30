@@ -10,9 +10,11 @@ const Custom404: NextPage = () => {
   });
   return (
     <Layout title={title}>
-      <h1 className="text-3xl font-bold">
-        <FormattedMessage defaultMessage="Not Found" id="pages.404.hero" />
-      </h1>
+      <div className="max-w-[1300px] mx-auto p-4 relative z-10 min-h-[400px]">
+        <h1 className="text-3xl font-bold">
+          <FormattedMessage defaultMessage="404 Page Not Found" id="pages.404.hero" />
+        </h1>
+      </div>
     </Layout>
   );
 };

@@ -10,9 +10,11 @@ const Custom500: NextPage = () => {
   });
   return (
     <Layout title={title}>
-      <h1 className="text-3xl font-bold">
-        <FormattedMessage defaultMessage="Server Error" id="pages.500.hero" />
-      </h1>
+      <div className="max-w-[1300px] mx-auto p-4 relative z-10 min-h-[400px]">
+        <h1 className="text-3xl font-bold">
+          <FormattedMessage defaultMessage="500 Server Error" id="pages.500.hero" />
+        </h1>
+      </div>
     </Layout>
   );
 };
