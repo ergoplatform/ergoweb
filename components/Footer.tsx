@@ -354,7 +354,7 @@ export default function Footer() {
           <div className="flex-grow md:flex-grow my-auto">
             <ul className="inline-flex">
               <li className="mr-6">
-                Ergo Platformx &copy; {new Date().getFullYear()}
+                Ergo Platform &copy; {new Date().getFullYear()}
               </li>
               <li className="mr-6">
                 <Link href={"/privacy-policy"}>
