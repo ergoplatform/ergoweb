@@ -7,15 +7,15 @@ export default function DiscoverHero() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: "components.discoverHero.button1",
-    defaultMessage: "GRANTS & BOUNTIES",
+    defaultMessage: "READ THE DOCS",
   });
   const button2Text = intl.formatMessage({
     id: "components.discoverHero.button2",
-    defaultMessage: "FAQ",
+    defaultMessage: "ERGOSCRIPT BY EXAMPLE",
   });
   const button3Text = intl.formatMessage({
     id: "components.discoverHero.button3",
-    defaultMessage: "DOCUMENTS",
+    defaultMessage: "EXPLAINER VIDEO",
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
