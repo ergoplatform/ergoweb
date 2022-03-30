@@ -11,7 +11,6 @@ import {
   WalletXGray,
   WalletYoroi,
 } from "../icons";
-import { LogoCustom } from "../icons";
 
 export default function Wallets() {
   return (
@@ -169,7 +168,7 @@ export default function Wallets() {
           </div>
           <div className="my-auto">
             <p className="text-[11px] font-bold my-auto text-brand-orange dark:text-brand-orange">
-              RISK BURN NFT's
+              RISK BURN NFT&quot;s
             </p>
           </div>
         </div>

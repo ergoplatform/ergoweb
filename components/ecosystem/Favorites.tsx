@@ -37,7 +37,7 @@ export default function Favorites(props: Props) {
             or anything you can convince people to part with their hard-earned
             ERG for! As an added bonus, after finishing the Raffle, a lottery
             takes place, and one lucky participant wins a set percent of the
-            Raffle as a 'raffle reward'.
+            Raffle as a &quot;raffle reward&quot;.
           </p>
           <button
             type="submit"

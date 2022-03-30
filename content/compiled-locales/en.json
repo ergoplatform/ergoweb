@@ -251,6 +251,12 @@
       "value": " YOU’RE LOOKING FOR?"
     }
   ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "EXPLORE ERGO RAFFLE"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -542,7 +548,7 @@
   "pages.404.hero": [
     {
       "type": 0,
-      "value": "Not Found"
+      "value": "404 Page Not Found"
     }
   ],
   "pages.404.title": [
@@ -554,7 +560,7 @@
   "pages.500.hero": [
     {
       "type": 0,
-      "value": "Server Error"
+      "value": "500 Server Error"
     }
   ],
   "pages.500.title": [
