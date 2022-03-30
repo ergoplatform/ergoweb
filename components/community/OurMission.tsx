@@ -22,6 +22,18 @@ export default function OurMission() {
           iconColor="orange"
           customClass=" -ml-4 mb-8"
         />
+        <br/>
+        <Button
+          text="ABOUT OUR ALLOCATION"
+          url="https://twitter.com/ergofoundation"
+          newTab={true}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
         <p className="text-[#989898] dark:text-[#989898] md:text-[16px] md:max-w-3xl">
           The Ergo Foundation is committed to make efforts to maximize the number
           of valuable ecosystem developments done in an open-source way with least
