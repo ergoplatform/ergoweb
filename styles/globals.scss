@@ -144,6 +144,14 @@
   }
 }
 
+.favorite-card {
+  box-shadow: 0px 4px 10px rgba(214, 214, 214, 0.25);
+}
+
+.dark .favorite-card {
+  box-shadow: none;
+}
+
 .using-erg-card {
   background: linear-gradient(
       0deg,

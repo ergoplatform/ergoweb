@@ -41,7 +41,7 @@ export default function Wallets() {
         </div>
       </div>
       <div className="mt-8">
-        <div className="flex felx-row h-20 border-[1px] border-[#585858] rounded-t-3xl lg:rounded-b-full lg:rounded-t-full bg-[#292929] lg:border-0">
+        <div className="flex felx-row h-20 border-[1px] border-[#585858] rounded-t-3xl lg:rounded-b-full lg:rounded-t-full bg-[#E0E0E0] dark:bg-[#292929] lg:border-0">
           <div className="my-auto w-1/5 lg:bg-brand-orange lg:rounded-l-full lg:h-full">
             <p className="text-[11px] lg:text-[24px] lg:mt-6 font-bold text-center text-brand-orange dark:text-brand-orange lg:text-white lg:dark:text-white">
               Wallets
