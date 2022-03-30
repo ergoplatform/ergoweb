@@ -3,14 +3,14 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 type Props = {
-  protocolVersion: number,
+  blockReward: number,
   circulatingSupply: number,
   transactionPerDay: number,
   hashRate: number,
 };
 
 export default function HomeInfo({
-  protocolVersion = 2,
+  blockReward = 2,
   circulatingSupply = 46166151,
   transactionPerDay = 6266,
   hashRate = 20.19,
@@ -20,7 +20,7 @@ export default function HomeInfo({
     triggerOnce: true,
   });
   hashRate = hashRate/1000000000000
-  circulatingSupply = circulatingSupply/1000000
+  circulatingSupply = circulatingSupply/1000000000
 
   return (
     <div ref={ref} className="relative z-10">
@@ -29,13 +29,13 @@ export default function HomeInfo({
           <div className="mx-8 my-4 text-center">
             <b className="text-brand-orange dark:text-brand-orange">
               <FormattedMessage
-                defaultMessage="PROTOCOL VERSION"
-                id="components.homeInfo.version"
+                defaultMessage="BLOCK REWARD"
+                id="components.homeInfo.blockReward"
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
               {inView && (
-                <CountUp separator="," start={0} end={protocolVersion} />
+                <CountUp separator="," start={0} end={blockReward} />
               )}
             </p>
           </div>
@@ -55,7 +55,6 @@ export default function HomeInfo({
                   end={circulatingSupply}
                 />
               )}{" "}
-              Million ERG
             </p>
           </div>
           <div className="verticalLine h-14 my-auto"></div>
@@ -95,13 +94,13 @@ export default function HomeInfo({
           <div className="mx-8 my-6">
             <b className="text-brand-orange dark:text-brand-orange">
               <FormattedMessage
-                defaultMessage="PROTOCOL VERSION"
-                id="components.homeInfo.version"
+                defaultMessage="BLOCK REWARD"
+                id="components.homeInfo.blockReward"
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
               {inView && (
-                <CountUp separator="," start={0} end={protocolVersion} />
+                <CountUp separator="," start={0} end={blockReward} />
               )}
             </p>
           </div>
@@ -120,8 +119,7 @@ export default function HomeInfo({
                   start={10000000}
                   end={circulatingSupply}
                 />
-              )}{" "}
-              Million ERG
+              )}
             </p>
           </div>
           <div className="horizontallLine"></div>

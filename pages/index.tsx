@@ -18,6 +18,7 @@ type Props = {
   partners?: any;
   news?: any;
   info?: any;
+  blockReward: number;
 };
 
 export default function Home(props: Props) {
@@ -43,7 +44,7 @@ export default function Home(props: Props) {
         <HomeInfo
           circulatingSupply={props.info.supply}
           hashRate={props.info.hashRate}
-          protocolVersion={parseInt(props.info.version)}
+          blockReward={props.blockReward}
           transactionPerDay={props.info.transactionAverage}
         />
         <UsingErg title="Using ERG" />
@@ -72,11 +73,21 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   ).then((response) => response.json());
 
+  const blockRewardData = await fetch("https://api.ergoplatform.com/blocks").then(
+    (response) =>
+      response.json().then((data) => {
+        return {
+          currentBlockReward: data.items[0].minerReward / 1000000000,
+        };
+      })
+  );
+  const blockReward = blockRewardData.currentBlockReward;
+
   const info = await fetch("https://api.ergoplatform.com/info/").then(
     (response) => response.json()
   );
 
   return {
-    props: { posts, partners, news, info },
+    props: { posts, partners, news, info, blockReward },
   };
 };

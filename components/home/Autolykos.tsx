@@ -46,7 +46,7 @@ export default function Autolykos() {
         </div>
       </div>
 
-      <div className="hidden md:block mx-4 px-4 py-12 rounded-xl card-bg mt-52">
+      <div className="hidden md:block mx-4 px-14 py-12 rounded-xl card-bg mt-52">
         <p className="font-roboto text-[20px]">
           <b>
             <FormattedMessage

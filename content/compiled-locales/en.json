@@ -299,6 +299,12 @@
       "value": "Powering the Future of Finance"
     }
   ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "BLOCK REWARD"
+    }
+  ],
   "components.homeInfo.circulatingSupply": [
     {
       "type": 0,
@@ -315,12 +321,6 @@
     {
       "type": 0,
       "value": "TRANSACTIONS PER DAY"
-    }
-  ],
-  "components.homeInfo.version": [
-    {
-      "type": 0,
-      "value": "PROTOCOL VERSION"
     }
   ],
   "components.mining.text.1": [
