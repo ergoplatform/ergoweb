@@ -222,13 +222,13 @@
   "components.discoverHero.button4": [
     {
       "type": 0,
-      "value": "SEE LATEST RELEASES"
+      "value": "GET STARTED"
     }
   ],
   "components.discoverHero.button5": [
     {
       "type": 0,
-      "value": "ERGONAUT.SPACE"
+      "value": "VISIT ERGONAUT.SPACE"
     }
   ],
   "components.ergoExplorer.button1": [
