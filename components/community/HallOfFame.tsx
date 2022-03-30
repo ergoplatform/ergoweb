@@ -11,7 +11,7 @@ type HallOfFamePersonProps = {
   bio?: string;
   github?: string;
   twitter?: string;
-  image?: string;
+  image?: any;
 };
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
@@ -20,10 +20,11 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
       <div className="flip">
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
-            {props.image && props.image?.length > 0 ? (
+
+            {props.image?.attributes.formats.thumbnail.url != null && props.image?.attributes.formats.thumbnail.url.length > 0 ? (
               <Image
                 layout='fill'
-                src={props.image}
+                src={props.image?.attributes.formats.thumbnail.url}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
               />
             ) : (
@@ -86,7 +87,7 @@ function GroupPersons(data: any, group: string) {
             github={person.attributes.github}
             twitter={person.attributes.twitter}
             image={
-              person.attributes.image.data?.attributes.formats.thumbnail.url
+              person.attributes.image.data
             }
           />
         </div>
