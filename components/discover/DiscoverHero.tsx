@@ -41,7 +41,7 @@ export default function DiscoverHero() {
           </h1>
           <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
             <FormattedMessage
-              defaultMessage="Ergo's pioneering technology enables infinite smartcontract possiblities."
+              defaultMessage="Ergo provides superior support for real-world financial agreements. ErgoScript is expressive enough to implement complex Turing-complete smart contracts."
               id="components.discoverErgo.text.1"
             />
           </p>
