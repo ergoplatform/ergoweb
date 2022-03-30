@@ -268,6 +268,10 @@
   font-size: 14px;
 }
 
+footer > div > div.my-6.grid.md\:grid-cols-2.lg\:grid-cols-6 > div > ul > li > a {
+  color: #585858;
+}
+
 .footer-image {
   background: no-repeat url("/assets/footer-light.png");
   z-index: -1;
