@@ -74,7 +74,7 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "SIGMANAUTS ONBOARDING"
+      "value": "APPLY TODAY"
     }
   ],
   "components.Sigmanauts.button.discord": [
@@ -134,7 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "There is a rich budding ecosystem budding ontop of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+      "value": "The Sigmanaut Programme aims to build up the structure needed for the eventual transition to a completely community-ran project."
     }
   ],
   "components.Sigmanauts.title": [

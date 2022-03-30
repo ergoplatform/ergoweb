@@ -79,7 +79,7 @@ export default function Roadmap(props: Props) {
     { name: "SO FAR", tag: "so_far" },
     { name: "UP NEXT", tag: "up_next" },
     { name: "SOON", tag: "soon" },
-    { name: "THIS YEAR", tag: "this_year" },
+    { name: "2022 & BEYOND", tag: "this_year" },
   ];
   return (
     <div className="max-w-[1300px] mx-auto p-4 relative z-10">

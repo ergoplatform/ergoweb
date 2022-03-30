@@ -6,7 +6,7 @@ export default function Sigmanauts() {
   const intl = useIntl();
   const buttonText = intl.formatMessage({
     id: "components.Sigmanauts.button",
-    defaultMessage: "SIGMANAUTS ONBOARDING",
+    defaultMessage: "APPLY TODAY",
   });
   return (
     <div className="max-w-[1300px] mx-auto p-4 flex flex-col md:flex-row md:mt-44 relative z-10">
@@ -36,7 +36,7 @@ export default function Sigmanauts() {
         </p>
         <p className="text-[#989898] dark:text-[#989898] mb-6">
           <FormattedMessage
-            defaultMessage="There is a rich budding ecosystem budding ontop of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+            defaultMessage="The Sigmanaut Programme aims to build up the structure needed for the eventual transition to a completely community-ran project."
             id="components.Sigmanauts.text"
           />
         </p>
