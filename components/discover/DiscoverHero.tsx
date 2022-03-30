@@ -19,11 +19,11 @@ export default function DiscoverHero() {
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
-    defaultMessage: "SEE LATEST RELEASES",
+    defaultMessage: "GET STARTED",
   });
   const button5Text = intl.formatMessage({
     id: "components.discoverHero.button5",
-    defaultMessage: "ERGONAUT.SPACE",
+    defaultMessage: "VISIT ERGONAUT.SPACE",
   });
 
   return (
@@ -87,8 +87,7 @@ export default function DiscoverHero() {
             <b>Software</b>
           </h1>
           <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
-            Explore the newests Ergo Protocol Reference, Ergo Platform Reference
-            and update notes.
+            Setup an Ergo node, run an off-chain execution bot, or start developing.
           </p>
           <div className="-ml-4 mt-10">
             <Button
@@ -106,10 +105,10 @@ export default function DiscoverHero() {
         <div className="box xl:order-4">
           <div className="ml-28 mt-16 xl:mt-0">
             <h1 className="max-w-xs leading-tight">
-              <b>Basics</b>
+              <b>Learn</b>
             </h1>
             <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
-              To get an overview of Ergo from a basic perspective check out ergonaut.space
+              Start from the basics. What is Ergo? What can you do on Ergo?
             </p>
             <button
               type="submit"

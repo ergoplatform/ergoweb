@@ -21,7 +21,7 @@ export default function DApps(props: Props) {
         <div className="-ml-4 mt-10 lg:my-auto lg:ml-8">
           <Button
             text={button1Text}
-            url="/url"
+            url="https://sigmaverse.io/"
             newTab={true}
             underline={true}
             textColor="brand-orange"
