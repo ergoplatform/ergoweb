@@ -1,6 +1,8 @@
 import { FormattedMessage, useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 import Button from "../Button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContributeForm() {
   const intl = useIntl();
@@ -37,23 +39,36 @@ export default function ContributeForm() {
     defaultMessage: "SEND",
   });
 
+  let messageSent = false;
   const sendMessage = async (event: any) => {
     event.preventDefault();
 
-    // const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
-    //     body: JSON.stringify({
-    //         data: {
-    //             name: event.target.name.value,
-    //             text: event.target.text.value,
-    //             email: event.target.email.value,
-    //         }
-    //     }),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     method: 'POST'
-    // })
-    // const result = await res.json()
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_STRAPI_API + "/api/contact-requests",
+      {
+        body: JSON.stringify({
+          data: {
+            name: event.target.name.value,
+            text: event.target.text.value,
+            email: event.target.email.value,
+          },
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      }
+    );
+    const result = await res.json();
+    toast.success('Message sent! Have a great day!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
   };
 
   return (
@@ -199,6 +214,7 @@ export default function ContributeForm() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
