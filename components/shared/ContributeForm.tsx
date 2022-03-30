@@ -39,10 +39,8 @@ export default function ContributeForm() {
     defaultMessage: "SEND",
   });
 
-  let messageSent = false;
   const sendMessage = async (event: any) => {
     event.preventDefault();
-
     const res = await fetch(
       process.env.NEXT_PUBLIC_STRAPI_API + "/api/contact-requests",
       {
@@ -60,15 +58,17 @@ export default function ContributeForm() {
       }
     );
     const result = await res.json();
-    toast.success('Message sent! Have a great day!', {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
+    if (result != null) {
+      toast.success("Message sent! Have a great day!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
+    }
   };
 
   return (
