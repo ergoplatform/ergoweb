@@ -324,7 +324,7 @@ function Navigation({ enableLanguages = true }) {
                       rel="noreferrer"
                     >
                       <FormattedMessage
-                        defaultMessage="Ergo Explorer"
+                        defaultMessage="Explore"
                         id="footer.discover.4"
                       />
                     </a>

@@ -105,8 +105,8 @@ export default function HallOfFame(props: Props) {
       <p className="text-[#989898] dark:text-[#989898] mt-10">
         The Ergo Team has a solid background in core development with
         cryptocurrencies and blockchain frameworks including NXT, Scorex,
-        CARDANO and WAVES. Explore our key research. Below are brief biographies
-        for some of the core ERGO team but there are many other developers and
+        Cardano and Waves. Below are brief biographies
+        for some of the core ERGO team as well as some of the many other developers and
         community members involved, some of whom are anonymous.
       </p>
       <div>
