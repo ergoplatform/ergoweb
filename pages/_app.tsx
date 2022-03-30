@@ -1,11 +1,16 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import English from "../content/compiled-locales/en.json";
-import Russian from "../content/compiled-locales/ru.json";
 import Spanish from "../content/compiled-locales/es.json";
-import Portuguese from "../content/compiled-locales/pt.json";
-import Italian from "../content/compiled-locales/it.json";
-import Chinese from "../content/compiled-locales/zh.json";
+// import German from "../content/compiled-locales/de.json";
+// import French from "../content/compiled-locales/fr.json";
+// import Hindi from "../content/compiled-locales/hi.json";
+// import Italian from "../content/compiled-locales/it.json";
+// import Turkish from "../content/compiled-locales/tr.json";
+// import Portuguese from "../content/compiled-locales/pt.json";
+// import Romanian from "../content/compiled-locales/ro.json";
+// import Slovak from "../content/compiled-locales/sk.json";
+// import Chinese from "../content/compiled-locales/zh.json";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import { IntlProvider } from "react-intl";
@@ -17,18 +22,28 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const messages = useMemo(() => {
     switch (shortLocale) {
-      case "ru":
-        return Russian;
-      case "it":
-        return Italian;
       case "en":
         return English;
       case "es":
         return Spanish;
-      case "pt":
-        return Portuguese;
-      case "zh":
-        return Chinese;
+      // case "de":
+      //   return German
+      // case "fr":
+      //   return French
+      // case "hi":
+      //   return Hindi
+      // case "it":
+      //   return Italian;
+      // case "tr":
+      //   return Turkish
+      // case "pt":
+      //   return Portuguese;
+      // case "ro":
+      //   return Romanian
+      // case "sk":
+      //   return Slovak
+      // case "zh":
+      //   return Chinese;
       default:
         return English;
     }
