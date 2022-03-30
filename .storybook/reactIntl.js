@@ -1,4 +1,16 @@
-const locales = ['en', 'ru', 'es', 'pt'];
+const locales = [
+                'en',
+                'es',
+                // 'de',
+                // 'fr',
+                // 'hi',
+                // 'it',
+                // 'tr',
+                // 'pt',
+                // 'ro',
+                // 'sk',
+                // 'zh',
+            ];
 
 const messages = locales.reduce((acc, lang) => ({
     ...acc,
