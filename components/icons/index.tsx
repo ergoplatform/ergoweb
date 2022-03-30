@@ -68,3 +68,5 @@ export { default as WalletX } from "./WalletX";
 export { default as WalletXGray } from "./WalletXGray";
 export { default as WalletYoroi } from "./WalletYoroi";
 export { default as WalletCheck } from "./WalletCheck";
+export { default as ErgoRaffle } from "./ErgoRaffle";
+export { default as Heart } from "./Heart";

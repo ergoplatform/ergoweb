@@ -1,6 +1,7 @@
 import { useIntl } from "react-intl";
 import DApps from "../components/ecosystem/DApps";
 import EcosystemHero from "../components/ecosystem/EcosystemHero";
+import Favorites from "../components/ecosystem/Favorites";
 import FeaturesAndProjects from "../components/ecosystem/FeaturesAndProjects";
 import Roadmap from "../components/ecosystem/Roadmap";
 import Layout from "../components/Layout";
@@ -9,6 +10,7 @@ type Props = {
   apps?: any;
   roadmap?: any;
   projects?: any;
+  favorites?: any;
 };
 
 export default function Ecosystem(props: Props) {
@@ -32,6 +34,7 @@ export default function Ecosystem(props: Props) {
         <DApps apps={props.apps} />
         <Roadmap roadmapItems={props.roadmap} />
         <FeaturesAndProjects projects={props.projects} />
+        <Favorites favorites={props.favorites} />
       </Layout>
     </div>
   );
@@ -53,7 +56,12 @@ export const getServerSideProps = async (context: any) => {
       "/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc&locale=" +
       context.locale
   ).then((response) => response.json());
+  const favorites = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100&locale=" +
+      context.locale
+  ).then((response) => response.json());
   return {
-    props: { apps, roadmap, projects },
+    props: { apps, roadmap, projects, favorites },
   };
 };
