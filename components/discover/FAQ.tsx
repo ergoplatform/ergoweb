@@ -40,7 +40,7 @@ export default function FAQ(props: Props) {
           <div className="mt-96 hidden lg:block">
             <p className="text-[24px] mb-6 font-bold">
               <FormattedMessage
-                defaultMessage="DID’T FIND WHAT {breakingLine} YOU’RE LOOKING FOR?"
+                defaultMessage="DIDN’T FIND WHAT {breakingLine} YOU’RE LOOKING FOR?"
                 id={"components.faq.text.2"}
                 values={{ breakingLine: <br /> }}
               />
@@ -105,7 +105,7 @@ export default function FAQ(props: Props) {
         <div className="mt-12 lg:hidden">
           <p className="text-[14px] mb-4 font-bold">
             <FormattedMessage
-              defaultMessage="DID’T FIND WHAT {breakingLine} YOU’RE LOOKING FOR?"
+              defaultMessage="DIDN’T FIND WHAT {breakingLine} YOU’RE LOOKING FOR?"
               id={"components.faq.text.2"}
               values={{ breakingLine: <br /> }}
             />
