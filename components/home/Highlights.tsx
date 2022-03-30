@@ -7,7 +7,7 @@ const slides = [
   {
     titleMessage: (
       <FormattedMessageFixed
-        defaultMessage="Fairly Created & Community Driven "
+        defaultMessage="A Fair Start"
         id="components.highlights.slide.1.title"
         values={{ breakingLine: <br /> }}
       />
@@ -21,7 +21,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed to ensure that miners are adequately compensated after block rewards end."
+        defaultMessage="Ergo had a fair launch with only a 4.37% of funds allocated to ecosystem development. No smart contract platform is fairer."
         id="components.highlights.slide.1.text"
         values={{ breakingLine: <br /> }}
       />

@@ -11,7 +11,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur."
+        defaultMessage="Suited for smaller cards, ASIC resistant, fairly mined Proof of Work"
         id="components.usingErg.MineIt.text"
       />
     ),
@@ -26,7 +26,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur."
+        defaultMessage="Available across popular centralised and decentralised exchanges."
         id="components.usingErg.BuyIt.text"
       />
     ),
@@ -41,7 +41,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur."
+        defaultMessage="Wallet solutions for your every need."
         id="components.usingErg.StoreIt.text"
       />
     ),

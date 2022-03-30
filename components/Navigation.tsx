@@ -511,7 +511,7 @@ function Navigation({ enableLanguages = true }) {
                   </div>
                   <div className="box mx-auto my-auto">
                     <a
-                      href="https://sigmaverse.io"
+                      href="https://www.ergoforum.org/"
                       target="_blank"
                       rel="noreferrer"
                     >

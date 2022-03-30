@@ -81,7 +81,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
+              <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
                 {getIconComponentByName("Discourse")}
               </a>
             </div>
