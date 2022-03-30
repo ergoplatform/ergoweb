@@ -50,7 +50,7 @@ export const getServerSideProps = async (context: any) => {
   ).then((response) => response.json());
   const projects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&locale=" +
+      "/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc&locale=" +
       context.locale
   ).then((response) => response.json());
   return {
