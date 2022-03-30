@@ -34,21 +34,21 @@ const slides = [
   {
     titleMessage: (
       <FormattedMessageFixed
-        defaultMessage="20+ Scientific Contributions"
+        defaultMessage="Optional Privacy"
         id="components.highlights.slide.2.title"
         values={{ breakingLine: <br /> }}
       />
     ),
     quoteMessage: (
       <FormattedMessageFixed
-        defaultMessage="Another quote"
+        defaultMessage="TRUE P2P"
         id="components.highlights.slide.2.quote"
         values={{ breakingLine: <br /> }}
       />
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed."
+        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make."
         id="components.highlights.slide.2.text"
         values={{ breakingLine: <br /> }}
       />

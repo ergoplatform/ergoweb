@@ -6,7 +6,7 @@ export default function CommunityHero() {
       <div className="">
         <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858]">
           <FormattedMessage
-            defaultMessage="LETS MAKE GRASSROOTS FINANCE"
+            defaultMessage="GRASSROOTS FINANCE"
             id="components.communityHero.subtitle"
           />
         </p>

@@ -41,7 +41,7 @@ export default function DiscoverHero() {
           </h1>
           <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
             <FormattedMessage
-              defaultMessage="Ergo provides superior support for real-world financial agreements. ErgoScript is expressive enough to implement complex Turing-complete smart contracts."
+              defaultMessage="Ergo provides superior support for real-world financial agreements and is expressive enough to implement complex Turing-complete smart contracts."
               id="components.discoverErgo.text.1"
             />
           </p>
@@ -106,11 +106,10 @@ export default function DiscoverHero() {
         <div className="box xl:order-4">
           <div className="ml-28 mt-16 xl:mt-0">
             <h1 className="max-w-xs leading-tight">
-              <b>Learn</b>
+              <b>Basics</b>
             </h1>
             <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
-              Visit Ergodocs for technical documentaiton, or ergonaut.space for
-              an easier to understand overview
+              To get an overview of Ergo from a basic perspective check out ergonaut.space
             </p>
             <button
               type="submit"

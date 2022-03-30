@@ -12,8 +12,8 @@ export default function OurMission() {
           Ergo Platform protocol.
         </p>
         <Button
-          text="ACCESS OUR DOCUMENTATION"
-          url="https://www.google.com"
+          text="REACH US ON TWITTER"
+          url="https://twitter.com/ergofoundation"
           newTab={true}
           underline={true}
           textColor="brand-orange"

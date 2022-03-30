@@ -192,13 +192,13 @@
   "components.communityHero.subtitle": [
     {
       "type": 0,
-      "value": "LETS MAKE GRASSROOTS FINANCE"
+      "value": "GRASSROOTS FINANCE"
     }
   ],
   "components.discoverErgo.text.1": [
     {
       "type": 0,
-      "value": "Ergo provides superior support for real-world financial agreements. ErgoScript is expressive enough to implement complex Turing-complete smart contracts."
+      "value": "Ergo provides superior support for real-world financial agreements and is expressive enough to implement complex Turing-complete smart contracts."
     }
   ],
   "components.discoverHero.button1": [
