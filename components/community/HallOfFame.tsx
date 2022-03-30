@@ -21,7 +21,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
 
-            {props.image?.attributes.formats.thumbnail.url != null && props.image?.attributes.formats.thumbnail.url.length > 0 ? (
+            {props.image?.attributes.formats?.thumbnail.url != undefined ? (
               <Image
                 layout='fill'
                 src={props.image?.attributes.formats.thumbnail.url}
