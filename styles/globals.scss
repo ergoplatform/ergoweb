@@ -37,7 +37,6 @@
 .dark .swiper-pagination-bullet-active-next-next {
   background: white !important;
   margin-bottom: 15px !important;
-
 }
 
 .swiper-pagination-bullet-active-prev-prev,
@@ -276,7 +275,13 @@
   font-size: 14px;
 }
 
-footer > div > div.my-6.grid.md\:grid-cols-2.lg\:grid-cols-6 > div > ul > li > a {
+footer
+  > div
+  > div.my-6.grid.md\:grid-cols-2.lg\:grid-cols-6
+  > div
+  > ul
+  > li
+  > a {
   color: #585858;
 }
 
@@ -336,4 +341,16 @@ footer > div > div.my-6.grid.md\:grid-cols-2.lg\:grid-cols-6 > div > ul > li > a
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+.ergonaut-card {
+  background: linear-gradient(
+      265.46deg,
+      rgba(3, 225, 199, 0) 39.95%,
+      #040404 91.93%
+    ),
+    #506582;
+  background-blend-mode: soft-light, normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }

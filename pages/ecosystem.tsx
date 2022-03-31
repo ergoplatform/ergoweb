@@ -5,6 +5,7 @@ import EcosystemHero from "../components/ecosystem/EcosystemHero";
 import Favorites from "../components/ecosystem/Favorites";
 import FeaturesAndProjects from "../components/ecosystem/FeaturesAndProjects";
 import Roadmap from "../components/ecosystem/Roadmap";
+import Ergonaut from "../components/ecosystem/Ergonaut";
 import Layout from "../components/Layout";
 
 type Props = {
@@ -35,8 +36,9 @@ export default function Ecosystem(props: Props) {
         <EcosystemHero />
         <DApps apps={props.apps} />
         <Roadmap roadmapItems={props.roadmap} />
-        <FeaturesAndProjects projects={props.projects} />
+        <Ergonaut />
         <Favorites favorites={props.favorites} />
+        <FeaturesAndProjects projects={props.projects} />
         <ChangingTheWorld chagingTheWorldProjects={props.chagingTheWorldProjects} />
       </Layout>
     </div>
