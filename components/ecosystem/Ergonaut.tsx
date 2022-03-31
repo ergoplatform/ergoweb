@@ -5,11 +5,11 @@ export default function Ergonaut() {
   return (
     <div className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="hidden md:flex flex-row mb-10">
-        <p className="font-vinila-extended-bold text-[80px]">Ergonaut</p>
+        <p className="font-vinila-extended-bold text-[80px]">ergonaut.space</p>
         <div className="my-auto ml-12">
           <Button
-            text="LEARN MORE"
-            url="https://google.com/"
+            text="EXPLORE"
+            url="https://ergonaut.space/"
             newTab={true}
             underline={true}
             textColor="brand-orange"
@@ -24,10 +24,8 @@ export default function Ergonaut() {
         <div className="ergonaut-card h-[349px] w-full flex flex-row justify-end">
         <div className="my-auto mx-auto">
           <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40">
-            ergonaut.space is the community wiki of the Ergo blockchain, a guide
-            translating how to use and the underlying technical details of the
-            Ergo blockchain into easy to understand language for non-technical
-            people.</p>
+            <strong>ergonaut.space</strong> is your community wiki! It's jam-packed with tons of great information on the underlying technical details of the
+            Ergo blockchain into easy to understand language for non-technical people. There's also plenty of guides, tutorials, and user-submitted content. This wiki is <strong>community-ran</strong>. Create an account to start contributing!</p>
         </div>
           <Image
             src={"/assets/ecosystem/ergonaut.png"}

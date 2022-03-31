@@ -164,7 +164,7 @@
   "components.autolykos.header": [
     {
       "type": 0,
-      "value": "MINING CALCULATOR"
+      "value": "AUTOLYKOS"
     }
   ],
   "components.autolykos.text": [
@@ -266,19 +266,19 @@
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
-      "value": "DEV BOUNTIES"
+      "value": "BOUNTIES"
     }
   ],
   "components.grantsAndBounties.button2": [
     {
       "type": 0,
-      "value": "GRANTS"
+      "value": "START A RAFFLE"
     }
   ],
   "components.grantsAndBounties.button3": [
     {
       "type": 0,
-      "value": "BUG BOUNTIES"
+      "value": "GET IN TOUCH"
     }
   ],
   "components.highlights.title": [

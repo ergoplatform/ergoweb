@@ -5,15 +5,15 @@ export default function GrantsAndBounties() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: "components.grantsAndBounties.button1",
-    defaultMessage: "DEV BOUNTIES",
+    defaultMessage: "BOUNTIES",
   });
   const button2Text = intl.formatMessage({
     id: "components.grantsAndBounties.button2",
-    defaultMessage: "GRANTS",
+    defaultMessage: "START A RAFFLE",
   });
   const button3Text = intl.formatMessage({
     id: "components.grantsAndBounties.button3",
-    defaultMessage: "BUG BOUNTIES",
+    defaultMessage: "GET IN TOUCH",
   });
 
   return (
@@ -22,17 +22,18 @@ export default function GrantsAndBounties() {
         <b>Grants & Bounties</b>
       </h1>
       <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
-        We are looking to fund grants for projects that focus on building key
-        ecosystem infrastructure. The proposals, at the moment, need to be
-        approved by four of six votes of Ergo Development Fund Board Members.
-        Please reference this article for scoping your own grant, and send it to
-        team@ergoplatform.org.
+        In general, anything educative for the community is subject to some bounty even if not specifically listed. Lets create grassroots finance!
+
+
+        We are looking to fund grants for projects that focus on building key ecosystem infrastructure. 
+        
+        The best way to get some funding is to start up a Raffle. This will help you set clear funding requirements and demonstrate community support. The Ergo Foundation will top up these Raffles based on merit.
       </p>
       <div className="flex flex-col xl:flex-row xl:ml-[600px]">
         <div className="-ml-4 mt-10">
           <Button
             text={button1Text}
-            url="/url"
+            url="https://github.com/ergoplatform/grow-ergo/issues"
             newTab={true}
             underline={true}
             textColor="brand-orange"
@@ -44,7 +45,7 @@ export default function GrantsAndBounties() {
         <div className="-ml-4 mt-10 xl:ml-16">
           <Button
             text={button2Text}
-            url="/url"
+            url="https://ergoraffle.com/"
             newTab={true}
             underline={true}
             textColor="brand-orange"
