@@ -21,8 +21,7 @@ export default function Exchanges({ exchanges }: Props) {
         </div>
         <div>
           <p className="font-subtitle-3-bold text-[#989898] dark:text-[#989898] mb-6 max-w-lg">
-            You can buy, sell and trade Ergo on a number of online platforms
-            called exchanges.
+            Available across popular exchanges and decentralised exchanges.
           </p>
           <p className="text-[#989898] dark:text-[#989898] max-w-lg">
             Disclaimer: Exchanges provide highly varying degrees of safety,

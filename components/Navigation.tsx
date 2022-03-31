@@ -26,7 +26,7 @@ function Navigation({ enableLanguages = true }) {
   });
   const getErg = intl.formatMessage({
     id: "navigation.getErg",
-    defaultMessage: "GET ERGO",
+    defaultMessage: "GET ERG",
   });
   const discover = intl.formatMessage({
     id: "navigation.discover",
