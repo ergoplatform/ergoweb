@@ -3,7 +3,6 @@ import {
   WalletCheck,
   WalletDesktop,
   WalletLedger,
-  WalletMark,
   WalletMobile,
   WalletStatusWithMark,
   WalletWeb,
@@ -51,9 +50,9 @@ export default function Wallets() {
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
             Native Asset Support
           </p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Multisig</p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">dApp Connector</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
-            Scripts Support
+            ErgoPay
           </p>
         </div>
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0 lg:mt-8">
@@ -77,10 +76,10 @@ export default function Wallets() {
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
         </div>
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
@@ -99,7 +98,7 @@ export default function Wallets() {
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
         </div>
 
@@ -115,7 +114,7 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletLedger className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 34 34" />
-            <p className="text-center mt-2 lg:my-auto lg:pl-2">Ledger</p>
+            <p className="text-center mt-2 lg:my-auto lg:pl-2">Yoroi</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
@@ -146,7 +145,7 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletYoroi className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 43 38" />
-            <p className="text-center mt-2 lg:my-auto lg:pl-2">Yoroi</p>
+            <p className="text-center mt-2 lg:my-auto lg:pl-2">Nautilus</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
@@ -156,21 +155,15 @@ export default function Wallets() {
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
         </div>
         <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0">
-          <div className="my-auto mx-3">
-            <WalletMark className="w-2 h-2 mb-1" viewBox="0 0 11 11" />
-          </div>
-          <div className="my-auto">
-            <p className="text-[11px] font-bold my-auto text-brand-orange dark:text-brand-orange">
-              RISK BURN NFT&quot;s
-            </p>
-          </div>
+        
+          
         </div>
       </div>
     </div>
