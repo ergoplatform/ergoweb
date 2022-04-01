@@ -24,8 +24,8 @@ export default function OurMission() {
         />
         <br/>
         <Button
-          text="ABOUT OUR ALLOCATION"
-          url="https://twitter.com/ergofoundation"
+          text="MORE ABOUT EMISSION AND OUR ALLOCATION."
+          url="https://ergo-platform-frontend-nvbpfiue6q-ez.a.run.app/posts/1165/"
           newTab={true}
           underline={true}
           textColor="brand-orange"
