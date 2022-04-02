@@ -5,7 +5,7 @@ const cards = [
   {
     title: (
       <FormattedMessageFixed
-        defaultMessage="Ergonaut"
+        defaultMessage="Wiki"
         id="components.communityHero.Ergonaut.title"
       />
     ),
