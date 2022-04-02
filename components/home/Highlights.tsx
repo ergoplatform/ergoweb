@@ -21,7 +21,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Ergo had a fair launch with only a 4.37% of funds allocated to ecosystem development. No smart contract platform is fairer."
+        defaultMessage="Ergo had a fair launch with only a 4.43% of funds allocated to ecosystem development. No smart contract platform is fairer."
         id="components.highlights.slide.1.text"
         values={{ breakingLine: <br /> }}
       />
