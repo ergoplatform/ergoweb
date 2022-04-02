@@ -26,7 +26,7 @@ export default function Spotlight() {
       <div className="-ml-4 md:mb-auto md:mt-auto  md:ml-12">
         <Button
           text={buttonText}
-          url="/url"
+          url="/blog"
           newTab={true}
           underline={true}
           textColor="brand-orange"

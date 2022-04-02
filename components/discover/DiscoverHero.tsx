@@ -48,7 +48,7 @@ export default function DiscoverHero() {
           <div className="-ml-4 mt-10">
             <Button
               text={button1Text}
-              url="/url"
+              url="https://docs.ergoplatform.com/"
               newTab={true}
               underline={true}
               textColor="brand-orange"
@@ -60,7 +60,7 @@ export default function DiscoverHero() {
           <div className="-ml-4 mt-10">
             <Button
               text={button2Text}
-              url="/url"
+              url="https://github.com/ergoplatform/ergoscript-by-example/"
               newTab={true}
               underline={true}
               textColor="brand-orange"
@@ -72,7 +72,7 @@ export default function DiscoverHero() {
           <div className="-ml-4 mt-10">
             <Button
               text={button3Text}
-              url="/url"
+              url="https://www.youtube.com/watch?v=LyyD-clUvyI"
               newTab={true}
               underline={true}
               textColor="brand-orange"

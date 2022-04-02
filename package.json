@@ -34,6 +34,7 @@
     "remark-gfm": "^3.0.1",
     "remove-markdown": "^0.3.0",
     "sass": "^1.48.0",
+    "sharp": "^0.30.3",
     "swiper": "^8.0.1",
     "tw-elements": "^1.0.0-alpha11"
   },

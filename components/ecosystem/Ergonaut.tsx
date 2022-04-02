@@ -26,7 +26,7 @@ export default function Ergonaut() {
           <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40">
             ergonaut.space is your community wiki! 
             Jam-packed with tons of great information on the underlying technical details of the
-            Ergo blockchain into easy to understand language for non-technical people. 
+            Ergo blockchain in easy to understand language for non-technical people. 
             Theres also plenty of guides, tutorials, and user-submitted content. 
             This wiki is community-ran. Create an account to start contributing!
             </p>
@@ -44,12 +44,12 @@ export default function Ergonaut() {
         <p className="text-[14px] text-[#989898] dark:text-[#989898] mb-4">
           ergonaut.space is the community wiki of the Ergo blockchain, a guide
           translating how to use and the underlying technical details of the
-          Ergo blockchain into easy to understand language for non-technical
+          Ergo blockchain in easy to understand language for non-technical
           people.
         </p>
         <Button
           text="LEARN MORE"
-          url="https://google.com/"
+          url="https://ergonaut.space/"
           newTab={true}
           underline={true}
           textColor="brand-orange"

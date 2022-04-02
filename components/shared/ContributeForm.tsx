@@ -10,13 +10,13 @@ export default function ContributeForm() {
     id: "components.Sigmanauts.button.reportBugs",
     defaultMessage: "REPORT BUGS",
   });
-  const buttonWriteAndReviewCode = intl.formatMessage({
+  const buttonReadTheDocs = intl.formatMessage({
     id: "components.Sigmanauts.button.writeAndReviewCode",
-    defaultMessage: "WRITE & REVIEW CODE",
+    defaultMessage: "READ THE DOCS",
   });
   const buttonDiscord = intl.formatMessage({
     id: "components.Sigmanauts.button.discord",
-    defaultMessage: "VISIT THE DISCORD CHANNEL",
+    defaultMessage: "JOIN US ON DISCORD",
   });
   const buttonGrantsAndBounties = intl.formatMessage({
     id: "components.Sigmanauts.button.grantsAndBounties",
@@ -108,10 +108,22 @@ export default function ContributeForm() {
             </b>
           </p>
           <div>
+          <div className="ml-8 mb-10">
+              <Button
+                text={buttonDiscord}
+                url="https://discord.gg/yDdb6yH3Zz"
+                newTab={true}
+                underline={true}
+                textColor="brand-orange"
+                background={false}
+                icon="ArrowRight"
+                iconColor="orange"
+              />
+            </div>
             <div className="ml-8 mb-10">
               <Button
                 text={buttonReportBugs}
-                url="/url"
+                url="mailto:team@ergoplatform.org"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
@@ -122,20 +134,8 @@ export default function ContributeForm() {
             </div>
             <div className="ml-8 mb-10">
               <Button
-                text={buttonWriteAndReviewCode}
-                url="/url"
-                newTab={true}
-                underline={true}
-                textColor="brand-orange"
-                background={false}
-                icon="ArrowRight"
-                iconColor="orange"
-              />
-            </div>
-            <div className="ml-8 mb-10">
-              <Button
-                text={buttonDiscord}
-                url="/url"
+                text={buttonReadTheDocs}
+                url="https://docs.ergoplatform.com/contribute/"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
@@ -147,7 +147,7 @@ export default function ContributeForm() {
             <div className="ml-8 mb-10">
               <Button
                 text={buttonGrantsAndBounties}
-                url="/url"
+                url="https://github.com/ergoplatform/grow-ergo/issues"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"

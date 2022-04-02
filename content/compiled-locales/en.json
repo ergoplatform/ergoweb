@@ -74,13 +74,13 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "APPLY TODAY"
+      "value": "READ MORE"
     }
   ],
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
-      "value": "VISIT THE DISCORD CHANNEL"
+      "value": "JOIN US ON DISCORD"
     }
   ],
   "components.Sigmanauts.button.grantsAndBounties": [
@@ -98,7 +98,7 @@
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "WRITE & REVIEW CODE"
+      "value": "READ THE DOCS"
     }
   ],
   "components.Sigmanauts.formInput.button": [
@@ -296,7 +296,7 @@
   "components.homeHero.text": [
     {
       "type": 0,
-      "value": "Ergo delivers a sophisticated smart contract platform enabling ordinary people to create trustless financial agreements between themselves."
+      "value": "Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through decentralized, private and secure financial tools."
     }
   ],
   "components.homeHero.title": [

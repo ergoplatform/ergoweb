@@ -24,7 +24,7 @@ export default function OurMission() {
         />
         <br/>
         <Button
-          text="MORE ABOUT EMISSION AND OUR ALLOCATION."
+          text="READ MORE"
           url="https://ergo-platform-frontend-nvbpfiue6q-ez.a.run.app/posts/1165/"
           newTab={true}
           underline={true}

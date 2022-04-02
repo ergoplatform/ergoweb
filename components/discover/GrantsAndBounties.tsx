@@ -57,7 +57,7 @@ export default function GrantsAndBounties() {
         <div className="-ml-4 mt-10 xl:ml-16">
           <Button
             text={button3Text}
-            url="/url"
+            url="mailt:team@ergoplatform.rg"
             newTab={true}
             underline={true}
             textColor="brand-orange"
