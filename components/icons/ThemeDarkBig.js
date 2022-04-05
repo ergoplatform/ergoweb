@@ -11,7 +11,7 @@ const SvgThemeDarkBig = (props) => (
     <g filter="url(#theme-dark-big_svg__a)">
       <path
         d="M0 19C0 8.507 8.507 0 19 0h43c10.493 0 19 8.507 19 19s-8.507 19-19 19H19C8.507 38 0 29.493 0 19Z"
-        fill="#121212"
+        fill="#141414"
       />
       <g filter="url(#theme-dark-big_svg__b)">
         <path

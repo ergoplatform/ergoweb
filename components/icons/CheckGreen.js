@@ -17,7 +17,7 @@ const SvgCheckGreen = (props) => (
     />
     <path
       d="m19.522 26.183-5.638-5.338 1.531-1.468 4.107 4.003 8.282-8.006 1.532 1.468-9.814 9.34Z"
-      fill="#121212"
+      fill="#141414"
     />
     <defs>
       <linearGradient

@@ -104,7 +104,7 @@ const SvgUsingErgMineIt = (props) => (
       />
       <path
         d="m155.914 105.815-26.173-16.639"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeMiterlimit={10}
         strokeLinecap="round"

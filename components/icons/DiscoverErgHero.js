@@ -553,7 +553,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__c"
@@ -564,7 +564,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__d"
@@ -575,7 +575,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__e"
@@ -586,7 +586,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__f"
@@ -597,7 +597,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__g"
@@ -608,7 +608,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__h"
@@ -619,7 +619,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__i"
@@ -630,7 +630,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__j"
@@ -641,7 +641,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__k"
@@ -652,7 +652,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__l"
@@ -663,7 +663,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__m"
@@ -674,7 +674,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__n"
@@ -685,7 +685,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__o"
@@ -696,7 +696,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__p"
@@ -707,7 +707,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__q"
@@ -718,7 +718,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#E7703D" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__r"
@@ -728,7 +728,7 @@ const SvgDiscoverErgHero = (props) => (
         y2={387.581}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#121212" />
+        <stop stopColor="#141414" />
         <stop offset={1} stopColor="#FF5E18" />
       </linearGradient>
       <linearGradient
@@ -740,7 +740,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__t"
@@ -750,7 +750,7 @@ const SvgDiscoverErgHero = (props) => (
         y2={360.192}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#121212" />
+        <stop stopColor="#141414" />
         <stop offset={1} stopColor="#FF5E18" />
       </linearGradient>
       <linearGradient
@@ -762,7 +762,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__v"
@@ -773,7 +773,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__w"
@@ -783,7 +783,7 @@ const SvgDiscoverErgHero = (props) => (
         y2={741.83}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#121212" />
+        <stop stopColor="#141414" />
         <stop offset={1} stopColor="#fff" />
       </linearGradient>
       <linearGradient
@@ -795,7 +795,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="discover-erg-hero_svg__y"
@@ -806,7 +806,7 @@ const SvgDiscoverErgHero = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <radialGradient
         id="discover-erg-hero_svg__z"

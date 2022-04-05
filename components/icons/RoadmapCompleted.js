@@ -17,7 +17,7 @@ const SvgRoadmapCompleted = (props) => (
     />
     <path
       d="m11.286 15.625-3.26-3.086.886-.85 2.374 2.316 4.789-4.63.885.849-5.674 5.401Z"
-      fill="#121212"
+      fill="#141414"
     />
     <defs>
       <linearGradient

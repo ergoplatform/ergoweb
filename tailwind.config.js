@@ -22,7 +22,7 @@ module.exports = {
       colors: {
         brand: {
           'orange': '#FF5E18',
-          'black': '#121212',
+          'black': '#141414',
         }
       },
       fontFamily: {

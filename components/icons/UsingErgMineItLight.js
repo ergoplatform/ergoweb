@@ -29,21 +29,21 @@ const SvgUsingErgMineItLight = (props) => (
       />
       <path
         d="M1.482 393.151c28.1-50.954 46.923-86.956 61.95-141.344 7.352-26.646 16.422-37.157 36.549-47.371 12.42-6.365 22.379-10.451 32.131-16.076a73.117 73.117 0 0 0 19.119-15.1c2.045-2.132 3.854-3.76 5.395-3.849 3.913-.237 7.114 5.477 5.395 12.583a31.177 31.177 0 0 1-8.596 13.649c-8.004 7.994-18.556 11.665-27.033 18.859-7.855 6.603-2.046 11.577 8.329 6.514 12.657-5.921 21.668-9.859 29.167-13.057 33.436-13.974 43.84-28.245 64.678-43.611 5.543-4.086 15.621-5.122 16.925 3.671 9.545-2.013 14.821 4.175 7.588 11.281l-7.351 7.105c5.573.178 8.093 5.922 2.55 11.991l-14.406 11.843c7.292.326 9.663 3.405 8.892 7.905-.593 3.435-6.788 7.757-9.485 9.8l-48.494 36.417c-10.522 5.921-21.075 11.842-31.627 17.764-44.877 25.225-43.158 30.88-54.363 80.59l-7.44 32.805"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M246.054 167.96c-9.722 2.961-23.387 16.994-32.22 24.159a196.617 196.617 0 0 1-35.125 22.294M245.728 186.494c-7.677.829-12.271 4.885-17.785 9.474-6.699 5.537-18.881 15.011-25.432 19.6a128.522 128.522 0 0 1-21.342 12.405M236.243 210.269a26.69 26.69 0 0 0-13.487 5.773c-20.749 16.491-20.423 17.083-45.529 29.903"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M123.753 217.345c-9.485 13.501-4.001 32.182-22.972 43.788"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeMiterlimit={10}
         strokeLinecap="round"
@@ -52,22 +52,22 @@ const SvgUsingErgMineItLight = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="M74.222 251.896c-3.853 13.383-3.586 20.725 3.261 38.134-5.454-3.582-8.744-10.303-15.532-11.428l3.112-17.142 9.16-9.564Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M121.234 302.761c-.919-9.149 2.282-11.843 10.048-16.965l13.813-8.882c8.33-5.388 15.058-8.26 23.062-.237 4.416 4.471 1.808 7.165-2.046 9.475-11.352 6.928-22.557 13.856-33.85 21.05-3.824 2.842-10.138 4.885-11.027-4.441Z"
-        fill="#121212"
-        stroke="#121212"
+        fill="#141414"
+        stroke="#141414"
         strokeMiterlimit={10}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="m121.412 304.063 3.497 5.241h-8.833l5.336-5.241Z"
-        fill="#121212"
-        stroke="#121212"
+        fill="#141414"
+        stroke="#141414"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -75,13 +75,13 @@ const SvgUsingErgMineItLight = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="M85.19 143.86a199.871 199.871 0 0 1 44.462-81.627l-1.719-7.283L149.66 33.22l9.812 3.434a94.47 94.47 0 0 1 8.269-4.885c-12.419-7.431-17.34-11.37-31.301.651-27.893 24.07-55.43 65.817-60.261 107.947-.89 8.734 7.025 10.688 9.01 3.494Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="m105.05 79.613.652-6.277 5.483-3.108 107.836 67.859-2.549 7.668-6.047 5.388-105.375-71.53Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
@@ -93,7 +93,7 @@ const SvgUsingErgMineItLight = (props) => (
       />
       <path
         d="M103.419 13.205a6.606 6.606 0 0 0 6.61-6.603A6.606 6.606 0 0 0 103.419 0a6.606 6.606 0 0 0-6.61 6.602 6.606 6.606 0 0 0 6.61 6.603Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         d="M127.755 40.59c-24.662 24.723-47.16 62.175-51.487 99.776-.978 8.882 6.936 10.688 8.892 3.494"
@@ -104,7 +104,7 @@ const SvgUsingErgMineItLight = (props) => (
       />
       <path
         d="m155.914 105.815-26.173-16.64"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeMiterlimit={10}
         strokeLinecap="round"
@@ -114,7 +114,7 @@ const SvgUsingErgMineItLight = (props) => (
         clipRule="evenodd"
         d="M66.368 36.506h8.744c1.6 0 2.964 2.161 2.964 4.826v14.803c0 2.665-1.275 4.826-2.964 4.826h-8.744c-1.572 0-2.965-2.161-2.965-4.826V41.332c.119-2.665 1.275-4.826 2.965-4.826Z"
         fill="#FF5E18"
-        stroke="#121212"
+        stroke="#141414"
         strokeWidth={3}
         strokeMiterlimit={10}
       />
@@ -130,7 +130,7 @@ const SvgUsingErgMineItLight = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="M202.155 56.253h9.248a3.469 3.469 0 0 1 2.965 3.76V71.53a3.463 3.463 0 0 1-2.965 3.76h-9.248a3.468 3.468 0 0 1-2.964-3.76V60.013a3.463 3.463 0 0 1 2.964-3.76Z"
-        fill="#121212"
+        fill="#141414"
         stroke="#FF5E18"
         strokeMiterlimit={10}
       />
@@ -138,7 +138,7 @@ const SvgUsingErgMineItLight = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="M211.73 67.77h9.218a3.432 3.432 0 0 1 2.964 3.76v11.518a3.432 3.432 0 0 1-2.964 3.76h-9.218a3.438 3.438 0 0 1-2.965-3.76V71.53a3.433 3.433 0 0 1 2.965-3.76Z"
-        fill="#121212"
+        fill="#141414"
         stroke="#FF5E18"
         strokeWidth={3}
         strokeMiterlimit={10}
@@ -175,7 +175,7 @@ const SvgUsingErgMineItLight = (props) => (
         y2={383.5}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#121212" />
+        <stop stopColor="#141414" />
         <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </linearGradient>
       <linearGradient
@@ -197,7 +197,7 @@ const SvgUsingErgMineItLight = (props) => (
         y2={378.5}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#121212" />
+        <stop stopColor="#141414" />
         <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </linearGradient>
       <clipPath id="using-erg-mine-it-light_svg__a">

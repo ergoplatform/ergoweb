@@ -50,13 +50,13 @@ const SvgUsingErgBuyIt = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="M144.326 20.221a4.3 4.3 0 0 0-1.482.237l-30.725 12.75a3.503 3.503 0 0 0-1.956 2.046L97.423 66a3.472 3.472 0 0 0 0 2.964l12.74 30.747a3.35 3.35 0 0 0 1.956 1.957l30.725 12.75c.463.22.97.332 1.482.326.484.006.962-.106 1.393-.326l30.725-12.75a3.505 3.505 0 0 0 2.045-1.957l12.741-30.747a4.364 4.364 0 0 0 0-2.965l-12.741-30.746a3.637 3.637 0 0 0-2.045-2.046l-30.725-12.75a3.616 3.616 0 0 0-1.393-.237Zm0 8.569 27.289 11.297 11.289 27.307-11.289 27.307-27.289 11.356-27.289-11.356-11.378-27.307 11.378-27.308 27.289-11.296Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="m182.904 67.394-11.289-27.337-27.289-11.267-27.289 11.267-11.378 27.337 11.378 27.307 27.289 11.356 27.289-11.356 11.289-27.307Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
@@ -149,7 +149,7 @@ const SvgUsingErgBuyIt = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#fff" />
-        <stop offset={1} stopColor="#121212" stopOpacity={0} />
+        <stop offset={1} stopColor="#141414" stopOpacity={0} />
       </linearGradient>
       <linearGradient
         id="using-erg-buy-it_svg__d"
@@ -171,7 +171,7 @@ const SvgUsingErgBuyIt = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#fff" />
-        <stop offset={1} stopColor="#121212" stopOpacity={0} />
+        <stop offset={1} stopColor="#141414" stopOpacity={0} />
       </linearGradient>
       <linearGradient
         id="using-erg-buy-it_svg__f"
@@ -182,7 +182,7 @@ const SvgUsingErgBuyIt = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <clipPath id="using-erg-buy-it_svg__a">
         <path fill="#fff" d="M0 0h224v414H0z" />

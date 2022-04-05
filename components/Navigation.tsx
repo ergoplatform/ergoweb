@@ -46,13 +46,13 @@ function Navigation({ enableLanguages = true }) {
             </button>
           </Link>
         </div>
-        <div className="hidden lg:block my-auto flex-grow z-10">
+        <div className="hidden lg:block my-auto flex-grow" style={{zIndex:12}}>
           <Button text={ergoCommunity} url="/community" background={false} underline={pathname == '/community'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2" />
           <Button text={getErg} url="/get-erg" background={true} underline={pathname == '/get-erg'} customClass=" decoration-black dark:decoration-white underline-offset-2"/>
           <Button text={discover} url="/discover" background={false} underline={pathname == '/discover'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
           <Button text={ecosystem} url="/ecosystem" background={false} underline={pathname == '/ecosystem'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
         </div>
-        <div className="inline-flex">
+        <div className="inline-flex" style={{zIndex:12}}>
           <div className="my-auto">
             {enableLanguages ? <LanguageSwitcher /> : null}{" "}
           </div>

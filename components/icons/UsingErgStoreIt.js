@@ -91,7 +91,7 @@ const SvgUsingErgStoreIt = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="m169.44 32.064-6.73-16.373-16.336-6.763-16.366 6.763-6.789 16.373 6.789 16.373 16.366 6.703 16.336-6.703 6.73-16.373Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
@@ -111,7 +111,7 @@ const SvgUsingErgStoreIt = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="m169.44 122.442-6.73-16.343-16.336-6.793-16.366 6.793-6.789 16.343 6.789 16.284 16.366 6.793 16.336-6.793 6.73-16.284Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
@@ -131,7 +131,7 @@ const SvgUsingErgStoreIt = (props) => (
         fillRule="evenodd"
         clipRule="evenodd"
         d="m168.744 224.69-5.989-14.534-16.336-6.792-16.366 6.792-6.79 16.344 5.663 13.585 39.818-15.395Z"
-        fill="#121212"
+        fill="#141414"
       />
       <path
         fillRule="evenodd"
@@ -172,7 +172,7 @@ const SvgUsingErgStoreIt = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" stopOpacity={0} />
+        <stop offset={1} stopColor="#141414" stopOpacity={0} />
       </linearGradient>
       <linearGradient
         id="using-erg-store-it_svg__d"
@@ -183,7 +183,7 @@ const SvgUsingErgStoreIt = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#fff" />
-        <stop offset={1} stopColor="#121212" stopOpacity={0} />
+        <stop offset={1} stopColor="#141414" stopOpacity={0} />
       </linearGradient>
       <linearGradient
         id="using-erg-store-it_svg__e"

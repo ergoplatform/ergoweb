@@ -695,7 +695,7 @@ const SvgSigmanauts = (props) => (
     />
     <path
       d="M199.33 33.07a4.702 4.702 0 1 0 0-9.402 4.702 4.702 0 0 0 0 9.403Z"
-      fill="#121212"
+      fill="#141414"
     />
     <path
       d="M238.847 7.161c1.67 2.495-7.475 11.599-20.445 20.3-12.97 8.703-24.827 14.023-26.476 11.229"
@@ -720,7 +720,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__b"
@@ -731,7 +731,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__c"
@@ -742,7 +742,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__d"
@@ -764,7 +764,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__f"
@@ -775,7 +775,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__g"
@@ -797,7 +797,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__i"
@@ -808,7 +808,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <linearGradient
         id="sigmanauts_svg__j"
@@ -830,7 +830,7 @@ const SvgSigmanauts = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#FF5E18" />
-        <stop offset={1} stopColor="#121212" />
+        <stop offset={1} stopColor="#141414" />
       </linearGradient>
       <radialGradient
         id="sigmanauts_svg__l"
