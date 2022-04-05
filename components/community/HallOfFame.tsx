@@ -21,10 +21,10 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
 
-            {props.image?.attributes.formats?.thumbnail.url != undefined ? (
+            {props.image?.attributes.formats?.small?.url != undefined ? (
               <Image
                 layout='fill'
-                src={props.image?.attributes.formats.thumbnail.url}
+                src={props.image?.attributes.formats.small.url}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
               />
             ) : (
@@ -32,8 +32,8 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
             )}
           </div>
           <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80 flex flex-col-reverse">
-            <div className="my-auto px-2">
-              <p className="text-center text-xs align-middle text-white">
+            <div className="my-auto px-2 lg:px-6">
+              <p className="text-center text-xs lg:text-sm align-middle text-white">
                 {props.bio}
               </p>
             </div>
@@ -99,16 +99,20 @@ function GroupPersons(data: any, group: string) {
 export default function HallOfFame(props: Props) {
   return (
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
-      <h2>
+      <h2 className="lg:text-center">
         <b>Hall Of Fame</b>
       </h2>
-      <p className="text-[#989898] dark:text-[#989898] mt-10">
-        The Ergo Team has a solid background in core development with
-        cryptocurrencies and blockchain frameworks including NXT, Scorex,
-        Cardano and Waves. Below are brief biographies
-        for some of the core ERGO team as well as some of the many other developers and
-        community members involved, some of whom are anonymous.
-      </p>
+      <div className="flex flex-row justify-center">
+        <div className="lg:max-w-3xl">
+          <p className="text-[#989898] dark:text-[#989898] mt-10">
+            The Ergo Team has a solid background in core development with
+            cryptocurrencies and blockchain frameworks including NXT, Scorex,
+            Cardano and Waves. Below are brief biographies
+            for some of the core ERGO team as well as some of the many other developers and
+            community members involved, some of whom are anonymous.
+          </p>
+        </div>
+      </div>
       <div>
         <Tab.Group>
           <Tab.List className="flex justify-around mt-16">
