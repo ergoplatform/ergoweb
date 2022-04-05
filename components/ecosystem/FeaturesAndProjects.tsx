@@ -55,7 +55,7 @@ export default function FeaturesAndProjects(props: Props) {
         {props.projects.data.map((project: any, i: number) => (
           <div key={i} className={"rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4" + adjustCardPosition(i)} >
             <Image
-              className={"object-contain items-center lg:my-auto" + adjustCardPhoto(i)}
+              className={"rounded-3xl object-contain items-center lg:my-auto" + adjustCardPhoto(i)}
               src={project.attributes.image.data?.attributes.url}
               width={project.attributes.image.data?.attributes.width}
               height={project.attributes.image.data?.attributes.height}
