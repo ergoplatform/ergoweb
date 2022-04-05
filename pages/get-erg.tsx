@@ -1,11 +1,10 @@
 import { useIntl } from "react-intl";
-// import Exchanges from "../components/getErg/Exchanges";
 import Mining from "../components/getErg/Mining";
 import MiningCalculator from "../components/getErg/MiningCalculator";
-import UsingErg from "../components/home/UsingErg";
 import Layout from "../components/Layout";
 import dynamic from "next/dynamic";
 import Wallets from "../components/getErg/Wallets";
+import GetErgHero from "../components/getErg/GetErgHero";
 const Exchanges = dynamic(() => import("../components/getErg/Exchanges"), {
   ssr: false,
 });
@@ -34,7 +33,7 @@ export default function GetErg(props: Props) {
       <div className="geterg-blur-2"></div>
       <div className="geterg-blur-3"></div>
       <Layout title={title}>
-        <UsingErg title="Get ERG" />
+        <GetErgHero title="Get ERG" />
         <Mining />
         <MiningCalculator
           currentBlockReward={props.currentBlockReward}
