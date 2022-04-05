@@ -74,13 +74,13 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "APPLY TODAY"
+      "value": "READ MORE"
     }
   ],
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
-      "value": "VISIT THE DISCORD CHANNEL"
+      "value": "JOIN US ON DISCORD"
     }
   ],
   "components.Sigmanauts.button.grantsAndBounties": [
@@ -98,7 +98,7 @@
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "WRITE & REVIEW CODE"
+      "value": "READ THE DOCS"
     }
   ],
   "components.Sigmanauts.formInput.button": [
@@ -164,7 +164,7 @@
   "components.autolykos.header": [
     {
       "type": 0,
-      "value": "MINING CALCULATOR"
+      "value": "AUTOLYKOS"
     }
   ],
   "components.autolykos.text": [
@@ -266,19 +266,19 @@
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
-      "value": "DEV BOUNTIES"
+      "value": "BOUNTIES"
     }
   ],
   "components.grantsAndBounties.button2": [
     {
       "type": 0,
-      "value": "GRANTS"
+      "value": "START A RAFFLE"
     }
   ],
   "components.grantsAndBounties.button3": [
     {
       "type": 0,
-      "value": "BUG BOUNTIES"
+      "value": "GET IN TOUCH"
     }
   ],
   "components.highlights.title": [
@@ -296,7 +296,7 @@
   "components.homeHero.text": [
     {
       "type": 0,
-      "value": "Ergo delivers a sophisticated smart contract platform enabling ordinary people to create trustless financial agreements between themselves."
+      "value": "Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through decentralized, private and secure financial tools."
     }
   ],
   "components.homeHero.title": [
@@ -446,7 +446,7 @@
   "footer.ecosystem.3": [
     {
       "type": 0,
-      "value": "Ergonaut"
+      "value": "Wiki"
     }
   ],
   "footer.ecosystem.4": [
@@ -542,7 +542,7 @@
   "navigation.getErg": [
     {
       "type": 0,
-      "value": "GET ERGO"
+      "value": "GET ERG"
     }
   ],
   "navigation.moreContent": [

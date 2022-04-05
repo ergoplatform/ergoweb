@@ -51,7 +51,7 @@ export default function MiningCalculator(props: Props) {
             </div>
           </div>
           <p className="text-[16px] text-[#989898] dark:text-[#989898] mb-7 hidden lg:block">
-            Autolykos is the underlying Memory-hard ASIC-resistant Proof of Work
+          Autolykos is the underlying Memory-hard ASIC-resistant Proof of Work
             (PoW) algorithm oriented towards GPUs.
           </p>
         </div>

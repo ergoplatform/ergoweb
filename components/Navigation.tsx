@@ -372,7 +372,7 @@ function Navigation({ enableLanguages = true }) {
                       rel="noreferrer"
                     >
                       <FormattedMessage
-                        defaultMessage="Ergonaut"
+                        defaultMessage="Wiki"
                         id="footer.ecosystem.3"
                       />
                     </a>

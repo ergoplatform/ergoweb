@@ -14,7 +14,7 @@ export default function Autolykos() {
         <p className="font-roboto text-[14px]">
           <b>
             <FormattedMessage
-              defaultMessage="MINING CALCULATOR"
+              defaultMessage="AUTOLYKOS"
               id="components.autolykos.header"
             />
           </b>
@@ -50,7 +50,7 @@ export default function Autolykos() {
         <p className="font-roboto text-[20px]">
           <b>
             <FormattedMessage
-              defaultMessage="MINING CALCULATOR"
+              defaultMessage="AUTOLYKOS"
               id="components.autolykos.header"
             />
           </b>

@@ -6,7 +6,7 @@ export default function Sigmanauts() {
   const intl = useIntl();
   const buttonText = intl.formatMessage({
     id: "components.Sigmanauts.button",
-    defaultMessage: "APPLY TODAY",
+    defaultMessage: "READ MORE",
   });
   return (
     <div className="max-w-[1300px] mx-auto p-4 flex flex-col md:flex-row md:mt-44 relative z-10">
@@ -43,7 +43,7 @@ export default function Sigmanauts() {
         <div className="-ml-4">
           <Button
             text={buttonText}
-            url="/url"
+            url="https://ergoplatform.org/en/blog/2021-07-01-grow-ergo/"
             newTab={true}
             underline={true}
             textColor="brand-orange"

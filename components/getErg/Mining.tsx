@@ -14,7 +14,7 @@ export default function Mining() {
           id="components.mining.miningPools.1"
         />
       ),
-      url: "https://google.com",
+      url: "https://www.666pool.cn/pool2",
     },
     {
       text: (
@@ -23,7 +23,7 @@ export default function Mining() {
           id="components.mining.miningPools.2"
         />
       ),
-      url: "https://google.com",
+      url: "https://ergo.herominers.com/",
     },
     {
       text: (
@@ -32,7 +32,7 @@ export default function Mining() {
           id="components.mining.miningPools.3"
         />
       ),
-      url: "https://google.com",
+      url: "https://ergo.nanopool.org/",
     },
     {
       text: (
@@ -41,7 +41,7 @@ export default function Mining() {
           id="components.mining.miningPools.4"
         />
       ),
-      url: "https://google.com",
+      url: "https://woolypooly.com/#/coin/erg",
     },
     {
       text: (
@@ -50,7 +50,7 @@ export default function Mining() {
           id="components.mining.miningPools.5"
         />
       ),
-      url: "https://google.com",
+      url: "https://ergo.getblok.io/",
     },
     {
       text: (
@@ -59,7 +59,7 @@ export default function Mining() {
           id="components.mining.miningPools.6"
         />
       ),
-      url: "https://google.com",
+      url: "https://2miners.com/erg-mining-pool",
     },
   ];
   let minersUrls = [
@@ -70,7 +70,7 @@ export default function Mining() {
           id="components.mining.miners.1"
         />
       ),
-      url: "https://yahoo.com",
+      url: "https://github.com/nanopool/nanominer/releases",
     },
     {
       text: (
@@ -79,7 +79,7 @@ export default function Mining() {
           id="components.mining.miners.2"
         />
       ),
-      url: "https://yahoo.com",
+      url: "https://github.com/NebuTech/NBMiner/releases",
     },
     {
       text: (
@@ -88,7 +88,7 @@ export default function Mining() {
           id="components.mining.miners.3"
         />
       ),
-      url: "https://yahoo.com",
+      url: "https://github.com/doktor83/SRBMiner-Multi/releases",
     },
     {
       text: (
@@ -97,7 +97,7 @@ export default function Mining() {
           id="components.mining.miners.4"
         />
       ),
-      url: "https://yahoo.com",
+      url: "https://github.com/todxx/teamredminer/releases/",
     },
   ];
 

@@ -29,7 +29,7 @@ ButtonWithArrow.args = {
 
 export const ButtonWithoutArrowBlack = Template.bind({});
 ButtonWithoutArrowBlack.args = {
-  text: "GET ERGO",
+  text: "GET ERG",
   url: "https://google.com",
   icon: "none",
   textColor: "black",
