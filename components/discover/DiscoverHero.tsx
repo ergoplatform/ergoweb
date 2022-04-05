@@ -2,6 +2,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 import Button from "../Button";
 import { DiscoverErgHero } from "../icons";
+import { DiscoverErgHeroLight } from "../icons";
 
 export default function DiscoverHero() {
   const intl = useIntl();
@@ -30,10 +31,18 @@ export default function DiscoverHero() {
     <div className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="grid overflow-hidden grid-cols-1 xl:grid-cols-2 gap-2">
         <div className="box xl:order-2">
-          <DiscoverErgHero
-            viewBox="0 0 1011 811"
-            className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
-          />
+        <div className="hidden dark:block">
+            <DiscoverErgHero
+              viewBox="0 0 1011 811"
+              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+            />
+          </div>
+          <div className="dark:hidden">
+            <DiscoverErgHeroLight
+              viewBox="0 0 1011 811"
+              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+            />
+          </div>
         </div>
         <div className="box xl:order-1">
           <h1 className="max-w-xs leading-tight">
