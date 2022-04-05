@@ -5,8 +5,8 @@ export default {
   component: Home,
 };
 
-export const HomePage = (args, { loaded: { posts, partners, news } }) => (
-  <Home posts={posts} partners={partners} news={news} />
+export const HomePage = (args, { loaded: { posts, partners, news, info, blockReward } }) => (
+  <Home posts={posts} partners={partners} news={news} info={info} blockReward={blockReward} />
 );
 
 HomePage.loaders = [

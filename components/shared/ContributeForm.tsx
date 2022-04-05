@@ -2,7 +2,6 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 import Button from "../Button";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function ContributeForm() {
   const intl = useIntl();
