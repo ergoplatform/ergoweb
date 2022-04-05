@@ -16,17 +16,20 @@ export default function ChangingTheWorld(props: Props) {
         modules={[Pagination]}
       >
         {props.chagingTheWorldProjects.data.map((post: any, i: number) => (
-          <SwiperSlide key={i} className="mb-20">
+          <SwiperSlide key={i} className="mb-20 lg:mt-20">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-2/3">
                 {post.attributes.image.data != null ? (
-                  <div className="flex flex-row justify-around">
-                    <Image
-                      width={post.attributes.image.data?.attributes.width}
-                      height={post.attributes.image.data?.attributes.height}
-                      src={post.attributes.image.data?.attributes.url}
-                      className=""
-                    />
+                  <div className="flex flex-row justify-around h-full">
+                    <div className="flex flex-col w-full mx-8 my-auto">
+                      <Image
+                        className="rounded-3xl"
+                        layout="responsive"
+                        width={post.attributes.image.data?.attributes.width}
+                        height={post.attributes.image.data?.attributes.height}
+                        src={post.attributes.image.data?.attributes.url}
+                      />
+                    </div>
                   </div>
                 ) : (
                   <div></div>
