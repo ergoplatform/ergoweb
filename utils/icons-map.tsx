@@ -65,6 +65,10 @@ export const getIconComponentByName = (name: string, props?: any) => {
     ErgoFoundationIcon: SvgIconsComponent.ErgoFoundationIcon,
     ErgoFoundationIconLight: SvgIconsComponent.ErgoFoundationIconLight,
     Discourse: SvgIconsComponent.Discourse,
+    UniqueErgo1: SvgIconsComponent.UniqueErgo1,
+    UniqueErgo2: SvgIconsComponent.UniqueErgo2,
+    UniqueErgo3: SvgIconsComponent.UniqueErgo3,
+    UniqueErgo4: SvgIconsComponent.UniqueErgo4,
   };
 
   if (name in ComponentsMap) {

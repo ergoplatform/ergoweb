@@ -9,6 +9,7 @@ import Layout from "../components/Layout";
 import ContributeForm from "../components/shared/ContributeForm";
 import Feed from "../components/shared/Feed";
 import dynamic from "next/dynamic";
+import UniqueErgo from "../components/home/UniqueErgo";
 const Partners = dynamic(() => import("../components/home/Partners"), {
   ssr: false,
 });
@@ -47,6 +48,7 @@ export default function Home(props: Props) {
           blockReward={props.blockReward}
           transactionPerDay={props.info.transactionAverage}
         />
+        <UniqueErgo />
         <UsingErg title="Using ERG" />
         <Autolykos />
         <News news={props.news} />

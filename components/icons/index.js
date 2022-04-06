@@ -73,3 +73,7 @@ export { default as WalletYoroi } from "./WalletYoroi";
 export { default as WalletCheck } from "./WalletCheck";
 export { default as ErgoRaffle } from "./ErgoRaffle";
 export { default as Heart } from "./Heart";
+export { default as UniqueErgo1 } from "./UniqueErgo1";
+export { default as UniqueErgo2 } from "./UniqueErgo2";
+export { default as UniqueErgo3 } from "./UniqueErgo3";
+export { default as UniqueErgo4 } from "./UniqueErgo4";
