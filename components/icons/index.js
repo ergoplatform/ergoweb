@@ -77,3 +77,7 @@ export { default as UniqueErgo1 } from "./UniqueErgo1";
 export { default as UniqueErgo2 } from "./UniqueErgo2";
 export { default as UniqueErgo3 } from "./UniqueErgo3";
 export { default as UniqueErgo4 } from "./UniqueErgo4";
+export { default as UniqueErgo1Light } from "./UniqueErgo1Light";
+export { default as UniqueErgo2Light } from "./UniqueErgo2Light";
+export { default as UniqueErgo3Light } from "./UniqueErgo3Light";
+export { default as UniqueErgo4Light } from "./UniqueErgo4Light";
