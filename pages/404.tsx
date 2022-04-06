@@ -9,13 +9,34 @@ const Custom404: NextPage = () => {
     defaultMessage: "Not Found",
   });
   return (
-    <Layout title={title}>
-      <div className="max-w-[1300px] mx-auto p-4 relative z-10 min-h-[400px]">
-        <h1 className="text-3xl font-bold">
-          <FormattedMessage defaultMessage="404 Page Not Found" id="pages.404.hero" />
-        </h1>
-      </div>
-    </Layout>
+    <div>
+      <div className="not-found-blur-1"></div>
+      <div className="not-found-blur-2"></div>
+      <div className="not-found-frame-2"></div>
+      <div className="not-found-frame-3"></div>
+      <div className="not-found-frame-1"></div>
+      <div className="not-found-frame-5"></div>
+      <div className="not-found-frame-4"></div>
+      <Layout title={title} footer={false}>
+        <div className="max-w-[1300px] mx-auto p-4 relative z-10 flex flex-col lg:flex-row mb-20">
+          <div className="lg:w-2/3"></div>
+          <div className="lg:w-1/3">
+            <div className="max-w-sm mt-96  lg:mt-40">
+              <h1 className="font-bold text-[#989898] dark:text-[#989898] text-[60px] leading-tight">
+                <FormattedMessage
+                  defaultMessage="404. Page Not Found."
+                  id="pages.404.hero"
+                />
+              </h1>
+            </div>
+            <div className="mt-8 max-w-xs text-[#989898] dark:text-[#989898]">
+              The requested URL was not found on this server. That’s
+              all we know.
+            </div>
+          </div>
+        </div>
+      </Layout>
+    </div>
   );
 };
 

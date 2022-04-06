@@ -7,9 +7,10 @@ type Props = {
   children: React.ReactNode;
   desc?: string;
   title?: string;
+  footer?: boolean;
 };
 
-export default function Layout({ children, title }: Props) {
+export default function Layout({ children, title, footer=true }: Props) {
   return (
     <main className="dark:bg-brand-black">
       <Head>
@@ -18,7 +19,7 @@ export default function Layout({ children, title }: Props) {
       </Head>
       <Navigation />
       <div className="">{children}</div>
-      <Footer />
+      {footer && <Footer />}
     </main>
   );
 }
