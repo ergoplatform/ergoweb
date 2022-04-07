@@ -13,7 +13,7 @@ let cards = [
   },
   {
     title: "POWERFUL AND SAFE",
-    text: "Ergo’s smart contracts allow us to execute wide-ranging tasks, but we always know in advance how much the code will cost and whether it will run successfully. Meanwhile, we can still write Turing-complete scripts by iterating processes across multiple blocks. Allowing Ergo to support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality.",
+    text: "Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks, but we always know in advance how much the code will cost and whether it will run successfully. Meanwhile, we can still write Turing-complete scripts. ",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo2 />,
@@ -21,7 +21,7 @@ let cards = [
   },
   {
     title: "INTELLIGENT AND STRAIGHTFORWARD",
-    text: "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive.",
+    text: "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all.",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo3 />,
