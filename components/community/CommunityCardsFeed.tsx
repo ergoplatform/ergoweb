@@ -26,7 +26,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Join us on Reddit for live forums and daily content."
+        defaultMessage="Join us at r/ergonauts"
         id="components.communityHero.Reddit.text"
       />
     ),
@@ -56,7 +56,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Explore our development community on Github."
+        defaultMessage="Talk is cheap, here's the code. 100% Open-Source."
         id="components.communityHero.Github.text"
       />
     ),
@@ -71,7 +71,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Follow Ergo Platform on Twitter."
+        defaultMessage="Follow the Ergo Platform Twitter."
         id="components.communityHero.Twitter.text"
       />
     ),
@@ -86,7 +86,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Join us in our Telegram community to receive exclusive content and news."
+        defaultMessage="Come chat to us on Telegram."
         id="components.communityHero.Telegram.text"
       />
     ),
@@ -101,7 +101,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Join the discussion on the Ergo forum."
+        defaultMessage="Join the discussion on the Ergo Forum."
         id="components.communityHero.Discourse.text"
       />
     ),
@@ -116,7 +116,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Subscribe to the official YouTube channel of Ergo blockchain."
+        defaultMessage="Don't forget to Like and Subscribe"
         id="components.communityHero.Youtube.text"
       />
     ),

@@ -5,7 +5,7 @@ import { UniqueErgo1, UniqueErgo1Light, UniqueErgo2, UniqueErgo2Light, UniqueErg
 let cards = [
   {
     title: "RESEARCH-LED AND REAL-WORLD FOCUSED",
-    text: "Blockchain is a rapidly-advancing field that offers many exciting developments, with more applications and use cases appearing every day. However, this innovation often comes with a ‘move fast and break things’ approach to software development that doesn’t sit well when dealing with millions or even billions of dollars of users’ financial value.",
+    text: "Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement new and powerful cryptography natively.",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo1 />,
@@ -13,7 +13,7 @@ let cards = [
   },
   {
     title: "POWERFUL AND SAFE",
-    text: "Blockchain is a rapidly-advancing field that offers many exciting developments, with more applications and use cases appearing every day. However, this innovation often comes with a ‘move fast and break things’ approach to software development that doesn’t sit well when dealing with millions or even billions of dollars of users’ financial value.",
+    text: "Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks, but we always know in advance how much the code will cost and whether it will run successfully. Meanwhile, we can still write Turing-complete scripts. ",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo2 />,
@@ -21,7 +21,7 @@ let cards = [
   },
   {
     title: "INTELLIGENT AND STRAIGHTFORWARD",
-    text: "Blockchain is a rapidly-advancing field that offers many exciting developments, with more applications and use cases appearing every day. However, this innovation often comes with a ‘move fast and break things’ approach to software development that doesn’t sit well when dealing with millions or even billions of dollars of users’ financial value.",
+    text: "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all.",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo3 />,
@@ -29,7 +29,7 @@ let cards = [
   },
   {
     title: "SECURE AND ACCESSIBLE",
-    text: "Blockchain is a rapidly-advancing field that offers many exciting developments, with more applications and use cases appearing every day. However, this innovation often comes with a ‘move fast and break things’ approach to software development that doesn’t sit well when dealing with millions or even billions of dollars of users’ financial value.",
+    text: "Each script is applied to an unspent output. We have drawn this feature from the Bitcoin protocol, which also uses UTXOs or the ‘coin’ model, rather than an ‘account’ model like Ethereum’s. We consider this a more secure approach, since boxes are immutable, as well as being more flexible.",
     url: "https://www.youtube.com/embed/QH2-TGUlwu4",
     buttoText: "EXPLORE",
     icon: <UniqueErgo4 />,
