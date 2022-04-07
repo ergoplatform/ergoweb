@@ -12,13 +12,27 @@ import Spanish from "../content/compiled-locales/es.json";
 // import Slovak from "../content/compiled-locales/sk.json";
 // import Chinese from "../content/compiled-locales/zh.json";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { IntlProvider } from "react-intl";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { locale } = useRouter();
-  const [shortLocale] = locale ? locale.split("-") : ["en"];
+  const router = useRouter();
+  
+  const handleRouteChange = (url:string) => {
+    window.gtag('config', 'G-1XC1836VXN', {
+      page_path: url,
+    });
+  };
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  const [shortLocale] = router.locale ? router.locale.split("-") : ["en"];
 
   const messages = useMemo(() => {
     switch (shortLocale) {
