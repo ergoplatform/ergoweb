@@ -22,12 +22,11 @@ export default function GrantsAndBounties() {
         <b>Grants & Bounties</b>
       </h1>
       <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
-        In general, anything educative for the community is subject to some bounty even if not specifically listed. Lets create grassroots finance!
-
+        In general, anything educative for the community is subject to some bounty even if not specifically listed. 
 
         We are looking to fund grants for projects that focus on building key ecosystem infrastructure. 
         
-        The best way to get some funding is to start up a Raffle. This will help you set clear funding requirements and demonstrate community support. The Ergo Foundation will top up these Raffles based on merit.
+        The best way to get some funding is to start up a Raffle. The Ergo Foundation and community can then top these up.
       </p>
       <div className="flex flex-col xl:flex-row xl:ml-[600px]">
         <div className="-ml-4 mt-10">

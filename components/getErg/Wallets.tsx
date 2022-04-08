@@ -48,7 +48,7 @@ export default function Wallets() {
           </div>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Type</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
-            Native Assets
+            Ledger
           </p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">dApp Connector</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
@@ -73,7 +73,7 @@ export default function Wallets() {
             <p className="text-center mt-2 text-[12px]">Desktop</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
@@ -102,25 +102,7 @@ export default function Wallets() {
           </div>
         </div>
 
-        <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
-          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
-            <p className="text-center lg:my-auto">Minotaur</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-            <p className="text-center mt-2 text-[12px]">Multi Platform</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-        </div>
+       
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
@@ -132,7 +114,7 @@ export default function Wallets() {
             <p className="text-center mt-2 text-[12px]">Paper</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
@@ -154,6 +136,28 @@ export default function Wallets() {
             <div className="grow h-3 lg:h-4 my-auto border-b-[1px] border-[#585858] ml-2"></div>
           </div>
         </div>
+
+        <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
+          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
+            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <p className="text-center lg:my-auto">Minotaur</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
+            <p className="text-center mt-2 text-[12px]">Multi Platform</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
+        </div>
+
+
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletYoroi className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 43 38" />

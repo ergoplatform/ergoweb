@@ -22,10 +22,8 @@ export default function ErgoExplorer() {
         <b>Explore</b>
       </h1>
       <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
-        Ergo is designed for mass adoption. Its efficient blockchain protocol
-        will allow it to be widely used while still remaining friendly to
-        application protocols thanks to its unique transaction language. In the
-        explorer you can watch every transaction made in real-time.
+        The Ergo Explorer is your interface with the blockchain. 
+        Watch every transaction made in real-time.
         Or, view community curated metrics on ergo.watch.
       </p>
       <button

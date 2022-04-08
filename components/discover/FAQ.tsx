@@ -34,8 +34,7 @@ export default function FAQ(props: Props) {
             FAQ
           </a>
           <p className="text-[#585858] dark:text-[#989898]">
-            We’ve compiled some of the most frequently asked questions to
-            clarify any questions
+            We’ve compiled some of the most frequently asked questions.
           </p>
           <div className="mt-96 hidden lg:block">
             <p className="text-[24px] mb-6 font-bold">

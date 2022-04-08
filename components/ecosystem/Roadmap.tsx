@@ -91,7 +91,7 @@ export default function Roadmap(props: Props) {
           />
         </b>
       </p>
-      <p className="mx-auto text-center max-w-lg">Please keep in mind that most applications built on top of Ergo are community-run and have no formal connection to the Ergo Foundation.</p>
+      <p className="mx-auto text-center max-w-lg">Ergo is a platform for contractual money. In this roadmap many ecosystem projects are highlighted with no formal connection to the Ergo Foundation. Ergo itself is community-ran.</p>
       <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10 ">
         {sections.map((section: any, i: number) => (
           <div key={i} className="min-w-[235px] md:w-1/4">

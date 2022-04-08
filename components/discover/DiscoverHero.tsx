@@ -50,7 +50,8 @@ export default function DiscoverHero() {
           </h1>
           <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
             <FormattedMessage
-              defaultMessage="Ergo provides superior support for real-world financial agreements and is expressive enough to implement complex Turing-complete smart contracts."
+              defaultMessage="Ergo is a next-generation Proof of Work smart-contract platform that enables new models of financial interaction, underpinned by a safe and rich scripting language built with flexible and powerful Zero-Knowledge proofs (Σ-protocols).
+"
               id="components.discoverErgo.text.1"
             />
           </p>
@@ -101,7 +102,7 @@ export default function DiscoverHero() {
           <div className="-ml-4 mt-10">
             <Button
               text={button4Text}
-              url="/url"
+              url="https://docs.ergoplatform.com/node/install/"
               newTab={true}
               underline={true}
               textColor="brand-orange"
