@@ -26,8 +26,8 @@ export default function Exchanges({ exchanges }: Props) {
           <p className="text-[#989898] dark:text-[#989898] max-w-lg">
             Disclaimer: Exchanges provide highly varying degrees of safety,
             security, privacy, and control over your funds and information.
-            Perform your own research and consider whether storage of your coins
-            in a wallet would be a safer option.
+            We highly recommend being custodial of your own funds and using one
+            of the wallet options provided above.
           </p>
         </div>
       </div>

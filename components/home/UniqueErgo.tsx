@@ -6,7 +6,7 @@ let cards = [
   {
     title: "RESEARCH-LED AND REAL-WORLD FOCUSED",
     text: "Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement new and powerful cryptography natively.",
-    url: "https://www.youtube.com/embed/QH2-TGUlwu4",
+    url: "discover/#DiscoverHero",
     buttoText: "EXPLORE",
     icon: <UniqueErgo1 />,
     iconLight: <UniqueErgo1Light />
@@ -14,7 +14,7 @@ let cards = [
   {
     title: "POWERFUL AND SAFE",
     text: "Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks, but we always know in advance how much the code will cost and whether it will run successfully. Meanwhile, we can still write Turing-complete scripts. ",
-    url: "https://www.youtube.com/embed/QH2-TGUlwu4",
+    url: "https://docs.ergoplatform.com/dev/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo2 />,
     iconLight: <UniqueErgo2Light />
@@ -22,7 +22,7 @@ let cards = [
   {
     title: "INTELLIGENT AND STRAIGHTFORWARD",
     text: "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all.",
-    url: "https://www.youtube.com/embed/QH2-TGUlwu4",
+    url: "https://docs.ergoplatform.com/dev/scs/sigma/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo3 />,
     iconLight: <UniqueErgo3Light />
@@ -30,7 +30,7 @@ let cards = [
   {
     title: "SECURE AND ACCESSIBLE",
     text: "Each script is applied to an unspent output. We have drawn this feature from the Bitcoin protocol, which also uses UTXOs or the ‘coin’ model, rather than an ‘account’ model like Ethereum’s. We consider this a more secure approach, since boxes are immutable, as well as being more flexible.",
-    url: "https://www.youtube.com/embed/QH2-TGUlwu4",
+    url: "https://docs.ergoplatform.com/dev/protocol/eutxo/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo4 />,
     iconLight: <UniqueErgo4Light />
