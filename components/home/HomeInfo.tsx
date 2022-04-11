@@ -23,7 +23,7 @@ export default function HomeInfo({
   circulatingSupply = circulatingSupply/1000000000
 
   return (
-    <div ref={ref} className="relative z-10">
+    <div id="HomeInfo" ref={ref} className="relative z-10">
       <div className="hidden md:flex mt-60 justify-end">
         <div className="mx-4 md:flex flex-row bg-white md:pr-18 lg:pr-20 xl:pr-36 rounded-l-xl md:mx-0 homeInfo-shadow">
           <div className="mx-8 my-4 text-center">

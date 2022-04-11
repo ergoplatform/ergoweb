@@ -20,7 +20,7 @@ export default function MiningCalculator(props: Props) {
       blocksPerDay;
   }
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div id="MiningCalculator" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="mining-calculator-bg mx-auto max-w-[1167px] grid gap-14 grid-cols-1 lg:grid-cols-2 py-12 lg:py-24 px-10 lg:px-20">
         <div>
           <h2 className="font-vinila-extended font-bold leading-none mb-6 text-[40px] lg:text-[80px] text-white">

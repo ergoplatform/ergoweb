@@ -14,7 +14,7 @@ export default function ErgoExplorer() {
   });
 
   return (
-    <div className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
+    <div id="ErgoExplorer" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <p className="text-[#585858] dark:text-[#585858] mb-4 xl:ml-60">
         DIVE INTO THE ERGO SEA OF TRANSACTIONS
       </p>

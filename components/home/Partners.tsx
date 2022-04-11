@@ -8,7 +8,7 @@ type Props = {
 export default function Partners({ partners }: Props) {
   const { theme } = useTheme();
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div id="Partners" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <h3 className="text-center">
         <b>Partners</b>
       </h3>

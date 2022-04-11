@@ -9,7 +9,7 @@ export default function HomeHero() {
   });
 
   return (
-    <div className="mt-36 max-w-[1300px] mx-auto p-4 relative">
+    <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
         <div className="max-w-lg leading-none md:max-w-4xl relative z-20">
           <h1 className="md:hidden">

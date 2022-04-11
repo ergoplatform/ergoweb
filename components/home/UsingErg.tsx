@@ -63,7 +63,7 @@ type Props = {
 
 export default function UsingErg(props: Props) {
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative" style={{zIndex:13}}>
+    <div id="UsingErg" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative" style={{zIndex:13}}>
       <div className="flex flex-col xl:flex-row justify-between">
         <div className="lg:flex lg:flex-col lg:justify-end lg:mb-44">
           <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">

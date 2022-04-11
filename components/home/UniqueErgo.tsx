@@ -54,7 +54,7 @@ export default function UniqueErgo() {
 
   return (
   
-    <div className="mt-28 ">
+    <div id="UniqueErgo" className="mt-28 ">
       <div className="text-center"><p className="font-bold text-[#585858] dark:text-[#989898] text-[16px] lg:text-[20px]">WHAT MAKES ERGO UNIQUE</p></div>
       <div className="relative z-20 overflow-x-auto no-scrollbar">
         <div className="antialiased flex items-center justify-center my-8 min-w-[1000px]">

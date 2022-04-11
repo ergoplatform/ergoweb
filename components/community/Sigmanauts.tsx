@@ -9,7 +9,7 @@ export default function Sigmanauts() {
     defaultMessage: "READ MORE",
   });
   return (
-    <div className="max-w-[1300px] mx-auto p-4 flex flex-col mb-44 md:flex-row md:mt-36 md:mb-64 relative z-10">
+    <div id="Sigmanauts" className="max-w-[1300px] mx-auto p-4 flex flex-col mb-44 md:flex-row md:mt-36 md:mb-64 relative z-10">
       <div className="flex justify-end mb-10 md:w-1/3 md:mt-auto md:mb-auto 2xl:justify-around">
         {getIconComponentByName("Sigmanauts")}
       </div>

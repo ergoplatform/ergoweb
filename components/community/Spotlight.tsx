@@ -8,7 +8,7 @@ export default function Spotlight() {
     defaultMessage: "SEE ALL POSTS",
   });
   return (
-    <div className="max-w-[1300px] mx-auto p-4 flex flex-col md:flex-row md:mt-52 relative z-10">
+    <div id="Spotlight" className="max-w-[1300px] mx-auto p-4 flex flex-col md:flex-row md:mt-52 relative z-10">
       <h1 className="mb-6 md:mb-auto md:mt-auto md:hidden">
         <FormattedMessage
           defaultMessage="Spotlight"

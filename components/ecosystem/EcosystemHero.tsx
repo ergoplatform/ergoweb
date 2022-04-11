@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function EcosystemHero() {
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="EcosystemHero" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <h1 className="absolute z-10">
         <b>Ecosystem</b>
       </h1>

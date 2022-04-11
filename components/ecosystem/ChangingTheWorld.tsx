@@ -9,7 +9,7 @@ type Props = {
 
 export default function ChangingTheWorld(props: Props) {
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="ChangingTheWorld" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <Swiper
         className="SwiperFavorites"
         pagination={{ dynamicBullets: true }}

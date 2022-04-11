@@ -28,7 +28,7 @@ export default function DiscoverHero() {
   });
 
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="DiscoverHero" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="grid overflow-hidden grid-cols-1 xl:grid-cols-2 gap-2">
         <div className="box xl:order-2">
         <div className="hidden dark:block">

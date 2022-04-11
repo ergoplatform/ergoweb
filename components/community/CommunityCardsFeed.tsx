@@ -138,7 +138,7 @@ function FormattedMessageFixed(props: any) {
 
 export default function CommunityCardsFeed() {
   return (
-    <div className="relative z-10">
+    <div id="CommunityCardsFeed" className="relative z-10">
         <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-6 xl:py-8 2xl:hidden">
           {cards.map((card: any, i: number) => (
             <CommunityCard

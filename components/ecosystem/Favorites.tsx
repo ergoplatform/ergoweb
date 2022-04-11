@@ -18,7 +18,7 @@ export default function Favorites(props: Props) {
   });
 
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="Favorites" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="flex flex-col lg:flex-row lg:gap-8">
         <div className="lg:w-1/3">
           <Heart viewBox="0 0 20 18" className="h-3 mb-4" />

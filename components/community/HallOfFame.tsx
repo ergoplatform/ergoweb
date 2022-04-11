@@ -98,7 +98,7 @@ function GroupPersons(data: any, group: string) {
 
 export default function HallOfFame(props: Props) {
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div id="HallOfFame" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <h2 className="lg:text-center">
         <b>Hall Of Fame</b>
       </h2>

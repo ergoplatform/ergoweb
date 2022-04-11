@@ -3,7 +3,7 @@ import Button from "../Button";
 
 export default function Ergonaut() {
   return (
-    <div className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="Ergonaut" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="hidden md:flex flex-row mb-10">
         <p className="font-vinila-extended-bold text-[80px]">Wiki</p>
         <div className="my-auto ml-12">

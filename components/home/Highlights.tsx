@@ -93,7 +93,7 @@ function FormattedMessageFixed(props: any) {
 
 function Highlights() {
   return (
-    <div className="mt-40 max-w-[1300px] mx-auto p-4 relative" style={{zIndex:12}}>
+    <div id="Highlights" className="mt-40 max-w-[1300px] mx-auto p-4 relative" style={{zIndex:12}}>
       <div className="text-center">
         <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858]">
           <FormattedMessage
