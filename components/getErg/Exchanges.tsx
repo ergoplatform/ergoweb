@@ -9,7 +9,7 @@ export default function Exchanges({ exchanges }: Props) {
   const { theme } = useTheme();
 
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div id="Exchanges" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="">
           <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">

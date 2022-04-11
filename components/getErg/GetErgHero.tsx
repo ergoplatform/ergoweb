@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 
@@ -16,6 +17,7 @@ const cards = [
       />
     ),
     icon: "UsingErgMineIt",
+    url: "/get-erg/#Mining",
   },
   {
     title: (
@@ -31,6 +33,7 @@ const cards = [
       />
     ),
     icon: "UsingErgBuyIt",
+    url: "/get-erg/#Excanges",
   },
   {
     title: (
@@ -46,6 +49,7 @@ const cards = [
       />
     ),
     icon: "UsingErgStoreIt",
+    url: "/get-erg/#Wallets",
   },
 ];
 
@@ -74,17 +78,19 @@ export default function GetErgHero(props: Props) {
           </p>
         </div>
         <div className="flex overflow-x-auto lg:space-x-4 space-x-8 mt-10 no-scrollbar pb-10">
-          {cards.map((card: any, i: number) => (  
-            <div key={i}>
-              <div className="h-[450px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                {getIconComponentByName(card.icon + "Light")}
+          {cards.map((card: any, i: number) => (
+            <Link key={i} href={card.url}>
+              <div className="cursor-pointer">
+                <div className="h-[450px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                  {getIconComponentByName(card.icon + "Light")}
+                </div>
+                <div className="hidden dark:flex h-[450px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                  {getIconComponentByName(card.icon)}
+                </div>
+                <p className="font-subtitle-3 mb-3">{card.title}</p>
+                <p>{card.text}</p>
               </div>
-              <div className="hidden dark:flex h-[450px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                {getIconComponentByName(card.icon)}
-              </div>
-              <p className="font-subtitle-3 mb-3">{card.title}</p>
-              <p>{card.text}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

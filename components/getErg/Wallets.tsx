@@ -15,7 +15,7 @@ import {
 
 export default function Wallets() {
   return (
-    <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div id="Wallets" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="flex flex-col md:flex-row justify-between md:gap-36">
         <div className="my-auto">
           <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858] dark:text-[#585858]">
