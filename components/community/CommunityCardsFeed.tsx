@@ -16,7 +16,7 @@ const cards = [
         id="components.communityHero.Ergonaut.text"
       />
     ),
-    icon: "Ergonaut",
+    icon: "ErgoWiki",
     url: "https://google.com",
   },
   {

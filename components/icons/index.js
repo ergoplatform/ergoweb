@@ -85,3 +85,4 @@ export { default as WalletMinotaur } from "./WalletMinotaur";
 export { default as WalletNautilus } from "./WalletNautilus";
 export { default as WalletSafew } from "./WalletSafew";
 export { default as WalletSatergo } from "./WalletSatergo";
+export { default as ErgoWiki } from "./ErgoWiki";
