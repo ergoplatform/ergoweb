@@ -157,7 +157,7 @@ export default function Mining() {
           <FormattedMessage
             defaultMessage="Ergo mining is based on Autolykos v.2, a Proof-of-Work algorithm
                 designed to be ASIC resistant. Miners have to perform memory-hard computations~(at least 2.5 GB memory is needed, but the current most efficient implementation utilizes around 4 GB of vRAM) that makes Ergo friendly for GPU mining.
-                There was 0 ERG in existence at launch of mainnet as there was no ICO nor pre‐mine. At the end of 8 years, the final Erg supply will be 97,739,925 Ergs. The Ergo block interval is 2 minutes"
+                There was 0 ERG in existence at launch of mainnet as there was no ICO or premine. At the end of 8 years, the final Erg supply will be 97,739,925 Ergs. The Ergo block interval is 2 minutes"
             id={"components.mining.text.1"}
             values={{ breakingLine: <br /> }}
           />

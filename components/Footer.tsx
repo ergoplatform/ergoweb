@@ -106,7 +106,7 @@ export default function Footer() {
             <ul className="hidden md:block">
               <li>
                 <a
-                  href="https://linktr.ee/ergoplatform"
+                  href="/community/#CommunityHero"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -118,7 +118,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://ergonaut.space/en/Ergo/Contributing"
+                  href="/community/#Sigmanauts"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -130,7 +130,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://ergonaut.space/en/Ergo/Contributing"
+                  href="/community/#Contribute"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -142,7 +142,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://sigmaverse.io"
+                  href="/community/#OurMission"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -173,7 +173,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/get-erg/#Mining">
+                <Link href="/get-erg/#MiningCalculator">
                   <a>
                     <FormattedMessage
                       defaultMessage="Mining Calculator"
@@ -214,7 +214,7 @@ export default function Footer() {
             <ul className="hidden md:block">
               <li>
                 <a
-                  href="http://docs.ergoplatform.org/"
+                  href="https://github.com/ergoplatform/ergo/releases"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -226,7 +226,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://docs.ergoplatform.com/contribute/"
+                  href="/discover/#GrantsAndBounties"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -237,7 +237,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/discover">
+                <Link href="/discover/#FAQ">
                   <a>
                     <FormattedMessage
                       defaultMessage="FAQ"
@@ -248,7 +248,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://explorer.ergoplatform.com/"
+                  href="/discover/#Explore"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -259,7 +259,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/discover">
+                <Link href="/discover/#Documents">
                   <a>
                     <FormattedMessage
                       defaultMessage="Documents"
@@ -280,7 +280,7 @@ export default function Footer() {
             <ul className="hidden md:block">
               <li>
                 <a
-                  href="https://sigmaverse.io"
+                  href="/ecosystem/#Dapps"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -291,7 +291,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/discover">
+                <Link href="/ecosystem/#Roadmap">
                   <a>
                     <FormattedMessage
                       defaultMessage="Roadmap"
@@ -302,7 +302,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://ergonaut.space"
+                  href="/ecosystem/#Wiki"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -325,7 +325,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/ecosystem">
+                <Link href="/ecosystem#Real-life">
                   <a>
                     <FormattedMessage
                       defaultMessage="Real Life Ergo"
