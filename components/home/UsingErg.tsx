@@ -61,7 +61,7 @@ export default function UsingErg(props: Props) {
   return (
     <div className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="flex flex-col xl:flex-row justify-between">
-        <div>
+        <div className="lg:flex lg:flex-col lg:justify-end lg:mb-44">
           <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
             UNSTOPPABLE DEFI
           </p>
@@ -73,7 +73,7 @@ export default function UsingErg(props: Props) {
             are a developer, miner, or investor - we’ve got you covered.
           </p>
         </div>
-        <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10">
+        <div className="flex overflow-x-auto lg:space-x-4 space-x-8 mt-10 no-scrollbar pb-10">
           {cards.map((card: any, i: number) => (  
             <div key={i}>
               <div className="h-[450px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
