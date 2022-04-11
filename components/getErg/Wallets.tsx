@@ -10,7 +10,6 @@ import {
   WalletWeb,
   WalletX,
   WalletXGray,
-  WalletYoroi,
 } from "../icons";
 
 export default function Wallets() {

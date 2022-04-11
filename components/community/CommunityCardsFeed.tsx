@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import CommunityCard from "./CommunityCard";
 
