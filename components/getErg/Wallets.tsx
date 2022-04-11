@@ -2,7 +2,11 @@ import {
   Logo,
   WalletCheck,
   WalletDesktop,
+  WalletMinotaur,
   WalletMobile,
+  WalletNautilus,
+  WalletSafew,
+  WalletSatergo,
   WalletWeb,
   WalletX,
   WalletXGray,
@@ -139,7 +143,7 @@ export default function Wallets() {
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <WalletMinotaur className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 1337 1337" />
             <p className="text-center lg:my-auto">Minotaur</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -160,7 +164,7 @@ export default function Wallets() {
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
-            <WalletYoroi className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 43 38" />
+            <WalletNautilus className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="414.37 258.52 575.6 575.6" />
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Nautilus</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -180,7 +184,7 @@ export default function Wallets() {
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
-            <WalletYoroi className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 43 38" />
+            <WalletSatergo className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 1080 1080" />
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Satergo</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -200,7 +204,7 @@ export default function Wallets() {
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
-            <WalletYoroi className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 43 38" />
+            <WalletSafew className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 28 28" />
             <p className="text-center mt-2 lg:my-auto lg:pl-2">SAFEW</p>
           </div>
           <div className="w-1/5 p-1 my-auto">

@@ -81,3 +81,7 @@ export { default as UniqueErgo1Light } from "./UniqueErgo1Light";
 export { default as UniqueErgo2Light } from "./UniqueErgo2Light";
 export { default as UniqueErgo3Light } from "./UniqueErgo3Light";
 export { default as UniqueErgo4Light } from "./UniqueErgo4Light";
+export { default as WalletMinotaur } from "./WalletMinotaur";
+export { default as WalletNautilus } from "./WalletNautilus";
+export { default as WalletSafew } from "./WalletSafew";
+export { default as WalletSatergo } from "./WalletSatergo";
