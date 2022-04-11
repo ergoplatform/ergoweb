@@ -59,7 +59,7 @@ export const getServerSideProps = async (context: any) => {
   ).then((response) => response.json());
   const teamMembers = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/team-members?populate=*&locale=" +
+      "/api/team-members?pagination[pageSize]=100&populate=*&locale=" +
       context.locale
   ).then((response) => response.json());
   return {
