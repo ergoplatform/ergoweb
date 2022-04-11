@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import CommunityCard from "./CommunityCard";
 
@@ -16,6 +17,7 @@ const cards = [
       />
     ),
     icon: "Ergonaut",
+    url: "https://google.com",
   },
   {
     title: (
@@ -31,6 +33,7 @@ const cards = [
       />
     ),
     icon: "Reddit",
+    url: "https://google.com",
   },
   {
     title: (
@@ -46,6 +49,7 @@ const cards = [
       />
     ),
     icon: "Discord",
+    url: "https://google.com",
   },
   {
     title: (
@@ -61,6 +65,7 @@ const cards = [
       />
     ),
     icon: "Github",
+    url: "https://google.com",
   },
   {
     title: (
@@ -76,6 +81,7 @@ const cards = [
       />
     ),
     icon: "Twitter",
+    url: "https://google.com",
   },
   {
     title: (
@@ -91,6 +97,7 @@ const cards = [
       />
     ),
     icon: "Telegram",
+    url: "https://google.com",
   },
   {
     title: (
@@ -106,6 +113,7 @@ const cards = [
       />
     ),
     icon: "Discourse",
+    url: "https://google.com",
   },
   {
     title: (
@@ -121,6 +129,7 @@ const cards = [
       />
     ),
     icon: "Youtube",
+    url: "https://google.com",
   },
 ];
 
@@ -131,17 +140,18 @@ function FormattedMessageFixed(props: any) {
 export default function CommunityCardsFeed() {
   return (
     <div className="relative z-10">
-      <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-6 xl:py-8 2xl:hidden">
-        {cards.map((card: any, i: number) => (
-          <CommunityCard
-            key={i}
-            title={card.title}
-            text={card.text}
-            icon={card.icon}
-          />
-        ))}
-        <div className="w-0.1 flex-shrink-0"></div>
-      </div>
+        <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-6 xl:py-8 2xl:hidden">
+          {cards.map((card: any, i: number) => (
+            <CommunityCard
+              key={i}
+              title={card.title}
+              text={card.text}
+              icon={card.icon}
+              url={card.url}
+            />
+          ))}
+          <div className="w-0.1 flex-shrink-0"></div>
+        </div>
       <div className="hidden max-w-[1300px] mx-auto p-4 2xl:grid overflow-hidden grid-cols-4 grid-rows-2 gap-6">
         {cards.map((card: any, i: number) => (
           <CommunityCard
@@ -149,7 +159,8 @@ export default function CommunityCardsFeed() {
             title={card.title}
             text={card.text}
             icon={card.icon}
-          />
+            url={card.url}
+            />
         ))}
       </div>
     </div>
