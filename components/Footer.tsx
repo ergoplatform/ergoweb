@@ -163,7 +163,7 @@ export default function Footer() {
             </h3>
             <ul className="hidden md:block">
               <li>
-                <Link href="/get-erg">
+                <Link href="/get-erg/#Mining">
                   <a>
                     <FormattedMessage
                       defaultMessage="Mining"
@@ -173,7 +173,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/get-erg">
+                <Link href="/get-erg/#Mining">
                   <a>
                     <FormattedMessage
                       defaultMessage="Mining Calculator"
@@ -183,7 +183,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/get-erg">
+                <Link href="/get-erg/#Wallets">
                   <a>
                     <FormattedMessage
                       defaultMessage="Wallets"
@@ -193,7 +193,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/get-erg">
+                <Link href="/get-erg/#Exchanges">
                   <a>
                     <FormattedMessage
                       defaultMessage="Exchanges"

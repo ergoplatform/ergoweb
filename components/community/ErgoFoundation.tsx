@@ -9,7 +9,7 @@ export default function ErgoFoundation() {
           <ErgoFoundationIconLight className="h-40 md:h-60 dark:hidden" viewBox="0 0 248 248" />
         </div>
         <div className="font-vinila-extended text-[24px] md:text-[56px] max-w-xs md:max-w-3xl md:ml-14 leading-tight md:my-auto">
-          The <b>Ergo Foundation</b> is a community-driven entity focused on:
+          The <b>Ergo Foundation</b> is a community-driven entity focused on
         </div>
       </div>
       <div className="flex flex-row-reverse md:r-40">
