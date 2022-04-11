@@ -16,7 +16,7 @@ export default function DiscoverHero() {
   });
   const button3Text = intl.formatMessage({
     id: "components.discoverHero.button3",
-    defaultMessage: "EXPLAINER VIDEO",
+    defaultMessage: "READ THE MANIFESTO",
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
@@ -82,7 +82,7 @@ export default function DiscoverHero() {
           <div className="-ml-4 mt-10">
             <Button
               text={button3Text}
-              url="https://www.youtube.com/watch?v=LyyD-clUvyI"
+              url="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/"
               newTab={true}
               underline={true}
               textColor="brand-orange"

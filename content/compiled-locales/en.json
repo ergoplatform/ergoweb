@@ -216,7 +216,7 @@
   "components.discoverHero.button3": [
     {
       "type": 0,
-      "value": "EXPLAINER VIDEO"
+      "value": "READ THE MANIFESTO"
     }
   ],
   "components.discoverHero.button4": [
@@ -440,7 +440,7 @@
   "footer.ecosystem.4": [
     {
       "type": 0,
-      "value": "Ergo Raffle"
+      "value": "Favorites"
     }
   ],
   "footer.ecosystem.5": [
