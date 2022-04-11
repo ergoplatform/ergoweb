@@ -73,7 +73,7 @@ export default function UsingErg(props: Props) {
             <b>{props.title}</b>
           </h2>
           <p className="text-[#989898] dark:text-[#989898] mt-6 max-w-xs">
-            There is a rich budding ecosystem budding ontop of Ergo. Whether you
+            There is a rich ecosystem budding on of Ergo. Whether you
             are a developer, miner, or investor - we’ve got you covered.
           </p>
         </div>

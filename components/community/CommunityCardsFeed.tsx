@@ -16,7 +16,7 @@ const cards = [
       />
     ),
     icon: "ErgoWiki",
-    url: "https://google.com",
+    url: "https://ergonaut.space/",
   },
   {
     title: (
@@ -32,7 +32,7 @@ const cards = [
       />
     ),
     icon: "Reddit",
-    url: "https://google.com",
+    url: "https://reddit.com/r/ergonauts",
   },
   {
     title: (
@@ -48,7 +48,7 @@ const cards = [
       />
     ),
     icon: "Discord",
-    url: "https://google.com",
+    url: "https://discord.gg/yDdb6yH3Zz",
   },
   {
     title: (
@@ -64,7 +64,7 @@ const cards = [
       />
     ),
     icon: "Github",
-    url: "https://google.com",
+    url: "https://github.com/ergoplatform",
   },
   {
     title: (
@@ -80,7 +80,7 @@ const cards = [
       />
     ),
     icon: "Twitter",
-    url: "https://google.com",
+    url: "https://twitter.com/ergoplatformorg",
   },
   {
     title: (
@@ -96,7 +96,7 @@ const cards = [
       />
     ),
     icon: "Telegram",
-    url: "https://google.com",
+    url: "https://t.me/ergoplatform",
   },
   {
     title: (
@@ -112,7 +112,7 @@ const cards = [
       />
     ),
     icon: "Discourse",
-    url: "https://google.com",
+    url: "https://www.ergoforum.org/",
   },
   {
     title: (
@@ -128,7 +128,7 @@ const cards = [
       />
     ),
     icon: "Youtube",
-    url: "https://google.com",
+    url: "https://www.youtube.com/c/ErgoPlatform/videos",
   },
 ];
 

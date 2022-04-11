@@ -27,7 +27,7 @@ export default function Autolykos() {
         </p>
         <p className="mt-8">
           <FormattedMessage
-            defaultMessage="<b>Autolykos</b> is the underlying Memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
+            defaultMessage="<b>Autolykos</b> is the underlying memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
             id="components.autolykos.text"
             values={{ b: (...chunks: any) => <b>{chunks}</b> }}
           />
@@ -79,7 +79,7 @@ export default function Autolykos() {
           <div className="w-1/3">
             <p className="mt-8 text-2xl">
               <FormattedMessage
-                defaultMessage="<b>Autolykos</b> is the underlying Memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
+                defaultMessage="<b>Autolykos</b> is the underlying memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
                 id="components.autolykos.text"
                 values={{ b: (...chunks: any) => <b>{chunks}</b> }}
               />
