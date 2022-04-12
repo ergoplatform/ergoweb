@@ -39,7 +39,9 @@ export default function Ecosystem(props: Props) {
         <Ergonaut />
         <Favorites favorites={props.favorites} />
         <FeaturesAndProjects projects={props.projects} />
-        <ChangingTheWorld chagingTheWorldProjects={props.chagingTheWorldProjects} />
+        <ChangingTheWorld
+          chagingTheWorldProjects={props.chagingTheWorldProjects}
+        />
       </Layout>
     </div>
   );
@@ -53,8 +55,8 @@ export const getServerSideProps = async (context: any) => {
   ).then((response) => response.json());
   const roadmap = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/roadmaps?populate=*&pagination[pageSize]=100&locale=" +
-      context.locale
+      "/api/roadmaps?populate=*&pagination[pageSize]=100"
+    // "/api/roadmaps?populate=*&pagination[pageSize]=100&locale="+ context.locale
   ).then((response) => response.json());
   const projects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +

@@ -164,12 +164,12 @@ function Navigation({ enableLanguages = true }) {
                 </div>
               </div>
             </div>
-            <div className="mx-4 py-6 border-b-2">
+            {/* <div className="mx-4 py-6 border-b-2">
               <input
                 className=" bg-transparent w-full text-4xl placeholder-opacity-30 placeholder-white text-white focus:outline-none"
                 placeholder="Type to search..."
               />
-            </div>
+            </div> */}
             <div className="mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
               <div>
                 <Link href="/community">
