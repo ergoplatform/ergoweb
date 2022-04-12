@@ -13,7 +13,7 @@ let cards = [
   },
   {
     title: "POWERFUL AND SAFE",
-    text: "Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks, but we always know in advance how much the code will cost and whether it will run successfully. Meanwhile, we can still write Turing-complete scripts. ",
+    text: "Ergo provides superior support for real-world financial agreements. Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks and can be Turing complete, but we always know in advance how much the code will cost and whether it will run successfully. ",
     url: "https://docs.ergoplatform.com/dev/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo2 />,

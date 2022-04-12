@@ -75,7 +75,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make."
+        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. nables new models of financial interaction, underpinned by a safe and rich scripting language, ErgoScript and flexible and powerful Zero-Knowledge proofs"
         id="components.highlights.slide.3.text"
         values={{ breakingLine: <br /> }}
       />
