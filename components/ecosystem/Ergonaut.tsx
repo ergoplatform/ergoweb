@@ -20,10 +20,10 @@ export default function Ergonaut() {
           />
         </div>
       </div>
-      <div className="justify-around mt-16 md:-mt-10 hidden dark:flex ecosystem-hero-gradient">
+      <div className="justify-around mt-16 md:-mt-10 dark:flex ecosystem-hero-gradient">
         <div className="ergonaut-card h-[349px] w-full flex flex-row justify-end">
         <div className="my-auto mx-auto">
-          <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40">
+          <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40 text-white dark:text-white">
             ergonaut.space is our community-run wiki! 
             Jam-packed with tons of great information on the underlying technical details of the
             Ergo blockchain in easy to understand language for non-technical people. 
