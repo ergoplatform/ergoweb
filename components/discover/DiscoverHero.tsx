@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FormattedMessage, useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 import Button from "../Button";
@@ -120,15 +121,19 @@ export default function DiscoverHero() {
             <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
               Start from the basics. What is Ergo? What can you do on Ergo?
             </p>
-            <button
-              type="submit"
-              className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
-            >
-              <span>{button5Text}</span>
-              <span className="w-4 h-4 ml-2">
-                {getIconComponentByName("ArrowRightBlack")}
-              </span>
-            </button>
+            <Link href="https://google.com" passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <button
+                  type="submit"
+                  className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
+                >
+                  <span>{button5Text}</span>
+                  <span className="w-4 h-4 ml-2">
+                    {getIconComponentByName("ArrowRightBlack")}
+                  </span>
+                </button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

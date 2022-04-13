@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useIntl } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
 
@@ -26,24 +27,32 @@ export default function ErgoExplorer() {
         Watch every transaction made in real-time.
         Or, view community curated metrics on ergo.watch.
       </p>
-      <button
-        type="submit"
-        className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[400px]"
-      >
-        <span>{button1Text}</span>
-        <span className="w-4 h-4 ml-2">
-          {getIconComponentByName("ArrowRightBlack")}
-        </span>
-      </button>
-      <button
-        type="submit"
-        className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[10px]"
-      >
-        <span>{button2Text}</span>
-        <span className="w-4 h-4 ml-2">
-          {getIconComponentByName("ArrowRightBlack")}
-        </span>
-      </button>
+      <Link href="https://google.com" passHref>
+        <a target="_blank" rel="noopener noreferrer">
+          <button
+            type="submit"
+            className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[400px]"
+          >
+            <span>{button1Text}</span>
+            <span className="w-4 h-4 ml-2">
+              {getIconComponentByName("ArrowRightBlack")}
+            </span>
+          </button>
+        </a>
+      </Link>
+      <Link href="https://google.com" passHref>
+        <a target="_blank" rel="noopener noreferrer">
+          <button
+            type="submit"
+            className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[10px]"
+          >
+            <span>{button2Text}</span>
+            <span className="w-4 h-4 ml-2">
+              {getIconComponentByName("ArrowRightBlack")}
+            </span>
+          </button>
+        </a>
+      </Link>
     </div>
   );
 }
