@@ -49,7 +49,7 @@ export default function Home(props: Props) {
           transactionPerDay={props.info.transactionAverage}
         />
         <UniqueErgo />
-        <UsingErg title="Using ERG" />
+        <UsingErg title="Get ERG" />
         <Autolykos />
         <News news={props.news} />
         <Feed posts={props.posts} />

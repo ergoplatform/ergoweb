@@ -30,13 +30,13 @@ export default function Sigmanauts() {
         </h2>
         <p className="font-subtitle-1 mb-6 md:text-[56px]">
           <FormattedMessage
-            defaultMessage="Ambassador programme"
+            defaultMessage="Training programme"
             id="components.Sigmanauts.subTitle"
           />
         </p>
         <p className="text-[#989898] dark:text-[#989898] mb-6">
           <FormattedMessage
-            defaultMessage="The Sigmanaut Programme aims to build up the structure needed for the eventual transition to a completely community-ran project."
+            defaultMessage="Help grow and shape Ergo. Ergo is a community-ran project, and this programme is the first step in empowering the community to take control of Ergo."
             id="components.Sigmanauts.text"
           />
         </p>

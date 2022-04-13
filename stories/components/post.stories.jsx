@@ -23,5 +23,5 @@ PostComponent.args = {
   date: "2019-06-27T00:00:00.000Z",
   image: "",
   tags: "",
-  url: "https://github.com/ergoplatform/ergo/releases/tag/v2.2.0",
+  url: "/discover/tag/v2.2.0",
 };

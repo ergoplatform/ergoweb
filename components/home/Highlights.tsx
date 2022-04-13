@@ -34,7 +34,7 @@ const slides = [
   {
     titleMessage: (
       <FormattedMessageFixed
-        defaultMessage="Optional Privacy"
+        defaultMessage="Alternative Economics"
         id="components.highlights.slide.2.title"
         values={{ breakingLine: <br /> }}
       />
@@ -48,7 +48,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make."
+        defaultMessage="Enabling more innovative, targeted implementations of economic stimulation that conventional banking can't match. Ergo offers powerful tools with smart contract-powered microcredit facilities and Local Exchange Trading Systems (LETS)."
         id="components.highlights.slide.2.text"
         values={{ breakingLine: <br /> }}
       />
@@ -61,21 +61,21 @@ const slides = [
   {
     titleMessage: (
       <FormattedMessageFixed
-        defaultMessage="100% Open Source"
+        defaultMessage="Optional Privacy"
         id="components.highlights.slide.2.title"
         values={{ breakingLine: <br /> }}
       />
     ),
     quoteMessage: (
       <FormattedMessageFixed
-        defaultMessage="Another quote"
+        defaultMessage="Σ-protocols"
         id="components.highlights.slide.3.quote"
         values={{ breakingLine: <br /> }}
       />
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, additional features are designed."
+        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. nables new models of financial interaction, underpinned by a safe and rich scripting language, ErgoScript and flexible and powerful Zero-Knowledge proofs"
         id="components.highlights.slide.3.text"
         values={{ breakingLine: <br /> }}
       />

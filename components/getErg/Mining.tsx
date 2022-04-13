@@ -156,17 +156,8 @@ export default function Mining() {
         <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
             defaultMessage="Ergo mining is based on Autolykos v.2, a Proof-of-Work algorithm
-                designed to be ASIC resistant. Miners have to perform memory-hard
-                computations - You will need computer hardware to mine Ergo also refered to as a mining rig. Ergo mining is ASIC resistant and requires a GPU (Graphics Card) for mining. A mining rig can be as simple as a single GPU gaming computer, up to a multi GPU mining rig.
-
-While it is possible to mine Ergo with a 4gb GPU. A 6GB GPU is the suggested minimum as Ergo heavily relies on memory usage while the core processor sits idle. *Note: this last statement is seemingly outdated. As mentioned earlier in Handbook, 3gb is enough VRAM to mine Erg. And a card’s core processor does NOT sit idle when mining Ergo.
-
- {breakingLine}{breakingLine} Unlike Autolykos v.1, Autolykos v.2 does
-                not require access to private keys, thereby allowing mining pool
-                formation. As soon as a correct solution is found, the miner
-                broadcasts the block along with the solution and is able to collect
-                the block reward after a delay of 720 blocks using the secret of his
-                mining address."
+                designed to be ASIC resistant. Miners have to perform memory-hard computations~(at least 2.5 GB memory is needed, but the current most efficient implementation utilizes around 4 GB of vRAM) that makes Ergo friendly for GPU mining.
+                There was 0 ERG in existence at launch of mainnet as there was no ICO or premine. At the end of 8 years, the final Erg supply will be 97,739,925 Ergs. The Ergo block interval is 2 minutes"
             id={"components.mining.text.1"}
             values={{ breakingLine: <br /> }}
           />
