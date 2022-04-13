@@ -46,7 +46,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         </p>
         <div className="flex flex-row">
           <div className="my-auto">
-            {props.github && props.github?.length > 0 ? (
+            {props.twitter && props.twitter?.length > 0 ? (
               <a href={props.twitter} target="_blank" rel="noreferrer">
                 <Twitter className="fill-brand-orange scale-50 lg:scale-100" />
               </a>
@@ -55,7 +55,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
             )}
           </div>
           <div className="my-auto">
-            {props.twitter && props.twitter?.length > 0 ? (
+            {props.github && props.github?.length > 0 ? (
               <a href={props.github} target="_blank" rel="noreferrer">
                 <Github className="fill-brand-orange scale-50 lg:scale-100" />
               </a>
