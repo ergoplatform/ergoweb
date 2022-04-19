@@ -51,7 +51,7 @@ export default function HomeHero() {
         </div>
       </div>
       <div className="hidden dark:block">
-        <video autoPlay={true} loop={true} muted={true} className="absolute -top-[13rem] max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
+        <video autoPlay={true} loop={true} muted={true} className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
           <source
             src="assets/ergo-dark.mp4"
             type="video/mp4"
@@ -59,7 +59,7 @@ export default function HomeHero() {
         </video>
       </div>
       <div className="dark:hidden">
-        <video autoPlay={true} loop={true} muted={true} className="absolute -top-[13rem] max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
+        <video autoPlay={true} loop={true} muted={true} className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
           <source
             src="assets/ergo-light.mp4"
             type="video/mp4"
