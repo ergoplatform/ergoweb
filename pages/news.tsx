@@ -16,7 +16,7 @@ export default function News(props: Props) {
     <div>
       <Layout title={title}>
         <div id="News" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          <h1 className="mb-10">Blog</h1>
+          <h1 className="mb-10">News</h1>
           <div className="grid grid-cols-1 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
             {props.posts.map((post: any) => (
               <div key={post.id} className="mx-auto">
