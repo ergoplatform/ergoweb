@@ -8,14 +8,14 @@ export default function Footer() {
     <footer id="Footer" className="relative z-10">
       <div className="max-w-[1300px] mx-auto py-12 px-4 footer-image">
         <div className="md:flex justify-between">
-          <div className="my-6 md:my-auto flex justify-center">
+          <div className="my-6 md:my-auto flex justify-start md:justify-center">
             <Link href="/">
               <button>
                 <LogoWithText viewBox="0 0 213 82" className="w-40 md:w-52" />
               </button>
             </Link>
           </div>
-          <div className="grid overflow-hidden grid-cols-3 gap-2 text-red md:grid-cols-3 lg:grid-cols-10">
+          <div className="grid absolute right-10 top-20 space-y-4 md:right-auto md:top-auto md:relative overflow-hidden grid-cols-1 gap-2 text-red md:grid-cols-3 lg:grid-cols-10">
             <div className="box mx-auto my-auto">
               <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
                 {getIconComponentByName("Sigmaverse")}
@@ -86,7 +86,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="my-6 md:my-auto flex justify-center">
+          <div className="my-6 md:my-auto flex justify-start md:justify-center">
             <a
               className="text-brand-orange dark:text-brand-orange"
               href="mailto:team@ergoplatform.org"
@@ -97,12 +97,14 @@ export default function Footer() {
         </div>
         <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6">
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage
-                defaultMessage="COMMUNITY"
-                id="footer.community.title"
-              />
-            </h3>
+            <Link href="/community">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage
+                  defaultMessage="COMMUNITY"
+                  id="footer.community.title"
+                />
+              </h3>
+            </Link>
             <ul className="hidden md:block">
               <li>
               <Link href="/community/#CommunityCardsFeed">
@@ -150,12 +152,14 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage
-                defaultMessage="GET ERG"
-                id="footer.getErg.title"
-              />
-            </h3>
+            <Link href="/get-erg">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage
+                  defaultMessage="GET ERG"
+                  id="footer.getErg.title"
+                />
+              </h3>
+            </Link>
             <ul className="hidden md:block">
               <li>
                 <Link href="/get-erg/#Mining">
@@ -200,12 +204,14 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage
-                defaultMessage="DISCOVER"
-                id="footer.discover.title"
-              />
-            </h3>
+            <Link href="/discover">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage
+                  defaultMessage="DISCOVER"
+                  id="footer.discover.title"
+                />
+              </h3>
+            </Link>
             <ul className="hidden md:block">
               <li>
               <Link href="/discover/#DiscoverHero">
@@ -260,12 +266,14 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage
-                defaultMessage="ECOSYSTEM"
-                id="footer.ecosystem.title"
-              />
-            </h3>
+            <Link href="/ecosystem">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage
+                  defaultMessage="ECOSYSTEM"
+                  id="footer.ecosystem.title"
+                />
+              </h3>
+            </Link>
             <ul className="hidden md:block">
               <li>
               <Link href="/ecosystem/#Dapps">
@@ -321,14 +329,18 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
-            </h3>
+            <Link href="/blog">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
+              </h3>
+            </Link>
           </div>
           <div className="mx-1">
-            <h3 className="font-button text-[#585858] dark:text-[#989898] my-4">
-              <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
-            </h3>
+            <Link href="/news">
+              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+                <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
+              </h3>
+            </Link>
           </div>
         </div>
         <div className="md:flex">
