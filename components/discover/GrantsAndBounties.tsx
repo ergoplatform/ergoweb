@@ -32,8 +32,8 @@ export default function GrantsAndBounties() {
         <div className="-ml-4 mt-10">
           <Button
             text={button1Text}
-            url="/discover/#GrantsAndBounties"
-            newTab={false}
+            url="https://github.com/ergoplatform/grow-ergo/issues"
+            newTab={true}
             underline={true}
             textColor="brand-orange"
             background={false}
@@ -56,7 +56,7 @@ export default function GrantsAndBounties() {
         <div className="-ml-4 mt-10 xl:ml-16">
           <Button
             text={button3Text}
-            url="mailto:team@ergoplatform.rg"
+            url="mailto:team@ergoplatform.org"
             newTab={true}
             underline={true}
             textColor="brand-orange"
