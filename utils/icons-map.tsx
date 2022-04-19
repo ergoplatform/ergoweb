@@ -14,7 +14,7 @@ export const getIconComponentByName = (name: string, props?: any) => {
     CheckOrange: SvgIconsComponent.CheckOrange,
     CheckOrangeHighlighted: SvgIconsComponent.CheckOrangeHighlighted,
     Discord: SvgIconsComponent.Discord,
-    Ergonaut: SvgIconsComponent.Ergonaut,
+    Wiki: SvgIconsComponent.Wiki,
     ErgoNode: SvgIconsComponent.ErgoNode,
     Github: SvgIconsComponent.Github,
     Highlight: SvgIconsComponent.Highlight,

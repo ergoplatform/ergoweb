@@ -452,7 +452,7 @@ function Navigation({ enableLanguages = true }) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {getIconComponentByName("Ergonaut")}
+                      {getIconComponentByName("Wiki")}
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">

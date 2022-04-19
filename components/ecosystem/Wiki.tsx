@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Button from "../Button";
 
-export default function Ergonaut() {
+export default function Wiki() {
   return (
-    <div id="Ergonaut" className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="Wiki" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="hidden md:flex flex-row mb-10">
         <p className="font-vinila-extended-bold text-[80px]">Wiki</p>
         <div className="my-auto ml-12">
@@ -40,7 +40,7 @@ export default function Ergonaut() {
         </div>
       </div>
       <div className="md:hidden">
-        <p className="font-vinila-extended-bold text-[48px] mb-4">Ergonaut</p>
+        <p className="font-vinila-extended-bold text-[48px] mb-4">Wiki</p>
         <p className="text-[14px] text-[#989898] dark:text-[#989898] mb-4">
           ergonaut.space is the community wiki of the Ergo blockchain, a guide
           translating how to use and the underlying technical details of the
