@@ -1,6 +1,15 @@
 import { useEffect } from "react";
 import Button from "../Button";
-import { UniqueErgo1, UniqueErgo1Light, UniqueErgo2, UniqueErgo2Light, UniqueErgo3, UniqueErgo3Light, UniqueErgo4, UniqueErgo4Light } from "../icons";
+import {
+  UniqueErgo1,
+  UniqueErgo1Light,
+  UniqueErgo2,
+  UniqueErgo2Light,
+  UniqueErgo3,
+  UniqueErgo3Light,
+  UniqueErgo4,
+  UniqueErgo4Light,
+} from "../icons";
 
 let cards = [
   {
@@ -9,7 +18,7 @@ let cards = [
     url: "discover/#DiscoverHero",
     buttoText: "EXPLORE",
     icon: <UniqueErgo1 />,
-    iconLight: <UniqueErgo1Light />
+    iconLight: <UniqueErgo1Light />,
   },
   {
     title: "POWERFUL AND SAFE",
@@ -17,7 +26,7 @@ let cards = [
     url: "https://docs.ergoplatform.com/dev/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo2 />,
-    iconLight: <UniqueErgo2Light />
+    iconLight: <UniqueErgo2Light />,
   },
   {
     title: "INTELLIGENT AND STRAIGHTFORWARD",
@@ -25,7 +34,7 @@ let cards = [
     url: "https://docs.ergoplatform.com/dev/scs/sigma/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo3 />,
-    iconLight: <UniqueErgo3Light />
+    iconLight: <UniqueErgo3Light />,
   },
   {
     title: "SECURE AND ACCESSIBLE",
@@ -33,7 +42,7 @@ let cards = [
     url: "https://docs.ergoplatform.com/dev/protocol/eutxo/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo4 />,
-    iconLight: <UniqueErgo4Light />
+    iconLight: <UniqueErgo4Light />,
   },
 ];
 
@@ -53,25 +62,33 @@ export default function UniqueErgo() {
   }, []);
 
   return (
-  
     <div id="UniqueErgo" className="mt-28 ">
-      <div className="text-center"><p className="font-bold text-[#585858] dark:text-[#989898] text-[16px] lg:text-[20px]">WHAT MAKES ERGO UNIQUE</p></div>
+      <div className="text-center">
+        <p className="font-bold text-[#585858] dark:text-[#989898] text-[16px] lg:text-[20px]">
+          WHAT MAKES ERGO UNIQUE
+        </p>
+      </div>
       <div className="relative z-20 overflow-x-auto no-scrollbar">
         <div className="antialiased flex items-center justify-center my-8 min-w-[1000px]">
           <div className="flex h-[638px] items-stretch min-w-md overflow-hidden w-full">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={"bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-14 overflow-hidden relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A]" + (index === 0 ? " active" : "")}
+                className={
+                  "bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-14 overflow-hidden relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A]" +
+                  (index === 0 ? " active" : "")
+                }
               >
-                <div className="absolute top-16 lg:top-8 flex label mb-3 ml-4 lg:ml-24 transition-base z-20 text-[16px] lg:text-[24px] flex-col">
+                <div className="absolute top-16 lg:top-8 flex label mb-3 ml-4 lg:ml-16 transition-base z-20 text-[16px] lg:text-[24px] flex-col">
                   <div className="hidden dark:block">{card.icon}</div>
                   <div className="dark:hidden">{card.iconLight}</div>
                   <div className="mt-8 max-w-[300px]">{card.title}</div>
                 </div>
-                <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-[#585858] dark:text-[#989898] max-w-xs lg:max-w-sm ml-6 lg:ml-[106px]">
+                <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-[#585858] dark:text-[#989898] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                   <div>{card.text}</div>
-                  {card.url !== undefined ? (
+                </div>
+                {card.url !== undefined ? (
+                  <div className="absolute bottom-2 from-transparent h-auto inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-[#585858] dark:text-[#989898] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                     <div className="-ml-4 mt-12 sm:mt-10 lg:mt-16">
                       <Button
                         text={card.buttoText}
@@ -84,8 +101,8 @@ export default function UniqueErgo() {
                         iconColor="orange"
                       />
                     </div>
-                  ) : null}
-                </div>
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
