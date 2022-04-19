@@ -46,7 +46,7 @@
   "components.ContributeForm.text": [
     {
       "type": 0,
-      "value": "Ergo operates an open contributor model where "
+      "value": "Ergo operates on an open model where "
     },
     {
       "children": [
@@ -98,7 +98,7 @@
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "READ THE DOCS"
+      "value": "DIVE INTO ERGO"
     }
   ],
   "components.Sigmanauts.formInput.button": [
@@ -134,7 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Help grow and shape Ergo. Ergo is a community-ran project, and this programme is the first step in empowering the community to take control of Ergo."
+      "value": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo growing forward. Let’s try to create grassroots finance."
     }
   ],
   "components.Sigmanauts.title": [

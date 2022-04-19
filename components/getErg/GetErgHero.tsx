@@ -33,7 +33,7 @@ const cards = [
       />
     ),
     icon: "UsingErgBuyIt",
-    url: "/get-erg/#Exchanges",
+    url: "/get-erg/#Excanges",
   },
   {
     title: (
@@ -44,7 +44,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Wallet solutions for your every need."
+        defaultMessage="Simple and secure non-custodial wallets to keep your ERG safe."
         id="components.getErg.StoreIt.text"
       />
     ),
@@ -73,7 +73,7 @@ export default function GetErgHero(props: Props) {
             <b>{props.title}</b>
           </h2>
           <p className="text-[#989898] dark:text-[#989898] mt-6 max-w-xs">
-            There is a rich ecosystem budding on Ergo. Whether you
+            There is a rich ecosystem budding ontop of Ergo. Whether you
             are a developer, miner, or investor - we’ve got you covered.
           </p>
         </div>

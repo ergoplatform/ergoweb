@@ -27,7 +27,7 @@ export default function ErgoExplorer() {
         Watch every transaction made in real-time.
         Or, view community curated metrics on ergo.watch.
       </p>
-      <Link href="https://google.com" passHref>
+      <Link href="https://explorer.ergoplatform.com/" passHref>
         <a target="_blank" rel="noopener noreferrer">
           <button
             type="submit"
@@ -40,7 +40,7 @@ export default function ErgoExplorer() {
           </button>
         </a>
       </Link>
-      <Link href="https://google.com" passHref>
+      <Link href="https://ergo.watch/" passHref>
         <a target="_blank" rel="noopener noreferrer">
           <button
             type="submit"

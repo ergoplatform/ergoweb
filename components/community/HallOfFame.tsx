@@ -103,13 +103,17 @@ export default function HallOfFame(props: Props) {
         <b>Hall Of Fame</b>
       </h2>
       <div className="flex flex-row justify-center">
-        <div className="lg:max-w-3xl">
+        <div className="lg:max-w-3xl lg:text-center">
           <p className="text-[#989898] dark:text-[#989898] mt-10">
-            The Ergo Team has a solid background in core development with
+            Ergo was founded with a team who have solid backgrounds in core development with
             cryptocurrencies and blockchain frameworks including NXT, Scorex,
             Cardano and Waves. Below are brief biographies
             for some of the core ERGO team as well as some of the many other developers and
             community members involved, some of whom are anonymous.
+            </p>
+            <p className="text-[#989898] dark:text-[#989898] mt-10">
+            Ergo is grassroots, and most core team members (and even foundation members) started out as community members. 
+            There is a brief description as well as information to read more about the Ergo Foundation at the bottom of this page. 
           </p>
         </div>
       </div>

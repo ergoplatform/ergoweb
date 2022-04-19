@@ -21,7 +21,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Ergo had a fair launch with only a 4.43% of funds allocated to ecosystem development. No smart contract platform is fairer."
+        defaultMessage="No pre-mine, ICO, or pre-sales. A fair launch with 4.43% of funds allocated to ecosystem development."
         id="components.highlights.slide.1.text"
         values={{ breakingLine: <br /> }}
       />
@@ -48,7 +48,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Enabling more innovative, targeted implementations of economic stimulation that conventional banking can't match. Ergo offers powerful tools with smart contract-powered microcredit facilities and Local Exchange Trading Systems (LETS)."
+        defaultMessage="Enabling more innovative, targeted implementations that conventional banking can't match. Ergo offers powerful tools with smart contract-powered microcredit facilities and Local Exchange Trading Systems (LETS)."
         id="components.highlights.slide.2.text"
         values={{ breakingLine: <br /> }}
       />

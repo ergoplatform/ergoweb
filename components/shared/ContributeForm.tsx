@@ -11,7 +11,7 @@ export default function ContributeForm() {
   });
   const buttonReadTheDocs = intl.formatMessage({
     id: "components.Sigmanauts.button.writeAndReviewCode",
-    defaultMessage: "READ THE DOCS",
+    defaultMessage: "DIVE INTO ERGO",
   });
   const buttonDiscord = intl.formatMessage({
     id: "components.Sigmanauts.button.discord",
@@ -83,7 +83,7 @@ export default function ContributeForm() {
         </h1>
         <p className="text-[#989898] dark:text-[#989898] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
           <FormattedMessage
-            defaultMessage="Ergo operates an open contributor model where <b>anyone is welcome to contribute.</b>"
+            defaultMessage="Ergo operates on an open model where <b>anyone is welcome to contribute.</b>"
             id="components.ContributeForm.text"
             values={{ b: (...chunks: any) => <b>{chunks}</b> }}
           />
@@ -110,7 +110,7 @@ export default function ContributeForm() {
           <div className="ml-8 mb-10">
               <Button
                 text={buttonDiscord}
-                url="https://discord.gg/yDdb6yH3Zz"
+                url="https://discord.gg/ergo"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
@@ -134,8 +134,8 @@ export default function ContributeForm() {
             <div className="ml-8 mb-10">
               <Button
                 text={buttonReadTheDocs}
-                url="https://docs.ergoplatform.com/contribute/"
-                newTab={true}
+                url="/discover/#DiscoverHero"
+                newTab={false}
                 underline={true}
                 textColor="brand-orange"
                 background={false}
@@ -146,8 +146,8 @@ export default function ContributeForm() {
             <div className="ml-8 mb-10">
               <Button
                 text={buttonGrantsAndBounties}
-                url="https://github.com/ergoplatform/grow-ergo/issues"
-                newTab={true}
+                url="/discover/#GrantsAndBounties"
+                newTab={false}
                 underline={true}
                 textColor="brand-orange"
                 background={false}

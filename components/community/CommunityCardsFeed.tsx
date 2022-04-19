@@ -11,7 +11,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Community-run wiki that anyone can contribute to in any language."
+        defaultMessage="Your community wiki. Contribute in any language!"
         id="components.communityHero.Ergonaut.text"
       />
     ),
@@ -27,12 +27,12 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Join us at r/ergonauts"
+        defaultMessage="Join us on Reddit."
         id="components.communityHero.Reddit.text"
       />
     ),
     icon: "Reddit",
-    url: "https://reddit.com/r/ergonauts",
+    url: "https://www.reddit.com/r/ergonauts/comments/u22yc9/ecosystem_subreddits/",
   },
   {
     title: (
@@ -48,7 +48,7 @@ const cards = [
       />
     ),
     icon: "Discord",
-    url: "https://discord.gg/yDdb6yH3Zz",
+    url: "https://discord.gg/ergo",
   },
   {
     title: (
@@ -96,7 +96,7 @@ const cards = [
       />
     ),
     icon: "Telegram",
-    url: "https://t.me/ergoplatform",
+    url: "https://t.me/ErgoChats",
   },
   {
     title: (
@@ -123,7 +123,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Don't forget to Like and Subscribe"
+        defaultMessage="Don't forget to Like and Subscribe."
         id="components.communityHero.Youtube.text"
       />
     ),

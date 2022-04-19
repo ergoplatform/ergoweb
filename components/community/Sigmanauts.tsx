@@ -36,7 +36,10 @@ export default function Sigmanauts() {
         </p>
         <p className="text-[#989898] dark:text-[#989898] mb-6">
           <FormattedMessage
-            defaultMessage="Help grow and shape Ergo. Ergo is a community-ran project, and this programme is the first step in empowering the community to take control of Ergo."
+            defaultMessage="Apply for the Sigmanaut Training Programme to help shape and grow Ergo growing forward.
+
+Let’s try to create grassroots finance.
+"
             id="components.Sigmanauts.text"
           />
         </p>

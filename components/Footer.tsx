@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
             <div className="box mx-auto my-auto">
               <a href="https://ergonaut.space" target="_blank" rel="noreferrer">
-                {getIconComponentByName("Ergonaut")}
+                {getIconComponentByName("ErgoWiki")}
               </a>
             </div>
             <div className="box mx-auto my-auto">
