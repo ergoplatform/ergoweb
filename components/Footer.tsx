@@ -289,7 +289,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/ecosystem/#Ergonaut">
+              <Link href="/ecosystem/#Wiki">
                 <a>
                   <FormattedMessage
                     defaultMessage="Wiki"

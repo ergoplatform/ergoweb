@@ -6,13 +6,13 @@ const cards = [
     title: (
       <FormattedMessageFixed
         defaultMessage="Wiki"
-        id="components.communityHero.Ergonaut.title"
+        id="components.communityHero.Wiki.title"
       />
     ),
     text: (
       <FormattedMessageFixed
         defaultMessage="Your community wiki. Contribute in any language!"
-        id="components.communityHero.Ergonaut.text"
+        id="components.communityHero.Wiki.text"
       />
     ),
     icon: "ErgoWiki",

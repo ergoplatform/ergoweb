@@ -7,7 +7,7 @@ export { default as CheckOrangeHighlighted } from "./CheckOrangeHighlighted";
 export { default as CheckOrange } from "./CheckOrange";
 export { default as Discord } from "./Discord";
 export { default as ErgoNode } from "./ErgoNode";
-export { default as Ergonaut } from "./Ergonaut";
+export { default as Wiki } from "./Wiki";
 export { default as Github } from "./Github";
 export { default as Highlight } from "./Highlight";
 export { default as LanguageSelector } from "./LanguageSelector";

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SvgErgonaut = (props) => (
+const SvgWiki = (props) => (
   <svg
     width={34}
     height={34}
@@ -19,4 +19,4 @@ const SvgErgonaut = (props) => (
   </svg>
 );
 
-export default SvgErgonaut;
+export default SvgWiki;
