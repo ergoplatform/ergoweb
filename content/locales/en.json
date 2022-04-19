@@ -85,11 +85,13 @@
   "pages.404.title": "Not Found",
   "pages.500.hero": "500 Server Error",
   "pages.500.title": "Server Error",
+  "pages.blog.title": "Blog",
   "pages.community.title": "Community",
   "pages.discover.title": "Discover",
   "pages.ecosystem.title": "Ecosystem",
   "pages.get-erg.title": "GetErg",
   "pages.home.title": "Home",
   "pages.legal.title": "Legal",
+  "pages.news.title": "News",
   "pages.privacyPolicy.title": "Privacy Policy"
 }
