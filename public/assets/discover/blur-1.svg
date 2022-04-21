@@ -4,8 +4,7 @@
 </g>
 <defs>
 <filter id="filter0_f_157_898" x="-1221.28" y="0.878906" width="1690.71" height="2394.91" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+
 <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_157_898"/>
 </filter>
 </defs>

@@ -3,9 +3,8 @@
 <ellipse rx="801.5" ry="437.881" transform="matrix(-0.120236 0.992745 0.992745 0.120236 846.074 1198.33)" fill="#FF5E18"/>
 </g>
 <defs>
-<filter id="filter0_f_157_896" x="0.720703" y="0.878906" width="1690.71" height="2394.91" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<filter id="filter0_f_157_896" x="0.720703" y="0.878906" width="1690.71" height="2394.91" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+
 <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_157_896"/>
 </filter>
 </defs>
