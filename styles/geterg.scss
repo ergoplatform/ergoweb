@@ -20,10 +20,10 @@
 
 .geterg-frame-2 {
   position: absolute;
-  width: 690px;
-  height: 689px;
-  left: 65px;
-  top: 90px;
+  width: 770px;
+  height: 770px;
+  left: 150px;
+  top: -15px;
   background: no-repeat url("/assets/geterg/frame-2-light.png");
 }
 
@@ -142,6 +142,7 @@
     transform: scale(0.5);
     transform-origin: top left;
     left: 60px;
+    top: -40px;
   }
   .geterg-frame-3 {
     transform: scale(0.5);
