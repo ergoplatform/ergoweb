@@ -4,7 +4,7 @@
   position: absolute;
   width: 925px;
   height: 1456px;
-  top: 0px;
+  top: 150px;
   right: 0px;
   background: no-repeat url("/assets/discover/frame-1-light.png");
 }
@@ -13,7 +13,7 @@
   position: absolute;
   width: 925px;
   height: 1456px;
-  top: 0px;
+  top: 150px;
   right: 0px;
   background: no-repeat url("/assets/discover/frame-1.png");
 }
@@ -84,8 +84,7 @@
 
 @media screen and (max-width: $md) {
   .discover-frame-1 {
-    transform: scale(0.5);
-    transform-origin: top right;
+    display: none;
   }
   .discover-frame-2 {
     transform: scale(0.5);
