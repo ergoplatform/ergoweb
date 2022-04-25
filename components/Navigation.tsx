@@ -40,7 +40,7 @@ function Navigation({ enableLanguages = true }) {
     <Popover className="max-w-[1300px] mx-auto p-4">
       <div className="flex mx-5 mt-2 mb-10 lg:my-10">
         <div className="my-auto flex-grow z-10">
-          <Link href="/">
+          <Link href="/" passHref>
             <button>
               <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
             </button>
@@ -106,7 +106,7 @@ function Navigation({ enableLanguages = true }) {
           <div className="max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8">
             <div className="flex mx-5 mt-2 mb-10">
               <div className="my-auto flex-grow">
-                <Link href="/">
+                <Link href="/" passHref>
                   <button>
                     <LogoWithTextWhite
                       viewBox="0 0 213 82"
@@ -172,7 +172,7 @@ function Navigation({ enableLanguages = true }) {
             </div> */}
             <div className="mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
               <div>
-                <Link href="/community">
+                <Link href="/community" passHref>
                   <h3 className="font-button mt-4 mb-10">
                     <FormattedMessage
                       defaultMessage="COMMUNITY"
@@ -232,7 +232,7 @@ function Navigation({ enableLanguages = true }) {
                 </ul>
               </div>
               <div>
-                <Link href="/get-erg">
+                <Link href="/get-erg" passHref>
                   <h3 className="font-button mt-4 mb-10">
                     <FormattedMessage
                       defaultMessage="GET ERG"
@@ -242,7 +242,7 @@ function Navigation({ enableLanguages = true }) {
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-1">
-                    <Link href="/get-erg">
+                    <Link href="/get-erg" passHref>
                       <FormattedMessage
                         defaultMessage="Mining"
                         id="footer.getErg.1"
@@ -250,7 +250,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg">
+                    <Link href="/get-erg" passHref>
                       <FormattedMessage
                         defaultMessage="Mining Calculator"
                         id="footer.getErg.2"
@@ -258,7 +258,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg">
+                    <Link href="/get-erg" passHref>
                       <FormattedMessage
                         defaultMessage="Wallets"
                         id="footer.getErg.3"
@@ -266,7 +266,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg">
+                    <Link href="/get-erg" passHref>
                       <FormattedMessage
                         defaultMessage="Exchanges"
                         id="footer.getErg.4"
@@ -276,7 +276,7 @@ function Navigation({ enableLanguages = true }) {
                 </ul>
               </div>
               <div>
-                <Link href="/discover">
+                <Link href="/discover" passHref>
                   <h3 className="font-button mt-4 mb-10">
                     <FormattedMessage
                       defaultMessage="DISCOVER"
@@ -310,7 +310,7 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/discover">
+                    <Link href="/discover" passHref>
                       <FormattedMessage
                         defaultMessage="FAQ"
                         id="footer.discover.3"
@@ -330,7 +330,7 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/discover">
+                    <Link href="/discover" passHref>
                       <FormattedMessage
                         defaultMessage="Documents"
                         id="footer.discover.5"
@@ -340,7 +340,7 @@ function Navigation({ enableLanguages = true }) {
                 </ul>
               </div>
               <div>
-                <Link href="/ecosystem">
+                <Link href="/ecosystem" passHref>
                   <h3 className="font-button mt-4 mb-8 md:mb-10">
                     <FormattedMessage
                       defaultMessage="ECOSYSTEM"
@@ -350,7 +350,7 @@ function Navigation({ enableLanguages = true }) {
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-1">
-                    <Link href="/ecosystem">
+                    <Link href="/ecosystem" passHref>
                       <FormattedMessage
                         defaultMessage="DApps"
                         id="footer.ecosystem.1"
@@ -358,7 +358,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/ecosystem">
+                    <Link href="/ecosystem" passHref>
                       <FormattedMessage
                         defaultMessage="Roadmap"
                         id="footer.ecosystem.2"
@@ -390,7 +390,7 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/ecosystem">
+                    <Link href="/ecosystem" passHref>
                       <FormattedMessage
                         defaultMessage="Real Life Ergo"
                         id="footer.ecosystem.5"

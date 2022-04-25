@@ -134,7 +134,7 @@ export default function ContributeForm() {
             <div className="ml-8 mb-10">
               <Button
                 text={buttonReadTheDocs}
-                url="/discover/#DiscoverHero"
+                url="/discover/#DiscoverERG"
                 newTab={false}
                 underline={true}
                 textColor="brand-orange"
