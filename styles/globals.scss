@@ -14,8 +14,6 @@
 @import "swiper/scss/pagination";
 @import "react-toastify/scss/main.scss";
 
-
-
 .themeShadow {
   -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
   filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
@@ -366,4 +364,35 @@ footer
 
 .dark ergo-wiki_svg__fil0 {
   stroke: #fff;
+}
+
+.blog-news {
+  background: linear-gradient(
+      255.13deg,
+      rgba(255, 255, 255, 0) 8.24%,
+      rgba(255, 255, 255, 0.5) 97.61%
+    ),
+    rgba(255, 255, 255, 0.8);
+  border: 1px solid;
+  border-color: #9898984b;
+  // border-image-source: linear-gradient(
+  //   77.91deg,
+  //   #989898 11.28%,
+  //   rgba(255, 255, 255, 0) 97.02%
+  // );
+}
+
+.dark .blog-news {
+  background: linear-gradient(
+      255.13deg,
+      rgba(0, 0, 0, 0) 8.24%,
+      rgba(255, 255, 255, 0.1) 97.61%
+    ),
+    rgba(0, 0, 0, 0.6);
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    77.91deg,
+    #585858 11.28%,
+    rgba(88, 88, 88, 0) 97.02%
+  );
 }

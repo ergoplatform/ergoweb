@@ -1,9 +1,11 @@
 import { useIntl } from "react-intl";
+import BlogNews from "../components/blog/BlogNews";
 import Layout from "../components/Layout";
 import Post from "../components/shared/Post";
 
 type Props = {
   posts?: any;
+  news?: any;
 };
 
 export default function Blog(props: Props) {
@@ -16,7 +18,10 @@ export default function Blog(props: Props) {
     <div>
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          <h1 className="mb-10">Blog</h1>
+          <BlogNews news={props.news} />
+          <div className="text-right">
+            <h1 className="mb-10">Blog</h1>
+          </div>
           <div className="grid grid-cols-1 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
             {props.posts.map((post: any) => (
               <div key={post.id} className="mx-auto">
@@ -51,13 +56,21 @@ export default function Blog(props: Props) {
 export const getServerSideProps = async (context: any) => {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=" +
+      "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=" +
+      context.locale
+  )
+    .then((response) => response.json())
+    .then((response) => response.data);
+
+  const news = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=news&locale=" +
       context.locale
   )
     .then((response) => response.json())
     .then((response) => response.data);
 
   return {
-    props: { posts },
+    props: { posts, news },
   };
 };
