@@ -51,7 +51,7 @@ export default function GetErg(props: Props) {
 export const getServerSideProps = async (context: any) => {
   const exchanges = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/exchanges?populate=*&locale=" +
+      "/api/exchanges?sort=order:asc&populate=*&locale=" +
       context.locale
   ).then((response) => response.json());
   const price = await fetch(
