@@ -5,61 +5,132 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
+import Button from "../../components/Button";
+import {
+  BlogFacebook,
+  BlogLink,
+  BlogTwitter,
+  LogoBlack,
+} from "../../components/icons";
+import Link from "next/link";
+import BlogPosts from "../../components/blog/BlogPosts";
+import { useRouter } from "next/router";
 
 type Props = {
   post?: any;
+  posts?:any;
 };
 
-export default function Post({ post }: Props) {
+export default function Post(props: Props) {
+  const { locale } = useRouter();
   return (
-    <Layout title={post.attributes.title}>
-      <div className="post max-w-[1300px] mx-auto p-4 mb-20">
-        <div className="px-14">
-          <h4>{post.attributes.title}</h4>
-          <div className="mb-8 mt-4">
-            {post.attributes.tag?.split(",").map((item: string) => (
-              <b
-                key={item.trim()}
-                className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black dark:bg-white text-white dark:text-black uppercase z-10"
-              >
-                {item.trim()}
-              </b>
-            ))}
-          </div>
-          <p className="mb-20">
-            by {post.attributes.author} -{" "}
-            <i>
-              <FormattedDate
-                value={post.attributes.date}
-                day="numeric"
-                month="long"
-                year="numeric"
-              />
-            </i>
-          </p>
+    <div>
+      <div className="blog-frame-1"></div>
+      <div className="blog-frame-2"></div>
+      <div className="blog-frame-3"></div>
+      <div className="blog-blur-1"></div>
+      <Layout title={props.post.attributes.title}>
+        <div className=" max-w-[1300px] mx-auto p-4 relative z-10 min-h-[1800px]">
+          <div className="post bg-white rounded-xl px pt-8 border-[1px] border-gray-300 mt-20 mb-40">
+            <div className="px-4 md:px-32 md:py-20">
+              <div className="-ml-4">
+                <Button
+                  text="BACK TO ALL POSTS"
+                  url="/blog"
+                  newTab={false}
+                  underline={true}
+                  textColor="brand-orange"
+                  background={false}
+                />
+              </div>
+              <h4 className="text-[40px] text-black dark:text-black">
+                {props.post.attributes.title}
+              </h4>
+              <div className="mb-8 mt-4">
+                {props.post.attributes.tag?.split(",").map((item: string) => (
+                  <b
+                    key={item.trim()}
+                    className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                  >
+                    {item.trim()}
+                  </b>
+                ))}
+              </div>
+              <div className="flex">
+                <div className="flex-shrink-0 mt-1">
+                  <LogoBlack viewBox="0 0 82 82" className="h-10 w-10" />
+                </div>
+                <div className="ml-3">
+                  <b className="text-[14px] text-black dark:text-black">
+                    {props.post.attributes.author}
+                  </b>
+                  <div className="flex space-x-1">
+                    <p className="text-[14px] text-black dark:text-black">
+                      <FormattedDate
+                        value={props.post.attributes.date}
+                        day="numeric"
+                        month="long"
+                        year="numeric"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          {post.attributes.image.data == null ? (
-            ""
-          ) : (
-            <Image
-              src={post.attributes.image.data.attributes.formats.large.url}
-              height={
-                post.attributes.image.data.attributes.formats.large.height
-              }
-              width={post.attributes.image.data.attributes.formats.large.width}
-            />
-          )}
-          <a href={post.attributes.url}>{post.attributes.url}</a>
-          <p>{post.attributes.subtitle}</p>
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkBreaks]}
-            rehypePlugins={[rehypeRaw]}
-          >
-            {post.attributes.content}
-          </ReactMarkdown>
+            <div className="flex flex-row justify-center md:mx-4">
+              {props.post.attributes.image.data == null ? (
+                ""
+              ) : (
+                <Image
+                  src={props.post.attributes.image.data.attributes.formats.large.url}
+                  height={
+                    props.post.attributes.image.data.attributes.formats.large.height
+                  }
+                  width={
+                    props.post.attributes.image.data.attributes.formats.large.width
+                  }
+                  className="md:rounded-xl"
+                />
+              )}
+            </div>
+            <div className="px-4 md:px-32 md:py-20">
+              <p className="text-black dark:text-black">
+                {props.post.attributes.subtitle}
+              </p>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkBreaks]}
+                rehypePlugins={[rehypeRaw]}
+                className="blog-md"
+              >
+                {props.post.attributes.content}
+              </ReactMarkdown>
+              <p className="mt-10 text-black dark:text-black font-vinila-extended text-[24px]">
+                Share post
+              </p>
+              <div className="flex flex-row gap-x-16 pb-10">
+                <div className="cursor-pointer">
+                  <Link href="https://google.com">
+                    <BlogFacebook />
+                  </Link>
+                </div>
+                <div className="cursor-pointer">
+                  <Link href="https://google.com">
+                    <BlogTwitter />
+                  </Link>
+                </div>
+                <div className="cursor-pointer">
+                  <Link href="https://google.com">
+                    <BlogLink />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <BlogPosts data={props.posts} locale={locale} />
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 }
 
@@ -70,7 +141,16 @@ export async function getServerSideProps(context: any) {
       context.query.id +
       "?populate=*"
   ).then((response) => response.json());
+
+  const posts = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=" +
+      context.locale
+  )
+    .then((response) => response.json());
+
   return {
-    props: { post: post.data },
+    props: { post: post.data, posts: posts.data },
   };
 }
+

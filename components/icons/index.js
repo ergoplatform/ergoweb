@@ -86,3 +86,6 @@ export { default as WalletNautilus } from "./WalletNautilus";
 export { default as WalletSafew } from "./WalletSafew";
 export { default as WalletSatergo } from "./WalletSatergo";
 export { default as ErgoWiki } from "./ErgoWiki";
+export { default as BlogFacebook } from "./BlogFacebook";
+export { default as BlogLink } from "./BlogLink";
+export { default as BlogTwitter } from "./BlogTwitter";
