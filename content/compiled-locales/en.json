@@ -74,7 +74,7 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "READ MORE"
+      "value": "READ MORE & APPLY"
     }
   ],
   "components.Sigmanauts.button.discord": [
@@ -563,6 +563,12 @@
       "value": "Server Error"
     }
   ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
   "pages.community.title": [
     {
       "type": 0,
@@ -597,6 +603,12 @@
     {
       "type": 0,
       "value": "Legal"
+    }
+  ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "News"
     }
   ],
   "pages.privacyPolicy.title": [

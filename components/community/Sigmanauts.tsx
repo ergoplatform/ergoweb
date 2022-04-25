@@ -6,7 +6,7 @@ export default function Sigmanauts() {
   const intl = useIntl();
   const buttonText = intl.formatMessage({
     id: "components.Sigmanauts.button",
-    defaultMessage: "READ MORE",
+    defaultMessage: "READ MORE & APPLY",
   });
   return (
     <div id="Sigmanauts" className="max-w-[1300px] mx-auto p-4 flex flex-col mb-44 md:flex-row md:mt-36 md:mb-64 relative z-10">
@@ -46,8 +46,8 @@ Let’s try to create grassroots finance.
         <div className="-ml-4">
           <Button
             text={buttonText}
-            url="https://ergoplatform.org/en/blog/2021-07-01-grow-ergo/"
-            newTab={true}
+            url="https://ergo-platform-frontend-nvbpfiue6q-ez.a.run.app/posts/1166/"
+            newTab={false}
             underline={true}
             textColor="brand-orange"
             background={false}
