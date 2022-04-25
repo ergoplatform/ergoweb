@@ -11,16 +11,21 @@ type Props = {
 export default function News(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: "pages.News.title",
+    id: "pages.news.title",
     defaultMessage: "News",
   });
   return (
     <div>
+      <div className="blog-frame-1"></div>
+      <div className="blog-frame-2"></div>
+      <div className="blog-frame-3"></div>
+      <div className="blog-blur-1"></div>
+      <div className="blog-blur-2"></div>
       <Layout title={title}>
         <div id="News" className="max-w-[1300px] mx-auto p-4 relative z-10">
           <BlogNews news={props.news} />
           <div className="text-right">
-            <h1 className="mb-10">Blog</h1>
+            <h1 className="mb-10" >Blog</h1>
           </div>
           <div className="grid grid-cols-1 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
             {props.posts.map((post: any) => (

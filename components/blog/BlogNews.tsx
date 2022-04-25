@@ -47,7 +47,7 @@ type Props = {
 
 export default function BlogNews({ news }: Props) {
   return (
-    <div style={{ zIndex: 12 }}>
+    <div>
       <h1>News</h1>
       <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 relative">
         {news?.map((post: any) => (
