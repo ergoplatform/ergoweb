@@ -40,13 +40,15 @@ export default function Post({
           {image == null ? (
             <div className="h-48 bg-gray-200 w-full object-cover rounded-t-2xl"></div>
           ) : (
-            <Image
-              className="h-48 w-full object-cover rounded-t-2xl"
-              src={image}
-              alt=""
-              height="186px"
-              width="384px"
-            />
+            <div className="-mb-2">
+              <Image
+                className="h-48 w-full object-cover rounded-t-2xl"
+                src={image}
+                alt=""
+                height="186px"
+                width="384px"
+              />
+            </div>
           )}
           <div className="absolute left-4 top-4">
             {tags?.split(",").map((item) => (
