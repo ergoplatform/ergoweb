@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
-import { Github, PersonPlaceholder, Twitter } from "../icons";
+import { Github, Linkedin, PersonPlaceholder, Twitter } from "../icons";
 
 type Props = {
   teamMembers?: any;
@@ -10,20 +10,21 @@ type HallOfFamePersonProps = {
   name?: string;
   bio?: string;
   github?: string;
+  linkedin?: string;
   twitter?: string;
   image?: any;
 };
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
+  console.log(props);
   return (
     <div className="h-[400px] w-56 lg:w-80 mx-auto">
       <div className="flip">
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
-
             {props.image?.attributes.formats?.small?.url != undefined ? (
               <Image
-                layout='fill'
+                layout="fill"
                 src={props.image?.attributes.formats.small.url}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
                 alt="Hall of fame card of the person."
@@ -46,6 +47,16 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
           {props.name}
         </p>
         <div className="flex flex-row">
+
+          <div className="my-auto">
+            {props.linkedin && props.linkedin?.length > 0 ? (
+              <a href={props.linkedin} target="_blank" rel="noreferrer">
+                <Linkedin className="fill-brand-orange scale-50 lg:scale-100" />
+              </a>
+            ) : (
+              ""
+            )}
+          </div>
           <div className="my-auto">
             {props.twitter && props.twitter?.length > 0 ? (
               <a href={props.twitter} target="_blank" rel="noreferrer">
@@ -87,9 +98,8 @@ function GroupPersons(data: any, group: string) {
             bio={person.attributes.bio}
             github={person.attributes.github}
             twitter={person.attributes.twitter}
-            image={
-              person.attributes.image.data
-            }
+            linkedin={person.attributes.linkedin}
+            image={person.attributes.image.data}
           />
         </div>
       ))}
@@ -99,22 +109,28 @@ function GroupPersons(data: any, group: string) {
 
 export default function HallOfFame(props: Props) {
   return (
-    <div id="HallOfFame" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
+    <div
+      id="HallOfFame"
+      className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10"
+    >
       <h2 className="lg:text-center">
         <b>Hall Of Fame</b>
       </h2>
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
           <p className="text-[#989898] dark:text-[#989898] mt-10">
-            Ergo was founded with a team who have solid backgrounds in core development with
-            cryptocurrencies and blockchain frameworks including NXT, Scorex,
-            Cardano and Waves. Below are brief biographies
-            for some of the core ERGO team as well as some of the many other developers and
-            community members involved, some of whom are anonymous.
-            </p>
-            <p className="text-[#989898] dark:text-[#989898] mt-10">
-            Ergo is grassroots, and most core team members (and even foundation members) started out as community members. 
-            There is a brief description as well as information to read more about the Ergo Foundation at the bottom of this page. 
+            Ergo was founded with a team who have solid backgrounds in core
+            development with cryptocurrencies and blockchain frameworks
+            including NXT, Scorex, Cardano and Waves. Below are brief
+            biographies for some of the core ERGO team as well as some of the
+            many other developers and community members involved, some of whom
+            are anonymous.
+          </p>
+          <p className="text-[#989898] dark:text-[#989898] mt-10">
+            Ergo is grassroots, and most core team members (and even foundation
+            members) started out as community members. There is a brief
+            description as well as information to read more about the Ergo
+            Foundation at the bottom of this page.
           </p>
         </div>
       </div>
