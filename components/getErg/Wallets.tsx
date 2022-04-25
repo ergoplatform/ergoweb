@@ -1,7 +1,6 @@
 import {
   Logo,
   RoadmapInProgress,
-  RoadmapPlanned,
   WalletCheck,
   WalletDesktop,
   WalletMinotaur,
@@ -40,7 +39,7 @@ export default function Wallets() {
           </p>
           <br />
           <p className="font-roboto text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898]">
-            To see a list of all wallets please visit sigmaverse.io
+            To see a list of all wallets please visit sigmaverse.io.
           </p>
         </div>
       </div>
@@ -97,7 +96,7 @@ export default function Wallets() {
             <p className="text-center mt-2 text-[12px]">iOS/Android</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <RoadmapPlanned className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
@@ -152,7 +151,7 @@ export default function Wallets() {
             <p className="text-center mt-2 text-[12px]">Multi Platform</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <RoadmapPlanned className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />

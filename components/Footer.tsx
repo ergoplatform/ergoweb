@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
             <div className="box mx-auto my-auto">
               <a
-                href="https://t.me/ergoplatform"
+                href="https://t.me/ergochats"
                 target="_blank"
                 rel="noreferrer"
               >

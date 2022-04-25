@@ -37,10 +37,12 @@ export default function Sigmanauts() {
         <p className="text-[#989898] dark:text-[#989898] mb-6">
           <FormattedMessage
             defaultMessage="Apply for the Sigmanaut Training Programme to help shape and grow Ergo growing forward.
+            {br}{br}
 
-Let’s try to create grassroots finance.
-"
+        Let's try to create grassroots finance.
+        "
             id="components.Sigmanauts.text"
+            values={{ br: <br />  }}
           />
         </p>
         <div className="-ml-4">
