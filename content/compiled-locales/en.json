@@ -134,7 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo growing forward. "
+      "value": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo. "
     },
     {
       "type": 1,
@@ -146,7 +146,7 @@
     },
     {
       "type": 0,
-      "value": " Let's try to create grassroots finance."
+      "value": " Let's create grassroots finance."
     }
   ],
   "components.Sigmanauts.title": [
@@ -246,7 +246,7 @@
   "components.ergoExplorer.button1": [
     {
       "type": 0,
-      "value": "ERGO EXPLORER"
+      "value": "Ergo Explorer"
     }
   ],
   "components.ergoExplorer.button2": [
@@ -575,12 +575,6 @@
       "value": "Server Error"
     }
   ],
-  "pages.News.title": [
-    {
-      "type": 0,
-      "value": "News"
-    }
-  ],
   "pages.blog.title": [
     {
       "type": 0,
@@ -621,6 +615,12 @@
     {
       "type": 0,
       "value": "Legal"
+    }
+  ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "News"
     }
   ],
   "pages.privacyPolicy.title": [

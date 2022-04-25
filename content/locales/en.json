@@ -16,7 +16,7 @@
   "components.Sigmanauts.formInput.name": "Name / Company",
   "components.Sigmanauts.formInput.text": "Write us your suggestions and ideas, let’s talk!",
   "components.Sigmanauts.subTitle": "Training programme",
-  "components.Sigmanauts.text": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo growing forward. {br}{br} Let's try to create grassroots finance.",
+  "components.Sigmanauts.text": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo. {br}{br} Let's create grassroots finance.",
   "components.Sigmanauts.title": "Sigmanauts",
   "components.Spotlight.button": "SEE ALL POSTS",
   "components.Spotlight.title": "Spotlight",
@@ -31,7 +31,7 @@
   "components.discoverHero.button3": "READ THE MANIFESTO",
   "components.discoverHero.button4": "GET STARTED",
   "components.discoverHero.button5": "VISIT ERGONAUT.SPACE",
-  "components.ergoExplorer.button1": "ERGO EXPLORER",
+  "components.ergoExplorer.button1": "Ergo Explorer",
   "components.ergoExplorer.button2": "ergo watch",
   "components.faq.text.2": "CAN'T FIND WHAT {breakingLine} YOU’RE LOOKING FOR?",
   "components.favorites.button1": "EXPLORE ERGO RAFFLE",
@@ -85,7 +85,6 @@
   "pages.404.title": "Not Found",
   "pages.500.hero": "500 Server Error",
   "pages.500.title": "Server Error",
-  "pages.News.title": "News",
   "pages.blog.title": "Blog",
   "pages.community.title": "Community",
   "pages.discover.title": "Discover",
@@ -93,5 +92,6 @@
   "pages.get-erg.title": "GetErg",
   "pages.home.title": "Home",
   "pages.legal.title": "Legal",
+  "pages.news.title": "News",
   "pages.privacyPolicy.title": "Privacy Policy"
 }
