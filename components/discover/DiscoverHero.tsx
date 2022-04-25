@@ -5,7 +5,7 @@ import Button from "../Button";
 import { DiscoverErgHero } from "../icons";
 import { DiscoverErgHeroLight } from "../icons";
 
-export default function DiscoverHero() {
+export default function DiscoverERG() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: "components.discoverHero.button1",
@@ -29,7 +29,7 @@ export default function DiscoverHero() {
   });
 
   return (
-    <div id="DiscoverHero" className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="DiscoverERG" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="grid overflow-hidden grid-cols-1 xl:grid-cols-2 gap-2">
         <div className="box xl:order-2">
         <div className="hidden dark:block">

@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ color = "default" }) {
                 className={`cursor-default select-none relative`}
                 value={loc}
               >
-                <Link href={route} locale={loc}>
+                <Link href={route} locale={loc} passHref>
                   <div className="py-2 pl-3 pr-8">
                     <span className={`font-button-bold text-[14px] uppercase`}>
                       {loc}

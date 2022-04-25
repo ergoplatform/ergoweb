@@ -36,6 +36,7 @@ export default function Wiki() {
             width="405px"
             height="349px"
             className="rounded-br-2xl"
+            alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane ontop of a moon."
           />
         </div>
       </div>

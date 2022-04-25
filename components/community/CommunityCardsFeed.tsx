@@ -27,7 +27,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Join us on Reddit."
+        defaultMessage="Subscribe to the communities on Reddit."
         id="components.communityHero.Reddit.text"
       />
     ),
@@ -43,7 +43,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Have a contribution for Ergo Platform? Join us on Discord!"
+        defaultMessage="Join us on Discord!"
         id="components.communityHero.Discord.text"
       />
     ),
@@ -75,7 +75,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Follow the Ergo Platform Twitter."
+        defaultMessage="Follow us on Twitter."
         id="components.communityHero.Twitter.text"
       />
     ),
@@ -136,9 +136,9 @@ function FormattedMessageFixed(props: any) {
   return <FormattedMessage {...props} />;
 }
 
-export default function CommunityCardsFeed() {
+export default function JoinUs() {
   return (
-    <div id="CommunityCardsFeed" className="relative z-10">
+    <div id="JoinUs" className="relative z-10">
         <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-6 xl:py-8 2xl:hidden">
           {cards.map((card: any, i: number) => (
             <CommunityCard

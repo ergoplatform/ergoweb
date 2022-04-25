@@ -26,6 +26,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
                 layout='fill'
                 src={props.image?.attributes.formats.small.url}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
+                alt="Hall of fame card of the person."
               />
             ) : (
               <PersonPlaceholder className="hall-of-fame-person-card object-cover w-full h-full" />

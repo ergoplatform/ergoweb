@@ -575,6 +575,12 @@
       "value": "Server Error"
     }
   ],
+  "pages.News.title": [
+    {
+      "type": 0,
+      "value": "News"
+    }
+  ],
   "pages.blog.title": [
     {
       "type": 0,
@@ -615,12 +621,6 @@
     {
       "type": 0,
       "value": "Legal"
-    }
-  ],
-  "pages.news.title": [
-    {
-      "type": 0,
-      "value": "News"
     }
   ],
   "pages.privacyPolicy.title": [

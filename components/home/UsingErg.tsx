@@ -12,7 +12,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Suited for smaller cards, ASIC resistant, fairly mined Proof of Work"
+        defaultMessage="Autolykos, an ASIC resistant & fairly mined Proof-of-Work algorithm friendly to common GPUs."
         id="components.usingErg.MineIt.text"
       />
     ),
@@ -79,7 +79,7 @@ export default function UsingErg(props: Props) {
         </div>
         <div className="flex overflow-x-auto lg:space-x-4 space-x-8 mt-10 no-scrollbar pb-10">
           {cards.map((card: any, i: number) => (
-            <Link key={i} href={card.url}>
+            <Link key={i} href={card.url} passHref>
               <div className="cursor-pointer z-20">
                 <div className="h-[450px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
                   {getIconComponentByName(card.icon + "Light")}

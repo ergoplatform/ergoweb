@@ -15,7 +15,7 @@ let cards = [
   {
     title: "RESEARCH-LED AND REAL-WORLD FOCUSED",
     text: "Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement new and powerful cryptography natively.",
-    url: "discover/#DiscoverHero",
+    url: "discover/#DiscoverERG",
     buttoText: "EXPLORE",
     icon: <UniqueErgo1 />,
     iconLight: <UniqueErgo1Light />,

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-[1300px] mx-auto py-12 px-4 footer-image">
         <div className="md:flex justify-between">
           <div className="my-6 md:my-auto flex justify-start md:justify-center">
-            <Link href="/">
+            <Link href="/" passHref>
               <button>
                 <LogoWithText viewBox="0 0 213 82" className="w-40 md:w-52" />
               </button>
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
         <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6">
           <div className="mx-1">
-            <Link href="/community">
+            <Link href="/community" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="COMMUNITY"
@@ -107,7 +107,7 @@ export default function Footer() {
             </Link>
             <ul className="hidden md:block">
               <li>
-              <Link href="/community/#CommunityCardsFeed">
+              <Link href="/community/#JoinUs" passHref>
                 <a>
                   <FormattedMessage
                     defaultMessage="Join our channels"
@@ -117,7 +117,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/community/#Sigmanauts">
+              <Link href="/community/#Sigmanauts" passHref>
                 <a>
                
                   <FormattedMessage
@@ -128,7 +128,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/community/#ContributeForm">
+              <Link href="/community/#ContributeForm" passHref>
                 <a>
                
                   <FormattedMessage
@@ -139,7 +139,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/community/#OurMission">
+              <Link href="/community/#OurMission" passHref>
                 <a>
                
                   <FormattedMessage
@@ -152,7 +152,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <Link href="/get-erg">
+            <Link href="/get-erg" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="GET ERG"
@@ -204,7 +204,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <Link href="/discover">
+            <Link href="/discover" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="DISCOVER"
@@ -214,7 +214,7 @@ export default function Footer() {
             </Link>
             <ul className="hidden md:block">
               <li>
-              <Link href="/discover/#DiscoverHero">
+              <Link href="/discover/#DiscoverERG">
                 <a>
                   <FormattedMessage
                     defaultMessage="Software Releases"
@@ -244,7 +244,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/discover/#ErgoExplorer">
+              <Link href="/discover/#Explore">
                 <a>
                   <FormattedMessage
                     defaultMessage="Explore"
@@ -266,7 +266,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <Link href="/ecosystem">
+            <Link href="/ecosystem" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="ECOSYSTEM"
@@ -329,14 +329,14 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <Link href="/blog">
+            <Link href="/blog" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
               </h3>
             </Link>
           </div>
           <div className="mx-1">
-            <Link href="/news">
+            <Link href="/news" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
               </h3>
