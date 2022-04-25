@@ -155,17 +155,16 @@ export default function Mining() {
       <div className="lg:w-1/2">
         <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
-            defaultMessage="Ergo mining is based on Autolykos v.2, a Proof-of-Work algorithm
-                designed to be ASIC resistant. Miners have to perform memory-hard computations~(at least 2.5 GB memory is needed, but the current most efficient implementation utilizes around 4 GB of vRAM) that makes Ergo friendly for GPU mining.
-                There was 0 ERG in existence at launch of mainnet as there was no ICO or premine. At the end of 8 years, the final Erg supply will be 97,739,925 Ergs. The Ergo block interval is 2 minutes"
+            defaultMessage="The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a PoW puzzle lottery. The rest of the network verifies the solution, which can be done efficiently, requiring less than a kilobyte of memory. 
+
+            Ergo mining is based on Autolykos (v.2), an ASIC resistant Proof-of-Work algorithm friendly to common GPUs."
             id={"components.mining.text.1"}
             values={{ breakingLine: <br /> }}
           />
         </p>
         <p className="text-[#989898] dark:text-[#989898] mt-8 text-bold text-[14px] lg:text-[24px]  max-w-lg">
           <FormattedMessage
-            defaultMessage="The rest of the network verifies the solution which can be done
-            efficiently, requiring less than a kilobyte of memory."
+            defaultMessage="Welcome to the future of Proof of Work."
             id={"components.mining.text.2"}
             values={{ breakingLine: <br /> }}
           />
