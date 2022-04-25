@@ -27,7 +27,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Subscribe to the communities on Reddit."
+        defaultMessage="Subscribe to our subreddits."
         id="components.communityHero.Reddit.text"
       />
     ),
