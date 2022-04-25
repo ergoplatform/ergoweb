@@ -49,7 +49,7 @@ export default function BlogNews({ news }: Props) {
   return (
     <div>
       <h1>News</h1>
-      <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 relative">
+      <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar relative">
         {news?.map((post: any) => (
           <NewsPost key={post.id} {...post.attributes} />
         ))}

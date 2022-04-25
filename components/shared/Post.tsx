@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FormattedDate } from "react-intl";
 import { LogoBlack } from "../icons";
 const removeMd = require("remove-markdown");
@@ -52,12 +53,14 @@ export default function Post({
           )}
           <div className="absolute left-4 top-4">
             {tags?.split(",").map((item) => (
-              <b
-                key={item.trim()}
-                className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
-              >
-                {item.trim()}
-              </b>
+              <Link href={`/category/${item.trim()}`} key={item.trim()}>
+                <b
+                  key={item.trim()}
+                  className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
+                >
+                  {item.trim()}
+                </b>
+              </Link>
             ))}
           </div>
         </a>

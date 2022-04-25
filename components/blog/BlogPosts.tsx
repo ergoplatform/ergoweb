@@ -5,19 +5,25 @@ import Post from "../shared/Post";
 type Props = {
   data: any;
   locale?: string;
+  filter?: string;
 };
 
 const BlogPosts = (props: Props) => {
+  let filter = props.filter;
   const [posts, setPosts] = useState(props.data);
   const [hasMore, setHasMore] = useState(true);
+  if(filter==undefined){
+    filter=""
+  }
 
   const getMorePost = async () => {
     const res = await fetch(
       process.env.NEXT_PUBLIC_STRAPI_API +
-        `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[start]=${posts.length}&pagination[limit]=9&populate=*&filters[type][$eq]=blog&locale=` +
+        `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[start]=${posts.length}&pagination[limit]=9&populate=*&filters[type][$eq]=blog${filter}&locale=` +
         props.locale
     );
     const newPosts = await res.json();
+    console.log(newPosts);  
     setPosts((post: any) => [...post, ...newPosts.data]);
     console.log(newPosts)
     if((newPosts.meta.pagination.start + newPosts.meta.pagination.limit) > newPosts.meta.pagination.total) {

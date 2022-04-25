@@ -46,14 +46,18 @@ export default function Post(props: Props) {
               <h4 className="text-[40px] text-black dark:text-black">
                 {props.post.attributes.title}
               </h4>
-              <div className="mb-8 mt-4">
+              <div className="mb-8 mt-4 flex flex-row">
                 {props.post.attributes.tag?.split(",").map((item: string) => (
-                  <b
-                    key={item.trim()}
-                    className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                  >
-                    {item.trim()}
-                  </b>
+                  <Link href={`/category/${item.trim()}`} key={item.trim()}>
+                    <div className="cursor-pointer">
+                      <b
+                        key={item.trim()}
+                        className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                      >
+                        {item.trim()}
+                      </b>
+                    </div>
+                  </Link>
                 ))}
               </div>
               <div className="flex">
