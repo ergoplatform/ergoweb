@@ -17,6 +17,7 @@ export default function Feed(props: Props) {
           tags={post.attributes.tag}
           date={post.attributes.date}
           url={post.attributes.url}
+          permalink={post.attributes.permalink}
           type={post.attributes.type}
           content={post.attributes.content}
           image={

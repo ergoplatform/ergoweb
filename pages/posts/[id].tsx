@@ -18,7 +18,7 @@ import { useRouter } from "next/router";
 
 type Props = {
   post?: any;
-  posts?:any;
+  posts?: any;
 };
 
 export default function Post(props: Props) {
@@ -87,12 +87,17 @@ export default function Post(props: Props) {
                 ""
               ) : (
                 <Image
-                  src={props.post.attributes.image.data.attributes.formats.large.url}
+                  src={
+                    props.post.attributes.image.data.attributes.formats.large
+                      .url
+                  }
                   height={
-                    props.post.attributes.image.data.attributes.formats.large.height
+                    props.post.attributes.image.data.attributes.formats.large
+                      .height
                   }
                   width={
-                    props.post.attributes.image.data.attributes.formats.large.width
+                    props.post.attributes.image.data.attributes.formats.large
+                      .width
                   }
                   className="md:rounded-xl"
                 />
@@ -141,20 +146,22 @@ export default function Post(props: Props) {
 export async function getServerSideProps(context: any) {
   const post = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/posts/" +
+      "/api/posts?&filters[permalink][$eq]=" +
       context.query.id +
-      "?populate=*"
+      "&populate=*"
   ).then((response) => response.json());
 
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=" +
       context.locale
-  )
-    .then((response) => response.json());
-
+  ).then((response) => response.json());
+  if(post.data.length === 0) {
+    return {
+      notFound: true,
+    }
+  }
   return {
-    props: { post: post.data, posts: posts.data },
+    props: { post: post.data[0], posts: posts.data },
   };
 }
-

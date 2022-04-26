@@ -15,6 +15,7 @@ type Props = {
   url?: string;
   type?: string;
   content?: string;
+  permalink?: string;
 };
 
 export default function Post({
@@ -28,12 +29,13 @@ export default function Post({
   url,
   type,
   content,
+  permalink,
 }: Props) {
   return (
     <div className="w-96 flex-shrink-0 shadow-xl rounded-2xl relative z-10">
       <div className="flex-shrink-0 relative">
         <a
-          href={type == "news" ? url : "/posts/" + id}
+          href={type == "news" ? url : "/posts/" + permalink}
           target="_blank"
           rel="noreferrer"
           className="block mt-2"
@@ -68,7 +70,7 @@ export default function Post({
       <div className="flex-1 p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
         <div className="flex-1 text-clip overflow-hidden">
           <a
-            href={type == "news" ? url : "/posts/" + id}
+            href={type == "news" ? url : "/posts/" + permalink}
             target="_blank"
             rel="noreferrer"
             className="block mt-2"
