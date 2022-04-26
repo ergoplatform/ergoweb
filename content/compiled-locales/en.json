@@ -234,7 +234,7 @@
   "components.discoverHero.button4": [
     {
       "type": 0,
-      "value": "GET STARTED"
+      "value": "SETUP & START DEVELOPING"
     }
   ],
   "components.discoverHero.button5": [
@@ -351,6 +351,12 @@
     {
       "type": 0,
       "value": "Welcome to the future of Proof of Work."
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "To get started, read the Mining Handbook, or join the community spaces."
     }
   ],
   "components.roadmap.title": [

@@ -21,7 +21,7 @@ export default function DiscoverERG() {
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
-    defaultMessage: "GET STARTED",
+    defaultMessage: "SETUP & START DEVELOPING",
   });
   const button5Text = intl.formatMessage({
     id: "components.discoverHero.button5",
@@ -98,7 +98,7 @@ export default function DiscoverERG() {
             <b>Software</b>
           </h1>
           <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
-            Setup an Ergo node, run an off-chain execution bot, or start developing.
+          The Ergo Node is your entry-point to development on Ergo and lets you communicate with the blockchain.  
           </p>
           <div className="-ml-4 mt-10">
             <Button
