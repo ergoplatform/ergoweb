@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { Github, Linkedin, PersonPlaceholder, Twitter } from "../icons";
 
 type Props = {
@@ -18,7 +19,7 @@ type HallOfFamePersonProps = {
 function HallOfFamePerson(props: HallOfFamePersonProps) {
   console.log(props);
   return (
-    <div className="h-[400px] w-56 lg:w-80 mx-auto">
+    <div className="h-[400px] w-56 lg:w-80 mx-auto md:mb-16">
       <div className="flip">
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
           <div className="flip-front object-cover w-full h-full ">
@@ -42,38 +43,12 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between mt-5 lg:min-h-[72px]">
-        <p className="w-2/3 font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">
-          {props.name}
-        </p>
-        <div className="w-1/3 flex flex-row justify-end">
-          {props.linkedin && props.linkedin?.length > 0 ? (
-            <div className="my-auto ml-4">
-              <a href={props.linkedin} target="_blank" rel="noreferrer">
-                <Linkedin className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
-              </a>
-            </div>
-          ) : (
-            null
-          )}
-          {props.twitter && props.twitter?.length > 0 ? (
-            <div className="my-auto ml-4">
-              <a href={props.twitter} target="_blank" rel="noreferrer">
-                <Twitter className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
-              </a>
-            </div>
-          ) : (
-            null
-          )}
-          {props.github && props.github?.length > 0 ? (
-            <div className="my-auto ml-4">
-              <a href={props.github} target="_blank" rel="noreferrer">
-                <Github className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
-              </a>
-            </div>
-          ) : (
-            null
-          )}
+      <div className="flex flex-col mt-4">
+        <div><p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p></div>
+        <div className="mt-0 md:mt-4 flex flex-row -ml-2 md:-ml-1 gap-x-2  md:gap-x-8 ">
+          {props.linkedin != undefined ? (<Link href={props.linkedin}><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></Link>) : null}
+          {props.twitter != undefined ? (<Link href={props.twitter}><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
+          {props.github != undefined ? (<Link href={props.github}><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
         </div>
       </div>
     </div>
