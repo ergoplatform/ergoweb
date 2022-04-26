@@ -43,38 +43,37 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-between mt-5 lg:min-h-[72px]">
-        <p className="font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">
+        <p className="w-2/3 font-vinila-extended text-[16px] lg:text-[24px] pr-2 lg:my-auto">
           {props.name}
         </p>
-        <div className="flex flex-row">
-
-          <div className="my-auto">
-            {props.linkedin && props.linkedin?.length > 0 ? (
+        <div className="w-1/3 flex flex-row justify-end">
+          {props.linkedin && props.linkedin?.length > 0 ? (
+            <div className="my-auto ml-4">
               <a href={props.linkedin} target="_blank" rel="noreferrer">
-                <Linkedin className="fill-brand-orange scale-50 lg:scale-100" />
+                <Linkedin className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
               </a>
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="my-auto">
-            {props.twitter && props.twitter?.length > 0 ? (
+            </div>
+          ) : (
+            null
+          )}
+          {props.twitter && props.twitter?.length > 0 ? (
+            <div className="my-auto ml-4">
               <a href={props.twitter} target="_blank" rel="noreferrer">
-                <Twitter className="fill-brand-orange scale-50 lg:scale-100" />
+                <Twitter className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
               </a>
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="my-auto">
-            {props.github && props.github?.length > 0 ? (
+            </div>
+          ) : (
+            null
+          )}
+          {props.github && props.github?.length > 0 ? (
+            <div className="my-auto ml-4">
               <a href={props.github} target="_blank" rel="noreferrer">
-                <Github className="fill-brand-orange scale-50 lg:scale-100" />
+                <Github className="-mx-1 fill-brand-orange scale-50 lg:scale-75" />
               </a>
-            ) : (
-              ""
-            )}
-          </div>
+            </div>
+          ) : (
+            null
+          )}
         </div>
       </div>
     </div>
