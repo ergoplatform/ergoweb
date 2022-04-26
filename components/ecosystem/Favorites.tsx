@@ -68,6 +68,7 @@ export default function Favorites(props: Props) {
                           post.attributes.image.data?.attributes.url
                         }
                         className=""
+                        alt=""
                       />
                     ) : (
                       <div></div>

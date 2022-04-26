@@ -31,7 +31,7 @@ export default function Blog(props: Props) {
           <div className="flex flex-row justify-between my-10 mx-4">
             <div className="flex flex-row flex-wrap">
               {props.categories.map((category: any) => (
-                <Link href={`/category/${category.attributes.name}`} key={category.id}>
+                <Link href={`/category/${category.attributes.name}`} key={category.id} passHref>
                   <div className="my-2 sm:my-auto cursor-pointer">
                     <b
                       key={category.attributes.name}

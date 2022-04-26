@@ -55,7 +55,7 @@ export default function Post({
           )}
           <div className="absolute left-4 top-4">
             {tags?.split(",").map((item) => (
-              <Link href={`/category/${item.trim()}`} key={item.trim()}>
+              <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
                 <b
                   key={item.trim()}
                   className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"

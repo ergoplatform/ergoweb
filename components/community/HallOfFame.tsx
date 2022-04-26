@@ -46,9 +46,9 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
       <div className="flex flex-col mt-4">
         <div><p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p></div>
         <div className="mt-0 md:mt-4 flex flex-row -ml-2 md:-ml-1 gap-x-2  md:gap-x-8 ">
-          {props.linkedin != undefined ? (<Link href={props.linkedin}><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></Link>) : null}
-          {props.twitter != undefined ? (<Link href={props.twitter}><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
-          {props.github != undefined ? (<Link href={props.github}><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
+          {props.linkedin != undefined ? (<Link href={props.linkedin} passHref><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></Link>) : null}
+          {props.twitter != undefined ? (<Link href={props.twitter} passHref><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
+          {props.github != undefined ? (<Link href={props.github} passHref><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
         </div>
       </div>
     </div>

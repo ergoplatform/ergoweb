@@ -59,6 +59,7 @@ export default function FeaturesAndProjects(props: Props) {
               src={project.attributes.image.data?.attributes.url}
               width={project.attributes.image.data?.attributes.width}
               height={project.attributes.image.data?.attributes.height}
+              alt=""
             />
             <div className={"flex flex-col lg:my-auto" + adjustCardText(i)}>
               <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">

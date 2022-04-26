@@ -15,20 +15,21 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo } from "react";
 import { IntlProvider } from "react-intl";
 import { ThemeProvider } from "next-themes";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  
-  const handleRouteChange = (url:string) => {
-    window.gtag('config', 'G-1XC1836VXN', {
+
+  const handleRouteChange = (url: string) => {
+    window.gtag("config", "G-1XC1836VXN", {
       page_path: url,
     });
   };
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
 
@@ -64,15 +65,32 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [shortLocale]);
 
   return (
-    <ThemeProvider attribute="class">
-      <IntlProvider
-        locale={shortLocale}
-        messages={messages}
-        onError={() => null}
-      >
-        <Component {...pageProps} />
-      </IntlProvider>
-    </ThemeProvider>
+    <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-1XC1836VXN"
+      />
+      <Script
+        id="analytics"
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1XC1836VXN', { page_path: window.location.pathname });
+            `,
+        }}
+      />
+      <ThemeProvider attribute="class">
+        <IntlProvider
+          locale={shortLocale}
+          messages={messages}
+          onError={() => null}
+        >
+          <Component {...pageProps} />
+        </IntlProvider>
+      </ThemeProvider>
+    </>
   );
 }
 

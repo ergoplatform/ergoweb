@@ -28,6 +28,7 @@ export default function ChangingTheWorld(props: Props) {
                         width={post.attributes.image.data?.attributes.width}
                         height={post.attributes.image.data?.attributes.height}
                         src={post.attributes.image.data?.attributes.url}
+                        alt=""
                       />
                     </div>
                   </div>

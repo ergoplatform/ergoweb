@@ -48,7 +48,7 @@ export default function Post(props: Props) {
               </h4>
               <div className="mb-8 mt-4 flex flex-row">
                 {props.post.attributes.tag?.split(",").map((item: string) => (
-                  <Link href={`/category/${item.trim()}`} key={item.trim()}>
+                  <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
                     <div className="cursor-pointer">
                       <b
                         key={item.trim()}
@@ -100,6 +100,7 @@ export default function Post(props: Props) {
                       .width
                   }
                   className="md:rounded-xl"
+                  alt=""
                 />
               )}
             </div>
@@ -119,17 +120,17 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link href="https://google.com">
+                  <Link href="https://google.com" passHref>
                     <BlogFacebook />
                   </Link>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://google.com">
+                  <Link href="https://google.com" passHref>
                     <BlogTwitter />
                   </Link>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://google.com">
+                  <Link href="https://google.com" passHref>
                     <BlogLink />
                   </Link>
                 </div>
