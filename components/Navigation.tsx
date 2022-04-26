@@ -40,7 +40,7 @@ function Navigation({ enableLanguages = true }) {
     <Popover className="max-w-[1300px] mx-auto p-4">
       <div className="flex mx-5 mt-2 mb-10 lg:my-10">
         <div className="my-auto flex-grow z-10">
-          <Link href="/" passHref>
+          <Link href="/" passHref >
             <button>
               <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
             </button>
@@ -106,7 +106,7 @@ function Navigation({ enableLanguages = true }) {
           <div className="max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8">
             <div className="flex mx-5 mt-2 mb-10">
               <div className="my-auto flex-grow">
-                <Link href="/" passHref>
+                <Link href="/" passHref >
                   <button>
                     <LogoWithTextWhite
                       viewBox="0 0 213 82"
@@ -183,7 +183,7 @@ function Navigation({ enableLanguages = true }) {
                 <ul className="hidden md:block">
                   <li className="mb-1">
                     <a
-                      href="https://linktr.ee/ergoplatform"
+                      href="/community/#JoinUs"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -195,7 +195,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://ergonaut.space/en/Ergo/Contributing"
+                      href="/community/#Sigmanauts"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -207,7 +207,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://ergonaut.space/en/Ergo/Contributing"
+                      href="/community/#ContributeForm"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -219,7 +219,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://sigmaverse.io"
+                      href="/community/#OurMission"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -242,35 +242,43 @@ function Navigation({ enableLanguages = true }) {
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-1">
-                    <Link href="/get-erg" passHref>
+                    <Link href="/get-erg/#Mining" passHref>
+                      <a>
                       <FormattedMessage
                         defaultMessage="Mining"
                         id="footer.getErg.1"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg" passHref>
+                    <Link href="/get-erg#MiningCalculator" passHref>
+                    <a>
                       <FormattedMessage
                         defaultMessage="Mining Calculator"
                         id="footer.getErg.2"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg" passHref>
+                    <Link href="/get-erg/#Wallets" passHref>
+                    <a>
                       <FormattedMessage
                         defaultMessage="Wallets"
                         id="footer.getErg.3"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/get-erg" passHref>
+                    <Link href="/get-erg/#Exchanges" passHref>
+                      <a>
                       <FormattedMessage
                         defaultMessage="Exchanges"
                         id="footer.getErg.4"
                       />
+                     </a>
                     </Link>
                   </li>
                 </ul>
@@ -287,7 +295,7 @@ function Navigation({ enableLanguages = true }) {
                 <ul className="hidden md:block">
                   <li className="mb-1">
                     <a
-                      href="http://docs.ergoplatform.org/"
+                      href="/discover/#DiscoverERG"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -299,7 +307,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://docs.ergoplatform.com/contribute/"
+                      href="/discover/#GrantsAndBounties"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -310,16 +318,18 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/discover" passHref>
+                    <Link href="/discover/#FAQ">
+                    <a>
                       <FormattedMessage
                         defaultMessage="FAQ"
                         id="footer.discover.3"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://explorer.ergoplatform.com/"
+                      href="/discover/#Explore"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -330,44 +340,52 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/discover" passHref>
+                    <Link href="/discover/#Documents">
+                      <a>
                       <FormattedMessage
                         defaultMessage="Documents"
                         id="footer.discover.5"
                       />
+                      </a>
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <Link href="/ecosystem" passHref>
+                <Link href="/ecosystem">
+                <a>
                   <h3 className="font-button mt-4 mb-8 md:mb-10">
                     <FormattedMessage
                       defaultMessage="ECOSYSTEM"
                       id="footer.ecosystem.title"
                     />
                   </h3>
+                  </a>
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-1">
-                    <Link href="/ecosystem" passHref>
+                    <Link href="/ecosystem/#dApps" >
+                      <a>
                       <FormattedMessage
                         defaultMessage="DApps"
                         id="footer.ecosystem.1"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/ecosystem" passHref>
+                    <Link href="/ecosystem/#Roadmap" >
+                      <a>
                       <FormattedMessage
                         defaultMessage="Roadmap"
                         id="footer.ecosystem.2"
                       />
+                      </a>
                     </Link>
                   </li>
                   <li className="mb-1">
                     <a
-                      href="https://ergonaut.space"
+                      href="/ecosystem/#Wiki"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -379,7 +397,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
                   <li className="mb-1">
                     <a
-                      href="http://ergoraffle.com/"
+                      href="/ecosystem/#Favorites"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -390,11 +408,13 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/ecosystem" passHref>
+                    <Link href="/ecosystem/#ChangingTheWorld" >
+                      <a>
                       <FormattedMessage
                         defaultMessage="Real Life Ergo"
                         id="footer.ecosystem.5"
                       />
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -418,20 +438,29 @@ function Navigation({ enableLanguages = true }) {
               <div className="my-6 flex-grow md:flex-grow">
                 <ul className="md:inline-flex">
                   <li>
-                    <h3 className="font-button mt-4 mb-14 mr-20">
+                    <Link href="/blog" >
+                      <a>
+                      <h3 className="font-button mt-4 mb-14 mr-20">
                       <FormattedMessage
                         defaultMessage="BLOG"
                         id="footer.blog.title"
                       />
-                    </h3>
+                      </h3>
+                    </a>
+                    
+                    </Link>
                   </li>
                   <li>
+                  <Link href="/news" >
+                    <a>
                     <h3 className="font-button mt-4 mb-14 mr-20">
                       <FormattedMessage
                         defaultMessage="NEWS"
                         id="footer.news.title"
                       />
                     </h3>
+                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

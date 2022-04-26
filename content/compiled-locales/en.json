@@ -246,13 +246,13 @@
   "components.ergoExplorer.button1": [
     {
       "type": 0,
-      "value": "Ergo Explorer"
+      "value": "EXPLORER"
     }
   ],
   "components.ergoExplorer.button2": [
     {
       "type": 0,
-      "value": "ergo watch"
+      "value": "ERGO.WATCH"
     }
   ],
   "components.faq.text.2": [
@@ -561,18 +561,6 @@
     {
       "type": 0,
       "value": "Not Found"
-    }
-  ],
-  "pages.500.hero": [
-    {
-      "type": 0,
-      "value": "500 Server Error"
-    }
-  ],
-  "pages.500.title": [
-    {
-      "type": 0,
-      "value": "Server Error"
     }
   ],
   "pages.blog.title": [

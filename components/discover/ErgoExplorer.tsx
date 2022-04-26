@@ -6,12 +6,12 @@ export default function Explore() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: "components.ergoExplorer.button1",
-    defaultMessage: "Ergo Explorer",
+    defaultMessage: "EXPLORER",
   });
 
   const button2Text = intl.formatMessage({
     id: "components.ergoExplorer.button2",
-    defaultMessage: "ergo watch",
+    defaultMessage: "ERGO.WATCH",
   });
 
   return (

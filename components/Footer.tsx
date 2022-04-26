@@ -276,7 +276,7 @@ export default function Footer() {
             </Link>
             <ul className="hidden md:block">
               <li>
-              <Link href="/ecosystem/#Dapps">
+              <Link href="/ecosystem/#DApps">
                 <a>
                   <FormattedMessage
                     defaultMessage="DApps"
