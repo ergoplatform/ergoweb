@@ -169,3 +169,20 @@
     transform-origin: center left;        
   }
 }
+
+@media screen and (max-width: $sm) {
+  .geterg-frame-1 {
+    transform: scale(0.4);
+    transform-origin: top left;
+  }
+  .dark .geterg-frame-2, .geterg-frame-2 {
+    transform: scale(0.3);
+    transform-origin: top left;
+    left: 60px;
+    top: -40px;
+  }
+  .geterg-blur-1 {
+    transform: scale(0.4);
+    transform-origin: top left;        
+  }
+}

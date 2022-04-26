@@ -38,7 +38,7 @@ export default function Documents(props: Props) {
   return (
     <div id="Documents" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <div className="flex flex-col lg:flex-row mb-12">
-        <a className="font-vinila-extended text-[48px] md:text-[96px] lg:w-2/3">
+        <a className="font-vinila-extended  text-[32px] sm:text-[48px] md:text-[96px] lg:w-2/3">
           <b>Documents</b>
         </a>
         <div className="lg:w-1/3">

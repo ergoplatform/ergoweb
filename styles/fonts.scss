@@ -276,3 +276,13 @@ li {
         font-size: 14px;
     }
 }
+
+@media screen and (max-width: $xs) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}

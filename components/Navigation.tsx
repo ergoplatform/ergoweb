@@ -46,14 +46,41 @@ function Navigation({ enableLanguages = true }) {
             </button>
           </Link>
         </div>
-        <div className="hidden lg:block my-auto flex-grow" style={{zIndex:12}}>
-          <Button text={ergoCommunity} url="/community" background={false} underline={pathname == '/community'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2" />
-          <Button text={getErg} url="/get-erg" background={true} underline={pathname == '/get-erg'} customClass=" decoration-black dark:decoration-white underline-offset-2"/>
-          <Button text={discover} url="/discover" background={false} underline={pathname == '/discover'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
-          <Button text={ecosystem} url="/ecosystem" background={false} underline={pathname == '/ecosystem'} customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"/>
+        <div
+          className="hidden lg:block my-auto flex-grow"
+          style={{ zIndex: 12 }}
+        >
+          <Button
+            text={ergoCommunity}
+            url="/community"
+            background={false}
+            underline={pathname == "/community"}
+            customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+          />
+          <Button
+            text={getErg}
+            url="/get-erg"
+            background={true}
+            underline={pathname == "/get-erg"}
+            customClass=" decoration-black dark:decoration-white underline-offset-2"
+          />
+          <Button
+            text={discover}
+            url="/discover"
+            background={false}
+            underline={pathname == "/discover"}
+            customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+          />
+          <Button
+            text={ecosystem}
+            url="/ecosystem"
+            background={false}
+            underline={pathname == "/ecosystem"}
+            customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+          />
         </div>
-        <div className="inline-flex" style={{zIndex:12}}>
-          <div className="my-auto">
+        <div className="inline-flex" style={{ zIndex: 12 }}>
+          <div className="my-auto hidden xs:block">
             {enableLanguages ? <LanguageSwitcher /> : null}{" "}
           </div>
           <div className="my-auto ml-5 lg:ml-10">
@@ -116,7 +143,7 @@ function Navigation({ enableLanguages = true }) {
                 </Link>
               </div>
               <div className="inline-flex">
-                <div className="my-auto text-white">
+                <div className="my-auto text-white hidden xs:block">
                   {enableLanguages ? <LanguageSwitcher color="white" /> : null}{" "}
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
@@ -418,20 +445,24 @@ function Navigation({ enableLanguages = true }) {
               <div className="my-6 flex-grow md:flex-grow">
                 <ul className="md:inline-flex">
                   <li>
-                    <h3 className="font-button mt-4 mb-14 mr-20">
-                      <FormattedMessage
-                        defaultMessage="BLOG"
-                        id="footer.blog.title"
-                      />
-                    </h3>
+                    <Link href="/blog" passHref>
+                      <h3 className="font-button mt-4 mb-14 mr-20">
+                        <FormattedMessage
+                          defaultMessage="BLOG"
+                          id="footer.blog.title"
+                        />
+                      </h3>
+                    </Link>
                   </li>
                   <li>
-                    <h3 className="font-button mt-4 mb-14 mr-20">
-                      <FormattedMessage
-                        defaultMessage="NEWS"
-                        id="footer.news.title"
-                      />
-                    </h3>
+                    <Link href="/news" passHref>
+                      <h3 className="font-button mt-4 mb-14 mr-20">
+                        <FormattedMessage
+                          defaultMessage="NEWS"
+                          id="footer.news.title"
+                        />
+                      </h3>
+                    </Link>
                   </li>
                 </ul>
               </div>

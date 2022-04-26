@@ -23,7 +23,7 @@ export default function MiningCalculator(props: Props) {
     <div id="MiningCalculator" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="mining-calculator-bg mx-auto max-w-[1167px] grid gap-14 grid-cols-1 lg:grid-cols-2 py-12 lg:py-24 px-10 lg:px-20">
         <div>
-          <h2 className="font-vinila-extended font-bold leading-none mb-6 text-[40px] lg:text-[80px] text-white">
+          <h2 className="font-vinila-extended font-bold leading-none mb-6 xs:text-[32px] sm:text-[40px] lg:text-[80px] text-white">
             Mining Calculator
           </h2>
           <p className="text-[16px] text-[#989898] dark:text-[#989898] mb-7 lg:hidden">

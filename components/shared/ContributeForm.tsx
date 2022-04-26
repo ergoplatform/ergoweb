@@ -73,7 +73,7 @@ export default function ContributeForm() {
   return (
     <div id="ContributeForm" className="max-w-[1300px] mx-auto px-4 relative z-10">
       <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
-        <h1 className="block-inline font-vinila-extended text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto">
+        <h1 className="block-inline font-vinila-extended text-[32px] md:text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto">
           <b>
             <FormattedMessage
               defaultMessage="Contribute"
@@ -91,7 +91,7 @@ export default function ContributeForm() {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col">
-          <h3 className="mb-4 lg:leading-none">
+          <h3 className="mb-4 lg:leading-none md:text-[80px]">
             <FormattedMessage
               defaultMessage="I am a <b>developer</b>"
               id="components.ContributeForm.developer.title"
@@ -158,7 +158,7 @@ export default function ContributeForm() {
           </div>
         </div>
         <div className="flex flex-col mt-16">
-          <h3 className="mb-4 lg:leading-none">
+          <h3 className="mb-4 lg:leading-none md:text-[80px]">
             <FormattedMessage
               defaultMessage="I am a <b>company</b>"
               id="components.ContributeForm.company.title"

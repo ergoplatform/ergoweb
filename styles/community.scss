@@ -295,3 +295,16 @@
     transform-origin: center left;        
   }
 }
+
+@media screen and (max-width: $sm) {
+  .dark .community-frame-8,
+  .community-frame-8 {
+    transform: scale(0.2);
+    transform-origin: center left;
+    top: 4733px;
+  }
+  .community-blur-2 {
+    transform: scale(0.3);
+    transform-origin: center left;        
+  }
+}

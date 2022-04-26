@@ -114,7 +114,7 @@ export default function DiscoverERG() {
           </div>
         </div>
         <div className="box xl:order-4">
-          <div className="ml-28 mt-16 xl:mt-0">
+          <div className="sm:ml-28 mt-16 xl:mt-0">
             <h1 className="max-w-xs leading-tight">
               <b>Learn</b>
             </h1>

@@ -29,10 +29,10 @@ export default function Blog(props: Props) {
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
           <BlogNews news={props.news} />
           <div className="flex flex-row justify-between my-10 mx-4">
-            <div className="flex flex-row">
+            <div className="flex flex-row flex-wrap">
               {props.categories.map((category: any) => (
                 <Link href={`/category/${category.attributes.name}`} key={category.id}>
-                  <div className="my-auto cursor-pointer">
+                  <div className="my-2 sm:my-auto cursor-pointer">
                     <b
                       key={category.attributes.name}
                       className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"

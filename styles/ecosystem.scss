@@ -100,7 +100,7 @@
     width: 375px;
     height: 86px;
     top: 210px;
-    left: 0px;  
+    left: 0px;
     background: no-repeat url("/assets/ecosystem/frame-4.png");
   }
   .dark .ecosystem-frame-5 {
@@ -109,7 +109,7 @@
     width: 375px;
     height: 139px;
     top: 170px;
-    right: 0px;  
+    right: 0px;
     background: no-repeat url("/assets/ecosystem/frame-5.png");
   }
 
@@ -119,11 +119,22 @@
 
   .ecosystem-blur-3 {
     position: absolute;
-    width: 298px; 
+    width: 298px;
     height: 541px;
     top: 0px;
     left: 0px;
     background: no-repeat url("/assets/ecosystem/blur-3-fixed.svg");
   }
-  
+
+}
+
+@media screen and (max-width: $sm) {
+  .ecosystem-frame-4, .dark .ecosystem-frame-4 {
+    display: none;
+  }
+  .ecosystem-blur-3, .dark .ecosystem-blur-3 {
+    transform: scale(0.8);
+    left: -30px;
+    top: -56px;
+  }
 }

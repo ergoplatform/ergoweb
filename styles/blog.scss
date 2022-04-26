@@ -73,9 +73,16 @@
     background: no-repeat url("/assets/blog/blur-2.svg");
 }
 
+@media screen and (max-width: $lg) {
+    .blog-frame-1 {
+        transform: scale(0.8);
+        left: 150px;
+    }
+}
+
 @media screen and (max-width: $md) {
     .blog-frame-1 {
-        transform: scale(0.5);
+        transform: scale(0.4);
         transform-origin: center left;
         top: 100px;
         left: 150px;
@@ -93,6 +100,35 @@
 
     .blog-blur-1 {
         transform: scale(0.5);
+        transform-origin: top left;        
+    }
+    .blog-blur-2 {
+        transform: scale(0.5);
+        transform-origin: center right;        
+    }
+}
+
+
+@media screen and (max-width: $xs) {
+    .blog-frame-1 {
+        transform: scale(0.4);
+        transform-origin: center left;
+        top: 100px;
+        left: 50px;
+    }
+    .blog-frame-2 {
+        transform: scale(0.5);
+        transform-origin: center left;
+        top: 150px;
+    }
+    .blog-frame-3 {
+        transform: scale(0.5);
+        transform-origin: center left;
+        top: 600px;
+    }
+
+    .blog-blur-1 {
+        transform: scale(0.4);
         transform-origin: top left;        
     }
     .blog-blur-2 {
