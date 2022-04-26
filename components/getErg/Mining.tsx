@@ -169,6 +169,13 @@ export default function Mining() {
             values={{ breakingLine: <br /> }}
           />
         </p>
+        <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
+        <FormattedMessage
+            defaultMessage="To get started, read the Mining Handbook, or join the community spaces."
+            id={"components.mining.text.3"}
+            values={{ breakingLine: <br /> }}
+          />
+        </p>
         <div className="lg:hidden">{urlsComponent}</div>
       </div>
     </div>
