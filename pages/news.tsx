@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 import BlogNews from "../components/blog/BlogNews";
@@ -7,14 +8,15 @@ import Layout from "../components/Layout";
 type Props = {
   posts?: any;
   news?: any;
+  categories?: any;
 };
 
 export default function News(props: Props) {
   const intl = useIntl();
   const { locale } = useRouter();
   const title = intl.formatMessage({
-    id: "pages.news.title",
-    defaultMessage: "News",
+    id: "pages.blog.title",
+    defaultMessage: "Blog",
   });
   return (
     <div>
@@ -26,8 +28,24 @@ export default function News(props: Props) {
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
           <BlogNews news={props.news} />
-          <div className="text-right">
-            <h1 className="mb-10">Blog</h1>
+          <div className="flex flex-row justify-between my-10 mx-4">
+            <div className="flex flex-row flex-wrap">
+              {props.categories.map((category: any) => (
+                <Link href={`/category/${category.attributes.name}`} key={category.id}>
+                  <div className="my-2 sm:my-auto cursor-pointer">
+                    <b
+                      key={category.attributes.name}
+                      className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                    >
+                      {category.attributes.name}
+                    </b>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div>
+              <h1>Blog</h1>
+            </div>
           </div>
           <BlogPosts data={props.posts} locale={locale} />
         </div>
@@ -53,7 +71,15 @@ export const getServerSideProps = async (context: any) => {
     .then((response) => response.json())
     .then((response) => response.data);
 
+  const categories = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/categories?pagination[pageSize]=20&locale=" +
+      context.locale
+  )
+    .then((response) => response.json())
+    .then((response) => response.data);
+
   return {
-    props: { posts, news },
+    props: { posts, news, categories },
   };
 };
