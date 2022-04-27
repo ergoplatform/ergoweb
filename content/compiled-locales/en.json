@@ -344,7 +344,7 @@
   "components.mining.text.1": [
     {
       "type": 0,
-      "value": "The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a PoW puzzle lottery. The rest of the network verifies the solution, which can be done efficiently, requiring less than a kilobyte of memory. Ergo mining is based on Autolykos (v.2), an ASIC resistant Proof-of-Work algorithm friendly to common GPUs."
+      "value": "Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
     }
   ],
   "components.mining.text.2": [
@@ -356,7 +356,7 @@
   "components.mining.text.3": [
     {
       "type": 0,
-      "value": "To get started, read the Mining Handbook, or join the community spaces."
+      "value": "To get started, check out the community-build Mining Handbook, or join the community spaces."
     }
   ],
   "components.roadmap.title": [

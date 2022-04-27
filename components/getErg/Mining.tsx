@@ -155,9 +155,7 @@ export default function Mining() {
       <div className="lg:w-1/2">
         <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
-            defaultMessage="The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a PoW puzzle lottery. The rest of the network verifies the solution, which can be done efficiently, requiring less than a kilobyte of memory. 
-
-            Ergo mining is based on Autolykos (v.2), an ASIC resistant Proof-of-Work algorithm friendly to common GPUs."
+            defaultMessage="Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
             id={"components.mining.text.1"}
             values={{ breakingLine: <br /> }}
           />
@@ -171,11 +169,59 @@ export default function Mining() {
         </p>
         <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
         <FormattedMessage
-            defaultMessage="To get started, read the Mining Handbook, or join the community spaces."
+            defaultMessage="To get started, check out the community-build Mining Handbook, or join the community spaces."
             id={"components.mining.text.3"}
             values={{ breakingLine: <br /> }}
           />
         </p>
+        <br/>
+        <Button
+          text="MINING HANDBOOK"
+          url="/posts/ergo-foundation/"
+          newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        <br/>
+        <Button
+          text="TELEGRAM"
+          url="https://t.me/ErgoChats"
+          newTab={true}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        <br/>
+        <Button
+          text="DISCORD"
+          url="https://discord.gg/ergo"
+          newTab={true}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        <br/>
+        <Button
+          text="SUBREDDIT"
+          url="https://www.reddit.com/r/erg_miners/"
+          newTab={true}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
         <div className="lg:hidden">{urlsComponent}</div>
       </div>
     </div>
