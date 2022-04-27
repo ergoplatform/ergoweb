@@ -25,7 +25,7 @@ export default function OurMission() {
         <br/>
         <Button
           text="READ MORE"
-          url="https://ergo-platform-frontend-nvbpfiue6q-ez.a.run.app/posts/1165/"
+          url="/posts/ergo-foundation/"
           newTab={false}
           underline={true}
           textColor="brand-orange"
