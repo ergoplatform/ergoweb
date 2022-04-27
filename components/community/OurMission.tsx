@@ -25,7 +25,7 @@ export default function OurMission() {
         <br/>
         <Button
           text="READ MORE"
-          url="/posts/ergo-foundation/"
+          url="/posts/emission/"
           newTab={false}
           underline={true}
           textColor="brand-orange"
