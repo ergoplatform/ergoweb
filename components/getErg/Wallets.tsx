@@ -70,7 +70,13 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <a
+              href="https://docs.ergoplatform.com/node/install/"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center mt-2 lg:my-auto">Ergo Node</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletDesktop className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 18 18" />
@@ -89,7 +95,13 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <a
+              href="https://ergoplatform.org/en/mobile_wallets/"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center lg:my-auto">Ergo Mobile</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
@@ -106,12 +118,18 @@ export default function Wallets() {
           </div>
         </div>
 
-       
+
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <a
+              href="https://ergopaperwallet.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center lg:my-auto">Paper Wallet</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
@@ -128,9 +146,9 @@ export default function Wallets() {
           </div>
         </div>
 
-       
 
-       
+
+
 
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0">
           <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
@@ -144,7 +162,13 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <WalletMinotaur className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 1337 1337" />
+            <a
+              href="https://github.com/minotaur-ergo/minotaur-wallet"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center lg:my-auto">Minotaur</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
@@ -163,10 +187,18 @@ export default function Wallets() {
 
 
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
+
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletNautilus className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="414.37 258.52 575.6 575.6" />
-            <p className="text-center mt-2 lg:my-auto lg:pl-2">Nautilus</p>
+            <a
+              href="https://github.com/capt-nemo429/nautilus-wallet"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p className="text-center mt-2 lg:my-auto lg:pl-2">Nautilus</p>
+            </a>
           </div>
+
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
             <p className="text-center mt-2 text-[12px]">Web</p>
@@ -185,7 +217,13 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletSatergo className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 1080 1080" />
+            <a
+              href="https://satergo.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Satergo</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
@@ -195,7 +233,7 @@ export default function Wallets() {
             <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-          <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
@@ -205,7 +243,13 @@ export default function Wallets() {
         <div className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletSafew className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 28 28" />
+            <a
+              href="https://github.com/ThierryM1212/SAFEW"
+              target="_blank"
+              rel="noreferrer"
+            >
             <p className="text-center mt-2 lg:my-auto lg:pl-2">SAFEW</p>
+            </a>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
@@ -217,14 +261,14 @@ export default function Wallets() {
           <div className="w-1/5 p-1 my-auto">
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
-         <div className="w-1/5 p-1 my-auto">
+          <div className="w-1/5 p-1 my-auto">
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
         </div>
 
         <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0">
-        
-          
+
+
         </div>
       </div>
     </div>
