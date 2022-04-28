@@ -116,33 +116,33 @@
 
 .geterg-blur-2 {
   position: absolute;
-  width: 541px;
+  width: 566px;
   height: 1944px;
   top: 2400px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-light-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 }
 
 .dark .geterg-blur-2 {
   position: absolute;
-  width: 519px;
+  width: 566px;
   height: 2396px;
   top: 1000px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
 .geterg-blur-3 {
   position: absolute;
-  width: 492px;
+  width: 600px;
   height: 1419px;
   top: 2000px;
   left: 0px;
   background: no-repeat url("/assets/geterg/blur-3-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
