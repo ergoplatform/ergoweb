@@ -21,7 +21,7 @@ export default function ChangingTheWorld(props: Props) {
               <div className="lg:w-2/3">
                 {post.attributes.image.data != null ? (
                   <div className="flex flex-row justify-around h-full">
-                    <div className="flex flex-col w-full mx-8 my-auto">
+                    <div className="flex flex-col w-full my-auto">
                       <Image
                         className="rounded-3xl"
                         layout="responsive"
