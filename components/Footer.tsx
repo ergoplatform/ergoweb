@@ -22,9 +22,9 @@ export default function Footer() {
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://ergonaut.space" target="_blank" rel="noreferrer">
+            <Link href="/ecosystem/#Wiki" passHref>
                 {getIconComponentByName("ErgoWiki")}
-              </a>
+              </Link>
             </div>
             <div className="box mx-auto my-auto">
               <a
@@ -139,12 +139,24 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+              <Link href="/community/#HallOfFame" passHref>
+                <a>
+               
+                  <FormattedMessage
+                    defaultMessage="Hall of Fame"
+                    id="footer.community.4"
+                  />
+                </a>
+                </Link>
+              </li>
+              <li>
+
               <Link href="/community/#OurMission" passHref>
                 <a>
                
                   <FormattedMessage
                     defaultMessage="Ergo Foundation"
-                    id="footer.community.4"
+                    id="footer.community.5"
                   />
                 </a>
                 </Link>

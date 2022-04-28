@@ -121,7 +121,7 @@ export default function DiscoverERG() {
             <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
               Start from the basics. What is Ergo? What can you do on Ergo?
             </p>
-            <Link href="https://google.com" passHref>
+            <Link href="https://docs.ergoplatform.com" passHref>
               <a target="_blank" rel="noopener noreferrer">
                 <button
                   type="submit"

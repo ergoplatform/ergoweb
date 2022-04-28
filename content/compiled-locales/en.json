@@ -392,6 +392,12 @@
   "footer.community.4": [
     {
       "type": 0,
+      "value": "Hall of Fame"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
       "value": "Ergo Foundation"
     }
   ],
@@ -464,7 +470,7 @@
   "footer.ecosystem.5": [
     {
       "type": 0,
-      "value": "Real Life Ergo"
+      "value": "Videocasts"
     }
   ],
   "footer.ecosystem.title": [
