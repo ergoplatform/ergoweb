@@ -58,7 +58,7 @@
   position: absolute;
   width: 167px;
   height: 1265px;
-  top: 0px;
+  top: 750px;
   left: 0px;
   background: no-repeat url("/assets/community/frame-4-light.png");
 }
@@ -67,7 +67,7 @@
   position: absolute;
   width: 167px;
   height: 1265px;
-  top: 0px;
+  top: 750px;
   left: 0px;
   background: no-repeat url("/assets/community/frame-4.png");
 }
@@ -251,6 +251,7 @@
   .community-frame-4 {
     transform: scale(0.5);
     transform-origin: center left;
+    top: 500px;
   }
   .community-frame-5 {
     transform: scale(0.5);

@@ -54,7 +54,7 @@
   position: absolute;
   width: 254px;
   height: 1054px;
-  top: 1854px;
+  top: 1200px;
   right: 0px;
   background: no-repeat url("/assets/geterg/frame-3-light.png");
 }
@@ -63,7 +63,7 @@
   position: absolute;
   width: 254px;
   height: 1054px;
-  top: 1854px;
+  top: 1200px;
   right: 0px;
   background: no-repeat url("/assets/geterg/frame-3.png");
 }
@@ -116,33 +116,33 @@
 
 .geterg-blur-2 {
   position: absolute;
-  width: 541px;
+  width: 519px;
   height: 1944px;
   top: 2400px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-light-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 }
 
 .dark .geterg-blur-2 {
   position: absolute;
-  width: 519px;
+  width: 566px;
   height: 2396px;
   top: 1000px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
 .geterg-blur-3 {
   position: absolute;
-  width: 492px;
+  width: 600px;
   height: 1419px;
   top: 2000px;
   left: 0px;
   background: no-repeat url("/assets/geterg/blur-3-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
@@ -158,6 +158,12 @@
     left: 124px;
     top: 11px;
     
+  }
+
+  .geterg-frame-3 {
+    transform: scale(0.8);
+    transform-origin: top right;
+    top: 1750px;
   }
 
 }
@@ -179,6 +185,7 @@
   .geterg-frame-3 {
     transform: scale(0.5);
     transform-origin: top right;
+    top: 1590px;
   }
 
   .geterg-frame-4 {
@@ -227,6 +234,12 @@
   .geterg-blur-1 {
     transform: scale(0.45);
     transform-origin: top left;
+  }
+
+  .geterg-frame-3 {
+    transform: scale(0.4);
+    transform-origin: top right;
+    top: 2150px;
   }
 }
 
