@@ -112,3 +112,19 @@
     display: none;
   }
 }
+
+@media screen and (max-width: $sm) {
+  .discover-img {
+    svg { 
+      position: absolute;
+      width: 510px;
+      right: -30px;
+      top: -65px;
+      height: 385px;
+    }
+  }
+
+  .discover-container {
+    margin-top: 300px;
+  }
+}
