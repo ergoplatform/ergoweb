@@ -131,10 +131,10 @@ function Navigation({ enableLanguages = true }) {
       >
         <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-50">
           <div className="max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8">
-            <div className="flex mx-5 mt-2 mb-10">
+            <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
               <div className="my-auto flex-grow">
                 <Link href="/" passHref >
-                  <button>
+                  <button className="flex justify-center align-center">
                     <LogoWithTextWhite
                       viewBox="0 0 213 82"
                       className="w-24 lg:w-32"
