@@ -38,10 +38,10 @@ function Navigation({ enableLanguages = true }) {
   });
   return (
     <Popover className="max-w-[1300px] mx-auto p-4">
-      <div className="flex mx-5 mt-2 mb-10 lg:my-10">
+      <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
         <div className="my-auto flex-grow z-10">
           <Link href="/" passHref >
-            <button>
+            <button className="flex justify-center align-center">
               <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
             </button>
           </Link>
