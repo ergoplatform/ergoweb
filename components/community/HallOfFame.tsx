@@ -140,13 +140,13 @@ export default function HallOfFame(props: Props) {
             </Tab>
           </Tab.List>
           <Tab.Panels className="mt-16">
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "ecosystem_core")}
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "community")}
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "ergo_foundation")}
             </Tab.Panel>
           </Tab.Panels>
