@@ -35,13 +35,13 @@ export default function DiscoverERG() {
         <div className="hidden dark:block">
             <DiscoverErgHero
               viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
             />
           </div>
           <div className="dark:hidden">
             <DiscoverErgHeroLight
               viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
             />
           </div>
         </div>
