@@ -17,7 +17,7 @@ type HallOfFamePersonProps = {
 };
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
-  console.log(props);
+
   return (
     <div className="h-[400px] w-56 lg:w-80 mx-auto md:mb-16">
       <div className="flip">
