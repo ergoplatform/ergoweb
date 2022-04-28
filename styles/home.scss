@@ -112,8 +112,8 @@
 
 .home-blur-2 {
     position: absolute;
-    //width: 606px;
-    width: 350px;
+    width: 606px;
+   
     height: 2402px;
     top: 2400px;
     left: 0px;
@@ -123,6 +123,7 @@
 .dark .home-blur-2 { 
     background: no-repeat url("/assets/home/blur-2-fixed.svg");
     z-index: 11;
+    width: 350px;
 }
 
 .home-blur-3 {
