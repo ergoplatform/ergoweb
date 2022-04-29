@@ -61,6 +61,7 @@
   top: 1500px;
   left: 0px;
   background: no-repeat url("/assets/discover/blur-1-light.svg");
+  mix-blend-mode: overlay;
 }
 
 .dark .discover-blur-1 {
@@ -70,6 +71,7 @@
   top: 1500px;
   left: 0px;
   background: no-repeat url("/assets/discover/blur-1-fixed.svg");
+  mix-blend-mode: overlay;
 }
 
 .discover-blur-2 {
@@ -79,6 +81,7 @@
   top: 3500px;
   left: 0px;
   background: no-repeat url("/assets/discover/blur-2-fixed.svg");
+  mix-blend-mode: unset;
 }
 
 
@@ -110,5 +113,21 @@
 
   .dark .discover-blur-3 {
     display: none;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .discover-img {
+    svg { 
+      position: absolute;
+      width: 510px;
+      right: -30px;
+      top: -65px;
+      height: 385px;
+    }
+  }
+
+  .discover-container {
+    margin-top: 300px;
   }
 }

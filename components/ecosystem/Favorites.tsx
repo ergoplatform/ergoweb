@@ -43,7 +43,13 @@ export default function Favorites(props: Props) {
             className="py-1 px-4 inline-flex whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
           >
             <span>
+              <a
+                href="https://ergoraffle.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
               <b>{button1Text}</b>
+              </a>
             </span>
             <span className="w-4 h-4 ml-2">
               {getIconComponentByName("ArrowRightBlack")}

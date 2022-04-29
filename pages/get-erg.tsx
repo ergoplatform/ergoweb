@@ -24,9 +24,14 @@ export default function GetErg(props: Props) {
     defaultMessage: "GetErg",
   });
   return (
+
     <div>
       <div className="geterg-frame-1"></div>
-      <div className="geterg-frame-2"></div>
+      <div className="parent">
+        <div className="hideOverflow">
+          <div className="geterg-frame-2"></div>
+        </div>
+      </div>
       <div className="geterg-frame-3"></div>
       <div className="geterg-frame-4"></div>
       <div className="geterg-blur-1"></div>

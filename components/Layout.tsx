@@ -12,7 +12,7 @@ type Props = {
 
 export default function Layout({ children, title, footer=true }: Props) {
   return (
-    <main className="dark:bg-brand-black">
+    <main className="dark:bg-brand-black overflow-hidden">
       <Head>
         <meta charSet="utf-8" />
         <title>{`${title} | Ergo Platform`}</title>

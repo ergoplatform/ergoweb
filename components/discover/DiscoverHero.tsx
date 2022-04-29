@@ -32,20 +32,20 @@ export default function DiscoverERG() {
     <div id="DiscoverERG" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="grid overflow-hidden grid-cols-1 xl:grid-cols-2 gap-2">
         <div className="box xl:order-2">
-        <div className="hidden dark:block">
+          <div className="discover-img hidden dark:block">
             <DiscoverErgHero
               viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
             />
           </div>
-          <div className="dark:hidden">
+          <div className="discover-img dark:hidden">
             <DiscoverErgHeroLight
               viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto xl:w-[600px] xl:h-[600px]"
+              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
             />
           </div>
         </div>
-        <div className="box xl:order-1">
+        <div className="discover-container box xl:order-1">
           <h1 className="max-w-xs leading-tight">
             <b>Discover Ergo</b>
           </h1>
@@ -121,7 +121,7 @@ export default function DiscoverERG() {
             <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
               Start from the basics. What is Ergo? What can you do on Ergo?
             </p>
-            <Link href="https://google.com" passHref>
+            <Link href="https://docs.ergoplatform.com" passHref>
               <a target="_blank" rel="noopener noreferrer">
                 <button
                   type="submit"

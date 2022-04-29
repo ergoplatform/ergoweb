@@ -1,5 +1,9 @@
 @import "./_variables.scss";
 
+
+
+
+
 .geterg-frame-1 {
   position: absolute;
   width: 576px;
@@ -18,21 +22,31 @@
   background: no-repeat url("/assets/geterg/frame-1.png");
 }
 
+.parent {
+  position:relative;
+ 
+}
+.hideOverflow {
+  overflow:hidden;
+}
+
 .geterg-frame-2 {
   position: absolute;
+  overflow:hidden;
   width: 770px;
   height: 770px;
-  left: 150px;
+  left: 200px;
   top: -15px;
   background: no-repeat url("/assets/geterg/frame-2-light.png");
 }
 
 .dark .geterg-frame-2 {
   position: absolute;
-  width: 690px;
-  height: 689px;
-  left: 65px;
-  top: 90px;
+  overflow:hidden;
+  width: 770px;
+  height: 770px;
+  left: 150px;
+  top: 0px;
   background: no-repeat url("/assets/geterg/frame-2.png");
 }
 
@@ -40,7 +54,7 @@
   position: absolute;
   width: 254px;
   height: 1054px;
-  top: 1854px;
+  top: 1200px;
   right: 0px;
   background: no-repeat url("/assets/geterg/frame-3-light.png");
 }
@@ -49,7 +63,7 @@
   position: absolute;
   width: 254px;
   height: 1054px;
-  top: 1854px;
+  top: 1200px;
   right: 0px;
   background: no-repeat url("/assets/geterg/frame-3.png");
 }
@@ -102,87 +116,152 @@
 
 .geterg-blur-2 {
   position: absolute;
-  width: 541px;
+  width: 519px;
   height: 1944px;
   top: 2400px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-light-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 }
 
 .dark .geterg-blur-2 {
   position: absolute;
-  width: 519px;
+  width: 566px;
   height: 2396px;
   top: 1000px;
   right: 0px;
   background: no-repeat url("/assets/geterg/blur-2-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
 .geterg-blur-3 {
   position: absolute;
-  width: 492px;
+  width: 600px;
   height: 1419px;
   top: 2000px;
   left: 0px;
   background: no-repeat url("/assets/geterg/blur-3-fixed.svg");
-  mix-blend-mode: normal;
+  mix-blend-mode: overlay;
 
 }
 
+// 	max-width: 1280px;
+@media screen and (max-width: $xl) {
+  .geterg-frame-1 {
+    transform-origin: top left;
+  }
 
+  .dark .geterg-frame-2,
+  .geterg-frame-2 {
+    transform-origin: top left;
+    left: 124px;
+    top: 11px;
+    
+  }
+
+  .geterg-frame-3 {
+    transform: scale(0.8);
+    transform-origin: top right;
+    top: 1750px;
+  }
+
+}
+
+// 	max-width: 768px;
 @media screen and (max-width: $md) {
   .geterg-frame-1 {
-    transform: scale(0.5);
+    transform: scale(0.8);
     transform-origin: top left;
   }
-  .dark .geterg-frame-2, .geterg-frame-2 {
-    transform: scale(0.5);
+
+  .dark .geterg-frame-2,
+  .geterg-frame-2 {
+    transform: scale(0.8);
     transform-origin: top left;
-    left: 60px;
-    top: -40px;
+
   }
+
   .geterg-frame-3 {
     transform: scale(0.5);
     transform-origin: top right;
+    top: 1590px;
   }
+
   .geterg-frame-4 {
     transform: scale(0.5);
     transform-origin: center right;
   }
+
   .geterg-frame-5 {
     transform: scale(0.5);
     transform-origin: center right;
   }
+
   .geterg-blur-1 {
     transform: scale(0.5);
-    transform-origin: top left;        
+    transform-origin: top left;
   }
+
   .geterg-blur-2 {
     transform: scale(0.5);
-    transform-origin: center right;        
+    transform-origin: center right;
   }
+
   .geterg-blur-3 {
     transform: scale(0.5);
-    transform-origin: center left;        
+    transform-origin: center left;
   }
 }
 
+// 	max-width: 640px;
 @media screen and (max-width: $sm) {
+  .geterg-frame-1 {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+
+  .dark .geterg-frame-2,
+  .geterg-frame-2 {
+    transform: scale(0.4);
+    transform-origin: top left;
+    overflow:hidden;
+
+    left: 60px;
+    top: 25px;
+  }
+
+  .geterg-blur-1 {
+    transform: scale(0.45);
+    transform-origin: top left;
+  }
+
+  .geterg-frame-3 {
+    transform: scale(0.4);
+    transform-origin: top right;
+    top: 2150px;
+  }
+}
+
+// max-width: 20rem; /* 320px */
+@media screen and (max-width: $xs) {
   .geterg-frame-1 {
     transform: scale(0.4);
     transform-origin: top left;
   }
-  .dark .geterg-frame-2, .geterg-frame-2 {
+
+  .dark .geterg-frame-2,
+  .geterg-frame-2 {
     transform: scale(0.3);
     transform-origin: top left;
+    overflow:hidden;
+
     left: 60px;
-    top: -40px;
+    top: 40px;
   }
+
   .geterg-blur-1 {
     transform: scale(0.4);
-    transform-origin: top left;        
+    transform-origin: top left;
   }
 }

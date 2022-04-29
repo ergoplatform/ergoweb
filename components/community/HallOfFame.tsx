@@ -17,7 +17,7 @@ type HallOfFamePersonProps = {
 };
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
-  console.log(props);
+
   return (
     <div className="h-[400px] w-56 lg:w-80 mx-auto md:mb-16">
       <div className="flip">
@@ -45,10 +45,10 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
       </div>
       <div className="flex flex-col mt-4">
         <div><p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p></div>
-        <div className="mt-0 md:mt-4 flex flex-row -ml-2 md:-ml-1 gap-x-2  md:gap-x-8 ">
-          {props.linkedin != undefined ? (<Link href={props.linkedin} passHref><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></Link>) : null}
-          {props.twitter != undefined ? (<Link href={props.twitter} passHref><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
-          {props.github != undefined ? (<Link href={props.github} passHref><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></Link>) : null}
+        <div className="mt-0 md:mt-4 flex -ml-2 md:-ml-1 space-x-4">
+          {props.linkedin != undefined ? (<Link href={props.linkedin} passHref><a><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></a></Link>) : null}
+          {props.twitter != undefined ? (<Link href={props.twitter} passHref><a><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></a></Link>) : null}
+          {props.github != undefined ? (<Link href={props.github} passHref><a><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></a></Link>) : null}
         </div>
       </div>
     </div>
@@ -140,13 +140,13 @@ export default function HallOfFame(props: Props) {
             </Tab>
           </Tab.List>
           <Tab.Panels className="mt-16">
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "ecosystem_core")}
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "community")}
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="outline-none">
               {GroupPersons(props.teamMembers, "ergo_foundation")}
             </Tab.Panel>
           </Tab.Panels>

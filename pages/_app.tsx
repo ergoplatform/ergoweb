@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import NextNProgress from "nextjs-progressbar";
 import type { AppProps } from "next/app";
 import English from "../content/compiled-locales/en.json";
 import Spanish from "../content/compiled-locales/es.json";
@@ -87,6 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           messages={messages}
           onError={() => null}
         >
+          <NextNProgress color="#e74c3c" />
           <Component {...pageProps} />
         </IntlProvider>
       </ThemeProvider>
