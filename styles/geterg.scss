@@ -171,6 +171,10 @@
     transform-origin: top left;
   }
 
+  .dark .geterg-frame-1 {
+    display: none;
+  }
+
   .dark .geterg-frame-2,
   .geterg-frame-2 {
     transform: scale(0.8);
