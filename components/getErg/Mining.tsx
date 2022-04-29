@@ -177,7 +177,7 @@ export default function Mining() {
         <br/>
         <Button
           text="MINING HANDBOOK"
-          url="/posts/ergo-foundation/"
+          url="/blog/ergo-foundation/"
           newTab={false}
           underline={true}
           textColor="brand-orange"

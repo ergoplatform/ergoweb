@@ -25,7 +25,7 @@ export default function OurMission() {
         <br/>
         <Button
           text="EMISSION AND TOKENOMICS"
-          url="/posts/emission/"
+          url="/blog/emission/"
           newTab={false}
           underline={true}
           textColor="brand-orange"
@@ -37,7 +37,7 @@ export default function OurMission() {
         <br/>
         <Button
           text="THE ERGO FOUNDATION"
-          url="/posts/ergo-foundation/"
+          url="/blog/ergo-foundation/"
           newTab={false}
           underline={true}
           textColor="brand-orange"

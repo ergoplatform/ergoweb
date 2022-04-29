@@ -28,21 +28,27 @@ export default function LanguageSwitcher({ color = "default" }) {
           leaveTo="opacity-0"
         >
           <Listbox.Options className="absolute overflow-auto max-h-60">
-            {locales?.map((loc, key) => (
-              <Listbox.Option
-                key={key}
-                className={`cursor-default select-none relative`}
-                value={loc}
-              >
-                <Link href={route} locale={loc} passHref>
-                  <div className="py-2 pl-3 pr-8">
-                    <span className={`font-button-bold text-[14px] uppercase`}>
-                      {loc}
-                    </span>
-                  </div>
-                </Link>
-              </Listbox.Option>
-            ))}
+            {locales
+              ?.filter((obj) => {
+                return obj !== "default";
+              })
+              .map((loc, key) => (
+                <Listbox.Option
+                  key={key}
+                  className={`cursor-default select-none relative`}
+                  value={loc}
+                >
+                  <Link href={route} locale={loc} passHref>
+                    <div className="py-2 pl-3 pr-8">
+                      <span
+                        className={`font-button-bold text-[14px] uppercase`}
+                      >
+                        {loc}
+                      </span>
+                    </div>
+                  </Link>
+                </Listbox.Option>
+              ))}
           </Listbox.Options>
         </Transition>
       </div>
