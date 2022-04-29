@@ -23,9 +23,9 @@ export default function GetErg(props: Props) {
     id: "pages.get-erg.title",
     defaultMessage: "GetErg",
   });
+  
   return (
-
-    <div>
+    <div className="overflow-hidden">
       <div className="geterg-frame-1"></div>
       <div className="parent">
         <div className="hideOverflow">
