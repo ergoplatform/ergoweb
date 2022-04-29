@@ -36,11 +36,11 @@ export default function ChangingTheWorld(props: Props) {
                   <div></div>
                 )}
               </div>
-              <div className="mt-20 lg:w-1/3">
+              <div className="mt-4 lg:ml-10 ml-0 lg:w-1/3">
                 <p className="text-[#585858] dark:text-[#585858] font-bold mb-3 text-[14px] lg:text-[20px]">
                   {post.attributes.subtitle}
                 </p>
-                <p className="font-vinila-extended text-[48px] lg:text-[56px] mb-4">
+                <p className="font-vinila-extended text-[42px] lg:text-[48px] mb-4">
                   {post.attributes.title}
                 </p>
                 <p className="text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898] mb-4">
