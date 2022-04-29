@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('path')
+const path = require("path");
 const withPWA = require("next-pwa");
 
 const nextConfig = {
@@ -8,36 +8,37 @@ const nextConfig = {
   trailingSlash: true,
   i18n: {
     locales: [
-    'en',
-    'es',
-    // 'de',
-    // 'fr',
-    // 'hi',
-    // 'it',
-    // 'tr',
-    // 'pt',
-    // 'ro',
-    // 'sk',
-    // 'zh',
-  ],
-    defaultLocale: 'en',
+      "default",
+      "en",
+      "es",
+      // 'de',
+      // 'fr',
+      // 'hi',
+      // 'it',
+      // 'tr',
+      // 'pt',
+      // 'ro',
+      // 'sk',
+      // 'zh',
+    ],
+    defaultLocale: "default",
     localeDetection: false,
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   pwa: {
     dest: "public",
     register: true,
     skipWaiting: true,
   },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
-    domains: ['storage.googleapis.com'],
+    domains: ["storage.googleapis.com"],
   },
-}
+};
 
-const withMDX = require('@next/mdx')({
+const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
@@ -45,6 +46,6 @@ const withMDX = require('@next/mdx')({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-})
+});
 
-module.exports = withPWA(withMDX(nextConfig))
+module.exports = withPWA(withMDX(nextConfig));
