@@ -31,7 +31,7 @@ let cards = [
   {
     title: "INTELLIGENT AND STRAIGHTFORWARD",
     text: "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all.",
-    url: "/posts/2022-02-01-decentralized-finance-and-optional-privacy-on-ergo/",
+    url: "/blog/2022-02-01-decentralized-finance-and-optional-privacy-on-ergo/",
     buttoText: "EXPLORE",
     icon: <UniqueErgo3 />,
     iconLight: <UniqueErgo3Light />,
