@@ -6,7 +6,7 @@ type Props = {
 
 export default function Feed(props: Props) {
   return (
-    <div id="Feed" className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 relative z-10">
+    <div id="Feed" className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 relative z-12">
       <div className="hidden md:block md:w-20 flex-shrink-0"></div>
       {props.posts.data?.map((post: any) => (
         <Post

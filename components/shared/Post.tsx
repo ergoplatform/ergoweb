@@ -34,49 +34,44 @@ export default function Post({
   return (
     <div className="w-96 flex-shrink-0 shadow-xl rounded-2xl relative z-10">
       <div className="flex-shrink-0 relative">
-        <a
-          href={type == "news" ? url : "/posts/" + permalink}
-          target="_blank"
-          rel="noreferrer"
-          className="block mt-2"
-        >
-          {image == null ? (
-            <div className="h-48 bg-gray-200 w-full object-cover rounded-t-2xl"></div>
-          ) : (
-            <div className="-mb-2">
-              <Image
-                className="h-48 w-full object-cover rounded-t-2xl"
-                src={image}
-                alt=""
-                height="186px"
-                width="384px"
-              />
-            </div>
-          )}
-          <div className="absolute left-4 top-4">
-            {tags?.split(",").map((item) => (
-              <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
-                <b
+        <Link href={type == "news" ? url : "/posts/" + permalink}>
+          <a target="_blank" rel="noreferrer" className="block mt-2">
+            {image == null ? (
+              <div className="h-48 bg-gray-200 w-full object-cover rounded-t-2xl"></div>
+            ) : (
+              <div className="-mb-2">
+                <Image
+                  className="h-48 w-full object-cover rounded-t-2xl"
+                  src={image}
+                  alt=""
+                  height="186px"
+                  width="384px"
+                />
+              </div>
+            )}
+            <div className="absolute left-4 top-4">
+              {tags?.split(",").map((item) => (
+                <Link
+                  href={`/category/${item.trim()}`}
                   key={item.trim()}
-                  className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
+                  passHref
                 >
-                  {item.trim()}
-                </b>
-              </Link>
-            ))}
-          </div>
-        </a>
+                  <b
+                    key={item.trim()}
+                    className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
+                  >
+                    {item.trim()}
+                  </b>
+                </Link>
+              ))}
+            </div>
+          </a>
+        </Link>
       </div>
       <div className="flex-1 p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
         <div className="flex-1 text-clip overflow-hidden">
-          <Link
-            href={type == "news" ? url : "/posts/" + permalink}
-          >
-            <a
-              target="_blank"
-              className="block mt-2"            
-              rel="noreferrer"
-            >
+          <Link href={type == "news" ? url : "/posts/" + permalink}>
+            <a target="_blank" className="block mt-2" rel="noreferrer">
               <p className="font-roboto text-[20px] dark:text-black h-14">
                 {title}
               </p>
