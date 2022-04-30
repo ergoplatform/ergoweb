@@ -123,7 +123,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Don't forget to Like and Subscribe."
+        defaultMessage="Subscribe for weekly AMAs, ErgoPulse, and more!"
         id="components.communityHero.Youtube.text"
       />
     ),
