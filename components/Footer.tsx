@@ -23,7 +23,9 @@ export default function Footer() {
             </div>
             <div className="box mx-auto my-auto">
             <Link href="/ecosystem/#Wiki" passHref>
+                <a>
                 {getIconComponentByName("ErgoWiki")}
+                </a>
               </Link>
             </div>
             <div className="box mx-auto my-auto">
