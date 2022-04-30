@@ -1,9 +1,5 @@
 @import "./_variables.scss";
 
-
-
-
-
 .geterg-frame-1 {
   position: absolute;
   width: 576px;
@@ -175,6 +171,10 @@
     transform-origin: top left;
   }
 
+  .dark .geterg-frame-1 {
+    display: none;
+  }
+
   .dark .geterg-frame-2,
   .geterg-frame-2 {
     transform: scale(0.8);
@@ -223,7 +223,7 @@
 
   .dark .geterg-frame-2,
   .geterg-frame-2 {
-    transform: scale(0.4);
+    transform: scale(0.6);
     transform-origin: top left;
     overflow:hidden;
 
@@ -252,7 +252,7 @@
 
   .dark .geterg-frame-2,
   .geterg-frame-2 {
-    transform: scale(0.3);
+    transform: scale(0.5);
     transform-origin: top left;
     overflow:hidden;
 
