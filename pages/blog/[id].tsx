@@ -148,7 +148,7 @@ export async function getServerSideProps(context: any) {
   const post = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/posts?&filters[permalink][$eq]=" +
-      context.query.id +
+      encodeURIComponent(context.query.id) +
       "&populate=*&locale=" + context.locale
   ).then((response) => response.json());
 
