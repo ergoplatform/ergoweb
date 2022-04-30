@@ -15,6 +15,7 @@ import { useTheme } from "next-themes";
 import { Fragment } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import DarkModeSwitch from "./darkModeSwitcher/DarkModeSwitcher";
 
 function Navigation({ enableLanguages = true }) {
   const { theme, setTheme } = useTheme();
@@ -84,34 +85,7 @@ function Navigation({ enableLanguages = true }) {
             {enableLanguages ? <LanguageSwitcher /> : null}{" "}
           </div>
           <div className="my-auto ml-5 lg:ml-10">
-            <div className="lg:hidden">
-              <div className="dark:hidden my-auto">
-                <ThemeLightSmall
-                  className="themeShadow"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                />
-              </div>
-              <div className="hidden dark:block">
-                <ThemeDarkSmall
-                  className="themeShadow"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                />
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="dark:hidden">
-                <ThemeLightBig
-                  className="themeShadow"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                />
-              </div>
-              <div className="hidden dark:block">
-                <ThemeDarkBig
-                  className="themeShadow"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                />
-              </div>
-            </div>
+            <DarkModeSwitch />
           </div>
           <div className="my-auto ml-5 lg:ml-10 z-40">
             <Popover.Button className="focus:outline-none">
@@ -147,42 +121,7 @@ function Navigation({ enableLanguages = true }) {
                   {enableLanguages ? <LanguageSwitcher color="white" /> : null}{" "}
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
-                  <div className="lg:hidden">
-                    <div className="dark:hidden my-auto">
-                      <ThemeLightSmall
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                    <div className="hidden dark:block">
-                      <ThemeDarkSmall
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                  </div>
-                  <div className="hidden lg:block">
-                    <div className="dark:hidden">
-                      <ThemeLightBig
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                    <div className="hidden dark:block">
-                      <ThemeDarkBig
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                  </div>
+                  <DarkModeSwitch />
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
                   <Popover.Button>
