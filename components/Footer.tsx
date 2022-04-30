@@ -128,7 +128,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-              <Link href="/community/#ContributeForm" passHref>
+              <Link href="/community/#Contribute" passHref>
                 <a>
                
                   <FormattedMessage
@@ -151,7 +151,7 @@ export default function Footer() {
               </li>
               <li>
 
-              <Link href="/community/#OurMission" passHref>
+              <Link href="/community/#Foundation" passHref>
                 <a>
                
                   <FormattedMessage
