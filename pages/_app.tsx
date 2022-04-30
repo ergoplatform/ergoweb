@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-1XC1836VXN"
+        src="https://www.googletagmanager.com/gtag/js?id=G-YFEV1NQGXE"
       />
       <Script
         id="analytics"
@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-1XC1836VXN', { page_path: window.location.pathname });
+              gtag('config', 'G-YFEV1NQGXE', { page_path: window.location.pathname });
             `,
         }}
       />
