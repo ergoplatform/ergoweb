@@ -21,7 +21,7 @@ export default function DiscoverERG() {
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
-    defaultMessage: "SETUP & START DEVELOPING",
+    defaultMessage: "CHECK THE BLOG",
   });
   const button5Text = intl.formatMessage({
     id: "components.discoverHero.button5",
@@ -85,6 +85,18 @@ export default function DiscoverERG() {
               text={button2Text}
               url="https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew/playlists"
               newTab={true}
+              underline={true}
+              textColor="brand-orange"
+              background={false}
+              icon="ArrowRight"
+              iconColor="orange"
+            />
+          </div>
+          <div className="-ml-4 mt-10">
+            <Button
+              text={button4Text}
+              url="/category/devs/"
+              newTab={false}
               underline={true}
               textColor="brand-orange"
               background={false}

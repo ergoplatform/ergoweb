@@ -224,7 +224,7 @@ export default function Mining() {
         />
         <br/>
         <Button
-          text="SEE POSTS TAGGED 'MINING'"
+          text="MINING BLOG POSTS"
           url="/category/Mining/"
           newTab={false}
           underline={true}
