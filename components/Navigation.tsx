@@ -121,42 +121,7 @@ function Navigation({ enableLanguages = true }) {
                   {enableLanguages ? <LanguageSwitcher color="white" /> : null}{" "}
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
-                  <div className="lg:hidden">
-                    <div className="dark:hidden my-auto">
-                      <ThemeLightSmall
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                    <div className="hidden dark:block">
-                      <ThemeDarkSmall
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                  </div>
-                  <div className="hidden lg:block">
-                    <div className="dark:hidden">
-                      <ThemeLightBig
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                    <div className="hidden dark:block">
-                      <ThemeDarkBig
-                        className="themeShadow"
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                      />
-                    </div>
-                  </div>
+                  <DarkModeSwitch />
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
                   <Popover.Button>
