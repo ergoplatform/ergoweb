@@ -61,6 +61,8 @@ const BlogPosts = (props: Props) => {
                       ? post.attributes.image.data.attributes.formats.medium.url
                       : null
                   }
+                  blogPhoto={post.attributes.blogPhoto}
+                  authorPhoto={post.attributes.authorPhoto}
                 />
               }
             </div>
