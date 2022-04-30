@@ -25,7 +25,7 @@ export default function DiscoverERG() {
   });
   const button5Text = intl.formatMessage({
     id: "components.discoverHero.button5",
-    defaultMessage: "VISIT ERGONAUT.SPACE",
+    defaultMessage: "GET SETUP",
   });
 
   return (
@@ -114,7 +114,7 @@ export default function DiscoverERG() {
           </p>
           <div className="-ml-4 mt-10">
             <Button
-              text={button4Text}
+              text={button5Text}
               url="https://docs.ergoplatform.com/node/install/"
               newTab={true}
               underline={true}
