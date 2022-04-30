@@ -21,7 +21,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="No pre-mine, ICO, or pre-sales. A fair launch with 4.43% of funds allocated to ecosystem development."
+        defaultMessage="When Ergo launched in 2019, there was no ICO (initial coin offering), no pre-mine and no pre-allocation of tokens to any founders or venture capitalists. A fair launch with 4.43% of funds allocated to ecosystem development."
         id="components.highlights.slide.1.text"
         values={{ breakingLine: <br /> }}
       />

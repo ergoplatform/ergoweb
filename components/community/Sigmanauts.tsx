@@ -48,7 +48,7 @@ export default function Sigmanauts() {
         <div className="-ml-4">
           <Button
             text={buttonText}
-            url="https://ergo-platform-frontend-nvbpfiue6q-ez.a.run.app/blog/1166/"
+            url="blog/the-sigmanauts-programme/"
             newTab={false}
             underline={true}
             textColor="brand-orange"

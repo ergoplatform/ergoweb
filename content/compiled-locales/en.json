@@ -308,7 +308,7 @@
   "components.homeHero.text": [
     {
       "type": 0,
-      "value": "Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through decentralized, private and secure financial tools."
+      "value": "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
     }
   ],
   "components.homeHero.title": [
@@ -530,7 +530,7 @@
   "footer.weGotIt": [
     {
       "type": 0,
-      "value": "We got it!"
+      "value": "We've got you covered!"
     }
   ],
   "navigation.discover": [

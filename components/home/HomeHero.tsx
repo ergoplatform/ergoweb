@@ -32,8 +32,9 @@ export default function HomeHero() {
         <div className="mt-6 md:mt-10 max-w-lg md:max-w-xl relative z-20">
           <p className="font-subtitle-3-regular">
             <FormattedMessage
-              defaultMessage="Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through decentralized, private and secure financial tools."
+              defaultMessage="Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
               id="components.homeHero.text"
+              values={{ br: <br />  }}
             />
           </p>
         </div>
