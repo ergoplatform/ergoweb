@@ -13,6 +13,7 @@ export default function Feed(props: Props) {
           key={post.id}
           id={post.id}
           title={post.attributes.title}
+          author={post.attributes.author}
           subtitle={post.attributes.subtitle}
           tags={post.attributes.tag}
           date={post.attributes.date}

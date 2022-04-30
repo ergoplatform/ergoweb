@@ -24,7 +24,7 @@ export default function Post({
   id,
   title,
   subtitle,
-  author = "Ergo Platform",
+  author,
   date,
   image,
   tags,

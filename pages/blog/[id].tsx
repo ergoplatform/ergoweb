@@ -23,6 +23,17 @@ type Props = {
 
 export default function Post(props: Props) {
   const { locale } = useRouter();
+  let hasImage = false;
+  let imageUrl = ""
+  if (props.post.attributes.blogPhoto.length > 0) {
+    hasImage = true;
+    imageUrl = "https://storage.googleapis.com/ergo-cms-media" + props.post.attributes.blogPhoto;
+  }
+  if (props.post.image) {
+    hasImage = true;
+    imageUrl = props.post.image.data.attributes.formats.large.url;
+  }
+
   return (
     <div>
       <div className="blog-frame-1"></div>
@@ -82,26 +93,17 @@ export default function Post(props: Props) {
               </div>
             </div>
 
-            <div className="flex flex-row justify-center md:mx-4">
-              {props.post.attributes.image.data == null ? (
-                ""
+            <div className="flex flex-row justify-center md:mx-32">
+              {hasImage == true ? (
+                <img
+                src={imageUrl}
+                height="100%"
+                width="100%"
+                className="md:rounded-xl"
+                alt=""
+              />
               ) : (
-                <Image
-                  src={
-                    props.post.attributes.image.data.attributes.formats.large
-                      .url
-                  }
-                  height={
-                    props.post.attributes.image.data.attributes.formats.large
-                      .height
-                  }
-                  width={
-                    props.post.attributes.image.data.attributes.formats.large
-                      .width
-                  }
-                  className="md:rounded-xl"
-                  alt=""
-                />
+                ""
               )}
             </div>
             <div className="px-4 md:px-32 md:py-20">

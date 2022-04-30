@@ -50,6 +50,7 @@ const BlogPosts = (props: Props) => {
                   id={post.id}
                   title={post.attributes.title}
                   subtitle={post.attributes.subtitle}
+                  author={post.attributes.author}
                   tags={post.attributes.tag}
                   date={post.attributes.date}
                   url={post.attributes.url}
