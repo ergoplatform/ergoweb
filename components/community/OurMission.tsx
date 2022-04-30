@@ -2,7 +2,7 @@ import Button from "../Button";
 
 export default function OurMission() {
   return (
-    <div id="OurMission" className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="Foundation" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <p className="font-vinila-extended-bold text-[40px] md:text-[80px] mb-8">
         Our Mission
       </p>

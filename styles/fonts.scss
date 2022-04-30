@@ -51,6 +51,20 @@
     }
 }
 
+.blog-md {
+    a {
+        color: #FF5E18;
+        text-decoration: underline;
+    }
+}
+
+.dark {.blog-md {
+    a {
+        color: #FF5E18;
+        text-decoration: underline;
+    }
+}}
+
 .dark {
     .blog-md {
         h1,
@@ -64,7 +78,6 @@
         .font-subtitle-3-bold,
         .font-subtitle-3-regular,
         .font-subtitle-4,
-        a,
         p,
         li,
         .font-body-2-bold,

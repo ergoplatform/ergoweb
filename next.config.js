@@ -4,6 +4,20 @@ const path = require("path");
 const withPWA = require("next-pwa");
 
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/docs/:path*',
+        destination: 'https://storage.googleapis.com/ergo-cms-media/docs/:path*',
+        permanent: false,
+      },
+      {
+        source: '/img/:path*',
+        destination: 'https://storage.googleapis.com/ergo-cms-media/img/:path*',
+        permanent: false,
+      },
+    ]
+  },
   reactStrictMode: true,
   trailingSlash: true,
   i18n: {

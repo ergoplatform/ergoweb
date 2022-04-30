@@ -26,7 +26,7 @@ export default function GrantsAndBounties() {
 
         We are looking to fund grants for projects that focus on building key ecosystem infrastructure. 
         
-        The best way to get some funding is to start up a Raffle. The Ergo Foundation and community can then top these up.
+        However, the quickest way to get some funding is to start a Raffle. 
       </p>
       <div className="flex flex-col xl:flex-row xl:ml-[600px]">
         <div className="-ml-4 mt-10">

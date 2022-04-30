@@ -210,7 +210,7 @@ function Navigation({ enableLanguages = true }) {
 
 
                   <li className="mb-1">
-                    <Link href="/community/#ContributeForm" passHref>
+                    <Link href="/community/#Contribute" passHref>
                       <a>
                         <FormattedMessage
                           defaultMessage="Contribute to Ergo"
@@ -234,7 +234,7 @@ function Navigation({ enableLanguages = true }) {
 
 
                   <li className="mb-1">
-                    <Link href="/community/#OurMission" passHref>
+                    <Link href="/community/#Foundation" passHref>
                       <a>
                         <FormattedMessage
                           defaultMessage="Ergo Foundation"
