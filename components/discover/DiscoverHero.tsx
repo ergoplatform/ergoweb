@@ -13,7 +13,7 @@ export default function DiscoverERG() {
   });
   const button2Text = intl.formatMessage({
     id: "components.discoverHero.button2",
-    defaultMessage: "ERGOSCRIPT BY EXAMPLE",
+    defaultMessage: "LEARN WITH DECO",
   });
   const button3Text = intl.formatMessage({
     id: "components.discoverHero.button3",
@@ -58,6 +58,18 @@ export default function DiscoverERG() {
           </p>
           <div className="-ml-4 mt-10">
             <Button
+              text={button3Text}
+              url="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/"
+              newTab={true}
+              underline={true}
+              textColor="brand-orange"
+              background={false}
+              icon="ArrowRight"
+              iconColor="orange"
+            />
+          </div>
+          <div className="-ml-4 mt-10">
+            <Button
               text={button1Text}
               url="https://docs.ergoplatform.com/"
               newTab={true}
@@ -71,19 +83,7 @@ export default function DiscoverERG() {
           <div className="-ml-4 mt-10">
             <Button
               text={button2Text}
-              url="https://github.com/ergoplatform/ergoscript-by-example/"
-              newTab={true}
-              underline={true}
-              textColor="brand-orange"
-              background={false}
-              icon="ArrowRight"
-              iconColor="orange"
-            />
-          </div>
-          <div className="-ml-4 mt-10">
-            <Button
-              text={button3Text}
-              url="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/"
+              url="https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew/playlists"
               newTab={true}
               underline={true}
               textColor="brand-orange"
