@@ -222,6 +222,18 @@ export default function Mining() {
           iconColor="orange"
           customClass=" -ml-4 mb-8"
         />
+        <br/>
+        <Button
+          text="MINING BLOG POSTS"
+          url="/category/Mining/"
+          newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
         <div className="lg:hidden">{urlsComponent}</div>
       </div>
     </div>

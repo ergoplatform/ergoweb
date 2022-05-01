@@ -13,6 +13,7 @@ export default function Feed(props: Props) {
           key={post.id}
           id={post.id}
           title={post.attributes.title}
+          author={post.attributes.author}
           subtitle={post.attributes.subtitle}
           tags={post.attributes.tag}
           date={post.attributes.date}
@@ -25,6 +26,8 @@ export default function Feed(props: Props) {
               ? post.attributes.image.data.attributes.formats.medium.url
               : null
           }
+          blogPhoto={post.attributes.blogPhoto}
+          authorPhoto={post.attributes.authorPhoto}
         />
       ))}
     </div>

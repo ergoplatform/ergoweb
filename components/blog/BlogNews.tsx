@@ -10,7 +10,7 @@ type NewsPostProps = {
 
 function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
   return (
-    <div className="min-w-[300px] h-[190px] rounded-xl p-6 md:px-20 md:py-16 blog-news relative md:min-w-[610px] md:h-[300px]">
+    <div className="min-w-[300px] h-[300px] rounded-xl p-6 md:px-20 md:py-16 blog-news relative md:min-w-[610px] md:h-[400px]">
       <p className="text-[12px] md:text-[14px]">
         <b>
           <FormattedDate
@@ -21,12 +21,17 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
           />
         </b>
       </p>
-      <p className="text-[16px] md:text-[24px] font-subtitle-3-bold text-brand-orange dark:text-brand-orange my-2">
-        {title}
+      <p className="text-[16px] md:text-[24px] font-subtitle-3-bold text-brand-orange dark:text-brand-orange my-2 text-clip">
+        {title.length > 60 ? title.substring(0, 60) + "..." : title}
       </p>
-      <p className="text-[12px] md:text-[16px] text-[#989898] dark:text-[#989898] mb-2">
-        {subtitle}
-      </p>
+      {subtitle ? (
+        <p className="text-[12px] md:text-[16px] text-[#989898] dark:text-[#989898] mb-2 text-clip">
+          {subtitle?.length > 350 ? subtitle?.substring(0, 320) + "..." : subtitle}
+        </p>
+      ) : (
+        ""
+      )}
+
       <div className="-ml-4 absolute bottom-4 md:bottom-12">
         <Button
           text="READ"

@@ -21,11 +21,11 @@ export default function DiscoverERG() {
   });
   const button4Text = intl.formatMessage({
     id: "components.discoverHero.button4",
-    defaultMessage: "SETUP & START DEVELOPING",
+    defaultMessage: "CHECK THE BLOG",
   });
   const button5Text = intl.formatMessage({
     id: "components.discoverHero.button5",
-    defaultMessage: "VISIT ERGONAUT.SPACE",
+    defaultMessage: "GET SETUP",
   });
 
   return (
@@ -92,6 +92,18 @@ export default function DiscoverERG() {
               iconColor="orange"
             />
           </div>
+          <div className="-ml-4 mt-10">
+            <Button
+              text={button4Text}
+              url="/category/devs/"
+              newTab={false}
+              underline={true}
+              textColor="brand-orange"
+              background={false}
+              icon="ArrowRight"
+              iconColor="orange"
+            />
+          </div>
         </div>
         <div className="box xl:order-3">
           <h1 className="max-w-xs leading-tight mt-36 xl:mt-0">
@@ -102,7 +114,7 @@ export default function DiscoverERG() {
           </p>
           <div className="-ml-4 mt-10">
             <Button
-              text={button4Text}
+              text={button5Text}
               url="https://docs.ergoplatform.com/node/install/"
               newTab={true}
               underline={true}
