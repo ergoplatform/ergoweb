@@ -71,7 +71,7 @@ export default function FeaturesAndProjects(props: Props) {
               <p className="mt-2 text-[#989898] dark:text-[#989898] lg:text-[16px] h-2/5">
                 {project.attributes.description}
               </p>
-              <div className="my-2 h-1/5">
+              <div className="my-6 h-1/5">
                 <a
                   className="underline text-brand-orange dark:text-brand-orange font-vinila-extended lg:text-[16px]"
                   href={project.attributes.url}

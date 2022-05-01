@@ -27,6 +27,10 @@ export default function DiscoverERG() {
     id: "components.discoverHero.button5",
     defaultMessage: "GET SETUP",
   });
+  const button6Text = intl.formatMessage({
+    id: "components.discoverHero.button5",
+    defaultMessage: "VISIT ERGONAUT.SPACE",
+  });
 
   return (
     <div id="DiscoverERG" className="max-w-[1300px] mx-auto p-4 relative z-10">
@@ -139,7 +143,7 @@ export default function DiscoverERG() {
                   type="submit"
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
                 >
-                  <span>{button5Text}</span>
+                  <span>{button6Text}</span>
                   <span className="w-4 h-4 ml-2">
                     {getIconComponentByName("ArrowRightBlack")}
                   </span>

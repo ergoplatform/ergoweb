@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Button from "../Button";
 
 type Props = {
   exchanges: any;
@@ -28,6 +29,18 @@ export default function Exchanges({ exchanges }: Props) {
             security, privacy, and control over your funds and information.
             We highly recommend being custodial of your own funds and using one
             of the wallet options provided above.
+            <br/><br/>
+            <Button
+          text="BUYING GUIDE"
+          url="blog/buying-guide/"
+          newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
           </p>
         </div>
       </div>
