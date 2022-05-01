@@ -18,7 +18,7 @@ export default function DarkModeSwitch(){
     const toggleSwitch = () => setTheme(theme === 'light' ? "dark" : "light")
 
     const spring = {
-        type: 'spring',
+        type: 'tween',
         stiffness: 700,
         damping: 30,
     }
@@ -42,7 +42,7 @@ export default function DarkModeSwitch(){
                 layout
                 transition={spring}
             >
-                <motion.div whileTap={{rotate: 360}}>
+                <motion.div>
                     {theme === 'light' ? (<RiSunFill className="h-6 w-6 text-orange-500" />) : (<RiMoonClearFill className="h-6 w-6 text-slate-200" />)}
                 </motion.div>
 
