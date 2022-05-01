@@ -28,7 +28,7 @@ export default function DiscoverERG() {
     defaultMessage: "GET SETUP",
   });
   const button6Text = intl.formatMessage({
-    id: "components.discoverHero.button5",
+    id: "components.discoverHero.button6",
     defaultMessage: "VISIT ERGONAUT.SPACE",
   });
 

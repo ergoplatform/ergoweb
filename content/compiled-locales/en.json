@@ -240,6 +240,12 @@
   "components.discoverHero.button5": [
     {
       "type": 0,
+      "value": "GET SETUP"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
       "value": "VISIT ERGONAUT.SPACE"
     }
   ],
