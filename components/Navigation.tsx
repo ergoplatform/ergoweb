@@ -104,7 +104,7 @@ function Navigation({ enableLanguages = true }) {
         leaveTo="opacity-0"
       >
         <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-50">
-          <div className="max-w-[1300px] mx-auto p-4 lg:px-0 lg:my-8">
+          <div className="max-w-[1300px] mx-auto p-4">
             <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
               <div className="my-auto flex-grow">
                 <Link href="/" passHref >
@@ -136,7 +136,7 @@ function Navigation({ enableLanguages = true }) {
                 placeholder="Type to search..."
               />
             </div> */}
-            <div className="mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
+            <div className="mx-0 md:mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
               <div>
                 <Link href="/community" passHref>
                   <a>
@@ -151,7 +151,7 @@ function Navigation({ enableLanguages = true }) {
 
                 <ul className="hidden md:block">
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/community/#JoinUs" passHref>
                       <a>
                         <FormattedMessage
@@ -162,7 +162,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/community/#Sigmanauts" passHref>
                       <a>
                         <FormattedMessage
@@ -174,7 +174,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/community/#Contribute" passHref>
                       <a>
                         <FormattedMessage
@@ -186,7 +186,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/community/#HallOfFame" passHref>
                       <a>
                         <FormattedMessage
@@ -198,7 +198,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/community/#Foundation" passHref>
                       <a>
                         <FormattedMessage
@@ -230,7 +230,7 @@ function Navigation({ enableLanguages = true }) {
 
                 <ul className="hidden md:block">
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/get-erg/#Mining" passHref>
                       <a>
                         <FormattedMessage
@@ -242,7 +242,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/get-erg#MiningCalculator" passHref>
                       <a>
                         <FormattedMessage
@@ -254,7 +254,7 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/get-erg/#Wallets" passHref>
                       <a>
                         <FormattedMessage
@@ -264,7 +264,7 @@ function Navigation({ enableLanguages = true }) {
                       </a>
                     </Link>
                   </li>
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/get-erg/#Exchanges" passHref>
                       <a>
                         <FormattedMessage
@@ -288,7 +288,7 @@ function Navigation({ enableLanguages = true }) {
                   </a>
                 </Link>
                 <ul className="hidden md:block">
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/discover/#DiscoverERG" passHref>
                       <a>
                         <FormattedMessage
@@ -299,7 +299,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
 
                   </li>
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/discover/#GrantsAndBounties" passHref>
                       <a>
                         <FormattedMessage
@@ -310,7 +310,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
 
                   </li>
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/discover/#FAQ">
                       <a>
                         <FormattedMessage
@@ -321,7 +321,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/discover/#Explore">
                       <a>
                         <FormattedMessage
@@ -332,7 +332,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
 
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/discover/#Documents">
                       <a>
                         <FormattedMessage
@@ -356,7 +356,7 @@ function Navigation({ enableLanguages = true }) {
                   </a>
                 </Link>
                 <ul className="hidden md:block">
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/ecosystem/#dApps" >
                       <a>
                         <FormattedMessage
@@ -366,7 +366,7 @@ function Navigation({ enableLanguages = true }) {
                       </a>
                     </Link>
                   </li>
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/ecosystem/#Roadmap" >
                       <a>
                         <FormattedMessage
@@ -376,18 +376,18 @@ function Navigation({ enableLanguages = true }) {
                       </a>
                     </Link>
                   </li>
-                  <Link href="/ecosystem/#Wiki" >
-                    <li className="mb-1">
-                      <a>
-                        <FormattedMessage
-                          defaultMessage="Wiki"
-                          id="footer.ecosystem.3"
-                        />
-                      </a>
-                    </li>
-                  </Link>
+                  <li className="mb-2">
+                    <Link href="/ecosystem/#Wiki" >
+                        <a>
+                          <FormattedMessage
+                            defaultMessage="Wiki"
+                            id="footer.ecosystem.3"
+                          />
+                        </a>
+                    </Link>
+                  </li>
                   
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/ecosystem/#Favorites" >
                       <a>
                         <FormattedMessage
@@ -397,7 +397,7 @@ function Navigation({ enableLanguages = true }) {
                       </a>
                     </Link>
                   </li>
-                  <li className="mb-1">
+                  <li className="mb-2">
                     <Link href="/ecosystem/#ChangingTheWorld" >
                       <a>
                         <FormattedMessage
@@ -424,7 +424,7 @@ function Navigation({ enableLanguages = true }) {
                 </p>
               </div>
             </div>
-            <div className="mx-4 text-white md:flex">
+            <div className="mx-0 md:mx-4 text-white md:flex">
               <div className="my-6 flex-grow md:flex-grow">
                 <ul className="md:inline-flex">
                   <li>
@@ -454,7 +454,7 @@ function Navigation({ enableLanguages = true }) {
                 </ul>
               </div>
               <div className="my-6 dark">
-                <div className="grid overflow-hidden grid-cols-3 gap-2 text-red md:grid-cols-9">
+                <div className="grid overflow-hidden grid-cols-3 gap-6 text-red md:grid-cols-9">
                   <div className="box mx-auto my-auto">
                     <a
                       href="https://sigmaverse.io"
