@@ -41,7 +41,7 @@ const BlogPosts = (props: Props) => {
         endMessage={<div className="text-center mt-20 mb-8"><h4>Nothing more to show</h4></div>}
         className="w-full"
       >
-        <div className="grid grid-cols-1 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-y-10 md:gap-y-20 md:grid-cols-2 xl:grid-cols-3">
           {posts.map((post: any) => (
             <div key={post.id} className="mx-auto">
               {
