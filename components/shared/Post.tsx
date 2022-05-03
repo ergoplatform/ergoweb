@@ -49,7 +49,7 @@ export default function Post({
   }
   
   return (
-    <div className="w-96 flex-shrink-0 shadow-xl rounded-2xl relative z-10">
+    <div className="blog-post flex-shrink-0 shadow-xl rounded-2xl relative z-10">
       <div className="flex-shrink-0 relative">
         <Link href={type == "news" ? url : "/blog/" + permalink}>
           <a target="_blank" rel="noreferrer" className="block mt-2">
@@ -63,6 +63,7 @@ export default function Post({
                   alt=""
                   height="186px"
                   width="384px"
+                  layout="responsive"
                 />
               </div>
             )}
@@ -85,15 +86,15 @@ export default function Post({
           </a>
         </Link>
       </div>
-      <div className="flex-1 p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
-        <div className="flex-1 text-clip overflow-hidden">
+      <div className="flex-1 p-4 md:p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
+        <div className="flex-1 text-clip">
           <Link href={type == "news" ? url : "/blog/" + permalink}>
             <a target="_blank" className="block mt-2" rel="noreferrer">
-              <p className="font-roboto text-[20px] dark:text-black h-14">
+              <p className="font-roboto text-[20px] dark:text-black mb-4">
                 {title}
               </p>
-              <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mt-2">
-                {type == "news" ? subtitle : removeMd(content) + "..."}
+              <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mb-0">
+                {type == "news" ? subtitle : removeMd(content)?.slice(0, 130) + "..."}
               </p>
             </a>
           </Link>

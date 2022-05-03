@@ -51,7 +51,7 @@ export default function FeaturesAndProjects(props: Props) {
       <p className="text-[#585858] dark:text-[#585858] font-bold mb-8">
         NEW FEATURES AND PROJECTS YOU MIGHT LIKE
       </p>
-      <div className="flex overflow-x-visible no-scrollbar gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:max-h-[860px]">
+      <div className="flex overflow-x-auto p-4 -m-4 no-scrollbar gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:max-h-[860px]">
         {props.projects.data.map((project: any, i: number) => (
           <div key={i} className={"rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4" + adjustCardPosition(i)} >
             <Image

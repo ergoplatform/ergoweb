@@ -73,6 +73,10 @@
     background: no-repeat url("/assets/blog/blur-2.svg");
 }
 
+.blog-post  {
+    max-width: 384px;
+}
+
 @media screen and (max-width: $lg) {
     .blog-frame-1 {
         transform: scale(0.8);
@@ -81,6 +85,7 @@
 }
 
 @media screen and (max-width: $md) {
+
     .blog-frame-1 {
         transform: scale(0.4);
         transform-origin: center left;
@@ -110,6 +115,7 @@
 
 
 @media screen and (max-width: $xs) {
+
     .blog-frame-1 {
         transform: scale(0.4);
         transform-origin: center left;
