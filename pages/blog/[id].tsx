@@ -122,12 +122,12 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link href="https://google.com" passHref>
+                  <Link href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}" passHref>
                     <BlogFacebook />
                   </Link>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://google.com" passHref>
+                  <Link href="https://twitter.com/intent/tweet?text={window.location.href}" passHref>
                     <BlogTwitter />
                   </Link>
                 </div>

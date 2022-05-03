@@ -33,7 +33,7 @@ const cards = [
       />
     ),
     icon: "UsingErgBuyIt",
-    url: "/get-erg/#Excanges",
+    url: "/get-erg/#Exchanges",
   },
   {
     title: (

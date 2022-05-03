@@ -77,6 +77,12 @@
       "value": "READ MORE & APPLY"
     }
   ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "CONTRIBUTING GUIDELINES"
+    }
+  ],
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
@@ -87,12 +93,6 @@
     {
       "type": 0,
       "value": "GRANTS & BOUNTIES"
-    }
-  ],
-  "components.Sigmanauts.button.reportBugs": [
-    {
-      "type": 0,
-      "value": "REPORT BUGS"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [

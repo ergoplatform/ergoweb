@@ -5,9 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 
 export default function ContributeForm() {
   const intl = useIntl();
-  const buttonReportBugs = intl.formatMessage({
-    id: "components.Sigmanauts.button.reportBugs",
-    defaultMessage: "REPORT BUGS",
+  const buttonContribute = intl.formatMessage({
+    id: "components.Sigmanauts.button.buttonContribute",
+    defaultMessage: "CONTRIBUTING GUIDELINES",
   });
   const buttonReadTheDocs = intl.formatMessage({
     id: "components.Sigmanauts.button.writeAndReviewCode",
@@ -121,8 +121,8 @@ export default function ContributeForm() {
             </div>
             <div className="ml-8 mb-10">
               <Button
-                text={buttonReportBugs}
-                url="mailto:team@ergoplatform.org"
+                text={buttonContribute}
+                url="https://docs.ergoplatform.com/contribute/"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"

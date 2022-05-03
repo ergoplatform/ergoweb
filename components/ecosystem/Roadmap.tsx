@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 import { FormattedMessage } from "react-intl";
 import { getIconComponentByName } from "../../utils/icons-map";
+import Button from "../Button";
 
 type Props = {
   roadmapItems?: any;
@@ -91,7 +92,27 @@ export default function Roadmap(props: Props) {
           />
         </b>
       </p>
-      <p className="mx-auto text-center max-w-lg">Please note that Ergo is a platform. Many of the projects listed below have no formal connection with the Ergo Foundation or each other.</p>
+      <p className="mx-auto text-center max-w-lg">
+      
+        
+        Please note that Ergo is a platform. Many of the projects listed below have no formal connection with the Ergo Foundation or each other.
+        
+        <br/>
+        <br/>
+        
+        <Button
+          text="VIEW MORE ON COINMARKETCAL"
+          url="https://coinmarketcal.com/en/coin/ergo"
+          newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        </p>
+     
       <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10 ">
         {sections.map((section: any, i: number) => (
           <div key={i} className="min-w-[235px] md:w-1/4">
@@ -113,7 +134,11 @@ export default function Roadmap(props: Props) {
             </div>
           </div>
         ))}
+
+      
+
       </div>
+      
     </div>
   );
 }
