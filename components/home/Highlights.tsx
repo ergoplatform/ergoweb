@@ -21,7 +21,7 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="When Ergo launched in 2019, there was no initial coin offering, no pre-mine and no pre-allocation of tokens to any team members or venture capitalists. A truely fair launch with 4.43% of funds allocated to ecosystem development."
+        defaultMessage="When Ergo launched in 2019, there was no initial coin offering, no pre-mine and no pre-allocation of tokens to any team members or venture capitalists. A truly fair launch with 4.43% of funds allocated to ecosystem development."
         id="components.highlights.slide.1.text"
         values={{ breakingLine: <br /> }}
       />
