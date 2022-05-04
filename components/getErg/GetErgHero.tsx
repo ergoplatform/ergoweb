@@ -72,8 +72,8 @@ export default function GetErgHero(props: Props) {
           <h2 className="leading-none">
             <b>{props.title}</b>
           </h2>
-          <p className="text-[#989898] dark:text-[#989898] mt-6 max-w-xs mr-4">
-            There is a rich ecosystem budding ontop of Ergo. Whether you
+          <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
+            There is a rich ecosystem budding on top of Ergo. Whether you
             are a developer, miner, or investor - we’ve got you covered.
           </p>
         </div>

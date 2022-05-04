@@ -21,10 +21,10 @@ export default function Exchanges({ exchanges }: Props) {
           </h2>
         </div>
         <div>
-          <p className="font-subtitle-3-bold text-[#989898] dark:text-[#989898] mb-6 max-w-lg">
+          <p className="font-subtitle-3-bold text-[#807e7e] dark:text-[#807e7e] mb-6 max-w-lg">
             Available across popular exchanges and decentralised exchanges.
           </p>
-          <p className="text-[#989898] dark:text-[#989898] max-w-lg">
+          <p className="text-[#807e7e] dark:text-[#807e7e] max-w-lg">
             Disclaimer: Exchanges provide highly varying degrees of safety,
             security, privacy, and control over your funds and information.
             We highly recommend being custodial of your own funds and using one

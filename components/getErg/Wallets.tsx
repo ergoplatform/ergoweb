@@ -27,19 +27,19 @@ export default function Wallets() {
           </p>
         </div>
         <div className="my-auto">
-          <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898]">
+          <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
             Digital wallets can help keep your digital currency safe, private
             and in your control.
           </p>
           <br />
-          <p className="font-roboto text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898]">
+          <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
             Note that wallets are supported by
             third parties, we only provide the information below as a courtesy,
             in order to simplify the overall digital currency experience for
             you.
           </p>
           <br />
-          <p className="font-roboto text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898]">
+          <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
           <Button
           text="SETUP GUIDES"
           url="/category/Tooling/"

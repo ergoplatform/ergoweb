@@ -22,14 +22,14 @@ const Custom404: NextPage = () => {
           <div className="lg:w-2/3"></div>
           <div className="lg:w-1/3">
             <div className="max-w-sm mt-96  lg:mt-40">
-              <h1 className="font-bold text-[#585858] dark:text-[#989898] text-[60px] leading-tight">
+              <h1 className="font-bold text-[#585858] dark:text-[#807e7e] text-[60px] leading-tight">
                 <FormattedMessage
                   defaultMessage="404. Page Not Found."
                   id="pages.404.hero"
                 />
               </h1>
             </div>
-            <div className="mt-8 max-w-xs text-[#585858] dark:text-[#989898]">
+            <div className="mt-8 max-w-xs text-[#585858] dark:text-[#807e7e]">
               The requested URL was not found on this server. That’s
               all we know.
             </div>

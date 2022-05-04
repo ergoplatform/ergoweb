@@ -43,7 +43,7 @@ export default function ChangingTheWorld(props: Props) {
                 <p className="font-vinila-extended text-[42px] lg:text-[48px] mb-4">
                   {post.attributes.title}
                 </p>
-                <p className="text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898] mb-4">
+                <p className="text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-4">
                   {post.attributes.description}
                 </p>
                 <div className="-ml-4">

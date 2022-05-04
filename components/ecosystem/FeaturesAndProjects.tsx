@@ -68,7 +68,7 @@ export default function FeaturesAndProjects(props: Props) {
               <p className="mt-2 font-subtitle-3-bold lg:text-[24px] h-2/5">
                 {project.attributes.title}
               </p>
-              <p className="mt-2 text-[#989898] dark:text-[#989898] lg:text-[16px] h-2/5">
+              <p className="mt-2 text-[#807e7e] dark:text-[#807e7e] lg:text-[16px] h-2/5">
                 {project.attributes.description}
               </p>
               <div className="my-6 h-1/5">

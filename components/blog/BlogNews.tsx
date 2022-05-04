@@ -25,7 +25,7 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
         {title.length > 60 ? title.substring(0, 60) + "..." : title}
       </p>
       {subtitle ? (
-        <p className="text-[12px] md:text-[16px] text-[#989898] dark:text-[#989898] mb-2 text-clip">
+        <p className="text-[12px] md:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-2 text-clip">
           {subtitle?.length > 350 ? subtitle?.substring(0, 320) + "..." : subtitle}
         </p>
       ) : (

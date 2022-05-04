@@ -36,13 +36,13 @@ export default function Wiki() {
             width="405px"
             height="349px"
             className="rounded-br-2xl"
-            alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane ontop of a moon."
+            alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane on top of a moon."
           />
         </div>
       </div>
       <div className="md:hidden">
         <p className="font-vinila-extended-bold text-[48px] mb-4">Wiki</p>
-        <p className="text-[14px] text-[#989898] dark:text-[#989898] mb-4">
+        <p className="text-[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
           ergonaut.space is the community wiki of the Ergo blockchain, a guide
           translating how to use and the underlying technical details of the
           Ergo blockchain in easy to understand language for non-technical
