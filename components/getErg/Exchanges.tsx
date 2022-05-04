@@ -22,7 +22,7 @@ export default function Exchanges({ exchanges }: Props) {
         </div>
         <div>
           <p className="font-subtitle-3-bold text-[#807e7e] dark:text-[#807e7e] mb-6 max-w-lg">
-            Available across popular exchanges and decentralised exchanges.
+            Available across popular exchanges and decentralized exchanges.
           </p>
           <p className="text-[#807e7e] dark:text-[#807e7e] max-w-lg">
             Disclaimer: Exchanges provide highly varying degrees of safety,

@@ -28,7 +28,7 @@ const cards = [
     ),
     text: (
       <FormattedMessageFixed
-        defaultMessage="Available across popular centralised and decentralised exchanges."
+        defaultMessage="Available across popular centralised and decentralized exchanges."
         id="components.usingErg.BuyIt.text"
       />
     ),

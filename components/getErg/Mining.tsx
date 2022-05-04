@@ -169,7 +169,7 @@ export default function Mining() {
         </p>
         <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
         <FormattedMessage
-            defaultMessage="To get started, check out the community-build Mining Handbook, or join the community spaces."
+            defaultMessage="To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
             id={"components.mining.text.3"}
             values={{ breakingLine: <br /> }}
           />
