@@ -107,7 +107,7 @@ export default function Wallets() {
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
             <a
-              href="https://ergoplatform.org/en/mobile_wallets/"
+              href="http://old.ergoplatform.org/en/mobile_wallets/"
               target="_blank"
               rel="noreferrer"
             >
