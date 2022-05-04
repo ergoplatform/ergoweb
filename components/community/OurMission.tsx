@@ -48,7 +48,7 @@ export default function OurMission() {
         />
         <p className="text-[#807e7e] dark:text-[#807e7e] md:text-[16px] md:max-w-3xl">
           The Ergo Foundation is committed to make efforts to maximize the number
-          of valuable ecosystem developments done in an open-source way with least
+          of valuable ecosystem developments done in an open-source way with the least
           permissive license possible.
         </p>
       </div>
