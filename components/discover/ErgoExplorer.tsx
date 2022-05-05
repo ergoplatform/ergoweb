@@ -22,7 +22,7 @@ export default function Explore() {
       <h1 className="leading-tight xl:ml-60">
         <b>Explore</b>
       </h1>
-      <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
+      <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
         The Ergo Explorer is your interface with the blockchain. 
         Watch every transaction made in real-time.
         Or, view community curated metrics on ergo.watch.

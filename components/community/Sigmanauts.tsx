@@ -34,7 +34,7 @@ export default function Sigmanauts() {
             id="components.Sigmanauts.subTitle"
           />
         </p>
-        <p className="text-[#989898] dark:text-[#989898] mb-6">
+        <p className="text-[#807e7e] dark:text-[#807e7e] mb-6">
           <FormattedMessage
             defaultMessage="Apply for the Sigmanaut Training Programme to help shape and grow Ergo.
             {br}{br}

@@ -21,7 +21,7 @@ export default function GrantsAndBounties() {
       <h1 className="leading-tight xl:ml-72">
         <b>Grants & Bounties</b>
       </h1>
-      <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
+      <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
         In general, anything educative for the community is subject to some bounty even if not specifically listed. 
 
         We are looking to fund grants for projects that focus on building key ecosystem infrastructure. 

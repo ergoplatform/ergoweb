@@ -42,7 +42,7 @@ export default function Documents(props: Props) {
           <b>Documents</b>
         </a>
         <div className="lg:w-1/3">
-          <p className="text-[#989898] dark:text-[#989898]">
+          <p className="text-[#807e7e] dark:text-[#807e7e]">
             Ergo takes a research-based approach and uses stable well-tested
             solutions to provide a robust platform for developers to build on
             for years to come. Most of Ergo solutions are formalized in papers

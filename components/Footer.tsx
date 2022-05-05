@@ -100,7 +100,7 @@ export default function Footer() {
         <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6">
           <div className="mx-1">
             <Link href="/community" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="COMMUNITY"
                   id="footer.community.title"
@@ -167,7 +167,7 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/get-erg" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="GET ERG"
                   id="footer.getErg.title"
@@ -219,7 +219,7 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/discover" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="DISCOVER"
                   id="footer.discover.title"
@@ -281,7 +281,7 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/ecosystem" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage
                   defaultMessage="ECOSYSTEM"
                   id="footer.ecosystem.title"
@@ -344,14 +344,14 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/blog" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
               </h3>
             </Link>
           </div>
           <div className="mx-1">
             <Link href="/news" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#989898] my-4 cursor-pointer">
+              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
               </h3>
             </Link>

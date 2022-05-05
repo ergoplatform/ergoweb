@@ -29,7 +29,7 @@ export default function Favorites(props: Props) {
           <p className="font-vinila-extended font-bold text-[48px] lg:text-[56px] mb-6">
             Ergo Raffle
           </p>
-          <p className="text-[14px] lg:text-[16px] text-[#989898] dark:text-[#989898] mb-8">
+          <p className="text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-8">
             ErgoRaffle is a crowdfunding service built on Ergo Platform that
             enables anyone to raise money for a project. This project can range
             from a direct donation to a charity, an academic or business plan,
@@ -86,7 +86,7 @@ export default function Favorites(props: Props) {
                   <p className="font-vinila-extended-bold text-[16px] mb-4">
                     {post.attributes.title}
                   </p>
-                  <p className="text=[14px] text-[#989898] dark:text-[#989898] mb-4">
+                  <p className="text=[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
                     {post.attributes.description}
                   </p>
                   <div className="-ml-4">

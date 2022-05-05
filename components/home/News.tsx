@@ -44,7 +44,7 @@ export default function News({ news }: Props) {
                   <p className="font-subtitle-3-bold text-brand-orange dark:text-brand-orange my-2">
                     {post.attributes.title}
                   </p>
-                  <p className="text-[#989898] dark:text-[#989898] mb-2">
+                  <p className="text-[#807e7e] dark:text-[#807e7e] mb-2">
                     {post.attributes.subtitle}
                   </p>
                   <div className="-ml-4 mb-6">

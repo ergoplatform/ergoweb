@@ -92,7 +92,7 @@ export default function HallOfFame(props: Props) {
       </h2>
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
-          <p className="text-[#989898] dark:text-[#989898] mt-10">
+          <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
             Ergo was founded with a team who have solid backgrounds in core
             development with cryptocurrencies and blockchain frameworks
             including NXT, Scorex, Cardano and Waves. Below are brief
@@ -100,7 +100,7 @@ export default function HallOfFame(props: Props) {
             many other developers and community members involved, some of whom
             are anonymous.
           </p>
-          <p className="text-[#989898] dark:text-[#989898] mt-10">
+          <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
             Ergo is grassroots, and most core team members (and even foundation
             members) started out as community members. There is a brief
             description as well as information to read more about the Ergo

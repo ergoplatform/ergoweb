@@ -33,7 +33,7 @@ export default function FAQ(props: Props) {
           <a className="font-vinila-extended text-[48px] lg:text-[120px]">
             FAQ
           </a>
-          <p className="text-[#585858] dark:text-[#989898]">
+          <p className="text-[#585858] dark:text-[#807e7e]">
             We’ve compiled some of the most frequently asked questions.
           </p>
           <div className="mt-96 hidden lg:block">
