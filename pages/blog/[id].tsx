@@ -29,7 +29,7 @@ export default function Post(props: Props) {
     hasImage = true;
     imageUrl = "https://storage.googleapis.com/ergo-cms-media" + props.post.attributes.blogPhoto;
   }
-  if (props.post.attributes.image) {
+  if ( props.post.attributes.image.data) {
     hasImage = true;
     imageUrl = props.post.attributes.image.data.attributes.formats.large.url;
   }
