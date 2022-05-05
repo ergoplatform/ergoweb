@@ -53,7 +53,7 @@ export default function DiscoverERG() {
           <h1 className="max-w-xs leading-tight">
             <b>Discover Ergo</b>
           </h1>
-          <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
+          <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
             <FormattedMessage
               defaultMessage="Ergo is a next-generation Proof of Work smart-contract platform that enables new models of financial interaction, underpinned by a safe and rich scripting language built with flexible and powerful Zero-Knowledge proofs (Σ-protocols).
 "
@@ -113,7 +113,7 @@ export default function DiscoverERG() {
           <h1 className="max-w-xs leading-tight mt-36 xl:mt-0">
             <b>Software</b>
           </h1>
-          <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
+          <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
           The Ergo Node is your entry-point to development on Ergo and lets you communicate with the blockchain.  
           </p>
           <div className="-ml-4 mt-10">
@@ -134,7 +134,7 @@ export default function DiscoverERG() {
             <h1 className="max-w-xs leading-tight">
               <b>Learn</b>
             </h1>
-            <p className="max-w-xs text-[#989898] dark:text-[#989898] mt-6">
+            <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
               Start from the basics. What is Ergo? What can you do on Ergo?
             </p>
             <Link href="https://ergonaut.space" passHref>

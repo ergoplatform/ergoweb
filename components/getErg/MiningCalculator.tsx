@@ -26,7 +26,7 @@ export default function MiningCalculator(props: Props) {
           <h2 className="font-vinila-extended font-bold leading-none mb-6 xs:text-[32px] sm:text-[40px] lg:text-[80px] text-white">
             Mining Calculator
           </h2>
-          <p className="text-[16px] text-[#989898] dark:text-[#989898] mb-7 lg:hidden">
+          <p className="text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-7 lg:hidden">
             Autolykos is the underlying memory-hard ASIC-resistant Proof of Work
             (PoW) algorithm oriented towards GPUs.
           </p>
@@ -50,7 +50,7 @@ export default function MiningCalculator(props: Props) {
               </div>
             </div>
           </div>
-          <p className="text-[16px] text-[#989898] dark:text-[#989898] mb-7 hidden lg:block">
+          <p className="text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-7 hidden lg:block">
           Autolykos is the underlying memory-hard ASIC-resistant Proof of Work
             (PoW) algorithm oriented towards GPUs.
           </p>

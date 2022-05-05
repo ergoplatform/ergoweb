@@ -29,7 +29,7 @@ const SvgPower = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#fff" />
-        <stop offset={1} stopColor="#989898" />
+        <stop offset={1} stopColor="#807e7e" />
       </linearGradient>
     </defs>
   </svg>

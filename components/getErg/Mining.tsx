@@ -153,23 +153,23 @@ export default function Mining() {
         <div className="hidden lg:block">{urlsComponent}</div>
       </div>
       <div className="lg:w-1/2">
-        <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
+        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
             defaultMessage="Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
             id={"components.mining.text.1"}
             values={{ breakingLine: <br /> }}
           />
         </p>
-        <p className="text-[#989898] dark:text-[#989898] mt-8 text-bold text-[14px] lg:text-[24px]  max-w-lg">
+        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 text-bold text-[14px] lg:text-[24px]  max-w-lg">
           <FormattedMessage
             defaultMessage="Welcome to the future of Proof of Work."
             id={"components.mining.text.2"}
             values={{ breakingLine: <br /> }}
           />
         </p>
-        <p className="text-[#989898] dark:text-[#989898] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
+        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
         <FormattedMessage
-            defaultMessage="To get started, check out the community-build Mining Handbook, or join the community spaces."
+            defaultMessage="To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
             id={"components.mining.text.3"}
             values={{ breakingLine: <br /> }}
           />
