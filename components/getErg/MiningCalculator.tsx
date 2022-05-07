@@ -40,7 +40,7 @@ export default function MiningCalculator(props: Props) {
                   type="number"
                   name="hashrate"
                   id="hashrate"
-                  className="block w-full h-12 pl-4 pr-10 sm:text-sm rounded-2xl bg-transparent border-[1px] border-white"
+                  className="block w-full h-12 pl-4 pr-10 sm:text-sm rounded-2xl bg-transparent border-[1px] border-white text-white"
                   placeholder="Hashrate value"
                   onChange={(e) => setHashRate(e.target.value)}
                 />
