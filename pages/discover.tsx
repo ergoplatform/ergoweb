@@ -28,9 +28,9 @@ export default function Discover(props: Props) {
       <Layout title={title}>
         <DiscoverHero />
         <GrantsAndBounties />
-        <FAQ faq={props.faq} />
+        {props.faq ? <FAQ faq={props.faq} /> : null}
         <ErgoExplorer />
-        <Documents documents={props.documents} />
+        {props.documents ? <Documents documents={props.documents} /> : null}
       </Layout>
     </div>
   );
@@ -41,12 +41,16 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/documents?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const faq = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/f-a-qs?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   return {
     props: { documents, faq },
   };

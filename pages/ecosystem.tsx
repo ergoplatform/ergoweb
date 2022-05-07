@@ -34,14 +34,18 @@ export default function Ecosystem(props: Props) {
       <div className="ecosystem-blur-3"></div>
       <Layout title={title}>
         <EcosystemHero />
-        <DApps apps={props.apps} />
-        <Roadmap roadmapItems={props.roadmap} />
+        {props.apps ? <DApps apps={props.apps} /> : null}
+        {props.roadmap ? <Roadmap roadmapItems={props.roadmap} /> : null}
         <Wiki />
-        <Favorites favorites={props.favorites} />
-        <FeaturesAndProjects projects={props.projects} />
-        <ChangingTheWorld
-          chagingTheWorldProjects={props.chagingTheWorldProjects}
-        />
+        {props.favorites ? <Favorites favorites={props.favorites} /> : null}
+        {props.projects ? (
+          <FeaturesAndProjects projects={props.projects} />
+        ) : null}
+        {props.chagingTheWorldProjects ? (
+          <ChangingTheWorld
+            chagingTheWorldProjects={props.chagingTheWorldProjects}
+          />
+        ) : null}
       </Layout>
     </div>
   );
@@ -52,27 +56,37 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/dapps?populate=*&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const roadmap = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/roadmaps?populate=*&pagination[pageSize]=100"
     // "/api/roadmaps?populate=*&pagination[pageSize]=100&locale="+ context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const projects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const favorites = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const chagingTheWorldProjects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   return {
     props: { apps, roadmap, projects, favorites, chagingTheWorldProjects },
   };

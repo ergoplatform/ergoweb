@@ -42,18 +42,21 @@ export default function Home(props: Props) {
       <Layout title={title}>
         <HomeHero />
         <Highlights />
-        <HomeInfo
-          circulatingSupply={props.info.supply}
-          hashRate={props.info.hashRate}
-          blockReward={props.blockReward}
-          transactionPerDay={props.info.transactionAverage}
-        />
+        {props.blockReward && props.info ? (
+          <HomeInfo
+            circulatingSupply={props.info.supply}
+            hashRate={props.info.hashRate}
+            blockReward={props.blockReward}
+            transactionPerDay={props.info.transactionAverage}
+          />
+        ) : null}
+
         <UniqueErgo />
         <UsingErg title="Get ERG" />
         <Autolykos />
-        <News news={props.news} />
-        <Feed posts={props.posts} />
-        <Partners partners={props.partners} />
+        {props.posts ? <News news={props.news} /> : null}
+        {props.posts ? <Feed posts={props.posts} /> : null}
+        {props.partners ? <Partners partners={props.partners} /> : null}
         <ContributeForm />
       </Layout>
     </div>
@@ -65,29 +68,31 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const partners = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API + "/api/partners?populate=*"
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const news = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
 
-  const blockRewardData = await fetch("https://api.ergoplatform.com/blocks").then(
-    (response) =>
-      response.json().then((data) => {
-        return {
-          currentBlockReward: data.items[0].minerReward / 1000000000,
-        };
-      })
-  );
-  const blockReward = blockRewardData.currentBlockReward;
+  const blockReward = await fetch("https://api.ergoplatform.com/blocks")
+    .then((response) =>
+      response.json().then((data) => data.items[0].minerReward / 1000000000)
+    )
+    .catch((err) => null);
 
-  const info = await fetch("https://api.ergoplatform.com/info/").then(
-    (response) => response.json()
-  );
+  const info = await fetch("https://api.ergoplatform.com/info/")
+    .then((response) => response.json())
+    .catch((err) => null);
 
   return {
     props: { posts, partners, news, info, blockReward },

@@ -27,21 +27,27 @@ export default function Blog(props: Props) {
       <div className="blog-blur-2"></div>
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          <BlogNews news={props.news} />
+          {props.news ? <BlogNews news={props.news} /> : null}
           <div className="flex flex-row justify-between my-10 mx-4">
             <div className="flex flex-row flex-wrap">
-              {props.categories.map((category: any) => (
-                <Link href={`/category/${category.attributes.name}`} key={category.id} passHref>
-                  <div className="my-2 sm:my-auto cursor-pointer">
-                    <b
-                      key={category.attributes.name}
-                      className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+              {props.categories
+                ? props.categories.map((category: any) => (
+                    <Link
+                      href={`/category/${category.attributes.name}`}
+                      key={category.id}
+                      passHref
                     >
-                      {category.attributes.name}
-                    </b>
-                  </div>
-                </Link>
-              ))}
+                      <div className="my-2 sm:my-auto cursor-pointer">
+                        <b
+                          key={category.attributes.name}
+                          className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                        >
+                          {category.attributes.name}
+                        </b>
+                      </div>
+                    </Link>
+                  ))
+                : null}
             </div>
             <div>
               <h1>Blog</h1>
@@ -61,7 +67,8 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
-    .then((response) => response.data);
+    .then((response) => response.data)
+    .catch((err) => null);
 
   const news = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -69,7 +76,8 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
-    .then((response) => response.data);
+    .then((response) => response.data)
+    .catch((err) => null);
 
   const categories = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -77,7 +85,8 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
-    .then((response) => response.data);
+    .then((response) => response.data)
+    .catch((err) => null);
 
   return {
     props: { posts, news, categories },

@@ -23,7 +23,7 @@ export default function GetErg(props: Props) {
     id: "pages.get-erg.title",
     defaultMessage: "GetErg",
   });
-  
+
   return (
     <div className="overflow-hidden">
       <div className="geterg-frame-1"></div>
@@ -40,14 +40,20 @@ export default function GetErg(props: Props) {
       <Layout title={title}>
         <GetErgHero title="Get ERG" />
         <Mining />
-        <MiningCalculator
-          currentBlockReward={props.currentBlockReward}
-          currentPrice={props.price}
-          networkHashrate={props.hashRate}
-          difficulty={props.difficulty}
-        />
+        {props.currentBlockReward &&
+        props.price &&
+        props.hashRate &&
+        props.difficulty ? (
+          <MiningCalculator
+            currentBlockReward={props.currentBlockReward}
+            currentPrice={props.price}
+            networkHashrate={props.hashRate}
+            difficulty={props.difficulty}
+          />
+        ) : null}
+
         <Wallets />
-        <Exchanges exchanges={props.exchanges} />
+        {props.exchanges ? <Exchanges exchanges={props.exchanges} /> : null}
       </Layout>
     </div>
   );
@@ -58,26 +64,36 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/exchanges?sort=order:asc&populate=*&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const price = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD"
   )
     .then((response) => response.json())
-    .then((data) => data.ergo.usd);
-  const hashRate = await fetch("https://api.ergoplatform.com/info/").then(
-    (response) => response.json().then((data) => data.hashRate)
-  );
-  const info = await fetch("https://api.ergoplatform.com/blocks").then(
-    (response) =>
+    .then((data) => data.ergo.usd)
+    .catch((err) => null);
+  const hashRate = await fetch("https://api.ergoplatform.com/info/")
+    .then((response) => response.json().then((data) => data.hashRate))
+    .catch((err) => null);
+  const info = await fetch("https://api.ergoplatform.com/blocks")
+    .then((response) =>
       response.json().then((data) => {
         return {
           currentBlockReward: data.items[0].minerReward / 1000000000,
           difficulty: data.items[0].difficulty,
         };
       })
-  );
-  const currentBlockReward = info.currentBlockReward;
-  const difficulty = info.difficulty;
+    )
+    .catch((err) => null);
+
+  let currentBlockReward = null;
+  let difficulty = null;
+  if (info !== null) {
+    currentBlockReward = info.currentBlockReward;
+    difficulty = info.difficulty;
+  }
+
   return {
     props: { exchanges, price, hashRate, currentBlockReward, difficulty },
   };

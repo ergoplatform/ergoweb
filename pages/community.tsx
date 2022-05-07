@@ -42,8 +42,10 @@ export default function Community(props: Props) {
         <Sigmanauts />
         <ContributeForm />
         <Spotlight />
-        <Feed posts={props.posts} />
-        <HallOfFame teamMembers={props.teamMembers} />
+        {props.posts ? <Feed posts={props.posts} /> : null}
+        {props.teamMembers ? (
+          <HallOfFame teamMembers={props.teamMembers} />
+        ) : null}
         <ErgoFoundation />
         <OurMission />
       </Layout>
@@ -56,12 +58,16 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   const teamMembers = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/team-members?pagination[pageSize]=100&populate=*&locale=" +
       context.locale
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
   return {
     props: { posts, teamMembers },
   };
