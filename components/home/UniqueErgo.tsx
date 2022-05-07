@@ -49,7 +49,6 @@ let cards = [
 export default function UniqueErgo() {
   useEffect(() => {
     const cards = document.querySelectorAll(".card");
-    console.log(cards);
     let activeCard = cards[0];
 
     cards.forEach((card) => {

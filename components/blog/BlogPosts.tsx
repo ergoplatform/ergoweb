@@ -23,9 +23,7 @@ const BlogPosts = (props: Props) => {
         props.locale
     );
     const newPosts = await res.json();
-    console.log(newPosts);
     setPosts((post: any) => [...post, ...newPosts.data]);
-    console.log(newPosts);
     if (
       newPosts.meta.pagination.start + newPosts.meta.pagination.limit >
       newPosts.meta.pagination.total

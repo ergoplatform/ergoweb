@@ -68,7 +68,7 @@ export default function Post({
               </div>
             )}
             <div className="absolute left-4 top-4">
-              {tags?.split(",").map((item) => (
+              {tags?.split(",").filter((word:string) => word.length > 0).map((item) => (
                 <Link
                   href={`/category/${item.trim()}`}
                   key={item.trim()}

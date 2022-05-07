@@ -58,7 +58,7 @@ export default function Post(props: Props) {
                 {props.post.attributes.title}
               </h4>
               <div className="mb-8 mt-4 flex flex-row">
-                {props.post.attributes.tag?.split(",").map((item: string) => (
+                {props.post.attributes.tag?.split(",").filter((word:string) => word.length > 0).map((item: string) => (
                   <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
                     <div className="cursor-pointer">
                       <b
