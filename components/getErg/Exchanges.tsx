@@ -45,7 +45,7 @@ export default function Exchanges({ exchanges }: Props) {
         </div>
       </div>
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8">
-        {exchanges.data.map((exchange: any) => (
+        {exchanges.map((exchange: any) => (
           <div
             key={exchange.id}
             className="col-span-1 flex justify-center py-8 px-8 m-auto"

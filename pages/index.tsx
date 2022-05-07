@@ -75,6 +75,7 @@ export const getServerSideProps = async (context: any) => {
     process.env.NEXT_PUBLIC_STRAPI_API + "/api/partners?populate=*"
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   const news = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -82,6 +83,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
 
   const blockReward = await fetch("https://api.ergoplatform.com/blocks")

@@ -58,6 +58,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   const roadmap = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -72,6 +73,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   const favorites = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -79,6 +81,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   const chagingTheWorldProjects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -86,6 +89,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   return {
     props: { apps, roadmap, projects, favorites, chagingTheWorldProjects },

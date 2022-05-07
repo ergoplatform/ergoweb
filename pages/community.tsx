@@ -67,6 +67,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   return {
     props: { posts, teamMembers },

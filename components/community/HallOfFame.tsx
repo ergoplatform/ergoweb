@@ -57,7 +57,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
 
 function GroupPersons(data: any, group: string) {
   let persons: Array<any> = [];
-  data.data.forEach(function (person: any) {
+  data.forEach(function (person: any) {
     if (group == person.attributes.group) {
       persons.push(person);
     }

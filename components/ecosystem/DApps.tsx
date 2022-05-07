@@ -32,7 +32,7 @@ export default function DApps(props: Props) {
         </div>
       </div>
       <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10">
-        {props.apps.data.map((app: any, i: number) => (
+        {props.apps.map((app: any, i: number) => (
           <div key={i} className="w-[200px]">
             <a href={app.attributes.url}>
               {app.attributes.image.data == null ? (

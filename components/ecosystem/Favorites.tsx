@@ -62,7 +62,7 @@ export default function Favorites(props: Props) {
             pagination={{ dynamicBullets: true }}
             modules={[Pagination]}
           >
-            {props.favorites.data.map((post: any, i: number) => (
+            {props.favorites.map((post: any, i: number) => (
               <SwiperSlide key={i} className="mb-20">
                 <div className="favorite-card bg-white dark:bg-[#282828] rounded-2xl p-6 my-4 min-h-[335px] mx-1">
                   <div className="flex justify-center lg:justify-end mb-8">

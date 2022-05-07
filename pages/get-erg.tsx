@@ -66,6 +66,7 @@ export const getServerSideProps = async (context: any) => {
       context.locale
   )
     .then((response) => response.json())
+    .then((response) => response.data)
     .catch((err) => null);
   const price = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD"

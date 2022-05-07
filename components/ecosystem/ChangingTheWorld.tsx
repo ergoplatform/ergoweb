@@ -15,7 +15,7 @@ export default function ChangingTheWorld(props: Props) {
         pagination={{ dynamicBullets: true }}
         modules={[Pagination]}
       >
-        {props.chagingTheWorldProjects.data.map((post: any, i: number) => (
+        {props.chagingTheWorldProjects.map((post: any, i: number) => (
           <SwiperSlide key={i} className="mb-20 lg:mt-20">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-2/3">

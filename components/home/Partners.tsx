@@ -13,7 +13,7 @@ export default function Partners({ partners }: Props) {
         <b>Partners</b>
       </h3>
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-        {partners.data.map((partner: any) => (
+        {partners.map((partner: any) => (
           <div
             key={partner.id}
             className="col-span-1 flex justify-center py-8 px-8 m-auto"
