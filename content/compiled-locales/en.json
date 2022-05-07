@@ -623,6 +623,12 @@
       "value": "Legal"
     }
   ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Mobile Wallets"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
