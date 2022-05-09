@@ -176,7 +176,7 @@ export default function Mining() {
         </p>
         <br/>
         <Button
-          text="MINING HANDBOOK"
+          text="https://ergonaut.space/en/Guides/Mining"
           url="/blog/ergo-foundation/"
           newTab={false}
           underline={true}
