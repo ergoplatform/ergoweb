@@ -184,6 +184,7 @@
     .home-frame-4 {
         transform: scale(0.5);
         transform-origin: center left;
+        top: 3900px;
     }
     .home-frame-5 {
         transform: scale(0.5);
@@ -236,8 +237,9 @@
         transform-origin: center left;
     }
     .home-frame-5 {
-        transform: scale(0.2);
+        transform: scale(0.5);
         transform-origin: center right;
+        top: 4800px;
     }
 
     .home-blur-1 {
