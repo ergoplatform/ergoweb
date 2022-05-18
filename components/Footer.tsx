@@ -386,8 +386,12 @@ export default function Footer() {
                   </a>
                 </Link>
               </li>
+              
             </ul>
           </div>
+        </div>
+        <div className="mt-5 md:mt-0 text-gray-400">
+          1 Irving Place, #08/11 The Commerze@irving Singapore (369546)
         </div>
       </div>
     </footer>
