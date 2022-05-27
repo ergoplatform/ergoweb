@@ -48,7 +48,7 @@ const cards = [
       />
     ),
     icon: "Discord",
-    url: "https://discord.gg/ergo",
+    url: "https://https://discord.gg/PFYugUgg28",
   },
   {
     title: (
