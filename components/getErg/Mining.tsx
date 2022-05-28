@@ -201,7 +201,7 @@ export default function Mining() {
         <br/>
         <Button
           text="DISCORD"
-          url="https://https://discord.gg/PFYugUgg28"
+          url="https://discord.gg/PFYugUgg28"
           newTab={true}
           underline={true}
           textColor="brand-orange"
