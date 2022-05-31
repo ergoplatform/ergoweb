@@ -3,11 +3,13 @@ import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 import BlogNews from "../components/blog/BlogNews";
 import BlogPosts from "../components/blog/BlogPosts";
+import Media from "../components/blog/Media";
 import Layout from "../components/Layout";
 
 type Props = {
   posts?: any;
   news?: any;
+  media?: any;
   categories?: any;
 };
 
@@ -28,6 +30,7 @@ export default function Blog(props: Props) {
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
           {props.news ? <BlogNews news={props.news} /> : null}
+          {props.media ? <Media mediaPosts={props.media} /> : null}
           <div className="flex flex-row justify-between my-10 mx-4">
             <div className="flex flex-row flex-wrap">
               {props.categories
@@ -79,6 +82,14 @@ export const getServerSideProps = async (context: any) => {
     .then((response) => response.data)
     .catch((err) => null);
 
+  const media = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      "/api/media-posts?pagination[pageSize]=20"
+  )
+    .then((response) => response.json())
+    .then((response) => response.data)
+    .catch((err) => null);
+
   const categories = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       "/api/categories?pagination[pageSize]=20&locale=" +
@@ -89,6 +100,6 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
 
   return {
-    props: { posts, news, categories },
+    props: { posts, news, categories, media },
   };
 };
