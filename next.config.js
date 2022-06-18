@@ -93,7 +93,7 @@ const nextConfig = {
       "default",
       "en",
       "es",
-      // 'de',
+      "de",
       // 'fr',
       // 'hi',
       // 'it',
