@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
-import Post from "../shared/Post";
+import React, { useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import Post from '../shared/Post';
 
 type Props = {
   data: any;
@@ -13,14 +13,14 @@ const BlogPosts = (props: Props) => {
   const [posts, setPosts] = useState(props.data);
   const [hasMore, setHasMore] = useState(true);
   if (filter == undefined) {
-    filter = "";
+    filter = '';
   }
 
   const getMorePost = async () => {
     const res = await fetch(
       process.env.NEXT_PUBLIC_STRAPI_API +
         `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[start]=${posts.length}&pagination[limit]=9&populate=*&filters[type][$eq]=blog${filter}&locale=` +
-        props.locale
+        props.locale,
     );
     const newPosts = await res.json();
     setPosts((post: any) => [...post, ...newPosts.data]);
@@ -69,8 +69,7 @@ const BlogPosts = (props: Props) => {
                     content={post.attributes.content}
                     image={
                       post.attributes.image.data != null
-                        ? post.attributes.image.data.attributes.formats.medium
-                            .url
+                        ? post.attributes.image.data.attributes.formats.medium.url
                         : null
                     }
                     blogPhoto={post.attributes.blogPhoto}

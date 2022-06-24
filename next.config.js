@@ -64,11 +64,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/news/",
-        destination: "/blog/",
-        permanent: true,
-      },
-      {
         source: "/documents/",
         destination: "/discover/#Documents",
         permanent: true,
