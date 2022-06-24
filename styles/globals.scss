@@ -422,3 +422,11 @@ footer
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+blockquote {
+  color: black;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #eee solid;
+  font-style: italic;
+}
