@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgBpsaaLogo = (props) => (
-  <svg
-    width={227}
-    height={102}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={227} height={102} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M20.542 48.487a107.336 107.336 0 0 1-2.059-12.136v-.185c-6-3.335-11.92-6.835-17.828-10.294l-.288-.175v50.664l.144-.134a10.5 10.5 0 0 1 1.781-1.482c7.771-4.344 15.44-8.821 23.212-13.186a72.594 72.594 0 0 1-4.962-13.072Z"
       fill="url(#bpsaa-logo_svg__a)"

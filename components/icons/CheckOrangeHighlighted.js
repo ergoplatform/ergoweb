@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgCheckOrangeHighlighted = (props) => (
-  <svg
-    width={54}
-    height={47}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={54} height={47} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <ellipse
       cx={21.497}
       cy={25.297}

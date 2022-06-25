@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgUsingErgBuyIt = (props) => (
-  <svg
-    width={224}
-    height={414}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={224} height={414} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g clipPath="url(#using-erg-buy-it_svg__a)">
       <path
         fillRule="evenodd"

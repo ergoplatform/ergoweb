@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgWalletX = (props) => (
-  <svg
-    width={44}
-    height={42}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={44} height={42} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M42.497 21c0 10.876-9.144 19.752-20.498 19.752-11.353 0-20.497-8.876-20.497-19.753 0-10.876 9.143-19.753 20.497-19.753S42.497 10.123 42.497 21Z"
       stroke="#585858"

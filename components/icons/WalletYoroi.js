@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgWalletYoroi = (props) => (
   <svg
@@ -17,10 +17,7 @@ const SvgWalletYoroi = (props) => (
         width={1}
         height={1}
       >
-        <use
-          xlinkHref="#wallet-yoroi_svg__b"
-          transform="matrix(.00415 0 0 .00482 0 -.004)"
-        />
+        <use xlinkHref="#wallet-yoroi_svg__b" transform="matrix(.00415 0 0 .00482 0 -.004)" />
       </pattern>
       <image
         id="wallet-yoroi_svg__b"

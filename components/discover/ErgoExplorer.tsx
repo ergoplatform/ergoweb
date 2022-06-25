@@ -1,17 +1,17 @@
-import Link from "next/link";
-import { useIntl } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
+import Link from 'next/link';
+import { useIntl } from 'react-intl';
+import { getIconComponentByName } from '../../utils/icons-map';
 
 export default function Explore() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
-    id: "components.ergoExplorer.button1",
-    defaultMessage: "EXPLORER",
+    id: 'components.ergoExplorer.button1',
+    defaultMessage: 'EXPLORER',
   });
 
   const button2Text = intl.formatMessage({
-    id: "components.ergoExplorer.button2",
-    defaultMessage: "ERGO.WATCH",
+    id: 'components.ergoExplorer.button2',
+    defaultMessage: 'ERGO.WATCH',
   });
 
   return (
@@ -23,9 +23,8 @@ export default function Explore() {
         <b>Explore</b>
       </h1>
       <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
-        The Ergo Explorer is your interface with the blockchain. 
-        Watch every transaction made in real-time.
-        Or, view community curated metrics on ergo.watch.
+        The Ergo Explorer is your interface with the blockchain. Watch every transaction made in
+        real-time. Or, view community curated metrics on ergo.watch.
       </p>
       <Link href="https://explorer.ergoplatform.com/" passHref>
         <a target="_blank" rel="noopener noreferrer">
@@ -34,9 +33,7 @@ export default function Explore() {
             className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[400px]"
           >
             <span>{button1Text}</span>
-            <span className="w-4 h-4 ml-2">
-              {getIconComponentByName("ArrowRightBlack")}
-            </span>
+            <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
           </button>
         </a>
       </Link>
@@ -47,9 +44,7 @@ export default function Explore() {
             className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[10px]"
           >
             <span>{button2Text}</span>
-            <span className="w-4 h-4 ml-2">
-              {getIconComponentByName("ArrowRightBlack")}
-            </span>
+            <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
           </button>
         </a>
       </Link>

@@ -1,4 +1,4 @@
-import * as SvgIconsComponent from "../components/icons";
+import * as SvgIconsComponent from '../components/icons';
 
 /**
  * Icons Component map.

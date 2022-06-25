@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { useIntl } from "react-intl";
-import Button from "../Button";
+import Image from 'next/image';
+import { useIntl } from 'react-intl';
+import Button from '../Button';
 
 type Props = {
   apps?: any;
@@ -9,8 +9,8 @@ type Props = {
 export default function DApps(props: Props) {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
-    id: "components.DApps.seeAllProjects",
-    defaultMessage: "SEE ALL PROJECTS",
+    id: 'components.DApps.seeAllProjects',
+    defaultMessage: 'SEE ALL PROJECTS',
   });
   return (
     <div id="DApps" className="max-w-[1300px] mx-auto p-4 relative -mt-60 lg:-mt-[600px] z-10">
@@ -50,7 +50,9 @@ export default function DApps(props: Props) {
               )}
             </a>
             <div className="mt-6 mb-3">
-              <a className="font-subtitle-3-bold mb-3" href={app.attributes.url}>{app.attributes.title}</a>
+              <a className="font-subtitle-3-bold mb-3" href={app.attributes.url}>
+                {app.attributes.title}
+              </a>
             </div>
             <p className="text-[#585858] dark:text-[#807e7e]">{app.attributes.description}</p>
           </div>

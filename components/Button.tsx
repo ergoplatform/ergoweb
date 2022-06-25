@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { getIconComponentByName } from "../utils/icons-map";
-import React from "react";
+import Link from 'next/link';
+import { getIconComponentByName } from '../utils/icons-map';
+import React from 'react';
 
 type Props = {
   text: React.ReactNode;
@@ -17,29 +17,29 @@ type Props = {
 export default function Button({
   text,
   url,
-  icon = "none",
+  icon = 'none',
   textColor,
   newTab = false,
   underline = false,
   background = true,
-  iconColor = "black",
-  customClass = "",
+  iconColor = 'black',
+  customClass = '',
 }: Props) {
   var className =
     `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${textColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange` +
     customClass;
-  var target = "_self";
+  var target = '_self';
 
   if (underline == true) {
-    className += " underline";
+    className += ' underline';
   }
 
   if (newTab == true) {
-    target = "_blank";
+    target = '_blank';
   }
 
   if (background == false) {
-    className += " bg-transparent";
+    className += ' bg-transparent';
   }
 
   return (
@@ -49,14 +49,12 @@ export default function Button({
           <a target={target}>
             <button className={className}>
               <span>{text}</span>
-              {icon == "none" ? (
+              {icon == 'none' ? (
                 ``
               ) : (
                 <span className="w-4 h-4 ml-2">
                   {getIconComponentByName(
-                    "ArrowRight" +
-                      iconColor.charAt(0).toUpperCase() +
-                      iconColor.slice(1)
+                    'ArrowRight' + iconColor.charAt(0).toUpperCase() + iconColor.slice(1),
                   )}
                 </span>
               )}

@@ -1,7 +1,7 @@
-import { Tab } from "@headlessui/react";
-import Image from "next/image";
-import Link from "next/link";
-import { Github, Linkedin, PersonPlaceholder, Twitter } from "../icons";
+import { Tab } from '@headlessui/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Github, Linkedin, PersonPlaceholder, Twitter } from '../icons';
 
 type Props = {
   teamMembers?: any;
@@ -17,7 +17,6 @@ type HallOfFamePersonProps = {
 };
 
 function HallOfFamePerson(props: HallOfFamePersonProps) {
-
   return (
     <div className="h-[400px] w-56 lg:w-80 mx-auto md:mb-16">
       <div className="flip">
@@ -36,19 +35,40 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
           </div>
           <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80 flex flex-col-reverse">
             <div className="my-auto px-2 lg:px-6">
-              <p className="text-center text-xs lg:text-sm align-middle text-white">
-                {props.bio}
-              </p>
+              <p className="text-center text-xs lg:text-sm align-middle text-white">{props.bio}</p>
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col mt-4">
-        <div><p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p></div>
+        <div>
+          <p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p>
+        </div>
         <div className="mt-0 md:mt-4 flex -ml-2 md:-ml-1 space-x-4">
-          {props.linkedin != undefined ? (<Link href={props.linkedin} passHref><a><Linkedin viewBox="0 0 28 28" className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"/></a></Link>) : null}
-          {props.twitter != undefined ? (<Link href={props.twitter} passHref><a><Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></a></Link>) : null}
-          {props.github != undefined ? (<Link href={props.github} passHref><a><Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange"/></a></Link>) : null}
+          {props.linkedin != undefined ? (
+            <Link href={props.linkedin} passHref>
+              <a>
+                <Linkedin
+                  viewBox="0 0 28 28"
+                  className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"
+                />
+              </a>
+            </Link>
+          ) : null}
+          {props.twitter != undefined ? (
+            <Link href={props.twitter} passHref>
+              <a>
+                <Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
+              </a>
+            </Link>
+          ) : null}
+          {props.github != undefined ? (
+            <Link href={props.github} passHref>
+              <a>
+                <Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
+              </a>
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>
@@ -93,18 +113,15 @@ export default function HallOfFame(props: Props) {
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
-            Ergo was founded with a team who have solid backgrounds in core
-            development with cryptocurrencies and blockchain frameworks
-            including NXT, Scorex, Cardano and Waves. Below are brief
-            biographies for some of the core ERGO team as well as some of the
-            many other developers and community members involved, some of whom
-            are anonymous.
+            Ergo was founded with a team who have solid backgrounds in core development with
+            cryptocurrencies and blockchain frameworks including NXT, Scorex, Cardano and Waves.
+            Below are brief biographies for some of the core ERGO team as well as some of the many
+            other developers and community members involved, some of whom are anonymous.
           </p>
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
-            Ergo is grassroots, and most core team members (and even foundation
-            members) started out as community members. There is a brief
-            description as well as information to read more about the Ergo
-            Foundation at the bottom of this page.
+            Ergo is grassroots, and most core team members (and even foundation members) started out
+            as community members. There is a brief description as well as information to read more
+            about the Ergo Foundation at the bottom of this page.
           </p>
         </div>
       </div>
@@ -114,8 +131,8 @@ export default function HallOfFame(props: Props) {
             <Tab
               className={({ selected }) =>
                 selected
-                  ? "font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4"
-                  : "font-subtitle-3-uppercase"
+                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
+                  : 'font-subtitle-3-uppercase'
               }
             >
               CORE
@@ -123,8 +140,8 @@ export default function HallOfFame(props: Props) {
             <Tab
               className={({ selected }) =>
                 selected
-                  ? "font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4"
-                  : "font-subtitle-3-uppercase"
+                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
+                  : 'font-subtitle-3-uppercase'
               }
             >
               COMMUNITY
@@ -132,8 +149,8 @@ export default function HallOfFame(props: Props) {
             <Tab
               className={({ selected }) =>
                 selected
-                  ? "font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4"
-                  : "font-subtitle-3-uppercase"
+                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
+                  : 'font-subtitle-3-uppercase'
               }
             >
               FOUNDATION
@@ -141,13 +158,13 @@ export default function HallOfFame(props: Props) {
           </Tab.List>
           <Tab.Panels className="mt-16">
             <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, "ecosystem_core")}
+              {GroupPersons(props.teamMembers, 'ecosystem_core')}
             </Tab.Panel>
             <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, "community")}
+              {GroupPersons(props.teamMembers, 'community')}
             </Tab.Panel>
             <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, "ergo_foundation")}
+              {GroupPersons(props.teamMembers, 'ergo_foundation')}
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>

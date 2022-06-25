@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgXWhiteHighlighted = (props) => (
-  <svg
-    width={54}
-    height={46}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={54} height={46} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M41.995 24.803c0 10.876-9.143 19.753-20.497 19.753C10.142 44.556 1 35.679 1 24.803 1 13.926 10.143 5.05 21.497 5.05c11.355 0 20.498 8.876 20.498 19.753Z"
       stroke="#fff"

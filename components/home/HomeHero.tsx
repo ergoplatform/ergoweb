@@ -1,11 +1,11 @@
-import { FormattedMessage, useIntl } from "react-intl";
-import Button from "../Button";
+import { FormattedMessage, useIntl } from 'react-intl';
+import Button from '../Button';
 
 export default function HomeHero() {
   const intl = useIntl();
   const button = intl.formatMessage({
-    id: "components.homeHero.button",
-    defaultMessage: "DIVE IN",
+    id: 'components.homeHero.button',
+    defaultMessage: 'DIVE IN',
   });
 
   return (
@@ -34,7 +34,7 @@ export default function HomeHero() {
             <FormattedMessage
               defaultMessage="Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
               id="components.homeHero.text"
-              values={{ br: <br />  }}
+              values={{ br: <br /> }}
             />
           </p>
         </div>
@@ -52,19 +52,29 @@ export default function HomeHero() {
         </div>
       </div>
       <div className="hidden dark:block">
-        <video autoPlay={true} playsInline={true} loop={true} muted={true} className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
-          <source
-            src="../assets/ergo-dark.mp4"
-            type="video/mp4"
-          />
+        <video
+          autoPlay={true}
+          playsInline={true}
+          loop={true}
+          muted={true}
+          className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+          disablePictureInPicture={true}
+          controlsList="nodownload"
+        >
+          <source src="../assets/ergo-dark.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="dark:hidden">
-        <video autoPlay={true} playsInline={true} loop={true} muted={true} className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100" disablePictureInPicture={true} controlsList="nodownload">
-          <source
-            src="../assets/ergo-light.mp4"
-            type="video/mp4"
-          />
+        <video
+          autoPlay={true}
+          playsInline={true}
+          loop={true}
+          muted={true}
+          className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+          disablePictureInPicture={true}
+          controlsList="nodownload"
+        >
+          <source src="../assets/ergo-light.mp4" type="video/mp4" />
         </video>
       </div>
     </div>

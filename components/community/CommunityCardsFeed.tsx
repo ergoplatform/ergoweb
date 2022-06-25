@@ -1,29 +1,21 @@
-import { FormattedMessage } from "react-intl";
-import CommunityCard from "./CommunityCard";
+import { FormattedMessage } from 'react-intl';
+import CommunityCard from './CommunityCard';
 
 const cards = [
   {
-    title: (
-      <FormattedMessageFixed
-        defaultMessage="Wiki"
-        id="components.communityHero.Wiki.title"
-      />
-    ),
+    title: <FormattedMessageFixed defaultMessage="Wiki" id="components.communityHero.Wiki.title" />,
     text: (
       <FormattedMessageFixed
         defaultMessage="Your community wiki. Contribute in any language!"
         id="components.communityHero.Wiki.text"
       />
     ),
-    icon: "ErgoWiki",
-    url: "https://ergonaut.space/",
+    icon: 'ErgoWiki',
+    url: 'https://ergonaut.space/',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Reddit"
-        id="components.communityHero.Reddit.title"
-      />
+      <FormattedMessageFixed defaultMessage="Reddit" id="components.communityHero.Reddit.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -31,15 +23,12 @@ const cards = [
         id="components.communityHero.Reddit.text"
       />
     ),
-    icon: "Reddit",
-    url: "https://www.reddit.com/r/ergonauts/comments/u22yc9/ecosystem_subreddits/",
+    icon: 'Reddit',
+    url: 'https://www.reddit.com/r/ergonauts/comments/u22yc9/ecosystem_subreddits/',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Discord"
-        id="components.communityHero.Discord.title"
-      />
+      <FormattedMessageFixed defaultMessage="Discord" id="components.communityHero.Discord.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -47,15 +36,12 @@ const cards = [
         id="components.communityHero.Discord.text"
       />
     ),
-    icon: "Discord",
-    url: "https://discord.gg/PFYugUgg28",
+    icon: 'Discord',
+    url: 'https://discord.gg/PFYugUgg28',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Github"
-        id="components.communityHero.Github.title"
-      />
+      <FormattedMessageFixed defaultMessage="Github" id="components.communityHero.Github.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -63,15 +49,12 @@ const cards = [
         id="components.communityHero.Github.text"
       />
     ),
-    icon: "Github",
-    url: "https://github.com/ergoplatform",
+    icon: 'Github',
+    url: 'https://github.com/ergoplatform',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Twitter"
-        id="components.communityHero.Twitter.title"
-      />
+      <FormattedMessageFixed defaultMessage="Twitter" id="components.communityHero.Twitter.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -79,8 +62,8 @@ const cards = [
         id="components.communityHero.Twitter.text"
       />
     ),
-    icon: "Twitter",
-    url: "https://twitter.com/ergoplatformorg",
+    icon: 'Twitter',
+    url: 'https://twitter.com/ergoplatformorg',
   },
   {
     title: (
@@ -95,15 +78,12 @@ const cards = [
         id="components.communityHero.Telegram.text"
       />
     ),
-    icon: "Telegram",
-    url: "https://t.me/ErgoChats",
+    icon: 'Telegram',
+    url: 'https://t.me/ErgoChats',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Forum"
-        id="components.communityHero.Discourse.title"
-      />
+      <FormattedMessageFixed defaultMessage="Forum" id="components.communityHero.Discourse.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -111,15 +91,12 @@ const cards = [
         id="components.communityHero.Discourse.text"
       />
     ),
-    icon: "Discourse",
-    url: "https://www.ergoforum.org/",
+    icon: 'Discourse',
+    url: 'https://www.ergoforum.org/',
   },
   {
     title: (
-      <FormattedMessageFixed
-        defaultMessage="Youtube"
-        id="components.communityHero.Youtube.title"
-      />
+      <FormattedMessageFixed defaultMessage="Youtube" id="components.communityHero.Youtube.title" />
     ),
     text: (
       <FormattedMessageFixed
@@ -127,8 +104,8 @@ const cards = [
         id="components.communityHero.Youtube.text"
       />
     ),
-    icon: "Youtube",
-    url: "https://www.youtube.com/c/ErgoPlatform/videos",
+    icon: 'Youtube',
+    url: 'https://www.youtube.com/c/ErgoPlatform/videos',
   },
 ];
 
@@ -139,18 +116,18 @@ function FormattedMessageFixed(props: any) {
 export default function JoinUs() {
   return (
     <div id="JoinUs" className="relative z-10">
-        <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-2 xl:py-8 2xl:hidden">
-          {cards.map((card: any, i: number) => (
-            <CommunityCard
-              key={i}
-              title={card.title}
-              text={card.text}
-              icon={card.icon}
-              url={card.url}
-            />
-          ))}
-          <div className="w-0.1 flex-shrink-0"></div>
-        </div>
+      <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-2 xl:py-8 2xl:hidden">
+        {cards.map((card: any, i: number) => (
+          <CommunityCard
+            key={i}
+            title={card.title}
+            text={card.text}
+            icon={card.icon}
+            url={card.url}
+          />
+        ))}
+        <div className="w-0.1 flex-shrink-0"></div>
+      </div>
       <div className="hidden max-w-[1300px] mx-auto p-4 2xl:grid overflow-hidden grid-cols-4 grid-rows-2 gap-6">
         {cards.map((card: any, i: number) => (
           <CommunityCard
@@ -159,7 +136,7 @@ export default function JoinUs() {
             text={card.text}
             icon={card.icon}
             url={card.url}
-            />
+          />
         ))}
       </div>
     </div>

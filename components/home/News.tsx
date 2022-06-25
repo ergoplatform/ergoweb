@@ -1,7 +1,7 @@
-import { FormattedDate } from "react-intl";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import Button from "../Button";
+import { FormattedDate } from 'react-intl';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import Button from '../Button';
 
 type Props = {
   news: any;
@@ -9,11 +9,7 @@ type Props = {
 
 export default function News({ news }: Props) {
   return (
-    <div
-      id="News"
-      className="max-w-7xl mx-auto px-2 md:px-4 relative"
-      style={{ zIndex: 12 }}
-    >
+    <div id="News" className="max-w-7xl mx-auto px-2 md:px-4 relative" style={{ zIndex: 12 }}>
       <div className="mt-36 mb-14 max-w-7xl p-4 md:p-0 flex flex-col lg:flex-row">
         <div className="item lg:w-1/2 mb-8 text-right lg:order-last">
           <h1 className="-mb-8 md:-mb-20">

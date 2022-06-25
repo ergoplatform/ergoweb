@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgUniqueErgo2 = (props) => (
-  <svg
-    width={148}
-    height={151}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={148} height={151} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M73.838 150c40.228 0 72.838-32.583 72.838-72.777 0-40.193-32.61-72.777-72.838-72.777C33.611 4.446 1 37.03 1 77.223 1 117.417 33.61 150 73.838 150Z"
       stroke="#fff"

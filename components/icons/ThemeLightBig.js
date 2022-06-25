@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgThemeLightBig = (props) => (
-  <svg
-    width={81}
-    height={38}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={81} height={38} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#theme-light-big_svg__a)">
       <path
         d="M0 19C0 8.507 8.507 0 19 0h43c10.493 0 19 8.507 19 19s-8.507 19-19 19H19C8.507 38 0 29.493 0 19Z"

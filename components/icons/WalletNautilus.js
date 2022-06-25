@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgWalletNautilus = (props) => (
   <svg
@@ -6,7 +6,7 @@ const SvgWalletNautilus = (props) => (
     x={0}
     y={0}
     style={{
-      enableBackground: "new 0 0 1417.3 1417.3",
+      enableBackground: 'new 0 0 1417.3 1417.3',
     }}
     xmlSpace="preserve"
     id="wallet-nautilus_svg__svg230"
@@ -26,14 +26,14 @@ const SvgWalletNautilus = (props) => (
         <stop
           offset={0}
           style={{
-            stopColor: "#ffeabd",
+            stopColor: '#ffeabd',
           }}
           id="wallet-nautilus_svg__stop91"
         />
         <stop
           offset={1}
           style={{
-            stopColor: "#ffc027",
+            stopColor: '#ffc027',
           }}
           id="wallet-nautilus_svg__stop93"
         />
@@ -50,14 +50,14 @@ const SvgWalletNautilus = (props) => (
         <stop
           id="wallet-nautilus_svg__stop200"
           style={{
-            stopColor: "#ffeabd",
+            stopColor: '#ffeabd',
           }}
           offset={0}
         />
         <stop
           id="wallet-nautilus_svg__stop202"
           style={{
-            stopColor: "#ffc027",
+            stopColor: '#ffc027',
           }}
           offset={1}
         />
@@ -65,7 +65,7 @@ const SvgWalletNautilus = (props) => (
     </defs>
     <style type="text/css" id="style2">
       {
-        ".wallet-nautilus_svg__st0,.wallet-nautilus_svg__st2{fill:#ffae00}.wallet-nautilus_svg__st2,.wallet-nautilus_svg__st3{stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.wallet-nautilus_svg__st4{fill:#ffeabd}"
+        '.wallet-nautilus_svg__st0,.wallet-nautilus_svg__st2{fill:#ffae00}.wallet-nautilus_svg__st2,.wallet-nautilus_svg__st3{stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.wallet-nautilus_svg__st4{fill:#ffeabd}'
       }
     </style>
     <g id="wallet-nautilus_svg__g39" transform="translate(.767 -1.182)">
@@ -74,18 +74,12 @@ const SvgWalletNautilus = (props) => (
         d="M701.4 835.3c-76.9 0-149.2-29.9-203.5-84.3-54.4-54.4-84.3-126.7-84.3-203.5s29.9-149.2 84.3-203.5c54.4-54.4 126.7-84.3 203.5-84.3s149.2 29.9 203.5 84.3c54.4 54.4 84.3 126.7 84.3 203.5S959.3 696.7 904.9 751c-54.4 54.3-126.7 84.3-203.5 84.3zm0-560.4c-72.8 0-141.2 28.3-192.7 79.8s-79.8 119.9-79.8 192.7c0 72.8 28.3 141.2 79.8 192.7s119.9 79.8 192.7 79.8c72.8 0 141.2-28.3 192.7-79.8s79.8-119.9 79.8-192.7c0-72.8-28.4-141.2-79.9-192.7-51.4-51.5-119.9-79.8-192.6-79.8z"
         id="wallet-nautilus_svg__path37"
         style={{
-          fill: "#ffae00",
+          fill: '#ffae00',
         }}
       />
     </g>
-    <g
-      id="wallet-nautilus_svg__g1539"
-      transform="translate(13.422 8.323) scale(.98509)"
-    >
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g47"
-      >
+    <g id="wallet-nautilus_svg__g1539" transform="translate(13.422 8.323) scale(.98509)">
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g47">
         <path
           id="wallet-nautilus_svg__path43"
           d="M701.4 788.8c-60.1 0-106.9-34.7-129.4-55.3-31.5-28.9-53.5-65-53.5-87.8 0-13 7.4-18.5 24.8-18.5 13.1 0 30.9 3.1 51.5 6.8 29.8 5.2 66.9 11.8 106.7 11.8s76.9-6.5 106.7-11.8c20.6-3.6 38.4-6.8 51.5-6.8 17.4 0 24.8 5.5 24.8 18.5 0 22.8-22 58.9-53.5 87.8-22.7 20.7-69.5 55.3-129.6 55.3z"
@@ -97,29 +91,23 @@ const SvgWalletNautilus = (props) => (
       </g>
       <path
         style={{
-          fill: "#ffae00",
+          fill: '#ffae00',
           strokeWidth: 1.09097826,
         }}
         id="wallet-nautilus_svg__path53"
         d="M857.798 623.924c0 38.184-71.023 124.48-158.737 124.48-87.715 0-158.629-86.405-158.629-124.48s71.023-1.419 158.738-1.419 158.628-36.766 158.628 1.419z"
         className="wallet-nautilus_svg__st0"
       />
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g57"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g57">
         <path
           style={{
-            fill: "#fff",
+            fill: '#fff',
           }}
           id="wallet-nautilus_svg__path55"
           d="M701.4 747.6c-68.2 0-122.2-52.9-141.8-88.5-1.7-3.1-.6-7.1 2.5-8.8 3.1-1.7 7.1-.6 8.8 2.5 10.9 19.8 29.3 39.6 50.5 54.5 17.7 12.4 46 27.3 79.9 27.3 3.6 0 6.5 2.9 6.5 6.5s-2.9 6.5-6.4 6.5z"
         />
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g63"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g63">
         <path
           id="wallet-nautilus_svg__path59"
           d="M701.4 663.2c-30.1 0-50.8-1.7-67.1-5.4-18.6-4.3-32-11.4-42.2-22.3-20.5-22.1-28.9-61.3-28.9-135.1 0-78.5 62-142.4 138.2-142.4 76.2 0 138.2 63.9 138.2 142.4 0 73.8-8.4 113-28.9 135.1-21.4 23.1-57.7 27.7-109.3 27.7z"
@@ -131,11 +119,11 @@ const SvgWalletNautilus = (props) => (
       </g>
       <ellipse
         style={{
-          fill: "#ffae00",
-          stroke: "#000",
+          fill: '#ffae00',
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__ellipse65"
@@ -147,10 +135,10 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path77"
@@ -159,10 +147,10 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path79"
@@ -171,37 +159,31 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          fill: "#ffae00",
-          stroke: "#000",
+          fill: '#ffae00',
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path81"
         d="M772.374 323.905c0-17.892-32.838-32.293-73.313-32.293-40.476 0-73.314 14.51-73.314 32.293v14.51c0 17.892 32.838 32.293 73.314 32.293 40.475 0 73.313-14.51 73.313-32.293v-14.51z"
         className="wallet-nautilus_svg__st2"
       />
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g85"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g85">
         <path
           style={{
-            fill: "#ffeabd",
+            fill: '#ffeabd',
           }}
           id="wallet-nautilus_svg__path83"
           d="M607.5 643.5c-5.8 0-10.4-4.7-10.4-10.4s4.7-10.4 10.4-10.4 10.4 4.7 10.4 10.4-4.7 10.4-10.4 10.4zm0-15.9c-3 0-5.4 2.4-5.4 5.4 0 3 2.4 5.4 5.4 5.4 3 0 5.4-2.4 5.4-5.4 0-3-2.4-5.4-5.4-5.4z"
           className="wallet-nautilus_svg__st4"
         />
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g89"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g89">
         <path
           style={{
-            fill: "#ffeabd",
+            fill: '#ffeabd',
           }}
           id="wallet-nautilus_svg__path87"
           d="M794.7 645.3c-5.8 0-10.4-4.7-10.4-10.4s4.7-10.4 10.4-10.4 10.4 4.7 10.4 10.4-4.6 10.4-10.4 10.4zm0-15.9c-3 0-5.4 2.4-5.4 5.4 0 3 2.4 5.4 5.4 5.4 3 0 5.4-2.4 5.4-5.4 0-3-2.4-5.4-5.4-5.4z"
@@ -210,8 +192,8 @@ const SvgWalletNautilus = (props) => (
       </g>
       <ellipse
         style={{
-          fill: "url(#wallet-nautilus_svg__SVGID_1_)",
-          stroke: "#000",
+          fill: 'url(#wallet-nautilus_svg__SVGID_1_)',
+          stroke: '#000',
           strokeWidth: 3.27293491,
           strokeMiterlimit: 10,
         }}
@@ -221,37 +203,25 @@ const SvgWalletNautilus = (props) => (
         cy={316.268}
         cx={699.17}
       />
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g100"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g100">
         <path
           id="wallet-nautilus_svg__path98"
           d="M701.4 367.9c-36.2 0-64.5-10-64.5-22.8s28.3-22.8 64.5-22.8 64.5 10 64.5 22.8-28.4 22.8-64.5 22.8zm0-42.2c-36.5 0-61 10-61 19.4 0 9.4 24.5 19.4 61 19.4s61-10 61-19.4c0-9.4-24.5-19.4-61-19.4z"
         />
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g104"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g104">
         <path
           id="wallet-nautilus_svg__path102"
           d="M744.6 355c-28.2-9.6-60.5-9.6-86.5 0l-1-2.8c26.6-9.9 59.7-9.9 88.5 0z"
         />
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g108"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g108">
         <path
           id="wallet-nautilus_svg__path106"
           d="M745.9 339.3c-28.1-9.6-63-9.6-89 0l-1-2.8c26.5-9.8 62.3-9.8 91 0z"
         />
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g118"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g118">
         <g id="wallet-nautilus_svg__g112">
           <path
             id="wallet-nautilus_svg__path110"
@@ -267,10 +237,10 @@ const SvgWalletNautilus = (props) => (
       </g>
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path120"
@@ -279,10 +249,10 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path122"
@@ -291,10 +261,10 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path124"
@@ -303,27 +273,24 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path126"
         d="M824.087 553.883c6.218 7.528 11.128 19.092 6.655 26.62l11.782-18.11s.219-16.474-.545-16.474-17.892 7.964-17.892 7.964z"
         className="wallet-nautilus_svg__st3"
       />
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g159"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g159">
         <path
           style={{
-            fill: "#ffae00",
-            stroke: "#000",
+            fill: '#ffae00',
+            stroke: '#000',
             strokeWidth: 3,
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
             strokeMiterlimit: 10,
           }}
           id="wallet-nautilus_svg__path128"
@@ -342,14 +309,14 @@ const SvgWalletNautilus = (props) => (
           <stop
             id="wallet-nautilus_svg__stop130"
             style={{
-              stopColor: "#ffeabd",
+              stopColor: '#ffeabd',
             }}
             offset={0}
           />
           <stop
             id="wallet-nautilus_svg__stop132"
             style={{
-              stopColor: "#ffc027",
+              stopColor: '#ffc027',
             }}
             offset={1}
           />
@@ -361,8 +328,8 @@ const SvgWalletNautilus = (props) => (
           cy={499.5}
           cx={560.4}
           style={{
-            fill: "url(#wallet-nautilus_svg__SVGID_00000176005321536671225770000008511700494046240935_)",
-            stroke: "#000",
+            fill: 'url(#wallet-nautilus_svg__SVGID_00000176005321536671225770000008511700494046240935_)',
+            stroke: '#000',
             strokeWidth: 3,
             strokeMiterlimit: 10,
           }}
@@ -400,17 +367,14 @@ const SvgWalletNautilus = (props) => (
           </g>
         </g>
       </g>
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g192"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g192">
         <path
           style={{
-            fill: "#ffae00",
-            stroke: "#000",
+            fill: '#ffae00',
+            stroke: '#000',
             strokeWidth: 3,
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
             strokeMiterlimit: 10,
           }}
           id="wallet-nautilus_svg__path161"
@@ -429,14 +393,14 @@ const SvgWalletNautilus = (props) => (
           <stop
             id="wallet-nautilus_svg__stop163"
             style={{
-              stopColor: "#ffeabd",
+              stopColor: '#ffeabd',
             }}
             offset={0}
           />
           <stop
             id="wallet-nautilus_svg__stop165"
             style={{
-              stopColor: "#ffc027",
+              stopColor: '#ffc027',
             }}
             offset={1}
           />
@@ -448,8 +412,8 @@ const SvgWalletNautilus = (props) => (
           cy={499.5}
           cx={841.8}
           style={{
-            fill: "url(#wallet-nautilus_svg__SVGID_00000121272453921459185760000015437207460504906381_)",
-            stroke: "#000",
+            fill: 'url(#wallet-nautilus_svg__SVGID_00000121272453921459185760000015437207460504906381_)',
+            stroke: '#000',
             strokeWidth: 3,
             strokeMiterlimit: 10,
           }}
@@ -489,10 +453,10 @@ const SvgWalletNautilus = (props) => (
       </g>
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path194"
@@ -501,10 +465,10 @@ const SvgWalletNautilus = (props) => (
       />
       <path
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 3.27293491,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
           strokeMiterlimit: 10,
         }}
         id="wallet-nautilus_svg__path196"
@@ -517,15 +481,15 @@ const SvgWalletNautilus = (props) => (
         r={91.969}
         id="wallet-nautilus_svg__circle198"
         style={{
-          stroke: "#000",
+          stroke: '#000',
           strokeWidth: 8.22194004,
           strokeMiterlimit: 10,
         }}
       />
       <circle
         style={{
-          fill: "url(#wallet-nautilus_svg__SVGID_00000085238500194547172150000002663939323965651385_)",
-          stroke: "#000",
+          fill: 'url(#wallet-nautilus_svg__SVGID_00000085238500194547172150000002663939323965651385_)',
+          stroke: '#000',
           strokeWidth: 3.27293491,
           strokeMiterlimit: 10,
         }}
@@ -534,10 +498,7 @@ const SvgWalletNautilus = (props) => (
         r={78.114}
         id="wallet-nautilus_svg__circle205"
       />
-      <g
-        transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)"
-        id="wallet-nautilus_svg__g223"
-      >
+      <g transform="matrix(1.09098 0 0 1.09098 -66.042 -60.229)" id="wallet-nautilus_svg__g223">
         <g id="wallet-nautilus_svg__g217">
           <path
             d="M726.9 565.6c-5 0-10-1.9-13.8-5.7l-71.2-71.2c-7.6-7.6-7.6-20 0-27.7l19.1-19.1c7.6-7.6 20-7.6 27.7 0l71.2 71.2c7.6 7.6 7.6 20 0 27.7l-19.1 19.1c-3.8 3.8-8.8 5.7-13.9 5.7zm-52.1-123.1c-3.6 0-6.9 1.4-9.4 3.9l-19.1 19.1c-2.5 2.5-3.9 5.8-3.9 9.4 0 3.6 1.4 6.9 3.9 9.4l71.2 71.2c5.2 5.2 13.6 5.2 18.8 0l19.1-19.1c5.2-5.2 5.2-13.6 0-18.8l-71.2-71.2c-2.5-2.6-5.8-3.9-9.4-3.9z"

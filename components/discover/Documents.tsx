@@ -1,5 +1,5 @@
-import * as _ from "lodash";
-import { useEffect } from "react";
+import * as _ from 'lodash';
+import { useEffect } from 'react';
 
 type Props = {
   documents?: any;
@@ -7,9 +7,9 @@ type Props = {
 
 function processDocs(documents: any) {
   let result: any;
-  result = _.sortBy(documents.data, ["attributes.title"]);
+  result = _.sortBy(documents.data, ['attributes.title']);
   result = _.chain(result)
-    .groupBy("attributes.group")
+    .groupBy('attributes.group')
     .map(function (items, section) {
       return {
         name: section,
@@ -26,13 +26,13 @@ function processDocs(documents: any) {
       };
     })
     .value();
-  result = _.sortBy(result, ["section"]);
+  result = _.sortBy(result, ['section']);
   return result;
 }
 
 export default function Documents(props: Props) {
   useEffect(() => {
-    require("tw-elements");
+    require('tw-elements');
   }, []);
   const processedDocs = processDocs(props.documents);
   return (
@@ -43,10 +43,9 @@ export default function Documents(props: Props) {
         </a>
         <div className="lg:w-1/3">
           <p className="text-[#807e7e] dark:text-[#807e7e]">
-            Ergo takes a research-based approach and uses stable well-tested
-            solutions to provide a robust platform for developers to build on
-            for years to come. Most of Ergo solutions are formalized in papers
-            presented at peer-reviewed conferences and have been widely
+            Ergo takes a research-based approach and uses stable well-tested solutions to provide a
+            robust platform for developers to build on for years to come. Most of Ergo solutions are
+            formalized in papers presented at peer-reviewed conferences and have been widely
             discussed in the community.
           </p>
         </div>
@@ -57,26 +56,24 @@ export default function Documents(props: Props) {
           <div key={i} className="border-b-[1px]">
             <div
               data-bs-toggle="collapse"
-              data-bs-target={"#docs-collapse" + i.toString()}
-              aria-expanded={i == 0 ? "true" : "false"}
-              aria-controls={"docs-collapse" + i.toString()}
+              data-bs-target={'#docs-collapse' + i.toString()}
+              aria-expanded={i == 0 ? 'true' : 'false'}
+              aria-controls={'docs-collapse' + i.toString()}
               className="w-full pt-8"
             >
               <a
-                id={"docs-heading" + i.toString()}
+                id={'docs-heading' + i.toString()}
                 className="font-vinila-extended text-[24px] md:text-[32px]"
               >
                 <button type="button">{section.name}</button>
               </a>
             </div>
             <div
-              id={"docs-collapse" + i.toString()}
+              id={'docs-collapse' + i.toString()}
               className={
-                i == 0
-                  ? "accordion-collapse collapse show"
-                  : "accordion-collapse collapse"
+                i == 0 ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'
               }
-              aria-labelledby={"docs-heading" + i.toString()}
+              aria-labelledby={'docs-heading' + i.toString()}
               data-bs-parent="#docs-accordion"
             >
               {section.documents.map((doc: any) => (
@@ -94,9 +91,9 @@ export default function Documents(props: Props) {
             </div>
             <div
               data-bs-toggle="collapse"
-              data-bs-target={"#docs-collapse" + i.toString()}
-              aria-expanded={i == 0 ? "true" : "false"}
-              aria-controls={"docs-collapse" + i.toString()}
+              data-bs-target={'#docs-collapse' + i.toString()}
+              aria-expanded={i == 0 ? 'true' : 'false'}
+              aria-controls={'docs-collapse' + i.toString()}
               className="w-full pb-8"
             ></div>
           </div>

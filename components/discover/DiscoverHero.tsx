@@ -1,35 +1,35 @@
-import Link from "next/link";
-import { FormattedMessage, useIntl } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
-import Button from "../Button";
-import { DiscoverErgHero } from "../icons";
-import { DiscoverErgHeroLight } from "../icons";
+import Link from 'next/link';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { getIconComponentByName } from '../../utils/icons-map';
+import Button from '../Button';
+import { DiscoverErgHero } from '../icons';
+import { DiscoverErgHeroLight } from '../icons';
 
 export default function DiscoverERG() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
-    id: "components.discoverHero.button1",
-    defaultMessage: "READ THE DOCS",
+    id: 'components.discoverHero.button1',
+    defaultMessage: 'READ THE DOCS',
   });
   const button2Text = intl.formatMessage({
-    id: "components.discoverHero.button2",
-    defaultMessage: "LEARN WITH DECO",
+    id: 'components.discoverHero.button2',
+    defaultMessage: 'LEARN WITH DECO',
   });
   const button3Text = intl.formatMessage({
-    id: "components.discoverHero.button3",
-    defaultMessage: "READ THE MANIFESTO",
+    id: 'components.discoverHero.button3',
+    defaultMessage: 'READ THE MANIFESTO',
   });
   const button4Text = intl.formatMessage({
-    id: "components.discoverHero.button4",
-    defaultMessage: "CHECK THE BLOG",
+    id: 'components.discoverHero.button4',
+    defaultMessage: 'CHECK THE BLOG',
   });
   const button5Text = intl.formatMessage({
-    id: "components.discoverHero.button5",
-    defaultMessage: "GET SETUP",
+    id: 'components.discoverHero.button5',
+    defaultMessage: 'GET SETUP',
   });
   const button6Text = intl.formatMessage({
-    id: "components.discoverHero.button6",
-    defaultMessage: "VISIT ERGONAUT.SPACE",
+    id: 'components.discoverHero.button6',
+    defaultMessage: 'VISIT ERGONAUT.SPACE',
   });
 
   return (
@@ -114,7 +114,8 @@ export default function DiscoverERG() {
             <b>Software</b>
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
-          The Ergo Node is your entry-point to development on Ergo and lets you communicate with the blockchain.  
+            The Ergo Node is your entry-point to development on Ergo and lets you communicate with
+            the blockchain.
           </p>
           <div className="-ml-4 mt-10">
             <Button
@@ -144,9 +145,7 @@ export default function DiscoverERG() {
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
                 >
                   <span>{button6Text}</span>
-                  <span className="w-4 h-4 ml-2">
-                    {getIconComponentByName("ArrowRightBlack")}
-                  </span>
+                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
                 </button>
               </a>
             </Link>

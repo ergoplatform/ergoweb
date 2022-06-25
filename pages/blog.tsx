@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
-import BlogNews from '../components/blog/BlogNews';
 import BlogPosts from '../components/blog/BlogPosts';
 import Media from '../components/blog/Media';
 import Layout from '../components/Layout';

@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgDiscoverErgHero = (props) => (
-  <svg
-    width={1011}
-    height={811}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={1011} height={811} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M957.875 675.025c34.551-51.035-126.718-220.55-360.205-378.621C364.184 138.333 146.897 51.563 112.346 102.598c-34.551 51.035 126.718 220.549 360.204 378.62C706.037 639.29 923.324 726.06 957.875 675.025Z"
       stroke="#FF5E18"
@@ -218,12 +212,7 @@ const SvgDiscoverErgHero = (props) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="m295.431 552.626-14.052-69.325"
-      stroke="#fff"
-      strokeWidth={3}
-      strokeMiterlimit={10}
-    />
+    <path d="m295.431 552.626-14.052-69.325" stroke="#fff" strokeWidth={3} strokeMiterlimit={10} />
     <path
       d="m547.015 387.792 46.599 31.214"
       stroke="#fff"
@@ -356,12 +345,7 @@ const SvgDiscoverErgHero = (props) => (
       d="m655.035 700.351-31.26 11.631-12.42 5.125-9.169.895c28.4-25.557 33.859-30.175 84.83-50.102l-31.981 32.451Z"
       fill="#fff"
     />
-    <path
-      d="m340.432 557.458 85.678 22.376"
-      stroke="#fff"
-      strokeWidth={3}
-      strokeMiterlimit={10}
-    />
+    <path d="m340.432 557.458 85.678 22.376" stroke="#fff" strokeWidth={3} strokeMiterlimit={10} />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -381,12 +365,7 @@ const SvgDiscoverErgHero = (props) => (
       strokeWidth={3}
       strokeMiterlimit={10}
     />
-    <path
-      d="m566.598 229.125 58.779 42.162"
-      stroke="#fff"
-      strokeWidth={3}
-      strokeMiterlimit={10}
-    />
+    <path d="m566.598 229.125 58.779 42.162" stroke="#fff" strokeWidth={3} strokeMiterlimit={10} />
     <path
       d="m614.705 393.448-36.304-37.616 44.379-13.37M497.788 583.452l111.874-80.78 67.971 46.761"
       stroke="#FF5E18"

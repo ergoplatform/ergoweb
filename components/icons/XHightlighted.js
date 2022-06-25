@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgXHightlighted = (props) => (
-  <svg
-    width={54}
-    height={47}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={54} height={47} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M41.995 25.753c0 10.877-9.143 19.753-20.497 19.753C10.142 45.506 1 36.63 1 25.753S10.143 6 21.497 6c11.355 0 20.498 8.877 20.498 19.753Z"
       stroke="#585858"

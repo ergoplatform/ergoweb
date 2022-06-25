@@ -1,4 +1,4 @@
-import { ErgoFoundationIcon, ErgoFoundationIconLight } from "../icons";
+import { ErgoFoundationIcon, ErgoFoundationIconLight } from '../icons';
 
 export default function ErgoFoundation() {
   return (
@@ -26,7 +26,7 @@ export default function ErgoFoundation() {
             Developing the <b>ecosystem </b> around the Ergo Platform;
           </li>
           <li>
-            Spread the use of Ergo Platform and blockchain technology for 
+            Spread the use of Ergo Platform and blockchain technology for
             <b> social good </b>;
           </li>
           <li>

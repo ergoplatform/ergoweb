@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Button from "../Button";
+import Link from 'next/link';
+import Button from '../Button';
 import {
   Logo,
   RoadmapInProgress,
@@ -13,7 +13,7 @@ import {
   WalletWeb,
   WalletX,
   WalletXGray,
-} from "../icons";
+} from '../icons';
 
 export default function Wallets() {
   return (
@@ -23,35 +23,30 @@ export default function Wallets() {
           <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858] dark:text-[#585858]">
             CHOOSE YOURS
           </p>
-          <p className="font-vinila-extended-bold text-[48px] lg:text-[120px]">
-            Wallets
-          </p>
+          <p className="font-vinila-extended-bold text-[48px] lg:text-[120px]">Wallets</p>
         </div>
         <div className="my-auto">
           <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-            Digital wallets can help keep your digital currency safe, private
-            and in your control.
+            Digital wallets can help keep your digital currency safe, private and in your control.
           </p>
           <br />
           <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-            Note that wallets are supported by
-            third parties, we only provide the information below as a courtesy,
-            in order to simplify the overall digital currency experience for
-            you.
+            Note that wallets are supported by third parties, we only provide the information below
+            as a courtesy, in order to simplify the overall digital currency experience for you.
           </p>
           <br />
           <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-          <Button
-          text="SETUP GUIDES"
-          url="/category/Tooling/"
-          newTab={false}
-          underline={true}
-          textColor="brand-orange"
-          background={false}
-          icon="ArrowRight"
-          iconColor="orange"
-          customClass=" -ml-4 mb-8"
-        />
+            <Button
+              text="SETUP GUIDES"
+              url="/category/Tooling/"
+              newTab={false}
+              underline={true}
+              textColor="brand-orange"
+              background={false}
+              icon="ArrowRight"
+              iconColor="orange"
+              customClass=" -ml-4 mb-8"
+            />
           </p>
         </div>
       </div>
@@ -63,13 +58,9 @@ export default function Wallets() {
             </p>
           </div>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Type</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
-            Ledger
-          </p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Ledger</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">dApp Connector</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
-            ErgoPay
-          </p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">ErgoPay</p>
         </div>
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0 lg:mt-8">
           <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
@@ -88,8 +79,7 @@ export default function Wallets() {
         >
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
             <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
-            <p className="text-center mt-2 lg:my-auto">
-              Ergo Node</p>
+            <p className="text-center mt-2 lg:my-auto">Ergo Node</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletDesktop className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 18 18" />
@@ -107,9 +97,10 @@ export default function Wallets() {
         </a>
 
         <Link href="/mobile-wallets">
-          <a 
+          <a
             rel="noreferrer"
-            className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
+            className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
+          >
             <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
               <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
               <p className="text-center lg:my-auto">Ergo Mobile</p>
@@ -155,7 +146,6 @@ export default function Wallets() {
           </div>
         </a>
 
-
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0">
           <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
             <b>OTHER</b> WALLETS
@@ -165,14 +155,17 @@ export default function Wallets() {
           </div>
         </div>
 
-        <a 
+        <a
           href="https://github.com/minotaur-ergo/minotaur-wallet"
           target="_blank"
           rel="noreferrer"
           className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
         >
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <WalletMinotaur className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 1337 1337" />
+            <WalletMinotaur
+              className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12"
+              viewBox="0 0 1337 1337"
+            />
             <p className="text-center lg:my-auto">Minotaur</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -190,15 +183,17 @@ export default function Wallets() {
           </div>
         </a>
 
-
-        <a 
+        <a
           href="https://github.com/capt-nemo429/nautilus-wallet"
           target="_blank"
           rel="noreferrer"
           className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
         >
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
-            <WalletNautilus className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="414.37 258.52 575.6 575.6" />
+            <WalletNautilus
+              className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10"
+              viewBox="414.37 258.52 575.6 575.6"
+            />
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Nautilus</p>
           </div>
 
@@ -217,14 +212,17 @@ export default function Wallets() {
           </div>
         </a>
 
-        <a 
+        <a
           href="https://satergo.com/"
           target="_blank"
           rel="noreferrer"
           className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
         >
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
-            <WalletSatergo className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 1080 1080" />
+            <WalletSatergo
+              className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10"
+              viewBox="0 0 1080 1080"
+            />
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Satergo</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -242,14 +240,15 @@ export default function Wallets() {
           </div>
         </a>
 
-        <a 
+        <a
           href="https://github.com/ThierryM1212/SAFEW"
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0">
+          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
+        >
           <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4 lg:pl-2">
             <WalletSafew className="w-6 h-6 mx-auto lg:mx-0 lg:w-10 lg:h-10" viewBox="0 0 28 28" />
-            
+
             <p className="text-center mt-2 lg:my-auto lg:pl-2">SAFEW</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
@@ -267,10 +266,7 @@ export default function Wallets() {
           </div>
         </a>
 
-        <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0">
-
-
-        </div>
+        <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0"></div>
       </div>
     </div>
   );

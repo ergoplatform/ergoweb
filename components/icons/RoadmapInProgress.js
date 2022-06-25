@@ -1,20 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgRoadmapInProgress = (props) => (
-  <svg
-    width={29}
-    height={28}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <ellipse
-      cx={14.5}
-      cy={14}
-      rx={14.5}
-      ry={14}
-      fill="url(#roadmap-in-progress_svg__a)"
-    />
+  <svg width={29} height={28} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <ellipse cx={14.5} cy={14} rx={14.5} ry={14} fill="url(#roadmap-in-progress_svg__a)" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"

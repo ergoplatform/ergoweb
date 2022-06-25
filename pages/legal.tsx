@@ -1,13 +1,13 @@
-import type { NextPage } from "next";
-import { FormattedMessage, useIntl } from "react-intl";
-import Layout from "../components/Layout";
-import LegalContent from "../content/legal.mdx";
+import type { NextPage } from 'next';
+import { FormattedMessage, useIntl } from 'react-intl';
+import Layout from '../components/Layout';
+import LegalContent from '../content/legal.mdx';
 
 const Legal: NextPage = () => {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: "pages.legal.title",
-    defaultMessage: "Legal",
+    id: 'pages.legal.title',
+    defaultMessage: 'Legal',
   });
   return (
     <div>

@@ -1,65 +1,62 @@
-import { FormattedMessage, useIntl } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
-import Button from "../Button";
-import { ToastContainer, toast } from "react-toastify";
+import { FormattedMessage, useIntl } from 'react-intl';
+import { getIconComponentByName } from '../../utils/icons-map';
+import Button from '../Button';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function ContributeForm() {
   const intl = useIntl();
   const buttonContribute = intl.formatMessage({
-    id: "components.Sigmanauts.button.buttonContribute",
-    defaultMessage: "CONTRIBUTING GUIDELINES",
+    id: 'components.Sigmanauts.button.buttonContribute',
+    defaultMessage: 'CONTRIBUTING GUIDELINES',
   });
   const buttonReadTheDocs = intl.formatMessage({
-    id: "components.Sigmanauts.button.writeAndReviewCode",
-    defaultMessage: "DIVE INTO ERGO",
+    id: 'components.Sigmanauts.button.writeAndReviewCode',
+    defaultMessage: 'DIVE INTO ERGO',
   });
   const buttonDiscord = intl.formatMessage({
-    id: "components.Sigmanauts.button.discord",
-    defaultMessage: "JOIN US ON DISCORD",
+    id: 'components.Sigmanauts.button.discord',
+    defaultMessage: 'JOIN US ON DISCORD',
   });
   const buttonGrantsAndBounties = intl.formatMessage({
-    id: "components.Sigmanauts.button.grantsAndBounties",
-    defaultMessage: "GRANTS & BOUNTIES",
+    id: 'components.Sigmanauts.button.grantsAndBounties',
+    defaultMessage: 'GRANTS & BOUNTIES',
   });
   const formName = intl.formatMessage({
-    id: "components.Sigmanauts.formInput.name",
-    defaultMessage: "Name / Company",
+    id: 'components.Sigmanauts.formInput.name',
+    defaultMessage: 'Name / Company',
   });
   const formEmail = intl.formatMessage({
-    id: "components.Sigmanauts.formInput.email",
-    defaultMessage: "E-Mail",
+    id: 'components.Sigmanauts.formInput.email',
+    defaultMessage: 'E-Mail',
   });
   const formText = intl.formatMessage({
-    id: "components.Sigmanauts.formInput.text",
-    defaultMessage: "Write us your suggestions and ideas, let’s talk!",
+    id: 'components.Sigmanauts.formInput.text',
+    defaultMessage: 'Write us your suggestions and ideas, let’s talk!',
   });
   const formButton = intl.formatMessage({
-    id: "components.Sigmanauts.formInput.button",
-    defaultMessage: "SEND",
+    id: 'components.Sigmanauts.formInput.button',
+    defaultMessage: 'SEND',
   });
 
   const sendMessage = async (event: any) => {
     event.preventDefault();
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_STRAPI_API + "/api/contact-requests",
-      {
-        body: JSON.stringify({
-          data: {
-            name: event.target.name.value,
-            text: event.target.text.value,
-            email: event.target.email.value,
-          },
-        }),
-        headers: {
-          "Content-Type": "application/json",
+    const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
+      body: JSON.stringify({
+        data: {
+          name: event.target.name.value,
+          text: event.target.text.value,
+          email: event.target.email.value,
         },
-        method: "POST",
-      }
-    );
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
     const result = await res.json();
     if (result != null) {
-      toast.success("Message sent! Have a great day!", {
-        position: "top-right",
+      toast.success('Message sent! Have a great day!', {
+        position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -75,10 +72,7 @@ export default function ContributeForm() {
       <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
         <h1 className="block-inline font-vinila-extended text-[32px] md:text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto">
           <b>
-            <FormattedMessage
-              defaultMessage="Contribute"
-              id="components.ContributeForm.title"
-            />
+            <FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" />
           </b>
         </h1>
         <p className="text-[#807e7e] dark:text-[#807e7e] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
@@ -107,7 +101,7 @@ export default function ContributeForm() {
             </b>
           </p>
           <div>
-          <div className="ml-8 mb-10">
+            <div className="ml-8 mb-10">
               <Button
                 text={buttonDiscord}
                 url="https://discord.gg/PFYugUgg28"
@@ -204,9 +198,7 @@ export default function ContributeForm() {
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
                 >
                   <span>{formButton}</span>
-                  <span className="w-4 h-4 ml-2">
-                    {getIconComponentByName("ArrowRightBlack")}
-                  </span>
+                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
                 </button>
               </div>
             </div>

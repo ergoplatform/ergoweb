@@ -1,11 +1,11 @@
-import { useIntl } from "react-intl";
-import Mining from "../components/getErg/Mining";
-import MiningCalculator from "../components/getErg/MiningCalculator";
-import Layout from "../components/Layout";
-import dynamic from "next/dynamic";
-import Wallets from "../components/getErg/Wallets";
-import GetErgHero from "../components/getErg/GetErgHero";
-const Exchanges = dynamic(() => import("../components/getErg/Exchanges"), {
+import { useIntl } from 'react-intl';
+import Mining from '../components/getErg/Mining';
+import MiningCalculator from '../components/getErg/MiningCalculator';
+import Layout from '../components/Layout';
+import dynamic from 'next/dynamic';
+import Wallets from '../components/getErg/Wallets';
+import GetErgHero from '../components/getErg/GetErgHero';
+const Exchanges = dynamic(() => import('../components/getErg/Exchanges'), {
   ssr: false,
 });
 
@@ -20,8 +20,8 @@ type Props = {
 export default function GetErg(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: "pages.get-erg.title",
-    defaultMessage: "GetErg",
+    id: 'pages.get-erg.title',
+    defaultMessage: 'GetErg',
   });
 
   return (
@@ -40,10 +40,7 @@ export default function GetErg(props: Props) {
       <Layout title={title}>
         <GetErgHero title="Get ERG" />
         <Mining />
-        {props.currentBlockReward &&
-        props.price &&
-        props.hashRate &&
-        props.difficulty ? (
+        {props.currentBlockReward && props.price && props.hashRate && props.difficulty ? (
           <MiningCalculator
             currentBlockReward={props.currentBlockReward}
             currentPrice={props.price}
@@ -62,29 +59,29 @@ export default function GetErg(props: Props) {
 export const getServerSideProps = async (context: any) => {
   const exchanges = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/exchanges?sort=order:asc&populate=*&locale=" +
-      context.locale
+      '/api/exchanges?sort=order:asc&populate=*&locale=' +
+      context.locale,
   )
     .then((response) => response.json())
     .then((response) => response.data)
     .catch((err) => null);
   const price = await fetch(
-    "https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD"
+    'https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD',
   )
     .then((response) => response.json())
     .then((data) => data.ergo.usd)
     .catch((err) => null);
-  const hashRate = await fetch("https://api.ergoplatform.com/info/")
+  const hashRate = await fetch('https://api.ergoplatform.com/info/')
     .then((response) => response.json().then((data) => data.hashRate))
     .catch((err) => null);
-  const info = await fetch("https://api.ergoplatform.com/blocks")
+  const info = await fetch('https://api.ergoplatform.com/blocks')
     .then((response) =>
       response.json().then((data) => {
         return {
           currentBlockReward: data.items[0].minerReward / 1000000000,
           difficulty: data.items[0].difficulty,
         };
-      })
+      }),
     )
     .catch((err) => null);
 

@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgWalletStatusWithMark = (props) => (
-  <svg
-    width={55}
-    height={48}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={55} height={48} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <ellipse cx={21.997} cy={26.253} rx={21.497} ry={20.753} fill="#585858" />
     <path
       d="m20.022 31.657-5.637-5.338 1.53-1.468 4.107 4.003 8.283-8.006 1.531 1.468-9.814 9.34Z"

@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgSigmanauts = (props) => (
-  <svg
-    width={248}
-    height={300}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={248} height={300} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -234,12 +228,7 @@ const SvgSigmanauts = (props) => (
       d="m85.542 176.505-1.629 12.434c-.474 5.063 1.371 5.094 5.155 5.877l1.371.278v.052c1.031.093 2.01.289 2.877.392l.65.093 3.247.412c2.485.423 4.124-.196 4.897-2.907a58.447 58.447 0 0 0 1.031-4.197c-.226-.062-.474-.144-.721-.196-2.526-.68-.794-6.248 1.144-5.691.227.062.474.145.701.196.279-1.567.557-3.217.897-5.031a3.187 3.187 0 0 0-.68-2.836 21.84 21.84 0 0 0-5.155-3.412c-1.403-.639-3.609-.784-6.527-1.093h-2.886c-2.578 0-3.64.392-4.011 3.196l-.361 2.433Z"
       fill="#fff"
     />
-    <path
-      d="m190.109 100.024.671 2.774"
-      stroke="#fff"
-      strokeWidth={1.031}
-      strokeMiterlimit={10}
-    />
+    <path d="m190.109 100.024.671 2.774" stroke="#fff" strokeWidth={1.031} strokeMiterlimit={10} />
     <path
       d="m183.433 98.93-1.288 2.826M176.469 95.375l2.546-1.31"
       stroke="#000"
@@ -537,12 +526,7 @@ const SvgSigmanauts = (props) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="m96.426 113.128 4.763 2.907"
-      stroke="#fff"
-      strokeWidth={1.031}
-      strokeMiterlimit={10}
-    />
+    <path d="m96.426 113.128 4.763 2.907" stroke="#fff" strokeWidth={1.031} strokeMiterlimit={10} />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -693,10 +677,7 @@ const SvgSigmanauts = (props) => (
       d="M211.041.583a24.96 24.96 0 0 1 29.734 18.981 24.978 24.978 0 0 1-19.012 29.766 24.962 24.962 0 0 1-26.385-37.817A24.925 24.925 0 0 1 211.041.582Z"
       fill="url(#sigmanauts_svg__l)"
     />
-    <path
-      d="M199.33 33.07a4.702 4.702 0 1 0 0-9.402 4.702 4.702 0 0 0 0 9.403Z"
-      fill="#141414"
-    />
+    <path d="M199.33 33.07a4.702 4.702 0 1 0 0-9.402 4.702 4.702 0 0 0 0 9.403Z" fill="#141414" />
     <path
       d="M238.847 7.161c1.67 2.495-7.475 11.599-20.445 20.3-12.97 8.703-24.827 14.023-26.476 11.229"
       stroke="#585858"

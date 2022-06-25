@@ -1,11 +1,11 @@
-import { useIntl } from "react-intl";
-import Layout from "../components/Layout";
+import { useIntl } from 'react-intl';
+import Layout from '../components/Layout';
 
 export default function MobileWallets() {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: "pages.mobile-wallets",
-    defaultMessage: "Mobile Wallets",
+    id: 'pages.mobile-wallets',
+    defaultMessage: 'Mobile Wallets',
   });
 
   return (
@@ -20,8 +20,7 @@ export default function MobileWallets() {
                     <span className="block xl:inline">Ergo Mobile Wallet</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Official Ergo Mobile Wallet for Android and iOS. Lightweight
-                    and simple to use.
+                    Official Ergo Mobile Wallet for Android and iOS. Lightweight and simple to use.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <a
@@ -42,7 +41,7 @@ export default function MobileWallets() {
                     </a>
                   </div>
                   <p className="mt-3 text-lg text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">
-                    Sources available on{" "}
+                    Sources available on{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
                       href="https://github.com/ergoplatform/ergo-wallet-android"
@@ -58,11 +57,7 @@ export default function MobileWallets() {
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 hidden lg:block">
             <div className="flex justify-center">
-              <img
-                style={{ maxHeight: "450px" }}
-                src="/assets/application.png"
-                alt=""
-              />
+              <img style={{ maxHeight: '450px' }} src="/assets/application.png" alt="" />
             </div>
           </div>
         </div>
@@ -74,8 +69,7 @@ export default function MobileWallets() {
                 What this wallet can
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Besides receiving, sending and storing ERGs, you can do a lot
-                more...
+                Besides receiving, sending and storing ERGs, you can do a lot more...
               </p>
             </div>
 
@@ -122,13 +116,12 @@ export default function MobileWallets() {
                       </svg>
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                      Generate offline wallets{" "}
+                      Generate offline wallets{' '}
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-red-100">
-                    Use this wallet to generate cold wallets by keeping your
-                    device in flight mode. You can restore your funds with every
-                    other{" "}
+                    Use this wallet to generate cold wallets by keeping your device in flight mode.
+                    You can restore your funds with every other{' '}
                     <a
                       className="text-red-500"
                       href="https://github.com/ergoplatform/eips/blob/master/eip-0003.md"
@@ -136,7 +129,7 @@ export default function MobileWallets() {
                       rel="noreferrer"
                     >
                       EIP3
-                    </a>{" "}
+                    </a>{' '}
                     compliant wallet application.
                   </dd>
                 </div>
@@ -162,10 +155,9 @@ export default function MobileWallets() {
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-red-100">
-                    Add wallets without your seed in read-only mode. You won&apos;t
-                    be able to send, but you can keep an eye on your funds.
-                    Lightning fast, and with a fiat comparison currency of your
-                    choice.
+                    Add wallets without your seed in read-only mode. You won&apos;t be able to send,
+                    but you can keep an eye on your funds. Lightning fast, and with a fiat
+                    comparison currency of your choice.
                   </dd>
                 </div>
 
@@ -190,8 +182,8 @@ export default function MobileWallets() {
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-red-100">
-                    Scan payment QR codes from other users or websites for a
-                    satisfying sending experience.
+                    Scan payment QR codes from other users or websites for a satisfying sending
+                    experience.
                   </dd>
                 </div>
               </dl>
@@ -228,14 +220,11 @@ export default function MobileWallets() {
                         />
                       </svg>
                     </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                      Secure
-                    </p>
+                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Secure</p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-white">
-                    Your secrets are stored password-encrypted or
-                    authentication-protected. Every code change on the project
-                    is audited by an Ergo core team member.
+                    Your secrets are stored password-encrypted or authentication-protected. Every
+                    code change on the project is audited by an Ergo core team member.
                   </dd>
                 </div>
 
@@ -255,12 +244,10 @@ export default function MobileWallets() {
                         />
                       </svg>
                     </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                      Open Source
-                    </p>
+                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Open Source</p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-white">
-                    Check out the{" "}
+                    Check out the{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
                       href="https://github.com/ergoplatform/ergo-wallet-app"
@@ -268,7 +255,7 @@ export default function MobileWallets() {
                       rel="noreferrer"
                     >
                       GitHub
-                    </a>{" "}
+                    </a>{' '}
                     project.
                   </dd>
                 </div>
@@ -297,7 +284,7 @@ export default function MobileWallets() {
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-white">
-                    Visit the{" "}
+                    Visit the{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
                       href="https://discord.gg/kj7s7nb"
@@ -305,8 +292,8 @@ export default function MobileWallets() {
                       rel="noreferrer"
                     >
                       Ergo Discord
-                    </a>{" "}
-                    or{" "}
+                    </a>{' '}
+                    or{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
                       href="https://t.me/ergoplatform"
@@ -314,7 +301,7 @@ export default function MobileWallets() {
                       rel="noreferrer"
                     >
                       Telegram
-                    </a>{" "}
+                    </a>{' '}
                     support group to get help.
                   </dd>
                 </div>
@@ -346,8 +333,8 @@ export default function MobileWallets() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      The wallet started as a community developer project and is
-                      now backed by Ergo Foundation.
+                      The wallet started as a community developer project and is now backed by Ergo
+                      Foundation.
                     </a>
                   </dd>
                 </div>
@@ -362,12 +349,11 @@ export default function MobileWallets() {
                 In constant development
               </p>
               <p className="pt-3 mb-1 lg:text-lg text-gray-100  text-sm">
-                ERGO provides much. We are working to get more and more of its
-                features available in the app.{" "}
+                ERGO provides much. We are working to get more and more of its features available in
+                the app.{' '}
               </p>
               <p className="lg:text-lg text-gray-100 text-sm">
-                Be the first to get new features by joining the open beta on
-                Google Play!{" "}
+                Be the first to get new features by joining the open beta on Google Play!{' '}
               </p>
 
               <div className="sm:flex sm:justify-center  mt-10">

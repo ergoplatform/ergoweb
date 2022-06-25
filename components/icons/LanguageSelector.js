@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgLanguageSelector = (props) => (
   <svg
@@ -8,9 +8,7 @@ const SvgLanguageSelector = (props) => (
     className="fill-current text-black dark:text-white"
     {...props}
   >
-    <path
-      d="M0 1.415 8.485 9.9l8.485-8.485L15.556 0 8.485 7.072 1.414 0 0 1.415Z"
-    />
+    <path d="M0 1.415 8.485 9.9l8.485-8.485L15.556 0 8.485 7.072 1.414 0 0 1.415Z" />
   </svg>
 );
 

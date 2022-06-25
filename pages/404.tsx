@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
-import { FormattedMessage, useIntl } from "react-intl";
-import Layout from "../components/Layout";
+import type { NextPage } from 'next';
+import { FormattedMessage, useIntl } from 'react-intl';
+import Layout from '../components/Layout';
 
 const Custom404: NextPage = () => {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: "pages.404.title",
-    defaultMessage: "Not Found",
+    id: 'pages.404.title',
+    defaultMessage: 'Not Found',
   });
   return (
     <div>
@@ -23,15 +23,11 @@ const Custom404: NextPage = () => {
           <div className="lg:w-1/3">
             <div className="max-w-sm mt-96  lg:mt-40">
               <h1 className="font-bold text-[#585858] dark:text-[#807e7e] text-[60px] leading-tight">
-                <FormattedMessage
-                  defaultMessage="404. Page Not Found."
-                  id="pages.404.hero"
-                />
+                <FormattedMessage defaultMessage="404. Page Not Found." id="pages.404.hero" />
               </h1>
             </div>
             <div className="mt-8 max-w-xs text-[#585858] dark:text-[#807e7e]">
-              The requested URL was not found on this server. That’s
-              all we know.
+              The requested URL was not found on this server. That’s all we know.
             </div>
           </div>
         </div>

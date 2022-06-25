@@ -1,21 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgCheckOrange = (props) => (
-  <svg
-    width={51}
-    height={50}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={51} height={50} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#check-orange_svg__a)">
-      <ellipse
-        cx={25.497}
-        cy={20.753}
-        rx={21.497}
-        ry={20.753}
-        fill="url(#check-orange_svg__b)"
-      />
+      <ellipse cx={25.497} cy={20.753} rx={21.497} ry={20.753} fill="url(#check-orange_svg__b)" />
       <path
         d="m23.522 26.158-5.638-5.338 1.532-1.468 4.106 4.003 8.282-8.006 1.532 1.468-9.814 9.34Z"
         fill="#fff"
@@ -52,15 +40,8 @@ const SvgCheckOrange = (props) => (
         <feGaussianBlur stdDeviation={2} />
         <feComposite in2="hardAlpha" operator="out" />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow_335_20996"
-        />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_335_20996"
-          result="shape"
-        />
+        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_335_20996" />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_335_20996" result="shape" />
       </filter>
     </defs>
   </svg>

@@ -1,10 +1,10 @@
-import { useIntl } from "react-intl";
-import { getIconComponentByName } from "../../utils/icons-map";
-import { ErgoRaffle, Heart } from "../icons";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import Button from "../Button";
-import Image from "next/image";
+import { useIntl } from 'react-intl';
+import { getIconComponentByName } from '../../utils/icons-map';
+import { ErgoRaffle, Heart } from '../icons';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import Button from '../Button';
+import Image from 'next/image';
 
 type Props = {
   favorites?: any;
@@ -13,8 +13,8 @@ type Props = {
 export default function Favorites(props: Props) {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
-    id: "components.favorites.button1",
-    defaultMessage: "EXPLORE ERGO RAFFLE",
+    id: 'components.favorites.button1',
+    defaultMessage: 'EXPLORE ERGO RAFFLE',
   });
 
   return (
@@ -30,30 +30,23 @@ export default function Favorites(props: Props) {
             Ergo Raffle
           </p>
           <p className="text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-8">
-            ErgoRaffle is a crowdfunding service built on Ergo Platform that
-            enables anyone to raise money for a project. This project can range
-            from a direct donation to a charity, an academic or business plan,
-            or anything you can convince people to part with their hard-earned
-            ERG for! As an added bonus, after finishing the Raffle, a lottery
-            takes place, and one lucky participant wins a set percent of the
-            Raffle as a &quot;raffle reward&quot;.
+            ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise
+            money for a project. This project can range from a direct donation to a charity, an
+            academic or business plan, or anything you can convince people to part with their
+            hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes
+            place, and one lucky participant wins a set percent of the Raffle as a &quot;raffle
+            reward&quot;.
           </p>
           <button
             type="submit"
             className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
           >
             <span>
-              <a
-                href="https://ergoraffle.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-              <b>{button1Text}</b>
+              <a href="https://ergoraffle.com/" target="_blank" rel="noreferrer">
+                <b>{button1Text}</b>
               </a>
             </span>
-            <span className="w-4 h-4 ml-2">
-              {getIconComponentByName("ArrowRightBlack")}
-            </span>
+            <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
           </button>
         </div>
         <div className="lg:w-2/3">
@@ -70,9 +63,7 @@ export default function Favorites(props: Props) {
                       <Image
                         width={post.attributes.image.data?.attributes.width}
                         height={post.attributes.image.data?.attributes.height}
-                        src={
-                          post.attributes.image.data?.attributes.url
-                        }
+                        src={post.attributes.image.data?.attributes.url}
                         className=""
                         alt=""
                       />

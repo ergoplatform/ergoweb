@@ -1,9 +1,9 @@
-import { useCallback, useRef, useState } from "react";
-import Link from "next/link";
+import { useCallback, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function Search() {
   const searchRef = useRef<HTMLInputElement>(null);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
 
@@ -29,13 +29,13 @@ export default function Search() {
 
   const onFocus = useCallback(() => {
     setActive(true);
-    window.addEventListener("click", onClick);
+    window.addEventListener('click', onClick);
   }, []);
 
   const onClick = useCallback((event) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
       setActive(false);
-      window.removeEventListener("click", onClick);
+      window.removeEventListener('click', onClick);
     }
   }, []);
 
@@ -51,12 +51,9 @@ export default function Search() {
       />
       {active && results.length > 0 && (
         <div>
-          {results.map((result: any, index:number) => (
+          {results.map((result: any, index: number) => (
             <Link href={`/blog/${result.attributes.permalink}`} key={index}>
-              <div
-                key={result.id}
-                className="search-card my-3 py-4 px-8 cursor-pointer"
-              >
+              <div key={result.id} className="search-card my-3 py-4 px-8 cursor-pointer">
                 <div>
                   <div className="mb-3">
                     <b className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10">

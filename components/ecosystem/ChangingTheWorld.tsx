@@ -1,7 +1,7 @@
-import { getIconComponentByName } from "../../utils/icons-map";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import Image from "next/image";
+import { getIconComponentByName } from '../../utils/icons-map';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import Image from 'next/image';
 
 type Props = {
   chagingTheWorldProjects?: any;
@@ -57,7 +57,7 @@ export default function ChangingTheWorld(props: Props) {
                           <b>{post.attributes.button_text}</b>
                         </span>
                         <span className="w-4 h-4 ml-2 mt-1">
-                          {getIconComponentByName("ArrowRightBlack")}
+                          {getIconComponentByName('ArrowRightBlack')}
                         </span>
                       </button>
                     </a>

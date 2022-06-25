@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Button from "../Button";
+import Image from 'next/image';
+import Button from '../Button';
 
 export default function Wiki() {
   return (
@@ -22,17 +22,16 @@ export default function Wiki() {
       </div>
       <div className="justify-around mt-16 md:-mt-10 dark:flex ecosystem-hero-gradient">
         <div className="ergonaut-card h-[349px] w-full flex flex-row justify-end">
-        <div className="my-auto mx-auto">
-          <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40 text-white dark:text-white">
-            ergonaut.space is our community-run wiki! 
-            Jam-packed with tons of great information on the underlying technical details of the
-            Ergo blockchain in easy to understand language for non-technical people. 
-            Theres also plenty of guides, tutorials, and user-submitted content. 
-            Create an account to start contributing!
+          <div className="my-auto mx-auto">
+            <p className="hidden md:block absolute z-20 max-w-lg -mt-[3rem] -ml-40 text-white dark:text-white">
+              ergonaut.space is our community-run wiki! Jam-packed with tons of great information on
+              the underlying technical details of the Ergo blockchain in easy to understand language
+              for non-technical people. Theres also plenty of guides, tutorials, and user-submitted
+              content. Create an account to start contributing!
             </p>
-        </div>
+          </div>
           <Image
-            src={"/assets/ecosystem/ergonaut.png"}
+            src={'/assets/ecosystem/ergonaut.png'}
             width="405px"
             height="349px"
             className="rounded-br-2xl"
@@ -43,10 +42,9 @@ export default function Wiki() {
       <div className="md:hidden">
         <p className="font-vinila-extended-bold text-[48px] mb-4">Wiki</p>
         <p className="text-[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
-          ergonaut.space is the community wiki of the Ergo blockchain, a guide
-          translating how to use and the underlying technical details of the
-          Ergo blockchain in easy to understand language for non-technical
-          people.
+          ergonaut.space is the community wiki of the Ergo blockchain, a guide translating how to
+          use and the underlying technical details of the Ergo blockchain in easy to understand
+          language for non-technical people.
         </p>
         <Button
           text="LEARN MORE"

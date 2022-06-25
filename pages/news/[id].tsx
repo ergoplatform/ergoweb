@@ -1,20 +1,15 @@
-import { FormattedDate } from "react-intl";
-import Layout from "../../components/Layout";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkBreaks from "remark-breaks";
-import rehypeRaw from "rehype-raw";
-import Image from "next/image";
-import Button from "../../components/Button";
-import {
-  BlogFacebook,
-  BlogLink,
-  BlogTwitter,
-  LogoBlack,
-} from "../../components/icons";
-import Link from "next/link";
-import BlogPosts from "../../components/blog/BlogPosts";
-import { useRouter } from "next/router";
+import { FormattedDate } from 'react-intl';
+import Layout from '../../components/Layout';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
+import rehypeRaw from 'rehype-raw';
+import Image from 'next/image';
+import Button from '../../components/Button';
+import { BlogFacebook, BlogLink, BlogTwitter, LogoBlack } from '../../components/icons';
+import Link from 'next/link';
+import BlogPosts from '../../components/blog/BlogPosts';
+import { useRouter } from 'next/router';
 
 type Props = {
   post?: any;
@@ -24,12 +19,12 @@ type Props = {
 export default function Post(props: Props) {
   const { locale } = useRouter();
   let hasImage = false;
-  let imageUrl = ""
+  let imageUrl = '';
   if (props.post.attributes.blogPhoto?.length > 0) {
     hasImage = true;
-    imageUrl = "https://storage.googleapis.com/ergo-cms-media" + props.post.attributes.blogPhoto;
+    imageUrl = 'https://storage.googleapis.com/ergo-cms-media' + props.post.attributes.blogPhoto;
   }
-  if ( props.post.attributes.image.data) {
+  if (props.post.attributes.image.data) {
     hasImage = true;
     imageUrl = props.post.attributes.image.data.attributes.formats.large.url;
   }
@@ -58,18 +53,21 @@ export default function Post(props: Props) {
                 {props.post.attributes.title}
               </h4>
               <div className="mb-8 mt-4 flex flex-row">
-                {props.post.attributes.tag?.split(",").filter((word:string) => word.length > 0).map((item: string) => (
-                  <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
-                    <div className="cursor-pointer">
-                      <b
-                        key={item.trim()}
-                        className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                      >
-                        {item.trim()}
-                      </b>
-                    </div>
-                  </Link>
-                ))}
+                {props.post.attributes.tag
+                  ?.split(',')
+                  .filter((word: string) => word.length > 0)
+                  .map((item: string) => (
+                    <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
+                      <div className="cursor-pointer">
+                        <b
+                          key={item.trim()}
+                          className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                        >
+                          {item.trim()}
+                        </b>
+                      </div>
+                    </Link>
+                  ))}
               </div>
               <div className="flex">
                 <div className="flex-shrink-0 mt-1">
@@ -95,21 +93,13 @@ export default function Post(props: Props) {
 
             <div className="flex flex-row justify-center md:mx-32">
               {hasImage == true ? (
-                <img
-                src={imageUrl}
-                height="100%"
-                width="100%"
-                className="md:rounded-xl"
-                alt=""
-              />
+                <img src={imageUrl} height="100%" width="100%" className="md:rounded-xl" alt="" />
               ) : (
-                ""
+                ''
               )}
             </div>
             <div className="px-4 md:px-32 md:py-20">
-              <p className="text-black dark:text-black">
-                {props.post.attributes.subtitle}
-              </p>
+              <p className="text-black dark:text-black">{props.post.attributes.subtitle}</p>
               <ReactMarkdown
                 remarkPlugins={[remarkGfm, remarkBreaks]}
                 rehypePlugins={[rehypeRaw]}
@@ -122,12 +112,18 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}" passHref>
+                  <Link
+                    href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}"
+                    passHref
+                  >
                     <BlogFacebook />
                   </Link>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://twitter.com/intent/tweet?text={window.location.href}" passHref>
+                  <Link
+                    href="https://twitter.com/intent/tweet?text={window.location.href}"
+                    passHref
+                  >
                     <BlogTwitter />
                   </Link>
                 </div>
@@ -149,20 +145,21 @@ export default function Post(props: Props) {
 export async function getServerSideProps(context: any) {
   const post = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/posts?&filters[permalink][$eq]=" +
+      '/api/posts?&filters[permalink][$eq]=' +
       encodeURIComponent(context.query.id) +
-      "&populate=*&locale=" + context.locale
+      '&populate=*&locale=' +
+      context.locale,
   ).then((response) => response.json());
 
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      "/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=" +
-      context.locale
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=' +
+      context.locale,
   ).then((response) => response.json());
-  if(post.data.length === 0) {
+  if (post.data.length === 0) {
     return {
       notFound: true,
-    }
+    };
   }
   return {
     props: { post: post.data[0], posts: posts.data },

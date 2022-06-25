@@ -1,47 +1,47 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type Props = {
   projects?: any;
 };
 
-function adjustCardPosition(i:number){
-  switch(i){
+function adjustCardPosition(i: number) {
+  switch (i) {
     case 0:
-      return " lg:row-span-2"
+      return ' lg:row-span-2';
     case 1:
-      return " lg:col-span-2 lg:flex-row"
+      return ' lg:col-span-2 lg:flex-row';
     default:
-      return ""
+      return '';
   }
 }
 
-function adjustCardText(i:number){
-  switch(i){
+function adjustCardText(i: number) {
+  switch (i) {
     case 0:
-      return " h-1/2 lg:h-1/3"
+      return ' h-1/2 lg:h-1/3';
     case 1:
-      return " h-1/2 lg:ml-8"
+      return ' h-1/2 lg:ml-8';
     case 2:
-      return " h-1/2"
+      return ' h-1/2';
     case 3:
-      return " h-1/2"
+      return ' h-1/2';
     default:
-      return ""
+      return '';
   }
 }
 
-function adjustCardPhoto(i:number){
-  switch(i){
+function adjustCardPhoto(i: number) {
+  switch (i) {
     case 0:
-      return " h-1/2 lg:h-2/3"
+      return ' h-1/2 lg:h-2/3';
     case 1:
-      return " h-1/2"
+      return ' h-1/2';
     case 2:
-      return " h-1/2"
+      return ' h-1/2';
     case 3:
-      return " h-1/2"
+      return ' h-1/2';
     default:
-      return ""
+      return '';
   }
 }
 
@@ -53,15 +53,21 @@ export default function FeaturesAndProjects(props: Props) {
       </p>
       <div className="flex overflow-x-auto p-4 -m-4 no-scrollbar gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:max-h-[860px]">
         {props.projects.map((project: any, i: number) => (
-          <div key={i} className={"rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4" + adjustCardPosition(i)} >
+          <div
+            key={i}
+            className={
+              'rounded-3xl features-and-projects-bg flex flex-col min-w-[282px] p-4' +
+              adjustCardPosition(i)
+            }
+          >
             <Image
-              className={"rounded-3xl object-contain items-center lg:my-auto" + adjustCardPhoto(i)}
+              className={'rounded-3xl object-contain items-center lg:my-auto' + adjustCardPhoto(i)}
               src={project.attributes.image.data?.attributes.url}
               width={project.attributes.image.data?.attributes.width}
               height={project.attributes.image.data?.attributes.height}
               alt=""
             />
-            <div className={"flex flex-col lg:my-auto" + adjustCardText(i)}>
+            <div className={'flex flex-col lg:my-auto' + adjustCardText(i)}>
               <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">
                 {project.attributes.group}
               </p>

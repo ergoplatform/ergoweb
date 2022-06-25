@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgThemeDarkBig = (props) => (
-  <svg
-    width={81}
-    height={38}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={81} height={38} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#theme-dark-big_svg__a)">
       <path
         d="M0 19C0 8.507 8.507 0 19 0h43c10.493 0 19 8.507 19 19s-8.507 19-19 19H19C8.507 38 0 29.493 0 19Z"
@@ -64,15 +58,8 @@ const SvgThemeDarkBig = (props) => (
         <feGaussianBlur stdDeviation={2} />
         <feComposite in2="hardAlpha" operator="out" />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow_602_15054"
-        />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_602_15054"
-          result="shape"
-        />
+        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_602_15054" />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_602_15054" result="shape" />
       </filter>
       <linearGradient
         id="theme-dark-big_svg__c"

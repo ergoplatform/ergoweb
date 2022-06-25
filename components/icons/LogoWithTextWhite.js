@@ -1,12 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgLogoWithText = (props) => (
-  <svg
-    width={213}
-    height={82}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={213} height={82} xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       className="fill-white"
       fillRule="evenodd"

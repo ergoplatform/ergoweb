@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function FadeInSection(props: any) {
   const [isVisible, setVisible] = React.useState(false);
@@ -12,10 +12,7 @@ export default function FadeInSection(props: any) {
     if (domRef.current) observer.observe(domRef.current);
   }, []);
   return (
-    <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      ref={domRef}
-    >
+    <div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
       {props.children}
     </div>
   );

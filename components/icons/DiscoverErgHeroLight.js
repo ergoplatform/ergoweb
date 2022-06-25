@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgDiscoverErgHeroLight = (props) => (
-  <svg
-    width={1011}
-    height={811}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={1011} height={811} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M957.874 675.024c34.551-51.035-126.718-220.549-360.204-378.621C364.183 138.332 146.896 51.562 112.345 102.597c-34.55 51.035 126.718 220.549 360.205 378.62 233.486 158.072 450.773 244.842 485.324 193.807Z"
       stroke="#FF5E18"

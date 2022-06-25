@@ -1,12 +1,12 @@
-import { FormattedMessage } from "react-intl";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import { FormattedMessage } from 'react-intl';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 type Props = {
-  blockReward: number,
-  circulatingSupply: number,
-  transactionPerDay: number,
-  hashRate: number,
+  blockReward: number;
+  circulatingSupply: number;
+  transactionPerDay: number;
+  hashRate: number;
 };
 
 export default function HomeInfo({
@@ -14,13 +14,13 @@ export default function HomeInfo({
   circulatingSupply = 46166151,
   transactionPerDay = 6266,
   hashRate = 20.19,
-}:Props) {
+}: Props) {
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
-  hashRate = hashRate/1000000000000
-  circulatingSupply = circulatingSupply/1000000000
+  hashRate = hashRate / 1000000000000;
+  circulatingSupply = circulatingSupply / 1000000000;
 
   return (
     <div id="HomeInfo" ref={ref} className="relative z-10">
@@ -34,9 +34,7 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," start={0} end={blockReward} />
-              )}
+              {inView && <CountUp separator="," start={0} end={blockReward} />}
             </p>
           </div>
           <div className="verticalLine h-14 my-auto"></div>
@@ -48,13 +46,7 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp
-                  separator=","
-                  start={10000000}
-                  end={circulatingSupply}
-                />
-              )}{" "}
+              {inView && <CountUp separator="," start={10000000} end={circulatingSupply} />}{' '}
             </p>
           </div>
           <div className="verticalLine h-14 my-auto"></div>
@@ -66,24 +58,16 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," start={1000} end={transactionPerDay} />
-              )}
+              {inView && <CountUp separator="," start={1000} end={transactionPerDay} />}
             </p>
           </div>
           <div className="verticalLine h-14 my-auto"></div>
           <div className="mx-8 my-4 text-center">
             <b className="text-brand-orange dark:text-brand-orange">
-              <FormattedMessage
-                defaultMessage="HASH RATE"
-                id="components.homeInfo.hashRate"
-              />
+              <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," decimals={2} start={10} end={hashRate} />
-              )}{" "}
-              TH/s
+              {inView && <CountUp separator="," decimals={2} start={10} end={hashRate} />} TH/s
             </p>
           </div>
         </div>
@@ -99,9 +83,7 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," start={0} end={blockReward} />
-              )}
+              {inView && <CountUp separator="," start={0} end={blockReward} />}
             </p>
           </div>
           <div className="horizontallLine"></div>
@@ -113,13 +95,7 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp
-                  separator=","
-                  start={10000000}
-                  end={circulatingSupply}
-                />
-              )}
+              {inView && <CountUp separator="," start={10000000} end={circulatingSupply} />}
             </p>
           </div>
           <div className="horizontallLine"></div>
@@ -131,24 +107,16 @@ export default function HomeInfo({
               />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," start={1000} end={transactionPerDay} />
-              )}
+              {inView && <CountUp separator="," start={1000} end={transactionPerDay} />}
             </p>
           </div>
           <div className="horizontallLine"></div>
           <div className="mx-8 my-6">
             <b className="text-brand-orange dark:text-brand-orange">
-              <FormattedMessage
-                defaultMessage="HASH RATE"
-                id="components.homeInfo.hashRate"
-              />
+              <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
-              {inView && (
-                <CountUp separator="," decimals={2} start={10} end={hashRate} />
-              )}{" "}
-              TH/s
+              {inView && <CountUp separator="," decimals={2} start={10} end={hashRate} />} TH/s
             </p>
           </div>
         </div>

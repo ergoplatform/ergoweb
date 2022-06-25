@@ -1,6 +1,5 @@
 import { useIntl } from 'react-intl';
 import BlogNews from '../components/blog/BlogNews';
-import Media from '../components/blog/Media';
 import Layout from '../components/Layout';
 
 type Props = {
@@ -23,7 +22,6 @@ export default function News(props: Props) {
       <div className="blog-blur-2"></div>
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          {props.media?.length > 0 ? <Media mediaPosts={props.media} /> : null}
           {props.news ? <BlogNews news={props.news} /> : null}
         </div>
       </Layout>

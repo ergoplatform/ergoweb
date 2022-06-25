@@ -1,0 +1,638 @@
+{
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "ХОТИТЕ СТАТЬ ПАРТНЁРОМ?"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "Я "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "компания"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "КАК Я МОГУ ВНЕСТИ СВОЙ ВКЛАД?"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "Я "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "разработчик"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo работает по открытой модели, где "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "любой желающий может внести свой вклад."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Внести свой вклад"
+    }
+  ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "ПРОСМОТРЕТЬ ВСЕ ПРОЕКТЫ"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "ПОДРОБНЕЕ И ПРИМЕНИТЬ"
+    }
+  ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "РЕКОМЕНДАЦИИ ПО УЧАСТИЮ В ПРОЕКТЕ"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "ПРИСОЕДИНЯЙТЕСЬ К НАМ В DISCORD"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "ГРАНТЫ И НАГРАДЫ"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "ПОГРУЖЕНИЕ В ERGO"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "ОТПРАВИТЬ"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "Электронная почта"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "Название / Компания"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Напишите нам свои предложения и идеи, давайте пообщаемся!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Программа обучения"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "Подайте заявку на программу обучения Sigmanaut (Сигманавт), чтобы помочь формировать и развать Ergo. "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Давайте создавать низкоуровневые финансы."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanauts (Сигманавты)"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "ПРОСМОТРЕТЬ ВСЕ СООБЩЕНИЯ"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "В центре внимания"
+    }
+  ],
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "МАЙНИНГ ERG"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "АЛГОРИТМ AUTOLYKOS"
+    }
+  ],
+  "components.autolykos.text": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " — это базовый алгоритм Proof of Work, устойчивый к ASIC-майнерам и требовательный к памяти, ориентированный на графические процессоры."
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "Будущее Proof of Work"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "НИЗКОУРОВНЕВОЕ ФИНАНСИРОВАНИЕ"
+    }
+  ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo — это платформа смарт-контрактов Proof of Work следующего поколения, которая позволяет использовать новые модели финансового взаимодействия, основанные на безопасном и богатом языке сценариев, построенном с гибкими и мощными доказательствами с нулевым разглашением (Σ-протоколы)."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "ЧИТАЙТЬ ДОКУМЕНТЫ"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "УЧИТЬСЯ С DECO"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "ЧИТАТЬ МАНИФЕСТ"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "ЧИТАТЬ МАНИФЕСТ"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "ПОЛУЧИТЬ НАСТРОЙКИ"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
+      "value": "ПОСЕТИТЬ ERGONAUT.SPACE"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "ПРОВОДНИК"
+    }
+  ],
+  "components.ergoExplorer.button2": [
+    {
+      "type": 0,
+      "value": "ERGO.WATCH"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "НЕ УДАЕТСЯ НАЙТИ ТО, "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " ЧТО ВЫ ИЩЕТЕ?"
+    }
+  ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "УЗНАТЬ БОЛЬШЕ О РОЗЫГРЫШЕ ERGO"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "НАГРАДЫ"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "НАЧАТЬ РОЗЫГРЫШ"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "СВЯЗАТЬСЯ"
+    }
+  ],
+  "components.highlights.title": [
+    {
+      "type": 0,
+      "value": "ОСНОВНЫЕ МОМЕНТЫ"
+    }
+  ],
+  "components.homeHero.button": [
+    {
+      "type": 0,
+      "value": "ПОГРУЗИТЬСЯ"
+    }
+  ],
+  "components.homeHero.text": [
+    {
+      "type": 0,
+      "value": "Ergo - это платформа смарт-контрактов следующего поколения, которая обеспечивает экономическую свободу обычных людей с помощью безопасных, доступных и децентрализованных финансовых инструментов."
+    }
+  ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Обеспечение будущего финансов"
+    }
+  ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "ВОЗНАГРАЖДЕНИЕ ЗА БЛОК"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "НАХОДИТСЯ В ОБОРОТЕ"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "ХЭШРЭЙТ СЕТИ"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "ТРАНЗАКЦИИ В ДЕНЬ"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "Майнинг Ergo основан на Autolykos, устойчивом к ASICам алгоритме Proof of Work, написанном на Scala. Он может работать на большинстве недорогих графических процессоров при более низких температурах, чем другие алгоритмы, что увеличивает срок службы оборудования для майнинга. В сочетании с моделью eUTXO и переносом тяжелой работы вне сети это создает высокоэффективный Proof of Work майнинг."
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "Добро пожаловать в будущее Proof of Work."
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "Чтобы начать работу, ознакомьтесь с созданным сообществом Справочником по майнингу или присоединитесь к дискуссионным площадкам по майнингу."
+    }
+  ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Дорожная карта"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "БЛОГ"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к нашим каналам"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Сигманавты"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Внести свой вклад в Ergo"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Зал славы"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
+      "value": "Фонд Ergo"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "СООБЩЕСТВО"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Релизы программного обеспечения"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Гранты и награды"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "ЧАВО"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Explore"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Documents"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "ИССЛЕДОВАТЬ"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Дорожная карта"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Розыгрыш Ergo"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Видеоролики"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "ЭКОСИСТЕМА"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Майнинг"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Калькулятор майнинга"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Биржи"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "ПОЛУЧИТЬ ERG"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Правовая информация"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "НОВОСТИ"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Политика конфиденциальности"
+    }
+  ],
+  "footer.weGotIt": [
+    {
+      "type": 0,
+      "value": "Получено!"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "РАЗУЗНАТЬ"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "ЭКОСИСТЕМА"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "СООБЩЕСТВО ERGO"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "ПОЛУЧИТЬ ERG"
+    }
+  ],
+  "navigation.moreContent": [
+    {
+      "type": 0,
+      "value": "Больше контента?"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "404. Страница Не найдена."
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "Не найдено"
+    }
+  ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Блог"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Сообщество"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Узнать"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Экосистема"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "Получить Erg"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Главная страница"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Правовая информация"
+    }
+  ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Мобильные кошельки"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Политика конфиденциальности"
+    }
+  ]
+}

@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgHighlights3 = (props) => (
-  <svg
-    width={528}
-    height={257}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={528} height={257} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M528 128.499c-145.923 171.335-382.077 171.335-528 0 145.916-171.332 382.077-171.332 528 0Z"
       fill="url(#highlights-3_svg__a)"

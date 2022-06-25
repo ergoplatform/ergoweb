@@ -1,20 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
 const SvgSync = (props) => (
-  <svg
-    width={43}
-    height={43}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <ellipse
-      cx={21.497}
-      cy={21.284}
-      rx={21.497}
-      ry={20.753}
-      fill="url(#sync_svg__a)"
-    />
+  <svg width={43} height={43} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <ellipse cx={21.497} cy={21.284} rx={21.497} ry={20.753} fill="url(#sync_svg__a)" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
