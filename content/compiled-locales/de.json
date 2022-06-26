@@ -1,0 +1,666 @@
+{
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "JETZT PARTNER WERDEN:"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "Ich bin ein "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Unternehmen"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "JETZT BEITRAG LEISTEN:"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "Ich bin "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Entwickler*in"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo verfolgt "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "einen offenen Ansatz"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ", bei dem "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "jede*r"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " willkommen ist, "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "einen Beitrag zu leisten."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Mitmachen"
+    }
+  ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "NOCH MEHR PROJEKTE"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "MEHR ERFAHREN & BEWERBEN"
+    }
+  ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "RICHTLINIEN FÜR DIE MITARBEIT"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "TRETE UNSEREM DISCORD BEI"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "FÖRDERUNGEN & PRÄMIEN"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "TAUCHE IN ERGO EIN"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "ABSENDEN"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "Name / Unternehmen"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Schreibe uns deine Ideen und lass uns drüber reden!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Ausbildungsprogramm"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "Bewirb dich für das Sigmanauten-Ausbildungsprogramm, um Ergos Wachstum mitzugestalten. "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Lass uns ein basisdemokratisches Grassroots-Finanzsystem erschaffen."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanauten"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "ZU ALLEN BEITRÄGEN"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "Spotlight"
+    }
+  ],
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "MINE JETZT ERG"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "AUTOLYKOS"
+    }
+  ],
+  "components.autolykos.text": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " ist Ergos auf GPUs ausgerichteter speicherharter, ASIC-resistenter Proof-of-Work-Algorithmus"
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "Die Zukunft von Proof of Work"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "GRASSROOTS FINANZEN AUS DER BASIS"
+    }
+  ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo ist eine Next-Gen Proof-of-Work-Plattform mit Smart Contracts, die neue Modelle finanzieller Interaktion ermöglicht, basierend auf einer sicheren und vielseitigen Skriptsprache mit flexiblen und leistungsstarken Zero-Knowledge-Proofs (Σ-Protokolle)."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "LIES DIE DOCS"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "LERNE MIT DECO"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "LIES DAS MANIFEST"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "SCHAU INS BLOG"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "RICHTE DICH EIN"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
+      "value": "BESUCH ERGONAUT.SPACE"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "EXPLORER"
+    }
+  ],
+  "components.ergoExplorer.button2": [
+    {
+      "type": 0,
+      "value": "ERGO.WATCH"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "DU FINDEST NICHT, "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " WONACH DU SUCHST?"
+    }
+  ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "ERKUNDE ERGO RAFFLE"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "PRÄMIEN"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "STARTE EIN RAFFLE"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "KONTAKTIERE UNS"
+    }
+  ],
+  "components.highlights.title": [
+    {
+      "type": 0,
+      "value": "HIGHLIGHTS"
+    }
+  ],
+  "components.homeHero.button": [
+    {
+      "type": 0,
+      "value": "TAUCH EIN"
+    }
+  ],
+  "components.homeHero.text": [
+    {
+      "type": 0,
+      "value": "Ergo ist eine Next-Gen Proof-of-Work-Plattform mit Smart Contracts, die durch sichere, zugängliche und dezentralisierte Finanztools die wirtschaftliche Freiheit einfacher Menschen gewährleistet."
+    }
+  ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Energie für die Zukunft der Finanzen"
+    }
+  ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "BLOCKBELOHNUNG"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "ERG IM UMLAUF"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "HASHRATE"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "TRANSAKTIONEN PRO TAG"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "Ergos Mining basiert auf Autolykos, einem in Scala programmierten, ASIC-resistenten Proof-of-Work-Algorithmus. Er kann auf den meisten Low-End-GPUs bei vergleichsweise niedrigeren Temperaturen laufen und holt dadurch mehr Lebenszeit aus der Hardware. In Kombination mit dem eUTXO-Modell und der Off-Chain-Auslagerung von größeren Rechenoperationen entsteht so ein äußerst effizientes Proof-of-Work."
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "Willkommen in der Zukunft von Proof-of-Work."
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "Um loszulegen, schau ins Mining-Handbuch der Community oder trete den Mining-Diskussionskanälen bei."
+    }
+  ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Roadmap"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Trete unseren Kanälen bei"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Sigmanauten"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Bei Ergo mitmachen"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Hall of Fame"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
+      "value": "Ergo Foundation"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "COMMUNITY"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Software Releases"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Förderungen & Prämien"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Explorer"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Dokumente"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "ENTDECKEN"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Roadmap"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Videocasts"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "ÖKOSYSTEM"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Minen"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Mining Rechner"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Wallets"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Exchanges/Börsen"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "HOL DIR ERG"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Rechtliches"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "NEWS"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Datenschutzhinweise"
+    }
+  ],
+  "footer.weGotIt": [
+    {
+      "type": 0,
+      "value": "We got it!"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "ENTDECKEN"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "ÖKOSYSTEM"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "ERGO COMMUNITY"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "HOL DIR ERG"
+    }
+  ],
+  "navigation.moreContent": [
+    {
+      "type": 0,
+      "value": "Mehr Inhalte?"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "404. Seite nicht gefunden."
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "Nicht gefunden"
+    }
+  ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Community"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Entdecken"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Ökosystem"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "Hol dir Erg"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Home"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Rechtliches"
+    }
+  ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Mobile Wallets"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Datenschutzhinweise"
+    }
+  ]
+}
