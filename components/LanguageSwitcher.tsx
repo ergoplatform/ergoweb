@@ -7,7 +7,6 @@ import Link from 'next/link';
 export default function LanguageSwitcher({ color = 'default' }) {
   const { locale, locales, route } = useRouter();
   const [selected, setSelected] = useState(locale);
-
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative">
