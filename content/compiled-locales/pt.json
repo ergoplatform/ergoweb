@@ -86,7 +86,7 @@
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
-      "value": "ENTRO NO NOSSO DISCORD"
+      "value": "ENTRE NO NOSSO DISCORD"
     }
   ],
   "components.Sigmanauts.button.grantsAndBounties": [
@@ -134,7 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Inscreva-se no Programa de Treinamento Sigmanauta para ajudar a moldar e crescer Ergo. "
+      "value": "Inscreva-se no Programa de Treinamento Sigmanauta para ajudar a moldar e crescer Ergo."
     },
     {
       "type": 1,
@@ -146,7 +146,7 @@
     },
     {
       "type": 0,
-      "value": " Vamos criar um sistema financeiro popular."
+      "value": "Vamos criar um sistema financeiro popular."
     }
   ],
   "components.Sigmanauts.title": [

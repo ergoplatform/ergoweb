@@ -6,7 +6,7 @@ const locales = [
                 // 'hi',
                 // 'it',
                 // 'tr',
-                // 'pt',
+                'pt',
                 // 'ro',
                 // 'sk',
                 // 'zh',
