@@ -9,6 +9,7 @@ import Spanish from '../content/compiled-locales/es.json';
 // import Italian from "../content/compiled-locales/it.json";
 // import Turkish from "../content/compiled-locales/tr.json";
 import Portuguese from '../content/compiled-locales/pt.json';
+import Hungarian from '../content/compiled-locales/hu.json';
 // import Romanian from "../content/compiled-locales/ro.json";
 // import Slovak from "../content/compiled-locales/sk.json";
 // import Chinese from "../content/compiled-locales/zh.json";
@@ -54,6 +55,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       //   return Turkish
       case 'pt':
         return Portuguese;
+      case 'hu':
+        return Hungarian;
       // case "ro":
       //   return Romanian
       // case "sk":
