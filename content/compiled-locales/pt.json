@@ -92,7 +92,7 @@
   "components.Sigmanauts.button.grantsAndBounties": [
     {
       "type": 0,
-      "value": "BOLSAS & PRÊMIOS"
+      "value": "BÔNUS & PRÊMIOS"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [
@@ -135,18 +135,6 @@
     {
       "type": 0,
       "value": "Inscreva-se no Programa de Treinamento Sigmanauta para ajudar a moldar e crescer Ergo."
-    },
-    {
-      "type": 1,
-      "value": "br"
-    },
-    {
-      "type": 1,
-      "value": "br"
-    },
-    {
-      "type": 0,
-      "value": "Vamos criar um sistema financeiro popular."
     }
   ],
   "components.Sigmanauts.title": [
@@ -170,7 +158,7 @@
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "MINERE ERG"
+      "value": "MINERAR ERG"
     }
   ],
   "components.autolykos.header": [
@@ -210,7 +198,7 @@
   "components.discoverErgo.text.1": [
     {
       "type": 0,
-      "value": "Ergo é a plataforma de contratos inteligentes em Prova-de-Trabalho da nova geração, que possibilita novos modelos de interações financeiras, sustentada por uma linguagem de script segura, rica e construída com poderosas e flexíveis Provas de Conhecimento-Zero (protocolos-Σ)."
+      "value": "Ergo é a plataforma de contratos inteligentes em Prova-de-Trabalho da nova geração, que possibilita novos modelos de interações financeiras, sustentada por uma linguagem de script segura, rica e construída com poderosas e flexíveis Provas de Conhecimento-Zero (protocolos-Σ)"
     }
   ],
   "components.discoverHero.button1": [
@@ -290,7 +278,7 @@
   "components.grantsAndBounties.button2": [
     {
       "type": 0,
-      "value": "INICIE UMA RIFA"
+      "value": "COMECE UMA RIFA"
     }
   ],
   "components.grantsAndBounties.button3": [
@@ -392,7 +380,7 @@
   "footer.community.3": [
     {
       "type": 0,
-      "value": "Contribua com Ergo"
+      "value": "Contribu com Ergo"
     }
   ],
   "footer.community.4": [
@@ -428,7 +416,7 @@
   "footer.discover.3": [
     {
       "type": 0,
-      "value": "Perguntas Frequentes"
+      "value": "PERGUNTAS FREQUENTES"
     }
   ],
   "footer.discover.4": [
@@ -512,7 +500,7 @@
   "footer.getErg.title": [
     {
       "type": 0,
-      "value": "OBETENHA ERG"
+      "value": "OBTENHA ERG"
     }
   ],
   "footer.legal": [
@@ -572,7 +560,7 @@
   "pages.404.hero": [
     {
       "type": 0,
-      "value": "404. Página Não Encontrada."
+      "value": "404. Página não encontrada."
     }
   ],
   "pages.404.title": [
