@@ -2,13 +2,13 @@
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
-      "value": "WANT TO BECOME A PARTNER?"
+      "value": "Chcesz zostać partnerem?"
     }
   ],
   "components.ContributeForm.company.title": [
     {
       "type": 0,
-      "value": "I am a "
+      "value": "Jestem "
     },
     {
       "children": [
@@ -24,19 +24,19 @@
   "components.ContributeForm.developer.subTitle": [
     {
       "type": 0,
-      "value": "HOW CAN I CONTRIBUTE?"
+      "value": "JAK MOGĘ WESPRZEĆ?"
     }
   ],
   "components.ContributeForm.developer.title": [
     {
       "type": 0,
-      "value": "I am a "
+      "value": "Jestem "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "developer"
+          "value": "deweloperem"
         }
       ],
       "type": 8,
@@ -46,13 +46,13 @@
   "components.ContributeForm.text": [
     {
       "type": 0,
-      "value": "Ergo operates on an open model where "
+      "value": "Ergo działa w otwartym modelu, gdzie "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "anyone is welcome to contribute."
+          "value": "każdy może wnieść swój wkład."
         }
       ],
       "type": 8,
@@ -62,49 +62,49 @@
   "components.ContributeForm.title": [
     {
       "type": 0,
-      "value": "Contribute"
+      "value": "Współpracuj"
     }
   ],
   "components.DApps.seeAllProjects": [
     {
       "type": 0,
-      "value": "SEE ALL PROJECTS"
+      "value": "ZOBACZ WSZYSTKIE PROJEKTY"
     }
   ],
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "READ MORE & APPLY"
+      "value": "CZYTAJ WIĘCEJ & APLIKUJ"
     }
   ],
   "components.Sigmanauts.button.buttonContribute": [
     {
       "type": 0,
-      "value": "CONTRIBUTING GUIDELINES"
+      "value": "ZASADY WSPÓŁPRACY"
     }
   ],
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
-      "value": "JOIN US ON DISCORD"
+      "value": "DOŁĄCZ NA SERWER DISCORD"
     }
   ],
   "components.Sigmanauts.button.grantsAndBounties": [
     {
       "type": 0,
-      "value": "GRANTS & BOUNTIES"
+      "value": "DOTACJE & NAGRODY"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "DIVE INTO ERGO"
+      "value": "ODKRYJ ERGO"
     }
   ],
   "components.Sigmanauts.formInput.button": [
     {
       "type": 0,
-      "value": "SEND"
+      "value": "WYŚLIJ"
     }
   ],
   "components.Sigmanauts.formInput.email": [
@@ -116,25 +116,25 @@
   "components.Sigmanauts.formInput.name": [
     {
       "type": 0,
-      "value": "Name / Company"
+      "value": "Nazwa / Firma"
     }
   ],
   "components.Sigmanauts.formInput.text": [
     {
       "type": 0,
-      "value": "Write us your suggestions and ideas, let’s talk!"
+      "value": "Napisz nam o swoich sugestiach i pomysłach, porozmawiajmy!"
     }
   ],
   "components.Sigmanauts.subTitle": [
     {
       "type": 0,
-      "value": "Training programme"
+      "value": "Seminarium szkoleniowe"
     }
   ],
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Apply for the Sigmanaut Training Programme to help shape and grow Ergo. "
+      "value": "Zgłoś się do programu szkoleniowego Sigmanaut, aby pomóc kształtować i rozwijać Ergo. "
     },
     {
       "type": 1,
