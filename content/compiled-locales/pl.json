@@ -146,19 +146,19 @@
     },
     {
       "type": 0,
-      "value": " Let's create grassroots finance."
+      "value": " Stwórzmy razem system finansowy-Grassroots."
     }
   ],
   "components.Sigmanauts.title": [
     {
       "type": 0,
-      "value": "Sigmanauts"
+      "value": "Sigmanauci"
     }
   ],
   "components.Spotlight.button": [
     {
       "type": 0,
-      "value": "SEE ALL POSTS"
+      "value": "ZOBACZ WSZYSTKIE POSTY"
     }
   ],
   "components.Spotlight.title": [
@@ -170,7 +170,7 @@
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "MINE ERG"
+      "value": "Wydobywaj ERG"
     }
   ],
   "components.autolykos.header": [
@@ -192,13 +192,13 @@
     },
     {
       "type": 0,
-      "value": " is the underlying memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."
+      "value": " jest zorientowanym na procesory graficzne GPU algorytmem Proof-of-Work, nie współpracującym z ASIC."
     }
   ],
   "components.autolykos.title": [
     {
       "type": 0,
-      "value": "The Future of Proof of Work"
+      "value": "Przyszłość Proof of Work"
     }
   ],
   "components.communityHero.subtitle": [
