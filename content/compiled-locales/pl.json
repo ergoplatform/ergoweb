@@ -92,7 +92,7 @@
   "components.Sigmanauts.button.grantsAndBounties": [
     {
       "type": 0,
-      "value": "DOTACJE & NAGRODY"
+      "value": "DOTACJE & BONUSY"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [
@@ -210,43 +210,43 @@
   "components.discoverErgo.text.1": [
     {
       "type": 0,
-      "value": "Ergo is a next-generation Proof of Work smart-contract platform that enables new models of financial interaction, underpinned by a safe and rich scripting language built with flexible and powerful Zero-Knowledge proofs (Σ-protocols)."
+      "value": "Ergo jest kolejnej generacji Proof of Work platformą smart kontraktów, która umożliwia tworzenie nowych modeli interakcji finansowych, wspartych bezpiecznym i bogatym językiem programistycznym zbudowanym na procedurach Zero-Knowledge proofs (Σ-protocols)."
     }
   ],
   "components.discoverHero.button1": [
     {
       "type": 0,
-      "value": "READ THE DOCS"
+      "value": "PRZECZYTAJ DOKUMENTY"
     }
   ],
   "components.discoverHero.button2": [
     {
       "type": 0,
-      "value": "LEARN WITH DECO"
+      "value": "UCZ SIĘ Z DECO"
     }
   ],
   "components.discoverHero.button3": [
     {
       "type": 0,
-      "value": "READ THE MANIFESTO"
+      "value": "PRZECZYTAJ MANIFEST"
     }
   ],
   "components.discoverHero.button4": [
     {
       "type": 0,
-      "value": "CHECK THE BLOG"
+      "value": "SPRAWDŹ BLOGA"
     }
   ],
   "components.discoverHero.button5": [
     {
       "type": 0,
-      "value": "GET SETUP"
+      "value": "SKONFIGURUJ"
     }
   ],
   "components.discoverHero.button6": [
     {
       "type": 0,
-      "value": "VISIT ERGONAUT.SPACE"
+      "value": "ODWIEDŹ ERGONAUT.SPACE"
     }
   ],
   "components.ergoExplorer.button1": [
@@ -264,7 +264,7 @@
   "components.faq.text.2": [
     {
       "type": 0,
-      "value": "CAN'T FIND WHAT "
+      "value": "NIE MOŻESZ ZNALEŹĆ TEGO, "
     },
     {
       "type": 1,
@@ -272,25 +272,25 @@
     },
     {
       "type": 0,
-      "value": " YOU’RE LOOKING FOR?"
+      "value": " CZEGO SZUKASZ?"
     }
   ],
   "components.favorites.button1": [
     {
       "type": 0,
-      "value": "EXPLORE ERGO RAFFLE"
+      "value": "ODKRYJ ERGO RAFFLE"
     }
   ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
-      "value": "BOUNTIES"
+      "value": "BONUSY"
     }
   ],
   "components.grantsAndBounties.button2": [
     {
       "type": 0,
-      "value": "START A RAFFLE"
+      "value": "ROZPOCZNIJ ZBIÓRKĘ"
     }
   ],
   "components.grantsAndBounties.button3": [
