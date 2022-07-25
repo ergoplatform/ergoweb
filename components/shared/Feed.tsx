@@ -1,4 +1,4 @@
-import Post from './Post';
+import Post from "./Post";
 
 type Props = {
   posts?: any;
@@ -22,9 +22,7 @@ export default function Feed(props: Props) {
           type={post.attributes.type}
           content={post.attributes.content}
           image={
-            post.attributes.image.data != null
-              ? post.attributes.image.data.attributes.formats.medium.url
-              : null
+            post.attributes.image.data != null ? post.attributes.image.data?.attributes?.formats?.medium?.url : null
           }
           blogPhoto={post.attributes.blogPhoto}
           authorPhoto={post.attributes.authorPhoto}
