@@ -23,7 +23,7 @@ export default function Feed(props: Props) {
           content={post.attributes.content}
           image={
             post.attributes.image.data != null
-              ? post.attributes.image.data.attributes.formats.medium.url
+              ? post.attributes.image.data?.attributes?.formats?.medium?.url
               : null
           }
           blogPhoto={post.attributes.blogPhoto}

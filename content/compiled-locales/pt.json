@@ -46,13 +46,13 @@
   "components.ContributeForm.text": [
     {
       "type": 0,
-      "value": "Ergo opera em um modelo aberto,"
+      "value": "Ergo opera em um modelo aberto, onde "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": " onde convidamos todos a contribuirem."
+          "value": "convidamos todos a contribuirem."
         }
       ],
       "type": 8,
