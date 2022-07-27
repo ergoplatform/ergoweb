@@ -8,13 +8,13 @@
   "components.ContributeForm.company.title": [
     {
       "type": 0,
-      "value": "Jestem "
+      "value": "Dla "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "company"
+          "value": "firm"
         }
       ],
       "type": 8,
@@ -62,7 +62,7 @@
   "components.ContributeForm.title": [
     {
       "type": 0,
-      "value": "Współpracuj"
+      "value": "Wnieś swój wkład"
     }
   ],
   "components.DApps.seeAllProjects": [
@@ -134,7 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Zgłoś się do programu szkoleniowego Sigmanaut, aby pomóc kształtować i rozwijać Ergo. "
+      "value": "Zgłoś się do programu szkoleniowego Sigmanautów, aby pomóc kształtować i rozwijać Ergo. "
     },
     {
       "type": 1,
@@ -210,7 +210,7 @@
   "components.discoverErgo.text.1": [
     {
       "type": 0,
-      "value": "Ergo jest kolejnej generacji Proof of Work platformą smart kontraktów, która umożliwia tworzenie nowych modeli interakcji finansowych, wspartych bezpiecznym i bogatym językiem programistycznym zbudowanym na procedurach Zero-Knowledge proofs (Σ-protocols)."
+      "value": "Ergo jest kolejnej generacji Proof of Work platformą smart kontraktów, która umożliwia tworzenie nowych modeli interakcji finansowych, wspartych bezpiecznym i bogatym językiem programistycznym, zbudowanym na procedurach Zero-Knowledge proofs (Σ-protocols)."
     }
   ],
   "components.discoverHero.button1": [
@@ -308,31 +308,31 @@
   "components.homeHero.button": [
     {
       "type": 0,
-      "value": "DIVE IN"
+      "value": "SPRAWDŹ"
     }
   ],
   "components.homeHero.text": [
     {
       "type": 0,
-      "value": "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
+      "value": "Ergo to platforma smart kontraktów nowej generacji, która zapewnia wolność finansową zwykłych ludzi poprzez bezpieczne, dostępne i zdecentralizowane narzędzie finansowe."
     }
   ],
   "components.homeHero.title": [
     {
       "type": 0,
-      "value": "Powering the Future of Finance"
+      "value": "Kreowanie przyszłości finansów"
     }
   ],
   "components.homeInfo.blockReward": [
     {
       "type": 0,
-      "value": "BLOCK REWARD"
+      "value": "NAGRODA ZA BLOK"
     }
   ],
   "components.homeInfo.circulatingSupply": [
     {
       "type": 0,
-      "value": "CIRCULATING SUPPLY"
+      "value": "PODAŻ W OBIEGU "
     }
   ],
   "components.homeInfo.hashRate": [
@@ -344,25 +344,25 @@
   "components.homeInfo.transactionPerDay": [
     {
       "type": 0,
-      "value": "TRANSACTIONS PER DAY"
+      "value": "TRANSAKCJE NA DZIEŃ"
     }
   ],
   "components.mining.text.1": [
     {
       "type": 0,
-      "value": "Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
+      "value": "Wydobywanie Ergo opiera się na algorytmie Proof of Work Autolykos, odpornym na układy ASIC, zaprogramowanym w Scali. Wydobywanie możliwe jest na większości układów GPU w stosunkowo niższych temperaturach niż inne algorytmy, co zwiększa żywotność sprzętu górniczego. W połączeniu z modelem eUTXO i przeniesieniem cięższych obliczeń poza łańcuch, tworzy wysoce wydajny Proof of Work"
     }
   ],
   "components.mining.text.2": [
     {
       "type": 0,
-      "value": "Welcome to the future of Proof of Work."
+      "value": "Witamy w przyszłości Proof of Work."
     }
   ],
   "components.mining.text.3": [
     {
       "type": 0,
-      "value": "To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
+      "value": "Na początku zapoznaj się z tworzonym przez społeczność przewodnikiem dotyczącym górnictwa lub dołącz do dyskusji na jego temat."
     }
   ],
   "components.roadmap.title": [
@@ -380,49 +380,49 @@
   "footer.community.1": [
     {
       "type": 0,
-      "value": "Join our channels"
+      "value": "Dołącz na nasze kanały"
     }
   ],
   "footer.community.2": [
     {
       "type": 0,
-      "value": "Sigmanauts"
+      "value": "Sigmanauci"
     }
   ],
   "footer.community.3": [
     {
       "type": 0,
-      "value": "Contribute to Ergo"
+      "value": "Współtrzwórz Ergo"
     }
   ],
   "footer.community.4": [
     {
       "type": 0,
-      "value": "Hall of Fame"
+      "value": "Galeria sław"
     }
   ],
   "footer.community.5": [
     {
       "type": 0,
-      "value": "Ergo Foundation"
+      "value": "Fundacja Ergo"
     }
   ],
   "footer.community.title": [
     {
       "type": 0,
-      "value": "COMMUNITY"
+      "value": "SPOŁECZNOŚĆ"
     }
   ],
   "footer.discover.1": [
     {
       "type": 0,
-      "value": "Software Releases"
+      "value": "Publikacje oprogramowania"
     }
   ],
   "footer.discover.2": [
     {
       "type": 0,
-      "value": "Grants & Bounties"
+      "value": "Dotacje & Bonusy"
     }
   ],
   "footer.discover.3": [
@@ -440,13 +440,13 @@
   "footer.discover.5": [
     {
       "type": 0,
-      "value": "Documents"
+      "value": "Dokumenty"
     }
   ],
   "footer.discover.title": [
     {
       "type": 0,
-      "value": "DISCOVER"
+      "value": "ODKRYJ"
     }
   ],
   "footer.ecosystem.1": [
@@ -476,67 +476,67 @@
   "footer.ecosystem.5": [
     {
       "type": 0,
-      "value": "Videocasts"
+      "value": "Podkasty"
     }
   ],
   "footer.ecosystem.title": [
     {
       "type": 0,
-      "value": "ECOSYSTEM"
+      "value": "EKOSYSTEM"
     }
   ],
   "footer.getErg.1": [
     {
       "type": 0,
-      "value": "Mining"
+      "value": "Wydobywanie"
     }
   ],
   "footer.getErg.2": [
     {
       "type": 0,
-      "value": "Mining Calculator"
+      "value": "Kalkulator wydobycia"
     }
   ],
   "footer.getErg.3": [
     {
       "type": 0,
-      "value": "Wallets"
+      "value": "Portfele"
     }
   ],
   "footer.getErg.4": [
     {
       "type": 0,
-      "value": "Exchanges"
+      "value": "Giełdy"
     }
   ],
   "footer.getErg.title": [
     {
       "type": 0,
-      "value": "GET ERG"
+      "value": "ZDOBĄDŹ ERG"
     }
   ],
   "footer.legal": [
     {
       "type": 0,
-      "value": "Legal"
+      "value": "Informacje prawne"
     }
   ],
   "footer.news.title": [
     {
       "type": 0,
-      "value": "NEWS"
+      "value": "NOWOŚCI"
     }
   ],
   "footer.privacyPolicy": [
     {
       "type": 0,
-      "value": "Privacy Policy"
+      "value": "Polityka prywatności"
     }
   ],
   "footer.weGotIt": [
     {
       "type": 0,
-      "value": "We got it!"
+      "value": "Mamy to!"
     }
   ],
   "navigation.discover": [
@@ -548,37 +548,37 @@
   "navigation.ecosystem": [
     {
       "type": 0,
-      "value": "ECOSYSTEM"
+      "value": "EKOSYSTEM"
     }
   ],
   "navigation.ergoCommunity": [
     {
       "type": 0,
-      "value": "ERGO COMMUNITY"
+      "value": "SPOŁECZNOŚĆ ERGO"
     }
   ],
   "navigation.getErg": [
     {
       "type": 0,
-      "value": "GET ERG"
+      "value": "ZDOBĄDŹ ERG"
     }
   ],
   "navigation.moreContent": [
     {
       "type": 0,
-      "value": "More content?"
+      "value": "Więcej treści?"
     }
   ],
   "pages.404.hero": [
     {
       "type": 0,
-      "value": "404. Page Not Found."
+      "value": "404. Nie znaleziono strony."
     }
   ],
   "pages.404.title": [
     {
       "type": 0,
-      "value": "Not Found"
+      "value": "Nie znaleziono"
     }
   ],
   "pages.blog.title": [
@@ -590,49 +590,49 @@
   "pages.community.title": [
     {
       "type": 0,
-      "value": "Community"
+      "value": "Społeczność"
     }
   ],
   "pages.discover.title": [
     {
       "type": 0,
-      "value": "Discover"
+      "value": "Odkryj"
     }
   ],
   "pages.ecosystem.title": [
     {
       "type": 0,
-      "value": "Ecosystem"
+      "value": "Ekosystem"
     }
   ],
   "pages.get-erg.title": [
     {
       "type": 0,
-      "value": "GetErg"
+      "value": "Zdobądź ERG"
     }
   ],
   "pages.home.title": [
     {
       "type": 0,
-      "value": "Home"
+      "value": "Strona główna"
     }
   ],
   "pages.legal.title": [
     {
       "type": 0,
-      "value": "Legal"
+      "value": "Informacje prawne"
     }
   ],
   "pages.mobile-wallets": [
     {
       "type": 0,
-      "value": "Mobile Wallets"
+      "value": "Portfele mobilne"
     }
   ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
-      "value": "Privacy Policy"
+      "value": "Polityka prywatności"
     }
   ]
 }
