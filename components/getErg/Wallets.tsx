@@ -226,7 +226,7 @@ export default function Wallets() {
             <p className="text-center mt-2 lg:my-auto lg:pl-2">Satergo</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
+            <WalletDesktop className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 18 18" />
             <p className="text-center mt-2 text-[12px]">Desktop</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
