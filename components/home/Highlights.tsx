@@ -62,7 +62,7 @@ const slides = [
     titleMessage: (
       <FormattedMessageFixed
         defaultMessage="Optional Privacy"
-        id="components.highlights.slide.2.title"
+        id="components.highlights.slide.3.title"
         values={{ breakingLine: <br /> }}
       />
     ),
@@ -143,7 +143,7 @@ function Highlights() {
                     })}
                   </div>
                   <div className="item w-2/3">
-                    <h3>{item.titleMessage}</h3>
+                    <h3 className="leading-tight">{item.titleMessage}</h3>
                     <p className="max-w-lg text-[#585858] mt-6">{item.textMessage}</p>
                     <p className="font-vinila-extended leading-none text-[56px] mt-12">
                       {item.quoteMessage}
