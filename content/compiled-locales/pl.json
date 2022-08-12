@@ -52,7 +52,7 @@
       "children": [
         {
           "type": 0,
-          "value": "każdy może wnieść swój wkład."
+          "value": "każdy może wnieść swój wkład"
         }
       ],
       "type": 8,
@@ -146,7 +146,7 @@
     },
     {
       "type": 0,
-      "value": " Stwórzmy razem system finansowy-Grassroots."
+      "value": "  Stwórzmy razem system finansowy-Grassroots."
     }
   ],
   "components.Sigmanauts.title": [
@@ -170,7 +170,7 @@
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "Wydobywaj ERG"
+      "value": "WYDOBYWAJ ERGO"
     }
   ],
   "components.autolykos.header": [
@@ -332,7 +332,7 @@
   "components.homeInfo.circulatingSupply": [
     {
       "type": 0,
-      "value": "PODAŻ W OBIEGU "
+      "value": "PODAŻ W OBIEGU"
     }
   ],
   "components.homeInfo.hashRate": [
@@ -350,7 +350,7 @@
   "components.mining.text.1": [
     {
       "type": 0,
-      "value": "Wydobywanie Ergo opiera się na algorytmie Proof of Work Autolykos, odpornym na układy ASIC, zaprogramowanym w Scali. Wydobywanie możliwe jest na większości układów GPU w stosunkowo niższych temperaturach niż inne algorytmy, co zwiększa żywotność sprzętu górniczego. W połączeniu z modelem eUTXO i przeniesieniem cięższych obliczeń poza łańcuch, tworzy wysoce wydajny Proof of Work"
+      "value": "EWydobywanie Ergo opiera się na algorytmie Proof of Work Autolykos, odpornym na układy ASIC, zaprogramowanym w Scali. Wydobywanie możliwe jest na większości układów GPU w stosunkowo niższych temperaturach niż inne algorytmy, co zwiększa żywotność sprzętu górniczego. W połączeniu z modelem eUTXO i przeniesieniem cięższych obliczeń poza łańcuch, tworzy wysoce wydajny Proof of Work."
     }
   ],
   "components.mining.text.2": [
@@ -410,7 +410,7 @@
   "footer.community.title": [
     {
       "type": 0,
-      "value": "SPOŁECZNOŚĆ"
+      "value": "Społeczność"
     }
   ],
   "footer.discover.1": [
@@ -512,7 +512,7 @@
   "footer.getErg.title": [
     {
       "type": 0,
-      "value": "ZDOBĄDŹ ERG"
+      "value": "Zdobądź ERG"
     }
   ],
   "footer.legal": [
@@ -560,7 +560,7 @@
   "navigation.getErg": [
     {
       "type": 0,
-      "value": "ZDOBĄDŹ ERG"
+      "value": "Zdobądź ERG"
     }
   ],
   "navigation.moreContent": [
