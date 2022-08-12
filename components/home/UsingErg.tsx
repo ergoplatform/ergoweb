@@ -44,11 +44,7 @@ function FormattedMessageFixed(props: any) {
   return <FormattedMessage {...props} />;
 }
 
-type Props = {
-  title: string;
-};
-
-export default function UsingErg(props: Props) {
+export default function UsingErg() {
   return (
     <div
       id="UsingErg"
@@ -57,13 +53,26 @@ export default function UsingErg(props: Props) {
     >
       <div className="flex flex-col xl:flex-row justify-between">
         <div className="lg:flex lg:flex-col lg:justify-end lg:mb-44">
-          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">UNSTOPPABLE DEFI</p>
+          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
+            <FormattedMessage
+              defaultMessage={'UNSTOPPABLE DEFI'}
+              id="components.usingErg.subtitle"
+            ></FormattedMessage>
+          </p>
           <h2 className="leading-none">
-            <b>{props.title}</b>
+            <b>
+              <FormattedMessage
+                defaultMessage={'GET ERG'}
+                id="components.usingErg.title"
+              ></FormattedMessage>
+            </b>
           </h2>
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
-            There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
-            investor - we’ve got you covered.
+            <FormattedMessage
+              defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
+              investor - we’ve got you covered."
+              id="components.usingErg.description"
+            ></FormattedMessage>
           </p>
         </div>
         <div className="flex overflow-x-auto lg:space-x-4 space-x-8 mt-10 no-scrollbar pb-10">

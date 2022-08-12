@@ -128,7 +128,7 @@ export default function JoinUs() {
         ))}
         <div className="w-0.1 flex-shrink-0"></div>
       </div>
-      <div className="hidden max-w-[1300px] mx-auto p-4 2xl:grid overflow-hidden grid-cols-4 grid-rows-2 gap-6">
+      <div className="hidden max-w-[1300px] mx-auto p-4 py-6 2xl:grid overflow-hidden grid-cols-4 grid-rows-2 gap-6">
         {cards.map((card: any, i: number) => (
           <CommunityCard
             key={i}

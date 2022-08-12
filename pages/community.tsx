@@ -4,7 +4,6 @@ import CommunityHero from '../components/community/CommunityHero';
 import ErgoFoundation from '../components/community/ErgoFoundation';
 import HallOfFame from '../components/community/HallOfFame';
 import OurMission from '../components/community/OurMission';
-// import HallOfFame from "../components/community/HallOfFame";
 import Sigmanauts from '../components/community/Sigmanauts';
 import Spotlight from '../components/community/Spotlight';
 import Layout from '../components/Layout';
@@ -22,6 +21,7 @@ export default function Community(props: Props) {
     id: 'pages.community.title',
     defaultMessage: 'Community',
   });
+
   return (
     <div>
       <div className="community-blur-2"></div>
@@ -41,8 +41,13 @@ export default function Community(props: Props) {
         <CommunityCardsFeed />
         <Sigmanauts />
         <ContributeForm />
-        <Spotlight />
-        {props.posts ? <Feed posts={props.posts} /> : null}
+
+        {props.posts?.data?.length !== 0 ? (
+          <>
+            <Spotlight />
+            <Feed posts={props.posts} />
+          </>
+        ) : null}
         {props.teamMembers ? <HallOfFame teamMembers={props.teamMembers} /> : null}
         <ErgoFoundation />
         <OurMission />

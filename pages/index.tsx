@@ -52,7 +52,7 @@ export default function Home(props: Props) {
         ) : null}
 
         <UniqueErgo />
-        <UsingErg title="Get ERG" />
+        <UsingErg />
         <Autolykos />
         {props.posts ? <News news={props.news} /> : null}
         {props.posts ? <Feed posts={props.posts} /> : null}

@@ -249,6 +249,12 @@
       "value": "VISIT ERGONAUT.SPACE"
     }
   ],
+  "components.ecosystemHero.title": [
+    {
+      "type": 0,
+      "value": "Ecosystem"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -259,6 +265,146 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergofoundation.list1": [
+    {
+      "type": 0,
+      "value": "Promoting "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "non-breaking development "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " of Ergo Platform protocol;"
+    }
+  ],
+  "components.ergofoundation.list2": [
+    {
+      "type": 0,
+      "value": "Publicizing the widespread adoption and use of Ergo Platform and its "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": " native token "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " (ERG);"
+    }
+  ],
+  "components.ergofoundation.list3": [
+    {
+      "type": 0,
+      "value": "Developing the "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "ecosystem "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " around the Ergo Platform;"
+    }
+  ],
+  "components.ergofoundation.list4": [
+    {
+      "type": 0,
+      "value": "Spread the use of Ergo Platform and blockchain technology for "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": " social good "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ";"
+    }
+  ],
+  "components.ergofoundation.list5": [
+    {
+      "type": 0,
+      "value": "Uphold "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "truly decentralized infrastructure"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ", and;"
+    }
+  ],
+  "components.ergofoundation.list6": [
+    {
+      "type": 0,
+      "value": "Supporting "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "privacy "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " as a basic human right."
+    }
+  ],
+  "components.ergofoundation.title": [
+    {
+      "type": 0,
+      "value": "The "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Ergo Foundation"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " is a community-driven entity focused on"
     }
   ],
   "components.faq.text.2": [
@@ -297,6 +443,42 @@
     {
       "type": 0,
       "value": "GET IN TOUCH"
+    }
+  ],
+  "components.hallOfFame.description1": [
+    {
+      "type": 0,
+      "value": "Ergo was founded with a team who have solid backgrounds in core development with cryptocurrencies and blockchain frameworks including NXT, Scorex, Cardano and Waves. Below are brief biographies for some of the core ERGO team as well as some of the many other developers and community members involved, some of whom are anonymous."
+    }
+  ],
+  "components.hallOfFame.description2": [
+    {
+      "type": 0,
+      "value": "Ergo is grassroots, and most core team members (and even foundation members) started out as community members. There is a brief description as well as information to read more about the Ergo Foundation at the bottom of this page."
+    }
+  ],
+  "components.hallOfFame.tab1": [
+    {
+      "type": 0,
+      "value": "CORE"
+    }
+  ],
+  "components.hallOfFame.tab2": [
+    {
+      "type": 0,
+      "value": "COMMUNITY"
+    }
+  ],
+  "components.hallOfFame.tab3": [
+    {
+      "type": 0,
+      "value": "FOUNDATION"
+    }
+  ],
+  "components.hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hall Of Fame"
     }
   ],
   "components.highlights.title": [
@@ -365,10 +547,190 @@
       "value": "To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
     }
   ],
+  "components.news.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "components.news.latest": [
+    {
+      "type": 0,
+      "value": "latest news"
+    }
+  ],
+  "components.news.title": [
+    {
+      "type": 0,
+      "value": "News"
+    }
+  ],
+  "components.ourmission.description": [
+    {
+      "type": 0,
+      "value": "Ergo Foundation is committed to organic and non-breaking development of Ergo Platform protocol."
+    }
+  ],
+  "components.ourmission.emissionAndTokenomics": [
+    {
+      "type": 0,
+      "value": "EMISSION AND TOKENOMICS"
+    }
+  ],
+  "components.ourmission.ergofoundation": [
+    {
+      "type": 0,
+      "value": "THE ERGO FOUNDATION"
+    }
+  ],
+  "components.ourmission.reachus.twitter": [
+    {
+      "type": 0,
+      "value": "REACH US ON TWITTER"
+    }
+  ],
+  "components.ourmission.subdescription": [
+    {
+      "type": 0,
+      "value": "The Ergo Foundation is committed to make efforts to maximize the number of valuable ecosystem developments done in an open-source way with the least permissive license possible."
+    }
+  ],
+  "components.ourmission.title": [
+    {
+      "type": 0,
+      "value": "Our Mission"
+    }
+  ],
+  "components.roadmap.coinmarketcal": [
+    {
+      "type": 0,
+      "value": "VIEW MORE ON COINMARKETCAL"
+    }
+  ],
+  "components.roadmap.description": [
+    {
+      "type": 0,
+      "value": "Please note that Ergo is a platform. Many of the projects listed below have no formal connection with the Ergo Foundation or each other."
+    }
+  ],
+  "components.roadmap.section1.title": [
+    {
+      "type": 0,
+      "value": "SO FAR"
+    }
+  ],
+  "components.roadmap.section2.title": [
+    {
+      "type": 0,
+      "value": "UP NEXT"
+    }
+  ],
+  "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "2022 & BEYOND"
+    }
+  ],
   "components.roadmap.title": [
     {
       "type": 0,
       "value": "Roadmap"
+    }
+  ],
+  "components.uniqueErgo.card1.button": [
+    {
+      "type": 0,
+      "value": "EXPLORE"
+    }
+  ],
+  "components.uniqueErgo.card1.text": [
+    {
+      "type": 0,
+      "value": "Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement new and powerful cryptography natively."
+    }
+  ],
+  "components.uniqueErgo.card1.title": [
+    {
+      "type": 0,
+      "value": "RESEARCH-LED AND REAL-WORLD FOCUSED"
+    }
+  ],
+  "components.uniqueErgo.card2.button": [
+    {
+      "type": 0,
+      "value": "EXPLORE"
+    }
+  ],
+  "components.uniqueErgo.card2.text": [
+    {
+      "type": 0,
+      "value": "Ergo provides superior support for real-world financial agreements. Ergo can support versatile dApps that run predictably, with known costs, and don’t have any of the dangers of unrestricted functionality. Ergo’s smart contracts allow us to execute wide-ranging tasks and can be Turing complete, but we always know in advance how much the code will cost and whether it will run successfully."
+    }
+  ],
+  "components.uniqueErgo.card2.title": [
+    {
+      "type": 0,
+      "value": "POWERFUL AND SAFE"
+    }
+  ],
+  "components.uniqueErgo.card3.button": [
+    {
+      "type": 0,
+      "value": "EXPLORE"
+    }
+  ],
+  "components.uniqueErgo.card3.text": [
+    {
+      "type": 0,
+      "value": "Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all."
+    }
+  ],
+  "components.uniqueErgo.card3.title": [
+    {
+      "type": 0,
+      "value": "INTELLIGENT AND STRAIGHTFORWARD"
+    }
+  ],
+  "components.uniqueErgo.card4.button": [
+    {
+      "type": 0,
+      "value": "EXPLORE"
+    }
+  ],
+  "components.uniqueErgo.card4.text": [
+    {
+      "type": 0,
+      "value": "we recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
+    }
+  ],
+  "components.uniqueErgo.card4.title": [
+    {
+      "type": 0,
+      "value": "SECURE AND ACCESSIBLE"
+    }
+  ],
+  "components.uniqueErgo.title": [
+    {
+      "type": 0,
+      "value": "WHAT MAKES ERGO UNIQUE"
+    }
+  ],
+  "components.usingErg.description": [
+    {
+      "type": 0,
+      "value": "There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+    }
+  ],
+  "components.usingErg.subtitle": [
+    {
+      "type": 0,
+      "value": "UNSTOPPABLE DEFI"
+    }
+  ],
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "GET ERG"
     }
   ],
   "footer.blog.title": [
