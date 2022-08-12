@@ -73,10 +73,24 @@ function RoadmapItem({ title, url, description, status }: RoadmapItemProps) {
 
 export default function Roadmap(props: Props) {
   const sections = [
-    { name: 'SO FAR', tag: 'so_far' },
-    { name: 'UP NEXT', tag: 'up_next' },
-    { name: 'SOON', tag: 'soon' },
-    { name: '2022 & BEYOND', tag: 'this_year' },
+    {
+      name: <FormattedMessage defaultMessage="SO FAR" id="components.roadmap.section1.title" />,
+      tag: 'so_far',
+    },
+    {
+      name: <FormattedMessage defaultMessage="UP NEXT" id="components.roadmap.section2.title" />,
+      tag: 'up_next',
+    },
+    {
+      name: <FormattedMessage defaultMessage="SOON" id="components.roadmap.section3.title" />,
+      tag: 'soon',
+    },
+    {
+      name: (
+        <FormattedMessage defaultMessage="2022 & BEYOND" id="components.roadmap.section3.title" />
+      ),
+      tag: 'this_year',
+    },
   ];
   return (
     <div id="Roadmap" className="max-w-[1300px] mx-auto p-4 relative z-10">
@@ -86,12 +100,20 @@ export default function Roadmap(props: Props) {
         </b>
       </p>
       <p className="mx-auto text-center max-w-lg">
-        Please note that Ergo is a platform. Many of the projects listed below have no formal
-        connection with the Ergo Foundation or each other.
+        <FormattedMessage
+          defaultMessage="Please note that Ergo is a platform. Many of the projects listed below have no formal
+            connection with the Ergo Foundation or each other."
+          id="components.roadmap.description"
+        />
         <br />
         <br />
         <Button
-          text="VIEW MORE ON COINMARKETCAL"
+          text={
+            <FormattedMessage
+              defaultMessage="VIEW MORE ON COINMARKETCAL"
+              id="components.roadmap.coinmarketcal"
+            />
+          }
           url="https://coinmarketcal.com/en/coin/ergo"
           newTab={false}
           underline={true}

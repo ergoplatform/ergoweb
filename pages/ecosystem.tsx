@@ -48,9 +48,7 @@ export default function Ecosystem(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const apps = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + '/api/dapps?populate=*&locale=' + context.locale,
-  )
+  const apps = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/dapps?populate=*')
     .then((response) => response.json())
     .then((response) => response.data)
     .catch((err) => null);
@@ -62,24 +60,22 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
   const projects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc&locale=' +
-      context.locale,
+      '/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc',
   )
     .then((response) => response.json())
     .then((response) => response.data)
     .catch((err) => null);
+
   const favorites = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100&locale=' +
-      context.locale,
+      '/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100',
   )
     .then((response) => response.json())
     .then((response) => response.data)
     .catch((err) => null);
   const chagingTheWorldProjects = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100&locale=' +
-      context.locale,
+      '/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100',
   )
     .then((response) => response.json())
     .then((response) => response.data)
