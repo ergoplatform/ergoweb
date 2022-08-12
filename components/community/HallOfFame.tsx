@@ -1,6 +1,7 @@
 import { Tab } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FormattedMessage } from 'react-intl';
 import { Github, Linkedin, PersonPlaceholder, Twitter } from '../icons';
 
 type Props = {
@@ -108,20 +109,32 @@ export default function HallOfFame(props: Props) {
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10"
     >
       <h2 className="lg:text-center">
-        <b>Hall Of Fame</b>
+        <b>
+          <FormattedMessage defaultMessage={'Hall Of Fame'} id="components.hallOfFame.title" />
+        </b>
       </h2>
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
-            Ergo was founded with a team who have solid backgrounds in core development with
-            cryptocurrencies and blockchain frameworks including NXT, Scorex, Cardano and Waves.
-            Below are brief biographies for some of the core ERGO team as well as some of the many
-            other developers and community members involved, some of whom are anonymous.
+            <FormattedMessage
+              defaultMessage={`
+                Ergo was founded with a team who have solid backgrounds in core development with
+                cryptocurrencies and blockchain frameworks including NXT, Scorex, Cardano and Waves.
+                Below are brief biographies for some of the core ERGO team as well as some of the many
+                other developers and community members involved, some of whom are anonymous.
+              `}
+              id="components.hallOfFame.description1"
+            />
           </p>
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
-            Ergo is grassroots, and most core team members (and even foundation members) started out
-            as community members. There is a brief description as well as information to read more
-            about the Ergo Foundation at the bottom of this page.
+            <FormattedMessage
+              defaultMessage={`
+                Ergo is grassroots, and most core team members (and even foundation members) started out
+                as community members. There is a brief description as well as information to read more
+                about the Ergo Foundation at the bottom of this page.
+              `}
+              id="components.hallOfFame.description2"
+            />
           </p>
         </div>
       </div>
@@ -135,7 +148,7 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              CORE
+              <FormattedMessage defaultMessage={`CORE`} id="components.hallOfFame.tab1" />
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -144,7 +157,7 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              COMMUNITY
+              <FormattedMessage defaultMessage={`COMMUNITY`} id="components.hallOfFame.tab2" />
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -153,7 +166,7 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              FOUNDATION
+              <FormattedMessage defaultMessage={`FOUNDATION`} id="components.hallOfFame.tab3" />
             </Tab>
           </Tab.List>
           <Tab.Panels className="mt-16">

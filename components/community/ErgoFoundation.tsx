@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import { ErgoFoundationIcon, ErgoFoundationIconLight } from '../icons';
 
 export default function ErgoFoundation() {
@@ -9,31 +10,57 @@ export default function ErgoFoundation() {
           <ErgoFoundationIconLight className="h-40 md:h-60 dark:hidden" viewBox="0 0 248 248" />
         </div>
         <div className="font-vinila-extended text-[24px] md:text-[56px] max-w-xs md:max-w-3xl md:ml-14 leading-tight md:my-auto">
-          The <b>Ergo Foundation</b> is a community-driven entity focused on
+          <FormattedMessage
+            id="components.ergofoundation.title"
+            defaultMessage="The <b>Ergo Foundation</b> is a community-driven entity focused on"
+            values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+          />
         </div>
       </div>
       <div className="flex flex-row-reverse md:r-40">
         <div></div>
         <ul className="ergo-foundation list-disc mx-4">
           <li>
-            Promoting <b>non-breaking development </b> of Ergo Platform protocol;
+            <FormattedMessage
+              id="components.ergofoundation.list1"
+              defaultMessage="Promoting <b>non-breaking development </b> of Ergo Platform protocol;"
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
           <li>
-            Publicizing the widespread adoption and use of Ergo Platform and its
-            <b> native token </b> (ERG);
+            <FormattedMessage
+              id="components.ergofoundation.list2"
+              defaultMessage="Publicizing the widespread adoption and use of Ergo Platform and its <b> native token </b> (ERG);"
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
           <li>
-            Developing the <b>ecosystem </b> around the Ergo Platform;
+            <FormattedMessage
+              id="components.ergofoundation.list3"
+              defaultMessage="Developing the <b>ecosystem </b> around the Ergo Platform;"
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
           <li>
-            Spread the use of Ergo Platform and blockchain technology for
-            <b> social good </b>;
+            <FormattedMessage
+              id="components.ergofoundation.list4"
+              defaultMessage="Spread the use of Ergo Platform and blockchain technology for <b> social good </b>;"
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
           <li>
-            Uphold <b>truly decentralized infrastructure</b>, and;
+            <FormattedMessage
+              id="components.ergofoundation.list5"
+              defaultMessage="Uphold <b>truly decentralized infrastructure</b>, and;"
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
           <li>
-            Supporting <b>privacy </b> as a basic human right.
+            <FormattedMessage
+              id="components.ergofoundation.list6"
+              defaultMessage="Supporting <b>privacy </b> as a basic human right."
+              values={{ b: (chunks: any) => <strong>{chunks}</strong> }}
+            />
           </li>
         </ul>
       </div>

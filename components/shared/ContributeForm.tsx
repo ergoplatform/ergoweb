@@ -85,7 +85,7 @@ export default function ContributeForm() {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col">
-          <h3 className="mb-4 lg:leading-none md:text-[80px]">
+          <h3 className="mb-4 lg:leading-none text-[70px]">
             <FormattedMessage
               defaultMessage="I am a <b>developer</b>"
               id="components.ContributeForm.developer.title"
