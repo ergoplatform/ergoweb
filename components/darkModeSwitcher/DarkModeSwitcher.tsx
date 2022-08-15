@@ -2,15 +2,18 @@ import { motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
 import { useTheme } from 'next-themes';
+import classNames from 'classnames';
+import { useLoaded } from '../../utils/useLoaded';
 
 export default function DarkModeSwitch() {
   const { theme, setTheme } = useTheme();
+  const loaded = useLoaded();
 
   useEffect(() => {
-    if (window.localStorage.getItem('theme') === 'light') {
-      return setTheme('light');
-    } else {
+    if (window.localStorage.getItem('theme') === 'dark') {
       return setTheme('dark');
+    } else {
+      return setTheme('light');
     }
   }, []);
 
@@ -35,9 +38,12 @@ export default function DarkModeSwitch() {
   return (
     <div
       onClick={toggleSwitch}
-      className={`flex-start flex h-[40px] w-[80px] rounded-[50px] bg-zinc-100  shadow-inner hover:cursor-pointer dark:bg-black ${
-        theme === 'light' && 'place-content-end'
-      }`}
+      className={classNames(
+        `flex-start flex h-[40px] w-[80px] rounded-[50px] bg-zinc-100  shadow-inner hover:cursor-pointer dark:bg-black `,
+        {
+          'place-content-end': loaded && theme === 'light',
+        },
+      )}
     >
       <motion.div
         className="flex h-[40px] w-[40px] items-center justify-center rounded-full"
@@ -45,7 +51,7 @@ export default function DarkModeSwitch() {
         transition={spring}
       >
         <motion.div>
-          {theme === 'light' ? (
+          {loaded && theme === 'light' ? (
             <RiSunFill className="h-6 w-6 text-orange-500" />
           ) : (
             <RiMoonClearFill className="h-6 w-6 text-slate-200" />
