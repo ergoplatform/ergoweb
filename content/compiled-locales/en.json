@@ -532,7 +532,7 @@
   "components.mining.text.1": [
     {
       "type": 0,
-      "value": "Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
+      "value": "Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. Miners can adjust parameters with on-chain voting, with larger changes implemented by a supermajority via a soft-fork. As well as participate in any of the exciting developments such as voting tokens, subpooling, and log-space mining. Ergo focuses on simplicity in the core, with advanced features built on the application layer to create resilient, contractual money."
     }
   ],
   "components.mining.text.2": [
@@ -544,7 +544,7 @@
   "components.mining.text.3": [
     {
       "type": 0,
-      "value": "To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
+      "value": "To get started, check out the community-built Mining Handbook, Documentation or join the mining discussion spaces."
     }
   ],
   "components.news.blog": [
@@ -700,7 +700,7 @@
   "components.uniqueErgo.card4.text": [
     {
       "type": 0,
-      "value": "we recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
+      "value": "We recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
     }
   ],
   "components.uniqueErgo.card4.title": [
