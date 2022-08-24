@@ -3,10 +3,10 @@ import NextNProgress from 'nextjs-progressbar';
 import type { AppProps } from 'next/app';
 import English from '../content/compiled-locales/en.json';
 import Spanish from '../content/compiled-locales/es.json';
-// import German from "../content/compiled-locales/de.json";
+import German from '../content/compiled-locales/de.json';
 // import French from "../content/compiled-locales/fr.json";
 // import Hindi from "../content/compiled-locales/hi.json";
-// import Italian from "../content/compiled-locales/it.json";
+import Italian from '../content/compiled-locales/it.json';
 // import Turkish from "../content/compiled-locales/tr.json";
 import Portuguese from '../content/compiled-locales/pt.json';
 import Hungarian from '../content/compiled-locales/hu.json';
@@ -43,14 +43,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         return English;
       case 'es':
         return Spanish;
-      // case "de":
-      //   return German
+      case 'de':
+        return German;
       // case "fr":
       //   return French
       // case "hi":
       //   return Hindi
-      // case "it":
-      //   return Italian;
+      case 'it':
+        return Italian;
       // case "tr":
       //   return Turkish
       case 'pt':

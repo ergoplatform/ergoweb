@@ -66,8 +66,7 @@ export default function Home(props: Props) {
 export const getServerSideProps = async (context: any) => {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=' +
-      context.locale,
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog',
   )
     .then((response) => response.json())
     .catch((err) => null);
@@ -77,8 +76,7 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
   const news = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news&locale=' +
-      context.locale,
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news',
   )
     .then((response) => response.json())
     .then((response) => response.data)
