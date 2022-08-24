@@ -120,7 +120,7 @@ export default function Mining() {
       <div className="lg:w-1/2">
         <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
-            defaultMessage="Ergo mining is based on Autolykos, an ASIC resistant Proof of Work algorithm written in Scala. It can run on most low-end GPUs at lower temperatures than other algorithms, increasing mining equipment longevity. Combined with the eUTXO model and shifting the heavy-lifting off-chain, this creates a highly efficient Proof of Work."
+            defaultMessage="Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. Miners can adjust parameters with on-chain voting, with larger changes implemented by a supermajority via a soft-fork. As well as participate in any of the exciting developments such as voting tokens, subpooling, and log-space mining. Ergo focuses on simplicity in the core, with advanced features built on the application layer to create resilient, contractual money. "
             id={'components.mining.text.1'}
             values={{ breakingLine: <br /> }}
           />
@@ -134,28 +134,16 @@ export default function Mining() {
         </p>
         <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
-            defaultMessage="To get started, check out the community-built Mining Handbook, or join the mining discussion spaces."
+            defaultMessage="To get started, check out the community-built Mining Handbook, Documentation or join the mining discussion spaces."
             id={'components.mining.text.3'}
             values={{ breakingLine: <br /> }}
           />
         </p>
         <br />
         <Button
-          text="MINING HANDBOOK"
-          url="https://ergonaut.space/en/Guides/Mining"
+          text="DOCUMENTATION"
+          url="https://docs.ergoplatform.com/mining/"
           newTab={false}
-          underline={true}
-          textColor="brand-orange"
-          background={false}
-          icon="ArrowRight"
-          iconColor="orange"
-          customClass=" -ml-4 mb-8"
-        />
-        <br />
-        <Button
-          text="TELEGRAM"
-          url="https://t.me/ErgoChats"
-          newTab={true}
           underline={true}
           textColor="brand-orange"
           background={false}

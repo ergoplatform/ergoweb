@@ -79,7 +79,7 @@ const cards = [
       />
     ),
     icon: 'Telegram',
-    url: 'https://t.me/ErgoChats',
+    url: 'https://t.me/Ergo_Chats',
   },
   {
     title: (

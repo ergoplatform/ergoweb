@@ -79,7 +79,7 @@ let cards = [
     ),
     text: (
       <FormattedMessage
-        defaultMessage="we recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
+        defaultMessage="We recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
         id="components.uniqueErgo.card4.text"
       />
     ),

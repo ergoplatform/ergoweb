@@ -42,7 +42,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://t.me/ergochats" target="_blank" rel="noreferrer">
+              <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Telegram')}
               </a>
             </div>
