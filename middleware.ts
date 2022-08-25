@@ -17,6 +17,5 @@ export function middleware(req: NextRequest) {
 
     res = NextResponse.redirect(url);
   }
-
   return res;
 }

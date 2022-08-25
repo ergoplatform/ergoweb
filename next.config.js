@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
-// const withPWA = require('next-pwa');
 
 const nextConfig = {
   async redirects() {
@@ -103,11 +102,6 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  },
-  pwa: {
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {

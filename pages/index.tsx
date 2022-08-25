@@ -63,7 +63,7 @@ export default function Home(props: Props) {
   );
 }
 
-export const getServerSideProps = async (context: any) => {
+export const getStaticProps = async (context: any) => {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog',
@@ -92,5 +92,6 @@ export const getServerSideProps = async (context: any) => {
 
   return {
     props: { posts, partners, news, info, blockReward },
+    revalidate: 60,
   };
 };
