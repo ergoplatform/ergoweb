@@ -9,6 +9,7 @@ export function middleware(req: NextRequest) {
   const shouldHandleLocale =
     !PUBLIC_FILE.test(req.nextUrl.pathname) &&
     !req.nextUrl.pathname.includes('/api/') &&
+    !req.nextUrl.pathname.includes('/image/') &&
     req.nextUrl.locale === 'default';
 
   if (shouldHandleLocale) {
@@ -17,6 +18,5 @@ export function middleware(req: NextRequest) {
 
     res = NextResponse.redirect(url);
   }
-
   return res;
 }

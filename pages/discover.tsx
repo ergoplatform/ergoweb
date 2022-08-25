@@ -36,7 +36,7 @@ export default function Discover(props: Props) {
   );
 }
 
-export const getServerSideProps = async (context: any) => {
+export const getStaticProps = async (context: any) => {
   const documents = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/documents?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=' +
@@ -53,5 +53,7 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
   return {
     props: { documents, faq },
+
+    revalidate: 60,
   };
 };
