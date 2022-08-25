@@ -70,8 +70,9 @@ export const getStaticProps = async (context: any) => {
       context.locale,
   )
     .then((response) => response.json())
-    .then((response) => response.data)
+    .then((response) => response?.data)
     .catch((err) => null);
+
   return {
     props: { posts, teamMembers },
     revalidate: 60,
