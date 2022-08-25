@@ -42,6 +42,7 @@ export default function Post({
     hasImage = true;
     imageUrl = 'https://storage.googleapis.com/ergo-cms-media' + blogPhoto;
   }
+
   if (image) {
     hasImage = true;
     imageUrl = image;
