@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
-const withPWA = require('next-pwa');
+// const withPWA = require('next-pwa');
 
 const nextConfig = {
   async redirects() {
@@ -125,4 +125,4 @@ const withMDX = require('@next/mdx')({
   },
 });
 
-module.exports = withPWA(withMDX(nextConfig));
+module.exports = withMDX(nextConfig);
