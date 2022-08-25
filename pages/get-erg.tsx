@@ -56,7 +56,7 @@ export default function GetErg(props: Props) {
   );
 }
 
-export const getServerSideProps = async (context: any) => {
+export const getStaticProps = async (context: any) => {
   const exchanges = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/exchanges?sort=order:asc&populate=*&locale=' +
@@ -94,5 +94,6 @@ export const getServerSideProps = async (context: any) => {
 
   return {
     props: { exchanges, price, hashRate, currentBlockReward, difficulty },
+    revalidate: 60,
   };
 };

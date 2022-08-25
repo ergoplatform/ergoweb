@@ -56,7 +56,7 @@ export default function Community(props: Props) {
   );
 }
 
-export const getServerSideProps = async (context: any) => {
+export const getStaticProps = async (context: any) => {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=' +
@@ -74,5 +74,6 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
   return {
     props: { posts, teamMembers },
+    revalidate: 60,
   };
 };
