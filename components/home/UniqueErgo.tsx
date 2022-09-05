@@ -59,7 +59,7 @@ let cards = [
     ),
     text: (
       <FormattedMessage
-        defaultMessage="Sigma protocols are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement tasks that would otherwise be either impossible, or else risky and expensive. This enables self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality, without any third parties required at all."
+        defaultMessage="Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement sophisticated tasks that would otherwise be impossible, risky, or expensive. Welcome to self-sovereign application-level privacy: trustless scripts that can be used to access mixers or other functionality without any third parties required."
         id="components.uniqueErgo.card3.text"
       />
     ),
@@ -79,11 +79,11 @@ let cards = [
     ),
     text: (
       <FormattedMessage
-        defaultMessage="We recognise that ordinary users who do not run a full node should enjoy the same security benefits as miners. Ergo’s non-interactive proof-of-proof-of-work (NiPoPoW) allows anyone to make and verify transactions with complete confidence, without needing the storage, bandwidth and time required to download the full blockchain. In fact, as little as 1 MB of data is required – meaning any device can be used."
+        defaultMessage="Ordinary users who do not run a full node should enjoy the same security benefits as miners. Non-Interactive Proofs of Proof-of-Work (NIPOPOWS) allow us to make and verify transactions with complete confidence without needing the storage, bandwidth and time required to download the full blockchain. As little as 1 MB of data is necessary, meaning you can use any device."
         id="components.uniqueErgo.card4.text"
       />
     ),
-    url: '/discover/#FAQ',
+    url: 'https://docs.ergoplatform.com/tags/#nipopows',
     buttoText: (
       <FormattedMessage defaultMessage="EXPLORE" id="components.uniqueErgo.card4.button" />
     ),
