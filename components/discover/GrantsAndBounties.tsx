@@ -5,7 +5,7 @@ export default function GrantsAndBounties() {
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: 'components.grantsAndBounties.button1',
-    defaultMessage: 'BOUNTIES',
+    defaultMessage: 'CONTRIBUTING',
   });
   const button2Text = intl.formatMessage({
     id: 'components.grantsAndBounties.button2',
@@ -31,7 +31,7 @@ export default function GrantsAndBounties() {
         <div className="-ml-4 mt-10">
           <Button
             text={button1Text}
-            url="https://github.com/ergoplatform/grow-ergo/issues"
+            url="https://docs.ergoplatform.com/contribute/"
             newTab={true}
             underline={true}
             textColor="brand-orange"

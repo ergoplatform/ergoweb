@@ -265,7 +265,19 @@ export default function Wallets() {
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
         </a>
-
+        <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+          <Button
+            text="EXPLORE TRANSACTIONS WITH THE ERGO EXPLORER"
+            url="/discover/#Explore"
+            newTab={false}
+            underline={true}
+            textColor="brand-orange"
+            background={false}
+            icon="ArrowRight"
+            iconColor="orange"
+            customClass=" -ml-4 mb-8"
+          />
+        </p>
         <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0"></div>
       </div>
     </div>
