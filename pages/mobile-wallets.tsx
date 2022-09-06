@@ -33,7 +33,7 @@ export default function MobileWallets() {
                     </a>
                     <a
                       target="_blank"
-                      href="https://testflight.apple.com/join/MRyG2qfm"
+                      href="https://apps.apple.com/app/terminus-wallet-ergo/id1643137927"
                       className="flex text-base font-medium rounded-2xl text-white md:text-lg ml-0 lg:ml-2 mt-4 lg:mt-0"
                       rel="noreferrer"
                     >
