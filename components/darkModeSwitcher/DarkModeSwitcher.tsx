@@ -10,10 +10,10 @@ export default function DarkModeSwitch() {
   const loaded = useLoaded();
 
   useEffect(() => {
-    if (window.localStorage.getItem('theme') === 'dark') {
-      return setTheme('dark');
-    } else {
+    if (window.localStorage.getItem('theme') === 'light') {
       return setTheme('light');
+    } else {
+      return setTheme('dark');
     }
   }, []);
 
@@ -29,7 +29,9 @@ export default function DarkModeSwitch() {
     if (theme === 'light') {
       document.documentElement.classList.remove('dark');
       window.localStorage.setItem('theme', 'light');
-    } else {
+    }
+
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark');
       window.localStorage.setItem('theme', 'dark');
     }
