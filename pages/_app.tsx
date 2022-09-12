@@ -10,6 +10,8 @@ import Italian from '../content/compiled-locales/it.json';
 // import Turkish from "../content/compiled-locales/tr.json";
 import Portuguese from '../content/compiled-locales/pt.json';
 import Hungarian from '../content/compiled-locales/hu.json';
+import Chinese from '../content/compiled-locales/cn.json';
+import Russia from '../content/compiled-locales/ru.json';
 // import Romanian from "../content/compiled-locales/ro.json";
 // import Slovak from "../content/compiled-locales/sk.json";
 // import Chinese from "../content/compiled-locales/zh.json";
@@ -57,10 +59,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         return Portuguese;
       case 'hu':
         return Hungarian;
-      // case "ro":
-      //   return Romanian
-      // case "sk":
-      //   return Slovak
+      case 'cn':
+        return Chinese;
+      case 'ru':
+        return Russia;
       // case "zh":
       //   return Chinese;
       default:

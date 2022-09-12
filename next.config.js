@@ -93,6 +93,8 @@ const nextConfig = {
       // 'tr',
       'pt',
       'hu',
+      'ru',
+      'cn',
       // 'ro',
       // 'sk',
       // 'zh',
