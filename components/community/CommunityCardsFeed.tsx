@@ -140,9 +140,11 @@ export default function JoinUs() {
         ))}
       </div>
       <div className="max-w-[1300px] text-center mx-auto">
-        <p className="text-[#585858] text-sm md:text-lg p-4">
-          Ergo is a decentralised grassroots platform powered by its community. Join us on socials
-          to get involved, check out the{' '}
+        <p className="text-[#585858] text-sm md:text-lg p-4 mb-0 pb-2">
+          Ergo is a decentralised grassroots platform powered by its community.{' '}
+        </p>
+        <p className="text-[#585858] text-sm md:text-lg p-4 pt-0">
+          Join us on socials to get involved, check out the{' '}
           <a
             href="https://ergonaut.space/en/Ergo/Contributing"
             target="_blank"
