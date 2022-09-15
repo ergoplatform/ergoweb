@@ -139,6 +139,21 @@ export default function JoinUs() {
           />
         ))}
       </div>
+      <div className="max-w-[1300px] text-center mx-auto">
+        <p className="text-[#585858] text-sm md:text-lg p-4">
+          Ergo is a decentralised grassroots platform powered by its community. Join us on socials
+          to get involved, check out the{' '}
+          <a
+            href="https://ergonaut.space/en/Ergo/Contributing"
+            target="_blank"
+            rel="noreferrer"
+            className="underline text-brand-orange"
+          >
+            Contributing
+          </a>{' '}
+          page for more information
+        </p>
+      </div>
     </div>
   );
 }
