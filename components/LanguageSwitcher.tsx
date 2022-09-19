@@ -5,7 +5,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 export default function LanguageSwitcher({ color = 'default' }) {
-  const { locale, locales, route } = useRouter();
+  const data = useRouter();
+  const { locale, locales, asPath } = data;
 
   const [selected, setSelected] = useState(locale);
   return (
@@ -36,7 +37,7 @@ export default function LanguageSwitcher({ color = 'default' }) {
                   className={`cursor-default select-none relative`}
                   value={loc}
                 >
-                  <Link href={route} locale={loc} passHref>
+                  <Link href={asPath} locale={loc} passHref>
                     <div className="py-2 pl-3 pr-8">
                       <span className={`font-button-bold text-[14px] uppercase`}>{loc}</span>
                     </div>
