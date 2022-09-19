@@ -70,6 +70,7 @@ export default function Post({
             <div className="absolute left-4 top-4">
               {tags
                 ?.split(',')
+                .slice(0, 3)
                 .filter((word: string) => word.length > 0)
                 .map((item) => (
                   <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
