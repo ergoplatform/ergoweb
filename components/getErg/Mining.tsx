@@ -47,6 +47,10 @@ export default function Mining() {
       text: <FormattedMessageFixed defaultMessage="2MINERS" id="components.mining.miningPools.6" />,
       url: 'https://2miners.com/erg-mining-pool',
     },
+    {
+      text: <FormattedMessageFixed defaultMessage="KRYPTEX" id="components.mining.miningPools.7" />,
+      url: 'https://kryptex.network/en/erg',
+    },
   ];
   let minersUrls = [
     {
