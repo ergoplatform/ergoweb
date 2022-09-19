@@ -396,7 +396,7 @@
   "components.faq.text.2": [
     {
       "type": 0,
-      "value": "NON PUOI TROVARE QUEELLO "
+      "value": "NON TROVI QUELLO "
     },
     {
       "type": 1,
@@ -500,7 +500,7 @@
   "components.homeInfo.circulatingSupply": [
     {
       "type": 0,
-      "value": "ALIMENTAZIONE CIRCOLANTE"
+      "value": "RIFORNIMENTO CIRCOLANTE"
     }
   ],
   "components.homeInfo.hashRate": [
@@ -770,7 +770,7 @@
   "footer.discover.2": [
     {
       "type": 0,
-      "value": "Borse e ricompense"
+      "value": "Finanziamenti e ricompense"
     }
   ],
   "footer.discover.3": [
@@ -836,7 +836,7 @@
   "footer.getErg.1": [
     {
       "type": 0,
-      "value": "Estrazione"
+      "value": "Mining"
     }
   ],
   "footer.getErg.2": [
