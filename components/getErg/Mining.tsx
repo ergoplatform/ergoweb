@@ -9,6 +9,12 @@ export default function Mining() {
   let miningPoolsUrls = [
     {
       text: (
+        <FormattedMessageFixed defaultMessage="F2POOL" id="components.mining.miningPools.f2pool" />
+      ),
+      url: 'https://www.f2pool.com/coin/ergo',
+    },
+    {
+      text: (
         <FormattedMessageFixed defaultMessage="666 POOL" id="components.mining.miningPools.1" />
       ),
       url: 'https://www.666pool.cn/pool2',
@@ -144,6 +150,18 @@ export default function Mining() {
           text="DOCUMENTATION"
           url="https://docs.ergoplatform.com/mining/"
           newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        <br />
+        <Button
+          text="MINING POOL STATS"
+          url="https://miningpoolstats.stream/ergo"
+          newTab={true}
           underline={true}
           textColor="brand-orange"
           background={false}
