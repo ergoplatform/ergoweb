@@ -345,13 +345,73 @@ footer
 
 .faq-answer {
   margin-top: 40px;
-}
-.faq-answer p {
-  color: #585858;
+  color:black;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-subtitle-1,
+  .font-subtitle-2,
+  .font-subtitle-3,
+  .font-subtitle-3-uppercase,
+  .font-subtitle-3-bold,
+  .font-subtitle-3-regular,
+  .font-subtitle-4,
+  p,
+  li,
+  code,
+  .font-body-2-bold,
+  .font-body-2-regular,
+  .font-button,
+  .font-button-bold,
+  .font-button-regular {
+    color: black;
+  }
+
+  code {
+    background-color: rgb(255 94 24 / 1);
+    color: white;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(255 94 24 / var(--tw-text-opacity));
+  }
 }
 
 .dark .faq-answer {
-  color: #807e7e;
+  color: white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-subtitle-1,
+  .font-subtitle-2,
+  .font-subtitle-3,
+  .font-subtitle-3-uppercase,
+  .font-subtitle-3-bold,
+  .font-subtitle-3-regular,
+  .font-subtitle-4,
+  p,
+  li,
+  code,
+  .font-body-2-bold,
+  .font-body-2-regular,
+  .font-button,
+  .font-button-bold,
+  .font-button-regular {
+    color: white;
+  }
 }
 
 @layer utilities {
