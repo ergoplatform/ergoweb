@@ -10,6 +10,7 @@ import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
 import dynamic from 'next/dynamic';
 import UniqueErgo from '../components/home/UniqueErgo';
+import generateRssFeed from '../utils/generateRssFeed';
 const Partners = dynamic(() => import('../components/home/Partners'), {
   ssr: false,
 });
@@ -89,6 +90,8 @@ export const getStaticProps = async (context: any) => {
   const info = await fetch('https://api.ergoplatform.com/info/')
     .then((response) => response.json())
     .catch((err) => null);
+
+  await generateRssFeed();
 
   return {
     props: { posts, partners, news, info, blockReward },

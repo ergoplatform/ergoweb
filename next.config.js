@@ -15,7 +15,6 @@ const nextConfig = {
         destination: 'https://storage.googleapis.com/ergo-cms-media/img/:path*',
         permanent: true,
       },
-
       {
         source: '/about/',
         destination: '/discover/#DiscoverERG',
