@@ -1,6 +1,8 @@
 import fs from 'fs';
 import { Feed } from 'feed';
 
+const removeMd = require('remove-markdown');
+
 export default async function generateRssFeed() {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
@@ -56,7 +58,6 @@ export default async function generateRssFeed() {
     },
     author,
   });
-  console.log(contentPosts);
   contentPosts.forEach((post) => {
     const url = `${siteURL}/en/${post.type === 'news' ? 'news' : 'blog'}/${post.permalink}`;
     feed.addItem({
@@ -64,10 +65,10 @@ export default async function generateRssFeed() {
       id: url,
       link: url,
       description: post.subtitle,
-      content: post.content,
+      content: removeMd(post.content),
       author: [author],
       contributor: [author],
-      date: new Date(post.date),
+      date: new Date(post.publishedAt),
     });
   });
 
