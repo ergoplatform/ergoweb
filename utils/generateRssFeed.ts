@@ -1,7 +1,9 @@
 import fs from 'fs';
 import { Feed } from 'feed';
 
-const removeMd = require('remove-markdown');
+const mdConverter = require('showdown');
+
+const converter = new mdConverter.Converter();
 
 export default async function generateRssFeed() {
   const posts = await fetch(
@@ -65,7 +67,7 @@ export default async function generateRssFeed() {
       id: url,
       link: url,
       description: post.subtitle,
-      content: removeMd(post.content),
+      content: converter.makeHtml(post.content),
       author: [author],
       contributor: [author],
       date: new Date(post.publishedAt),
