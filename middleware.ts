@@ -9,6 +9,7 @@ export function middleware(req: NextRequest) {
   const shouldHandleLocale =
     !PUBLIC_FILE.test(req.nextUrl.pathname) &&
     !req.nextUrl.pathname.includes('/api/') &&
+    !req.nextUrl.pathname.includes('rss') &&
     !req.nextUrl.pathname.includes('/image/') &&
     req.nextUrl.locale === 'default';
 

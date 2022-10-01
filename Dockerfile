@@ -1,5 +1,5 @@
 # Install dependencies only when needed
-FROM node:alpine AS deps
+FROM node:16.17.1-alpine3.15 AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -9,16 +9,17 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 # Rebuild the source code only when needed
-FROM node:alpine AS builder
+FROM node:16.17.1-alpine3.15 AS builder
 WORKDIR /app
 COPY . .
+
 COPY --from=deps /app/node_modules ./node_modules
+ENV NEXT_PUBLIC_STRAPI_API 'https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app'
 # RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
-RUN NEXT_PUBLIC_STRAPI_API=APP_NEXT_PUBLIC_STRAPI_API \
-    npm run build && npm install --production --ignore-scripts --prefer-offline
+RUN npm run build && npm install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
-FROM node:alpine AS runner
+FROM node:16.17.1-alpine3.15 AS runner
 WORKDIR /app
 
 ENV NODE_ENV production

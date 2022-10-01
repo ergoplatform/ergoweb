@@ -20,6 +20,7 @@
     "@types/gtag.js": "^0.0.10",
     "@types/lodash": "^4.14.180",
     "classnames": "^2.3.1",
+    "feed": "^4.2.2",
     "framer-motion": "^6.3.3",
     "lodash": "^4.17.21",
     "next": "^12.2.5",
@@ -40,6 +41,7 @@
     "remove-markdown": "^0.3.0",
     "sass": "^1.48.0",
     "sharp": "^0.30.7",
+    "showdown": "^2.1.0",
     "swiper": "^8.0.1",
     "tw-elements": "^1.0.0-alpha11"
   },
