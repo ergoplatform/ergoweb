@@ -74,7 +74,7 @@ export default async function generateRssFeed() {
     });
   });
 
-  fs.mkdirSync('./public/rss', { recursive: true });
-  fs.writeFileSync('./public/rss/feed.xml', feed.rss2());
-  fs.writeFileSync('./public/rss/feed.json', feed.json1());
+  fs.mkdir('./public/rss', { recursive: true }, () => {});
+  fs.writeFile('./public/rss/feed.xml', feed.rss2(), () => {});
+  fs.writeFile('./public/rss/feed.json', feed.json1(), () => {});
 }

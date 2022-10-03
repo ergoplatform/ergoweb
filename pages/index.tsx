@@ -91,7 +91,7 @@ export const getStaticProps = async (context: any) => {
     .then((response) => response.json())
     .catch((err) => null);
 
-  await generateRssFeed();
+  generateRssFeed();
 
   return {
     props: { posts, partners, news, info, blockReward },
