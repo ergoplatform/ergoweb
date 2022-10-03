@@ -1,25 +1,25 @@
 @import "./variables.scss";
 
 @font-face {
-  font-family: "Vinila Extended";
+  font-family: "Vinila Extended", sans-serif;
   font-display: swap;
   src: local(""), url("fonts/Vinila-Rg-Ex.woff2") format("woff2"), url("fonts/Vinila-Rg-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-display: swap;
   src: local(""), url("fonts/Vinila-Bd-Ex.woff2") format("woff2"), url("fonts/Vinila-Bd-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Vinila Extended Light";
+  font-family: "Vinila Extended Light", sans-serif;
   font-display: swap;
   src: local(""), url("fonts/Vinila-Lt-Ex.woff2") format("woff2"), url("fonts/Vinila-Lt-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -125,100 +125,100 @@
 }
 
 h1 {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-size: 120px;
 }
 
 h2 {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-size: 96px;
 }
 
 h3 {
-  font-family: "Vinila Extended";
+  font-family: "Vinila Extended", sans-serif;
   font-size: 70px;
   b {
-    font-family: "Vinila Extended Bold";
+    font-family: "Vinila Extended Bold", sans-serif;
     font-size: 70px;
   }
 }
 
 h4 {
-  font-family: "Vinila Extended Light";
+  font-family: "Vinila Extended Light", sans-serif;
   font-size: 56px;
   b {
-    font-family: "Vinila Extended Bold";
+    font-family: "Vinila Extended Bold", sans-serif;
     font-size: 56px;
   }
 }
 
 .font-subtitle-1 {
-  font-family: "Vinila Extended Light";
+  font-family: "Vinila Extended Light", sans-serif;
   font-size: 56px;
 }
 
 .font-subtitle-2 {
-  font-family: "Vinila Extended";
+  font-family: "Vinila Extended", sans-serif;
   font-size: 32px;
 }
 
 .font-subtitle-3 {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-size: 24px;
 }
 
 .font-subtitle-3-uppercase {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 24px;
 }
 
 .font-subtitle-3-bold {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: bold;
 }
 
 .font-subtitle-3-regular {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
 }
 
 .font-subtitle-4 {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
 
 a,
 p,
 li {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 .font-body-2-bold {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
 
 .font-body-2-regular {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
 .font-button {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-size: 18px;
 }
 
 .font-button-bold {
-  font-family: "Vinila Extended Bold";
+  font-family: "Vinila Extended Bold", sans-serif;
   font-size: 16px;
 }
 
 .font-button-regular {
-  font-family: "Vinila Extended";
+  font-family: "Vinila Extended", sans-serif;
   font-size: 16px;
 }
 
