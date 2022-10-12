@@ -1,25 +1,25 @@
 @import "./variables.scss";
 
 @font-face {
-  font-family: "Vinila Extended", sans-serif;
+  font-family: "Vinila Extended";
   font-display: swap;
   src: local(""), url("fonts/Vinila-Rg-Ex.woff2") format("woff2"), url("fonts/Vinila-Rg-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Vinila Extended Bold", sans-serif;
+  font-family: "Vinila Extended Bold";
   font-display: swap;
   src: local(""), url("fonts/Vinila-Bd-Ex.woff2") format("woff2"), url("fonts/Vinila-Bd-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Vinila Extended Light", sans-serif;
+  font-family: "Vinila Extended Light";
   font-display: swap;
   src: local(""), url("fonts/Vinila-Lt-Ex.woff2") format("woff2"), url("fonts/Vinila-Lt-Ex.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
