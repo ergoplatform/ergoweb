@@ -130,7 +130,7 @@ export default function UniqueErgo() {
                 <div className="absolute top-16 lg:top-8 flex label mb-3 ml-4 lg:ml-16 transition-base z-20 text-[16px] lg:text-[24px] flex-col">
                   <div className="hidden dark:block">{card.icon}</div>
                   <div className="dark:hidden">{card.iconLight}</div>
-                  <div className="mt-8 max-w-[300px]">{card.title}</div>
+                  <div className="mt-8 max-w-[380px]">{card.title}</div>
                 </div>
                 <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-[#585858] dark:text-[#807e7e] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                   <div>{card.text}</div>
