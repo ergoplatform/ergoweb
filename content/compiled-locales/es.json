@@ -1,2 +1,1012 @@
 {
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "¿QUIRES HACERTE SOCIO?"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "Soy una "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "empresa"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "¿CÓMO PUEDO CONTRIBUIR?"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "Soy "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "desarrollador"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo opera en un modelo abierto donde "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "cualquiera puede contribuir."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Contribuye"
+    }
+  ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "VER TODOS LOS PROYECTOS"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "LEER MÁS E INSCRÍBETE"
+    }
+  ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "GUÍA DE CONTRIBUCIÓN"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "ÚNETE EN DISCORD"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "DONACIONES Y RECOMPENSAS"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "SUMÉRGETE EN ERGO"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "ENVIAR"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "Email"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "Nombre / Compañía"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Escríbenos tus sugerencias e ideas, ¡hablemos!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Programas de formación"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "Inscríbete al Programa de Entrenamiento Sigmanauta para ayudar a crecer y a dar forma a Ergo. "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Vamos a crear finanzas de base."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanautas"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "VER TODAS LAS PUBLICACIONES"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "Destacar"
+    }
+  ],
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "MINA ERG"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "AUTOLYKOS"
+    }
+  ],
+  "components.autolykos.text": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " es el algoritmo de consenso de Prueba de Trabajo (Proof of Work) resistente a ASICs y centrado en los GPUs."
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "El Futuro de la Prueba de Trabajo"
+    }
+  ],
+  "components.communityHero.Wiki.title": [
+    {
+      "type": 0,
+      "value": "La wiki de la comunidad. Contribuye en cualquier idioma!"
+    }
+  ],
+  "components.communityHero.Youtube.text": [
+    {
+      "type": 0,
+      "value": "Subcríbete para AMA semanales, ErgoPulse y mucho más!"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "BASES DE LAS FINANZAS"
+    }
+  ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo es una plataforma de contratos inteligentes de prueba de trabajo de próxima generación que permite nuevos modelos de interacción financiera, respaldada por un lenguaje de scripting sofisticado y seguro creado con pruebas de conocimiento nulo flexibles y potentes (protocolos Σ)."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "LEE LA DOCUMENTACIÓN"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "APRENDE CON DECO"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "LEE EL MANIFESTO"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "VISITA EL BLOG"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "OBTENER LA CONFIGURACIÓN"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
+      "value": "VISITA ERGONAUT.SPACE"
+    }
+  ],
+  "components.ecosystemHero.title": [
+    {
+      "type": 0,
+      "value": "Ecosistema"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "EXPLORADOR"
+    }
+  ],
+  "components.ergoExplorer.button2": [
+    {
+      "type": 0,
+      "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergofoundation.list1": [
+    {
+      "type": 0,
+      "value": "Promover el "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "desarrollo sin interrupciones"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " del protocolo Ergo Platform ;"
+    }
+  ],
+  "components.ergofoundation.list2": [
+    {
+      "type": 0,
+      "value": "Dar a conocer la adopción y el uso generalizado de Ergo Platform y su "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "token nativo"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " (ERG);"
+    }
+  ],
+  "components.ergofoundation.list3": [
+    {
+      "type": 0,
+      "value": "Desarrollar el "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "ecosistema"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " en torno a la Plataforma Ergo;"
+    }
+  ],
+  "components.ergofoundation.list4": [
+    {
+      "type": 0,
+      "value": "Difundir el uso de Ergo Platform y la tecnología blockchain para el "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "bien común"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ";"
+    }
+  ],
+  "components.ergofoundation.list5": [
+    {
+      "type": 0,
+      "value": "Mantener una "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "infraestructura verdaderamente descentralizada"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ", y;"
+    }
+  ],
+  "components.ergofoundation.list6": [
+    {
+      "type": 0,
+      "value": "Respaldar la "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "privacidad"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " como un derecho humano básico."
+    }
+  ],
+  "components.ergofoundation.title": [
+    {
+      "type": 0,
+      "value": "La "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Fundación Ergo"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " es una entidad impulsada por la comunidad que se centra en"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "¿NO ENCUENTRAS LO "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " QUE ESTÁS BUSCANDO?"
+    }
+  ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "EXPLORA ERGO RAFFLE"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "CONTRIBUYENDO"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "COMIENZA UN SORTEO"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "PONTE EN CONTACTO"
+    }
+  ],
+  "components.hallOfFame.description1": [
+    {
+      "type": 0,
+      "value": "Ergo fue fundado por un equipo que tiene una sólida experiencia en desarrollo básico con criptomonedas y frameworks de blockchain, incluyendo NXT, Scorex, Cardano y Waves. A continuación, se incluyen breves biografías de algunos miembros del equipo base de ERGO, así como de muchos otros desarrolladores y miembros de la comunidad involucrados, algunos de los cuales son anónimos."
+    }
+  ],
+  "components.hallOfFame.description2": [
+    {
+      "type": 0,
+      "value": "Ergo es de base comunitaria, y la mayoría de los miembros del equipo central (e incluso los miembros de la fundación) comenzaron como miembros de la comunidad. Hay una breve descripción, así como información para leer más acerca de la Fundación Ergo al final de esta página."
+    }
+  ],
+  "components.hallOfFame.tab1": [
+    {
+      "type": 0,
+      "value": "CORE"
+    }
+  ],
+  "components.hallOfFame.tab2": [
+    {
+      "type": 0,
+      "value": "COMUNIDAD"
+    }
+  ],
+  "components.hallOfFame.tab3": [
+    {
+      "type": 0,
+      "value": "FUNDACIÓN"
+    }
+  ],
+  "components.hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Salón de la fama"
+    }
+  ],
+  "components.highlights.title": [
+    {
+      "type": 0,
+      "value": "HECHOS DESTACADOS"
+    }
+  ],
+  "components.homeHero.button": [
+    {
+      "type": 0,
+      "value": "SUMÉRGETE"
+    }
+  ],
+  "components.homeHero.text": [
+    {
+      "type": 0,
+      "value": "Ergo es una plataforma de contratos inteligentes de próxima generación que garantiza la libertad económica de la gente corriente a través de herramientas financieras seguras, accesibles y descentralizadas."
+    }
+  ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Impulsando el Futuro de las Finanzas"
+    }
+  ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "Recompensas del bloque"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "Suministro circulante"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "TASA DE HASH"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "TRANSACCIONES POR DÍA"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "La minería de Ergo se basa en Autolykos, un algoritmo de prueba de trabajo resistente a ASIC, eficiente y lanzado de forma justa. Puede funcionar a temperaturas relativamente más bajas en la mayoría de las GPU de gama baja, lo que prolonga la vida útil del hardware. Los mineros pueden ajustar los parámetros con la votación en cadena, con cambios más grandes implementados por una gran mayoría a través de una bifurcación suave. Además de participar en cualquiera de los emocionantes desarrollos, como tokens de votación, agrupación de pools y minería de espacio logarítmico. Ergo se enfoca en la simplicidad de las bases del protocolo, con funciones avanzadas integradas en la capa de aplicación para crear dinero contractual resistente."
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "Bienvenido al futuro del Proof of Work"
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "Para comenzar, revisa el Manual de Minería creado por la comunidad, la Documentación o únete a los espacios de discusión sobre minería."
+    }
+  ],
+  "components.news.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "components.news.latest": [
+    {
+      "type": 0,
+      "value": "últimas noticias"
+    }
+  ],
+  "components.news.title": [
+    {
+      "type": 0,
+      "value": "Noticias"
+    }
+  ],
+  "components.ourmission.description": [
+    {
+      "type": 0,
+      "value": "La Fundación Ergo apuesta por el desarrollo orgánico e ininterrumpido del protocolo Ergo Platform."
+    }
+  ],
+  "components.ourmission.emissionAndTokenomics": [
+    {
+      "type": 0,
+      "value": "EMISIÓN Y TOKENOMICS"
+    }
+  ],
+  "components.ourmission.ergofoundation": [
+    {
+      "type": 0,
+      "value": "LA FUNDACIÓN ERGO"
+    }
+  ],
+  "components.ourmission.reachus.twitter": [
+    {
+      "type": 0,
+      "value": "CONTACTA CON NOSOTROS EN TWITTER"
+    }
+  ],
+  "components.ourmission.subdescription": [
+    {
+      "type": 0,
+      "value": "La Fundación Ergo se compromete a seguir esforzandose para maximizar la cantidad de desarrollos de ecosistemas valiosos, realizados de manera de código abierto, con la licencia menos permisiva posible."
+    }
+  ],
+  "components.ourmission.title": [
+    {
+      "type": 0,
+      "value": "Nuestra Misión"
+    }
+  ],
+  "components.roadmap.coinmarketcal": [
+    {
+      "type": 0,
+      "value": "VER MÁS EN COINMARKETCAL"
+    }
+  ],
+  "components.roadmap.description": [
+    {
+      "type": 0,
+      "value": "Ten en cuenta que Ergo es una plataforma. Muchos de los proyectos nombrados a continuación no tienen conexión formal con la Fundación Ergo ni entre ellos."
+    }
+  ],
+  "components.roadmap.section1.title": [
+    {
+      "type": 0,
+      "value": "HASTA AHORA"
+    }
+  ],
+  "components.roadmap.section2.title": [
+    {
+      "type": 0,
+      "value": "PROXIMAMENTE"
+    }
+  ],
+  "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "2022 Y MÁS ALLÁ"
+    }
+  ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Hoja de ruta"
+    }
+  ],
+  "components.uniqueErgo.card1.button": [
+    {
+      "type": 0,
+      "value": "EXPLORA"
+    }
+  ],
+  "components.uniqueErgo.card1.text": [
+    {
+      "type": 0,
+      "value": "Ergo se basa en diez años de desarrollo de blockchain, complementando principios probados con la mejor investigación académica sobre criptografía revisada por pares, modelos de consenso y divisas digitales. Comenzamos con conceptos básicos sólidos de blockchain e implementamos nueva y potente criptografía de forma nativa."
+    }
+  ],
+  "components.uniqueErgo.card1.title": [
+    {
+      "type": 0,
+      "value": "BASADA EN INVESTIGACIÓN Y CENTRADO EN EL MUNDO REAL"
+    }
+  ],
+  "components.uniqueErgo.card2.button": [
+    {
+      "type": 0,
+      "value": "EXPLORA"
+    }
+  ],
+  "components.uniqueErgo.card2.text": [
+    {
+      "type": 0,
+      "value": "Ergo proporciona un excelente soporte para contratos financieros del mundo real. Ergo puede admitir dApps versátiles que se ejecutan de manera predecible, con costos conocidos y sin los peligros de una funcionalidad sin restricciones. Los contratos inteligentes de Ergo permiten realizar tareas de largo alcance y pueden ser Turing completo, pero siempre sabemos de antemano cuánto costará el código y si se ejecutará correctamente."
+    }
+  ],
+  "components.uniqueErgo.card2.title": [
+    {
+      "type": 0,
+      "value": "POTENTE Y SEGURO"
+    }
+  ],
+  "components.uniqueErgo.card3.button": [
+    {
+      "type": 0,
+      "value": "EXPLORA"
+    }
+  ],
+  "components.uniqueErgo.card3.text": [
+    {
+      "type": 0,
+      "value": "Los Protocolos Sigma (Σ-Protocols) son la base de los contratos inteligentes de Ergo. Permiten un conjunto de protocolos eficientes de conocimiento nulo que nos permiten implementar tareas sofisticadas que de otro modo serían imposibles, arriesgadas o costosas. Bienvenido a la privacidad auto-soberana a nivel de aplicación: scripts sin confianza que se pueden usar para acceder a mezcladores de criptomonedas u otra funcionalidad, sin necesidad de terceros."
+    }
+  ],
+  "components.uniqueErgo.card3.title": [
+    {
+      "type": 0,
+      "value": "SIMPLE E INTELIGENTE"
+    }
+  ],
+  "components.uniqueErgo.card4.button": [
+    {
+      "type": 0,
+      "value": "EXPLORA"
+    }
+  ],
+  "components.uniqueErgo.card4.text": [
+    {
+      "type": 0,
+      "value": "Creemos que los usuarios habituales que no ejecutan un nodo completo deberían disfrutar de los mismos beneficios de seguridad que los mineros. Las pruebas de prueba de trabajo no interactivas (NIPOPOWS) nos permiten realizar y verificar transacciones con total confianza sin necesidad de almacenamiento, ancho de banda ni tiempo necesarios para descargar la cadena de bloques completa. De hecho, solo se requiere 1 MB de datos, lo que significa que se puede usar cualquier dispositivo."
+    }
+  ],
+  "components.uniqueErgo.card4.title": [
+    {
+      "type": 0,
+      "value": "SEGURO Y ACCESIBLE"
+    }
+  ],
+  "components.uniqueErgo.title": [
+    {
+      "type": 0,
+      "value": "QUÉ HACE ERGO ÚNICO"
+    }
+  ],
+  "components.usingErg.description": [
+    {
+      "type": 0,
+      "value": "Hay un valioso ecosistema brotando sobre Ergo. Tanto si eres es desarrollador, minero o inversor, puedes contar con nosotros."
+    }
+  ],
+  "components.usingErg.subtitle": [
+    {
+      "type": 0,
+      "value": "DEFI IMPARABLE"
+    }
+  ],
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "OBTÉN ERG"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Únete a nuestros canales"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Sigmanautas"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Contribuye a Ergo"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Salón de la fama"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
+      "value": "Fundación Ergo"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "COMUNIDAD"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Versiones de software"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Donaciones y recompensas"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "Preguntas frecuentes"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Explorar"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Documentos"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "DESCUBRE"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Hoja de Ruta"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Videocasts"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "ECOSISTEMA"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Minar"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Calculadora de Minado"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Billeteras"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Plataformas de intercambio"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "OBTÉN ERG"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Aviso Legal"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "NOTICIAS"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Politicas de Privacidad"
+    }
+  ],
+  "footer.weGotIt": [
+    {
+      "type": 0,
+      "value": "¡Lo conseguimos!"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "DESCUBRE"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "ECOSISTEMA"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "COMUNIDAD ERGO"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "OBTÉN ERG"
+    }
+  ],
+  "navigation.moreContent": [
+    {
+      "type": 0,
+      "value": "¿Más contenido?"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "404. Página no Encontrada."
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "No Encontrada"
+    }
+  ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Comunidad"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Descubre"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Ecosistema"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "ObténErg"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Inicio"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Aviso Legal"
+    }
+  ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Billeteras Móvil"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Politicas de Privacidad"
+    }
+  ]
 }
