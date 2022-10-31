@@ -49,7 +49,7 @@ export default function Mining() {
     },
     {
       text: <FormattedMessageFixed defaultMessage="KRYPTEX" id="components.mining.miningPools.7" />,
-      url: 'https://kryptex.network/en/erg',
+      url: 'https://pool.kryptex.com/erg',
     },
   ];
   let minersUrls = [
