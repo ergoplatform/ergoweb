@@ -17,10 +17,10 @@ export default function MobileWallets() {
               <main className="mt-0 mx-auto max-w-7xl px-6 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline">Ergo Mobile Wallet</span>
+                    <span className="block xl:inline">Ergo Wallet App</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Official Ergo Mobile Wallet for Android and iOS. Lightweight and simple to use.
+                    Official Ergo Wallet App. Lightweight and simple to use.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <a
@@ -41,14 +41,14 @@ export default function MobileWallets() {
                     </a>
                   </div>
                   <p className="mt-3 text-lg text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">
-                    Sources available on{' '}
+                    Desktop downloads on{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
-                      href="https://github.com/ergoplatform/ergo-wallet-android"
+                      href="https://github.com/ergoplatform/ergo-wallet-app/releases"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      GitHub
+                      releases page
                     </a>
                   </p>
                 </div>
@@ -351,9 +351,6 @@ export default function MobileWallets() {
               <p className="pt-3 mb-1 lg:text-lg text-gray-100  text-sm">
                 ERGO provides much. We are working to get more and more of its features available in
                 the app.{' '}
-              </p>
-              <p className="lg:text-lg text-gray-100 text-sm">
-                Be the first to get new features by joining the open beta on Google Play!{' '}
               </p>
 
               <div className="sm:flex sm:justify-center  mt-10">

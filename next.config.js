@@ -76,6 +76,11 @@ const nextConfig = {
         destination: '/privacy-policy/',
         permanent: true,
       },
+      {
+        source: '/mobile-wallets/',
+        destination: '/ergo-wallet-app/',
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
