@@ -49,9 +49,9 @@ export default function Post(props: Props) {
                   background={false}
                 />
               </div>
-              <h4 className="text-[40px] text-black dark:text-black">
+              <h1 className="text-[40px] text-black dark:text-black">
                 {props.post.attributes.title}
-              </h4>
+              </h1>
               <div className="mb-8 mt-4 flex flex-row">
                 {props.post.attributes.tag
                   ?.split(',')
