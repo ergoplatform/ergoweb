@@ -103,7 +103,7 @@ export default function Post(props: Props) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm, remarkBreaks]}
                 rehypePlugins={[rehypeRaw]}
-                className="blog-md"
+                className="blog-md markdown-body"
               >
                 {props.post.attributes.content}
               </ReactMarkdown>
