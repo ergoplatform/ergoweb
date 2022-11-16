@@ -33,7 +33,7 @@ export default function Footer() {
       setNewsData(news);
     };
     fetchData();
-  }, []);
+  }, [locale]);
 
   return (
     <footer id="Footer" className="relative z-10">
