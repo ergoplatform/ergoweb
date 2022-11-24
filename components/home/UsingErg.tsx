@@ -38,6 +38,17 @@ const cards = [
     icon: 'UsingErgStoreIt',
     url: '/get-erg/#Wallets',
   },
+  {
+    title: <FormattedMessageFixed defaultMessage="Use it" id="components.getErg.UseIt.title" />,
+    text: (
+      <FormattedMessageFixed
+        defaultMessage="Put your ERG to use today in our growing ecosystem"
+        id="components.getErg.UseIt.text"
+      />
+    ),
+    icon: 'UsingErgUseIt',
+    url: '/ecosystem',
+  },
 ];
 
 function FormattedMessageFixed(props: any) {
@@ -75,14 +86,14 @@ export default function UsingErg() {
             ></FormattedMessage>
           </p>
         </div>
-        <div className="flex overflow-x-auto lg:space-x-4 space-x-8 mt-10 no-scrollbar pb-10">
+        <div className="lg:grid flex grid-cols-4 grid-rows-1 ml-4 overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10">
           {cards.map((card: any, i: number) => (
             <Link key={i} href={card.url} passHref>
               <div className="cursor-pointer z-20">
-                <div className="h-[450px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
                   {getIconComponentByName(card.icon + 'Light')}
                 </div>
-                <div className="hidden dark:flex h-[450px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                <div className="hidden dark:flex h-[350px] min-w-[238px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
                   {getIconComponentByName(card.icon)}
                 </div>
                 <p className="font-subtitle-3 mb-3">{card.title}</p>
