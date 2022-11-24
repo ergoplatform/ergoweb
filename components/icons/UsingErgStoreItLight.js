@@ -1,7 +1,14 @@
 import * as React from 'react';
 
 const SvgUsingErgStoreItLight = (props) => (
-  <svg width={258} height={388} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg
+    width="auto"
+    height="auto"
+    viewBox="0 0 258 388"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"

@@ -59,6 +59,8 @@ export const getIconComponentByName = (name: string, props?: any) => {
     UsingErgMineItLight: SvgIconsComponent.UsingErgMineItLight,
     UsingErgStoreIt: SvgIconsComponent.UsingErgStoreIt,
     UsingErgStoreItLight: SvgIconsComponent.UsingErgStoreItLight,
+    UsingErgUseIt: SvgIconsComponent.UsingErgUseIt,
+    UsingErgUseItLight: SvgIconsComponent.UsingErgUseItLight,
     RoadmapPlanned: SvgIconsComponent.RoadmapPlanned,
     RoadmapInProgress: SvgIconsComponent.RoadmapInProgress,
     RoadmapCompleted: SvgIconsComponent.RoadmapCompleted,

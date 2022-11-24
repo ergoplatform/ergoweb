@@ -52,6 +52,8 @@ export { default as UsingErgMineItLight } from './UsingErgMineItLight';
 export { default as UsingErgMineIt } from './UsingErgMineIt';
 export { default as UsingErgStoreItLight } from './UsingErgStoreItLight';
 export { default as UsingErgStoreIt } from './UsingErgStoreIt';
+export { default as UsingErgUseIt } from './UsingErgUseIt';
+export { default as UsingErgUseItLight } from './UsingErgUseItLight';
 export { default as PersonPlaceholder } from './PersonPlaceholder';
 export { default as DiscoverErgHeroLight } from './DiscoverErgHeroLight';
 export { default as DiscoverErgHero } from './DiscoverErgHero';
