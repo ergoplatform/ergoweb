@@ -20,13 +20,14 @@ export default function Post(props: Props) {
   const { locale } = useRouter();
   let hasImage = false;
   let imageUrl = '';
+
   if (props.post.attributes.blogPhoto?.length > 0) {
     hasImage = true;
     imageUrl = 'https://storage.googleapis.com/ergo-cms-media' + props.post.attributes.blogPhoto;
   }
   if (props.post.attributes.image.data) {
     hasImage = true;
-    imageUrl = props.post.attributes.image.data.attributes.formats.large.url;
+    imageUrl = props.post.attributes.image.data.attributes.url;
   }
 
   return (
