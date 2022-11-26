@@ -26,7 +26,7 @@ export default function Post(props: Props) {
   }
   if (props.post.attributes.image.data) {
     hasImage = true;
-    imageUrl = props.post.attributes.image.data.attributes.formats.large.url;
+    imageUrl = props.post.attributes.image.data.attributes.url;
   }
 
   return (
