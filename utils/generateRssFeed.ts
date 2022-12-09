@@ -41,7 +41,7 @@ export default async function generateRssFeed() {
   const author = {
     name: 'Ergo',
     email: 'team@ergoplatform.org',
-    link: 'https://twitter.com/ergoplatformorg',
+    link: 'https://twitter.com/Ergo_Platform',
   };
 
   const feed = new Feed({
