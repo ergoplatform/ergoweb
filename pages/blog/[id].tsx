@@ -128,11 +128,11 @@ export default function Post(props: Props) {
                     <BlogTwitter />
                   </Link>
                 </div>
-                <div className="cursor-pointer">
+                {/* <div className="cursor-pointer">
                   <Link href="https://google.com" passHref>
                     <BlogLink />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

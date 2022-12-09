@@ -1,4 +1,4 @@
-const siteUrl = process.env.SITE_URL || 'http://localhost:80';
+const siteUrl = process.env.SITE_URL || 'https://ergoplatform.org;
 
 module.exports = {
   siteUrl: siteUrl,

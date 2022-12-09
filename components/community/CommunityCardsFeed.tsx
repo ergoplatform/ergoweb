@@ -63,7 +63,7 @@ const cards = [
       />
     ),
     icon: 'Twitter',
-    url: 'https://twitter.com/ergoplatformorg',
+    url: 'https://twitter.com/Ergo_Platform',
   },
   {
     title: (
