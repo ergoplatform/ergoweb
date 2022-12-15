@@ -92,6 +92,11 @@ export default function Footer() {
                 {getIconComponentByName('Discourse')}
               </a>
             </div>
+            <div className="box mx-auto my-auto">
+              <a href="https://www.coingecko.com/en/coins/ergo" target="_blank" rel="noreferrer">
+                {getIconComponentByName('Coingecko')}
+              </a>
+            </div>
           </div>
           <div className="my-6 md:my-auto flex justify-start md:justify-center">
             <a

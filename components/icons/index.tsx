@@ -91,3 +91,4 @@ export { default as ErgoWiki } from './ErgoWiki';
 export { default as BlogFacebook } from './BlogFacebook';
 export { default as BlogLink } from './BlogLink';
 export { default as BlogTwitter } from './BlogTwitter';
+export { default as Coingecko } from './Coingecko';

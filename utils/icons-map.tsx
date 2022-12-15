@@ -72,6 +72,7 @@ export const getIconComponentByName = (name: string, props?: any) => {
     UniqueErgo3: SvgIconsComponent.UniqueErgo3,
     UniqueErgo4: SvgIconsComponent.UniqueErgo4,
     ErgoWiki: SvgIconsComponent.ErgoWiki,
+    Coingecko: SvgIconsComponent.Coingecko,
   };
 
   if (name in ComponentsMap) {
