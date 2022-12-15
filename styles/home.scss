@@ -33,7 +33,7 @@
     right: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background: no-repeat url("/assets/home/frame-1.png");
-    z-index: 11;
+    z-index: 1;
 }
 
 .home-frame-2 {
@@ -42,7 +42,7 @@
     height: 1265px;
     right: 0px;
     background: no-repeat url("/assets/home/frame-2-light.png");
-    z-index: 11;
+    z-index: 1;
 }
 
 .dark .home-frame-2 {
@@ -56,7 +56,7 @@
     top: 500px;
     right: 0px;
     background: no-repeat url("/assets/home/frame-3-light.png");
-    z-index: 11;
+    z-index: 1;
 }
 
 .dark .home-frame-3 {
@@ -66,7 +66,7 @@
     top: 500px;
     right: 0px;
     background: no-repeat url("/assets/home/frame-3.png");
-    z-index: 11;
+    z-index: 1;
 }
 
 .home-frame-4 {
@@ -102,12 +102,12 @@
     top: 0px;
     right: 0px;
     background: no-repeat url("/assets/home/blur-1-light.svg");
-    z-index: 11;
+    z-index: 1;
 }
 
 .dark .home-blur-1 {
     background: no-repeat url("/assets/home/blur-1-fixed.svg");
-    z-index: 11;
+    z-index: 1;
 }
 
 .home-blur-2 {
@@ -118,11 +118,11 @@
     top: 2400px;
     left: 0px;
     background: no-repeat url("/assets/home/blur-2-light.svg");
-    z-index: 11;
+    z-index: 1;
 }
 .dark .home-blur-2 { 
     background: no-repeat url("/assets/home/blur-2-fixed.svg");
-    z-index: 11;
+    z-index: 1;
     width: 350px;
 }
 
