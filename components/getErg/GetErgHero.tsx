@@ -15,7 +15,7 @@ const cards = [
     url: '/get-erg/#Mining',
   },
   {
-    title: <FormattedMessageFixed defaultMessage="Buy it" id="components.getErg.BuyIt.title" />,
+    title: <FormattedMessageFixed defaultMessage="Exchanges" id="components.getErg.BuyIt.title" />,
     text: (
       <FormattedMessageFixed
         defaultMessage="Available across popular centralized and decentralized exchanges."
@@ -26,7 +26,7 @@ const cards = [
     url: '/get-erg/#Exchanges',
   },
   {
-    title: <FormattedMessageFixed defaultMessage="Store it" id="components.getErg.StoreIt.title" />,
+    title: <FormattedMessageFixed defaultMessage="Wallets" id="components.getErg.StoreIt.title" />,
     text: (
       <FormattedMessageFixed
         defaultMessage="Simple and secure non-custodial wallets to keep your ERG safe."
@@ -37,7 +37,7 @@ const cards = [
     url: '/get-erg/#Wallets',
   },
   {
-    title: <FormattedMessageFixed defaultMessage="Use it" id="components.getErg.UseIt.title" />,
+    title: <FormattedMessageFixed defaultMessage="Ecosystem" id="components.getErg.UseIt.title" />,
     text: (
       <FormattedMessageFixed
         defaultMessage="Put your ERG to use today in our growing ecosystem"

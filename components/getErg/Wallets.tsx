@@ -57,45 +57,33 @@ export default function Wallets() {
               Wallets
             </p>
           </div>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Type</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Ledger</p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Feature</p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Cold Storage</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">dApp Connector</p>
           <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">ErgoPay</p>
         </div>
+        <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+          <br />
+          <Button
+            text="WHAT WALLET IS RIGHT FOR ME?"
+            url="#"
+            newTab={false}
+            underline={true}
+            textColor="brand-orange"
+            background={false}
+            icon="ArrowRight"
+            iconColor="orange"
+            customClass=" -ml-4 mb-8"
+          />
+        </p>
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0 lg:mt-8">
           <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
-            <b>TEAM</b> WALLETS
+            <b>COMMUNITY</b> FAVOURITES
           </div>
           <div className="grow">
             <div className="grow h-3 lg:h-4 my-auto border-b-[1px] border-[#585858] ml-2"></div>
           </div>
         </div>
-
-        <a
-          href="https://docs.ergoplatform.com/node/install/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
-        >
-          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
-            <p className="text-center mt-2 lg:my-auto">Ergo Node</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletDesktop className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 18 18" />
-            <p className="text-center mt-2 text-[12px]">Desktop</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-        </a>
-
         <Link href="/ergo-wallet-app">
           <a
             rel="noreferrer"
@@ -107,10 +95,10 @@ export default function Wallets() {
             </div>
             <div className="w-1/5 p-1 my-auto">
               <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-              <p className="text-center mt-2 text-[12px]">Desktop, Mobile</p>
+              <p className="text-center mt-2 text-[12px]">Best for mobile</p>
             </div>
             <div className="w-1/5 p-1 my-auto">
-              <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+              <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
             </div>
             <div className="w-1/5 p-1 my-auto">
               <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
@@ -120,69 +108,6 @@ export default function Wallets() {
             </div>
           </a>
         </Link>
-
-        <a
-          href="https://ergopaperwallet.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
-        >
-          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
-            <p className="text-center lg:my-auto">Paper Wallet</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-            <p className="text-center mt-2 text-[12px]">Paper</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-        </a>
-
-        <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0">
-          <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
-            <b>OTHER</b> WALLETS
-          </div>
-          <div className="grow">
-            <div className="grow h-3 lg:h-4 my-auto border-b-[1px] border-[#585858] ml-2"></div>
-          </div>
-        </div>
-
-        <a
-          href="https://github.com/minotaur-ergo/minotaur-wallet"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
-        >
-          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-            <WalletMinotaur
-              className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12"
-              viewBox="0 0 1337 1337"
-            />
-            <p className="text-center lg:my-auto">Minotaur</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-            <p className="text-center mt-2 text-[12px]">Multi Platform</p>
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-          </div>
-          <div className="w-1/5 p-1 my-auto">
-            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
-          </div>
-        </a>
-
         <a
           href="https://github.com/capt-nemo429/nautilus-wallet"
           target="_blank"
@@ -199,10 +124,10 @@ export default function Wallets() {
 
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
-            <p className="text-center mt-2 text-[12px]">Web</p>
+            <p className="text-center mt-2 text-[12px]">Best for dApps</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -211,7 +136,6 @@ export default function Wallets() {
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
         </a>
-
         <a
           href="https://satergo.com/"
           target="_blank"
@@ -239,7 +163,9 @@ export default function Wallets() {
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
         </a>
-
+        <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
+          <b>EXTRA</b> FEATURES
+        </div>
         <a
           href="https://github.com/ThierryM1212/SAFEW"
           target="_blank"
@@ -253,7 +179,7 @@ export default function Wallets() {
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
-            <p className="text-center mt-2 text-[12px]">Web</p>
+            <p className="text-center mt-2 text-[12px]">Developer Tooling</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -265,19 +191,62 @@ export default function Wallets() {
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
         </a>
-        <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-          <Button
-            text="EXPLORE TRANSACTIONS WITH THE ERGO EXPLORER"
-            url="/discover/#Explore"
-            newTab={false}
-            underline={true}
-            textColor="brand-orange"
-            background={false}
-            icon="ArrowRight"
-            iconColor="orange"
-            customClass=" -ml-4 mb-8"
-          />
-        </p>
+        <a
+          href="https://github.com/minotaur-ergo/minotaur-wallet"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
+        >
+          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
+            <WalletMinotaur
+              className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12"
+              viewBox="0 0 1337 1337"
+            />
+            <p className="text-center lg:my-auto">Minotaur</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
+            <p className="text-center mt-2 text-[12px]">Multi Platform</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
+        </a>
+        <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
+          <b>REFERENCE</b> CLIENT
+        </div>
+
+        <a
+          href="https://docs.ergoplatform.com/node/install/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
+        >
+          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
+            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <p className="text-center mt-2 lg:my-auto">Ergo Node</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletDesktop className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 18 18" />
+            <p className="text-center mt-2 text-[12px]">Server</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+        </a>
+
         <div className="flex felx-row h-16 border-b-[1px] border-x-[1px] border-[#585858] rounded-b-3xl lg:border-0"></div>
       </div>
     </div>

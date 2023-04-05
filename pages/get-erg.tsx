@@ -39,6 +39,7 @@ export default function GetErg(props: Props) {
       <div className="geterg-blur-3"></div>
       <Layout title={title}>
         <GetErgHero title="Get ERG" />
+        <Wallets />
         <Mining />
         {props.currentBlockReward && props.price && props.hashRate && props.difficulty ? (
           <MiningCalculator
@@ -49,7 +50,6 @@ export default function GetErg(props: Props) {
           />
         ) : null}
 
-        <Wallets />
         {props.exchanges ? <Exchanges exchanges={props.exchanges} /> : null}
       </Layout>
     </div>

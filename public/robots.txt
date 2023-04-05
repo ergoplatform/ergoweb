@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ergoplatform.org
+
+# Sitemaps
+Sitemap: https://ergoplatform.org/sitemap.xml

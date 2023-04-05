@@ -38,12 +38,6 @@ export default function Mining() {
       url: 'https://woolypooly.com/#/coin/erg',
     },
     {
-      text: (
-        <FormattedMessageFixed defaultMessage="GETBLOK.IO" id="components.mining.miningPools.5" />
-      ),
-      url: 'https://ergo.getblok.io/',
-    },
-    {
       text: <FormattedMessageFixed defaultMessage="2MINERS" id="components.mining.miningPools.6" />,
       url: 'https://2miners.com/erg-mining-pool',
     },
