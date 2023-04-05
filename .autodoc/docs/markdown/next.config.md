@@ -1,0 +1,24 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/next.config.js)
+
+This code is a configuration file for the Next.js framework used in the ergoweb project. The file exports an object that contains various configuration options for the project. 
+
+The `async redirects()` function is used to define a list of URL redirects for the project. When a user navigates to a URL that matches one of the defined sources, they will be redirected to the corresponding destination URL. For example, if a user navigates to `/docs/some-document`, they will be redirected to `https://storage.googleapis.com/ergo-cms-media/docs/some-document`. 
+
+The `reactStrictMode` option enables React's strict mode, which helps identify potential issues in the code. The `trailingSlash` option adds a trailing slash to the end of URLs, which can help with SEO and consistency. 
+
+The `i18n` option is used to configure internationalization settings for the project. It defines a list of locales and sets the default locale to `default`. The `localeDetection` option is set to `false`, which means the project will not automatically detect the user's locale. 
+
+The `sassOptions` option is used to specify the location of the Sass files used in the project. The `pageExtensions` option is used to specify the file extensions that should be treated as pages in the project. 
+
+The `images` option is used to specify the domains from which images can be loaded in the project. 
+
+Finally, the `withMDX` function is used to enable support for MDX files in the project. MDX is a format that allows for the use of JSX components in Markdown files. The `options` object passed to the `withMDX` function can be used to configure the behavior of the MDX compiler. 
+
+Overall, this configuration file is used to define various settings and options for the ergoweb project, including URL redirects, internationalization settings, and support for MDX files.
+## Questions: 
+ 1. What is the purpose of the `redirects()` function in this code?
+   - The `redirects()` function is used to define a list of URL redirects for the website, which will redirect users from one URL to another.
+2. What is the purpose of the `i18n` object in this code?
+   - The `i18n` object is used to define the internationalization settings for the website, including the available locales and the default locale.
+3. What is the purpose of the `withMDX` function in this code?
+   - The `withMDX` function is used to enable support for rendering MDX files (a combination of Markdown and JSX) as pages in the Next.js application.

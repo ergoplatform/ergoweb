@@ -1,0 +1,20 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/home/HomeInfo.tsx)
+
+The `HomeInfo` component is responsible for displaying various statistics related to the Ergo blockchain on the homepage of the Ergoweb project. The component receives four props: `blockReward`, `circulatingSupply`, `transactionPerDay`, and `hashRate`, which are used to display the corresponding statistics. If any of these props are not provided, default values are used instead.
+
+The component uses the `react-countup` library to animate the counting up of the statistics when they come into view. The `useInView` hook from the `react-intersection-observer` library is used to detect when the component is in view and trigger the animation.
+
+The component renders differently depending on the screen size. On larger screens, the statistics are displayed in a row with vertical lines separating them. On smaller screens, the statistics are displayed in a column with horizontal lines separating them.
+
+Each statistic is displayed with a title and a value. The title is an internationalized string that is translated based on the user's locale using the `react-intl` library. The value is the corresponding statistic, which is formatted with commas and, in the case of `hashRate`, with two decimal places and a "TH/s" suffix.
+
+Overall, the `HomeInfo` component provides an eye-catching and informative display of key statistics related to the Ergo blockchain, which can help users understand the current state of the network.
+## Questions: 
+ 1. What is the purpose of the `useInView` hook and how is it used in this code?
+- The `useInView` hook is used to determine if a component is currently in view on the screen. It is used in this code to trigger the animation of the CountUp component when it comes into view.
+
+2. What is the significance of the default values for the Props object?
+- The default values for the Props object are used in case the component is rendered without any props being passed in. This ensures that the component will still function properly even if the necessary props are not provided.
+
+3. What is the purpose of the `CountUp` component and how is it used in this code?
+- The `CountUp` component is used to animate the display of numerical values. It is used in this code to display the values for block reward, circulating supply, transactions per day, and hash rate with a counting animation effect.

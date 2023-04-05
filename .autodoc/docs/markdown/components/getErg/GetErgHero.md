@@ -1,0 +1,18 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/getErg/GetErgHero.tsx)
+
+The `GetErgHero` component is a React component that renders a hero section for the Ergoweb project's "Get ERG" page. The component imports the `Link` component from the Next.js library, the `FormattedMessage` component from the React Intl library, and the `getIconComponentByName` function from a custom `icons-map` utility module.
+
+The component defines an array of `cards` that represent the different ways users can obtain and use ERG, the native cryptocurrency of the Ergo blockchain. Each card has a `title`, `text`, `icon`, and `url` property. The `title` and `text` properties are JSX elements that are wrapped in the `FormattedMessageFixed` component, which is a custom wrapper around the `FormattedMessage` component that fixes a bug related to the `defaultMessage` prop. The `icon` property is a string that represents the name of an icon that is passed to the `getIconComponentByName` function to retrieve the corresponding SVG icon component. The `url` property is a string that represents the URL of the page that the card links to.
+
+The `GetErgHero` component takes a `title` prop and renders a hero section with a heading, a subheading, and a grid of cards. The heading is passed in as the `title` prop and is rendered in bold text. The subheading is a static text that describes the Ergo ecosystem. The grid of cards is rendered using the `cards` array. Each card is wrapped in a `Link` component that links to the URL specified in the `url` property. The card's `title`, `text`, and icon are rendered along with the link.
+
+The `GetErgHero` component is used in the "Get ERG" page of the Ergoweb project to provide users with an overview of the different ways they can obtain and use ERG. The component is reusable and can be used in other pages or components that require a hero section with a grid of cards.
+## Questions: 
+ 1. What is the purpose of the `getIconComponentByName` function imported from `../../utils/icons-map`?
+- The `getIconComponentByName` function is used to retrieve an icon component based on its name.
+
+2. What is the significance of the `FormattedMessageFixed` function defined within the code?
+- The `FormattedMessageFixed` function is a custom wrapper around the `FormattedMessage` component from `react-intl` that is used to provide default messages and IDs for internationalization.
+
+3. What is the purpose of the `GetErgHero` component and what props does it expect?
+- The `GetErgHero` component is a UI component that displays information about the Ergo ecosystem and provides links to various resources. It expects a `title` prop of type `string`.

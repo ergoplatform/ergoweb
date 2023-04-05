@@ -1,0 +1,37 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/icons/RoadmapInProgress.js)
+
+The `SvgRoadmapInProgress` component is a React component that renders an SVG image of a circular progress bar with a road map icon in the center. The progress bar is filled with a linear gradient that goes from orange to light orange. The purpose of this component is to display a visual representation of a work in progress, such as a project roadmap or a task list. 
+
+The component takes in props, which can be used to customize the appearance of the SVG image. The `width` and `height` props determine the size of the image. Other props can be used to set attributes such as `class` or `id`. 
+
+The SVG image consists of two main elements: an ellipse and a path. The ellipse is used to create the circular progress bar, while the path is used to create the road map icon in the center. The path is created using a series of commands that define the shape of the icon. 
+
+The component uses the `fill` attribute to set the color of the ellipse and the path. The color of the ellipse is set to a linear gradient that goes from orange to light orange. The color of the path is set to black. 
+
+The component also uses the `defs` element to define the linear gradient used for the ellipse. The `linearGradient` element defines the start and end points of the gradient, as well as the colors used in the gradient. 
+
+This component can be used in the larger project to display a visual representation of a work in progress. It can be used to show the progress of a project roadmap, a task list, or any other work that is in progress. The component can be customized to match the style of the larger project by passing in props to set attributes such as `class` or `id`. 
+
+Example usage:
+
+```
+import SvgRoadmapInProgress from 'path/to/SvgRoadmapInProgress';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h1>My Project Roadmap</h1>
+      <SvgRoadmapInProgress width={200} height={200} />
+    </div>
+  );
+};
+```
+## Questions: 
+ 1. What is the purpose of this SVG image?
+   - This SVG image represents a roadmap in progress and includes an ellipse and a path with various shapes and colors.
+
+2. What library or framework is being used to create this SVG image?
+   - This SVG image is being created using React, as indicated by the import statement at the beginning of the code.
+
+3. What is the significance of the linear gradient defined in the `defs` section?
+   - The linear gradient is used to fill the ellipse with a color that changes from #FF5E18 to #FF7C44 from top to bottom.

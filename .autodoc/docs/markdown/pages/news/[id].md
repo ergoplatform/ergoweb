@@ -1,0 +1,20 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/pages/news/[id].tsx)
+
+The `Post` component is a React component that renders a blog post. It imports several dependencies, including `Layout`, `ReactMarkdown`, `Image`, `Button`, `Link`, and `BlogPosts`. The component takes in two props, `post` and `posts`, which are objects containing data about the current post and a list of all blog posts, respectively.
+
+The component first checks whether the current post has an image associated with it and sets the `hasImage` and `imageUrl` variables accordingly. It then renders the blog post content, including the title, author, date, subtitle, and content. The content is parsed using `ReactMarkdown` and several plugins, including `remarkGfm`, `remarkBreaks`, and `rehypeRaw`, which allow for the use of GitHub-flavored Markdown and raw HTML in the post content.
+
+The component also includes a "Share post" section at the bottom of the post, which contains links to share the post on Facebook and Twitter. The links are wrapped in `Link` components from Next.js, which allow for client-side navigation without a full page refresh.
+
+Finally, the component fetches the current post and a list of all blog posts from a Strapi API using the `getServerSideProps` function. If the current post is not found, the component returns a 404 error. Otherwise, it returns the `post` and `posts` props to the `Post` component.
+
+Overall, the `Post` component is a key part of the Ergoweb project's blog functionality, allowing users to view and share individual blog posts.
+## Questions: 
+ 1. What external libraries or frameworks are being used in this code?
+- The code is importing several external libraries and components such as `react-intl`, `react-markdown`, `next/image`, `next/link`, and custom components like `Layout`, `Button`, `BlogFacebook`, `BlogLink`, `BlogTwitter`, and `BlogPosts`.
+
+2. What is the purpose of the `getServerSideProps` function?
+- The `getServerSideProps` function is used to fetch data from an external API (presumably Strapi) and pass it as props to the `Post` component. It is also used to handle cases where the requested post is not found.
+
+3. What is the purpose of the `hasImage` and `imageUrl` variables?
+- The `hasImage` and `imageUrl` variables are used to determine if the current post has an associated image and to set the URL of that image. The code checks if the post has a `blogPhoto` attribute or an `image` attribute with a `url` attribute, and sets `hasImage` to `true` and `imageUrl` accordingly.

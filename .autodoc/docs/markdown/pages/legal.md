@@ -1,0 +1,23 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/pages/legal.tsx)
+
+The code above is a React component that renders a legal page for the ergoweb project. The page is composed of a header, a blurred background, and a legal content section. The component imports the NextPage type from the Next.js library, the FormattedMessage and useIntl hooks from the react-intl library, the Layout component from a local file, and the LegalContent component from a local MDX file.
+
+The Legal component uses the useIntl hook to access the internationalization functionality provided by the react-intl library. It formats the title of the page using the formatMessage method of the intl object. The title is retrieved from the messages file using the id pages.legal.title and the defaultMessage 'Legal'. This allows the title to be translated into different languages based on the user's locale.
+
+The component then renders the page layout using the Layout component. The title of the page is passed as a prop to the Layout component. The legal content is rendered using the LegalContent component, which is an MDX file that contains the legal text. The LegalContent component is wrapped in a div with the class mdPage, which sets the width of the legal content section to two-thirds of the page width on medium-sized screens and above.
+
+The component also includes two divs with the classes legal-frame-1 and legal-blur-1, which are used to create a decorative frame and a blurred background for the legal content section. These divs are empty and do not contain any content.
+
+Overall, this component provides a reusable legal page for the ergoweb project that can be easily translated into different languages using the react-intl library. The component can be used by importing it into other pages or components and rendering it as a standalone page or as part of a larger application.
+## Questions: 
+ 1. What is the purpose of the `Legal` component?
+   
+   The `Legal` component is a Next.js page component that renders legal content and a layout component.
+
+2. What is the `useIntl` hook used for in this code?
+   
+   The `useIntl` hook is used to access the internationalization API provided by the `react-intl` library to format the `title` message.
+
+3. What is the `LegalContent` component and where is it defined?
+   
+   The `LegalContent` component is a custom MDX component that renders legal content. It is defined in a separate file located at `../content/legal.mdx`.

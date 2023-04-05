@@ -1,0 +1,16 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/community/Spotlight.tsx)
+
+The code above is a React component called `Spotlight` that renders a section of a web page. The purpose of this component is to display a title, a subtitle, and a button that links to a blog page. The component imports two modules: `FormattedMessage` and `useIntl` from the `react-intl` library, and `Button` from a local file.
+
+The `FormattedMessage` component is used to display localized text. It takes two props: `defaultMessage` and `id`. The `defaultMessage` prop is the default text to display if no translation is available, and the `id` prop is a unique identifier for the text that needs to be translated. The `useIntl` hook is used to access the `intl` object, which provides methods for formatting and displaying localized text.
+
+The `Spotlight` component returns a `div` element that contains a `h1` or `h3` element, depending on the screen size, and a `Button` component. The `h1` or `h3` element displays the title "Spotlight" in bold. The `FormattedMessage` component is used to provide a translation for the title. The `Button` component displays a button with the text "SEE ALL POSTS" and an arrow icon. The text is translated using the `intl.formatMessage` method, which takes an object with the `id` and `defaultMessage` properties as an argument. The `Button` component also takes several props that customize its appearance and behavior, such as `url`, `newTab`, `textColor`, and `iconColor`.
+
+This component can be used in a larger project to display a section that highlights recent or popular blog posts. The `Spotlight` component can be customized by changing the title, subtitle, and button text, as well as the button's appearance and behavior. The component can also be translated into different languages by providing translations for the `id` props used in the `FormattedMessage` components. Overall, the `Spotlight` component provides a reusable and flexible way to display a section that promotes blog content.
+## Questions: 
+ 1. What is the purpose of the `useIntl` hook and how is it used in this code?
+   - The `useIntl` hook is used to access the internationalization API provided by `react-intl`. In this code, it is used to format the text for the button based on the user's locale.
+2. What is the significance of the `Spotlight` component and how is it rendered?
+   - The `Spotlight` component is a UI component that displays a title and a button. It is rendered as a div with the id "Spotlight" and a set of CSS classes that control its layout and appearance.
+3. What are the props passed to the `Button` component and what do they do?
+   - The `Button` component is passed several props that control its text, URL, appearance, and behavior. These include `text` for the button label, `url` for the link destination, `newTab` to open the link in a new tab, `underline` to add an underline to the text, `textColor` and `background` to control the button's color scheme, and `icon` and `iconColor` to add an icon to the button.

@@ -1,0 +1,22 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/community/HallOfFame.tsx)
+
+The code defines a React component called `HallOfFame` that displays a list of people involved in the Ergo project. The component imports several other components and icons, including `Tab` from `@headlessui/react`, `Image` from `next/image`, `Link` from `next/link`, `FormattedMessage` from `react-intl`, and several custom icons. 
+
+The `HallOfFame` component takes an optional prop called `teamMembers`, which is an array of objects representing people involved in the project. Each object has several properties, including `name`, `bio`, `github`, `linkedin`, `twitter`, and `image`. 
+
+The `HallOfFame` component renders a tabbed interface with three tabs: "CORE", "COMMUNITY", and "FOUNDATION". Each tab displays a list of people from the `teamMembers` array whose `group` property matches the name of the tab. The list is displayed using the `GroupPersons` function, which takes two arguments: the `teamMembers` array and the name of the group to display. 
+
+The `GroupPersons` function filters the `teamMembers` array to include only those objects whose `group` property matches the specified group name. It then maps over the filtered array and renders a `HallOfFamePerson` component for each person. 
+
+The `HallOfFamePerson` component takes several props representing information about a person, including their name, bio, social media links, and image. It renders a card with a flip animation that displays the person's image on the front and their bio on the back. The component also displays the person's name and social media links below the card. 
+
+Overall, the `HallOfFame` component provides a way to showcase the people involved in the Ergo project and highlight their contributions. The tabbed interface allows users to easily switch between different groups of people, and the `HallOfFamePerson` component provides a visually appealing way to display information about each person.
+## Questions: 
+ 1. What is the purpose of the `HallOfFame` component?
+- The `HallOfFame` component displays a list of people involved in the Ergo project, grouped by their role in the ecosystem (core team, community, or foundation).
+
+2. What is the `GroupPersons` function used for?
+- The `GroupPersons` function filters the list of people passed as `data` based on their `group` attribute, and returns a list of `HallOfFamePerson` components for each person in the filtered list.
+
+3. What libraries and components are being imported in this file?
+- The file imports `Tab` from `@headlessui/react`, `Image` from `next/image`, `Link` from `next/link`, `FormattedMessage` from `react-intl`, and several custom icons. It also defines two types (`Props` and `HallOfFamePersonProps`) and two components (`HallOfFamePerson` and `HallOfFame`).

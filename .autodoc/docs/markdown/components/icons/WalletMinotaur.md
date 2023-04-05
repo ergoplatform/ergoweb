@@ -1,0 +1,31 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/icons/WalletMinotaur.js)
+
+This code defines a React component called `SvgWalletMinotaur` that renders an SVG image of a wallet with a Minotaur design. The SVG image consists of two `path` elements that define the shape and stroke of the image. The `stroke` attribute sets the color of the stroke to a bright orange (#ff4221) and the `strokeWidth` attribute sets the width of the stroke to 8 pixels.
+
+The `SvgWalletMinotaur` component takes in `props` as an argument, which allows for any additional props to be passed down to the SVG element. The `viewBox` attribute sets the dimensions of the SVG image to 1337 x 1337 pixels, and the `width` and `height` attributes set the dimensions of the SVG element to 1337pt x 1337pt.
+
+This component can be used in the larger project as a decorative element, such as on a landing page or in a marketing campaign. It can be imported and rendered like any other React component:
+
+```
+import SvgWalletMinotaur from './SvgWalletMinotaur';
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to Ergoweb</h1>
+      <SvgWalletMinotaur />
+    </div>
+  );
+}
+```
+
+Overall, this code provides a reusable and visually appealing SVG component that can be used to enhance the user experience of the Ergoweb project.
+## Questions: 
+ 1. What is the purpose of this code?
+- This code is a React component that renders an SVG image of a wallet minotaur.
+
+2. What are the dimensions of the SVG image?
+- The SVG image has a width of 1337pt and a height of 1337pt, and a viewBox of "0 0 1337 1337".
+
+3. What is the significance of the stroke and strokeWidth properties in the path elements?
+- The stroke property sets the color of the stroke (outline) of the path, while the strokeWidth property sets the width of the stroke. In this code, both path elements have a stroke color of "#ff4221" and a strokeWidth of 8.

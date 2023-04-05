@@ -1,0 +1,16 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/home/UsingErg.tsx)
+
+The code defines a React component called `UsingErg` that renders a section of a webpage. The section contains four cards, each with a title, text, and icon, and each linking to a different page on the website. The purpose of this component is to provide users with information on how to use the Ergo cryptocurrency.
+
+The `cards` array contains four objects, each representing a card. Each object has a `title`, `text`, `icon`, and `url` property. The `title` and `text` properties are React components that contain localized text. The `icon` property is a string that represents the name of an icon to be displayed on the card. The `url` property is a string that represents the URL of the page to which the card links.
+
+The `UsingErg` component renders the section of the webpage using the `cards` array. It first renders a subtitle, title, and description above the cards. The subtitle and title are localized text, and the description is a paragraph of text that describes the Ergo ecosystem. The cards are then rendered in a grid using the `cards.map()` method. Each card is a `Link` component that links to the URL specified in its `url` property. The card's `title`, `text`, and `icon` are displayed using the `getIconComponentByName()` function, which returns a React component that displays the specified icon.
+
+Overall, this component provides users with an easy-to-use interface for learning about and accessing different aspects of the Ergo cryptocurrency ecosystem. By clicking on the cards, users can quickly navigate to different pages on the website to learn more about mining, buying, storing, and using Ergo.
+## Questions: 
+ 1. What is the purpose of the `cards` array?
+   - The `cards` array contains objects with information about different ways to use or obtain ERG, including titles, descriptions, icons, and URLs.
+2. What is the `FormattedMessageFixed` function used for?
+   - The `FormattedMessageFixed` function is a wrapper around the `FormattedMessage` component from the `react-intl` library, used to provide internationalization support for the text content of the `cards`.
+3. What is the purpose of the `getIconComponentByName` function?
+   - The `getIconComponentByName` function is used to dynamically retrieve and render SVG icons based on their names, which are stored in the `icon` property of each `card` object.

@@ -1,0 +1,22 @@
+[View code on GitHub](https://github.com/ergoplatform/ergoweb/components/darkModeSwitcher/DarkModeSwitcher.tsx)
+
+The `DarkModeSwitch` component is responsible for toggling between light and dark mode in the ergoweb project. It uses the `useTheme` hook from the `next-themes` library to get the current theme and set the theme when the switch is toggled. 
+
+The component renders a div that contains a circular button with either a sun or moon icon, depending on the current theme. When the button is clicked, the `toggleSwitch` function is called, which sets the theme to the opposite of the current theme. 
+
+The component also uses the `useLoaded` hook from the `utils` directory to determine when the component has finished loading. This is used to determine the position of the button in the div. If the theme is currently light, the button is positioned at the end of the div, and if the theme is dark, the button is positioned at the beginning of the div. 
+
+The `motion` component from the `framer-motion` library is used to animate the button when the theme is toggled. The `spring` object defines the animation properties, including the type of animation, stiffness, and damping. 
+
+Finally, the `useEffect` hook is used to update the theme and the class of the `documentElement` when the theme is changed. If the theme is light, the `dark` class is removed from the `documentElement`, and if the theme is dark, the `dark` class is added to the `documentElement`. 
+
+Overall, the `DarkModeSwitch` component provides a simple and intuitive way for users to toggle between light and dark mode in the ergoweb project. It is easily customizable and can be used in any part of the project where a dark mode switch is needed.
+## Questions: 
+ 1. What is the purpose of this code?
+- This code is for a Dark Mode Switch component that toggles between light and dark themes.
+
+2. What libraries or frameworks are being used in this code?
+- This code is using framer-motion, React, next-themes, and classNames libraries.
+
+3. What is the logic behind the toggleSwitch function?
+- The toggleSwitch function sets the theme to 'dark' if the current theme is 'light', and vice versa.
