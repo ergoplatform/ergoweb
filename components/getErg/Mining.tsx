@@ -45,6 +45,10 @@ export default function Mining() {
       text: <FormattedMessageFixed defaultMessage="KRYPTEX" id="components.mining.miningPools.7" />,
       url: 'https://pool.kryptex.com/erg',
     },
+    {
+      text: <FormattedMessageFixed defaultMessage="COIN-POOL" id="components.mining.miningPools.8" />,
+      url: 'https://coin-pool.eu',
+    },
   ];
   let minersUrls = [
     {
