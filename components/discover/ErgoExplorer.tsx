@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { getIconComponentByName } from '../../utils/icons-map';
 
 export default function Explore() {
@@ -17,14 +17,21 @@ export default function Explore() {
   return (
     <div id="Explore" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <p className="text-[#585858] dark:text-[#585858] mb-4 xl:ml-60">
-        DIVE INTO THE ERGO SEA OF TRANSACTIONS
+        <FormattedMessage
+          defaultMessage="DIVE INTO THE ERGO SEA OF TRANSACTIONS"
+          id="components.explore.subheading"
+        />
       </p>
       <h1 className="leading-tight xl:ml-60">
-        <b>Explore</b>
+        <b>
+          <FormattedMessage defaultMessage="Explore" id="components.explore.heading" />
+        </b>
       </h1>
       <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
-        The Ergo Explorer is your interface with the blockchain. Watch every transaction made in
-        real-time. Or, view community curated metrics on ergo.watch.
+        <FormattedMessage
+          defaultMessage="The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
+          id="components.explore.description"
+        />
       </p>
       <Link href="https://explorer.ergoplatform.com/" passHref>
         <a target="_blank" rel="noopener noreferrer">

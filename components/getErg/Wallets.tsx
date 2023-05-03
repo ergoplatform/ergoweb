@@ -14,6 +14,7 @@ import {
   WalletX,
   WalletXGray,
 } from '../icons';
+import { FormattedMessage } from 'react-intl';
 
 export default function Wallets() {
   return (
@@ -21,23 +22,35 @@ export default function Wallets() {
       <div className="flex flex-col md:flex-row justify-between md:gap-36">
         <div className="my-auto">
           <p className="font-roboto font-bold text-[14px] lg:text-[20px] text-[#585858] dark:text-[#585858]">
-            CHOOSE YOURS
+            <FormattedMessage defaultMessage="CHOOSE YOURS" id="components.wallets.chooseYours" />
           </p>
-          <p className="font-vinila-extended-bold text-[48px] lg:text-[120px]">Wallets</p>
+          <p className="font-vinila-extended-bold text-[48px] lg:text-[120px]">
+            <FormattedMessage defaultMessage="Wallets" id="components.wallets.walletsTitle" />
+          </p>
         </div>
         <div className="my-auto">
           <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-            Digital wallets can help keep your digital currency safe, private and in your control.
+            <FormattedMessage
+              defaultMessage="Digital wallets can help keep your digital currency safe, private and in your control."
+              id="components.wallets.walletDescription1"
+            />
           </p>
           <br />
           <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
-            Note that wallets are supported by third parties, we only provide the information below
-            as a courtesy, in order to simplify the overall digital currency experience for you.
+            <FormattedMessage
+              defaultMessage="Note that wallets are supported by third parties, we only provide the information below as a courtesy, in order to simplify the overall digital currency experience for you."
+              id="components.wallets.walletDescription2"
+            />
           </p>
           <br />
           <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
             <Button
-              text="SETUP GUIDES"
+              text={
+                <FormattedMessage
+                  defaultMessage="SETUP GUIDES"
+                  id="components.wallets.setupGuides"
+                />
+              }
               url="/category/Tooling/"
               newTab={false}
               underline={true}
@@ -51,16 +64,30 @@ export default function Wallets() {
         </div>
       </div>
       <div className="mt-8">
-        <div className="flex felx-row h-20 border-[1px] border-[#585858] rounded-t-3xl lg:rounded-b-full lg:rounded-t-full bg-[#E0E0E0] dark:bg-[#292929] lg:border-0">
+        <div className="flex felx-row h-20 border-[1px] border-[#585858] rounded-t-3xl lg:rounded-b-full lg:rounded-t-full bg-[#E0E0E0] dark:bg-[#292929] lg:border-0 gap-x-4">
           <div className="my-auto w-1/5 lg:bg-brand-orange lg:rounded-l-full lg:h-full">
             <p className="text-[11px] lg:text-[24px] lg:mt-6 font-bold text-center text-brand-orange dark:text-brand-orange lg:text-white lg:dark:text-white">
-              Wallets
+              <FormattedMessage defaultMessage="Wallets" id="components.wallets.walletsHeader" />
             </p>
           </div>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Feature</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">Cold Storage</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">dApp Connector</p>
-          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">ErgoPay</p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
+            <FormattedMessage defaultMessage="Feature" id="components.wallets.featureHeader" />
+          </p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
+            <FormattedMessage
+              defaultMessage="Cold Storage"
+              id="components.wallets.coldStorageHeader"
+            />
+          </p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
+            <FormattedMessage
+              defaultMessage="dApp Connector"
+              id="components.wallets.dAppConnectorHeader"
+            />
+          </p>
+          <p className="text-[11px] lg:text-[24px] w-1/5 my-auto text-center">
+            <FormattedMessage defaultMessage="ErgoPay" id="components.wallets.ErgoPay" />
+          </p>
         </div>
         <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
           <br />

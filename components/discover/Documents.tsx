@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import { useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 type Props = {
   documents?: any;
@@ -39,14 +40,16 @@ export default function Documents(props: Props) {
     <div id="Documents" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <div className="flex flex-col lg:flex-row mb-12">
         <a className="font-vinila-extended  text-[32px] sm:text-[48px] md:text-[96px] lg:w-2/3">
-          <b>Documents</b>
+          <b>
+            <FormattedMessage defaultMessage="Documents" id="components.documents.heading" />
+          </b>
         </a>
         <div className="lg:w-1/3">
           <p className="text-[#807e7e] dark:text-[#807e7e]">
-            Ergo takes a research-based approach and uses stable well-tested solutions to provide a
-            robust platform for developers to build on for years to come. Most of Ergo solutions are
-            formalized in papers presented at peer-reviewed conferences and have been widely
-            discussed in the community.
+            <FormattedMessage
+              defaultMessage="Ergo takes a research-based approach and uses stable well-tested solutions to provide a robust platform for developers to build on for years to come. Most of Ergo solutions are formalized in papers presented at peer-reviewed conferences and have been widely discussed in the community."
+              id="components.documents.description"
+            />
           </p>
         </div>
       </div>

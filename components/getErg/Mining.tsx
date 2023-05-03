@@ -46,7 +46,9 @@ export default function Mining() {
       url: 'https://pool.kryptex.com/erg',
     },
     {
-      text: <FormattedMessageFixed defaultMessage="COIN-POOL" id="components.mining.miningPools.8" />,
+      text: (
+        <FormattedMessageFixed defaultMessage="COIN-POOL" id="components.mining.miningPools.8" />
+      ),
       url: 'https://coin-pool.eu',
     },
   ];
@@ -76,7 +78,7 @@ export default function Mining() {
   let urlsComponent = (
     <div>
       <h2 className="mt-8 lg:mt-24 font-vinila-extended-light text-[40px] lg:text-[48px] mb-14">
-        Mining Pools
+        <FormattedMessage defaultMessage="Mining Pools" id="components.mining.miningPoolsTitle" />
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {miningPoolsUrls.map((link, i) => (
@@ -95,7 +97,7 @@ export default function Mining() {
         ))}
       </div>
       <h2 className="mt-8 lg:mt-12 font-vinila-extended-light text-[40px] lg:text-[48px]  mb-14">
-        Miners
+        <FormattedMessage defaultMessage="Miners" id="components.mining.minersTitle" />
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {minersUrls.map((link, i) => (
@@ -122,7 +124,9 @@ export default function Mining() {
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 flex flex-col lg:flex-row relative z-10"
     >
       <div className="lg:w-1/2">
-        <h1 className="font-vinila-extended text-bold text-[48px] lg:text-[120px]">Mining</h1>
+        <h1 className="font-vinila-extended text-bold text-[48px] lg:text-[120px]">
+          <FormattedMessage defaultMessage="Mining" id="components.mining.title" />
+        </h1>
         <div className="hidden lg:block">{urlsComponent}</div>
       </div>
       <div className="lg:w-1/2">

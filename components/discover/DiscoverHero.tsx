@@ -51,7 +51,7 @@ export default function DiscoverERG() {
         </div>
         <div className="discover-container box xl:order-1">
           <h1 className="max-w-xs leading-tight">
-            <b>Discover Ergo</b>
+            <FormattedMessage id="components.discoverHero.title" defaultMessage="Discover Ergo" />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
             <FormattedMessage
@@ -111,11 +111,13 @@ export default function DiscoverERG() {
         </div>
         <div className="box xl:order-3">
           <h1 className="max-w-xs leading-tight mt-36 xl:mt-0">
-            <b>Software</b>
+            <FormattedMessage defaultMessage="Software" id="components.software.heading" />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
-            The Ergo Node is your entry-point to development on Ergo and lets you communicate with
-            the blockchain.
+            <FormattedMessage
+              defaultMessage="The Ergo Node is your entry-point to development on Ergo and lets you communicate with the blockchain."
+              id="components.software.description"
+            />
           </p>
           <div className="-ml-4 mt-10">
             <Button
@@ -133,10 +135,13 @@ export default function DiscoverERG() {
         <div className="box xl:order-4">
           <div className="sm:ml-28 mt-16 xl:mt-0">
             <h1 className="max-w-xs leading-tight">
-              <b>Learn</b>
+              <FormattedMessage defaultMessage="Learn" id="components.learn.heading" />
             </h1>
             <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
-              Start from the basics. What is Ergo? What can you do on Ergo?
+              <FormattedMessage
+                defaultMessage="Start from the basics. What is Ergo? What can you do on Ergo?"
+                id="components.learn.description"
+              />
             </p>
             <Link href="https://ergonaut.space" passHref>
               <a target="_blank" rel="noopener noreferrer">

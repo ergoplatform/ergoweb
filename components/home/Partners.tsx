@@ -1,5 +1,6 @@
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import { FormattedMessage } from 'react-intl';
 
 type Props = {
   partners: any;
@@ -9,8 +10,8 @@ export default function Partners({ partners }: Props) {
   const { theme } = useTheme();
   return (
     <div id="Partners" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
-      <h3 className="text-center">
-        <b>Partners</b>
+      <h3 className="max-w-xs leading-tight text-center">
+        <FormattedMessage id="components.partners.title" defaultMessage="Partners" />
       </h3>
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
         {partners.map((partner: any) => (

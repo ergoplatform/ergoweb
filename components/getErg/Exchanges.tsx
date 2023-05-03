@@ -1,6 +1,7 @@
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Button from '../Button';
+import { FormattedMessage } from 'react-intl';
 
 type Props = {
   exchanges: any;
@@ -17,20 +18,27 @@ export default function Exchanges({ exchanges }: Props) {
       <div className="flex flex-col md:flex-row justify-between">
         <div className="">
           <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
-            BUY, SELL AND TRADE ERGO
+            <FormattedMessage
+              defaultMessage="BUY, SELL AND TRADE ERGO"
+              id="components.exchanges.heading"
+            />
           </p>
           <h2>
-            <b>Exchanges</b>
+            <FormattedMessage defaultMessage="Exchanges" id="components.exchanges.subheading" />
           </h2>
         </div>
         <div>
           <p className="font-subtitle-3-bold text-[#807e7e] dark:text-[#807e7e] mb-6 max-w-lg">
-            Available across popular exchanges and decentralized exchanges.
+            <FormattedMessage
+              defaultMessage="Available across popular exchanges and decentralized exchanges."
+              id="components.exchanges.available"
+            />
           </p>
           <p className="text-[#807e7e] dark:text-[#807e7e] max-w-lg">
-            Disclaimer: Exchanges provide highly varying degrees of safety, security, privacy, and
-            control over your funds and information. We highly recommend being custodial of your own
-            funds and using one of the wallet options provided above.
+            <FormattedMessage
+              defaultMessage="Disclaimer: Exchanges provide highly varying degrees of safety, security, privacy, and control over your funds and information. We highly recommend being custodial of your own funds and using one of the wallet options provided above."
+              id="components.exchanges.disclaimer"
+            />
             <br />
             <br />
             <Button

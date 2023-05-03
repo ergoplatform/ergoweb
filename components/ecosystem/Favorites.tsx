@@ -1,4 +1,4 @@
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { getIconComponentByName } from '../../utils/icons-map';
 import { ErgoRaffle, Heart } from '../icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,20 +23,19 @@ export default function Favorites(props: Props) {
         <div className="lg:w-1/3">
           <Heart viewBox="0 0 20 18" className="h-3 mb-4" />
           <p className="text-[#585858] dark:text-[#585858] font-bold mb-3 text-[14px] lg:text-[20px]">
-            OUR FAVORITES
+            <FormattedMessage defaultMessage="OUR FAVORITES" id="components.ourFavorites.heading" />
           </p>
           <ErgoRaffle viewBox="0 0 211 63" className="h-10 w-32 mb-4" />
           <p className="font-vinila-extended font-bold text-[48px] lg:text-[56px] mb-6">
-            Ergo Raffle
+            <FormattedMessage defaultMessage="Ergo Raffle" id="components.ergoRaffle.heading" />
           </p>
           <p className="text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-8">
-            ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise
-            money for a project. This project can range from a direct donation to a charity, an
-            academic or business plan, or anything you can convince people to part with their
-            hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes
-            place, and one lucky participant wins a set percent of the Raffle as a &quot;raffle
-            reward&quot;.
+            <FormattedMessage
+              defaultMessage='ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a "raffle reward".'
+              id="components.ergoRaffle.description"
+            />
           </p>
+
           <button
             type="submit"
             className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"

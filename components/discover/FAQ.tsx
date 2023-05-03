@@ -26,11 +26,18 @@ export default function FAQ(props: Props) {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/3">
           <b>
-            <p className="text-[#585858] dark:text-[#585858] pt-6">ANY QUESTIONS?</p>
+            <p className="text-[#585858] dark:text-[#585858] pt-6">
+              <FormattedMessage defaultMessage="ANY QUESTIONS?" id="components.faq.anyQuestions" />
+            </p>
           </b>
-          <a className="font-vinila-extended text-[48px] lg:text-[120px]">FAQ</a>
+          <a className="font-vinila-extended text-[48px] lg:text-[120px]">
+            <FormattedMessage defaultMessage="FAQ" id="components.faq.heading" />
+          </a>
           <p className="text-[#585858] dark:text-[#807e7e]">
-            We’ve compiled some of the most frequently asked questions.
+            <FormattedMessage
+              defaultMessage="We’ve compiled some of the most frequently asked questions."
+              id="components.faq.description"
+            />
           </p>
           <div className="mt-96 hidden lg:block">
             <p className="text-[24px] mb-6 font-bold">
