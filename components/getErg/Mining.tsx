@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 function FormattedMessageFixed(props: any) {
@@ -6,6 +6,28 @@ function FormattedMessageFixed(props: any) {
 }
 
 export default function Mining() {
+  const intl = useIntl();
+  const button1Text = intl.formatMessage({
+    id: 'components.mining.button1',
+    defaultMessage: 'DOCUMENTATION',
+  });
+  const button2Text = intl.formatMessage({
+    id: 'components.mining.button2',
+    defaultMessage: 'MINING POOL STATS',
+  });
+  const button3Text = intl.formatMessage({
+    id: 'components.mining.button3',
+    defaultMessage: 'DISCORD',
+  });
+  const button4Text = intl.formatMessage({
+    id: 'components.mining.button4',
+    defaultMessage: 'SUBREDDIT',
+  });
+  const button5Text = intl.formatMessage({
+    id: 'components.mining.button5',
+    defaultMessage: 'MINING BLOG POSTS',
+  });
+
   let miningPoolsUrls = [
     {
       text: (
@@ -92,6 +114,7 @@ export default function Mining() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
         ))}
@@ -111,6 +134,7 @@ export default function Mining() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
         ))}
@@ -153,7 +177,7 @@ export default function Mining() {
         </p>
         <br />
         <Button
-          text="DOCUMENTATION"
+          text={button1Text}
           url="https://docs.ergoplatform.com/mining/"
           newTab={false}
           underline={true}
@@ -162,10 +186,11 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
+          id={''}
         />
         <br />
         <Button
-          text="MINING POOL STATS"
+          text={button2Text}
           url="https://miningpoolstats.stream/ergo"
           newTab={true}
           underline={true}
@@ -174,10 +199,11 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
+          id={''}
         />
         <br />
         <Button
-          text="DISCORD"
+          text={button3Text}
           url="https://discord.gg/PFYugUgg28"
           newTab={true}
           underline={true}
@@ -186,10 +212,11 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
+          id={''}
         />
         <br />
         <Button
-          text="SUBREDDIT"
+          text={button4Text}
           url="https://www.reddit.com/r/erg_miners/"
           newTab={true}
           underline={true}
@@ -198,10 +225,11 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
+          id={''}
         />
         <br />
         <Button
-          text="MINING BLOG POSTS"
+          text={button5Text}
           url="/category/Mining/"
           newTab={false}
           underline={true}
@@ -210,6 +238,7 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
+          id={''}
         />
         <div className="lg:hidden">{urlsComponent}</div>
       </div>

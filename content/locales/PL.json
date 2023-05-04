@@ -231,5 +231,11 @@
   "components.wiki.description.short": "ergonaut.space to wiki społeczności blockchaina Ergo, przewodnik tłumaczący, jak korzystać i podstawowe szczegóły techniczne blockchaina Ergo w łatwy sposób zrozumiały dla osób nie technicznych.",
   "components.ourFavorites.heading": "NASZE ULUBIONE",
   "components.ergoRaffle.heading": "Ergo Raffle",
-  "components.ergoRaffle.description": "ErgoRaffle to usługa crowdfundingowa zbudowana na platformie Ergo, umożliwiająca każdemu zebranie pieniędzy na projekt. Projekt ten może obejmować bezpośrednie datki na cele charytatywne, plan akademicki lub biznesowy lub cokolwiek, za co można przekonać ludzi, aby oddali swoje ciężko zarobione ERG! Dodatkowo, po zakończeniu Raffle, odbywa się loteria, a jeden szczęśliwy uczestnik wygrywa określony procent Raffle jako „nagrodę Raffle”."  
+  "components.ergoRaffle.description": "ErgoRaffle to usługa crowdfundingowa zbudowana na platformie Ergo, umożliwiająca każdemu zebranie pieniędzy na projekt. Projekt ten może obejmować bezpośrednie datki na cele charytatywne, plan akademicki lub biznesowy lub cokolwiek, za co można przekonać ludzi, aby oddali swoje ciężko zarobione ERG! Dodatkowo, po zakończeniu Raffle, odbywa się loteria, a jeden szczęśliwy uczestnik wygrywa określony procent Raffle jako „nagrodę Raffle”.",
+  "components.mining.button1": "DOKUMENTACJA",
+"components.mining.button2": "STATYSTYKI BASENU KOPANIA",
+"components.mining.button3": "DISCORD",
+"components.mining.button4": "SUBREDDIT",
+"components.mining.button5": "POSTY BLOGOWE O KOPANIU"
+
 }

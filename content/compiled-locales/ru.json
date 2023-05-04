@@ -893,6 +893,36 @@
       "value": "Учиться"
     }
   ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "ДОКУМЕНТАЦИЯ"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "СТАТИСТИКА ПУЛА ДЛЯ МАЙНИНГА"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "ПОСТЫ БЛОГА О МАЙНИНГЕ"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -1058,7 +1088,7 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022 И ДАЛЕЕ"
+      "value": "2023 И ДАЛЕЕ"
     }
   ],
   "components.roadmap.title": [

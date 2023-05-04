@@ -18,6 +18,7 @@ export default function Wiki() {
             icon="ArrowRight"
             iconColor="orange"
             customClass=" -ml-4"
+            id={''}
           />
         </div>
       </div>
@@ -61,6 +62,7 @@ export default function Wiki() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4"
+          id={''}
         />
       </div>
     </div>

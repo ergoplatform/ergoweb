@@ -225,8 +225,13 @@
 "components.wiki.description.short": "Az ergonaut.space az Ergo blokklánc közösség által létrehozott wiki oldala, amelyben az Ergo blokklánc műszaki részletei egyszerűen érthető módon vannak leírva.",
 "components.ourFavorites.heading": "KEDVENCINK",
 "components.ergoRaffle.heading": "Ergo Raffle",
-"components.ergoRaffle.description": "Az Ergo Raffle egy támogatási szolgáltatás, amelyet az Ergo platformon építettek, és lehetővé teszi bárki számára, hogy pénzt gyűjtsön egy projekt számára. Ez a projekt közvetlen adományozástól, jótékonysági célú támogatásig, akadémiai vagy üzleti tervig terjedhet, vagy bármire, amivel meg tudja győzni az embereket, hogy részt vegyenek keményen megkeresett ERG-jük elengedésében! Az Raffle befejezése után egy lottóhúzás kerül sor, és egy szerencsés résztvevő nyer egy meghatározott százalékot az Raffle összegéből, mint \"raffle jutalom\"."
-    
+"components.ergoRaffle.description": "Az Ergo Raffle egy támogatási szolgáltatás, amelyet az Ergo platformon építettek, és lehetővé teszi bárki számára, hogy pénzt gyűjtsön egy projekt számára. Ez a projekt közvetlen adományozástól, jótékonysági célú támogatásig, akadémiai vagy üzleti tervig terjedhet, vagy bármire, amivel meg tudja győzni az embereket, hogy részt vegyenek keményen megkeresett ERG-jük elengedésében! Az Raffle befejezése után egy lottóhúzás kerül sor, és egy szerencsés résztvevő nyer egy meghatározott százalékot az Raffle összegéből, mint \"raffle jutalom\".",
+"components.mining.button1": "DOKUMENTÁCIÓ",
+"components.mining.button2": "BÁNYÁSZATI MEDENCE STADISZTIKA",
+"components.mining.button3": "DISCORD",
+"components.mining.button4": "SUBREDDIT",
+"components.mining.button5": "BÁNYÁSZATI BLOG BEJEGYZÉSEK"
+
     
 
   

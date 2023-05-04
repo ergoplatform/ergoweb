@@ -70,6 +70,7 @@ export default function DiscoverERG() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
           <div className="-ml-4 mt-10">
@@ -82,6 +83,7 @@ export default function DiscoverERG() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
           <div className="-ml-4 mt-10">
@@ -94,6 +96,7 @@ export default function DiscoverERG() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
           <div className="-ml-4 mt-10">
@@ -106,6 +109,7 @@ export default function DiscoverERG() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
         </div>
@@ -129,6 +133,7 @@ export default function DiscoverERG() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
+              id={''}
             />
           </div>
         </div>

@@ -40,6 +40,7 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
                 underline={true}
                 textColor="brand-orange"
                 background={false}
+                id={''}
               />
             </div>
           </div>

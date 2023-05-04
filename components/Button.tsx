@@ -12,6 +12,7 @@ type Props = {
   background?: boolean;
   iconColor?: string;
   customClass?: string;
+  id: string;
 };
 
 export default function Button({

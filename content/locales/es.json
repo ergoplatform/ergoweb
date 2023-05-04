@@ -231,6 +231,12 @@
   "components.wiki.description.short": "ergonaut.space es el wiki de la comunidad de la cadena de bloques Ergo, una guía que traduce cómo usarla y los detalles técnicos subyacentes de la cadena de bloques Ergo en un lenguaje fácil de entender para las personas no técnicas.",
   "components.ourFavorites.heading": "NUESTROS FAVORITOS",
   "components.ergoRaffle.heading": "Ergo Rifa",
-  "components.ergoRaffle.description": "ErgoRaffle es un servicio de crowdfunding construido en la plataforma Ergo que permite a cualquier persona recaudar dinero para un proyecto. Este proyecto puede ser desde una donación directa a una organización benéfica, un plan académico o de negocios, o cualquier cosa por la que puedas convencer a las personas a que se separen de sus ganancias duramente ganadas en ERG. Como una ventaja adicional, después de terminar la Rifa, se realiza una lotería, y un participante afortunado gana un porcentaje establecido de la Rifa como una recompensa de rifa"
+  "components.ergoRaffle.description": "ErgoRaffle es un servicio de crowdfunding construido en la plataforma Ergo que permite a cualquier persona recaudar dinero para un proyecto. Este proyecto puede ser desde una donación directa a una organización benéfica, un plan académico o de negocios, o cualquier cosa por la que puedas convencer a las personas a que se separen de sus ganancias duramente ganadas en ERG. Como una ventaja adicional, después de terminar la Rifa, se realiza una lotería, y un participante afortunado gana un porcentaje establecido de la Rifa como una recompensa de rifa",
+  "components.mining.button1": "DOCUMENTACIÓN",
+  "components.mining.button2": "ESTADÍSTICAS DEL POOL DE MINERÍA",
+  "components.mining.button3": "DISCORD",
+  "components.mining.button4": "SUBREDDIT",
+  "components.mining.button5": "PUBLICACIONES DE BLOG DE MINERÍA"
+
 }
 

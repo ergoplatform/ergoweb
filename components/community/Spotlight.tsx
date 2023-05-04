@@ -30,6 +30,7 @@ export default function Spotlight() {
           background={false}
           icon="ArrowRight"
           iconColor="orange"
+          id={''}
         />
       </div>
     </div>

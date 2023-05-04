@@ -41,6 +41,7 @@ export default function GrantsAndBounties() {
             background={false}
             icon="ArrowRight"
             iconColor="orange"
+            id={''}
           />
         </div>
         <div className="-ml-4 mt-10 xl:ml-16">
@@ -53,6 +54,7 @@ export default function GrantsAndBounties() {
             background={false}
             icon="ArrowRight"
             iconColor="orange"
+            id={''}
           />
         </div>
         <div className="-ml-4 mt-10 xl:ml-16">
@@ -65,6 +67,7 @@ export default function GrantsAndBounties() {
             background={false}
             icon="ArrowRight"
             iconColor="orange"
+            id={''}
           />
         </div>
       </div>

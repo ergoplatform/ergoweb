@@ -60,6 +60,7 @@ export default function News({ news }: Props) {
                           underline={true}
                           textColor="brand-orange"
                           background={false}
+                          id={''}
                         />
                       </div>
                     </SwiperSlide>

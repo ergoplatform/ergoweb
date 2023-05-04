@@ -111,6 +111,7 @@ export default function ContributeForm() {
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                id={''}
               />
             </div>
             <div className="ml-8 mb-10">
@@ -123,6 +124,7 @@ export default function ContributeForm() {
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                id={''}
               />
             </div>
             <div className="ml-8 mb-10">
@@ -135,6 +137,7 @@ export default function ContributeForm() {
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                id={''}
               />
             </div>
             <div className="ml-8 mb-10">
@@ -147,6 +150,7 @@ export default function ContributeForm() {
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                id={''}
               />
             </div>
           </div>

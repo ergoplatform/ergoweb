@@ -77,7 +77,7 @@
   "components.roadmap.description": " 请注意，Ergo 是一个平台。下面列出的许多项目与Ergo基金会之间或二者之间彼此没有正式关联。",
   "components.roadmap.section1.title": "迄今为止",
   "components.roadmap.section2.title": "紧接下来",
-  "components.roadmap.section3.title": "2022年及以后",
+  "components.roadmap.section3.title": "2023年及以后",
   "components.roadmap.title": "路线图",
   "components.uniqueErgo.card1.button": "探索",
   "components.uniqueErgo.card1.text": "Ergo借鉴了十年区块链开发经验，采用久经考验的原则，并结合了经同行评审、有关密码学、共识模型和数字货币的最佳学术研究。我们从扎实的区块链基础开始，并原生实现强大的全新密码学。",
@@ -233,8 +233,13 @@
   "components.wiki.description.short": "ergonaut.space 是 Ergo 区块链的社区维基，它指导着如何使用 Ergo 区块链，以及 Ergo 区块链的底层技术细节，以便非技术人员容易理解。",
   "components.ourFavorites.heading": "我们的最爱",
   "components.ergoRaffle.heading": "Ergo 抽奖",
-  "components.ergoRaffle.description": "ErgoRaffle 是一个基于 Ergo 平台构建的众筹服务，使任何人都可以为项目筹集资金。这个项目可以是直接向慈善机构捐款、学术或商业计划，或者任何你能说服人们用他们辛苦赚来的 ERG 来支持的东西！作为额外的奖励，在完成抽奖后，将进行一次彩票抽奖，一个幸运的参与者将赢得抽奖的一定百分比作为“抽奖奖励”。"
-
+  "components.ergoRaffle.description": "ErgoRaffle 是一个基于 Ergo 平台构建的众筹服务，使任何人都可以为项目筹集资金。这个项目可以是直接向慈善机构捐款、学术或商业计划，或者任何你能说服人们用他们辛苦赚来的 ERG 来支持的东西！作为额外的奖励，在完成抽奖后，将进行一次彩票抽奖，一个幸运的参与者将赢得抽奖的一定百分比作为“抽奖奖励”。",
+  "components.mining.button1": "文档",
+  "components.mining.button2": "矿池统计",
+  "components.mining.button3": "Discord",
+  "components.mining.button4": "Subreddit",
+  "components.mining.button5": "挖矿博客文章"
+  
   
 
   

@@ -899,6 +899,36 @@
       "value": "学习"
     }
   ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "文档"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "矿池统计"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "Subreddit"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "挖矿博客文章"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -1064,7 +1094,7 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022年及以后"
+      "value": "2023年及以后"
     }
   ],
   "components.roadmap.title": [

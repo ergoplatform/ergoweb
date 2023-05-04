@@ -893,6 +893,36 @@
       "value": "Dowiedz się więcej"
     }
   ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOKUMENTACJA"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "STATYSTYKI BASENU KOPANIA"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "POSTY BLOGOWE O KOPANIU"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,

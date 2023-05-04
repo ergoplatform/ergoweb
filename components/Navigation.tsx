@@ -55,6 +55,7 @@ function Navigation({ enableLanguages = true }) {
             background={false}
             underline={pathname == '/community'}
             customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+            id={''}
           />
           <Button
             text={getErg}
@@ -62,6 +63,7 @@ function Navigation({ enableLanguages = true }) {
             background={true}
             underline={pathname == '/get-erg'}
             customClass=" decoration-black dark:decoration-white underline-offset-2"
+            id={''}
           />
           <Button
             text={discover}
@@ -69,6 +71,7 @@ function Navigation({ enableLanguages = true }) {
             background={false}
             underline={pathname == '/discover'}
             customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+            id={''}
           />
           <Button
             text={ecosystem}
@@ -76,6 +79,7 @@ function Navigation({ enableLanguages = true }) {
             background={false}
             underline={pathname == '/ecosystem'}
             customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+            id={''}
           />
         </div>
         <div className="inline-flex" style={{ zIndex: 12 }}>
@@ -320,7 +324,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/ecosystem/#ChangingTheWorld">
+                    <Link href="/ecosystem/#Videocasts">
                       <a>
                         <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
                       </a>

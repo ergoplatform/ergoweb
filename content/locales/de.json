@@ -77,7 +77,7 @@
   "components.roadmap.description": "Bitte beachte, dass Ergo eine offene Plattform ist. Viele der unten aufgeführten Projekte haben keine formale Verbindung zur Ergo Foundation oder zueinander.",
   "components.roadmap.section1.title": "BISHER",
   "components.roadmap.section2.title": "IN KÜRZE",
-  "components.roadmap.section3.title": "2022 & DANACH",
+  "components.roadmap.section3.title": "2023 & DANACH",
   "components.roadmap.title": "Roadmap",
   "components.uniqueErgo.card1.button": "MEHR INFOS",
   "components.uniqueErgo.card1.text": "Ergo stützt sich auf zehn Jahre Blockchain-Entwicklung und ergänzt bewährte Prinzipien mit der besten von Expert*innen begutachteten akademischen Forschung zu Kryptografie, Konsensmodellen und digitalen Währungen. Wir beginnen mit robusten Blockchain-Grundlagen und implementieren neue und leistungsstarke Kryptografie auf nativer Basis.",
@@ -230,5 +230,11 @@
   "components.communityHero.title": "Ökosystem",
   "components.communityHero.Wiki.title": "Wiki",
   "components.communityHero.Wiki.text": "Ihr Community-Wiki. Tragen Sie in jeder Sprache bei!",
-  "components.partners.title": "Partner"
+  "components.partners.title": "Partner",
+  "components.mining.button1": "Dokumentation",
+"components.mining.button2": "Mining-Pool-Statistiken",
+"components.mining.button3": "Discord",
+"components.mining.button4": "Subreddit",
+"components.mining.button5": "Mining-Blog-Posts"
+
 }

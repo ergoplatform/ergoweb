@@ -885,6 +885,36 @@
       "value": "Aprender"
     }
   ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOCUMENTAÇÃO"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "ESTATÍSTICAS DE POOL DE MINERAÇÃO"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "POSTS DE BLOG DE MINERAÇÃO"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,

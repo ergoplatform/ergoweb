@@ -77,7 +77,7 @@
   "components.roadmap.description": "Обратите внимание, что Ergo — это платформа. Многие из перечисленных ниже проектов не имеют формальной связи ни с Фондом Ergo, ни друг с другом.",
   "components.roadmap.section1.title": "СДЕЛАНО",
   "components.roadmap.section2.title": "В РАБОТЕ",
-  "components.roadmap.section3.title": "2022 И ДАЛЕЕ",
+  "components.roadmap.section3.title": "2023 И ДАЛЕЕ",
   "components.roadmap.title": "Дорожная карта",
   "components.uniqueErgo.card1.button": "ИЗУЧИТЬ",
   "components.uniqueErgo.card1.text": "Ergo опирается на десятилетний опыт разработки блокчейна, дополняя проверенные принципы лучшими рецензируемыми академическими исследованиями в области криптографии, моделей консенсуса и цифровых валют. Мы начинаем с прочных основ блокчейна и изначально реализуем новую и мощную криптографию.",
@@ -232,7 +232,12 @@
   "components.wiki.description.short": "ergonaut.space - это общинная вики-энциклопедия блокчейна Ergo, переводящая, как использовать и технические подробности Ergo на понятном языке для неспециалистов.",
   "components.ourFavorites.heading": "НАШИ ИЗБРАННЫЕ",
   "components.ergoRaffle.heading": "Ergo Raffle",
-  "components.ergoRaffle.description": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\"."
+  "components.ergoRaffle.description": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\".",
+  "components.mining.button1": "ДОКУМЕНТАЦИЯ",
+  "components.mining.button2": "СТАТИСТИКА ПУЛА ДЛЯ МАЙНИНГА",
+  "components.mining.button3": "DISCORD",
+  "components.mining.button4": "SUBREDDIT",
+  "components.mining.button5": "ПОСТЫ БЛОГА О МАЙНИНГЕ"
 
 
   

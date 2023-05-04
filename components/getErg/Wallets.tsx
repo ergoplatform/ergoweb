@@ -59,6 +59,7 @@ export default function Wallets() {
               icon="ArrowRight"
               iconColor="orange"
               customClass=" -ml-4 mb-8"
+              id={''}
             />
           </p>
         </div>
@@ -101,6 +102,7 @@ export default function Wallets() {
             icon="ArrowRight"
             iconColor="orange"
             customClass=" -ml-4 mb-8"
+            id={''}
           />
         </p>
         <div className="flex flex-row border-x-[1px] border-[#585858] lg:border-0 lg:mt-8">

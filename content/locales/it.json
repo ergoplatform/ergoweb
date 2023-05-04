@@ -77,7 +77,7 @@
   "components.roadmap.description": "Si prega di notare che Ergo è una piattaforma. Molti dei progetti elencati di seguito non hanno alcun legame formale con la Ergo Foundation o tra di loro.",
   "components.roadmap.section1.title": "FINORA",
   "components.roadmap.section2.title": "UP NEXT",
-  "components.roadmap.section3.title": "2022 & OLTRE",
+  "components.roadmap.section3.title": "2023 & OLTRE",
   "components.roadmap.title": "Roadmap",
   "components.uniqueErgo.card1.button": "ESPLORA",
   "components.uniqueErgo.card1.text": "Ergo attinge da dieci anni di sviluppo blockchain, integrando principi collaudati con la migliore ricerca accademica peer-reviewed su crittografia, modelli di consenso e valute digitali. Iniziamo con solide basi blockchain e implementiamo nuova e potente crittografia in modo nativo.",
@@ -233,6 +233,11 @@
 "components.wiki.description.short": "ergonaut.space è il wiki della comunità della blockchain Ergo, una guida che traduce come utilizzare la blockchain Ergo e la tecnologia sottostante in un linguaggio facile da capire anche per le persone non tecniche.",
 "components.ourFavorites.heading": "I NOSTRI PREFERITI",
 "components.ergoRaffle.heading": "Ergo Raffle",
-"components.ergoRaffle.description": "ErgoRaffle è un servizio di crowdfunding costruito sulla piattaforma Ergo che consente a chiunque di raccogliere fondi per un progetto. Questo progetto può variare da una donazione diretta a un ente di beneficenza, un piano accademico o commerciale, o qualsiasi altra cosa per cui puoi convincere le persone a cedere i loro ERG guadagnati duramente! Come bonus aggiuntivo, dopo la conclusione della Raffle, viene effettuata una lotteria e un fortunato partecipante vince una percentuale predefinita della Raffle come 'premio della raffle'"
-  
+"components.ergoRaffle.description": "ErgoRaffle è un servizio di crowdfunding costruito sulla piattaforma Ergo che consente a chiunque di raccogliere fondi per un progetto. Questo progetto può variare da una donazione diretta a un ente di beneficenza, un piano accademico o commerciale, o qualsiasi altra cosa per cui puoi convincere le persone a cedere i loro ERG guadagnati duramente! Come bonus aggiuntivo, dopo la conclusione della Raffle, viene effettuata una lotteria e un fortunato partecipante vince una percentuale predefinita della Raffle come 'premio della raffle'",
+"components.mining.button1": "DOCUMENTAZIONE",
+"components.mining.button2": "STATISTICHE DELLA POOL DI MINING",
+"components.mining.button3": "DISCORD",
+"components.mining.button4": "SUBREDDIT",
+"components.mining.button5": "POST DEL BLOG DI MINING"
+
 }

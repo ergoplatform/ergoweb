@@ -915,6 +915,36 @@
       "value": "Lernen"
     }
   ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "Dokumentation"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "Mining-Pool-Statistiken"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "Subreddit"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "Mining-Blog-Posts"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -1080,7 +1110,7 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022 & DANACH"
+      "value": "2023 & DANACH"
     }
   ],
   "components.roadmap.title": [
