@@ -232,9 +232,8 @@
   "components.communityHero.Wiki.text": "Ihr Community-Wiki. Tragen Sie in jeder Sprache bei!",
   "components.partners.title": "Partner",
   "components.mining.button1": "Dokumentation",
-"components.mining.button2": "Mining-Pool-Statistiken",
-"components.mining.button3": "Discord",
-"components.mining.button4": "Subreddit",
-"components.mining.button5": "Mining-Blog-Posts"
-
+  "components.mining.button2": "Mining-Pool-Statistiken",
+  "components.mining.button3": "Discord",
+  "components.mining.button4": "Subreddit",
+  "components.mining.button5": "Mining-Blog-Posts"
 }

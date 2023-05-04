@@ -673,6 +673,12 @@
       "value": "Carteiras"
     }
   ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Use seus ERGs agora mesmo em nosso ecossistema em constante crescimento."
+    }
+  ],
   "components.getErg.UseIt.title": [
     {
       "type": 0,
@@ -1213,6 +1219,12 @@
     {
       "type": 0,
       "value": "Carteiras"
+    }
+  ],
+  "components.usingErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Use seus ERGs agora mesmo em nosso ecossistema em constante crescimento."
     }
   ],
   "components.usingErg.UseIt.title": [

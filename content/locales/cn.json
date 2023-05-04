@@ -168,7 +168,7 @@
   "components.communityHero.title": "社区",
   "components.communityHero.Wiki.title": "维基",
   "components.communityHero.Wiki.text": "您的社区维基。用任何语言贡献",
-  "components.partners.title": "伙伴",  
+  "components.partners.title": "伙伴",
   "components.communityHero.Reddit.text": "订阅我们的subreddit。",
   "components.communityHero.Reddit.title": "Reddit",
   "components.communityHero.Telegram.text": "在Telegram上来和我们聊天。",
@@ -239,10 +239,4 @@
   "components.mining.button3": "Discord",
   "components.mining.button4": "Subreddit",
   "components.mining.button5": "挖矿博客文章"
-  
-  
-
-  
-  
-
 }
