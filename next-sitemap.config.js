@@ -7,7 +7,7 @@ module.exports = {
   sitemapSize: 5000,
   generateRobotsTxt: true,
   alternateRefs: [
-    ['en', 'cn', 'de', 'it', 'hu', 'ru', 'pt', 'es']
+    ['en', 'cn', 'de', 'it', 'hu', 'ru'] //, 'pt', 'es'
       .filter((locale) => locale !== 'default')
       .map((locale) => ({ href: `${siteUrl}/${locale}`, hreflang: locale })),
   ],
