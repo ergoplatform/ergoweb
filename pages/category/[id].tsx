@@ -35,7 +35,6 @@ export default function Category(props: Props) {
                   underline={true}
                   textColor="brand-orange"
                   background={false}
-                  id={''}
                 />
               </div>
               <p className="font-vinila-extended text-[40px] md:text-[48px]">

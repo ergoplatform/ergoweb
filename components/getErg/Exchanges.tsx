@@ -51,7 +51,6 @@ export default function Exchanges({ exchanges }: Props) {
               icon="ArrowRight"
               iconColor="orange"
               customClass=" -ml-4 mb-8"
-              id={''}
             />
           </p>
         </div>

@@ -31,7 +31,6 @@ export default function DApps(props: Props) {
             background={false}
             icon="ArrowRight"
             iconColor="orange"
-            id={''}
           />
         </div>
       </div>

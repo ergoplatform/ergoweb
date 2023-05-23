@@ -114,7 +114,6 @@ export default function Mining() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
-              id={''}
             />
           </div>
         ))}
@@ -134,7 +133,6 @@ export default function Mining() {
               background={false}
               icon="ArrowRight"
               iconColor="orange"
-              id={''}
             />
           </div>
         ))}
@@ -186,7 +184,6 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -199,7 +196,6 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -212,7 +208,6 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -225,7 +220,6 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -238,7 +232,6 @@ export default function Mining() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <div className="lg:hidden">{urlsComponent}</div>
       </div>

@@ -39,7 +39,6 @@ export default function Autolykos() {
             background={true}
             iconColor="black"
             icon="ArrowRight"
-            id={''}
           />
         </div>
       </div>
@@ -68,7 +67,6 @@ export default function Autolykos() {
                 background={true}
                 iconColor="black"
                 icon="ArrowRight"
-                id={''}
               />
             </div>
           </div>

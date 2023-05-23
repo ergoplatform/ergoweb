@@ -52,7 +52,6 @@ export default function Sigmanauts() {
             background={false}
             icon="ArrowRight"
             iconColor="orange"
-            id={''}
           />
         </div>
       </div>

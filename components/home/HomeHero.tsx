@@ -48,7 +48,6 @@ export default function HomeHero() {
             background={true}
             iconColor="black"
             icon="ArrowRight"
-            id={''}
           />
         </div>
       </div>

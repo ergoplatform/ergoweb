@@ -47,7 +47,6 @@ export default function Post(props: Props) {
                   underline={true}
                   textColor="brand-orange"
                   background={false}
-                  id={''}
                 />
               </div>
               <h4 className="text-[40px] text-black dark:text-black">

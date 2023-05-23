@@ -29,7 +29,6 @@ export default function OurMission() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -47,7 +46,6 @@ export default function OurMission() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <br />
         <Button
@@ -65,7 +63,6 @@ export default function OurMission() {
           icon="ArrowRight"
           iconColor="orange"
           customClass=" -ml-4 mb-8"
-          id={''}
         />
         <p className="text-[#807e7e] dark:text-[#807e7e] md:text-[16px] md:max-w-3xl">
           <FormattedMessage

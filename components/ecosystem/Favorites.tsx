@@ -88,7 +88,6 @@ export default function Favorites(props: Props) {
                         underline={true}
                         textColor="brand-orange"
                         background={false}
-                        id={''}
                       />
                     ) : (
                       <div></div>
