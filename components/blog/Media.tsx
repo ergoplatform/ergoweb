@@ -38,7 +38,6 @@ function MediaPost({ Title, Description, Date, Link: link }: MediaPostProps) {
                 underline={true}
                 textColor="brand-orange"
                 background={false}
-                id={'read-button'}
               />
             </div>
           </div>
