@@ -201,10 +201,142 @@
       "value": "Будущее принципа «Доказательство выполнения работы» (Proof of Work)"
     }
   ],
+  "components.communityHero.Discord.text": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к нам в Discord!"
+    }
+  ],
+  "components.communityHero.Discord.title": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.communityHero.Discourse.text": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к обсуждению на форуме Ergo."
+    }
+  ],
+  "components.communityHero.Discourse.title": [
+    {
+      "type": 0,
+      "value": "Форум"
+    }
+  ],
+  "components.communityHero.Github.text": [
+    {
+      "type": 0,
+      "value": "Действия важнее слов. 100% Открытый код."
+    }
+  ],
+  "components.communityHero.Github.title": [
+    {
+      "type": 0,
+      "value": "Github"
+    }
+  ],
+  "components.communityHero.Reddit.text": [
+    {
+      "type": 0,
+      "value": "Подпишитесь на наши сабреддиты."
+    }
+  ],
+  "components.communityHero.Reddit.title": [
+    {
+      "type": 0,
+      "value": "Reddit"
+    }
+  ],
+  "components.communityHero.Telegram.text": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к нам в Telegram для общения."
+    }
+  ],
+  "components.communityHero.Telegram.title": [
+    {
+      "type": 0,
+      "value": "Telegram"
+    }
+  ],
+  "components.communityHero.Twitter.text": [
+    {
+      "type": 0,
+      "value": "Подписывайтесь на наш Twitter."
+    }
+  ],
+  "components.communityHero.Twitter.title": [
+    {
+      "type": 0,
+      "value": "Twitter"
+    }
+  ],
+  "components.communityHero.Wiki.text": [
+    {
+      "type": 0,
+      "value": "Ваша вики сообщества. Внесите свой вклад на любом языке!"
+    }
+  ],
+  "components.communityHero.Wiki.title": [
+    {
+      "type": 0,
+      "value": "Вики"
+    }
+  ],
+  "components.communityHero.Youtube.text": [
+    {
+      "type": 0,
+      "value": "Подписывайтесь на наш Youtube канал для еженедельных AMAs, ErgoPulse и многое другое!"
+    }
+  ],
+  "components.communityHero.Youtube.title": [
+    {
+      "type": 0,
+      "value": "Youtube"
+    }
+  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
       "value": "ОСНОВА ФИНАНСОВ БУДУЩЕГО"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Экосистема"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Участие"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo - это децентрализованная платформа, созданная и поддерживаемая своим сообществом. "
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Присоединяйтесь к нам в социальных сетях, чтобы стать частью сообщества. Обязательно ознакомьтесь с разделом "
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": ", чтобы узнать больше информации."
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
     }
   ],
   "components.discoverErgo.text.1": [
@@ -249,6 +381,24 @@
       "value": "ПОСЕТИТЬ ERGONAUT.SPACE"
     }
   ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Откройте для себя Ergo"
+    }
+  ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo подходит к своей платформе на основе исследований и использует стабильные, хорошо проверенные решения для создания прочной платформы для разработчиков, чтобы они могли строить на этом годами. Большинство решений Ergo формализованы в статьях, представленных на научно-практических конференциях и были широко обсуждены в сообществе."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Документы"
+    }
+  ],
   "components.ecosystemHero.title": [
     {
       "type": 0,
@@ -265,6 +415,18 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\"."
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
     }
   ],
   "components.ergofoundation.list1": [
@@ -403,6 +565,66 @@
       "value": " – это общественная организация, ориентированная на:"
     }
   ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Доступно на популярных централизованных и децентрализованных биржах."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Отказ от ответственности: биржи предоставляют сильно отличающийся уровень безопасности, защиты конфиденциальности и контроля над вашими средствами и информацией. Мы настоятельно рекомендуем управлять своими собственными средствами и использовать один из предоставленных выше вариантов кошельков."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "ПОКУПАЙТЕ, ПРОДАВАЙТЕ И ТОРГУЙТЕ ERGO"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Биржи"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer - это ваш интерфейс с блокчейном. Следите за каждой сделкой в реальном времени. Или просматривайте метрики, подобранные сообществом на ergo.watch."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Исследуйте"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "ОКУНИТЕСЬ В МОРЕ ТРАНЗАКЦИЙ ERGO"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "ЕСТЬ ВОПРОСЫ?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "Мы собрали наиболее часто задаваемые вопросы."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "Часто задаваемые вопросы"
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -423,6 +645,66 @@
       "value": "УЗНАТЬ ОБ ERGO RAFFLE"
     }
   ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Доступно на популярных централизованных и децентрализованных биржах."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Биржи"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos - алгоритм ASIC-resistant и справедливой добычи Proof-of-Work, дружественный для обычных GPU."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Добыть"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Простые и безопасные некастодиальные кошельки для сохранения ваших ERG."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Используйте ERG уже сегодня в нашей развивающейся экосистеме."
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "На платформе Ergo развивается богатая экосистема. Мы предлагаем решения для разработчиков, майнеров и инвесторов."
+    }
+  ],
+  "components.getErg.heroTitle": [
+    {
+      "type": 0,
+      "value": "НЕПОБЕДИМЫЙ ДЕЦЕНТРАЛИЗОВАННЫЙ ФИНАНС"
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "Получите ERG"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -439,6 +721,18 @@
     {
       "type": 0,
       "value": "СВЯЗАТЬСЯ"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "В общем, любое обучающее материалы для сообщества подлежит вознаграждению, даже если оно не указано в списке. Мы ищем проекты, направленные на построение ключевой инфраструктуры экосистемы. Однако, самый быстрый способ получить финансирование - это начать розыгрыш."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Гранты и вознаграждения"
     }
   ],
   "components.hallOfFame.description1": [
@@ -475,6 +769,68 @@
     {
       "type": 0,
       "value": "Зал Славы"
+    }
+  ],
+  "components.highlights.slide.1.quote": [
+    {
+      "type": 0,
+      "value": "95,57% "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": "Публичное распределение"
+    }
+  ],
+  "components.highlights.slide.1.text": [
+    {
+      "type": 0,
+      "value": "Когда Ergo запустился в 2019 году, не было ни начального предложения монет, ни предварительной добычи, ни предварительного распределения токенов каким-либо членам команды или венчурным капиталистам. Действительно справедливый запуск с 4,43% средств, выделенных на развитие экосистемы. Без прецедента в любой другой платформе смарт-контрактов."
+    }
+  ],
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "Справедливый старт"
+    }
+  ],
+  "components.highlights.slide.2.quote": [
+    {
+      "type": 0,
+      "value": "TRUE P2P"
+    }
+  ],
+  "components.highlights.slide.2.text": [
+    {
+      "type": 0,
+      "value": "Позволяя более инновационные, целевые реализации, которые не могут соответствовать традиционному банковскому сектору. Ergo предлагает мощные инструменты с умными контрактами для микрокредитных учреждений и местных торговых систем обмена (LETS)."
+    }
+  ],
+  "components.highlights.slide.2.title": [
+    {
+      "type": 0,
+      "value": "Альтернативная экономика"
+    }
+  ],
+  "components.highlights.slide.3.quote": [
+    {
+      "type": 0,
+      "value": "Σ-protocols"
+    }
+  ],
+  "components.highlights.slide.3.text": [
+    {
+      "type": 0,
+      "value": "Конфиденциальность должна оставаться вариантом для защиты автономии. Конфиденциальность - это возможность создания барьеров и установки границ для создания пространства для индивидуальности. Каждый сам выбирает границы и ограничения, которые он хочет создать. Это позволяет новым моделям финансового взаимодействия, основанным на безопасном и богатом языке сценариев ErgoScript и гибких и мощных доказательствах нулевого знания."
+    }
+  ],
+  "components.highlights.slide.3.title": [
+    {
+      "type": 0,
+      "value": "Дополнительная конфиденциальность"
     }
   ],
   "components.highlights.title": [
@@ -525,6 +881,96 @@
       "value": "ТРАНЗАКЦИЙ В ДЕНЬ"
     }
   ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Начните с основ. Что такое Ergo? Что вы можете делать на Ergo?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Учиться"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "ДОКУМЕНТАЦИЯ"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "СТАТИСТИКА ПУЛА ДЛЯ МАЙНИНГА"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "ПОСТЫ БЛОГА О МАЙНИНГЕ"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Текущая награда за блок"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Текущая цена"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos - это алгоритм, ориентированный на GPU, основанный на устойчивой к ASIC технологии Proof of Work (PoW) с жестким доступом к памяти."
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Хешрейт сети"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Дневной доход"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Калькулятор майнинга"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Майнеры"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Пулы для майнинга"
+    }
+  ],
   "components.mining.text.1": [
     {
       "type": 0,
@@ -543,6 +989,12 @@
       "value": "Чтобы начать работу, ознакомьтесь с созданным сообществом Справочником по майнингу, документацией или присоединитесь к дискуссионным площадкам по майнингу."
     }
   ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Майнинг"
+    }
+  ],
   "components.news.blog": [
     {
       "type": 0,
@@ -559,6 +1011,12 @@
     {
       "type": 0,
       "value": "Новости"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "НАШИ ИЗБРАННЫЕ"
     }
   ],
   "components.ourmission.description": [
@@ -597,6 +1055,12 @@
       "value": "Наша Миссия"
     }
   ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Партнеры"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -624,13 +1088,25 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022 И ДАЛЕЕ"
+      "value": "2023 И ДАЛЕЕ"
     }
   ],
   "components.roadmap.title": [
     {
       "type": 0,
       "value": "Дорожная карта"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Узел Ergo - ваша точка входа для разработки на Ergo и позволяет вам взаимодействовать с блокчейном."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Программное обеспечение"
     }
   ],
   "components.uniqueErgo.card1.button": [
@@ -711,6 +1187,48 @@
       "value": "ЧТО ДЕЛАЕТ ERGO УНИКАЛЬНЫМ"
     }
   ],
+  "components.usingErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Доступны на популярных централизованных и децентрализованных биржах."
+    }
+  ],
+  "components.usingErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Биржи"
+    }
+  ],
+  "components.usingErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos - алгоритм Proof-of-Work, устойчивый к ASIC, дружественный к обычным GPU и честно добытый."
+    }
+  ],
+  "components.usingErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Майнинг"
+    }
+  ],
+  "components.usingErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Простые и безопасные некастодиальные кошельки для сохранения ваших ERG."
+    }
+  ],
+  "components.usingErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "components.usingErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Используйте ERG уже сегодня в нашей развивающейся экосистеме."
+    }
+  ],
   "components.usingErg.description": [
     {
       "type": 0,
@@ -727,6 +1245,84 @@
     {
       "type": 0,
       "value": "ПОЛУЧИТЬ ERG"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "ВЫБЕРИТЕ СВОЙ"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Холодное хранилище"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Особенности"
+    }
+  ],
+  "components.wallets.hotStorageHeader": [
+    {
+      "type": 0,
+      "value": "Горячее хранилище"
+    }
+  ],
+  "components.wallets.mobileAppHeader": [
+    {
+      "type": 0,
+      "value": "Мобильное приложение"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "ИНСТРУКЦИИ ПО НАСТРОЙКЕ"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Цифровые кошельки помогают сохранять вашу цифровую валюту в безопасности, обеспечивая конфиденциальность и контроль."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Обратите внимание, что кошельки поддерживаются третьими лицами, мы предоставляем информацию ниже только как вежливость, чтобы упростить общий опыт работы с цифровыми валютами."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Кошельки"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space - это наша общинно-обслуживаемая вики! Забитая полезной информацией о технических подробностях блокчейна Ergo на понятном языке для неспециалистов. Есть также множество руководств, учебников и материалов, предоставленных пользователями. Создайте учетную запись, чтобы начать вносить свой вклад!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space - это общинная вики-энциклопедия блокчейна Ergo, переводящая, как использовать и технические подробности Ergo на понятном языке для неспециалистов."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
     }
   ],
   "footer.blog.title": [

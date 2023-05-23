@@ -7,9 +7,9 @@ type Props = {
   chagingTheWorldProjects?: any;
 };
 
-export default function ChangingTheWorld(props: Props) {
+export default function Videocasts(props: Props) {
   return (
-    <div id="ChangingTheWorld" className="max-w-[1300px] mx-auto p-4 relative z-10">
+    <div id="Videocasts" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <Swiper
         className="SwiperFavorites"
         pagination={{ dynamicBullets: true }}

@@ -11,7 +11,11 @@ export default function CommunityHero() {
           />
         </p>
       </div>
-      <h1>Community</h1>
+      <b>
+        <h1 className="max-w-xs leading-tight">
+          <FormattedMessage id="components.communityHero.title" defaultMessage="Community" />
+        </h1>
+      </b>
     </div>
   );
 }

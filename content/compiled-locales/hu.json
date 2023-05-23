@@ -193,10 +193,142 @@
       "value": "A munka bizonyítéka (Proof of Work) jövője"
     }
   ],
+  "components.communityHero.Discord.text": [
+    {
+      "type": 0,
+      "value": "Csatlakozz hozzánk a Discord-on!"
+    }
+  ],
+  "components.communityHero.Discord.title": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.communityHero.Discourse.text": [
+    {
+      "type": 0,
+      "value": "Csatlakozz a beszélgetéshez az Ergo Fórumon."
+    }
+  ],
+  "components.communityHero.Discourse.title": [
+    {
+      "type": 0,
+      "value": "Fórum"
+    }
+  ],
+  "components.communityHero.Github.text": [
+    {
+      "type": 0,
+      "value": "A cselekedetek beszélnek, itt a kód. 100% nyílt forráskód."
+    }
+  ],
+  "components.communityHero.Github.title": [
+    {
+      "type": 0,
+      "value": "Github"
+    }
+  ],
+  "components.communityHero.Reddit.text": [
+    {
+      "type": 0,
+      "value": "Iratkozz fel a subreddit-ünkre."
+    }
+  ],
+  "components.communityHero.Reddit.title": [
+    {
+      "type": 0,
+      "value": "Reddit"
+    }
+  ],
+  "components.communityHero.Telegram.text": [
+    {
+      "type": 0,
+      "value": "Beszélgess velünk a Telegram-on."
+    }
+  ],
+  "components.communityHero.Telegram.title": [
+    {
+      "type": 0,
+      "value": "Telegram"
+    }
+  ],
+  "components.communityHero.Twitter.text": [
+    {
+      "type": 0,
+      "value": "Kövess minket a Twitteren."
+    }
+  ],
+  "components.communityHero.Twitter.title": [
+    {
+      "type": 0,
+      "value": "Twitter"
+    }
+  ],
+  "components.communityHero.Wiki.text": [
+    {
+      "type": 0,
+      "value": "Közösségi wikid. Tegyél hozzá bármilyen nyelven!"
+    }
+  ],
+  "components.communityHero.Wiki.title": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "components.communityHero.Youtube.text": [
+    {
+      "type": 0,
+      "value": "Iratkozz fel a heti AMAs, ErgoPulse és még sok más videóra!"
+    }
+  ],
+  "components.communityHero.Youtube.title": [
+    {
+      "type": 0,
+      "value": "Youtube"
+    }
+  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
       "value": "KÖZEMBEREK PÉNZÜGYE"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Ökoszisztéma"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Együttműködési oldalt"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Az Ergo egy decentralizált, közösségalapú platform. "
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Csatlakozz hozzánk a közösségi oldalakon, és szerezz részt a fejlesztésben. További információkért látogasd meg az "
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApp-ok"
     }
   ],
   "components.discoverErgo.text.1": [
@@ -241,6 +373,30 @@
       "value": "LÁTOGAS EL ERGONAUT.SPACE-RE"
     }
   ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Fedezd fel az Ergot"
+    }
+  ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo kutatás-alapú megközelítést alkalmaz, és stabil, jól tesztelt megoldásokat használ, hogy évekre előre biztosítsa az alap platformot a fejlesztőknek. Az Ergo megoldásainak többsége papír alapú formalizálásban van, amelyeket szakértői körökben rendezett konferenciákon mutatnak be és a közösségben széles körben megvitatnak."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Dokumentumok"
+    }
+  ],
+  "components.ecosystemHero.title": [
+    {
+      "type": 0,
+      "value": "Ökoszisztéma"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -251,6 +407,218 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo Raffle egy támogatási szolgáltatás, amelyet az Ergo platformon építettek, és lehetővé teszi bárki számára, hogy pénzt gyűjtsön egy projekt számára. Ez a projekt közvetlen adományozástól, jótékonysági célú támogatásig, akadémiai vagy üzleti tervig terjedhet, vagy bármire, amivel meg tudja győzni az embereket, hogy részt vegyenek keményen megkeresett ERG-jük elengedésében! Az Raffle befejezése után egy lottóhúzás kerül sor, és egy szerencsés résztvevő nyer egy meghatározott százalékot az Raffle összegéből, mint \"raffle jutalom\"."
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
+    }
+  ],
+  "components.ergofoundation.list1": [
+    {
+      "type": 0,
+      "value": "Az Ergo Platform protokolljának "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "nem-bontó fejlesztése"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " elősegítése;"
+    }
+  ],
+  "components.ergofoundation.list2": [
+    {
+      "type": 0,
+      "value": "Az Ergo Platform és a "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "született tokenje"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " (ERG) széles körű elfogadásának és használatának nyilvánosságra hozatala;"
+    }
+  ],
+  "components.ergofoundation.list3": [
+    {
+      "type": 0,
+      "value": "Az Ergo Platform "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "ökoszisztéma"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": "jának fejlesztése;"
+    }
+  ],
+  "components.ergofoundation.list4": [
+    {
+      "type": 0,
+      "value": "Az Ergo Platform és a blokklánc-technológia "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "társadalmi célra történő"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " terjesztésének elősegítése;"
+    }
+  ],
+  "components.ergofoundation.list5": [
+    {
+      "type": 0,
+      "value": "Az "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "igazán decentralizált infrastruktúra"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " fenntartása, és;"
+    }
+  ],
+  "components.ergofoundation.list6": [
+    {
+      "type": 0,
+      "value": "Az "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "adatvédelem"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " támogatása, mint az emberi jogok alapvető joga."
+    }
+  ],
+  "components.ergofoundation.title": [
+    {
+      "type": 0,
+      "value": "Az "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Ergo Alapítvány"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " közösségalapította entitás, amely az alábbiakra összpontosít"
+    }
+  ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Elérhető a népszerű központosított és decentralizált tőzsdéken."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Nyilatkozat: A tőzsdék nagyon változó mértékben biztosítanak biztonságot, védelmet, adatvédelmet és kontrollt a vagyon és az információ felett. Nagyon ajánlott, hogy vigyázzon saját vagyonára, és az itt felsorolt pénztárcaválasztások egyikét használja."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "ERGO VÁSÁRLÁSA, ELADÁSA ÉS KERESKEDELMÉNEK LEHETŐSÉGEI"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Tőzsdék"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo Explorer segítségével egyszerűen figyelemmel kísérheti az összes tranzakciót, amely az Ergo hálózaton történik. Vagy nézze meg a közösség által összeállított metrikákat az ergo.watch oldalon."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Felfedezés"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "MERÜLJÖN EL AZ ERGO TRANZAKCIÓK VILÁGÁBAN"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "BÁRMILYEN KÉRDÉSE VAN?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "Az egyik leggyakrabban feltett kérdéseket összegyűjtöttük itt."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "GYIK"
     }
   ],
   "components.faq.text.2": [
@@ -273,6 +641,42 @@
       "value": "ERGO RAFFLE FELFEDEZÉSE"
     }
   ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Tőzsdék"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Az Autolykos egy ASIC rezisztens és igazságosan bányászható Proof-of-Work algoritmus, amely barátságos az általános GPU-k számára."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Bányászd Ki"
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo platformján egy gazdag ökoszisztéma fejlődik. Legyél fejlesztő, bányász, vagy befektető - nálunk megtalálod, amit keresel."
+    }
+  ],
+  "components.getErg.heroTitle": [
+    {
+      "type": 0,
+      "value": "ELLENÁLLHATATLAN DEFI"
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "Szerezd be az ERG-t"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -289,6 +693,116 @@
     {
       "type": 0,
       "value": "VEDD FEL VELÜNK A KAPCSOLATOT"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "Általában a közösség számára oktató jellegű dolgok is bónuszra jogosulnak, még akkor is, ha nincsenek kifejezetten felsorolva. Olyan projektekre keresünk finanszírozást, amelyek az ökoszisztéma alapjainak kiépítésére összpontosítanak. Azonban a leggyorsabb módja a finanszírozáshoz, ha elindít egy Raffle-t."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Támogatások és jutalmak"
+    }
+  ],
+  "components.hallOfFame.description1": [
+    {
+      "type": 0,
+      "value": "Az Ergót olyan csapat alapította, akiknek szilárd háttere van a kriptovaluták és blokklánc-keretrendszerek központi fejlesztésében, beleértve az NXT-t, a Scorex-et, a Cardano-t és a Waves-t. Az alábbiakban rövid életrajzok találhatók az ERGO csapat néhány alapvető tagjához, valamint a sok más fejlesztőhöz és közösségi taghoz, akik közül néhány névtelen."
+    }
+  ],
+  "components.hallOfFame.description2": [
+    {
+      "type": 0,
+      "value": "Az Ergo gyökerei az emberekben vannak, és a legtöbb alapvető csapattag (és még az alapítványtagok) is közösségi tagokként kezdtek. Az oldal alján rövid leírás és információ található az Ergo Alapítványról."
+    }
+  ],
+  "components.hallOfFame.tab1": [
+    {
+      "type": 0,
+      "value": "ALAPVETŐ"
+    }
+  ],
+  "components.hallOfFame.tab2": [
+    {
+      "type": 0,
+      "value": "KÖZÖSSÉG"
+    }
+  ],
+  "components.hallOfFame.tab3": [
+    {
+      "type": 0,
+      "value": "ALAPÍTVÁNY"
+    }
+  ],
+  "components.hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hírességek Csarnoka"
+    }
+  ],
+  "components.highlights.slide.1.quote": [
+    {
+      "type": 0,
+      "value": "95.57% "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": "Nyilvános Allokáció"
+    }
+  ],
+  "components.highlights.slide.1.text": [
+    {
+      "type": 0,
+      "value": "Amikor az Ergo 2019-ben indult, nem volt kezdeti érme kibocsátás, előbányászás vagy érmeelosztás sem a csapat tagjai vagy befektetők között. Egy igazán tisztességes indítás 4,43% -os allokációval az ökoszisztéma fejlesztésére. Ez más okos szerződés platformokon egyedülálló."
+    }
+  ],
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "Egy Igazságos Kezdet"
+    }
+  ],
+  "components.highlights.slide.2.quote": [
+    {
+      "type": 0,
+      "value": "IGAZI P2P"
+    }
+  ],
+  "components.highlights.slide.2.text": [
+    {
+      "type": 0,
+      "value": "Az Ergo lehetővé teszi az innovatívabb, célzott megvalósításokat, amelyeket a hagyományos bankok nem tudnak biztosítani. Az Ergo erős eszközöket kínál, mint az okos szerződésekkel vezérelt mikrohitel és helyi cserekereskedelmi rendszerek (LETS)."
+    }
+  ],
+  "components.highlights.slide.2.title": [
+    {
+      "type": 0,
+      "value": "Alternatív Gazdaság"
+    }
+  ],
+  "components.highlights.slide.3.quote": [
+    {
+      "type": 0,
+      "value": "Σ-Protokollok"
+    }
+  ],
+  "components.highlights.slide.3.text": [
+    {
+      "type": 0,
+      "value": "A magánélet védelme az autonómia védelmének kulcsa. A magánélet lehetőséget ad a határok és korlátok megteremtésére, amelyek biztonságos teret biztosítanak az egyén számára. Mindenkinek saját határait és korlátait kell meghatároznia. Ez új pénzügyi interakciós modelleket tesz lehetővé, amelyeket biztonságos és gazdag script nyelv, az ErgoScript, és rugalmas és erős Zero-Knowledge bizonyítékok támasztanak alá."
+    }
+  ],
+  "components.highlights.slide.3.title": [
+    {
+      "type": 0,
+      "value": "Opcionális Magánélet"
     }
   ],
   "components.highlights.title": [
@@ -339,6 +853,96 @@
       "value": "TRANZAKCIÓK NAPONTA"
     }
   ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Kezdje az alapoknál. Mi az Ergo? Mit lehet rajta csinálni?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Tudj meg többet"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOKUMENTÁCIÓ"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "BÁNYÁSZATI MEDENCE STADISZTIKA"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "BÁNYÁSZATI BLOG BEJEGYZÉSEK"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Jelenlegi blokkjutalom"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Aktuális ár"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Az Autolykos az ASIC-rezisztens memóriaigényes Proof of Work (PoW) algoritmus, amely GPU-k számára optimalizált."
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Hálózati hash érték"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Napi Bevétel"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Bányászat Kalkulátor"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Bányászok"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Bányászmedencék"
+    }
+  ],
   "components.mining.text.1": [
     {
       "type": 0,
@@ -357,10 +961,322 @@
       "value": "Kezdésképpen, csekkold a közösség-készítette Bányász Kézikönyvet, vagy csatlakozz a bányász társalgó közösségekbe"
     }
   ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Bányászat"
+    }
+  ],
+  "components.news.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "components.news.latest": [
+    {
+      "type": 0,
+      "value": "legfrissebb hírek"
+    }
+  ],
+  "components.news.title": [
+    {
+      "type": 0,
+      "value": "Hírek"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "KEDVENCINK"
+    }
+  ],
+  "components.ourmission.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo Alapítvány elkötelezett az Ergo Platform protokoll organikus és nem bontó fejlesztése mellett."
+    }
+  ],
+  "components.ourmission.emissionAndTokenomics": [
+    {
+      "type": 0,
+      "value": "EMISSZIÓ ÉS TOKENOMICS"
+    }
+  ],
+  "components.ourmission.ergofoundation": [
+    {
+      "type": 0,
+      "value": "AZ ERGO ALAPÍTVÁNY"
+    }
+  ],
+  "components.ourmission.reachus.twitter": [
+    {
+      "type": 0,
+      "value": "KAPCSOLATFELVÉTEL TWITTEREN"
+    }
+  ],
+  "components.ourmission.subdescription": [
+    {
+      "type": 0,
+      "value": "Az Ergo Alapítvány elkötelezett amellett, hogy erőfeszítéseket tegyen annak érdekében, hogy a lehető legkevésbé engedékeny engedély alatt, nyílt forráskódú módon maximalizálja az értékes ökoszisztéma-fejlesztések számát."
+    }
+  ],
+  "components.ourmission.title": [
+    {
+      "type": 0,
+      "value": "Missziónk"
+    }
+  ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Partnerek"
+    }
+  ],
+  "components.roadmap.coinmarketcal": [
+    {
+      "type": 0,
+      "value": "TÖBB MEGTEKINTÉSE A COINMARKETCAL OLDALON"
+    }
+  ],
+  "components.roadmap.description": [
+    {
+      "type": 0,
+      "value": "Kérjük, vegye figyelembe, hogy az Ergo egy platform. Az alább felsorolt projektek közül soknak nincs hivatalos kapcsolata az Ergo Alapítvánnyal vagy egymással."
+    }
+  ],
+  "components.roadmap.section1.title": [
+    {
+      "type": 0,
+      "value": "EDDIG"
+    }
+  ],
+  "components.roadmap.section2.title": [
+    {
+      "type": 0,
+      "value": "TESZTELÉS ALATT"
+    }
+  ],
+  "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "2023 ÉS TÚL"
+    }
+  ],
   "components.roadmap.title": [
     {
       "type": 0,
       "value": "Ütemterv"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo Node az Ergo fejlesztésének bejáratát jelenti, és lehetővé teszi az Ön kommunikációját a blokklánccal."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Szoftver"
+    }
+  ],
+  "components.uniqueErgo.card1.button": [
+    {
+      "type": 0,
+      "value": "FELTÁRKOZÁS"
+    }
+  ],
+  "components.uniqueErgo.card1.text": [
+    {
+      "type": 0,
+      "value": "Az Ergo tíz évnyi blokklánc-fejlesztésre támaszkodik, amely a kipróbált és tesztelt elveket kiegészíti a kriptográfiára, a konszenzusmodellekre és a digitális valutákra vonatkozó legjobb, szakértői áttekintéseken alapuló kutatási eredményekkel. Szilárd blokklánc-alapokkal kezdünk és új, erős kriptográfiát helyezünk be az alapokba."
+    }
+  ],
+  "components.uniqueErgo.card1.title": [
+    {
+      "type": 0,
+      "value": "KUTATÁSOKRA ÉPÜLŐ ÉS A VALÓ VILÁGRA ÖSSZEPONTOSÍTÓ"
+    }
+  ],
+  "components.uniqueErgo.card2.button": [
+    {
+      "type": 0,
+      "value": "FELTÁRKOZÁS"
+    }
+  ],
+  "components.uniqueErgo.card2.text": [
+    {
+      "type": 0,
+      "value": "Az Ergo kiváló támogatást nyújt a valós világbeli pénzügyi megállapodásokhoz. Az Ergo sokoldalú dApp-okat támogathat, amelyek kiszámíthatóan futnak ismert költségekkel, és nem jelentenek semmilyen korlátlan funkció veszélyét. Az Ergo okos szerződései lehetővé teszik számunkra, hogy széles körű feladatokat hajtsunk végre, és Turing teljesek lehetnek, de mindig előre tudjuk, hogy mennyibe fog kerülni a kód és sikeresen fog-e futni."
+    }
+  ],
+  "components.uniqueErgo.card2.title": [
+    {
+      "type": 0,
+      "value": "ERŐTELJES ÉS BIZTONSÁGOS"
+    }
+  ],
+  "components.uniqueErgo.card3.button": [
+    {
+      "type": 0,
+      "value": "FEDÉLZETRE LÉPÉS"
+    }
+  ],
+  "components.uniqueErgo.card3.text": [
+    {
+      "type": 0,
+      "value": "A Sigma Protokollok (Σ-Protokollok) az Ergo okos szerződéseinek alapja. Lehetővé teszik a hatékony zéró ismeretű protokollok osztályát, amelyek lehetővé teszik számunkra, hogy olyan összetett feladatokat hajtsunk végre, amelyek egyébként lehetetlenek, kockázatosak vagy drágák lennének. Üdvözöljük az ön-önrendelkező alkalmazásszintű adatvédelmet: bizalmatlan szkriptek, amelyeket keverőkhez vagy más funkcionalitáshoz lehet használni, nélkülözve bármilyen harmadik felet."
+    }
+  ],
+  "components.uniqueErgo.card3.title": [
+    {
+      "type": 0,
+      "value": "INTELLIGENS ÉS EGYSZERŰ"
+    }
+  ],
+  "components.uniqueErgo.card4.button": [
+    {
+      "type": 0,
+      "value": "FEDÉLZETRE LÉPÉS"
+    }
+  ],
+  "components.uniqueErgo.card4.text": [
+    {
+      "type": 0,
+      "value": "Az átlagos felhasználók, akik nem futtatnak teljes csomópontot, élvezhetik ugyanazokat a biztonsági előnyöket, mint az bányászok. A Non-Interactive Proofs of Proof-of-Work (NIPOPOWS) lehetővé teszi, hogy teljes bizalommal végezzünk és ellenőrizzük a tranzakciókat anélkül, hogy szükségünk lenne a teljes blokklánc letöltéséhez szükséges tárolásra, sávszélességre és időre. Már 1 MB adat is elegendő, ami azt jelenti, hogy bármilyen eszköz használható."
+    }
+  ],
+  "components.uniqueErgo.card4.title": [
+    {
+      "type": 0,
+      "value": "BIZTONSÁGOS ÉS HOZZÁFÉRHETŐ"
+    }
+  ],
+  "components.uniqueErgo.title": [
+    {
+      "type": 0,
+      "value": "MI TESZI AZ ERGO-T EGYEDI"
+    }
+  ],
+  "components.usingErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Elérhető a népszerű központi és decentralizált tőzsdéken."
+    }
+  ],
+  "components.usingErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Egyszerű és biztonságos nem-befektetett pénztárcák az ERG biztonságos tárolásához."
+    }
+  ],
+  "components.usingErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Pénztárca"
+    }
+  ],
+  "components.usingErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Használd az ERG-t ma a növekvő ökoszisztémánkban."
+    }
+  ],
+  "components.usingErg.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo tetején virágzó gazdag ökoszisztéma van kialakulóban. Legyen szó fejlesztőről, bányászról vagy befektetőről, mi segítünk neked."
+    }
+  ],
+  "components.usingErg.subtitle": [
+    {
+      "type": 0,
+      "value": "FOLYAMATOSAN BŐVÜLŐ DEFI"
+    }
+  ],
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "SZEREZD BE AZ ERGO-T"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "VÁLASSZ AZ ALÁBBI KÖZÜL"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Hideg tárolás"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Funkció"
+    }
+  ],
+  "components.wallets.hotStorageHeader": [
+    {
+      "type": 0,
+      "value": "Meleg tárolás"
+    }
+  ],
+  "components.wallets.mobileAppHeader": [
+    {
+      "type": 0,
+      "value": "Mobilalkalmazás"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "BEÁLLÍTÁSI ÚTMUTATÓK"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Az online pénztárcák segítenek megőrizni digitális pénzed biztonságát, privátját és irányításod alatt tartani."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Felhívjuk figyelmedet, hogy a pénztárcák nem az Ergo Foundation által támogatott fejlesztések, és adataid védelme a szolgáltatók felelőssége. Az itt található információkat pusztán tájékoztató jelleggel közöljük, és nem minősülnek ajánlásnak."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Pénztárcák"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Pénztárcák"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "Az ergonaut.space egy közösségi által létrehozott wiki oldal, amely rengeteg információt tartalmaz az Ergo blokklánc műszaki részleteiről, amelyeket nem műszaki személyek is egyszerűen megérthetnek. Itt számos útmutatót, oktatóanyagot és felhasználók által beküldött tartalmat találhat. Hozzon létre egy fiókot, és kezdjen hozzájárulni Ön is!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "Az ergonaut.space az Ergo blokklánc közösség által létrehozott wiki oldala, amelyben az Ergo blokklánc műszaki részletei egyszerűen érthető módon vannak leírva."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
     }
   ],
   "footer.blog.title": [
@@ -619,12 +1535,6 @@
     {
       "type": 0,
       "value": "Mobil tárcák"
-    }
-  ],
-  "pages.privacyPolicy.title": [
-    {
-      "type": 0,
-      "value": "Adatvédelmi nyilatkozat"
     }
   ]
 }

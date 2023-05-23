@@ -43,8 +43,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     switch (shortLocale) {
       case 'en':
         return English;
-      case 'es':
-        return Spanish;
+      // case 'es':
+      //  return Spanish;
       case 'de':
         return German;
       // case "fr":
@@ -55,8 +55,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         return Italian;
       // case "tr":
       //   return Turkish
-      case 'pt':
-        return Portuguese;
+      // case 'pt':
+      //  return Portuguese;
       case 'hu':
         return Hungarian;
       case 'cn':

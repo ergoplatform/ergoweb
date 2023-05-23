@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 type Props = {
@@ -16,8 +16,11 @@ export default function DApps(props: Props) {
     <div id="DApps" className="max-w-[1300px] mx-auto p-4 relative -mt-60 lg:-mt-[600px] z-10">
       <div className="lg:inline-flex">
         <h1>
-          <b>DApps</b>
+          <b>
+            <FormattedMessage defaultMessage="DApps" id="components.dApps.heading" />
+          </b>
         </h1>
+
         <div className="-ml-4 mt-10 lg:my-auto lg:ml-8">
           <Button
             text={button1Text}

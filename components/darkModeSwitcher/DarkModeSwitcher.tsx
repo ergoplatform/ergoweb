@@ -15,7 +15,7 @@ export default function DarkModeSwitch() {
     } else {
       return setTheme('dark');
     }
-  }, []);
+  }, [setTheme]);
 
   const toggleSwitch = () => setTheme(theme === 'light' ? 'dark' : 'light');
 

@@ -90,10 +90,9 @@ export default function Post(props: Props) {
                 </div>
               </div>
             </div>
-
             <div className="flex flex-row justify-center md:mx-32">
               {hasImage == true ? (
-                <img src={imageUrl} height="100%" width="100%" className="md:rounded-xl" alt="" />
+                <Image src={imageUrl} height="100%" width="100%" className="md:rounded-xl" alt="" />
               ) : (
                 ''
               )}

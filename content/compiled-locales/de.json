@@ -66,7 +66,7 @@
       "children": [
         {
           "type": 0,
-          "value": "jede*r"
+          "value": "jeder"
         }
       ],
       "type": 8,
@@ -229,10 +229,142 @@
       "value": "Die Zukunft von Proof of Work"
     }
   ],
+  "components.communityHero.Discord.text": [
+    {
+      "type": 0,
+      "value": "Treffen Sie uns auf Discord!"
+    }
+  ],
+  "components.communityHero.Discord.title": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.communityHero.Discourse.text": [
+    {
+      "type": 0,
+      "value": "Beteiligen Sie sich an der Diskussion im Ergo-Forum."
+    }
+  ],
+  "components.communityHero.Discourse.title": [
+    {
+      "type": 0,
+      "value": "Forum"
+    }
+  ],
+  "components.communityHero.Github.text": [
+    {
+      "type": 0,
+      "value": "Reden ist billig, hier ist der Code. 100% Open-Source."
+    }
+  ],
+  "components.communityHero.Github.title": [
+    {
+      "type": 0,
+      "value": "Github"
+    }
+  ],
+  "components.communityHero.Reddit.text": [
+    {
+      "type": 0,
+      "value": "Abonnieren Sie unsere Subreddits."
+    }
+  ],
+  "components.communityHero.Reddit.title": [
+    {
+      "type": 0,
+      "value": "Reddit"
+    }
+  ],
+  "components.communityHero.Telegram.text": [
+    {
+      "type": 0,
+      "value": "Kommen Sie auf Telegramm mit uns plaudern."
+    }
+  ],
+  "components.communityHero.Telegram.title": [
+    {
+      "type": 0,
+      "value": "Telegramm"
+    }
+  ],
+  "components.communityHero.Twitter.text": [
+    {
+      "type": 0,
+      "value": "Folgen Sie uns auf Twitter."
+    }
+  ],
+  "components.communityHero.Twitter.title": [
+    {
+      "type": 0,
+      "value": "Twitter"
+    }
+  ],
+  "components.communityHero.Wiki.text": [
+    {
+      "type": 0,
+      "value": "Ihr Community-Wiki. Tragen Sie in jeder Sprache bei!"
+    }
+  ],
+  "components.communityHero.Wiki.title": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "components.communityHero.Youtube.text": [
+    {
+      "type": 0,
+      "value": "Abonnieren Sie für wöchentliche AMAs, ErgoPulse und mehr!"
+    }
+  ],
+  "components.communityHero.Youtube.title": [
+    {
+      "type": 0,
+      "value": "Youtube"
+    }
+  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
       "value": "GRASSROOTS FINANZEN AUS DER BASIS"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Ökosystem"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Mitwirkenden"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo ist eine dezentralisierte Basisplattform, die von ihrer Gemeinschaft angetrieben wird."
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Treffen Sie uns auf sozialen Medien, um sich zu engagieren. Schauen Sie sich die"
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": "Seite für weitere Informationen an."
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
     }
   ],
   "components.discoverErgo.text.1": [
@@ -277,6 +409,18 @@
       "value": "BESUCH ERGONAUT.SPACE"
     }
   ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo verfolgt einen forschungsbasierten Ansatz und verwendet stabile, gut getestete Lösungen, um eine robuste Plattform für Entwickler zu bieten, auf der sie jahrelang aufbauen können. Die meisten Ergo-Lösungen sind in Papieren formalisiert, die auf Peer-Reviewed-Konferenzen vorgestellt wurden und in der Community ausgiebig diskutiert wurden."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Dokumente"
+    }
+  ],
   "components.ecosystemHero.title": [
     {
       "type": 0,
@@ -293,6 +437,18 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle ist ein auf der Ergo-Plattform aufgebautes Crowdfunding-Service, das es jedem ermöglicht, Geld für ein Projekt zu sammeln. Dieses Projekt kann von einer direkten Spende an eine Wohltätigkeitsorganisation, einen akademischen oder Geschäftsplan oder alles Mögliche reichen, für das Sie die Menschen überzeugen können, ihre hart verdienten ERG aufzugeben! Als zusätzlichen Bonus findet nach Abschluss der Verlosung eine Lotterie statt, und ein glücklicher Teilnehmer gewinnt einen festen Prozentsatz der Verlosung als \"Verlosungsprämie\"."
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
     }
   ],
   "components.ergofoundation.list1": [
@@ -431,6 +587,66 @@
       "value": " verfolgt mit Antrieb der Community folgende Ziele"
     }
   ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Erhältlich auf beliebten Börsen und dezentralen Börsen."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Haftungsausschluss: Börsen bieten sehr unterschiedliche Grade an Sicherheit, Datenschutz und Kontrolle über Ihre Gelder und Informationen. Wir empfehlen dringend, dass Sie Ihre eigenen Mittel aufbewahren und eine der oben genannten Brieftaschenoptionen verwenden."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "ERGO KAUFEN, VERKAUFEN UND HANDELN"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Börsen"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "Der Ergo Explorer ist Ihre Schnittstelle zur Blockchain. Beobachten Sie jede Transaktion in Echtzeit. Oder sehen Sie sich von der Community kuratierte Metriken auf ergo.watch an."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Erforschen"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "TAUCHEN SIE IN DAS ERGO-TRANSAKTIONSMEER EIN"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "FRAGEN?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "Wir haben einige der am häufigsten gestellten Fragen zusammengestellt."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "Häufig gestellte Fragen"
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -451,6 +667,66 @@
       "value": "ERKUNDE ERGO RAFFLE"
     }
   ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Erhältlich auf beliebten zentralisierten und dezentralisierten Börsen."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Börsen"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, ein ASIC-resistenter und fairer Proof-of-Work-Algorithmus, der für gängige GPUs geeignet ist."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Abbau"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Einfache und sichere nicht-kustodiale Brieftaschen, um Ihre ERG sicher aufzubewahren."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Brieftaschen"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Setzen Sie Ihr ERG heute in unserem wachsenden Ökosystem ein."
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "Es entsteht ein reiches Ökosystem auf der Basis von Ergo. Egal, ob Sie ein Entwickler, ein Bergmann oder ein Investor sind - wir haben Sie abgedeckt."
+    }
+  ],
+  "components.getErg.heroTitle": [
+    {
+      "type": 0,
+      "value": "UNAUFHALTBARES DEFI"
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "ERG erhalten"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -467,6 +743,18 @@
     {
       "type": 0,
       "value": "KONTAKTIERE UNS"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "Im Allgemeinen unterliegt alles, was für die Gemeinschaft lehrreich ist, einer Prämie, auch wenn es nicht ausdrücklich aufgeführt ist. Wir suchen nach Zuschüssen für Projekte, die sich auf den Aufbau wichtiger Infrastrukturen im Ökosystem konzentrieren. Der schnellste Weg, um eine Finanzierung zu erhalten, besteht jedoch darin, eine Verlosung zu starten."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Zuschüsse und Prämien"
     }
   ],
   "components.hallOfFame.description1": [
@@ -503,6 +791,68 @@
     {
       "type": 0,
       "value": "Hall Of Fame"
+    }
+  ],
+  "components.highlights.slide.1.quote": [
+    {
+      "type": 0,
+      "value": "95,57% "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": "Öffentliche Zuteilung"
+    }
+  ],
+  "components.highlights.slide.1.text": [
+    {
+      "type": 0,
+      "value": "Als Ergo 2019 gestartet wurde, gab es kein Initial Coin Offering, kein Pre-Mine und keine Vorab-Zuteilung von Token an Teammitglieder oder Risikokapitalgeber. Ein wirklich fairer Start mit 4,43% der Mittel für die Entwicklung des Ökosystems. Unübertroffen in jeder anderen Smart-Contract-Plattform."
+    }
+  ],
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "Ein Fairer Start"
+    }
+  ],
+  "components.highlights.slide.2.quote": [
+    {
+      "type": 0,
+      "value": "TRUE P2P"
+    }
+  ],
+  "components.highlights.slide.2.text": [
+    {
+      "type": 0,
+      "value": "Ermöglicht mehr innovative, gezielte Umsetzungen, die herkömmliche Banken nicht erreichen können. Ergo bietet leistungsstarke Tools mit Smart-Contract-basierten Mikrokredit-Einrichtungen und Local Exchange Trading Systems (LETS)."
+    }
+  ],
+  "components.highlights.slide.2.title": [
+    {
+      "type": 0,
+      "value": "Alternative Ökonomie"
+    }
+  ],
+  "components.highlights.slide.3.quote": [
+    {
+      "type": 0,
+      "value": "Σ-Protokolle"
+    }
+  ],
+  "components.highlights.slide.3.text": [
+    {
+      "type": 0,
+      "value": "Datenschutz muss eine Option bleiben, um die Autonomie zu schützen. Privatsphäre bedeutet die Fähigkeit, Barrieren zu schaffen und Grenzen zu errichten, um einen Raum für das Individuum zu schaffen. Es liegt an jedem Einzelnen, welche Grenzen und Barrieren er wählt. Dies ermöglicht neue Modelle der finanziellen Interaktion, unterstützt durch eine sichere und reichhaltige Skriptsprache, ErgoScript, und flexible und leistungsstarke Zero-Knowledge-Beweise."
+    }
+  ],
+  "components.highlights.slide.3.title": [
+    {
+      "type": 0,
+      "value": "Optionale Privatsphäre"
     }
   ],
   "components.highlights.title": [
@@ -553,6 +903,96 @@
       "value": "TRANSAKTIONEN PRO TAG"
     }
   ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Beginnen Sie mit den Grundlagen. Was ist Ergo? Was können Sie auf Ergo tun?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Lernen"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "Dokumentation"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "Mining-Pool-Statistiken"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "Subreddit"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "Mining-Blog-Posts"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Aktuelle Blockbelohnung"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Aktueller Preis"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos ist der zugrunde liegende memory-hard ASIC-resistente Proof of Work (PoW)-Algorithmus, der auf GPUs ausgerichtet ist."
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Netzwerk-Hashrate"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Tägliche Einnahmen"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Mining-Rechner"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Bergleute"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Mining-Pools"
+    }
+  ],
   "components.mining.text.1": [
     {
       "type": 0,
@@ -571,6 +1011,12 @@
       "value": "Um loszulegen, schau ins Mining-Handbuch der Community oder trete den Mining-Diskussionskanälen bei."
     }
   ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Mining"
+    }
+  ],
   "components.news.blog": [
     {
       "type": 0,
@@ -587,6 +1033,12 @@
     {
       "type": 0,
       "value": "News"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "UNSERE FAVORITEN"
     }
   ],
   "components.ourmission.description": [
@@ -625,6 +1077,12 @@
       "value": "Unsere Mission"
     }
   ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Partner"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -652,13 +1110,25 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022 & DANACH"
+      "value": "2023 & DANACH"
     }
   ],
   "components.roadmap.title": [
     {
       "type": 0,
       "value": "Roadmap"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Der Ergo-Knoten ist Ihr Einstieg in die Entwicklung auf Ergo und ermöglicht die Kommunikation mit der Blockchain."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Software"
     }
   ],
   "components.uniqueErgo.card1.button": [
@@ -739,6 +1209,48 @@
       "value": "WAS MACHT ERGO EINZIGARTIG"
     }
   ],
+  "components.usingErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Erhältlich auf beliebten zentralisierten und dezentralisierten Börsen."
+    }
+  ],
+  "components.usingErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Börsen"
+    }
+  ],
+  "components.usingErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, ein ASIC-resistenter und fairer Proof-of-Work-Algorithmus, der für gängige GPUs geeignet ist."
+    }
+  ],
+  "components.usingErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Abbau"
+    }
+  ],
+  "components.usingErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Einfache und sichere nicht-betreute Geldbörsen, um Ihre ERG sicher aufzubewahren."
+    }
+  ],
+  "components.usingErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Brieftaschen"
+    }
+  ],
+  "components.usingErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Nutzen Sie heute Ihre ERG in unserem wachsenden Ökosystem."
+    }
+  ],
   "components.usingErg.description": [
     {
       "type": 0,
@@ -755,6 +1267,84 @@
     {
       "type": 0,
       "value": "HOL DIR ERG"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "WÄHLEN SIE IHRES"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Kaltspeicherung"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Feature"
+    }
+  ],
+  "components.wallets.hotStorageHeader": [
+    {
+      "type": 0,
+      "value": "Heißlagerung"
+    }
+  ],
+  "components.wallets.mobileAppHeader": [
+    {
+      "type": 0,
+      "value": "Mobile App"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "SETUP-ANLEITUNGEN"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Digitale Brieftaschen können dazu beitragen, Ihre digitale Währung sicher, privat und unter Ihrer Kontrolle zu halten."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Beachten Sie, dass Brieftaschen von Drittanbietern unterstützt werden. Wir stellen die unten aufgeführten Informationen nur als Höflichkeit zur Verfügung, um das gesamte Erlebnis mit digitalen Währungen für Sie zu vereinfachen."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Brieftaschen"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Brieftaschen"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space ist unser von der Community betriebenes Wiki! Randvoll mit vielen großartigen Informationen zu den zugrunde liegenden technischen Details der Ergo-Blockchain in einer leicht verständlichen Sprache für nicht-technische Personen. Es gibt auch viele Anleitungen, Tutorials und von Benutzern eingereichte Inhalte. Erstellen Sie ein Konto, um beizutragen!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space ist das Community-Wiki der Ergo-Blockchain, ein Leitfaden, der erklärt, wie man die Ergo-Blockchain verwendet und die zugrunde liegenden technischen Details in einer leicht verständlichen Sprache für nicht-technische Personen übersetzt."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
     }
   ],
   "footer.blog.title": [
@@ -1018,7 +1608,7 @@
   "pages.privacyPolicy.title": [
     {
       "type": 0,
-      "value": "Datenschutzhinweise"
+      "value": "Datenschutzrichtlinie"
     }
   ]
 }

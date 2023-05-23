@@ -1,5 +1,5 @@
 import { useIntl } from 'react-intl';
-import ChangingTheWorld from '../components/ecosystem/ChangingTheWorld';
+import Videocasts from '../components/ecosystem/Videocasts';
 import DApps from '../components/ecosystem/DApps';
 import EcosystemHero from '../components/ecosystem/EcosystemHero';
 import Favorites from '../components/ecosystem/Favorites';
@@ -40,7 +40,7 @@ export default function Ecosystem(props: Props) {
         {props.favorites ? <Favorites favorites={props.favorites} /> : null}
         {props.projects ? <FeaturesAndProjects projects={props.projects} /> : null}
         {props.chagingTheWorldProjects ? (
-          <ChangingTheWorld chagingTheWorldProjects={props.chagingTheWorldProjects} />
+          <Videocasts chagingTheWorldProjects={props.chagingTheWorldProjects} />
         ) : null}
       </Layout>
     </div>

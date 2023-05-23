@@ -83,7 +83,7 @@ export default function UsingErg() {
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
             <FormattedMessage
               defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
-              investor - we’ve got you covered."
+              investor, we have you covered."
               id="components.usingErg.description"
             ></FormattedMessage>
           </p>

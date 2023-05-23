@@ -207,6 +207,42 @@
       "value": "GRASSROOTS FINANCE"
     }
   ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Community"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Contributing"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo is a decentralised grassroots platform powered by its community."
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Join us on socials to get involved, check out the"
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": "page for more information"
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
   "components.discoverErgo.text.1": [
     {
       "type": 0,
@@ -249,6 +285,24 @@
       "value": "VISIT ERGONAUT.SPACE"
     }
   ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Discover Ergo"
+    }
+  ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo takes a research-based approach and uses stable well-tested solutions to provide a robust platform for developers to build on for years to come. Most of Ergo solutions are formalized in papers presented at peer-reviewed conferences and have been widely discussed in the community."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Documents"
+    }
+  ],
   "components.ecosystemHero.title": [
     {
       "type": 0,
@@ -265,6 +319,18 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\"."
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
     }
   ],
   "components.ergofoundation.list1": [
@@ -407,6 +473,66 @@
       "value": " is a community-driven entity focused on"
     }
   ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Available across popular exchanges and decentralized exchanges."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Disclaimer: Exchanges provide highly varying degrees of safety, security, privacy, and control over your funds and information. We highly recommend being custodial of your own funds and using one of the wallet options provided above."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "BUY, SELL AND TRADE ERGO"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Exchanges"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Explore"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "DIVE INTO THE ERGO SEA OF TRANSACTIONS"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "ANY QUESTIONS?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "We’ve compiled some of the most frequently asked questions."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -427,6 +553,66 @@
       "value": "EXPLORE ERGO RAFFLE"
     }
   ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Available across popular centralized and decentralized exchanges."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Exchanges"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, an ASIC resistant & fairly mined Proof-of-Work algorithm friendly to common GPUs."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Mine it"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Simple and secure non-custodial wallets to keep your ERG safe."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Wallets"
+    }
+  ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Put your ERG to use today in our growing ecosystem"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Ecosystem"
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "Get ERG"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -443,6 +629,18 @@
     {
       "type": 0,
       "value": "GET IN TOUCH"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "In general, anything educative for the community is subject to some bounty even if not specifically listed. We are looking to fund grants for projects that focus on building key ecosystem infrastructure. However, the quickest way to get some funding is to start a Raffle."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Grants & Bounties"
     }
   ],
   "components.hallOfFame.description1": [
@@ -529,6 +727,102 @@
       "value": "TRANSACTIONS PER DAY"
     }
   ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Start from the basics. What is Ergo? What can you do on Ergo?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Learn"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOCUMENTATION"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "MINING POOL STATS"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "MINING BLOG POSTS"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Current block reward"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Current price"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+    }
+  ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Your hashrate"
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Network hashrate"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Daily revenue"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Mining Calculator"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Miners"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Mining Pools"
+    }
+  ],
   "components.mining.text.1": [
     {
       "type": 0,
@@ -547,6 +841,12 @@
       "value": "To get started, check out the community-built Mining Handbook, Documentation or join the mining discussion spaces."
     }
   ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Mining"
+    }
+  ],
   "components.news.blog": [
     {
       "type": 0,
@@ -563,6 +863,12 @@
     {
       "type": 0,
       "value": "News"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "OUR FAVORITES"
     }
   ],
   "components.ourmission.description": [
@@ -601,6 +907,12 @@
       "value": "Our Mission"
     }
   ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Partners"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -635,6 +947,18 @@
     {
       "type": 0,
       "value": "Roadmap"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "The Ergo Node is your entry-point to development on Ergo and lets you communicate with the blockchain."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Software"
     }
   ],
   "components.uniqueErgo.card1.button": [
@@ -718,7 +1042,7 @@
   "components.usingErg.description": [
     {
       "type": 0,
-      "value": "There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or investor - we’ve got you covered."
+      "value": "There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or investor, we have you covered."
     }
   ],
   "components.usingErg.subtitle": [
@@ -731,6 +1055,84 @@
     {
       "type": 0,
       "value": "GET ERG"
+    }
+  ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "CHOOSE YOURS"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Cold Storage"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "dApp Connector"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Feature"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "SETUP GUIDES"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Digital wallets can help keep your digital currency safe, private and in your control."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Note that wallets are supported by third parties, we only provide the information below as a courtesy, in order to simplify the overall digital currency experience for you."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Wallets"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Wallets"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space is our community-run wiki! Jam-packed with tons of great information on the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people. Theres also plenty of guides, tutorials, and user-submitted content. Create an account to start contributing!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space is the community wiki of the Ergo blockchain, a guide translating how to use and the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
     }
   ],
   "footer.blog.title": [

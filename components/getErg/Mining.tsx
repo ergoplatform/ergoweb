@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 function FormattedMessageFixed(props: any) {
@@ -6,6 +6,28 @@ function FormattedMessageFixed(props: any) {
 }
 
 export default function Mining() {
+  const intl = useIntl();
+  const button1Text = intl.formatMessage({
+    id: 'components.mining.button1',
+    defaultMessage: 'DOCUMENTATION',
+  });
+  const button2Text = intl.formatMessage({
+    id: 'components.mining.button2',
+    defaultMessage: 'MINING POOL STATS',
+  });
+  const button3Text = intl.formatMessage({
+    id: 'components.mining.button3',
+    defaultMessage: 'DISCORD',
+  });
+  const button4Text = intl.formatMessage({
+    id: 'components.mining.button4',
+    defaultMessage: 'SUBREDDIT',
+  });
+  const button5Text = intl.formatMessage({
+    id: 'components.mining.button5',
+    defaultMessage: 'MINING BLOG POSTS',
+  });
+
   let miningPoolsUrls = [
     {
       text: (
@@ -45,6 +67,12 @@ export default function Mining() {
       text: <FormattedMessageFixed defaultMessage="KRYPTEX" id="components.mining.miningPools.7" />,
       url: 'https://pool.kryptex.com/erg',
     },
+    {
+      text: (
+        <FormattedMessageFixed defaultMessage="COIN-POOL" id="components.mining.miningPools.8" />
+      ),
+      url: 'https://coin-pool.eu',
+    },
   ];
   let minersUrls = [
     {
@@ -72,7 +100,7 @@ export default function Mining() {
   let urlsComponent = (
     <div>
       <h2 className="mt-8 lg:mt-24 font-vinila-extended-light text-[40px] lg:text-[48px] mb-14">
-        Mining Pools
+        <FormattedMessage defaultMessage="Mining Pools" id="components.mining.miningPoolsTitle" />
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {miningPoolsUrls.map((link, i) => (
@@ -91,7 +119,7 @@ export default function Mining() {
         ))}
       </div>
       <h2 className="mt-8 lg:mt-12 font-vinila-extended-light text-[40px] lg:text-[48px]  mb-14">
-        Miners
+        <FormattedMessage defaultMessage="Miners" id="components.mining.minersTitle" />
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {minersUrls.map((link, i) => (
@@ -118,7 +146,9 @@ export default function Mining() {
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 flex flex-col lg:flex-row relative z-10"
     >
       <div className="lg:w-1/2">
-        <h1 className="font-vinila-extended text-bold text-[48px] lg:text-[120px]">Mining</h1>
+        <h1 className="font-vinila-extended text-bold text-[48px] lg:text-[120px]">
+          <FormattedMessage defaultMessage="Mining" id="components.mining.title" />
+        </h1>
         <div className="hidden lg:block">{urlsComponent}</div>
       </div>
       <div className="lg:w-1/2">
@@ -145,7 +175,7 @@ export default function Mining() {
         </p>
         <br />
         <Button
-          text="DOCUMENTATION"
+          text={button1Text}
           url="https://docs.ergoplatform.com/mining/"
           newTab={false}
           underline={true}
@@ -157,7 +187,7 @@ export default function Mining() {
         />
         <br />
         <Button
-          text="MINING POOL STATS"
+          text={button2Text}
           url="https://miningpoolstats.stream/ergo"
           newTab={true}
           underline={true}
@@ -169,7 +199,7 @@ export default function Mining() {
         />
         <br />
         <Button
-          text="DISCORD"
+          text={button3Text}
           url="https://discord.gg/PFYugUgg28"
           newTab={true}
           underline={true}
@@ -181,7 +211,7 @@ export default function Mining() {
         />
         <br />
         <Button
-          text="SUBREDDIT"
+          text={button4Text}
           url="https://www.reddit.com/r/erg_miners/"
           newTab={true}
           underline={true}
@@ -193,7 +223,7 @@ export default function Mining() {
         />
         <br />
         <Button
-          text="MINING BLOG POSTS"
+          text={button5Text}
           url="/category/Mining/"
           newTab={false}
           underline={true}

@@ -270,7 +270,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ecosystem#ChangingTheWorld">
+                <Link href="/ecosystem#Videocasts">
                   <a>
                     <FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" />
                   </a>

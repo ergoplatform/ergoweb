@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 type Props = {
   currentPrice: number;
@@ -26,15 +27,23 @@ export default function MiningCalculator(props: Props) {
       <div className="mining-calculator-bg mx-auto max-w-[1167px] grid gap-14 grid-cols-1 lg:grid-cols-2 py-12 lg:py-24 px-10 lg:px-20">
         <div>
           <h2 className="font-vinila-extended font-bold leading-none mb-6 xs:text-[32px] sm:text-[40px] lg:text-[80px] text-white">
-            Mining Calculator
+            <FormattedMessage
+              defaultMessage="Mining Calculator"
+              id="components.mining.calculator.title"
+            />
           </h2>
           <p className="text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-7 lg:hidden">
-            Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm
-            oriented towards GPUs.
+            <FormattedMessage
+              defaultMessage="Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+              id="components.mining.calculator.description"
+            />
           </p>
           <div className="lg:mb-4">
             <p className="text-[16px] lg:text-[20px] mb-4 lg:my-auto lg:pr-2 text-white">
-              Your hashrate
+              <FormattedMessage
+                defaultMessage="Your hashrate"
+                id="components.mining.calculator.hash"
+              />
             </p>
             <div>
               <div className="relative">
@@ -52,14 +61,17 @@ export default function MiningCalculator(props: Props) {
               </div>
             </div>
           </div>
-          <p className="text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-7 hidden lg:block">
-            Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm
-            oriented towards GPUs.
-          </p>
+          <FormattedMessage
+            defaultMessage="Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
+            id="components.mining.calculator.description"
+          />
         </div>
         <div>
           <p className="mb-6 lg:mb text-[16px] lg:mt-[92px] lg:text-[20px] text-white">
-            Daily revenue
+            <FormattedMessage
+              defaultMessage="Daily revenue"
+              id="components.mining.calculator.rev"
+            />
           </p>
           <p className="text-[32px] lg:text-[40px] text-white">{dailyRevenueERG.toFixed(2)} ERG</p>
           <p className="mb-16 text-[32px] lg:text-[40px] text-white">
@@ -70,7 +82,12 @@ export default function MiningCalculator(props: Props) {
           </p>
           <div className="flex flex-row justify-between">
             <div>
-              <p className="text-white">Current price</p>
+              <p className="text-white">
+                <FormattedMessage
+                  defaultMessage="Current price"
+                  id="components.mining.calculator.currentPrice"
+                />
+              </p>
               <div className="flex flex-col lg:flex-row">
                 <p className="text-white">1 ERG =&nbsp;</p>
                 <p className="text-brand-orange dark:text-brand-orange">
@@ -79,7 +96,12 @@ export default function MiningCalculator(props: Props) {
               </div>
             </div>
             <div>
-              <p className="text-white">Current block reward</p>
+              <p className="text-white">
+                <FormattedMessage
+                  defaultMessage="Current block reward"
+                  id="components.mining.calculator.currentBlockReward"
+                />
+              </p>
               <div className="flex flex-col lg:flex-row">
                 <p className="text-white">{props.currentBlockReward.toFixed(2)} ERG =&nbsp;</p>
                 <p className="text-brand-orange dark:text-brand-orange">
@@ -88,7 +110,12 @@ export default function MiningCalculator(props: Props) {
               </div>
             </div>
             <div>
-              <p className="text-white">Network hashrate</p>
+              <p className="text-white">
+                <FormattedMessage
+                  defaultMessage="Network hashrate"
+                  id="components.mining.calculator.networkHashrate"
+                />
+              </p>
               <div className="flex flex-col lg:flex-row">
                 <p className="text-white">
                   {(props.networkHashrate / 1000000000000).toFixed(2)}&nbsp;

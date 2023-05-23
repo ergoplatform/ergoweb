@@ -201,10 +201,142 @@
       "value": "Il futuro della prova di lavoro"
     }
   ],
+  "components.communityHero.Discord.text": [
+    {
+      "type": 0,
+      "value": "Unisciti a noi su Discord!"
+    }
+  ],
+  "components.communityHero.Discord.title": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "components.communityHero.Discourse.text": [
+    {
+      "type": 0,
+      "value": "Unisciti alla discussione sul forum di Ergo."
+    }
+  ],
+  "components.communityHero.Discourse.title": [
+    {
+      "type": 0,
+      "value": "Forum"
+    }
+  ],
+  "components.communityHero.Github.text": [
+    {
+      "type": 0,
+      "value": "Parlare è facile, ecco il codice. 100% Open-Source."
+    }
+  ],
+  "components.communityHero.Github.title": [
+    {
+      "type": 0,
+      "value": "Github"
+    }
+  ],
+  "components.communityHero.Reddit.text": [
+    {
+      "type": 0,
+      "value": "Iscriviti ai nostri subreddit."
+    }
+  ],
+  "components.communityHero.Reddit.title": [
+    {
+      "type": 0,
+      "value": "Reddit"
+    }
+  ],
+  "components.communityHero.Telegram.text": [
+    {
+      "type": 0,
+      "value": "Vieni a parlare con noi su Telegram."
+    }
+  ],
+  "components.communityHero.Telegram.title": [
+    {
+      "type": 0,
+      "value": "Telegram"
+    }
+  ],
+  "components.communityHero.Twitter.text": [
+    {
+      "type": 0,
+      "value": "Seguici su Twitter."
+    }
+  ],
+  "components.communityHero.Twitter.title": [
+    {
+      "type": 0,
+      "value": "Twitter"
+    }
+  ],
+  "components.communityHero.Wiki.text": [
+    {
+      "type": 0,
+      "value": "Il tuo wiki della comunità. Contribuisci in qualsiasi lingua!"
+    }
+  ],
+  "components.communityHero.Wiki.title": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "components.communityHero.Youtube.text": [
+    {
+      "type": 0,
+      "value": "Iscriviti per le AMAs settimanali, ErgoPulse e altro ancora!"
+    }
+  ],
+  "components.communityHero.Youtube.title": [
+    {
+      "type": 0,
+      "value": "Youtube"
+    }
+  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
       "value": "GRASSROOTS FINANCE"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Ecosistema"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Contributing"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo è una piattaforma decentralizzata nata dalla base della sua comunità. "
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Unisciti a noi sui social per partecipare, dai un'occhiata alla pagina "
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": " per maggiori informazioni"
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
     }
   ],
   "components.discoverErgo.text.1": [
@@ -249,6 +381,18 @@
       "value": "VISITA ERGONAUT.SPACE"
     }
   ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo adotta un approccio basato sulla ricerca e utilizza soluzioni stabili e ben testate per fornire una piattaforma robusta su cui i developer possono costruire per anni. La maggior parte delle soluzioni di Ergo sono formalizzate in articoli presentati a conferenze peer-reviewed e sono state ampiamente discusse nella comunità."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Documenti"
+    }
+  ],
   "components.ecosystemHero.title": [
     {
       "type": 0,
@@ -265,6 +409,18 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle è un servizio di crowdfunding costruito sulla piattaforma Ergo che consente a chiunque di raccogliere fondi per un progetto. Questo progetto può variare da una donazione diretta a un ente di beneficenza, un piano accademico o commerciale, o qualsiasi altra cosa per cui puoi convincere le persone a cedere i loro ERG guadagnati duramente! Come bonus aggiuntivo, dopo la conclusione della Raffle, viene effettuata una lotteria e un fortunato partecipante vince una percentuale predefinita della Raffle come 'premio della raffle'"
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Raffle"
     }
   ],
   "components.ergofoundation.list1": [
@@ -393,6 +549,66 @@
       "value": " è un'entità guidata e incentrata sulla comunità"
     }
   ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Disponibile su popolari exchange centralizzati e decentralizzati."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Avvertenza: gli scambi forniscono gradi di sicurezza, privacy e controllo dei tuoi fondi e delle tue informazioni altamente variabili. Consigliamo vivamente di custodire i propri fondi e utilizzare una delle opzioni di portafoglio sopra fornite."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "COMPRA, VENDI E SCAMBIA ERGO"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Exchange"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "L'Esploratore Ergo è la tua interfaccia con la blockchain. Guarda ogni transazione effettuata in tempo reale. Oppure, visualizza le metriche curate dalla comunità su ergo.watch."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Esplora"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "IMMERGITI NEL MARE DI TRANSAZIONI DI ERGO"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "QUALSIASI DOMANDA?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "Abbiamo raccolto alcune delle domande più frequenti."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -413,6 +629,66 @@
       "value": "ESPLORA ERGO RAFFLE"
     }
   ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Disponibile su popolari scambi centralizzati e decentralizzati."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Scambi"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, un algoritmo di Proof-of-Work resistente alle ASIC e equamente estratto, amichevole alle GPU comuni."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Mineralo"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Portafogli non custoditi semplici e sicuri per mantenere al sicuro i tuoi ERG."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Portafogli"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Metti i tuoi ERG in uso oggi stesso nel nostro crescente ecosistema."
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "C'è un ecosistema florido che si sta sviluppando su Ergo. Che tu sia uno sviluppatore, un minatore o un investitore, siamo pronti a soddisfare le tue esigenze."
+    }
+  ],
+  "components.getErg.heroTitle": [
+    {
+      "type": 0,
+      "value": "DEFI IMPARABILE"
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "Ottieni ERG"
+    }
+  ],
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
@@ -429,6 +705,18 @@
     {
       "type": 0,
       "value": "CONTATTACI"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "In generale, qualsiasi cosa educativa per la comunità è soggetta ad una ricompensa anche se non elencata specificamente. Cerchiamo di finanziare borse di studio per progetti che si concentrano sulla costruzione di infrastrutture chiave dell'ecosistema. Tuttavia, il modo più veloce per ottenere un finanziamento è di avviare una lotteria."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Borse di studio e incentivi"
     }
   ],
   "components.hallOfFame.description1": [
@@ -465,6 +753,68 @@
     {
       "type": 0,
       "value": "Hall Of Fame"
+    }
+  ],
+  "components.highlights.slide.1.quote": [
+    {
+      "type": 0,
+      "value": "95,57% "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " Allocazione pubblica"
+    }
+  ],
+  "components.highlights.slide.1.text": [
+    {
+      "type": 0,
+      "value": "Quando Ergo è stato lanciato nel 2019, non c'è stata alcuna offerta iniziale di monete, pre-mining o pre-allocazione di token a membri del team o venture capitalist. Un vero e proprio lancio equo con il 4,43% dei fondi allocati allo sviluppo dell'ecosistema. Ineguagliabile in qualsiasi altra piattaforma smart-contract."
+    }
+  ],
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "Un inizio equo"
+    }
+  ],
+  "components.highlights.slide.2.quote": [
+    {
+      "type": 0,
+      "value": "Vero P2P"
+    }
+  ],
+  "components.highlights.slide.2.text": [
+    {
+      "type": 0,
+      "value": "Permette implementazioni più innovative e mirate che la banca tradizionale non può eguagliare. Ergo offre strumenti potenti con strutture di microcredito alimentate da smart contract e Local Exchange Trading Systems (LETS)."
+    }
+  ],
+  "components.highlights.slide.2.title": [
+    {
+      "type": 0,
+      "value": "Economia alternativa"
+    }
+  ],
+  "components.highlights.slide.3.quote": [
+    {
+      "type": 0,
+      "value": "Σ-protocolli"
+    }
+  ],
+  "components.highlights.slide.3.text": [
+    {
+      "type": 0,
+      "value": "La privacy deve rimanere un'opzione per proteggere l'autonomia. La privacy è la capacità di creare barriere e alzare le frontiere per creare uno spazio per l'individuo. Sta a ciascuno decidere quali confini e barriere creare. Ciò consente nuovi modelli di interazione finanziaria, supportati da un linguaggio di scripting sicuro e ricco, ErgoScript e da prove di zero-conoscenza flessibili e potenti."
+    }
+  ],
+  "components.highlights.slide.3.title": [
+    {
+      "type": 0,
+      "value": "Privacy opzionale"
     }
   ],
   "components.highlights.title": [
@@ -515,6 +865,96 @@
       "value": "TRASAZIONI AL GIORNO"
     }
   ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Parti dalle basi. Cos'è Ergo? Cosa puoi fare su Ergo?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Imparare"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOCUMENTAZIONE"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "STATISTICHE DELLA POOL DI MINING"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "POST DEL BLOG DI MINING"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Ricompensa attuale per blocco"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Prezzo attuale"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos è l'algoritmo di Proof of Work (PoW) ASIC-resistant orientato alla memoria resistente ai miner orientato alle GPU."
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Hashrate di rete"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Guadagno giornaliero"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Calcolatore di mining"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Minatori"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Pool di mining"
+    }
+  ],
   "components.mining.text.1": [
     {
       "type": 0,
@@ -533,6 +973,12 @@
       "value": "Per iniziare, dai un'occhiata al Manuale di Mining creato dalla community o unisciti agli spazi di discussione sul mining."
     }
   ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Mining"
+    }
+  ],
   "components.news.blog": [
     {
       "type": 0,
@@ -549,6 +995,12 @@
     {
       "type": 0,
       "value": "Notizie"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "I NOSTRI PREFERITI"
     }
   ],
   "components.ourmission.description": [
@@ -587,6 +1039,12 @@
       "value": "La nostra missione"
     }
   ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Partner"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -614,13 +1072,25 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2022 & OLTRE"
+      "value": "2023 & OLTRE"
     }
   ],
   "components.roadmap.title": [
     {
       "type": 0,
       "value": "Roadmap"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Il nodo Ergo è il tuo punto di ingresso per lo sviluppo su Ergo e ti consente di comunicare con la blockchain."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Software"
     }
   ],
   "components.uniqueErgo.card1.button": [
@@ -701,6 +1171,48 @@
       "value": "COSA RENDE ERGO UNICO"
     }
   ],
+  "components.usingErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Disponibile su popolari scambi centralizzati e decentralizzati."
+    }
+  ],
+  "components.usingErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Scambi"
+    }
+  ],
+  "components.usingErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, un algoritmo di Proof-of-Work resistente alle ASIC e equamente estratto, amichevole alle GPU comuni."
+    }
+  ],
+  "components.usingErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Mineralo"
+    }
+  ],
+  "components.usingErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Portafogli non custoditi semplici e sicuri per mantenere al sicuro i tuoi ERG."
+    }
+  ],
+  "components.usingErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Portafogli"
+    }
+  ],
+  "components.usingErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Metti subito in uso i tuoi ERG nel nostro ecosistema in crescita."
+    }
+  ],
   "components.usingErg.description": [
     {
       "type": 0,
@@ -717,6 +1229,84 @@
     {
       "type": 0,
       "value": "GET ERG"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "SCEGLI LA TUA"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Memorizzazione a freddo"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Caratteristiche"
+    }
+  ],
+  "components.wallets.hotStorageHeader": [
+    {
+      "type": 0,
+      "value": "Memorizzazione a caldo"
+    }
+  ],
+  "components.wallets.mobileAppHeader": [
+    {
+      "type": 0,
+      "value": "App mobile"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "GUIDE DI CONFIGURAZIONE"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "I portafogli digitali possono aiutare a mantenere al sicuro, privata e sotto il tuo controllo la tua valuta digitale."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Si noti che i portafogli sono supportati da terze parti, forniamo le informazioni di seguito solo a titolo di cortesia, al fine di semplificare l'esperienza complessiva della valuta digitale per te."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Portafogli"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Portafogli"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space è il nostro wiki gestito dalla comunità! Pieno di informazioni dettagliate sulla tecnologia sottostante la blockchain Ergo, esposte in un linguaggio facile da capire anche per le persone non tecniche. Inoltre, ci sono molti tutorial, guide e contenuti inviati dagli utenti. Crea un account per cominciare a contribuire!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space è il wiki della comunità della blockchain Ergo, una guida che traduce come utilizzare la blockchain Ergo e la tecnologia sottostante in un linguaggio facile da capire anche per le persone non tecniche."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
     }
   ],
   "footer.blog.title": [

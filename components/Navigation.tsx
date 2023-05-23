@@ -320,7 +320,7 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/ecosystem/#ChangingTheWorld">
+                    <Link href="/ecosystem/#Videocasts">
                       <a>
                         <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
                       </a>

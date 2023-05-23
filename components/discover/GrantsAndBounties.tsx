@@ -1,4 +1,4 @@
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 export default function GrantsAndBounties() {
@@ -19,13 +19,16 @@ export default function GrantsAndBounties() {
   return (
     <div id="GrantsAndBounties" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <h1 className="leading-tight xl:ml-72">
-        <b>Grants & Bounties</b>
+        <FormattedMessage
+          defaultMessage="Grants & Bounties"
+          id="components.grantsAndBounties.heading"
+        />
       </h1>
       <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
-        In general, anything educative for the community is subject to some bounty even if not
-        specifically listed. We are looking to fund grants for projects that focus on building key
-        ecosystem infrastructure. However, the quickest way to get some funding is to start a
-        Raffle.
+        <FormattedMessage
+          defaultMessage="In general, anything educative for the community is subject to some bounty even if not specifically listed. We are looking to fund grants for projects that focus on building key ecosystem infrastructure. However, the quickest way to get some funding is to start a Raffle."
+          id="components.grantsAndBounties.description"
+        />
       </p>
       <div className="flex flex-col xl:flex-row xl:ml-[600px]">
         <div className="-ml-4 mt-10">

@@ -89,10 +89,10 @@ const nextConfig = {
     locales: [
       'default',
       'en',
-      // 'es',
+      //'es',
       'de',
       'it',
-      // 'pt',
+      //'pt',
       'hu',
       'ru',
       'cn',
