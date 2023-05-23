@@ -6,6 +6,7 @@
 .pnp.js
 
 .autodoc
+.vscode/settings.json
 
 # testing
 /coverage
