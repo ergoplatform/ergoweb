@@ -73,6 +73,13 @@ export default function Mining() {
       ),
       url: 'https://coin-pool.eu',
     },
+
+    {
+      text: (
+        <FormattedMessageFixed defaultMessage="OKMINER" id="components.mining.miningPools.9" />
+      ),
+      url: 'https://okminer.com',
+    }
   ];
   let minersUrls = [
     {
