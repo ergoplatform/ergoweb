@@ -96,7 +96,7 @@ const nextConfig = {
       'hu',
       'ru',
       'cn',
-      // 'fr',
+      'id',
       // 'hi',
       // 'tr',
       // 'ro',
