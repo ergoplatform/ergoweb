@@ -1,0 +1,1402 @@
+{
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "INGIN MENJADI MITRA?"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "saya adalah seorang"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "perusahaan"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "BAGAIMANA SAYA DAPAT BERKONTRIBUSI?"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "saya adalah seorang "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "pengembang"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo beroperasi pada model terbuka di mana "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "siapapun diperkenankan untuk berkontribusi."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Kontribusi"
+    }
+  ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "LIHAT SEMUA PROYEK"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "BACA SELENGKAPNYA & TERAPKAN"
+    }
+  ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "PEDOMAN UNTUK KONTRIBUTOR"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "BERGABUNGLAH DI DISCORD KAMI"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "HIBAH & HADIAH"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "MENYELAM KE DALAM ERGO"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "KIRIM"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "Surel"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "Nama / Perusahaan"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Tuliskan saran dan ide Anda, mari kita berdiskusi!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Program pelatihan"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "Terapkan untuk Program Pelatihan Sigmanaut untuk membantu membentuk dan menumbuhkan Ergo."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Mari ciptakan akar rumput keuangan."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanaut"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "LIHAT SEMUA POSTINGAN"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "sorotan"
+    }
+  ],
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "Menambang ERG"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "AUTOLYKOS"
+    }
+  ],
+  "components.autolykos.text": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": "adalah algoritme Proof of Work yang tahan terhadap ASIC serta tahan terhadap memori yang berorientasi pada GPU."
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "Masa Depan Proof of Work"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "AKAR RUMPUT KEUANGAN"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Komunitas"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Berkontribusi"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo adalah platform akar rumput terdesentralisasi yang didukung oleh komunitasnya."
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Bergabunglah dengan kami di media sosial untuk dapat terlibat, lihat"
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": "halaman untuk informasi lebih lanjut"
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo adalah platform kontrak pintar Proof of Work generasi berikutnya yang memungkinkan model interaksi keuangan baru, didukung oleh bahasa skrip yang aman dan kaya yang dibangun dengan bukti Zero-Knowledge (Σ-protocols) yang fleksibel dan kuat."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "BACA DOKUMEN"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "BELAJAR DENGAN DECO"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "BACA MANIFESTO"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "PERIKSA BLOG"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "DAPATKAN PENGATURAN"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
+      "value": "KUNJUNGI ERGONAUT.SPACE"
+    }
+  ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Temukan Ergo"
+    }
+  ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo mengambil pendekatan berbasis penelitian dan menggunakan solusi stabil yang telah teruji dengan baik untuk menyediakan platform yang kuat bagi pengembang untuk dibangun di tahun-tahun mendatang. "
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Dokumen"
+    }
+  ],
+  "components.ecosystemHero.title": [
+    {
+      "type": 0,
+      "value": "Ekosistem"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "PENJELAJAH"
+    }
+  ],
+  "components.ergoExplorer.button2": [
+    {
+      "type": 0,
+      "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle adalah layanan crowdfunding yang dibangun di atas Platform Ergo yang memungkinkan siapa saja mengumpulkan uang untuk sebuah proyek. "
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Undian Ergo"
+    }
+  ],
+  "components.ergofoundation.list1": [
+    {
+      "type": 0,
+      "value": "Mempromosikan "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "pembangunan yang tidak putus-putus "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " protokol Platform Ergo;"
+    }
+  ],
+  "components.ergofoundation.list2": [
+    {
+      "type": 0,
+      "value": "Publikasikan penggunaan pada Platform Ergo dan adopsilah platformnya secara luas"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "token asli"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " (ERG);"
+    }
+  ],
+  "components.ergofoundation.list3": [
+    {
+      "type": 0,
+      "value": "Kembangkan"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "ekosistem"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": "di sekitar Platform Ergo;"
+    }
+  ],
+  "components.ergofoundation.list4": [
+    {
+      "type": 0,
+      "value": "Sebarkan penggunaan Platform Ergo dan teknologi blockchain untuk"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "kebaikan sosial"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ";"
+    }
+  ],
+  "components.ergofoundation.list5": [
+    {
+      "type": 0,
+      "value": "Menegakkan"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "infrastruktur yang benar-benar terdesentralisasi"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ", Dan;"
+    }
+  ],
+  "components.ergofoundation.list6": [
+    {
+      "type": 0,
+      "value": "Mendukung "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "pribadi "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " sebagai hak dasar manusia."
+    }
+  ],
+  "components.ergofoundation.title": [
+    {
+      "type": 0,
+      "value": "Itu "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Yayasan Ergo"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " adalah entitas berbasis komunitas yang berfokus pada"
+    }
+  ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Tersedia di seluruh bursa populer dan bursa terdesentralisasi."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Penafian: Pertukaran memberikan tingkat keselamatan, keamanan, privasi, dan kontrol yang sangat bervariasi atas dana dan informasi Anda. "
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "BELI, JUAL, DAN PERDAGANGKAN ERGO"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Bursa"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer adalah antarmuka Anda dengan blockchain. "
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Mengeksplorasi"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "SELAMILAH LAUTAN TRANSAKSI ERGO"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "ADA PERTANYAAN?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "Kami telah mengumpulkan beberapa pertanyaan yang paling sering diajukan."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "TIDAK BISA MENEMUKAN"
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": "ANDA SEDANG MENCARI?"
+    }
+  ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "JELAJAHI UNDIAN ERGO"
+    }
+  ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Tersedia di seluruh bursa sentralisasi dan desentralisasi yang populer."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Pertukaran"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, tahan ASIC"
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Tambang itu"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Dompet non-penahanan yang sederhana dan aman untuk menjaga keamanan ERG Anda."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Dompet"
+    }
+  ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Manfaatkan ERG Anda hari ini di ekosistem kita yang terus berkembang"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Ekosistem"
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "Ada tunas ekosistem yang kaya di atas Ergo."
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "Dapatkan ERG"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "BERKONTRIBUSI"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "MULAI UNDIAN"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "MASUK DALAM SENTUHAN"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "Secara umum, apa pun yang mendidik bagi Komunitas tunduk pada beberapa karunia meskipun tidak disebutkan secara khusus. "
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Hibah"
+    }
+  ],
+  "components.hallOfFame.description1": [
+    {
+      "type": 0,
+      "value": "Ergo didirikan dengan tim yang memiliki latar belakang yang kuat dalam pengembangan inti dengan cryptocurrency dan kerangka kerja blockchain termasuk NXT, Scorex, Cardano, dan Waves. "
+    }
+  ],
+  "components.hallOfFame.description2": [
+    {
+      "type": 0,
+      "value": "Ergo adalah akar rumput, dan sebagian besar anggota tim inti (dan bahkan anggota yayasan) dimulai sebagai anggota komunitas. "
+    }
+  ],
+  "components.hallOfFame.tab1": [
+    {
+      "type": 0,
+      "value": "CORE"
+    }
+  ],
+  "components.hallOfFame.tab2": [
+    {
+      "type": 0,
+      "value": "KOMUNITAS"
+    }
+  ],
+  "components.hallOfFame.tab3": [
+    {
+      "type": 0,
+      "value": "DASAR"
+    }
+  ],
+  "components.hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Ketenaran"
+    }
+  ],
+  "components.highlights.title": [
+    {
+      "type": 0,
+      "value": "SOROTAN"
+    }
+  ],
+  "components.homeHero.button": [
+    {
+      "type": 0,
+      "value": "MENYELAM KE DALAM"
+    }
+  ],
+  "components.homeHero.text": [
+    {
+      "type": 0,
+      "value": "Ergo adalah platform kontrak cerdas generasi berikutnya yang memastikan kebebasan ekonomi orang biasa melalui alat keuangan yang aman, mudah diakses, dan terdesentralisasi."
+    }
+  ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Menggerakkan Masa Depan Keuangan"
+    }
+  ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "HADIAH BLOK"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "PEREDARAN SUPLAI"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "TINGKAT HASH"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "TRANSAKSI PER HARI"
+    }
+  ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Mulai dari dasar-dasarnya. "
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Mempelajari"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOKUMENTASI"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "STATISTIK KOLAM PERTAMBANGAN"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "PERSELISIHAN"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "POSTINGAN BLOG PERTAMBANGAN"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Hadiah blok saat ini"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Harga saat ini"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos adalah algoritme Proof of Work (PoW) tahan ASIC tahan memori yang berorientasi pada GPU."
+    }
+  ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "hashrate Anda"
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "jaringan Hash"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Pendapatan harian"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Kalkulator Pertambangan"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Penambang"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Kolam Penambangan"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "Penambangan Ergo didasarkan pada Autolykos, algoritme Proof of Work tahan ASIC yang efisien dan cukup diluncurkan. "
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "Selamat datang di masa depan Proof of Work."
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "Untuk memulai, lihat Buku Pegangan Penambangan, Dokumentasi, atau bergabunglah dengan ruang diskusi pertambangan."
+    }
+  ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Pertambangan"
+    }
+  ],
+  "components.news.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "components.news.latest": [
+    {
+      "type": 0,
+      "value": "berita terbaru"
+    }
+  ],
+  "components.news.title": [
+    {
+      "type": 0,
+      "value": "Berita"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "FAVORIT KAMI"
+    }
+  ],
+  "components.ourmission.description": [
+    {
+      "type": 0,
+      "value": "Ergo Foundation berkomitmen untuk pengembangan protokol Platform Ergo yang organik dan tanpa henti."
+    }
+  ],
+  "components.ourmission.emissionAndTokenomics": [
+    {
+      "type": 0,
+      "value": "EMISI DAN TOKENOMI"
+    }
+  ],
+  "components.ourmission.ergofoundation": [
+    {
+      "type": 0,
+      "value": "YAYASAN ERGO"
+    }
+  ],
+  "components.ourmission.reachus.twitter": [
+    {
+      "type": 0,
+      "value": "HUBUNGI KAMI DI TWITTER"
+    }
+  ],
+  "components.ourmission.subdescription": [
+    {
+      "type": 0,
+      "value": "Ergo Foundation berkomitmen untuk melakukan upaya untuk memaksimalkan jumlah pengembangan ekosistem berharga yang dilakukan dengan cara open-source dengan izin yang seminimal mungkin."
+    }
+  ],
+  "components.ourmission.title": [
+    {
+      "type": 0,
+      "value": "Misi kita"
+    }
+  ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Mitra"
+    }
+  ],
+  "components.roadmap.coinmarketcal": [
+    {
+      "type": 0,
+      "value": "LIHAT LEBIH LANJUT DI COINMARKETCAL"
+    }
+  ],
+  "components.roadmap.description": [
+    {
+      "type": 0,
+      "value": "Harap dicatat bahwa Ergo adalah sebuah platform. "
+    }
+  ],
+  "components.roadmap.section1.title": [
+    {
+      "type": 0,
+      "value": "SEJAUH INI"
+    }
+  ],
+  "components.roadmap.section2.title": [
+    {
+      "type": 0,
+      "value": "DALAM PENGUJIAN"
+    }
+  ],
+  "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "2023"
+    }
+  ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Peta jalan"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Ergo Node adalah titik masuk Anda untuk pengembangan di Ergo dan memungkinkan Anda berkomunikasi dengan blockchain."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Perangkat lunak"
+    }
+  ],
+  "components.uniqueErgo.card1.button": [
+    {
+      "type": 0,
+      "value": "MENGEKSPLORASI"
+    }
+  ],
+  "components.uniqueErgo.card1.text": [
+    {
+      "type": 0,
+      "value": "Ergo mengacu pada pengembangan blockchain selama sepuluh tahun, melengkapi prinsip-prinsip yang telah dicoba dan diuji dengan penelitian akademik peer-review terbaik ke dalam kriptografi, model konsensus, dan mata uang digital. "
+    }
+  ],
+  "components.uniqueErgo.card1.title": [
+    {
+      "type": 0,
+      "value": "DIPIMPIN PENELITIAN DAN FOKUS DALAM DUNIA NYATA"
+    }
+  ],
+  "components.uniqueErgo.card2.button": [
+    {
+      "type": 0,
+      "value": "MENGEKSPLORASI"
+    }
+  ],
+  "components.uniqueErgo.card2.text": [
+    {
+      "type": 0,
+      "value": "Ergo memberikan dukungan unggul untuk perjanjian keuangan dunia nyata. "
+    }
+  ],
+  "components.uniqueErgo.card2.title": [
+    {
+      "type": 0,
+      "value": "KUAT DAN AMAN"
+    }
+  ],
+  "components.uniqueErgo.card3.button": [
+    {
+      "type": 0,
+      "value": "MENGEKSPLORASI"
+    }
+  ],
+  "components.uniqueErgo.card3.text": [
+    {
+      "type": 0,
+      "value": "Sigma Protocols (Σ-Protocols) adalah dasar dari smart contract Ergo. "
+    }
+  ],
+  "components.uniqueErgo.card3.title": [
+    {
+      "type": 0,
+      "value": "CERDAS DAN LANGSUNG"
+    }
+  ],
+  "components.uniqueErgo.card4.button": [
+    {
+      "type": 0,
+      "value": "MENGEKSPLORASI"
+    }
+  ],
+  "components.uniqueErgo.card4.text": [
+    {
+      "type": 0,
+      "value": "Pengguna biasa yang tidak menjalankan node penuh harus menikmati manfaat keamanan yang sama seperti penambang. "
+    }
+  ],
+  "components.uniqueErgo.card4.title": [
+    {
+      "type": 0,
+      "value": "AMAN DAN DAPAT DIAKSES"
+    }
+  ],
+  "components.uniqueErgo.title": [
+    {
+      "type": 0,
+      "value": "APA YANG MEMBUAT ERGO UNIK"
+    }
+  ],
+  "components.usingErg.description": [
+    {
+      "type": 0,
+      "value": "Ada tunas ekosistem yang kaya di atas Ergo. "
+    }
+  ],
+  "components.usingErg.subtitle": [
+    {
+      "type": 0,
+      "value": "DEFI YANG TAK TERHENTIKAN"
+    }
+  ],
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "DAPATKAN ERG"
+    }
+  ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "PILIH MILIK ANDA"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Penyimpanan COLD"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "Konektor dApp"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Fitur"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "PANDUAN PENGATURAN"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Dompet digital dapat membantu menjaga mata uang digital Anda tetap aman, pribadi, dan dalam kendali Anda."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa dompet didukung oleh pihak ketiga, kami hanya memberikan informasi di bawah sebagai rasa hormat, untuk menyederhanakan pengalaman mata uang digital secara keseluruhan untuk Anda."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Dompet"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Dompet"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space adalah wiki yang dikelola komunitas kami! "
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space adalah komunitas wiki dari blockchain Ergo, panduan yang menerjemahkan cara menggunakan dan detail teknis yang mendasari blockchain Ergo dalam bahasa yang mudah dipahami untuk orang non-teknis."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "wiki"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Bergabunglah dengan saluran kami"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Sigmanaut"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Berkontribusi untuk Ergo"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "ketenaran"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
+      "value": "Yayasan Ergo"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "KOMUNITAS"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Rilis Perangkat Lunak"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Hibah"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Mengeksplorasi"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Dokumen"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "MENEMUKAN"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Peta jalan"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "wiki"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Ergo Undian"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Videocast"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "EKOSISTEM"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Pertambangan"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Kalkulator Pertambangan"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Dompet"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Pertukaran"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "DAPATKAN ERG"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Hukum"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "BERITA"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Kebijakan pribadi"
+    }
+  ],
+  "footer.weGotIt": [
+    {
+      "type": 0,
+      "value": "Kami mengerti!"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "MENEMUKAN"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "EKOSISTEM"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "KOMUNITAS ERGO"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "DAPATKAN ERG"
+    }
+  ],
+  "navigation.moreContent": [
+    {
+      "type": 0,
+      "value": "Lebih banyak konten?"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "404 halaman tidak ditemukan."
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "Tidak ditemukan"
+    }
+  ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Komunitas"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Temukan"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Ekosistem"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "GetErg"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Rumah"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Hukum"
+    }
+  ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Dompet Seluler"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Kebijakan privasi"
+    }
+  ]
+}
