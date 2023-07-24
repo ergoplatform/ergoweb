@@ -12,6 +12,7 @@ import Portuguese from '../content/compiled-locales/pt.json';
 import Hungarian from '../content/compiled-locales/hu.json';
 import Chinese from '../content/compiled-locales/cn.json';
 import Russia from '../content/compiled-locales/ru.json';
+import Indonesian from '../content/compiled-locales/id.json';
 // import Romanian from "../content/compiled-locales/ro.json";
 // import Slovak from "../content/compiled-locales/sk.json";
 // import Chinese from "../content/compiled-locales/zh.json";
@@ -63,6 +64,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         return Chinese;
       case 'ru':
         return Russia;
+      case 'id':
+        return Indonesian;
       // case "zh":
       //   return Chinese;
       default:
