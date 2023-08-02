@@ -75,11 +75,9 @@ export default function Mining() {
     },
 
     {
-      text: (
-        <FormattedMessageFixed defaultMessage="OKMINER" id="components.mining.miningPools.9" />
-      ),
+      text: <FormattedMessageFixed defaultMessage="OKMINER" id="components.mining.miningPools.9" />,
       url: 'https://okminer.com',
-    }
+    },
   ];
   let minersUrls = [
     {
