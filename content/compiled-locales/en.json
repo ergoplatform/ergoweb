@@ -934,10 +934,16 @@
   "components.roadmap.section2.title": [
     {
       "type": 0,
-      "value": "IN TESTING"
+      "value": "ECOSYSTEM"
     }
   ],
   "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "SOON"
+    }
+  ],
+  "components.roadmap.section4.title": [
     {
       "type": 0,
       "value": "2023 & BEYOND"

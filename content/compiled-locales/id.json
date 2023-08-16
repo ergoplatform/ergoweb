@@ -8,7 +8,7 @@
   "components.ContributeForm.company.title": [
     {
       "type": 0,
-      "value": "saya adalah seorang"
+      "value": "saya adalah seorang "
     },
     {
       "children": [
@@ -52,7 +52,7 @@
       "children": [
         {
           "type": 0,
-          "value": "siapapun diperkenankan untuk berkontribusi."
+          "value": "siapapun dipersilakan untuk berkontribusi."
         }
       ],
       "type": 8,
@@ -62,7 +62,7 @@
   "components.ContributeForm.title": [
     {
       "type": 0,
-      "value": "Kontribusi"
+      "value": "Menyumbang"
     }
   ],
   "components.DApps.seeAllProjects": [
@@ -74,37 +74,37 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "BACA SELENGKAPNYA & TERAPKAN"
+      "value": "BACA SELENGKAPNYA"
     }
   ],
   "components.Sigmanauts.button.buttonContribute": [
     {
       "type": 0,
-      "value": "PEDOMAN UNTUK KONTRIBUTOR"
+      "value": "PEDOMAN KONTRIBUSI"
     }
   ],
   "components.Sigmanauts.button.discord": [
     {
       "type": 0,
-      "value": "BERGABUNGLAH DI DISCORD KAMI"
+      "value": "BERGABUNGLAH DENGAN KAMI DI DISCORD"
     }
   ],
   "components.Sigmanauts.button.grantsAndBounties": [
     {
       "type": 0,
-      "value": "HIBAH & HADIAH"
+      "value": "HIBAH"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "MENYELAM KE DALAM ERGO"
+      "value": "MENYELAM KE ERGO"
     }
   ],
   "components.Sigmanauts.formInput.button": [
     {
       "type": 0,
-      "value": "KIRIM"
+      "value": "MENGIRIM"
     }
   ],
   "components.Sigmanauts.formInput.email": [
@@ -122,7 +122,7 @@
   "components.Sigmanauts.formInput.text": [
     {
       "type": 0,
-      "value": "Tuliskan saran dan ide Anda, mari kita berdiskusi!"
+      "value": "Tuliskan saran dan ide Anda, mari kita bicara!"
     }
   ],
   "components.Sigmanauts.subTitle": [
@@ -134,19 +134,7 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Terapkan untuk Program Pelatihan Sigmanaut untuk membantu membentuk dan menumbuhkan Ergo."
-    },
-    {
-      "type": 1,
-      "value": "br"
-    },
-    {
-      "type": 1,
-      "value": "br"
-    },
-    {
-      "type": 0,
-      "value": " Mari ciptakan akar rumput keuangan."
+      "value": "Terapkan untuk Program Pelatihan Sigmanaut untuk membantu membentuk dan menumbuhkan Ergo. "
     }
   ],
   "components.Sigmanauts.title": [
@@ -164,13 +152,13 @@
   "components.Spotlight.title": [
     {
       "type": 0,
-      "value": "sorotan"
+      "value": "Menyoroti"
     }
   ],
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "Menambang ERG"
+      "value": "ERG TAMBANG"
     }
   ],
   "components.autolykos.header": [
@@ -192,19 +180,19 @@
     },
     {
       "type": 0,
-      "value": "adalah algoritme Proof of Work yang tahan terhadap ASIC serta tahan terhadap memori yang berorientasi pada GPU."
+      "value": " adalah algoritme Proof of Work tahan ASIC tahan memori yang berorientasi pada GPU."
     }
   ],
   "components.autolykos.title": [
     {
       "type": 0,
-      "value": "Masa Depan Proof of Work"
+      "value": "Masa Depan Bukti Kerja"
     }
   ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
-      "value": "AKAR RUMPUT KEUANGAN"
+      "value": "KEUANGAN RUMPUT"
     }
   ],
   "components.communityHero.title": [
@@ -228,7 +216,7 @@
   "components.communitySection.communityHero.text2": [
     {
       "type": 0,
-      "value": "Bergabunglah dengan kami di media sosial untuk dapat terlibat, lihat"
+      "value": "Bergabunglah dengan kami di sosial untuk terlibat, lihat"
     }
   ],
   "components.communitySection.communityHero.text3": [
@@ -264,7 +252,7 @@
   "components.discoverHero.button3": [
     {
       "type": 0,
-      "value": "BACA MANIFESTO"
+      "value": "BACA Manifesto"
     }
   ],
   "components.discoverHero.button4": [
@@ -318,7 +306,7 @@
   "components.ergoExplorer.button2": [
     {
       "type": 0,
-      "value": "ERGO.WATCH"
+      "value": "ERGO.PERHATIKAN"
     }
   ],
   "components.ergoRaffle.description": [
@@ -330,7 +318,7 @@
   "components.ergoRaffle.heading": [
     {
       "type": 0,
-      "value": "Undian Ergo"
+      "value": "Ergo Undian"
     }
   ],
   "components.ergofoundation.list1": [
@@ -356,13 +344,13 @@
   "components.ergofoundation.list2": [
     {
       "type": 0,
-      "value": "Publikasikan penggunaan pada Platform Ergo dan adopsilah platformnya secara luas"
+      "value": "Mempublikasikan adopsi dan penggunaan Platform Ergo dan platformnya secara luas "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "token asli"
+          "value": " token asli "
         }
       ],
       "type": 8,
@@ -376,13 +364,13 @@
   "components.ergofoundation.list3": [
     {
       "type": 0,
-      "value": "Kembangkan"
+      "value": "Mengembangkan "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "ekosistem"
+          "value": "ekosistem "
         }
       ],
       "type": 8,
@@ -390,19 +378,19 @@
     },
     {
       "type": 0,
-      "value": "di sekitar Platform Ergo;"
+      "value": " di sekitar Platform Ergo;"
     }
   ],
   "components.ergofoundation.list4": [
     {
       "type": 0,
-      "value": "Sebarkan penggunaan Platform Ergo dan teknologi blockchain untuk"
+      "value": "Sebarkan penggunaan Platform Ergo dan teknologi blockchain untuk "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "kebaikan sosial"
+          "value": " kebaikan sosial "
         }
       ],
       "type": 8,
@@ -416,7 +404,7 @@
   "components.ergofoundation.list5": [
     {
       "type": 0,
-      "value": "Menegakkan"
+      "value": "Menegakkan "
     },
     {
       "children": [
@@ -488,13 +476,13 @@
   "components.exchanges.heading": [
     {
       "type": 0,
-      "value": "BELI, JUAL, DAN PERDAGANGKAN ERGO"
+      "value": "BELI, JUAL, DAN PERDAGANGAN ERGO"
     }
   ],
   "components.exchanges.subheading": [
     {
       "type": 0,
-      "value": "Bursa"
+      "value": "Pertukaran"
     }
   ],
   "components.explore.description": [
@@ -512,7 +500,7 @@
   "components.explore.subheading": [
     {
       "type": 0,
-      "value": "SELAMILAH LAUTAN TRANSAKSI ERGO"
+      "value": "SELAMI LAUT TRANSAKSI ERGO"
     }
   ],
   "components.faq.anyQuestions": [
@@ -536,7 +524,7 @@
   "components.faq.text.2": [
     {
       "type": 0,
-      "value": "TIDAK BISA MENEMUKAN"
+      "value": "TIDAK BISA MENEMUKAN APA "
     },
     {
       "type": 1,
@@ -544,7 +532,7 @@
     },
     {
       "type": 0,
-      "value": "ANDA SEDANG MENCARI?"
+      "value": " YANG ANDA CARI?"
     }
   ],
   "components.favorites.button1": [
@@ -604,7 +592,7 @@
   "components.getErg.description": [
     {
       "type": 0,
-      "value": "Ada tunas ekosistem yang kaya di atas Ergo."
+      "value": "Ada tunas ekosistem yang kaya di atas Ergo. "
     }
   ],
   "components.getErg.title": [
@@ -628,7 +616,7 @@
   "components.grantsAndBounties.button3": [
     {
       "type": 0,
-      "value": "MASUK DALAM SENTUHAN"
+      "value": "BERHUBUNGAN"
     }
   ],
   "components.grantsAndBounties.description": [
@@ -778,7 +766,7 @@
   "components.mining.calculator.currentPrice": [
     {
       "type": 0,
-      "value": "Harga saat ini"
+      "value": "Harga sekarang"
     }
   ],
   "components.mining.calculator.description": [
@@ -796,7 +784,7 @@
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
-      "value": "jaringan Hash"
+      "value": "Hash jaringan"
     }
   ],
   "components.mining.calculator.rev": [
@@ -898,7 +886,7 @@
   "components.ourmission.subdescription": [
     {
       "type": 0,
-      "value": "Ergo Foundation berkomitmen untuk melakukan upaya untuk memaksimalkan jumlah pengembangan ekosistem berharga yang dilakukan dengan cara open-source dengan izin yang seminimal mungkin."
+      "value": "Ergo Foundation berkomitmen untuk melakukan upaya untuk memaksimalkan jumlah pengembangan ekosistem berharga yang dilakukan dengan cara sumber terbuka dengan izin permisif sesedikit mungkin."
     }
   ],
   "components.ourmission.title": [
@@ -964,7 +952,7 @@
   "components.uniqueErgo.card1.button": [
     {
       "type": 0,
-      "value": "MENGEKSPLORASI"
+      "value": "EKSPLORASI"
     }
   ],
   "components.uniqueErgo.card1.text": [
@@ -976,7 +964,7 @@
   "components.uniqueErgo.card1.title": [
     {
       "type": 0,
-      "value": "DIPIMPIN PENELITIAN DAN FOKUS DALAM DUNIA NYATA"
+      "value": "DIPIMPIN PENELITIAN DAN FOKUS DUNIA NYATA"
     }
   ],
   "components.uniqueErgo.card2.button": [
@@ -1072,7 +1060,7 @@
   "components.wallets.coldStorageHeader": [
     {
       "type": 0,
-      "value": "Penyimpanan COLD"
+      "value": "Penyimpanan Dingin"
     }
   ],
   "components.wallets.dAppConnectorHeader": [
@@ -1360,7 +1348,7 @@
   "pages.discover.title": [
     {
       "type": 0,
-      "value": "Temukan"
+      "value": "Menemukan"
     }
   ],
   "pages.ecosystem.title": [
@@ -1396,7 +1384,7 @@
   "pages.privacyPolicy.title": [
     {
       "type": 0,
-      "value": "Kebijakan privasi"
+      "value": "Kebijakan pribadi"
     }
   ]
 }
