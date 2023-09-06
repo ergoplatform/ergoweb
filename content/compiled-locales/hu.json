@@ -1054,10 +1054,16 @@
   "components.roadmap.section2.title": [
     {
       "type": 0,
-      "value": "TESZTELÉS ALATT"
+      "value": "ÖKOSZISZTÉMA"
     }
   ],
   "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "HAMAR"
+    }
+  ],
+  "components.roadmap.section4.title": [
     {
       "type": 0,
       "value": "2023 ÉS TÚL"

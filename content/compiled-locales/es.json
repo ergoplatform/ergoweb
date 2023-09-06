@@ -1086,10 +1086,16 @@
   "components.roadmap.section2.title": [
     {
       "type": 0,
-      "value": "EN PRUEBAS"
+      "value": "ECOSISTEMA"
     }
   ],
   "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "PRONTO"
+    }
+  ],
+  "components.roadmap.section4.title": [
     {
       "type": 0,
       "value": "2023 Y MÁS ALLÁ"

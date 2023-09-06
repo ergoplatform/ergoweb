@@ -1,4 +1,5 @@
 import { Popover, Transition } from '@headlessui/react';
+import SecondaryMenu from './SecondaryMenu';
 import {
   LogoWithText,
   ThemeLightBig,
@@ -40,6 +41,7 @@ function Navigation({ enableLanguages = true }) {
   });
   return (
     <Popover className="max-w-[1300px] mx-auto p-4">
+      <SecondaryMenu />
       <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
         <div className="my-auto flex-grow z-10">
           <Link href="/" passHref>

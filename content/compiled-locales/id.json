@@ -922,13 +922,19 @@
   "components.roadmap.section2.title": [
     {
       "type": 0,
-      "value": "DALAM PENGUJIAN"
+      "value": "EKOSISTEM"
     }
   ],
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "2023"
+      "value": "SEGERA"
+    }
+  ],
+  "components.roadmap.section4.title": [
+    {
+      "type": 0,
+      "value": "2023 & SELESAI"
     }
   ],
   "components.roadmap.title": [
