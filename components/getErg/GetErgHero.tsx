@@ -82,7 +82,7 @@ export default function GetErgHero(props: Props) {
             />
           </p>
         </div>
-        <div className="overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10 grid grid-cols-4 ml-4">
+        <div className="overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10 grid md:grid-cols-4 grid-cols-1 ml-4">
           {cards.map((card: any, i: number) => (
             <Link key={i} href={card.url} passHref>
               <div className="cursor-pointer">
