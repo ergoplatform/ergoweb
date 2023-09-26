@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Button from '../Button';
@@ -9,6 +10,41 @@ type Props = {
 
 export default function Exchanges({ exchanges }: Props) {
   const { theme } = useTheme();
+  const [currentFilter, setCurrentFilter] = useState('');
+
+  const tagDictionary: { [key: string]: string[] } = {
+    KuCoin: ['Europe', 'Asia', 'CEX'],
+    gate: ['Asia', 'Europe', 'CEX'],
+    Huobi: ['Asia', 'CEX'],
+    Bitrue: ['Europe', 'CEX'],
+    Indodax: ['🇮🇩', 'CEX'],
+    nonkyc: ['No KYC', 'CEX'],
+    SwapSpace: ['No KYC', 'Swap'],
+    SimpleSwap: ['No KYC', 'Swap'],
+    TradeOgre: ['No KYC', 'CEX'],
+    SevenSeas: ['No KYC', 'CEX'],
+    StealthEX: ['No KYC', 'Swap'],
+    Bitpanda: ['Europe'],
+    Changelly: ['Swap'],
+    ChangeNOW: ['No KYC', 'Swap'],
+    CoinDCX: ['🇮🇳', 'CEX'],
+    FMFW: ['CEX'],
+    changellyPRO: ['CEX'],
+    Bitmart: ['CEX'],
+    swop: ['DEX'],
+    Spectrum: ['DEX'],
+    Bisq: ['No KYC', 'DEX'],
+    ProBit: ['CEX'],
+    CoinEx: ['Europe'],
+  };
+
+  const filters = ['No KYC', 'Swap', 'DEX', 'CEX', 'Europe', 'Asia', '🇮🇳', '🇮🇩'];
+
+  const filteredExchanges = currentFilter
+    ? exchanges.filter((exchange: { attributes: { name: string | number } }) =>
+        tagDictionary[exchange.attributes.name]?.includes(currentFilter),
+      )
+    : exchanges;
 
   return (
     <div
@@ -55,8 +91,30 @@ export default function Exchanges({ exchanges }: Props) {
           </p>
         </div>
       </div>
+
+      <div className="flex flex-wrap justify-center mb-4">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setCurrentFilter(currentFilter === filter ? '' : filter)}
+            className={`
+                mr-3 mb-2 px-5 py-2 border border-gray-300 rounded-lg shadow 
+                transition duration-300 ease-in-out transform
+                ${
+                  currentFilter === filter
+                    ? 'bg-brand-orange text-white'
+                    : 'bg-white text-black hover:bg-gray-100'
+                }
+                ${currentFilter === filter ? 'hover:bg-brand-darkorange' : ''}
+            `}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8">
-        {exchanges.map((exchange: any) => (
+        {filteredExchanges.map((exchange: any) => (
           <div key={exchange.id} className="col-span-1 flex justify-center py-8 px-8 m-auto">
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
               {theme == 'dark' && exchange.attributes.image_dark.data != null ? (
