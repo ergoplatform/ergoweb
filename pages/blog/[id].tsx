@@ -30,6 +30,11 @@ export default function Post(props: Props) {
     imageUrl = props.post.attributes.image.data.attributes.url;
   }
 
+  let pageUrl = ''
+  if (typeof window !== 'undefined') {
+    pageUrl = window.location.href
+  }
+
   return (
     <div>
       <div className="blog-frame-1"></div>
@@ -113,20 +118,20 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}"
-                    passHref
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`}
+                    target='_blank'
                   >
                     <BlogFacebook />
-                  </Link>
+                  </a>
                 </div>
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://twitter.com/intent/tweet?text={window.location.href}"
-                    passHref
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${pageUrl}`}
+                    target='_blank'
                   >
                     <BlogTwitter />
-                  </Link>
+                  </a>
                 </div>
                 {/* <div className="cursor-pointer">
                   <Link href="https://google.com" passHref>
