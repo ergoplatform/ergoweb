@@ -187,7 +187,7 @@ export default function Wallets() {
             <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
           </div>
           <div className="w-1/5 p-1 my-auto">
-            <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
           </div>
         </a>
         <div className="py-1 ml-2 text-[10px] lg:text-[16px] text-[#585858] lg:tracking-widest lg:uppercase">
