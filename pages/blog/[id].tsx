@@ -10,6 +10,8 @@ import { BlogFacebook, BlogLink, BlogTwitter, LogoBlack } from '../../components
 import Link from 'next/link';
 import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+
 
 type Props = {
   post?: any;
@@ -30,10 +32,10 @@ export default function Post(props: Props) {
     imageUrl = props.post.attributes.image.data.attributes.url;
   }
 
-  let pageUrl = ''
-  if (typeof window !== 'undefined') {
-    pageUrl = window.location.href
-  }
+  const [pageUrl, setPageUrl] = useState<string | undefined>(undefined)
+  useEffect(() => {
+    setPageUrl(window.location.href)
+  }, [])
 
   return (
     <div>
