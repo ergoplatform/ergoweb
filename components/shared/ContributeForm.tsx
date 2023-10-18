@@ -104,7 +104,7 @@ export default function ContributeForm() {
             <div className="ml-8 mb-10">
               <Button
                 text={buttonDiscord}
-                url="https://discord.gg/PFYugUgg28"
+                url="https://discord.gg/ergo-platform-6689037863616512008"
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
