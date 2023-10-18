@@ -148,9 +148,10 @@ export default function JoinUs() {
         </p>
         <p className="text-[#585858] text-sm md:text-lg p-4 pt-0" id="ergo-social">
           <FormattedMessage
-            defaultMessage="Join us on socials to get involved, check out the "
+            defaultMessage="Join us on socials to get involved, check out the"
             id="components.communitySection.communityHero.text2"
           />
+          &nbsp;
           <a
             href="https://ergonaut.space/en/Ergo/Contributing"
             target="_blank"
@@ -162,8 +163,9 @@ export default function JoinUs() {
               id="components.communitySection.communityHero.linkText"
             />
           </a>
+          &nbsp;
           <FormattedMessage
-            defaultMessage=" page for more information"
+            defaultMessage="page for more information"
             id="components.communitySection.communityHero.text3"
           />
         </p>

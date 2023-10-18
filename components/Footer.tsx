@@ -78,7 +78,11 @@ export default function Footer() {
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://discord.gg/ergo-platform-668903786361651200" target="_blank" rel="noreferrer">
+              <a
+                href="https://discord.gg/ergo-platform-668903786361651200"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {getIconComponentByName('Discord')}
               </a>
             </div>
