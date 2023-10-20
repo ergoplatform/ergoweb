@@ -87,10 +87,10 @@ export default function GetErgHero(props: Props) {
             <Link key={i} href={card.url} passHref>
               <div className="cursor-pointer">
                 <div className="h-[200px] md:h-[275px] lg:h-[350px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon + 'Light', { width: "100%", height: "100%" })}
+                  {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
                 </div>
                 <div className="hidden dark:flex h-[200px] md:h-[275px] lg:h-[350px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon, { width: "100%", height: "100%" })}
+                  {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
                 </div>
                 <p className="font-subtitle-3 mb-3">{card.title}</p>
                 <p>{card.text}</p>
