@@ -27,6 +27,10 @@ export default function Mining() {
     id: 'components.mining.button5',
     defaultMessage: 'MINING BLOG POSTS',
   });
+  const button6Text = intl.formatMessage({
+    id: 'components.mining.button6',
+    defaultMessage: 'EMISSION & TOKENOMICS',
+  });
 
   let miningPoolsUrls = [
     {
@@ -205,7 +209,7 @@ export default function Mining() {
         <br />
         <Button
           text={button3Text}
-          url="https://discord.gg/PFYugUgg28"
+          url="https://discord.gg/ergo-platform-6689037863616512008"
           newTab={true}
           underline={true}
           textColor="brand-orange"
@@ -231,6 +235,18 @@ export default function Mining() {
           text={button5Text}
           url="/category/Mining/"
           newTab={false}
+          underline={true}
+          textColor="brand-orange"
+          background={false}
+          icon="ArrowRight"
+          iconColor="orange"
+          customClass=" -ml-4 mb-8"
+        />
+        <br />
+        <Button
+          text={button6Text}
+          url="https://docs.ergoplatform.com/mining/emission/"
+          newTab={true}
           underline={true}
           textColor="brand-orange"
           background={false}

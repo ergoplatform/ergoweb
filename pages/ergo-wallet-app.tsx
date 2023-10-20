@@ -287,7 +287,7 @@ export default function MobileWallets() {
                     Visit the{' '}
                     <a
                       className="text-red-500 dark:text-red-500"
-                      href="https://discord.gg/kj7s7nb"
+                      href="https://discord.gg/ergo-platform-668903786361651200"
                       target="_blank"
                       rel="noreferrer"
                     >

@@ -101,6 +101,7 @@
   "components.mining.button3": "DISCORD",
   "components.mining.button4": "SUBREDDIT",
   "components.mining.button5": "MINING BLOG POSTS",
+  "components.mining.button6": "EMISSION & TOKENOMICS",
   "components.mining.calculator.currentBlockReward": "Current block reward",
   "components.mining.calculator.currentPrice": "Current price",
   "components.mining.calculator.description": "Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs.",
