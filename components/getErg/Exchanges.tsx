@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Button from '../Button';
@@ -9,6 +10,28 @@ type Props = {
 
 export default function Exchanges({ exchanges }: Props) {
   const { theme } = useTheme();
+  const [currentFilter, setCurrentFilter] = useState('ALL');
+
+  const filters = Array.from(
+    new Set(
+      exchanges.reduce(
+        (acc: Array<string>, items: any) => {
+          if (items.attributes.tags && items.attributes.tags.trim().length !== 0) {
+            acc.push(...items.attributes.tags.split(', '));
+          }
+          return acc;
+        },
+        ['ALL'],
+      ),
+    ),
+  );
+
+  const filteredExchanges =
+    currentFilter === 'ALL'
+      ? exchanges
+      : exchanges.filter((exchange: { attributes: { tags: string } }) =>
+          exchange.attributes.tags?.split(', ')?.includes(currentFilter),
+        );
 
   return (
     <div
@@ -55,8 +78,30 @@ export default function Exchanges({ exchanges }: Props) {
           </p>
         </div>
       </div>
+
+      <div className="flex flex-wrap justify-center mb-4">
+        {filters.map((filter: any) => (
+          <button
+            key={filter}
+            onClick={() => (currentFilter !== filter ? setCurrentFilter(filter) : {})}
+            className={`
+                mr-3 mb-2 px-5 py-2 border border-gray-300 rounded-lg shadow 
+                transition duration-300 ease-in-out transform
+                ${
+                  currentFilter === filter
+                    ? 'bg-brand-orange text-white border-brand-orange'
+                    : 'bg-white text-black hover:bg-gray-100'
+                }
+                ${currentFilter === filter ? 'hover:bg-brand-darkorange' : ''}
+            `}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8">
-        {exchanges.map((exchange: any) => (
+        {filteredExchanges.map((exchange: any) => (
           <div key={exchange.id} className="col-span-1 flex justify-center py-8 px-8 m-auto">
             <a href={exchange.attributes.url} target="_blank" rel="noreferrer">
               {theme == 'dark' && exchange.attributes.image_dark.data != null ? (
