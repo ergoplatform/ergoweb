@@ -769,6 +769,12 @@
       "value": "MINING BLOG POSTS"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "EMISSION & TOKENOMICS"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
