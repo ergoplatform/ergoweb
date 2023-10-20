@@ -10,41 +10,28 @@ type Props = {
 
 export default function Exchanges({ exchanges }: Props) {
   const { theme } = useTheme();
-  const [currentFilter, setCurrentFilter] = useState('');
+  const [currentFilter, setCurrentFilter] = useState('ALL');
 
-  const tagDictionary: { [key: string]: string[] } = {
-    KuCoin: ['Europe', 'Asia', 'CEX'],
-    gate: ['Asia', 'Europe', 'CEX'],
-    Huobi: ['Asia', 'CEX'],
-    Bitrue: ['Europe', 'CEX'],
-    Indodax: ['🇮🇩', 'CEX'],
-    nonkyc: ['No KYC', 'CEX'],
-    SwapSpace: ['No KYC', 'Swap'],
-    SimpleSwap: ['No KYC', 'Swap'],
-    TradeOgre: ['No KYC', 'CEX'],
-    SevenSeas: ['No KYC', 'CEX'],
-    StealthEX: ['No KYC', 'Swap'],
-    Bitpanda: ['Europe'],
-    Changelly: ['Swap'],
-    ChangeNOW: ['No KYC', 'Swap'],
-    CoinDCX: ['🇮🇳', 'CEX'],
-    FMFW: ['CEX'],
-    changellyPRO: ['CEX'],
-    Bitmart: ['CEX'],
-    swop: ['DEX'],
-    Spectrum: ['DEX'],
-    Bisq: ['No KYC', 'DEX'],
-    ProBit: ['CEX'],
-    CoinEx: ['Europe'],
-  };
+  const filters = Array.from(
+    new Set(
+      exchanges.reduce(
+        (acc: Array<string>, items: any) => {
+          if (items.attributes.tags && items.attributes.tags.trim().length !== 0) {
+            acc.push(...items.attributes.tags.split(', '));
+          }
+          return acc;
+        },
+        ['ALL'],
+      ),
+    ),
+  );
 
-  const filters = ['No KYC', 'Swap', 'DEX', 'CEX', 'Europe', 'Asia', '🇮🇳', '🇮🇩'];
-
-  const filteredExchanges = currentFilter
-    ? exchanges.filter((exchange: { attributes: { name: string | number } }) =>
-        tagDictionary[exchange.attributes.name]?.includes(currentFilter),
-      )
-    : exchanges;
+  const filteredExchanges =
+    currentFilter === 'ALL'
+      ? exchanges
+      : exchanges.filter((exchange: { attributes: { tags: string } }) =>
+          exchange.attributes.tags?.split(', ')?.includes(currentFilter),
+        );
 
   return (
     <div
@@ -93,16 +80,16 @@ export default function Exchanges({ exchanges }: Props) {
       </div>
 
       <div className="flex flex-wrap justify-center mb-4">
-        {filters.map((filter) => (
+        {filters.map((filter: any) => (
           <button
             key={filter}
-            onClick={() => setCurrentFilter(currentFilter === filter ? '' : filter)}
+            onClick={() => (currentFilter !== filter ? setCurrentFilter(filter) : {})}
             className={`
                 mr-3 mb-2 px-5 py-2 border border-gray-300 rounded-lg shadow 
                 transition duration-300 ease-in-out transform
                 ${
                   currentFilter === filter
-                    ? 'bg-brand-orange text-white'
+                    ? 'bg-brand-orange text-white border-brand-orange'
                     : 'bg-white text-black hover:bg-gray-100'
                 }
                 ${currentFilter === filter ? 'hover:bg-brand-darkorange' : ''}
