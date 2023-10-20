@@ -12,7 +12,6 @@ import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-
 type Props = {
   post?: any;
   posts?: any;
@@ -32,10 +31,10 @@ export default function Post(props: Props) {
     imageUrl = props.post.attributes.image.data.attributes.url;
   }
 
-  const [pageUrl, setPageUrl] = useState<string | undefined>(undefined)
+  const [pageUrl, setPageUrl] = useState<string | undefined>(undefined);
   useEffect(() => {
-    setPageUrl(window.location.href)
-  }, [])
+    setPageUrl(window.location.href);
+  }, []);
 
   return (
     <div>
@@ -122,7 +121,8 @@ export default function Post(props: Props) {
                 <div className="cursor-pointer">
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`}
-                    target='_blank'
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <BlogFacebook />
                   </a>
@@ -130,7 +130,8 @@ export default function Post(props: Props) {
                 <div className="cursor-pointer">
                   <a
                     href={`https://twitter.com/intent/tweet?text=${pageUrl}`}
-                    target='_blank'
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <BlogTwitter />
                   </a>
