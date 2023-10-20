@@ -10,6 +10,8 @@ import { BlogFacebook, BlogLink, BlogTwitter, LogoBlack } from '../../components
 import Link from 'next/link';
 import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+
 
 type Props = {
   post?: any;
@@ -29,6 +31,11 @@ export default function Post(props: Props) {
     hasImage = true;
     imageUrl = props.post.attributes.image.data.attributes.url;
   }
+
+  const [pageUrl, setPageUrl] = useState<string | undefined>(undefined)
+  useEffect(() => {
+    setPageUrl(window.location.href)
+  }, [])
 
   return (
     <div>
@@ -113,20 +120,20 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}"
-                    passHref
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`}
+                    target='_blank'
                   >
                     <BlogFacebook />
-                  </Link>
+                  </a>
                 </div>
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://twitter.com/intent/tweet?text={window.location.href}"
-                    passHref
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${pageUrl}`}
+                    target='_blank'
                   >
                     <BlogTwitter />
-                  </Link>
+                  </a>
                 </div>
                 {/* <div className="cursor-pointer">
                   <Link href="https://google.com" passHref>
