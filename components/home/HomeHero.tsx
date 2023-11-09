@@ -8,6 +8,10 @@ export default function HomeHero() {
     id: 'components.homeHero.button',
     defaultMessage: 'DIVE IN',
   });
+  const pitchDeckButton = intl.formatMessage({
+    id: 'components.homeHero.pitchDeckButton',
+    defaultMessage: 'PITCH DECK',
+  });
 
   const [title, setTitle] = useState('Powering the Future of Finance');
   const [isChanging, setIsChanging] = useState(false);
@@ -58,12 +62,22 @@ export default function HomeHero() {
             />
           </p>
         </div>
-        <div className="mt-8 md:mt-6 relative z-20">
+        <div className="mt-8 md:mt-6 relative z-20 flex space-x-4">
           <Button
             text={button}
             textColor="black"
             url="/discover"
             newTab={false}
+            underline={false}
+            background={true}
+            iconColor="black"
+            icon="ArrowRight"
+          />
+          <Button
+            text={pitchDeckButton}
+            textColor="black"
+            url="https://docs.google.com/presentation/d/e/2PACX-1vQMR27WLXAQ5NiuBb2EJ5wadU8DoJEzJmsrp_oqVNKmPOAATdF6Cjw9IKaW2InO0Xqr85xTI4luPPUE/pub?start=false&loop=false&delayms=3000"
+            newTab={true}
             underline={false}
             background={true}
             iconColor="black"

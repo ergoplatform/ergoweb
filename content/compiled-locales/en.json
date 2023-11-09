@@ -691,6 +691,12 @@
       "value": "DIVE IN"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "PITCH DECK"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
