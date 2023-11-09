@@ -10,21 +10,34 @@ export default function HomeHero() {
   });
 
   const [title, setTitle] = useState('Powering the Future of Finance');
+  const [isChanging, setIsChanging] = useState(false);
 
   useEffect(() => {
     const titles = [
       'Powering the Future of Finance',
-      'RESEARCH-LED AND REAL-WORLD FOCUSED',
+      'Research-led and real-world focused',
       'Powerful and safe',
+      'Intelligent and Straightforward',
+      'Secure and accessible',
     ];
     let currentTitleIndex = 0;
     const interval = setInterval(() => {
-      currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-      setTitle(titles[currentTitleIndex]);
-    }, 3000); // Change title every 3 seconds
+      setIsChanging(true);
+      setTimeout(() => {
+        currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+        setTitle(titles[currentTitleIndex]);
+        setIsChanging(false);
+      }, 500); // Wait for 0.5 seconds to start changing the title
+    }, 3500); // Change title every 3.5 seconds
     return () => clearInterval(interval);
   }, []);
 
+  const titleStyle = isChanging
+    ? { transition: 'opacity 1s ease-in-out', opacity: 0 }
+    : { transition: 'opacity 1s ease-in-out', opacity: 1 };
+
+  // Use the titleStyle in your title rendering
+  // <h1 style={titleStyle}>{title}</h1>
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
