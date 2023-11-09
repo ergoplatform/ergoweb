@@ -1,5 +1,6 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
+import { useState, useEffect } from 'react';
 
 export default function HomeHero() {
   const intl = useIntl();
@@ -8,25 +9,31 @@ export default function HomeHero() {
     defaultMessage: 'DIVE IN',
   });
 
+  const [title, setTitle] = useState('Powering the Future of Finance');
+
+  useEffect(() => {
+    const titles = [
+      'Powering the Future of Finance',
+      'RESEARCH-LED AND REAL-WORLD FOCUSED',
+      'Powerful and safe',
+    ];
+    let currentTitleIndex = 0;
+    const interval = setInterval(() => {
+      currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+      setTitle(titles[currentTitleIndex]);
+    }, 3000); // Change title every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
         <div className="max-w-lg leading-none md:max-w-4xl relative z-20">
           <h1 className="md:hidden">
-            <b>
-              <FormattedMessage
-                defaultMessage="Powering the Future of Finance"
-                id="components.homeHero.title"
-              />
-            </b>
+            <b>{title}</b>
           </h1>
           <h3 className="hidden md:block">
-            <b>
-              <FormattedMessage
-                defaultMessage="Powering the Future of Finance"
-                id="components.homeHero.title"
-              />
-            </b>
+            <b>{title}</b>
           </h3>
         </div>
         <div className="mt-6 md:mt-10 max-w-lg md:max-w-xl relative z-20">

@@ -21,9 +21,19 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="When Ergo launched in 2019, there was no initial coin offering, no pre-mine and no pre-allocation of tokens to any team members or venture capitalists. A truly fair launch with 4.43% of funds allocated to ecosystem development. Unparalleled in any other smart-contract platform."
+        defaultMessage="Ergo is a community-driven project that went live in 2019 with a distribution unparalleled by any other smart-contract platform, with 4.43% of funds allocated to Ergo Foundation Treasury, underscoring our commitment to fostering a robust and decentralised ecosystem. {breakingLine}{readMoreLink}"
         id="components.highlights.slide.1.text"
-        values={{ breakingLine: <br /> }}
+        values={{
+          breakingLine: <br />,
+          readMoreLink: (
+            <a
+              href="https://docs.ergoplatform.com/mining/emission/"
+              style={{ color: 'orange', fontWeight: 'bold' }}
+            >
+              Read More
+            </a>
+          ),
+        }}
       />
     ),
     svg: 'Highlights1',
@@ -48,9 +58,19 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Enabling more innovative, targeted implementations that conventional banking can't match. Ergo offers powerful tools with smart contract-powered microcredit facilities and Local Exchange Trading Systems (LETS)."
+        defaultMessage="Enabling more innovative, targeted implementations that conventional banking can't match. Ergo offers powerful tools with smart contract-powered microcredit facilities and Local Exchange Trading Systems (LETS). {breakingLine}{readMoreLink}"
         id="components.highlights.slide.2.text"
-        values={{ breakingLine: <br /> }}
+        values={{
+          breakingLine: <br />,
+          readMoreLink: (
+            <a
+              href="https://docs.ergoplatform.com/uses/lets/"
+              style={{ color: 'orange', fontWeight: 'bold' }}
+            >
+              Read More
+            </a>
+          ),
+        }}
       />
     ),
     svg: 'Highlights2',
@@ -75,9 +95,19 @@ const slides = [
     ),
     textMessage: (
       <FormattedMessageFixed
-        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. This enables new models of financial interaction, underpinned by a safe and rich scripting language, ErgoScript and flexible and powerful Zero-Knowledge proofs"
+        defaultMessage="Privacy must remain an option to protect autonomy. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. This enables new models of financial interaction, underpinned by a safe and rich scripting language, ErgoScript and flexible and powerful Zero-Knowledge proofs {breakingLine}{readMoreLink}"
         id="components.highlights.slide.3.text"
-        values={{ breakingLine: <br /> }}
+        values={{
+          breakingLine: <br />,
+          readMoreLink: (
+            <a
+              href="https://docs.ergoplatform.com/dev/protocol/zkp/"
+              style={{ color: 'orange', fontWeight: 'bold' }}
+            >
+              Read More
+            </a>
+          ),
+        }}
       />
     ),
     svg: 'Highlights3',

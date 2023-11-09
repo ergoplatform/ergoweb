@@ -34,6 +34,10 @@ function SecondaryMenu() {
         >
           DOCUMENTATION
         </a>
+        <span className="text-xs mx-2">•</span>
+        <a href="https://sigmaverse.io/" target="_blank" className="text-xs mr-2" rel="noreferrer">
+          SIGMAVERSE
+        </a>
       </div>
     </div>
   );
