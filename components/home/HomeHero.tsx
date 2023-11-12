@@ -8,49 +8,30 @@ export default function HomeHero() {
     id: 'components.homeHero.button',
     defaultMessage: 'DIVE IN',
   });
-  const pitchDeckButton = intl.formatMessage({
+  const secondButton = intl.formatMessage({
     id: 'components.homeHero.pitchDeckButton',
     defaultMessage: 'PITCH DECK',
   });
 
-  const [title, setTitle] = useState('Powering the Future of Finance');
-  const [isChanging, setIsChanging] = useState(false);
-
-  useEffect(() => {
-    const titles = [
-      'Powering the Future of Finance',
-      'Research-led and real-world focused',
-      'Powerful and safe',
-      'Intelligent and Straightforward',
-      'Secure and accessible',
-    ];
-    let currentTitleIndex = 0;
-    const interval = setInterval(() => {
-      setIsChanging(true);
-      setTimeout(() => {
-        currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-        setTitle(titles[currentTitleIndex]);
-        setIsChanging(false);
-      }, 500); // Wait for 0.5 seconds to start changing the title
-    }, 3500); // Change title every 3.5 seconds
-    return () => clearInterval(interval);
-  }, []);
-
-  const titleStyle = isChanging
-    ? { transition: 'opacity 1s ease-in-out', opacity: 0 }
-    : { transition: 'opacity 1s ease-in-out', opacity: 1 };
-
-  // Use the titleStyle in your title rendering
-  // <h1 style={titleStyle}>{title}</h1>
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
         <div className="max-w-lg leading-none md:max-w-4xl relative z-20">
           <h1 className="md:hidden">
-            <b>{title}</b>
+            <b>
+              <FormattedMessage
+                defaultMessage="Powering the Future of Finance"
+                id="components.homeHero.title"
+              />
+            </b>
           </h1>
-          <h3 className="hidden md:block">
-            <b>{title}</b>
+          <h3 className="hidden md:block" style={{ height: '140px' }}>
+            <b>
+              <FormattedMessage
+                defaultMessage="Powering the Future of Finance"
+                id="components.homeHero.title"
+              />
+            </b>
           </h3>
         </div>
         <div className="mt-6 md:mt-10 max-w-lg md:max-w-xl relative z-20">
@@ -62,7 +43,7 @@ export default function HomeHero() {
             />
           </p>
         </div>
-        <div className="mt-8 md:mt-6 relative z-20 flex space-x-4">
+        <div className="mt-8 md:mt-6 relative z-20 flex gap-4">
           <Button
             text={button}
             textColor="black"
@@ -74,13 +55,13 @@ export default function HomeHero() {
             icon="ArrowRight"
           />
           <Button
-            text={pitchDeckButton}
-            textColor="black"
-            url="https://docs.google.com/presentation/d/e/2PACX-1vQMR27WLXAQ5NiuBb2EJ5wadU8DoJEzJmsrp_oqVNKmPOAATdF6Cjw9IKaW2InO0Xqr85xTI4luPPUE/pub?start=false&loop=false&delayms=3000"
+            text={secondButton}
+            url="https://docs.google.com/presentation/d/e/2PACX-1vQMR27WLXAQ5NiuBb2EJ5wadU8DoJEzJmsrp_oqVNKmPOAATdF6Cjw9IKaW2InO0Xqr85xTI4luPPUE/pub?start=false&loop=false&delayms=3000&slide=id.g195421e485f_0_4"
             newTab={true}
-            underline={false}
-            background={true}
-            iconColor="black"
+            background={false}
+            animation={true}
+            textColor="brand-orange"
+            iconColor="orange"
             icon="ArrowRight"
           />
         </div>

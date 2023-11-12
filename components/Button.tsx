@@ -12,6 +12,7 @@ type Props = {
   background?: boolean;
   iconColor?: string;
   customClass?: string;
+  animation?: boolean;
 };
 
 export default function Button({
@@ -24,6 +25,7 @@ export default function Button({
   background = true,
   iconColor = 'black',
   customClass = '',
+  animation,
 }: Props) {
   var className =
     `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${textColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange` +
@@ -40,6 +42,10 @@ export default function Button({
 
   if (background == false) {
     className += ' bg-transparent';
+  }
+
+  if (animation) {
+    className += ' animate-pulse';
   }
 
   return (
