@@ -7,6 +7,10 @@ export default function HomeHero() {
     id: 'components.homeHero.button',
     defaultMessage: 'DIVE IN',
   });
+  const secondButton = intl.formatMessage({
+    id: 'components.homeHero.secondButton',
+    defaultMessage: 'PRESENTATION',
+  });
 
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
@@ -38,7 +42,7 @@ export default function HomeHero() {
             />
           </p>
         </div>
-        <div className="mt-8 md:mt-6 relative z-20">
+        <div className="mt-8 md:mt-6 relative z-20 flex gap-4">
           <Button
             text={button}
             textColor="black"
@@ -48,6 +52,14 @@ export default function HomeHero() {
             background={true}
             iconColor="black"
             icon="ArrowRight"
+          />
+          <Button
+            text={secondButton}
+            url="https://docs.google.com/presentation/d/e/2PACX-1vQMR27WLXAQ5NiuBb2EJ5wadU8DoJEzJmsrp_oqVNKmPOAATdF6Cjw9IKaW2InO0Xqr85xTI4luPPUE/pub?start=false&loop=false&delayms=3000&slide=id.g195421e485f_0_4"
+            newTab={true}
+            background={false}
+            animation={true}
+            textColor="brand-orange"
           />
         </div>
       </div>
