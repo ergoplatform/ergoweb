@@ -4,7 +4,12 @@ import { getIconComponentByName } from '../../utils/icons-map';
 
 const cards = [
   {
-    title: <FormattedMessage defaultMessage="Mine it" id="components.getErg.MineIt.title" />,
+    title: (
+      <FormattedMessage
+        defaultMessage="Mine it"
+        id="components.getErg.MineIt.title"
+      />
+    ),
     text: (
       <FormattedMessage
         defaultMessage="Autolykos, an ASIC resistant & fairly mined Proof-of-Work algorithm friendly to common GPUs."
@@ -15,7 +20,12 @@ const cards = [
     url: '/get-erg/#Mining',
   },
   {
-    title: <FormattedMessage defaultMessage="Exchanges" id="components.getErg.BuyIt.title" />,
+    title: (
+      <FormattedMessage
+        defaultMessage="Exchanges"
+        id="components.getErg.BuyIt.title"
+      />
+    ),
     text: (
       <FormattedMessage
         defaultMessage="Available across popular centralized and decentralized exchanges."
@@ -26,7 +36,12 @@ const cards = [
     url: '/get-erg/#Exchanges',
   },
   {
-    title: <FormattedMessage defaultMessage="Wallets" id="components.getErg.StoreIt.title" />,
+    title: (
+      <FormattedMessage
+        defaultMessage="Wallets"
+        id="components.getErg.StoreIt.title"
+      />
+    ),
     text: (
       <FormattedMessage
         defaultMessage="Simple and secure non-custodial wallets to keep your ERG safe."
@@ -37,7 +52,12 @@ const cards = [
     url: '/get-erg/#Wallets',
   },
   {
-    title: <FormattedMessage defaultMessage="Ecosystem" id="components.getErg.UseIt.title" />,
+    title: (
+      <FormattedMessage
+        defaultMessage="Ecosystem"
+        id="components.getErg.UseIt.title"
+      />
+    ),
     text: (
       <FormattedMessage
         defaultMessage="Put your ERG to use today in our growing ecosystem"
@@ -72,7 +92,10 @@ export default function GetErgHero(props: Props) {
           </p>
           <h2 className="leading-none">
             <b>
-              <FormattedMessage defaultMessage="Get ERG" id="components.getErg.title" />
+              <FormattedMessage
+                defaultMessage="Get ERG"
+                id="components.getErg.title"
+              />
             </b>
           </h2>
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
@@ -84,13 +107,19 @@ export default function GetErgHero(props: Props) {
         </div>
         <div className="overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10 grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1 ml-4">
           {cards.map((card: any, i: number) => (
-            <Link key={i} href={card.url} passHref>
+            <Link key={i} href={card.url} passHref legacyBehavior>
               <div className="cursor-pointer">
                 <div className="h-[200px] md:h-[275px] lg:h-[350px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
+                  {getIconComponentByName(card.icon + 'Light', {
+                    width: '100%',
+                    height: '100%',
+                  })}
                 </div>
                 <div className="hidden dark:flex h-[200px] md:h-[275px] lg:h-[350px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
+                  {getIconComponentByName(card.icon, {
+                    width: '100%',
+                    height: '100%',
+                  })}
                 </div>
                 <p className="font-subtitle-3 mb-3">{card.title}</p>
                 <p>{card.text}</p>

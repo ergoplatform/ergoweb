@@ -36,18 +36,22 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
           </div>
           <div className="flip-back hall-of-fame-person-card h-56 w-56 lg:w-80 lg:h-80 flex flex-col-reverse">
             <div className="my-auto px-2 lg:px-6">
-              <p className="text-center text-xs lg:text-sm align-middle text-white">{props.bio}</p>
+              <p className="text-center text-xs lg:text-sm align-middle text-white">
+                {props.bio}
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col mt-4">
         <div>
-          <p className="font-vinila-extended text-[16px] lg:text-[24px]">{props.name}</p>
+          <p className="font-vinila-extended text-[16px] lg:text-[24px]">
+            {props.name}
+          </p>
         </div>
         <div className="mt-0 md:mt-4 flex -ml-2 md:-ml-1 space-x-4">
           {props.linkedin != undefined ? (
-            <Link href={props.linkedin} passHref>
+            <Link href={props.linkedin} passHref legacyBehavior>
               <a>
                 <Linkedin
                   viewBox="0 0 28 28"
@@ -57,14 +61,14 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
             </Link>
           ) : null}
           {props.twitter != undefined ? (
-            <Link href={props.twitter} passHref>
+            <Link href={props.twitter} passHref legacyBehavior>
               <a>
                 <Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
               </a>
             </Link>
           ) : null}
           {props.github != undefined ? (
-            <Link href={props.github} passHref>
+            <Link href={props.github} passHref legacyBehavior>
               <a>
                 <Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
               </a>
@@ -110,7 +114,10 @@ export default function HallOfFame(props: Props) {
     >
       <h2 className="lg:text-center">
         <b>
-          <FormattedMessage defaultMessage={'Hall Of Fame'} id="components.hallOfFame.title" />
+          <FormattedMessage
+            defaultMessage={'Hall Of Fame'}
+            id="components.hallOfFame.title"
+          />
         </b>
       </h2>
       <div className="flex flex-row justify-center">
@@ -148,7 +155,10 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              <FormattedMessage defaultMessage={`CORE`} id="components.hallOfFame.tab1" />
+              <FormattedMessage
+                defaultMessage={`CORE`}
+                id="components.hallOfFame.tab1"
+              />
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -157,7 +167,10 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              <FormattedMessage defaultMessage={`COMMUNITY`} id="components.hallOfFame.tab2" />
+              <FormattedMessage
+                defaultMessage={`COMMUNITY`}
+                id="components.hallOfFame.tab2"
+              />
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -166,7 +179,10 @@ export default function HallOfFame(props: Props) {
                   : 'font-subtitle-3-uppercase'
               }
             >
-              <FormattedMessage defaultMessage={`FOUNDATION`} id="components.hallOfFame.tab3" />
+              <FormattedMessage
+                defaultMessage={`FOUNDATION`}
+                id="components.hallOfFame.tab3"
+              />
             </Tab>
           </Tab.List>
           <Tab.Panels className="mt-16">

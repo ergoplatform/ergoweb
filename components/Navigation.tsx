@@ -50,7 +50,10 @@ function Navigation({ enableLanguages = true }) {
             </button>
           </Link>
         </div>
-        <div className="hidden lg:block my-auto flex-grow" style={{ zIndex: 12 }}>
+        <div
+          className="hidden lg:block my-auto flex-grow"
+          style={{ zIndex: 12 }}
+        >
           <Button
             text={ergoCommunity}
             url="/community"
@@ -109,7 +112,10 @@ function Navigation({ enableLanguages = true }) {
               <div className="my-auto flex-grow">
                 <Link href="/" passHref>
                   <button className="flex justify-center align-center">
-                    <LogoWithTextWhite viewBox="0 0 213 82" className="w-24 lg:w-32" />
+                    <LogoWithTextWhite
+                      viewBox="0 0 213 82"
+                      className="w-24 lg:w-32"
+                    />
                   </button>
                 </Link>
               </div>
@@ -121,24 +127,29 @@ function Navigation({ enableLanguages = true }) {
                   <DarkModeSwitch />
                 </div>
                 <div className="my-auto ml-5 lg:ml-10">
-                  <Popover.Button>{getIconComponentByName('MenuClose')}</Popover.Button>
+                  <Popover.Button>
+                    {getIconComponentByName('MenuClose')}
+                  </Popover.Button>
                 </div>
               </div>
             </div>
             <Search />
             <div className="mx-0 md:mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
               <div>
-                <Link href="/community" passHref>
+                <Link href="/community" passHref legacyBehavior>
                   <a>
                     <h3 className="font-button mt-4 mb-10">
-                      <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
+                      <FormattedMessage
+                        defaultMessage="COMMUNITY"
+                        id="footer.community.title"
+                      />
                     </h3>
                   </a>
                 </Link>
 
                 <ul className="hidden md:block">
                   <li className="mb-2">
-                    <Link href="/community/#JoinUs" passHref>
+                    <Link href="/community/#JoinUs" passHref legacyBehavior>
                       <a>
                         <FormattedMessage
                           defaultMessage="Join our channels"
@@ -149,15 +160,18 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/community/#Sigmanauts" passHref>
+                    <Link href="/community/#Sigmanauts" passHref legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
+                        <FormattedMessage
+                          defaultMessage="Sigmanauts"
+                          id="footer.community.2"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/community/#Contribute" passHref>
+                    <Link href="/community/#Contribute" passHref legacyBehavior>
                       <a>
                         <FormattedMessage
                           defaultMessage="Contribute to Ergo"
@@ -168,15 +182,18 @@ function Navigation({ enableLanguages = true }) {
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/community/#HallOfFame" passHref>
+                    <Link href="/community/#HallOfFame" passHref legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
+                        <FormattedMessage
+                          defaultMessage="Hall of Fame"
+                          id="footer.community.4"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/community/#Foundation" passHref>
+                    <Link href="/community/#Foundation" passHref legacyBehavior>
                       <a>
                         <FormattedMessage
                           defaultMessage="Ergo Foundation"
@@ -188,58 +205,80 @@ function Navigation({ enableLanguages = true }) {
                 </ul>
               </div>
               <div>
-                <Link href="/get-erg" passHref>
+                <Link href="/get-erg" passHref legacyBehavior>
                   <a>
                     <h3 className="font-button mt-4 mb-10">
-                      <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
+                      <FormattedMessage
+                        defaultMessage="GET ERG"
+                        id="footer.getErg.title"
+                      />
                     </h3>
                   </a>
                 </Link>
 
                 <ul className="hidden md:block">
                   <li className="mb-2">
-                    <Link href="/get-erg/#Mining" passHref>
+                    <Link href="/get-erg/#Mining" passHref legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
+                        <FormattedMessage
+                          defaultMessage="Mining"
+                          id="footer.getErg.1"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/get-erg#MiningCalculator" passHref>
+                    <Link
+                      href="/get-erg#MiningCalculator"
+                      passHref
+                      legacyBehavior
+                    >
                       <a>
-                        <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
+                        <FormattedMessage
+                          defaultMessage="Mining Calculator"
+                          id="footer.getErg.2"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/get-erg/#Wallets" passHref>
+                    <Link href="/get-erg/#Wallets" passHref legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
+                        <FormattedMessage
+                          defaultMessage="Wallets"
+                          id="footer.getErg.3"
+                        />
                       </a>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/get-erg/#Exchanges" passHref>
+                    <Link href="/get-erg/#Exchanges" passHref legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
+                        <FormattedMessage
+                          defaultMessage="Exchanges"
+                          id="footer.getErg.4"
+                        />
                       </a>
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <Link href="/discover" passHref>
+                <Link href="/discover" passHref legacyBehavior>
                   <a>
                     <h3 className="font-button mt-4 mb-10">
-                      <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
+                      <FormattedMessage
+                        defaultMessage="DISCOVER"
+                        id="footer.discover.title"
+                      />
                     </h3>
                   </a>
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-2">
-                    <Link href="/discover/#DiscoverERG" passHref>
+                    <Link href="/discover/#DiscoverERG" passHref legacyBehavior>
                       <a>
                         <FormattedMessage
                           defaultMessage="Software Releases"
@@ -249,7 +288,11 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/discover/#GrantsAndBounties" passHref>
+                    <Link
+                      href="/discover/#GrantsAndBounties"
+                      passHref
+                      legacyBehavior
+                    >
                       <a>
                         <FormattedMessage
                           defaultMessage="Grants & Bounties"
@@ -259,72 +302,99 @@ function Navigation({ enableLanguages = true }) {
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/discover/#FAQ">
+                    <Link href="/discover/#FAQ" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
+                        <FormattedMessage
+                          defaultMessage="FAQ"
+                          id="footer.discover.3"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/discover/#Explore">
+                    <Link href="/discover/#Explore" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
+                        <FormattedMessage
+                          defaultMessage="Explore"
+                          id="footer.discover.4"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/discover/#Documents">
+                    <Link href="/discover/#Documents" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
+                        <FormattedMessage
+                          defaultMessage="Documents"
+                          id="footer.discover.5"
+                        />
                       </a>
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <Link href="/ecosystem">
+                <Link href="/ecosystem" legacyBehavior>
                   <a>
                     <h3 className="font-button mt-4 mb-8 md:mb-10">
-                      <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
+                      <FormattedMessage
+                        defaultMessage="ECOSYSTEM"
+                        id="footer.ecosystem.title"
+                      />
                     </h3>
                   </a>
                 </Link>
                 <ul className="hidden md:block">
                   <li className="mb-2">
-                    <Link href="/ecosystem/#dApps">
+                    <Link href="/ecosystem/#dApps" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
+                        <FormattedMessage
+                          defaultMessage="DApps"
+                          id="footer.ecosystem.1"
+                        />
                       </a>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/ecosystem/#Roadmap">
+                    <Link href="/ecosystem/#Roadmap" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
+                        <FormattedMessage
+                          defaultMessage="Roadmap"
+                          id="footer.ecosystem.2"
+                        />
                       </a>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/ecosystem/#Wiki">
+                    <Link href="/ecosystem/#Wiki" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
+                        <FormattedMessage
+                          defaultMessage="Wiki"
+                          id="footer.ecosystem.3"
+                        />
                       </a>
                     </Link>
                   </li>
 
                   <li className="mb-2">
-                    <Link href="/ecosystem/#Favorites">
+                    <Link href="/ecosystem/#Favorites" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" />
+                        <FormattedMessage
+                          defaultMessage="Ergo Raffle"
+                          id="footer.ecosystem.4"
+                        />
                       </a>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/ecosystem/#Videocasts">
+                    <Link href="/ecosystem/#Videocasts" legacyBehavior>
                       <a>
-                        <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
+                        <FormattedMessage
+                          defaultMessage="Videocasts"
+                          id="footer.ecosystem.5"
+                        />
                       </a>
                     </Link>
                   </li>
@@ -332,10 +402,16 @@ function Navigation({ enableLanguages = true }) {
               </div>
               <div className="mt-10 w-80 hidden md:block">
                 <p className="font-subtitle-2">
-                  <FormattedMessage defaultMessage="More content?" id="navigation.moreContent" />
+                  <FormattedMessage
+                    defaultMessage="More content?"
+                    id="navigation.moreContent"
+                  />
                 </p>
                 <p className="font-subtitle-2">
-                  <FormattedMessage defaultMessage="We got it!" id="footer.weGotIt" />
+                  <FormattedMessage
+                    defaultMessage="We got it!"
+                    id="footer.weGotIt"
+                  />
                 </p>
               </div>
             </div>
@@ -343,19 +419,25 @@ function Navigation({ enableLanguages = true }) {
               <div className="my-6 flex-grow md:flex-grow">
                 <ul className="md:inline-flex">
                   <li>
-                    <Link href="/blog" passHref>
+                    <Link href="/blog" passHref legacyBehavior>
                       <a>
                         <h3 className="font-button mt-4 mb-14 mr-20">
-                          <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
+                          <FormattedMessage
+                            defaultMessage="BLOG"
+                            id="footer.blog.title"
+                          />
                         </h3>
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/news" passHref>
+                    <Link href="/news" passHref legacyBehavior>
                       <a>
                         <h3 className="font-button mt-4 mb-14 mr-20">
-                          <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
+                          <FormattedMessage
+                            defaultMessage="NEWS"
+                            id="footer.news.title"
+                          />
                         </h3>
                       </a>
                     </Link>
@@ -365,22 +447,34 @@ function Navigation({ enableLanguages = true }) {
               <div className="my-6 dark">
                 <div className="grid overflow-hidden grid-cols-3 gap-6 text-red md:grid-cols-9">
                   <div className="box mx-auto my-auto">
-                    <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://sigmaverse.io"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Sigmaverse')}
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <Link href="/ecosystem/#Wiki" passHref>
+                    <Link href="/ecosystem/#Wiki" passHref legacyBehavior>
                       <a>{getIconComponentByName('ErgoWiki')}</a>
                     </Link>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://github.com/ergoplatform"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Github')}
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <a href="https://twitter.com/Ergo_Platform" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://twitter.com/Ergo_Platform"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Twitter')}
                     </a>
                   </div>
@@ -394,7 +488,11 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://t.me/Ergo_Chats"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Telegram')}
                     </a>
                   </div>
@@ -408,12 +506,20 @@ function Navigation({ enableLanguages = true }) {
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://reddit.com/r/ergonauts"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Reddit')}
                     </a>
                   </div>
                   <div className="box mx-auto my-auto">
-                    <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://www.ergoforum.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {getIconComponentByName('Discourse')}
                     </a>
                   </div>

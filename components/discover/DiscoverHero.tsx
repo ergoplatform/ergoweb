@@ -51,7 +51,10 @@ export default function DiscoverERG() {
         </div>
         <div className="discover-container box xl:order-1">
           <h1 className="max-w-xs leading-tight">
-            <FormattedMessage id="components.discoverHero.title" defaultMessage="Discover Ergo" />
+            <FormattedMessage
+              id="components.discoverHero.title"
+              defaultMessage="Discover Ergo"
+            />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
             <FormattedMessage
@@ -111,7 +114,10 @@ export default function DiscoverERG() {
         </div>
         <div className="box xl:order-3">
           <h1 className="max-w-xs leading-tight mt-36 xl:mt-0">
-            <FormattedMessage defaultMessage="Software" id="components.software.heading" />
+            <FormattedMessage
+              defaultMessage="Software"
+              id="components.software.heading"
+            />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
             <FormattedMessage
@@ -135,7 +141,10 @@ export default function DiscoverERG() {
         <div className="box xl:order-4">
           <div className="sm:ml-28 mt-16 xl:mt-0">
             <h1 className="max-w-xs leading-tight">
-              <FormattedMessage defaultMessage="Learn" id="components.learn.heading" />
+              <FormattedMessage
+                defaultMessage="Learn"
+                id="components.learn.heading"
+              />
             </h1>
             <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
               <FormattedMessage
@@ -143,14 +152,16 @@ export default function DiscoverERG() {
                 id="components.learn.description"
               />
             </p>
-            <Link href="https://ergonaut.space" passHref>
+            <Link href="https://ergonaut.space" passHref legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
                 <button
                   type="submit"
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
                 >
                   <span>{button6Text}</span>
-                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+                  <span className="w-4 h-4 ml-2">
+                    {getIconComponentByName('ArrowRightBlack')}
+                  </span>
                 </button>
               </a>
             </Link>

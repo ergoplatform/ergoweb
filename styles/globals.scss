@@ -424,6 +424,22 @@ footer
   }
 }
 
+@layer components {
+  .section {
+    @apply py-14 md-max:py-12 sm-max:py-10
+  }
+  .container-rework {
+    @apply w-[1280px] px-8 mx-auto
+    lg-max:w-[1024px] lg-max:px-12 
+    md-max:w-full md-max:px-8
+    sm-max:px-4
+  }
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 @layer utilities {
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
@@ -503,4 +519,21 @@ blockquote {
 
 code {
   color: black;
+}
+
+.brand-gradient {
+  background: linear-gradient(158deg, #303237 0%, #303237 0.01%, #BD3F26 63%, #FF5E18 100%);  ;
+}
+
+.brand-139-gradient {
+  background: linear-gradient(139deg, #303237 -0.35%, #303237 -0.33%, #BD3F26 97.42%, #FF5E18 154.83%);
+}
+
+.background-none {
+  background: none;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }

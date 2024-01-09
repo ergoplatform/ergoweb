@@ -1,6 +1,18 @@
 @import "./variables.scss";
 
 @font-face {
+  font-family: "Vinila Test";
+  font-weight: 400;
+  src: local(""), url("fonts/Vinila-Regular.woff2") format("woff2"), url("fonts/Vinila-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Vinila Test";
+  font-weight: 700;
+  src: local(""), url("fonts/Vinila-Bold.woff2") format("woff2"), url("fonts/Vinila-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: "Vinila Extended";
   font-display: swap;
   src: local(""), url("fonts/Vinila-Rg-Ex.woff2") format("woff2"), url("fonts/Vinila-Rg-Ex.woff") format("woff");
@@ -16,6 +28,28 @@
   font-family: "Vinila Extended Light";
   font-display: swap;
   src: local(""), url("fonts/Vinila-Lt-Ex.woff2") format("woff2"), url("fonts/Vinila-Lt-Ex.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""), 
+    url("fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("fonts/Inter-SemiBold.woff") format("woff"),
+
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), 
+    url("fonts/Inter-Regular.woff2") format("woff2"),
+    url("fonts/Inter-Regular.woff") format("woff"),
+
 }
 
 @font-face {

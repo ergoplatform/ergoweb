@@ -51,7 +51,7 @@ export default function Button({
   return (
     <>
       {url ? (
-        <Link href={url}>
+        <Link href={url} legacyBehavior>
           <a target={target}>
             <button className={className}>
               <span>{text}</span>
@@ -60,7 +60,9 @@ export default function Button({
               ) : (
                 <span className="w-4 h-4 ml-2">
                   {getIconComponentByName(
-                    'ArrowRight' + iconColor.charAt(0).toUpperCase() + iconColor.slice(1),
+                    'ArrowRight' +
+                      iconColor.charAt(0).toUpperCase() +
+                      iconColor.slice(1)
                   )}
                 </span>
               )}

@@ -9,20 +9,20 @@ function SecondaryMenu() {
   return (
     <div className="justify-between bg-red-500 p-2 rounded-lg w-full z-[500] relative md:flex hidden">
       <div className="max-w-[500px] mx-auto flex justify-between">
-        <Link href="/get-erg#Wallets">
+        <Link href="/get-erg#Wallets" legacyBehavior>
           <a className="text-xs mr-2">WALLETS</a>
         </Link>
         <span className="text-xs mx-2">•</span>
-        <Link href="/get-erg#Exchanges">
+        <Link href="/get-erg#Exchanges" legacyBehavior>
           <a className="text-xs mr-2">EXCHANGES</a>
         </Link>
         <span className="text-xs mx-2">•</span>
         {/* links beyond here broken? tried z-index */}
-        <Link href="/ecosystem#Roadmap">
+        <Link href="/ecosystem#Roadmap" legacyBehavior>
           <a className="text-xs mr-2">ROADMAP</a>
         </Link>
         <span className="text-xs mx-2">•</span>
-        <Link href="/blog">
+        <Link href="/blog" legacyBehavior>
           <a className="text-xs mr-2">BLOG</a>
         </Link>
         <span className="text-xs mx-2">•</span>
@@ -35,7 +35,12 @@ function SecondaryMenu() {
           DOCUMENTATION
         </a>
         <span className="text-xs mx-2">•</span>
-        <a href="https://sigmaverse.io/" target="_blank" className="text-xs mr-2" rel="noreferrer">
+        <a
+          href="https://sigmaverse.io/"
+          target="_blank"
+          className="text-xs mr-2"
+          rel="noreferrer"
+        >
           SIGMAVERSE
         </a>
       </div>

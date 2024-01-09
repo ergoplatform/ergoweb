@@ -17,10 +17,31 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
+      'lg-max': { max: '1300px' },
+      'md-max': { max: '1040px' },
+      'sm-max': { max: '590px' }
     },
     extend: {
+      width: {
+        'full-1': 'calc(100% + 1px)'
+      },
+      height: {
+        'full-1': 'calc(100% + 1px)'
+      },
+      spacing: {
+        '6.5': '1.625rem',
+        '7.5': '1.875rem',
+        '13.5': '3.75rem',
+        '15': '3.75rem',
+        '16.5': '4.5rem',
+        '20.5': '5.375rem',
+        '24.5': '6.5rem'
+      },
       animation: {
         fadeIn: 'fadeIn 2s ease-in forwards',
+      },
+      borderRadius: {
+        '4xl': '2rem',
       },
       keyframes: {
         fadeIn: {
@@ -29,18 +50,65 @@ module.exports = {
         },
       },
       colors: {
+        main: {
+          border: '#343436'
+        },
+        dark: {
+          DEFAULT: '#121212'
+        },
         brand: {
           orange: '#FF5E18',
+          'orange-hover': '#CC4B13',
+          'orange-active': '#A63D10',
           black: '#141414',
+        },
+        transparent: {
+          '20': 'rgba(255, 255, 255, 0.20)',
+        },
+        card: {
+          'transparent-2': 'rgba(59, 59, 59, 0.15)',
+          'transparent-3': 'rgba(114, 114, 114, 0.15)',
+        },
+        background: {
+          DEFAULT: '#1B1B1C',
+          opacity: 'rgba(81, 81, 81, 0.15)',
+          transparent: 'rgba(59, 59, 59, 0.15)',
+          card: '#222224',
+          'cardDark': '#1B1B1C',
+        },
+        secondary: {
+          DEFAULT: '#ACACB0',
+          focus: '#402022',
+          gray: '#616163',
         },
       },
       fontFamily: {
+        'vinila-test': ['Vinila Test', 'sans-serif'],
         'vinila-extended': ['Vinila Extended', 'sans-serif'],
         'vinila-extended-bold': ['Vinila Extended Bold', 'sans-serif'],
         'vinila-extended-light': ['Vinila Extended Light', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
+      bgGradientDeg: {
+        158: '158deg',
+      },
+      gridTemplateColumns: {
+        'bordered': '1fr 60px',
+        'bordered-lg': '1fr 40px',
+        'bordered-md': '40px 1fr 40px',
+        'bordered-sm': '20px 1fr 20px'
+      },
+      gridTemplateRows: {
+        'bordered': '60px 1fr 60px',
+        'bordered-lg': '40px 1fr 40px',
+        'bordered-md': '40px 1fr',
+        'bordered-sm': '20px 1fr'
+      },
+      boxShadow: {
+        'focus': '0px 0px 0px 4px rgba(238, 80, 90, 0.20)',
+      }
     },
   },
-  plugins: [require('tw-elements/dist/plugin')],
+  plugins: [require('tw-elements/dist/plugin'), require('tailwindcss-gradient')],
 };

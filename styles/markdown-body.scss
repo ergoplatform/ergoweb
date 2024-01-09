@@ -2,6 +2,10 @@
   font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
  
   body > *:first-child {
       margin-top: 0 !important; }
