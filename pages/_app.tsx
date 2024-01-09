@@ -75,7 +75,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YFEV1NQGXE" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YFEV1NQGXE"
+      />
       <Script
         id="analytics"
         dangerouslySetInnerHTML={{
@@ -87,8 +90,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             `,
         }}
       />
+      {/* @ts-ignore */}
       <ThemeProvider attribute="class">
-        <IntlProvider locale={shortLocale} messages={messages} onError={() => null}>
+        <IntlProvider
+          locale={shortLocale}
+          messages={messages}
+          onError={() => null}
+        >
           <NextNProgress color="#e74c3c" />
           <Component {...pageProps} />
         </IntlProvider>

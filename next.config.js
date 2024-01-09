@@ -131,12 +131,6 @@ const nextConfig = {
                     },
                   },
                 },
-                {
-                  name: 'removeAttrs',
-                  params: {
-                    preserveCurrentColor: false,
-                  },
-                },
               ],
             },
           },

@@ -33,8 +33,8 @@ export default function Wiki() {
           </div>
           <Image
             src={'/assets/ecosystem/ergonaut.png'}
-            width="405px"
-            height="349px"
+            width={405}
+            height={349}
             className="rounded-br-2xl"
             alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane on top of a moon."
           />
@@ -42,7 +42,10 @@ export default function Wiki() {
       </div>
       <div className="md:hidden">
         <p className="font-vinila-extended-bold text-[48px] mb-4">
-          <FormattedMessage defaultMessage="Wiki" id="components.wiki.heading" />
+          <FormattedMessage
+            defaultMessage="Wiki"
+            id="components.wiki.heading"
+          />
         </p>
         <p className="text-[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
           <FormattedMessage

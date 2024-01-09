@@ -40,19 +40,22 @@ export default function ContributeForm() {
 
   const sendMessage = async (event: any) => {
     event.preventDefault();
-    const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
-      body: JSON.stringify({
-        data: {
-          name: event.target.name.value,
-          text: event.target.text.value,
-          email: event.target.email.value,
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests',
+      {
+        body: JSON.stringify({
+          data: {
+            name: event.target.name.value,
+            text: event.target.text.value,
+            email: event.target.email.value,
+          },
+        }),
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
+        method: 'POST',
+      }
+    );
     const result = await res.json();
     if (result != null) {
       toast.success('Message sent! Have a great day!', {
@@ -72,13 +75,17 @@ export default function ContributeForm() {
       <div className="flex flex-col mb-20 lg:flex-row lg:justify-around">
         <h1 className="block-inline font-vinila-extended text-[32px] md:text-[48px] lg:text-[120px] mb-6 lg:mt-auto lg:mb-auto">
           <b>
-            <FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" />
+            <FormattedMessage
+              defaultMessage="Contribute"
+              id="components.ContributeForm.title"
+            />
           </b>
         </h1>
         <p className="text-[#807e7e] dark:text-[#807e7e] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
           <FormattedMessage
             defaultMessage="Ergo operates on an open model where <b>anyone is welcome to contribute.</b>"
             id="components.ContributeForm.text"
+            // @ts-ignore
             values={{ b: (...chunks: any) => <b>{chunks}</b> }}
           />
         </p>
@@ -89,6 +96,7 @@ export default function ContributeForm() {
             <FormattedMessage
               defaultMessage="I am a <b>developer</b>"
               id="components.ContributeForm.developer.title"
+              // @ts-ignore
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h3>
@@ -156,6 +164,7 @@ export default function ContributeForm() {
             <FormattedMessage
               defaultMessage="I am a <b>company</b>"
               id="components.ContributeForm.company.title"
+              // @ts-ignore
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h3>
@@ -198,7 +207,9 @@ export default function ContributeForm() {
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
                 >
                   <span>{formButton}</span>
-                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+                  <span className="w-4 h-4 ml-2">
+                    {getIconComponentByName('ArrowRightBlack')}
+                  </span>
                 </button>
               </div>
             </div>
