@@ -113,6 +113,38 @@ const nextConfig = {
   images: {
     domains: ['storage.googleapis.com'],
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            svgoConfig: {
+              plugins: [
+                {
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      removeViewBox: false,
+                    },
+                  },
+                },
+                {
+                  name: 'removeAttrs',
+                  params: {
+                    preserveCurrentColor: false,
+                  },
+                },
+              ],
+            },
+          },
+        },
+      ],
+    });
+    return config;
+  },
 };
 
 const withMDX = require('@next/mdx')({
