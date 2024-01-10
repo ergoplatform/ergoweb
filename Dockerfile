@@ -6,6 +6,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 # COPY package.json yarn.lock ./
 COPY package.json package-lock.json ./
+RUN npm install -g npm@6
 # RUN yarn install --frozen-lockfile
 RUN npm ci
 
@@ -16,7 +17,8 @@ COPY . .
 
 COPY --from=deps /app/node_modules ./node_modules
 ENV NEXT_PUBLIC_STRAPI_API 'https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app'
-# RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+
+RUN npm install -g npm@6
 RUN npm run build && npm install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
@@ -36,6 +38,8 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/entrypoint.sh ./entrypoint.sh
 COPY --from=builder /app/next.config.js ./next.config.js
+
+RUN npm install -g npm@6
 
 USER nextjs
 
