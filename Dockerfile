@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install -g npm@6
 # RUN yarn install --frozen-lockfile
-RUN npm ci
+RUN npm install
 
 # Rebuild the source code only when needed
 FROM node:18.19.0-alpine3.18 AS builder
