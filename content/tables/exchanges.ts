@@ -1,6 +1,6 @@
 import { ITable } from 'types/table';
 
-const logosPath = '/assets/logos/';
+const logosPath = '/assets/logos/exchanges/';
 
 export const exchanges: ITable = {
   theads: ['Exchange', 'Pairs', 'KYC', 'By crypto', 'By fiat'],

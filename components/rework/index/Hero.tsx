@@ -25,7 +25,7 @@ function Hero() {
           Resilient Layer-1 PoW blockchain with efficient, eUTXO-based smart
           contracts, enhancing security and flexibility
         </Typography>
-        <div className="flex md-max:inline-block sm-max:flex sm-max:items-center sm-max:gap-x-3">
+        <div className="flex items-center gap-x-6 md-max:inline-block sm-max:flex sm-max:items-center sm-max:gap-x-3">
           <Button
             kind="filled"
             type="link"

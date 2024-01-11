@@ -1,3 +1,5 @@
+export type IAble = boolean | 'rotate';
+
 interface ITableItemTitle {
   logo: string;
   name: string;
@@ -8,7 +10,7 @@ interface ITableItemText {
 }
 
 interface ITableItemAble {
-  able: boolean | 'rotate';
+  able: IAble;
 }
 
 export interface ITable {

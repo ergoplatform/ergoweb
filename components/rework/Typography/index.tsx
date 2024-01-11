@@ -36,7 +36,7 @@ const getTextClass = (type: TypographyType) => {
     case 'heading-3':
       return `
         text-5xl font-vinila-test font-bold tracking-[-.125rem]
-        md-max:text-2xl
+        md-max:text-2xl md-max:tracking-[-.003rem]
       `;
     case 'title-1':
       return `
@@ -46,13 +46,13 @@ const getTextClass = (type: TypographyType) => {
       `;
     case 'title-2':
       return `
-        text-3xl tracking-[-.125rem] 
+        text-3xl font-vinila-test tracking-[-.125rem] 
         lg-max:text-2xl
         md-max:text-xl
       `;
     case 'title-3':
       return `
-        text-2xl 
+        text-2xl font-vinila-test
         lg-max:text-xl
         md-max:text-lg
       `;

@@ -6,7 +6,11 @@ import { exchanges } from 'content/tables/exchanges';
 function Exchanges() {
   const Header = (
     <>
-      <Typography as="h2" type="heading-3" className="w-[365px] shrink-0">
+      <Typography
+        as="h2"
+        type="heading-3"
+        className="w-[365px] shrink-0 md-max:mb-2 md-max:w-full"
+      >
         Crypto exchange you can trust
       </Typography>
       <Typography as="p">
@@ -19,7 +23,14 @@ function Exchanges() {
     </>
   );
 
-  return <Table content={exchanges}>{Header}</Table>;
+  return (
+    <Table
+      content={exchanges}
+      gridClass="grid-cols-exchanges md:grid-cols-exchanges-md"
+    >
+      {Header}
+    </Table>
+  );
 }
 
 export default Exchanges;

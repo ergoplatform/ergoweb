@@ -80,6 +80,8 @@ module.exports = {
           DEFAULT: '#ACACB0',
           focus: '#402022',
           gray: '#616163',
+          green: '#19B28D',
+          red: '#EE505A',
         },
       },
       fontFamily: {
@@ -97,7 +99,11 @@ module.exports = {
         'bordered': '1fr 60px',
         'bordered-lg': '1fr 40px',
         'bordered-md': '40px 1fr 40px',
-        'bordered-sm': '20px 1fr 20px'
+        'bordered-sm': '20px 1fr 20px',
+        'exchanges': '185px 158px 70px 85px 84px',
+        'exchanges-md': '100px 123px 54px 85px 55px',
+        'wallets': '185px 124px 109px 136px 84px',
+        'wallets-md': '133px 92px 90px 115px 54px',
       },
       gridTemplateRows: {
         'bordered': '60px 1fr 60px',
