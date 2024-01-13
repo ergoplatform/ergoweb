@@ -27,17 +27,11 @@ export default function FAQ(props: Props) {
         <div className="lg:w-1/3">
           <b>
             <p className="text-[#585858] dark:text-[#585858] pt-6">
-              <FormattedMessage
-                defaultMessage="ANY QUESTIONS?"
-                id="components.faq.anyQuestions"
-              />
+              <FormattedMessage defaultMessage="ANY QUESTIONS?" id="components.faq.anyQuestions" />
             </p>
           </b>
           <a className="font-vinila-extended text-[48px] lg:text-[120px]">
-            <FormattedMessage
-              defaultMessage="FAQ"
-              id="components.faq.heading"
-            />
+            <FormattedMessage defaultMessage="FAQ" id="components.faq.heading" />
           </a>
           <p className="text-[#585858] dark:text-[#807e7e]">
             <FormattedMessage
@@ -76,17 +70,13 @@ export default function FAQ(props: Props) {
                     id={'faq-heading' + i.toString()}
                     className="font-vinila-extended text-[16px] lg:text-[24px] text-brand-orange dark:text-brand-orange"
                   >
-                    <button type="button">
-                      {question.attributes.question}
-                    </button>
+                    <button type="button">{question.attributes.question}</button>
                   </a>
                 </div>
                 <div
                   id={'faq-collapse' + i.toString()}
                   className={
-                    i == 0
-                      ? 'accordion-collapse collapse show'
-                      : 'accordion-collapse collapse'
+                    i == 0 ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'
                   }
                   aria-labelledby={'faq-heading' + i.toString()}
                   data-bs-parent="#faq-accordion"

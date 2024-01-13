@@ -4,12 +4,7 @@ import { getIconComponentByName } from '../../utils/icons-map';
 
 const cards = [
   {
-    title: (
-      <FormattedMessage
-        defaultMessage="Mine it"
-        id="components.getErg.MineIt.title"
-      />
-    ),
+    title: <FormattedMessage defaultMessage="Mine it" id="components.getErg.MineIt.title" />,
     text: (
       <FormattedMessage
         defaultMessage="Autolykos, an ASIC resistant & fairly mined Proof-of-Work algorithm friendly to common GPUs."
@@ -20,12 +15,7 @@ const cards = [
     url: '/get-erg/#Mining',
   },
   {
-    title: (
-      <FormattedMessage
-        defaultMessage="Exchanges"
-        id="components.getErg.BuyIt.title"
-      />
-    ),
+    title: <FormattedMessage defaultMessage="Exchanges" id="components.getErg.BuyIt.title" />,
     text: (
       <FormattedMessage
         defaultMessage="Available across popular centralized and decentralized exchanges."
@@ -36,12 +26,7 @@ const cards = [
     url: '/get-erg/#Exchanges',
   },
   {
-    title: (
-      <FormattedMessage
-        defaultMessage="Wallets"
-        id="components.getErg.StoreIt.title"
-      />
-    ),
+    title: <FormattedMessage defaultMessage="Wallets" id="components.getErg.StoreIt.title" />,
     text: (
       <FormattedMessage
         defaultMessage="Simple and secure non-custodial wallets to keep your ERG safe."
@@ -52,12 +37,7 @@ const cards = [
     url: '/get-erg/#Wallets',
   },
   {
-    title: (
-      <FormattedMessage
-        defaultMessage="Ecosystem"
-        id="components.getErg.UseIt.title"
-      />
-    ),
+    title: <FormattedMessage defaultMessage="Ecosystem" id="components.getErg.UseIt.title" />,
     text: (
       <FormattedMessage
         defaultMessage="Put your ERG to use today in our growing ecosystem"
@@ -92,10 +72,7 @@ export default function GetErgHero(props: Props) {
           </p>
           <h2 className="leading-none">
             <b>
-              <FormattedMessage
-                defaultMessage="Get ERG"
-                id="components.getErg.title"
-              />
+              <FormattedMessage defaultMessage="Get ERG" id="components.getErg.title" />
             </b>
           </h2>
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">

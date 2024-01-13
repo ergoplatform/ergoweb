@@ -34,9 +34,7 @@ function Item(props: Props) {
         {props.new.attributes.title}
       </Typography>
       {props.new.attributes.tag.length < 30 && (
-        <Label className="shrink-0 sm-max:ml-auto">
-          {props.new.attributes.tag}
-        </Label>
+        <Label className="shrink-0 sm-max:ml-auto">{props.new.attributes.tag}</Label>
       )}
     </Link>
   );

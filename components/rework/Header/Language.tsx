@@ -44,11 +44,7 @@ function Language() {
         className={`${languageClass}  group-[.active]:bg-background-card`}
         onClick={() => setIsOpen((open) => !open)}
       >
-        <img
-          src={currentLocaleIcon}
-          className="h-3.5 md-max:h-2.5"
-          alt="Current locale"
-        />
+        <img src={currentLocaleIcon} className="h-3.5 md-max:h-2.5" alt="Current locale" />
       </button>
       {isOpen && (
         <div
@@ -57,10 +53,7 @@ function Language() {
             md-max:inset-0 md-max:bg-black/[0.6] z-10 md-max:flex md-max:items-end
           "
         >
-          <div
-            ref={refMobile}
-            className="p-6 bg-brand-black md-max:w-full md-max:p-5"
-          >
+          <div ref={refMobile} className="p-6 bg-brand-black md-max:w-full md-max:p-5">
             <Typography type="title-3" className="hidden md-max:block mb-4">
               Website language
             </Typography>
@@ -68,6 +61,7 @@ function Language() {
               if (locale === 'default') return;
               return (
                 <button
+                  key={locale}
                   type="button"
                   className="
                     flex items-center w-full p-6 gap-x-3.5 transition-colors hover:text-brand-orange
@@ -75,17 +69,11 @@ function Language() {
                   "
                   onClick={() => switchLanguage(locale)}
                 >
-                  <img
-                    className="h-3 shrink-0 "
-                    src={getFlagIconPath(locale)}
-                    alt={`${locale}`}
-                  />
+                  <img className="h-3 shrink-0 " src={getFlagIconPath(locale)} alt={`${locale}`} />
                   <Typography as="span" className="w-full text-left">
                     {getFullCountryName(locale)}
                   </Typography>
-                  <div className="shrink-0 size-6">
-                    {locale === router?.locale && <Check />}
-                  </div>
+                  <div className="shrink-0 size-6">{locale === router?.locale && <Check />}</div>
                 </button>
               );
             })}

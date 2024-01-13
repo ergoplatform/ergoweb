@@ -53,10 +53,7 @@ export default function Search() {
         <div>
           {results.map((result: any, index: number) => (
             <Link href={`/blog/${result.attributes.permalink}`} key={index}>
-              <div
-                key={result.id}
-                className="search-card my-3 py-4 px-8 cursor-pointer"
-              >
+              <div key={result.id} className="search-card my-3 py-4 px-8 cursor-pointer">
                 <div>
                   <div className="mb-3">
                     <b className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10">

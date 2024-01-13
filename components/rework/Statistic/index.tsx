@@ -27,7 +27,7 @@ function Index(props: Props) {
   const className = classNames(
     'container-rework grid sm-max:grid-cols-2 gap-[2px] mt-[2px] pb-14 md-max:pb-12 sm-max:pb-10',
     props.className,
-    lengthClass()
+    lengthClass(),
   );
 
   return (

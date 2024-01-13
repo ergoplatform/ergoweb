@@ -60,9 +60,7 @@ export default function Button({
               ) : (
                 <span className="w-4 h-4 ml-2">
                   {getIconComponentByName(
-                    'ArrowRight' +
-                      iconColor.charAt(0).toUpperCase() +
-                      iconColor.slice(1)
+                    'ArrowRight' + iconColor.charAt(0).toUpperCase() + iconColor.slice(1),
                   )}
                 </span>
               )}

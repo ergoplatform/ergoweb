@@ -3,20 +3,11 @@ import { ErgoFoundationIcon, ErgoFoundationIconLight } from '../icons';
 
 export default function ErgoFoundation() {
   return (
-    <div
-      id="ErgoFoundation"
-      className="max-w-[1300px] mx-auto p-4 relative z-10"
-    >
+    <div id="ErgoFoundation" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="flex flex-col md:flex-row mb-14">
         <div className="mb-12 md:my-auto">
-          <ErgoFoundationIcon
-            className="h-40 md:h-60 hidden dark:block"
-            viewBox="0 0 248 248"
-          />
-          <ErgoFoundationIconLight
-            className="h-40 md:h-60 dark:hidden"
-            viewBox="0 0 248 248"
-          />
+          <ErgoFoundationIcon className="h-40 md:h-60 hidden dark:block" viewBox="0 0 248 248" />
+          <ErgoFoundationIconLight className="h-40 md:h-60 dark:hidden" viewBox="0 0 248 248" />
         </div>
         <div className="font-vinila-extended text-[24px] md:text-[56px] max-w-xs md:max-w-3xl md:ml-14 leading-tight md:my-auto">
           <FormattedMessage

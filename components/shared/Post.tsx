@@ -73,11 +73,7 @@ export default function Post({
                 .slice(0, 3)
                 .filter((word: string) => word.length > 0)
                 .map((item) => (
-                  <Link
-                    href={`/category/${item.trim()}`}
-                    key={item.trim()}
-                    passHref
-                  >
+                  <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
                     <b
                       key={item.trim()}
                       className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
@@ -92,18 +88,11 @@ export default function Post({
       </div>
       <div className="flex-1 p-4 md:p-6 h-72 flex flex-col justify-between rounded-b-2xl bg-white">
         <div className="flex-1 text-clip">
-          <Link
-            href={type == 'news' ? url : '/blog/' + permalink}
-            legacyBehavior
-          >
+          <Link href={type == 'news' ? url : '/blog/' + permalink} legacyBehavior>
             <a className="block mt-2" rel="noreferrer">
-              <p className="font-roboto text-[20px] dark:text-black mb-4">
-                {title}
-              </p>
+              <p className="font-roboto text-[20px] dark:text-black mb-4">{title}</p>
               <p className="font-roboto text-[14px] text-[#585858] dark:text-[#585858] mb-0">
-                {type == 'news'
-                  ? subtitle
-                  : removeMd(content)?.slice(0, 130) + '...'}
+                {type == 'news' ? subtitle : removeMd(content)?.slice(0, 130) + '...'}
               </p>
             </a>
           </Link>
@@ -113,17 +102,10 @@ export default function Post({
             <LogoBlack viewBox="0 0 82 82" className="h-10 w-10" />
           </div>
           <div className="ml-3">
-            <b className="text-[14px] text-brand-orange dark:text-brand-orange">
-              {author}
-            </b>
+            <b className="text-[14px] text-brand-orange dark:text-brand-orange">{author}</b>
             <div className="flex space-x-1">
               <p className="text-[#000000] dark:text-[#000000]">
-                <FormattedDate
-                  value={date}
-                  day="numeric"
-                  month="long"
-                  year="numeric"
-                />
+                <FormattedDate value={date} day="numeric" month="long" year="numeric" />
               </p>
             </div>
           </div>

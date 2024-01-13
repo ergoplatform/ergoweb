@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Typography from 'components/rework/Typography';
 import classNames from 'classnames';
 
-interface Button {
+interface ButtonI {
   handleClick(): void;
 }
 
-interface Link {
+interface LinkI {
   link: string;
 }
 
@@ -22,7 +22,7 @@ interface Params {
   size?: 'large' | 'medium' | 'small';
 }
 
-type Props = (Params & Button) | (Params & Link);
+type Props = (Params & ButtonI) | (Params & LinkI);
 
 const staticButtonClass = `
   block
@@ -82,17 +82,13 @@ const Button: React.FC<Props> = (props) => {
     staticButtonClass,
     buttonKindClasses,
     buttonSizeClasses,
-    props.className
+    props.className,
   );
 
   if ('handleClick' in props) {
     return (
       <button type="button" onClick={props.handleClick} className={className}>
-        <span
-          className={`relative ${
-            props.kind === 'underline' ? underlineSpanClass : ''
-          }`}
-        >
+        <span className={`relative ${props.kind === 'underline' ? underlineSpanClass : ''}`}>
           <Typography>{props.children}</Typography>
         </span>
       </button>
@@ -100,11 +96,7 @@ const Button: React.FC<Props> = (props) => {
   } else {
     return (
       <Link href={''} className={className}>
-        <span
-          className={`relative ${
-            kind === 'underline' ? underlineSpanClass : ''
-          }`}
-        >
+        <span className={`relative ${kind === 'underline' ? underlineSpanClass : ''}`}>
           <Typography>{props.children}</Typography>
         </span>
       </Link>

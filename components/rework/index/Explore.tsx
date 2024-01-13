@@ -17,8 +17,8 @@ function Explore() {
           Explore ERG
         </Typography>
         <Typography as={'p'} className="max-w-[505px] lg-max:max-w-[440px]">
-          There is a rich ecosystem budding on top of Ergo. Whether you are a
-          developer, miner, or investor, we have you covered
+          There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
+          investor, we have you covered
         </Typography>
       </div>
       <div
@@ -74,10 +74,7 @@ function Explore() {
           <Typography type="title-1" className="mb-5 sm-max:mb-2">
             Earn
           </Typography>
-          <Typography
-            as={'p'}
-            className="mb-8 lg-max:max-w-[160px] sm-max:w-[110px] sm-max:mb-5"
-          >
+          <Typography as={'p'} className="mb-8 lg-max:max-w-[160px] sm-max:w-[110px] sm-max:mb-5">
             Earn by contributing to the network
           </Typography>
           {Arrow}

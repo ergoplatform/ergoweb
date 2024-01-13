@@ -6,9 +6,9 @@ function Why() {
   const LeftSide = (
     <>
       <Typography as="p" type="title-3" className="mb-6 italic sm-max:mb-5">
-        "Cryptocurrency should provide tools to enrich ordinary people. Small
-        businesses struggling to make ends meet, not big depersonalized
-        financial capital. This is what inspired us. This is our dream."
+        "Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling
+        to make ends meet, not big depersonalized financial capital. This is what inspired us. This
+        is our dream."
       </Typography>
       <Typography as="p" type="title-3">
         Ergo Manifesto

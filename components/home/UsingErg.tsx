@@ -93,10 +93,16 @@ export default function UsingErg() {
             <Link key={i} href={card.url} passHref>
               <div className="cursor-pointer z-20">
                 <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
+                  {getIconComponentByName(card.icon + 'Light', {
+                    width: '100%',
+                    height: '100%',
+                  })}
                 </div>
                 <div className="hidden dark:flex h-[350px] min-w-[238px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
+                  {getIconComponentByName(card.icon, {
+                    width: '100%',
+                    height: '100%',
+                  })}
                 </div>
                 <p className="font-subtitle-3 mb-3">{card.title}</p>
                 <p>{card.text}</p>

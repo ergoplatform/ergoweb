@@ -19,7 +19,8 @@ export default function News({ news }: Props) {
           </h1>
           <h1>
             <b>
-              &<FormattedMessage defaultMessage="Blog" id="components.news.blog" />
+              &
+              <FormattedMessage defaultMessage="Blog" id="components.news.blog" />
             </b>
           </h1>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Logo from 'assets/icons/Logo.svg';
+import Logo from 'assets/icons/logo.svg';
 import Socials from './Socials';
 import Typography from 'components/rework/Typography';
 import Burger from './Burger';
@@ -30,18 +30,12 @@ function Header() {
         <div className="flex gap-x-6 md-max:hidden">
           {nav.list.map((item, idx) => {
             return (
-              <button
-                type="button"
-                key={idx}
-                onClick={() => changeActiveNav(idx)}
-              >
+              <button type="button" key={idx} onClick={() => changeActiveNav(idx)}>
                 <Typography
                   as="span"
                   type="alt"
                   className={`${navItemClass} ${
-                    activeNav !== idx
-                      ? 'hover:text-brand-orange'
-                      : 'bg-background'
+                    activeNav !== idx ? 'hover:text-brand-orange' : 'bg-background'
                   }`}
                 >
                   {item.category}

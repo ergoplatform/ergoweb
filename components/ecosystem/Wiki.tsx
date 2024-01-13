@@ -42,10 +42,7 @@ export default function Wiki() {
       </div>
       <div className="md:hidden">
         <p className="font-vinila-extended-bold text-[48px] mb-4">
-          <FormattedMessage
-            defaultMessage="Wiki"
-            id="components.wiki.heading"
-          />
+          <FormattedMessage defaultMessage="Wiki" id="components.wiki.heading" />
         </p>
         <p className="text-[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
           <FormattedMessage
