@@ -11,6 +11,7 @@ const locales = [
   // 'ro',
   // 'sk',
   // 'zh',
+  "tr",
 ];
 
 const messages = locales.reduce(
