@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Logo from 'assets/icons/Logo.svg';
+import Logo from 'assets/icons/logo.svg';
 import Typography from 'components/rework/Typography';
 import SingleFieldForm from 'components/rework/Form/SingleFieldForm';
 import Nav from './Nav';
@@ -16,7 +16,7 @@ function Footer() {
               <Logo className="h-12 w-auto md-max:h-10 sm-max:h-8" />
             </Link>
             <Typography as="p" className="mb-7 md-max:mb-5">
-              World-changing ideas in your inbox
+              World-changing ideas in your inbox
             </Typography>
             <SingleFieldForm className="w-[444px] lg-max:w-[363px] sm-max:w-full" />
           </div>
@@ -39,10 +39,7 @@ function Footer() {
             <span className="text-main-border">©</span> 2024 Ergo Platform
           </Typography>
           <div className="flex gap-3.5 shrink-0 sm-max:flex-col sm-max:gap-4">
-            <Link
-              href={''}
-              className="hover:text-brand-orange transition-colors"
-            >
+            <Link href={''} className="hover:text-brand-orange transition-colors">
               <Typography type="alt" as={'span'}>
                 Privacy Policy
               </Typography>

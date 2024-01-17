@@ -15,7 +15,7 @@ function Input(props: Props) {
     placeholder:text-secondary bg-transparent focus:border-brand-orange
     transition-all focus:shadow-focus lg-max:h-14 lg-max:px-7 md-max:px-6 
     md-max:h-12 md-max:text-sm
-    `
+    `,
   );
 
   return (

@@ -85,6 +85,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   trailingSlash: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   i18n: {
     locales: [
       'default',

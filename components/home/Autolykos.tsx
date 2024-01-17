@@ -13,10 +13,7 @@ export default function Autolykos() {
       <div className="mt-40 md:mt-80 px-4 py-12 mx-4 rounded-xl card-bg md:hidden">
         <p className="font-roboto text-[14px]">
           <b>
-            <FormattedMessage
-              defaultMessage="AUTOLYKOS"
-              id="components.autolykos.header"
-            />
+            <FormattedMessage defaultMessage="AUTOLYKOS" id="components.autolykos.header" />
           </b>
         </p>
         <p className="font-vinila-extended-bold text-[32px] leading-none mt-4">
@@ -50,10 +47,7 @@ export default function Autolykos() {
       <div className="hidden md:block mx-4 px-14 py-12 rounded-xl card-bg mt-52">
         <p className="font-roboto text-[20px]">
           <b>
-            <FormattedMessage
-              defaultMessage="AUTOLYKOS"
-              id="components.autolykos.header"
-            />
+            <FormattedMessage defaultMessage="AUTOLYKOS" id="components.autolykos.header" />
           </b>
         </p>
         <div className="flex flex-row">

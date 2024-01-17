@@ -15,7 +15,7 @@ export default function Footer() {
       const posts = await fetch(
         process.env.NEXT_PUBLIC_STRAPI_API +
           '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=' +
-          locale
+          locale,
       )
         .then((response) => response.json())
         .then((response) => response.data)
@@ -24,7 +24,7 @@ export default function Footer() {
       const news = await fetch(
         process.env.NEXT_PUBLIC_STRAPI_API +
           '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=' +
-          locale
+          locale,
       )
         .then((response) => response.json())
         .then((response) => response.data)
@@ -58,38 +58,22 @@ export default function Footer() {
               </Link>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://github.com/ergoplatform"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Github')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://twitter.com/Ergo_Platform"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://twitter.com/Ergo_Platform" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Twitter')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://www.youtube.com/c/ErgoPlatform"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Youtube')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://t.me/Ergo_Chats"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Telegram')}
               </a>
             </div>
@@ -103,29 +87,17 @@ export default function Footer() {
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://reddit.com/r/ergonauts"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Reddit')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://www.ergoforum.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Discourse')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a
-                href="https://www.coingecko.com/en/coins/ergo"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.coingecko.com/en/coins/ergo" target="_blank" rel="noreferrer">
                 {getIconComponentByName('Coingecko')}
               </a>
             </div>
@@ -143,60 +115,42 @@ export default function Footer() {
           <div className="mx-1">
             <Link href="/community" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                <FormattedMessage
-                  defaultMessage="COMMUNITY"
-                  id="footer.community.title"
-                />
+                <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/community/#JoinUs" passHref legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Join our channels"
-                      id="footer.community.1"
-                    />
+                    <FormattedMessage defaultMessage="Join our channels" id="footer.community.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Sigmanauts" passHref legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Sigmanauts"
-                      id="footer.community.2"
-                    />
+                    <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Contribute" passHref legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Contribute to Ergo"
-                      id="footer.community.3"
-                    />
+                    <FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#HallOfFame" passHref legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Hall of Fame"
-                      id="footer.community.4"
-                    />
+                    <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Foundation" passHref legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Ergo Foundation"
-                      id="footer.community.5"
-                    />
+                    <FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.5" />
                   </a>
                 </Link>
               </li>
@@ -205,50 +159,35 @@ export default function Footer() {
           <div className="mx-1">
             <Link href="/get-erg" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                <FormattedMessage
-                  defaultMessage="GET ERG"
-                  id="footer.getErg.title"
-                />
+                <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/get-erg/#Mining" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Mining"
-                      id="footer.getErg.1"
-                    />
+                    <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#MiningCalculator" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Mining Calculator"
-                      id="footer.getErg.2"
-                    />
+                    <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#Wallets" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Wallets"
-                      id="footer.getErg.3"
-                    />
+                    <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#Exchanges" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Exchanges"
-                      id="footer.getErg.4"
-                    />
+                    <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
                   </a>
                 </Link>
               </li>
@@ -257,60 +196,42 @@ export default function Footer() {
           <div className="mx-1">
             <Link href="/discover" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                <FormattedMessage
-                  defaultMessage="DISCOVER"
-                  id="footer.discover.title"
-                />
+                <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/discover/#DiscoverERG" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Software Releases"
-                      id="footer.discover.1"
-                    />
+                    <FormattedMessage defaultMessage="Software Releases" id="footer.discover.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#GrantsAndBounties" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Grants & Bounties"
-                      id="footer.discover.2"
-                    />
+                    <FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#FAQ" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="FAQ"
-                      id="footer.discover.3"
-                    />
+                    <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Explore" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Explore"
-                      id="footer.discover.4"
-                    />
+                    <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Documents" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Documents"
-                      id="footer.discover.5"
-                    />
+                    <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
                   </a>
                 </Link>
               </li>
@@ -319,20 +240,14 @@ export default function Footer() {
           <div className="mx-1">
             <Link href="/ecosystem" passHref>
               <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                <FormattedMessage
-                  defaultMessage="ECOSYSTEM"
-                  id="footer.ecosystem.title"
-                />
+                <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/ecosystem/#DApps" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="DApps"
-                      id="footer.ecosystem.1"
-                    />
+                    <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
                   </a>
                 </Link>
               </li>
@@ -340,40 +255,28 @@ export default function Footer() {
               <li className="mb-4">
                 <Link href="/ecosystem/#Roadmap" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Roadmap"
-                      id="footer.ecosystem.2"
-                    />
+                    <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Wiki" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Wiki"
-                      id="footer.ecosystem.3"
-                    />
+                    <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Favorites" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="OUR FAVORITES"
-                      id="footer.ecosystem.4"
-                    />
+                    <FormattedMessage defaultMessage="OUR FAVORITES" id="footer.ecosystem.4" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem#Videocasts" legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Real Life Ergo"
-                      id="footer.ecosystem.5"
-                    />
+                    <FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" />
                   </a>
                 </Link>
               </li>
@@ -383,22 +286,17 @@ export default function Footer() {
             <div className="mx-1">
               <Link href="/blog" passHref>
                 <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                  <FormattedMessage
-                    defaultMessage="BLOG"
-                    id="footer.blog.title"
-                  />
+                  <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
                 </h3>
               </Link>
               <ul className="hidden md:block">
-                {postsData.map(
-                  ({ attributes, id }: { attributes: any; id: string }) => (
-                    <li key={id} className="mb-4">
-                      <Link href={attributes.url} legacyBehavior>
-                        <a>{attributes.title}</a>
-                      </Link>
-                    </li>
-                  )
-                )}
+                {postsData.map(({ attributes, id }: { attributes: any; id: string }) => (
+                  <li key={id} className="mb-4">
+                    <Link href={attributes.url} legacyBehavior>
+                      <a>{attributes.title}</a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ) : null}
@@ -407,22 +305,17 @@ export default function Footer() {
             <div className="mx-1">
               <Link href="/news" passHref>
                 <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                  <FormattedMessage
-                    defaultMessage="NEWS"
-                    id="footer.news.title"
-                  />
+                  <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
                 </h3>
               </Link>
               <ul className="hidden md:block">
-                {newsData.map(
-                  ({ attributes, id }: { attributes: any; id: string }) => (
-                    <li key={id} className="mb-4">
-                      <Link href={attributes.url} legacyBehavior>
-                        <a>{attributes.title}</a>
-                      </Link>
-                    </li>
-                  )
-                )}
+                {newsData.map(({ attributes, id }: { attributes: any; id: string }) => (
+                  <li key={id} className="mb-4">
+                    <Link href={attributes.url} legacyBehavior>
+                      <a>{attributes.title}</a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ) : null}
@@ -433,26 +326,18 @@ export default function Footer() {
           </div>
           <div className="flex-grow md:flex-grow my-auto">
             <ul className="inline-flex">
-              <li className="mr-6">
-                Ergo Platform &copy; {new Date().getFullYear()}
-              </li>
+              <li className="mr-6">Ergo Platform &copy; {new Date().getFullYear()}</li>
               <li className="mr-6">
                 <Link href={'/privacy-policy'} legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Privacy Policy"
-                      id="footer.privacyPolicy"
-                    />
+                    <FormattedMessage defaultMessage="Privacy Policy" id="footer.privacyPolicy" />
                   </a>
                 </Link>
               </li>
               <li className="mr-6">
                 <Link href={'/legal'} legacyBehavior>
                   <a>
-                    <FormattedMessage
-                      defaultMessage="Legal"
-                      id="footer.legal"
-                    />
+                    <FormattedMessage defaultMessage="Legal" id="footer.legal" />
                   </a>
                 </Link>
               </li>

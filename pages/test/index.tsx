@@ -22,7 +22,7 @@ const getNews = async (): Promise<New[]> => {
   try {
     const news = await fetch(
       process.env.NEXT_PUBLIC_STRAPI_API +
-        '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news'
+        '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news',
     );
     const json = await news.json();
     return json.data;

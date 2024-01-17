@@ -82,7 +82,7 @@ function MobileMenu(props: Props) {
         })}
         <div className="pt-12">
           <Typography type="title-3" className="mb-2">
-            World-changing ideas in your inbox
+            World-changing ideas in your inbox
           </Typography>
           <SingleFieldForm className="mb-12" />
           <div className="text-center">

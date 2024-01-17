@@ -23,10 +23,7 @@ function Nav() {
                   key={`${idx} ${itemIdx}`}
                   className="group block hover:text-brand-orange transition-colors"
                 >
-                  <Typography
-                    as="span"
-                    className={classNames(navItemClass, 'group-last:mb-0')}
-                  >
+                  <Typography as="span" className={classNames(navItemClass, 'group-last:mb-0')}>
                     {item.name}
                   </Typography>
                 </Link>

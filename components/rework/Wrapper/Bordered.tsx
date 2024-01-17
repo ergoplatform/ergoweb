@@ -18,9 +18,7 @@ function Bordered(props: Props) {
           sm-max:px-5
         "
       >
-        <div className="brand-139-gradient p-13.5 h-full lg-max:p-10 sm-max:p-5">
-          {LeftSide}
-        </div>
+        <div className="brand-139-gradient p-13.5 h-full lg-max:p-10 sm-max:p-5">{LeftSide}</div>
       </div>
       <div
         className="

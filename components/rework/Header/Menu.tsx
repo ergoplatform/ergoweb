@@ -52,7 +52,7 @@ function Menu(props: Props) {
         <div className="w-[392px] shrink-0 pl-8 border-l border-main-border flex flex-col space-between items-center">
           <div>
             <Typography type="title-1" as="p" className="mb-7">
-              World-changing ideas in your inbox
+              World-changing ideas in your inbox
             </Typography>
             <SingleFieldForm />
           </div>

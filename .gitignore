@@ -11,6 +11,8 @@
 # testing
 /coverage
 
+/tools
+
 # next.js
 /.next/
 /out/
