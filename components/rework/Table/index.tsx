@@ -50,11 +50,11 @@ function Table(props: Props) {
 
   const tableHeaderClass = classNames(
     props.gridClass,
-    'grid justify-between text-secondary-gray mb-8'
+    'grid justify-between items-center text-secondary-gray mb-8'
   );
   const tableBodyClass = classNames(
     props.gridClass,
-    'grid justify-between mb-1 py-6 md-max:py-5'
+    'grid justify-between items-center mb-1 py-6 md-max:py-5'
   );
 
   return (

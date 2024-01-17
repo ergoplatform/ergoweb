@@ -103,7 +103,7 @@ module.exports = {
         'exchanges': '185px 158px 70px 85px 84px',
         'exchanges-md': '100px 123px 54px 85px 55px',
         'wallets': '185px 124px 109px 136px 84px',
-        'wallets-md': '133px 92px 90px 115px 54px',
+        'wallets-md': '173px 92px 90px 115px 54px',
       },
       gridTemplateRows: {
         'bordered': '60px 1fr 60px',

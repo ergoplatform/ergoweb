@@ -45,8 +45,12 @@ function Mine() {
             </Button>
           </div>
           <div className="flex flex-wrap gap-1.5">
-            {miningPools.map((item) => {
-              return <ExternalLink link={item.link}>{item.name}</ExternalLink>;
+            {miningPools.map((item, idx) => {
+              return (
+                <ExternalLink link={item.link} key={idx}>
+                  {item.name}
+                </ExternalLink>
+              );
             })}
           </div>
         </div>
@@ -57,8 +61,12 @@ function Mine() {
             </Typography>
           </div>
           <div className="flex flex-wrap gap-1.5">
-            {miners.map((item) => {
-              return <ExternalLink link={item.link}>{item.name}</ExternalLink>;
+            {miners.map((item, idx) => {
+              return (
+                <ExternalLink link={item.link} key={idx}>
+                  {item.name}
+                </ExternalLink>
+              );
             })}
           </div>
         </div>
