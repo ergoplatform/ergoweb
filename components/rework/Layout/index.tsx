@@ -8,7 +8,7 @@ type Props = {
 
 function Layout({ children }: Props) {
   return (
-    <div className="font-vinila-test bg-brand-black">
+    <div className="font-vinila-test bg-brand-black text-white">
       <Header />
       {children}
       <Footer />

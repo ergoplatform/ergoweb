@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Typography from 'components/rework/Typography';
 import classNames from 'classnames';
 
-interface ButtonI {
+interface Button {
   handleClick(): void;
 }
 
-interface LinkI {
+interface Link {
   link: string;
 }
 
@@ -20,9 +20,10 @@ interface Params {
   type?: 'button' | 'link';
   className?: string;
   size?: 'large' | 'medium' | 'small';
+  icon?: React.ReactNode;
 }
 
-type Props = (Params & ButtonI) | (Params & LinkI);
+type Props = (Params & Button) | (Params & Link);
 
 const staticButtonClass = `
   block
@@ -48,7 +49,8 @@ const Button: React.FC<Props> = (props) => {
             relative rounded-[3.25rem] overflow-hidden	
             bg-gradient-158 from-[#303237] from-10% via-[#BD3F26] via-63% to-brand-orange to-100%
             before:content-[''] before:absolute before:w-full before:h-full before:bg-brand-orange
-            before:transition-opacity before:inset-0 before:opacity-0	 hover:before:opacity-100
+            before:transition-opacity before:inset-0 before:opacity-0	 hover:before:opacity-100 
+            py-5 px-8 lg-max:py-4 lg-max:px-7.5
             md-max:text-sm md-max:py-3.5 md-max:px-6.5
             sm-max:py-3 sm-max:px-6
             
@@ -60,8 +62,8 @@ const Button: React.FC<Props> = (props) => {
     switch (size) {
       case 'large':
         return `
-          text-lg	py-5 px-8
-          lg-max:text-base lg-max:py-4 lg-max:px-7.5
+          text-lg
+          lg-max:text-base
         `;
       case 'medium':
         return `
@@ -82,22 +84,32 @@ const Button: React.FC<Props> = (props) => {
     staticButtonClass,
     buttonKindClasses,
     buttonSizeClasses,
-    props.className,
+    props.className
   );
 
   if ('handleClick' in props) {
     return (
       <button type="button" onClick={props.handleClick} className={className}>
-        <span className={`relative ${props.kind === 'underline' ? underlineSpanClass : ''}`}>
+        <span
+          className={`relative ${
+            props.kind === 'underline' ? underlineSpanClass : ''
+          } ${props.icon ? 'flex items-center gap-x-2' : ''}`}
+        >
           <Typography>{props.children}</Typography>
+          {props.icon}
         </span>
       </button>
     );
   } else {
     return (
       <Link href={''} className={className}>
-        <span className={`relative ${kind === 'underline' ? underlineSpanClass : ''}`}>
+        <span
+          className={`relative ${
+            kind === 'underline' ? underlineSpanClass : ''
+          } ${props.icon ? 'flex items-center gap-x-2' : ''}`}
+        >
           <Typography>{props.children}</Typography>
+          {props.icon}
         </span>
       </Link>
     );
