@@ -7,7 +7,7 @@ import German from '../content/compiled-locales/de.json';
 // import French from "../content/compiled-locales/fr.json";
 // import Hindi from "../content/compiled-locales/hi.json";
 import Italian from '../content/compiled-locales/it.json';
-// import Turkish from "../content/compiled-locales/tr.json";
+import Turkish from '../content/compiled-locales/tr.json';
 import Portuguese from '../content/compiled-locales/pt.json';
 import Hungarian from '../content/compiled-locales/hu.json';
 import Chinese from '../content/compiled-locales/cn.json';
@@ -54,8 +54,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       //   return Hindi
       case 'it':
         return Italian;
-      // case "tr":
-      //   return Turkish
+      case 'tr':
+        return Turkish;
       // case 'pt':
       //  return Portuguese;
       case 'hu':
