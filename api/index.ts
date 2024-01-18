@@ -38,7 +38,7 @@ export const getErgoPrice = async (): Promise<number> => {
     const price = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD'
     );
-    const json = await price.json();
+    const json: any = await price.json();
     return json.ergo.usd;
   } catch (err) {
     const result = (err as Error).message;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Logo from 'assets/icons/Logo.svg';
+import Logo from 'assets/icons/logo.svg';
 import Socials from './Socials';
 import Typography from 'components/rework/Typography';
 import Burger from './Burger';

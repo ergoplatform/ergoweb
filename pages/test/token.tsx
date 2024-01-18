@@ -39,7 +39,7 @@ type Props = {
   hashRate?: any;
 };
 
-export const getStaticProps = async (context: any) => {
+export const getServerSideProps = async (context: any) => {
   const [news, exchanges, price, hashRate, info] = await Promise.all([
     getNews(),
     getExchanges(context.locale),
@@ -50,7 +50,6 @@ export const getStaticProps = async (context: any) => {
 
   return {
     props: { news, exchanges, price, hashRate, info },
-    revalidate: 60,
   };
 };
 
