@@ -115,7 +115,7 @@
   "components.mining.text.2": "Proof of Work'ün geleceğine hoş geldiniz.",
   "components.mining.text.3": "Başlamak için, topluluk tarafından oluşturulan Madencilik El Kitabı'nı, Dokümantasyonu kontrol edin veya madencilik tartışma alanlarına katılın.",
   "components.mining.title": "Madencilik",
-  "components.news.blog": "Blog"
+  "components.news.blog": "Blog",
   "components.news.latest": "en son haberler",
   "components.news.title": "Haberler",
   "components.ourFavorites.heading": "FAVORİLERİMİZ",
@@ -147,7 +147,7 @@
   "components.uniqueErgo.card4.button": "KEŞFET",
   "components.uniqueErgo.card4.text": "Tam düğüm çalıştırmayan sıradan kullanıcılar, madencilerle aynı güvenlik avantajlarından faydalanmalıdır. Non-Interactive Proofs of Proof-of-Work (NIPOPOWS), tam blok zincirini indirmek için gereken depolama, bant genişliği ve zaman gerektirmeksizin tamamen güvenle işlem yapmamızı ve doğrulamamızı sağlar. Yalnızca 1 MB veri gereklidir, bu da herhangi bir cihazı kullanabileceğiniz anlamına gelir.",
   "components.uniqueErgo.card4.title": "GÜVENLİ VE ERİŞİLEBİLİR",
-  "components.uniqueErgo.title": "ERGO'YU BENZERSİZ YAPAN NEDİR"
+  "components.uniqueErgo.title": "ERGO'YU BENZERSİZ YAPAN NEDİR",
   "components.usingErg.description": "Ergo zengin bir ekosistem gelişmektedir. Geliştirici, madenci veya yatırımcı olmanız fark etmez, herkesi destekleriz.",
   "components.usingErg.subtitle": "DURDURULAMAZ DEFI",
   "components.usingErg.title": "ERG EDİN",
