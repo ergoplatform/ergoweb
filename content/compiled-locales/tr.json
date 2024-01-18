@@ -1,0 +1,1512 @@
+{
+  "components.ContributeForm.company.subTitle": [
+    {
+      "type": 0,
+      "value": "ORTAK OLMAK İSTER MİSİN?"
+    }
+  ],
+  "components.ContributeForm.company.title": [
+    {
+      "type": 0,
+      "value": "Biz "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "şirketiz"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.developer.subTitle": [
+    {
+      "type": 0,
+      "value": "NASIL KATKI YAPABİLİRİM?"
+    }
+  ],
+  "components.ContributeForm.developer.title": [
+    {
+      "type": 0,
+      "value": "Ben bir  "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "geliştiriciyim."
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    }
+  ],
+  "components.ContributeForm.text": [
+    {
+      "type": 0,
+      "value": "Ergo, "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "herkesin katkıda bulunabileceği"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " açık bir model üzerinde çalışıyor."
+    }
+  ],
+  "components.ContributeForm.title": [
+    {
+      "type": 0,
+      "value": "Katkı yap"
+    }
+  ],
+  "components.DApps.seeAllProjects": [
+    {
+      "type": 0,
+      "value": "TÜM PROJELERİ GÖRÜNTÜLE"
+    }
+  ],
+  "components.Sigmanauts.button": [
+    {
+      "type": 0,
+      "value": "DAHA FAZLA & UYGULA"
+    }
+  ],
+  "components.Sigmanauts.button.buttonContribute": [
+    {
+      "type": 0,
+      "value": "KATKI KILAVUZLARI"
+    }
+  ],
+  "components.Sigmanauts.button.discord": [
+    {
+      "type": 0,
+      "value": "DISCORD'A KATILIN"
+    }
+  ],
+  "components.Sigmanauts.button.grantsAndBounties": [
+    {
+      "type": 0,
+      "value": "BAĞIŞLAR & ÖDÜLLLER"
+    }
+  ],
+  "components.Sigmanauts.button.writeAndReviewCode": [
+    {
+      "type": 0,
+      "value": "ERGO'YA DALIŞ"
+    }
+  ],
+  "components.Sigmanauts.formInput.button": [
+    {
+      "type": 0,
+      "value": "Gönder"
+    }
+  ],
+  "components.Sigmanauts.formInput.email": [
+    {
+      "type": 0,
+      "value": "E-Posta"
+    }
+  ],
+  "components.Sigmanauts.formInput.name": [
+    {
+      "type": 0,
+      "value": "İsim / Şirket"
+    }
+  ],
+  "components.Sigmanauts.formInput.text": [
+    {
+      "type": 0,
+      "value": "Önerilerinizi ve fikirlerinizi bize yazın. Hadi konuşalım!"
+    }
+  ],
+  "components.Sigmanauts.subTitle": [
+    {
+      "type": 0,
+      "value": "Eğitim Programı"
+    }
+  ],
+  "components.Sigmanauts.text": [
+    {
+      "type": 0,
+      "value": "Ergo'nun şekillenmesine ve büyümesine yardımcı olmak için Sigmanaut Eğitim Programına başvurun. "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Sıfırdan finansman oluşturalım."
+    }
+  ],
+  "components.Sigmanauts.title": [
+    {
+      "type": 0,
+      "value": "Sigmanauts"
+    }
+  ],
+  "components.Spotlight.button": [
+    {
+      "type": 0,
+      "value": "TÜM GÖNDERİLERİ GÖR"
+    }
+  ],
+  "components.Spotlight.title": [
+    {
+      "type": 0,
+      "value": "Gündem"
+    }
+  ],
+  "components.autolykos.button": [
+    {
+      "type": 0,
+      "value": "ERG EDİN"
+    }
+  ],
+  "components.autolykos.header": [
+    {
+      "type": 0,
+      "value": "AUTOLYKOS"
+    }
+  ],
+  "components.autolykos.text": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Autolykos"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " GPU'lara yönelik, ASIC'e dayanıklı İş Kanıtı algoritmasıdır."
+    }
+  ],
+  "components.autolykos.title": [
+    {
+      "type": 0,
+      "value": "İş Kanıtı'nın Geleceği"
+    }
+  ],
+  "components.communityHero.subtitle": [
+    {
+      "type": 0,
+      "value": "SIFIRDAN FİNANSMAN"
+    }
+  ],
+  "components.communityHero.title": [
+    {
+      "type": 0,
+      "value": "Topluluk"
+    }
+  ],
+  "components.communitySection.communityHero.linkText": [
+    {
+      "type": 0,
+      "value": "Katkı"
+    }
+  ],
+  "components.communitySection.communityHero.text1": [
+    {
+      "type": 0,
+      "value": "Ergo sıfırdan oluşturulan merkezi olmayan bir platformdur ve kendi topluluğu tarafından desteklenir."
+    }
+  ],
+  "components.communitySection.communityHero.text2": [
+    {
+      "type": 0,
+      "value": "Sosyalden bize katılın ve dahil olun. Kontrol edin"
+    }
+  ],
+  "components.communitySection.communityHero.text3": [
+    {
+      "type": 0,
+      "value": "daha fazla bilgi için sayfasına bakın"
+    }
+  ],
+  "components.dApps.heading": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "components.discoverErgo.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo, esnek ve güçlü Sıfır Bilgi kanıtlarıyla (Σ-protokolleri) oluşturulmuş güvenli ve zengin bir kodlama diliyle desteklenen, yeni finansal etkileşim modellerine olanak tanıyan yeni nesil bir İş Kanıtı akıllı sözleşme platformudur."
+    }
+  ],
+  "components.discoverHero.button1": [
+    {
+      "type": 0,
+      "value": "DÖKÜMANLARI OKUYUN"
+    }
+  ],
+  "components.discoverHero.button2": [
+    {
+      "type": 0,
+      "value": "DECO İLE ÖĞRENİN"
+    }
+  ],
+  "components.discoverHero.button3": [
+    {
+      "type": 0,
+      "value": "MANİFESTO'YU OKUYUN"
+    }
+  ],
+  "components.discoverHero.button4": [
+    {
+      "type": 0,
+      "value": "BLOG'A BAKIN"
+    }
+  ],
+  "components.discoverHero.button5": [
+    {
+      "type": 0,
+      "value": "KURULUM DOSYASI ALIN"
+    }
+  ],
+  "components.discoverHero.button6": [
+    {
+      "type": 0,
+      "value": "ERGONAUT.SPACE'İ ZİYARET EDİN"
+    }
+  ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Ergo'yu Keşfet"
+    }
+  ],
+  "components.documents.description": [
+    {
+      "type": 0,
+      "value": "Ergo, araştırmaya dayalı bir yaklaşım benimsiyor ve geliştiricilerin gelecek yıllarda üzerine inşa edebileceği sağlam bir platform sağlamak için istikrarlı, iyi test edilmiş çözümler kullanıyor. Ergo çözümlerinin çoğu, hakemli konferanslarda sunulan makalelerde resmileştirilmiş ve toplulukta geniş çapta tartışılmıştır."
+    }
+  ],
+  "components.documents.heading": [
+    {
+      "type": 0,
+      "value": "Belgeler"
+    }
+  ],
+  "components.ecosystemHero.title": [
+    {
+      "type": 0,
+      "value": "Eko sistem"
+    }
+  ],
+  "components.ergoExplorer.button1": [
+    {
+      "type": 0,
+      "value": "TARAYICI"
+    }
+  ],
+  "components.ergoExplorer.button2": [
+    {
+      "type": 0,
+      "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoRaffle.description": [
+    {
+      "type": 0,
+      "value": "ErgoRaffle, herkesin bir proje için para toplamasını sağlayan, Ergo Platformu üzerine kurulu bir kitlesel fonlama hizmetidir. Bu proje, doğrudan bir bağıştan bir hayır kurumuna, akademik veya iş planına veya insanları zorlukla kazandıkları ERG'den ayrılmaya ikna edebileceğiniz herhangi bir şey olabilir! Ek bir bonus olarak, Çekilişi bitirdikten sonra bir piyango düzenlenir ve şanslı bir katılımcı, \"çekiliş ödülü\" olarak çekilişin belirli bir yüzdesini kazanır."
+    }
+  ],
+  "components.ergoRaffle.heading": [
+    {
+      "type": 0,
+      "value": "Ergo Çekiliş"
+    }
+  ],
+  "components.ergofoundation.list1": [
+    {
+      "type": 0,
+      "value": "Ergo Platform protokolünün "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "kesintisiz gelişiminin"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " desteklenmesi;"
+    }
+  ],
+  "components.ergofoundation.list2": [
+    {
+      "type": 0,
+      "value": "Ergo Platformunun ve onun "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": " yerel tokeninin "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " (ERG) yaygın şekilde benimsenmesini ve kullanımını artırmak;"
+    }
+  ],
+  "components.ergofoundation.list3": [
+    {
+      "type": 0,
+      "value": "Ergo Platformu çevresinde "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "ekosistemin"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " geliştirilmesi;"
+    }
+  ],
+  "components.ergofoundation.list4": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": " Toplumsal fayda "
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " için Ergo Platformu ve blockchain teknolojisinin kullanımını yaygınlaştırmak;"
+    }
+  ],
+  "components.ergofoundation.list5": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Gerçekten merkezi olmayan altyapıyı"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " destekleyin ve;"
+    }
+  ],
+  "components.ergofoundation.list6": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Gizliliği"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " temel bir insan hakkı olarak desteklemek."
+    }
+  ],
+  "components.ergofoundation.title": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Ergo Vakfı"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": ", topluluk odaklı bir kuruluş olup,"
+    }
+  ],
+  "components.exchanges.available": [
+    {
+      "type": 0,
+      "value": "Popüler borsalarda ve merkezi olmayan borsalarda mevcuttur."
+    }
+  ],
+  "components.exchanges.disclaimer": [
+    {
+      "type": 0,
+      "value": "Sorumluluk reddi: Borsalar, fonlarınız ve bilgileriniz üzerinde oldukça farklı derecelerde emniyet, güvenlik, gizlilik ve kontrol sağlar. Kendi paranızı cüzdanınızda saklamanızı ve yukarıda verilen cüzdan seçeneklerinden birini kullanmanızı önemle tavsiye ederiz."
+    }
+  ],
+  "components.exchanges.heading": [
+    {
+      "type": 0,
+      "value": "ERGO'YU AL, SAT VE TİCARET YAP"
+    }
+  ],
+  "components.exchanges.subheading": [
+    {
+      "type": 0,
+      "value": "Borsalar"
+    }
+  ],
+  "components.explore.description": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer, blockchain arayüzüdür. Gerçek zamanlı olarak yapılan her işlemi izleyin. Veya ergo.watch'ta topluluğun seçtiği ölçümleri görüntüleyin."
+    }
+  ],
+  "components.explore.heading": [
+    {
+      "type": 0,
+      "value": "Keşfet"
+    }
+  ],
+  "components.explore.subheading": [
+    {
+      "type": 0,
+      "value": "ERGO'NUN İŞLEMLER DENİZİNE DALIN"
+    }
+  ],
+  "components.faq.anyQuestions": [
+    {
+      "type": 0,
+      "value": "HERHANGİ BİR SORU?"
+    }
+  ],
+  "components.faq.description": [
+    {
+      "type": 0,
+      "value": "En sık sorulan sorulardan bazılarını derledik."
+    }
+  ],
+  "components.faq.heading": [
+    {
+      "type": 0,
+      "value": "SSS"
+    }
+  ],
+  "components.faq.text.2": [
+    {
+      "type": 0,
+      "value": "ARADIĞINIZ ŞEYİ "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " BULAMADINIZ MI?"
+    }
+  ],
+  "components.favorites.button1": [
+    {
+      "type": 0,
+      "value": "ERGO ÇEKİLİŞLERİNİ KEŞFET"
+    }
+  ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Popüler merkezi ve merkezi olmayan borsalarda mevcuttur."
+    }
+  ],
+  "components.getErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Borsalar"
+    }
+  ],
+  "components.getErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, ASIC'e dayanıklı ve yaygın olarak kullanılan GPU'lara (Ekran Kartları) uygun bir İş Kanıtı algoritması."
+    }
+  ],
+  "components.getErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Kazmaya başla"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "ERG'nizi güvende tutmak için basit ve güvenli gözetlenemeyen cüzdanlar."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Cüzdanlar"
+    }
+  ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "ERG'nizi büyüyen ekosistemimizde bugün kullanmaya başlayın"
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Ekosistem"
+    }
+  ],
+  "components.getErg.description": [
+    {
+      "type": 0,
+      "value": "Ergo'nun üzerinde gelişen zengin bir ekosistem var. İster geliştirici, madenci veya yatırımcı olun, yanınızdayız."
+    }
+  ],
+  "components.getErg.title": [
+    {
+      "type": 0,
+      "value": "ERG Al"
+    }
+  ],
+  "components.grantsAndBounties.button1": [
+    {
+      "type": 0,
+      "value": "KATKI"
+    }
+  ],
+  "components.grantsAndBounties.button2": [
+    {
+      "type": 0,
+      "value": "ÇEKİLİŞ BAŞLAT"
+    }
+  ],
+  "components.grantsAndBounties.button3": [
+    {
+      "type": 0,
+      "value": "TEMAS SAĞLAYIN"
+    }
+  ],
+  "components.grantsAndBounties.description": [
+    {
+      "type": 0,
+      "value": "Genel olarak, toplum için eğitici olan her şey, özel olarak belirtilmemiş olsa bile, bir miktar ödüle tabidir. Temel ekosistem altyapısı oluşturmaya odaklanan projeler için yardım fonu arıyoruz. Ancak, biraz fon almanın en hızlı yolu bir Çekiliş başlatmaktır."
+    }
+  ],
+  "components.grantsAndBounties.heading": [
+    {
+      "type": 0,
+      "value": "Yardımlar & Ödüller"
+    }
+  ],
+  "components.hallOfFame.description1": [
+    {
+      "type": 0,
+      "value": "Ergo, NXT, Scorex, Cardano ve Waves dahil olmak üzere kripto para birimleri ve blockchain çerçeveleri ile temel geliştirme konusunda sağlam bir geçmişe sahip bir ekiple kuruldu. Aşağıda, bazı çekirdek ERGO ekibinin yanı sıra, bazılarının anonim olduğu diğer birçok geliştirici ve topluluk üyesinin kısa biyografileri bulunmaktadır."
+    }
+  ],
+  "components.hallOfFame.description2": [
+    {
+      "type": 0,
+      "value": "Ergo sıfırdan kurulmadır ve çekirdek ekip üyelerinin çoğu (ve hatta vakıf üyeleri) topluluk üyesi olarak işe başlamıştır. Bu sayfanın alt kısmında Ergo Vakfı hakkında daha fazla bilgi edinmek için kısa bir açıklama ve bilgi bulunmaktadır."
+    }
+  ],
+  "components.hallOfFame.tab1": [
+    {
+      "type": 0,
+      "value": "ÇEKİRDEK"
+    }
+  ],
+  "components.hallOfFame.tab2": [
+    {
+      "type": 0,
+      "value": "TOPLULUK"
+    }
+  ],
+  "components.hallOfFame.tab3": [
+    {
+      "type": 0,
+      "value": "VAKIF"
+    }
+  ],
+  "components.hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Onur Listesi"
+    }
+  ],
+  "components.highlights.slide.1.quote": [
+    {
+      "type": 0,
+      "value": "%95.57 "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    },
+    {
+      "type": 0,
+      "value": " Halk'a Tahsis"
+    }
+  ],
+  "components.highlights.slide.1.text": [
+    {
+      "type": 0,
+      "value": "Ergo, 2019'da başka hiçbir akıllı sözleşme platformuna benzemeyen bir dağıtımla hayata geçirilen, topluluk odaklı bir projedir; fonların %4,43'ü Ergo Vakfı Hazinesine tahsis edilmiş olup, sağlam ve merkezi olmayan bir ekosistemi teşvik etme kararlılığımızın altını çizmektedir. "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    }
+  ],
+  "components.highlights.slide.1.title": [
+    {
+      "type": 0,
+      "value": "Adil Bir Başlangıç"
+    }
+  ],
+  "components.highlights.slide.2.quote": [
+    {
+      "type": 0,
+      "value": "GERÇEK P2P"
+    }
+  ],
+  "components.highlights.slide.2.text": [
+    {
+      "type": 0,
+      "value": "Geleneksel bankacılığın karşılayamayacağı daha yenilikçi, hedefe yönelik uygulamaları mümkün kılmak. Ergo, akıllı sözleşmeyle desteklenen mikrokredi olanakları ve Yerel Borsa Ticaret Sistemleri (LETS) ile güçlü araçlar sunar. "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    }
+  ],
+  "components.highlights.slide.2.title": [
+    {
+      "type": 0,
+      "value": "Alternatif Ekonomi"
+    }
+  ],
+  "components.highlights.slide.3.quote": [
+    {
+      "type": 0,
+      "value": "Σ-Protokolleri"
+    }
+  ],
+  "components.highlights.slide.3.text": [
+    {
+      "type": 0,
+      "value": "Özerkliği korumak için gizlilik bir seçenek olarak kalmalıdır. Mahremiyet, bireye alan yaratmak için bariyerler yaratma ve sınırlar koyma yeteneğidir. Hangi sınırları çizmek istediği kişiye bağlıdır. Bu, güvenli ve zengin bir kodlama dili. ErgoScript, esnek ve güçlü Sıfır Bilgi kanıtlarıyla desteklenen yeni finansal etkileşim modellerine olanak tanır. "
+    },
+    {
+      "type": 1,
+      "value": "breakingLine"
+    }
+  ],
+  "components.highlights.slide.3.title": [
+    {
+      "type": 0,
+      "value": "İsteğe Bağlı Gizlilik"
+    }
+  ],
+  "components.highlights.title": [
+    {
+      "type": 0,
+      "value": "ÖNE ÇIKANLAR"
+    }
+  ],
+  "components.homeHero.button": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "SUNUM"
+    }
+  ],
+  "components.homeHero.text": [
+    {
+      "type": 0,
+      "value": "Ergo, güvenli, erişilebilir ve merkezi olmayan finansal araçlar aracılığıyla sıradan insanların ekonomik özgürlüğünü sağlayan bir sonraki nesil akıllı sözleşme platformudur."
+    }
+  ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Finansın Geleceğine Verilen Güç"
+    }
+  ],
+  "components.homeInfo.blockReward": [
+    {
+      "type": 0,
+      "value": "BLOK ÖDÜLÜ"
+    }
+  ],
+  "components.homeInfo.circulatingSupply": [
+    {
+      "type": 0,
+      "value": "DOLAŞIMDAKİ ARZ"
+    }
+  ],
+  "components.homeInfo.hashRate": [
+    {
+      "type": 0,
+      "value": "HASH ORANI"
+    }
+  ],
+  "components.homeInfo.transactionPerDay": [
+    {
+      "type": 0,
+      "value": "GÜNLÜK İŞLEMLER"
+    }
+  ],
+  "components.learn.description": [
+    {
+      "type": 0,
+      "value": "Temelden başlayın. Ergo nedir? Ergo'da neler yapabilirsiniz?"
+    }
+  ],
+  "components.learn.heading": [
+    {
+      "type": 0,
+      "value": "Öğren"
+    }
+  ],
+  "components.mining.button1": [
+    {
+      "type": 0,
+      "value": "DOKÜMANTASYON"
+    }
+  ],
+  "components.mining.button2": [
+    {
+      "type": 0,
+      "value": "MADENCİ HAVUZ İSTATİSTİKLERİ"
+    }
+  ],
+  "components.mining.button3": [
+    {
+      "type": 0,
+      "value": "DISCORD"
+    }
+  ],
+  "components.mining.button4": [
+    {
+      "type": 0,
+      "value": "SUBREDDIT"
+    }
+  ],
+  "components.mining.button5": [
+    {
+      "type": 0,
+      "value": "MADENCİ BLOG YAZILARI"
+    }
+  ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "EMİSYON & TOKENOMICS"
+    }
+  ],
+  "components.mining.calculator.currentBlockReward": [
+    {
+      "type": 0,
+      "value": "Mevcut blok ödülü"
+    }
+  ],
+  "components.mining.calculator.currentPrice": [
+    {
+      "type": 0,
+      "value": "Mevcut fiyat"
+    }
+  ],
+  "components.mining.calculator.description": [
+    {
+      "type": 0,
+      "value": "Autolykos, GPU'lar için yönlendirilmiş, bellek-zor ASIC-dirençli Proof of Work (PoW) algoritmasıdır."
+    }
+  ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Hash oranınız"
+    }
+  ],
+  "components.mining.calculator.networkHashrate": [
+    {
+      "type": 0,
+      "value": "Ağ hash oranı"
+    }
+  ],
+  "components.mining.calculator.rev": [
+    {
+      "type": 0,
+      "value": "Günlük gelir"
+    }
+  ],
+  "components.mining.calculator.title": [
+    {
+      "type": 0,
+      "value": "Madencilik Hesaplayıcı"
+    }
+  ],
+  "components.mining.minersTitle": [
+    {
+      "type": 0,
+      "value": "Madenciler"
+    }
+  ],
+  "components.mining.miningPoolsTitle": [
+    {
+      "type": 0,
+      "value": "Madencilik Havuzları"
+    }
+  ],
+  "components.mining.text.1": [
+    {
+      "type": 0,
+      "value": "Ergo madenciliği, Autolykos'a dayalı olarak gerçekleştirilen verimli ASIC-dirençli Proof of Work algoritmasına dayanmaktadır. Madenciler, zincir üzerinde oylama ile parametreleri ayarlayabilir; daha büyük değişiklikler, yumuşak bir çatal ile süper çoğunluk tarafından uygulanır. Ayrıca, oy tokenleri, alt havuzlama ve log-alan madenciliği gibi heyecan verici gelişmelerin herhangi birine katılabilirler. Ergo, çekirdekte basitlik üzerine odaklanırken, dayanıklı, sözleşmeli para yaratmak için uygulama katmanında gelişmiş özellikler bulunmaktadır."
+    }
+  ],
+  "components.mining.text.2": [
+    {
+      "type": 0,
+      "value": "Proof of Work'ün geleceğine hoş geldiniz."
+    }
+  ],
+  "components.mining.text.3": [
+    {
+      "type": 0,
+      "value": "Başlamak için, topluluk tarafından oluşturulan Madencilik El Kitabı'nı, Dokümantasyonu kontrol edin veya madencilik tartışma alanlarına katılın."
+    }
+  ],
+  "components.mining.title": [
+    {
+      "type": 0,
+      "value": "Madencilik"
+    }
+  ],
+  "components.news.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "components.news.latest": [
+    {
+      "type": 0,
+      "value": "en son haberler"
+    }
+  ],
+  "components.news.title": [
+    {
+      "type": 0,
+      "value": "Haberler"
+    }
+  ],
+  "components.ourFavorites.heading": [
+    {
+      "type": 0,
+      "value": "FAVORİLERİMİZ"
+    }
+  ],
+  "components.ourmission.description": [
+    {
+      "type": 0,
+      "value": "Ergo Vakfı, Ergo Platform protokolünün organik ve bozulmamış gelişimine bağlıdır."
+    }
+  ],
+  "components.ourmission.emissionAndTokenomics": [
+    {
+      "type": 0,
+      "value": "EMİSYON VE TOKENOMICS"
+    }
+  ],
+  "components.ourmission.ergofoundation": [
+    {
+      "type": 0,
+      "value": "ERGO VAKFI"
+    }
+  ],
+  "components.ourmission.reachus.twitter": [
+    {
+      "type": 0,
+      "value": "TWITTER'DA BİZE ULAŞIN"
+    }
+  ],
+  "components.ourmission.subdescription": [
+    {
+      "type": 0,
+      "value": "Ergo Vakfı, en az izin veren lisansla yapılan değerli ekosistem gelişmelerinin sayısını maksimize etmek için çaba göstermektedir."
+    }
+  ],
+  "components.ourmission.title": [
+    {
+      "type": 0,
+      "value": "Misyonumuz"
+    }
+  ],
+  "components.partners.title": [
+    {
+      "type": 0,
+      "value": "Ortaklar"
+    }
+  ],
+  "components.roadmap.coinmarketcal": [
+    {
+      "type": 0,
+      "value": "COINMARKETCAL'DA DAHA FAZLASINI GÖRÜNTÜLE"
+    }
+  ],
+  "components.roadmap.description": [
+    {
+      "type": 0,
+      "value": "Lütfen Ergo'nun bir platform olduğunu unutmayın. Aşağıda listelenen projelerin çoğunun Ergo Vakfı veya birbiriyle resmi bir bağlantısı yoktur."
+    }
+  ],
+  "components.roadmap.section1.title": [
+    {
+      "type": 0,
+      "value": "ŞUANA KADAR"
+    }
+  ],
+  "components.roadmap.section2.title": [
+    {
+      "type": 0,
+      "value": "EKOSİSTEM"
+    }
+  ],
+  "components.roadmap.section3.title": [
+    {
+      "type": 0,
+      "value": "YAKINDA"
+    }
+  ],
+  "components.roadmap.section4.title": [
+    {
+      "type": 0,
+      "value": "2023 VE SONRASI"
+    }
+  ],
+  "components.roadmap.title": [
+    {
+      "type": 0,
+      "value": "Yol Haritası"
+    }
+  ],
+  "components.software.description": [
+    {
+      "type": 0,
+      "value": "Ergo Düğümü, Ergo üzerinde geliştirme yapmanızı sağlar ve blok zinciri ile iletişim kurmanıza olanak tanır."
+    }
+  ],
+  "components.software.heading": [
+    {
+      "type": 0,
+      "value": "Yazılım"
+    }
+  ],
+  "components.uniqueErgo.card1.button": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "components.uniqueErgo.card1.text": [
+    {
+      "type": 0,
+      "value": "Ergo, on yılın üzerinde blok zinciri gelişiminden faydalanarak, kriptografi, uzlaşma modelleri ve dijital para birimleri üzerine en iyi hakemli akademik araştırmalarla test edilmiş prensipleri tamamlar. Sağlam blok zinciri temelleriyle başlarız ve yeni ve güçlü kriptografiyi doğal olarak uygularız."
+    }
+  ],
+  "components.uniqueErgo.card1.title": [
+    {
+      "type": 0,
+      "value": "ARAŞTIRMA VE GERÇEK DÜNYAYA ODAKLI"
+    }
+  ],
+  "components.uniqueErgo.card2.button": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "components.uniqueErgo.card2.text": [
+    {
+      "type": 0,
+      "value": "Ergo, gerçek dünya finansal anlaşmaları için üstün destek sağlar. Ergo, tahmin edilebilir bir şekilde çalışan çok yönlü dApp'leri destekler, belirli maliyetlere sahiptir ve sınırsız işlevselliğin hiçbir tehlikesi yoktur. Ergo'nun akıllı sözleşmeleri geniş kapsamlı görevleri yürütmemize izin verir ve Turing tamamlanabilir, ancak her zaman önceden ne kadar mal olacağını ve başarılı bir şekilde çalışıp çalışmayacağını biliriz."
+    }
+  ],
+  "components.uniqueErgo.card2.title": [
+    {
+      "type": 0,
+      "value": "GÜÇLÜ VE GÜVENLİ"
+    }
+  ],
+  "components.uniqueErgo.card3.button": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "components.uniqueErgo.card3.text": [
+    {
+      "type": 0,
+      "value": "Sigma Protokolleri (Σ-Protokolleri), Ergo'nun akıllı sözleşmelerinin temelidir. Bu protokoller, imkansız, riskli veya pahalı olacak karmaşık görevleri uygulamamıza olanak tanıyan verimli sıfır bilgi protokollerinin bir sınıfına izin verir. Kendi kendine egemen uygulama seviyesi gizliliğine hoş geldiniz: üçüncü taraflara gerek duyulmadan karıştırıcıları veya diğer işlevleri kullanmak için üçüncü tarafa ihtiyaç duymayan betikler."
+    }
+  ],
+  "components.uniqueErgo.card3.title": [
+    {
+      "type": 0,
+      "value": "AKILLI VE BASİT"
+    }
+  ],
+  "components.uniqueErgo.card4.button": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "components.uniqueErgo.card4.text": [
+    {
+      "type": 0,
+      "value": "Tam düğüm çalıştırmayan sıradan kullanıcılar, madencilerle aynı güvenlik avantajlarından faydalanmalıdır. Non-Interactive Proofs of Proof-of-Work (NIPOPOWS), tam blok zincirini indirmek için gereken depolama, bant genişliği ve zaman gerektirmeksizin tamamen güvenle işlem yapmamızı ve doğrulamamızı sağlar. Yalnızca 1 MB veri gereklidir, bu da herhangi bir cihazı kullanabileceğiniz anlamına gelir."
+    }
+  ],
+  "components.uniqueErgo.card4.title": [
+    {
+      "type": 0,
+      "value": "GÜVENLİ VE ERİŞİLEBİLİR"
+    }
+  ],
+  "components.uniqueErgo.title": [
+    {
+      "type": 0,
+      "value": "ERGO'YU BENZERSİZ YAPAN NEDİR?"
+    }
+  ],
+  "components.usingErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Popüler merkezi ve merkezi olmayan borsalarda mevcuttur."
+    }
+  ],
+  "components.usingErg.BuyIt.title": [
+    {
+      "type": 0,
+      "value": "Borsalar"
+    }
+  ],
+  "components.usingErg.MineIt.text": [
+    {
+      "type": 0,
+      "value": "Autolykos, ASIC'e dayanıklı ve yaygın olarak kullanılan GPU'lara (Ekran Kartları) uygun bir İş Kanıtı algoritması."
+    }
+  ],
+  "components.usingErg.MineIt.title": [
+    {
+      "type": 0,
+      "value": "Kazmaya başla"
+    }
+  ],
+  "components.usingErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "ERG'nizi güvende tutmak için basit ve güvenli gözetlenemeyen cüzdanlar."
+    }
+  ],
+  "components.usingErg.description": [
+    {
+      "type": 0,
+      "value": "Ergo zengin bir ekosistem gelişmektedir. Geliştirici, madenci veya yatırımcı olmanız fark etmez, herkesi destekleriz."
+    }
+  ],
+  "components.usingErg.subtitle": [
+    {
+      "type": 0,
+      "value": "DURDURULAMAZ DEFI"
+    }
+  ],
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "ERG EDİN"
+    }
+  ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
+  "components.wallets.chooseYours": [
+    {
+      "type": 0,
+      "value": "SENİNKİNİ SEÇ"
+    }
+  ],
+  "components.wallets.coldStorageHeader": [
+    {
+      "type": 0,
+      "value": "Soğuk Depolama"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "dApp Bağlayıcı"
+    }
+  ],
+  "components.wallets.featureHeader": [
+    {
+      "type": 0,
+      "value": "Özellik"
+    }
+  ],
+  "components.wallets.setupGuides": [
+    {
+      "type": 0,
+      "value": "KURULUM REHBERLERİ"
+    }
+  ],
+  "components.wallets.walletDescription1": [
+    {
+      "type": 0,
+      "value": "Dijital cüzdanlar dijital paranızı güvenli, özel ve kontrolünüzde tutmanıza yardımcı olabilir."
+    }
+  ],
+  "components.wallets.walletDescription2": [
+    {
+      "type": 0,
+      "value": "Cüzdanlar üçüncü taraflar tarafından desteklenmektedir, aşağıdaki bilgileri size genel dijital para deneyiminizi basitleştirmek için bir nezaket olarak sağlıyoruz."
+    }
+  ],
+  "components.wallets.walletsHeader": [
+    {
+      "type": 0,
+      "value": "Cüzdanlar"
+    }
+  ],
+  "components.wallets.walletsTitle": [
+    {
+      "type": 0,
+      "value": "Cüzdanlar"
+    }
+  ],
+  "components.wiki.description": [
+    {
+      "type": 0,
+      "value": "ergonaut.space topluluk destekli bir wiki'dir! Ergo blok zincirinin temel teknik detayları hakkında, teknik olmayan kişiler için anlaşılabilir bir dilde bol miktarda harika bilgi doludur. Ayrıca birçok kılavuz, eğitim ve kullanıcı tarafından gönderilen içerik bulunmaktadır. Katkıda bulunmaya başlamak için bir hesap oluşturun!"
+    }
+  ],
+  "components.wiki.description.short": [
+    {
+      "type": 0,
+      "value": "ergonaut.space, Ergo blok zincirinin topluluk wiki'sidir, teknik olmayan kişiler için Ergo blok zincirinin kullanımı ve temel teknik detaylarını çeviren bir rehberdir."
+    }
+  ],
+  "components.wiki.heading": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "footer.blog.title": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "footer.community.1": [
+    {
+      "type": 0,
+      "value": "Kanallarımıza katılın"
+    }
+  ],
+  "footer.community.2": [
+    {
+      "type": 0,
+      "value": "Sigmanauts"
+    }
+  ],
+  "footer.community.3": [
+    {
+      "type": 0,
+      "value": "Ergo'ya Katkıda Bulunun"
+    }
+  ],
+  "footer.community.4": [
+    {
+      "type": 0,
+      "value": "Onur Listesi"
+    }
+  ],
+  "footer.community.5": [
+    {
+      "type": 0,
+      "value": "Ergo Vakfı"
+    }
+  ],
+  "footer.community.title": [
+    {
+      "type": 0,
+      "value": "TOPLULUK"
+    }
+  ],
+  "footer.discover.1": [
+    {
+      "type": 0,
+      "value": "Yazılım Sürümleri"
+    }
+  ],
+  "footer.discover.2": [
+    {
+      "type": 0,
+      "value": "Bağışlar ve Ödüller"
+    }
+  ],
+  "footer.discover.3": [
+    {
+      "type": 0,
+      "value": "SSS"
+    }
+  ],
+  "footer.discover.4": [
+    {
+      "type": 0,
+      "value": "Keşfet"
+    }
+  ],
+  "footer.discover.5": [
+    {
+      "type": 0,
+      "value": "Belgeler"
+    }
+  ],
+  "footer.discover.title": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "footer.ecosystem.1": [
+    {
+      "type": 0,
+      "value": "DApps"
+    }
+  ],
+  "footer.ecosystem.2": [
+    {
+      "type": 0,
+      "value": "Yol Haritası"
+    }
+  ],
+  "footer.ecosystem.3": [
+    {
+      "type": 0,
+      "value": "Wiki"
+    }
+  ],
+  "footer.ecosystem.4": [
+    {
+      "type": 0,
+      "value": "Ergo Çekilişi"
+    }
+  ],
+  "footer.ecosystem.5": [
+    {
+      "type": 0,
+      "value": "Videolar"
+    }
+  ],
+  "footer.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "EKOSİSTEM"
+    }
+  ],
+  "footer.getErg.1": [
+    {
+      "type": 0,
+      "value": "Madencilik"
+    }
+  ],
+  "footer.getErg.2": [
+    {
+      "type": 0,
+      "value": "Madencilik Hesaplayıcı"
+    }
+  ],
+  "footer.getErg.3": [
+    {
+      "type": 0,
+      "value": "Cüzdanlar"
+    }
+  ],
+  "footer.getErg.4": [
+    {
+      "type": 0,
+      "value": "Borsalar"
+    }
+  ],
+  "footer.getErg.title": [
+    {
+      "type": 0,
+      "value": "ERG EDİN"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Yasal"
+    }
+  ],
+  "footer.news.title": [
+    {
+      "type": 0,
+      "value": "HABERLER"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Gizlilik Politikası"
+    }
+  ],
+  "footer.weGotIt": [
+    {
+      "type": 0,
+      "value": "Anladık!"
+    }
+  ],
+  "navigation.discover": [
+    {
+      "type": 0,
+      "value": "KEŞFET"
+    }
+  ],
+  "navigation.ecosystem": [
+    {
+      "type": 0,
+      "value": "EKOSİSTEM"
+    }
+  ],
+  "navigation.ergoCommunity": [
+    {
+      "type": 0,
+      "value": "ERGO TOPLULUĞU"
+    }
+  ],
+  "navigation.getErg": [
+    {
+      "type": 0,
+      "value": "ERG EDİN"
+    }
+  ],
+  "navigation.moreContent": [
+    {
+      "type": 0,
+      "value": "Daha fazla içerik?"
+    }
+  ],
+  "pages.404.hero": [
+    {
+      "type": 0,
+      "value": "404. Sayfa Bulunamadı."
+    }
+  ],
+  "pages.404.title": [
+    {
+      "type": 0,
+      "value": "Bulunamadı"
+    }
+  ],
+  "pages.blog.title": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "pages.community.title": [
+    {
+      "type": 0,
+      "value": "Topluluk"
+    }
+  ],
+  "pages.discover.title": [
+    {
+      "type": 0,
+      "value": "Keşfet"
+    }
+  ],
+  "pages.ecosystem.title": [
+    {
+      "type": 0,
+      "value": "Ekosistem"
+    }
+  ],
+  "pages.get-erg.title": [
+    {
+      "type": 0,
+      "value": "Erg Edin"
+    }
+  ],
+  "pages.home.title": [
+    {
+      "type": 0,
+      "value": "Ana Sayfa"
+    }
+  ],
+  "pages.legal.title": [
+    {
+      "type": 0,
+      "value": "Yasal"
+    }
+  ],
+  "pages.mobile-wallets": [
+    {
+      "type": 0,
+      "value": "Mobil Cüzdanlar"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Gizlilik Politikası"
+    }
+  ]
+}
