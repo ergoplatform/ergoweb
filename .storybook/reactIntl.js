@@ -5,7 +5,7 @@ const locales = [
   // 'fr',
   // 'hi',
   "it",
-  // 'tr',
+  "tr",
   "pt",
   "hu",
   // 'ro',
