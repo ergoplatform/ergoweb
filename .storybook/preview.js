@@ -71,6 +71,7 @@ export const parameters = {
     es: 'Spanish',
     pt: 'Portuguese',
     ru: 'Russian',
+	  tr: 'Turkish',
   },
   layout: 'fullscreen',
   viewport: {
