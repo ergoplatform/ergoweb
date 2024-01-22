@@ -98,7 +98,7 @@ const nextConfig = {
       'cn',
       'id',
       // 'hi',
-      // 'tr',
+      'tr',
       // 'ro',
       // 'sk',
       // 'zh',
