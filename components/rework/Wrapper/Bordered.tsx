@@ -1,13 +1,34 @@
 import React from 'react';
 import LineBox from 'assets/index/why/line-box.svg';
+import classNames from 'classnames';
 
 interface Props {
   LeftSide: React.ReactNode;
   RightSide: React.ReactNode;
+  leftSideStyles?: string;
+  rightSideStyles?: string;
 }
 
 function Bordered(props: Props) {
-  const { LeftSide, RightSide } = props;
+  const {
+    LeftSide,
+    RightSide,
+    leftSideStyles = '',
+    rightSideStyles = '',
+  } = props;
+
+  const leftSideClasses = classNames(
+    'p-13.5 h-full lg-max:p-10 sm-max:p-5',
+    leftSideStyles
+  );
+
+  const rightSideClasses = classNames(
+    `
+      bg-background-transparent row-span-start col-span-1 row-span-1 h-full
+      md-max:col-span-2 md-max:row-start-2
+    `,
+    rightSideStyles
+  );
 
   return (
     <div className="flex md-max:flex-col-reverse">
@@ -18,7 +39,7 @@ function Bordered(props: Props) {
           sm-max:px-5
         "
       >
-        <div className="brand-139-gradient p-13.5 h-full lg-max:p-10 sm-max:p-5">{LeftSide}</div>
+        <div className={leftSideClasses}>{LeftSide}</div>
       </div>
       <div
         className="
@@ -37,15 +58,7 @@ function Bordered(props: Props) {
         >
           <LineBox className="h-full w-auto" />
         </div>
-        <div
-          className="
-            flex items-center justify-center
-            bg-background-transparent row-span-start col-span-1 row-span-1 h-full
-            md-max:col-span-2  md-max:row-start-2
-          "
-        >
-          {RightSide}
-        </div>
+        <div className={rightSideClasses}>{RightSide}</div>
         <div
           className="
             relative h-13.5 col-start-1 row-start-3 w-full-1 bg-dark

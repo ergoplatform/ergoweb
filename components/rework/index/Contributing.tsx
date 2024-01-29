@@ -6,7 +6,11 @@ import Button from 'components/rework/Button';
 function Contributing() {
   const LeftSide = (
     <div className="flex items-center justify-center w-full h-full p-4 md-max:h-auto">
-      <img src="/assets/index/contributing/swim.svg" alt="Contributing" className="w-full" />
+      <img
+        src="/assets/index/contributing/swim.svg"
+        alt="Contributing"
+        className="w-full"
+      />
     </div>
   );
 
@@ -16,8 +20,9 @@ function Contributing() {
         Contributing to Ergo
       </Typography>
       <Typography className="mb-12 md-max:mb-8 sm-max:mb-5">
-        Ergo embraces an open model, welcoming and valuing contributions from all. Whether you're a
-        developer, marketer, or enthusiast, there are many ways to contribute to Ergo's growth
+        Ergo embraces an open model, welcoming and valuing contributions from
+        all. Whether you're a developer, marketer, or enthusiast, there are many
+        ways to contribute to Ergo's growth
       </Typography>
       <Button type="link" link="/" kind="filled">
         Explore
@@ -27,7 +32,11 @@ function Contributing() {
 
   return (
     <div className="container-rework flex section">
-      <Bordered LeftSide={LeftSide} RightSide={RightSide} />
+      <Bordered
+        LeftSide={LeftSide}
+        RightSide={RightSide}
+        leftSideStyles="brand-139-gradient"
+      />
     </div>
   );
 }

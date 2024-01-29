@@ -537,3 +537,7 @@ code {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
+.screen-shadow {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 9.389px 20.421px 0px rgba(0, 0, 0, 0.10), 0px 37.086px 37.086px 0px rgba(0, 0, 0, 0.09), 0px 83.561px 50.231px 0px rgba(0, 0, 0, 0.05), 0px 148.814px 59.385px 0px rgba(0, 0, 0, 0.01), 0px 232.375px 65.018px 0px rgba(0, 0, 0, 0.00);
+}
