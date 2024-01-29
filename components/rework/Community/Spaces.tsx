@@ -29,7 +29,8 @@ const spacesList = [
 
 const socialLinkStyles = `
     inline-flex items-center mb-1.5 last:mb-0 gap-1 px-4 py-2.5 rounded-full 
-    border-main-border border lg-max:px-3 lg-max:py-1.5 lg-max:mb-1 md-max:shrink-0 md-max:mb-0
+    border-main-border border lg-max:px-3 lg-max:py-1.5 lg-max:mb-1 md-max:shrink-0 md-max:mb-0 
+    transition-colors hover:border-brand-orange
 `;
 
 const iconStyles = 'sm-max:w-5 sm-max:h-auto';

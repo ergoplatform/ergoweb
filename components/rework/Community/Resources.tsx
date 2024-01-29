@@ -2,13 +2,14 @@ import React from 'react';
 import Bordered from 'components/rework/Wrapper/Bordered';
 import Typography from 'components/rework/Typography';
 import ArrowIcon from 'assets/icons/arrow-rt.svg';
+import Link from 'next/link';
 
 function Resources() {
   const Arrow = (
     <div
       className={`
         flex items-center justify-center size-16 rounded-full border border-transparent-20 md-max:size-11
-        md-max:right-5 md-max:top-5
+        md-max:right-5 md-max:top-5 transition-colors group-hover:border-brand-orange
         `}
     >
       <ArrowIcon />
@@ -16,7 +17,7 @@ function Resources() {
   );
 
   const LeftSide = (
-    <>
+    <Link href="#" className="group">
       <div className="max-w-[275px] sm-max:w-full sm-max:pb-36">
         <Typography as="p" type="title-1" className="mb-5 sm-max:mb-2">
           Ergo Community Forum
@@ -33,11 +34,11 @@ function Resources() {
         src="/assets/rework/community/resources/forum.svg"
         alt="forum"
       />
-    </>
+    </Link>
   );
 
   const RightSide = (
-    <>
+    <Link href="#" className="group">
       <div className="max-w-[275px] sm-max:w-full sm-max:pb-36">
         <Typography as="p" type="title-1" className="mb-5 sm-max:mb-2">
           Sigmanauts training programme
@@ -53,7 +54,7 @@ function Resources() {
         src="/assets/rework/community/resources/soldier.svg"
         alt="forum"
       />
-    </>
+    </Link>
   );
 
   return (

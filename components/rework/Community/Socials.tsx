@@ -9,7 +9,7 @@ import Telegram from 'assets/icons/socials/telegram.svg';
 import ArrowIcon from 'assets/icons/arrow-rt.svg';
 
 const socialItemClass =
-  'relative grow bg-card-transparent-2 p-10 md-max:p-5 sm-max:block sm-max:mb-[2px] sm-max:last:mb-0 backdrop-blur-2xl';
+  'relative grow bg-card-transparent-2 p-10 md-max:p-5 sm-max:block sm-max:mb-[2px] sm-max:last:mb-0 backdrop-blur-2xl group';
 const socialItemIconClass =
   'w-16 h-auto mb-6 lg-max:w-14 md-max:w-11 md-max:mb-5';
 
@@ -41,7 +41,7 @@ function Socials() {
     <div
       className={`
         absolute right-10 top-10 flex items-center justify-center size-16 rounded-full border border-transparent-20 md-max:size-11
-        md-max:right-5 md-max:top-5
+        md-max:right-5 md-max:top-5 transition-colors group-hover:border-brand-orange
     `}
     >
       <ArrowIcon />
