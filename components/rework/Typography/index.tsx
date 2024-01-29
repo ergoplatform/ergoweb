@@ -42,7 +42,7 @@ const getTextClass = (type: TypographyType) => {
       return `
         text-4xl font-vinila-test font-bold tracking-[-.125rem] 
         lg-max:text-3xl
-        md-max:text-2xl
+        md-max:text-2xl md-max:tracking-[-.003rem] 
       `;
     case 'title-2':
       return `
