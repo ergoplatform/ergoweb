@@ -1,15 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
 import Typography from 'components/rework/Typography';
 import ArrowIcon from 'assets/icons/arrow-rt.svg';
 import LineBox from 'assets/index/why/line-box.svg';
 
 function Explore() {
   const Arrow = (
-    <div className="flex items-center justify-center size-16 rounded-full border border-transparent-20 md-max:size-11">
+    <div className="flex items-center justify-center size-16 rounded-full border border-transparent-20 md-max:size-11  transition-colors group-hover:border-brand-orange">
       <ArrowIcon />
     </div>
   );
-
   return (
     <div className="container-rework section">
       <div className="flex mb-12 items-center gap-x-16 md-max:block md-max:mb-6">
@@ -17,8 +17,8 @@ function Explore() {
           Explore ERG
         </Typography>
         <Typography as={'p'} className="max-w-[505px] lg-max:max-w-[440px]">
-          There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
-          investor, we have you covered
+          There is a rich ecosystem budding on top of Ergo. Whether you are a
+          developer, miner, or investor, we have you covered
         </Typography>
       </div>
       <div
@@ -29,10 +29,11 @@ function Explore() {
         "
       >
         <LineBox className="absolute left-0 bottom-0 stroke-main-border size-13.5 lg-max:size-10 sm-max:size-5" />
-        <div
-          className="
+        <Link
+          href={'#'}
+          className=" block
         relative overflow-hidden h-full-1 border border-main-border border-b-0 
-        p-13.5 mb-[-1px] bg-background-cardDark lg-max:p-10 sm-max:p-5"
+        p-13.5 mb-[-1px] bg-background-cardDark lg-max:p-10 sm-max:p-5 group"
         >
           <Typography type="title-1" className="mb-5 sm-max:mb-2">
             Buy & hodl
@@ -53,7 +54,7 @@ function Explore() {
               sm-max:w-[105px] sm-max:right-[20px] sm-max:top-[48px]
             "
           />
-        </div>
+        </Link>
       </div>
       <div
         className="
@@ -63,18 +64,22 @@ function Explore() {
           sm-max:p-5 sm-max:pt-0
         "
       >
-        <div
+        <Link
+          href={'#'}
           className="
             relative overflow-hidden h-full-1 border border-brand-orange border-t-0 
             border-r-0 p-13.5 mb-[-1px] bg-card-transparent-2 w-1/2 lg-max:p-10
             md-max:w-full md-max:border md-max:border-b-0 md-max:border-t-0
-            sm-max:p-5
+            sm-max:p-5 group block
           "
         >
           <Typography type="title-1" className="mb-5 sm-max:mb-2">
             Earn
           </Typography>
-          <Typography as={'p'} className="mb-8 lg-max:max-w-[160px] sm-max:w-[110px] sm-max:mb-5">
+          <Typography
+            as={'p'}
+            className="mb-8 lg-max:max-w-[160px] sm-max:w-[110px] sm-max:mb-5"
+          >
             Earn by contributing to the network
           </Typography>
           {Arrow}
@@ -87,13 +92,14 @@ function Explore() {
               sm-max:w-[135px]  sm-max:right-[-15px] sm-max:bottom-[25px]
             "
           />
-        </div>
-        <div
+        </Link>
+        <Link
+          href={'#'}
           className="
             relative overflow-hidden h-full-1 border-b border-brand-orange
             p-13.5 mb-[-1px] bg-card-transparent-3 w-1/2 lg-max:p-10
             md-max:w-full md-max:border md-max:border-t-0
-            sm-max:p-5
+            sm-max:p-5 group block
           "
         >
           <Typography type="title-1" className="mb-5 sm-max:mb-2">
@@ -115,7 +121,7 @@ function Explore() {
               sm-max:w-[154px] sm-max:right-[-10px] sm-max:bottom-[32px]
             "
           />
-        </div>
+        </Link>
         <LineBox className="absolute right-0 top-0 size-13.5 lg-max:size-10 sm-max:size-5" />
       </div>
     </div>
