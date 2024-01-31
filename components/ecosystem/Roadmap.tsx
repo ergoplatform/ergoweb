@@ -87,7 +87,7 @@ export default function Roadmap(props: Props) {
     },
     {
       name: (
-        <FormattedMessage defaultMessage="2023 & BEYOND" id="components.roadmap.section4.title" />
+        <FormattedMessage defaultMessage="2024 & BEYOND" id="components.roadmap.section4.title" />
       ),
       tag: 'this_year',
     },
