@@ -8,12 +8,11 @@ export default function LanguageSwitcher({ color = 'default' }) {
   const data = useRouter();
   const { locale, locales, asPath } = data;
 
-  const [selected, setSelected] = useState(locale);
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox>
       <div className="relative">
         <Listbox.Button className="relative py-2 pl-3 pr-8 text-left cursor-pointer sm:text-sm">
-          <span className="block truncate font-button-bold underline uppercase">{selected}</span>
+          <span className="block truncate font-button-bold underline uppercase">{locale}</span>
           <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
             {color == 'default'
               ? getIconComponentByName('LanguageSelector')
