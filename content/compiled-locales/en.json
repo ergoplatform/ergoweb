@@ -703,6 +703,12 @@
       "value": "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
     }
   ],
+  "components.homeHero.title": [
+    {
+      "type": 0,
+      "value": "Powering the Future of Finance"
+    }
+  ],
   "components.homeInfo.blockReward": [
     {
       "type": 0,
@@ -952,7 +958,7 @@
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2023 & BEYOND"
+      "value": "2024 & BEYOND"
     }
   ],
   "components.roadmap.title": [
