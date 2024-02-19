@@ -72,15 +72,8 @@ export default function Mining() {
       url: 'https://pool.kryptex.com/erg',
     },
     {
-      text: (
-        <FormattedMessageFixed defaultMessage="COIN-POOL" id="components.mining.miningPools.8" />
-      ),
-      url: 'https://coin-pool.eu',
-    },
-
-    {
-      text: <FormattedMessageFixed defaultMessage="OKMINER" id="components.mining.miningPools.9" />,
-      url: 'https://okminer.com',
+      text: <FormattedMessageFixed defaultMessage="K1POOL" id="components.mining.miningPools.8" />,
+      url: 'https://k1pool.com',
     },
   ];
   let minersUrls = [
