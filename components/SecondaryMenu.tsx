@@ -8,7 +8,7 @@ import Link from 'next/link';
 function SecondaryMenu() {
   return (
     <>
-      <div
+      {/* <div
         className="justify-between p-2  w-full z-[500] relative md:flex"
         style={{ background: '#4281ff' }}
       >
@@ -23,7 +23,7 @@ function SecondaryMenu() {
             <span className="animate-pulse">↗️</span>
           </a>
         </div>
-      </div>
+      </div> */}
       <div className="justify-between bg-red-500 p-2  w-full z-[500] relative md:flex hidden">
         <div className="max-w-[500px] mx-auto flex justify-between">
           <Link href="/get-erg#Wallets">
