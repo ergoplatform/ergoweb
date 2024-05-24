@@ -11,7 +11,7 @@ export default function News(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({
     id: 'pages.blog.title',
-    defaultMessage: 'Blog',
+    defaultMessage: 'News',
   });
   return (
     <div>
