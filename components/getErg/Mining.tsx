@@ -75,25 +75,33 @@ export default function Mining() {
       text: <FormattedMessageFixed defaultMessage="K1POOL" id="components.mining.miningPools.8" />,
       url: 'https://k1pool.com',
     },
+    {
+      text: <FormattedMessageFixed defaultMessage="Sigmanauts Pool" id="components.mining.miningPools.9" />,
+      url: 'https://sigmanauts.com/mining/',
+    },
   ];
   let minersUrls = [
     {
-      text: <FormattedMessageFixed defaultMessage="NANOMINER" id="components.mining.miners.1" />,
+      text: <FormattedMessageFixed defaultMessage="RIGEL" id="components.mining.miners.1" />,
+      url: 'https://github.com/rigelminer/rigel',
+    },
+    {
+      text: <FormattedMessageFixed defaultMessage="NANOMINER" id="components.mining.miners.2" />,
       url: 'https://github.com/nanopool/nanominer/releases',
     },
     {
-      text: <FormattedMessageFixed defaultMessage="NBMINER" id="components.mining.miners.2" />,
+      text: <FormattedMessageFixed defaultMessage="NBMINER" id="components.mining.miners.3" />,
       url: 'https://github.com/NebuTech/NBMiner/releases',
     },
     {
       text: (
-        <FormattedMessageFixed defaultMessage="SRBMINER-MULTI" id="components.mining.miners.3" />
+        <FormattedMessageFixed defaultMessage="SRBMINER-MULTI" id="components.mining.miners.4" />
       ),
       url: 'https://github.com/doktor83/SRBMiner-Multi/releases',
     },
     {
       text: (
-        <FormattedMessageFixed defaultMessage="TEAM RED MINER" id="components.mining.miners.4" />
+        <FormattedMessageFixed defaultMessage="TEAM RED MINER" id="components.mining.miners.5" />
       ),
       url: 'https://github.com/todxx/teamredminer/releases/',
     },
