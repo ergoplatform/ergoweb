@@ -210,7 +210,7 @@ export default function Mining() {
         <br />
         <Button
           text={button3Text}
-          url="https://discord.gg/ergo-platform-6689037863616512008"
+          url="https://discord.gg/ergo-platform-668903786361651200"
           newTab={true}
           underline={true}
           textColor="brand-orange"

@@ -37,7 +37,7 @@ const cards = [
       />
     ),
     icon: 'Discord',
-    url: 'https://discord.gg/ergo-platform-6689037863616512008',
+    url: 'https://discord.gg/ergo-platform-668903786361651200',
   },
   {
     title: (
