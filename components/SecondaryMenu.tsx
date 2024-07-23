@@ -8,16 +8,6 @@ import Link from 'next/link';
 function SecondaryMenu() {
   return (
     <>
-      <div
-        className="justify-between p-2  w-full z-[500] relative md:flex"
-        style={{ background: '#ff5e18' }}
-      >
-        <div className="max-w-[500px] mx-auto flex justify-center text-center">
-          <a className="text-sm mr-2" href="https://ergohack.io/" target="_blank" rel="noreferrer">
-            <u>Ergo’s Next Hackathon Takes Place May 25 - June 2, 2024!</u>
-          </a>
-        </div>
-      </div>
       <div className="justify-between bg-red-500 p-2  w-full z-[500] relative md:flex hidden">
         <div className="max-w-[500px] mx-auto flex justify-between">
           <Link href="/get-erg#Wallets">
