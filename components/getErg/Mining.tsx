@@ -76,7 +76,12 @@ export default function Mining() {
       url: 'https://k1pool.com',
     },
     {
-      text: <FormattedMessageFixed defaultMessage="Sigmanauts Pool" id="components.mining.miningPools.9" />,
+      text: (
+        <FormattedMessageFixed
+          defaultMessage="Sigmanauts Pool"
+          id="components.mining.miningPools.9"
+        />
+      ),
       url: 'https://sigmanauts.com/mining/',
     },
   ];
