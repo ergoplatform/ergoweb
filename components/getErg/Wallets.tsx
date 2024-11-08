@@ -92,8 +92,8 @@ export default function Wallets() {
         <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
           <br />
           <Button
-            text="WHAT WALLET IS RIGHT FOR ME?"
-            url="#"
+            text="WHICH WALLET IS RIGHT FOR ME?"
+            url="https://docs.ergoplatform.com/dev/wallets/"
             newTab={false}
             underline={true}
             textColor="brand-orange"
