@@ -17,7 +17,6 @@ const Partners = dynamic(() => import('../components/home/Partners'), {
 
 type Props = {
   posts?: any;
-  partners?: any;
   news?: any;
   info?: any;
   blockReward: number;
@@ -55,9 +54,9 @@ export default function Home(props: Props) {
         <UniqueErgo />
         <UsingErg />
         <Autolykos />
-        {props.posts ? <News news={props.news} /> : null}
+        {props.news ? <News news={props.news} /> : null}
         {props.posts ? <Feed posts={props.posts} /> : null}
-        {props.partners ? <Partners partners={props.partners} /> : null}
+        <Partners />
         <ContributeForm />
       </Layout>
     </div>
@@ -65,17 +64,46 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps = async (context: any) => {
-  const posts = await fetch(
+  // Fetch raw data
+  const postsJson = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog',
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=6&populate=*&filters[type][$eq]=blog',
   )
     .then((response) => response.json())
     .catch((err) => null);
-  const partners = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/partners?populate=*')
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
-  const news = await fetch(
+
+  // Trim posts to reduce page size (keep only fields used on the homepage)
+  const posts = postsJson?.data
+    ? {
+        data: postsJson.data.slice(0, 6).map((post: any) => {
+          const a = post.attributes || {};
+          const mediumUrl = a.image?.data?.attributes?.formats?.medium?.url ?? null;
+          return {
+            id: post.id,
+            attributes: {
+              title: a.title,
+              author: a.author,
+              subtitle: a.subtitle,
+              tag: a.tag,
+              date: a.date,
+              url: a.url,
+              permalink: a.permalink,
+              type: a.type,
+              // Only send a short excerpt instead of full content
+              content: typeof a.content === 'string' ? a.content.slice(0, 180) : null,
+              // Preserve the shape expected by <Post/> but only keep the medium URL
+              image: mediumUrl
+                ? { data: { attributes: { formats: { medium: { url: mediumUrl } } } } }
+                : null,
+              blogPhoto: a.blogPhoto ?? null,
+              authorPhoto: a.authorPhoto ?? null,
+            },
+          };
+        }),
+      }
+    : null;
+
+  const newsJson = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news',
   )
@@ -83,18 +111,39 @@ export const getStaticProps = async (context: any) => {
     .then((response) => response.data)
     .catch((err) => null);
 
+  // Trim news to only fields used by the News component
+  const news = newsJson
+    ? newsJson.map((post: any) => ({
+        id: post.id,
+        attributes: {
+          title: post.attributes?.title,
+          subtitle: post.attributes?.subtitle,
+          date: post.attributes?.date,
+          url: post.attributes?.url,
+        },
+      }))
+    : null;
+
   const blockReward = await fetch('https://api.ergoplatform.com/blocks')
     .then((response) => response.json().then((data) => data.items[0].minerReward / 1000000000))
     .catch((err) => null);
 
-  const info = await fetch('https://api.ergoplatform.com/info/')
+  const infoRaw = await fetch('https://api.ergoplatform.com/info/')
     .then((response) => response.json())
     .catch((err) => null);
+
+  const info = infoRaw
+    ? {
+        supply: infoRaw.supply,
+        hashRate: infoRaw.hashRate,
+        transactionAverage: infoRaw.transactionAverage,
+      }
+    : null;
 
   generateRssFeed();
 
   return {
-    props: { posts, partners, news, info, blockReward },
+    props: { posts, news, info, blockReward },
     revalidate: 60,
   };
 };

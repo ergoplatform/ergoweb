@@ -33,7 +33,6 @@ export const getIconComponentByName = (name: string, props?: any) => {
     ThemeDarkSmall: SvgIconsComponent.ThemeDarkSmall,
     ThemeLightBig: SvgIconsComponent.ThemeLightBig,
     ThemeLightSmall: SvgIconsComponent.ThemeLightSmall,
-    Twitter: SvgIconsComponent.Twitter,
     Wechat: SvgIconsComponent.Wechat,
     X: SvgIconsComponent.X,
     XHightlighted: SvgIconsComponent.XHightlighted,
