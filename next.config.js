@@ -88,6 +88,13 @@ const nextConfig = {
   compress: true,
   swcMinify: true,
   productionBrowserSourceMaps: true,
+  webpack: (config, { isServer }) => {
+    // For client-side bundles, ensure source maps are generated
+    if (!isServer) {
+      config.devtool = 'source-map';
+    }
+    return config;
+  },
   async headers() {
     return [
       {

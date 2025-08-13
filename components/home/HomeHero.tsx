@@ -76,7 +76,7 @@ export default function HomeHero() {
       </div>
       {/* Dark Theme Video */}
       {mounted && (
-        <div className="hidden md:block dark:block">
+        <div className="dark:block">
           <video
             autoPlay={true}
             playsInline={true}
@@ -94,7 +94,7 @@ export default function HomeHero() {
       )}
       {/* Light Theme Video */}
       {mounted && (
-        <div className="hidden md:block dark:hidden">
+        <div className="dark:hidden">
           <video
             autoPlay={true}
             playsInline={true}

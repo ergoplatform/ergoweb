@@ -26,16 +26,6 @@
     background: none;
 }
 
-.dark .home-frame-1 {
-    position: absolute;
-    width: 171px;
-    height: 1107px;
-    right: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: none;
-    z-index: 1;
-}
-
 .home-frame-2 {
     position: absolute;
     width: 167px;
@@ -45,24 +35,10 @@
     z-index: 1;
 }
 
-.dark .home-frame-2 {
-    background: none;
-}
-
 .home-frame-3 {
     position: absolute;
     width: 304px;
     height: 1114px;
-    top: 500px;
-    right: 0px;
-    background: none;
-    z-index: 1;
-}
-
-.dark .home-frame-3 {
-    position: absolute;
-    width: 351px;
-    height: 1240px;
     top: 500px;
     right: 0px;
     background: none;
@@ -78,20 +54,12 @@
     background: none;
 }
 
-.dark .home-frame-4 {
-    background: none;
-}
-
 .home-frame-5 {
     position: absolute;
     width: 382px;
     height: 1491px;
     top: 3800px;
     right: 0px;
-    background: none;
-}
-
-.dark .home-frame-5 {
     background: none;
 }
 
@@ -105,11 +73,6 @@
     z-index: 1;
 }
 
-.dark .home-blur-1 {
-    background: no-repeat url("/assets/home/blur-1-fixed.svg");
-    z-index: 1;
-}
-
 .home-blur-2 {
     position: absolute;
     width: 606px;
@@ -119,11 +82,6 @@
     left: 0px;
     background: no-repeat url("/assets/home/blur-2-light.svg");
     z-index: 1;
-}
-.dark .home-blur-2 { 
-    background: no-repeat url("/assets/home/blur-2-fixed.svg");
-    z-index: 1;
-    width: 350px;
 }
 
 .home-blur-3 {
@@ -142,9 +100,6 @@
     top: 4500px;
     right: 0px;
     background: no-repeat url("/assets/home/blur-4-light.svg");
-}
-.dark .home-blur-4 { 
-    background: no-repeat url("/assets/home/blur-4-fixed.svg");
 }
 
 /* Ensure spotlight blog cards keep intended width on home route */
@@ -177,10 +132,10 @@
     }
 
     .home-frame-1 {
-        display: none;
+        display: none !important;
     }
     .home-frame-2 {
-        display: none;
+        display: none !important;
     }
     .home-frame-3 {
         display: none !important;
@@ -220,10 +175,10 @@
     }
 
     .home-frame-1 {
-        display: none;
+        display: none !important;
     }
     .home-frame-2 {
-        display: none;
+        display: none !important;
     }
     .home-frame-3 {
         display: none !important;
