@@ -401,9 +401,6 @@ export default function Footer() {
           ) : null}
         </div>
         <div className="md:flex">
-          <div className="my-6 order-2">
-            {<BpsaaLogo viewBox="0 0 227 102" width="158" height="88" />}
-          </div>
           <div className="flex-grow md:flex-grow my-auto">
             <ul className="inline-flex">
               <li className="mr-6">Ergo Platform &copy; {new Date().getFullYear()}</li>
