@@ -46,15 +46,16 @@ function Navigation({ enableLanguages = true }) {
         <div className="flex mx-0 mt-2 mb-10 lg:my-5 md:mx-0">
           <div className="my-auto flex-grow z-10">
             <Link href="/" passHref>
-              <button className="flex justify-center align-center">
+              <a className="flex justify-center align-center" aria-label="Ergo Platform Home">
                 <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
-              </button>
+              </a>
             </Link>
           </div>
           <div className="hidden lg:block my-auto flex-grow" style={{ zIndex: 12 }}>
             <Button
               text={ergoCommunity}
               url="/community"
+              textColor="black"
               background={false}
               underline={pathname == '/community'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
@@ -62,6 +63,7 @@ function Navigation({ enableLanguages = true }) {
             <Button
               text={getErg}
               url="/get-erg"
+              textColor="white"
               background={true}
               underline={pathname == '/get-erg'}
               customClass=" decoration-black dark:decoration-white underline-offset-2"
@@ -69,6 +71,7 @@ function Navigation({ enableLanguages = true }) {
             <Button
               text={discover}
               url="/discover"
+              textColor="black"
               background={false}
               underline={pathname == '/discover'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
@@ -76,6 +79,7 @@ function Navigation({ enableLanguages = true }) {
             <Button
               text={ecosystem}
               url="/ecosystem"
+              textColor="black"
               background={false}
               underline={pathname == '/ecosystem'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
@@ -89,7 +93,7 @@ function Navigation({ enableLanguages = true }) {
               <DarkModeSwitch />
             </div>
             <div className="my-auto ml-5 lg:ml-10 z-40">
-              <Popover.Button className="focus:outline-none">
+              <Popover.Button className="focus:outline-none" aria-label="Open menu">
                 {getIconComponentByName('MenuOpen')}
               </Popover.Button>
             </div>
@@ -109,9 +113,9 @@ function Navigation({ enableLanguages = true }) {
               <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
                 <div className="my-auto flex-grow">
                   <Link href="/" passHref>
-                    <button className="flex justify-center align-center">
+                    <a className="flex justify-center align-center" aria-label="Ergo Platform Home">
                       <LogoWithTextWhite viewBox="0 0 213 82" className="w-24 lg:w-32" />
-                    </button>
+                    </a>
                   </Link>
                 </div>
                 <div className="inline-flex">
@@ -122,7 +126,9 @@ function Navigation({ enableLanguages = true }) {
                     <DarkModeSwitch />
                   </div>
                   <div className="my-auto ml-5 lg:ml-10">
-                    <Popover.Button>{getIconComponentByName('MenuClose')}</Popover.Button>
+                    <Popover.Button aria-label="Close menu">
+                      {getIconComponentByName('MenuClose')}
+                    </Popover.Button>
                   </div>
                 </div>
               </div>

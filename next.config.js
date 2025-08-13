@@ -85,6 +85,28 @@ const nextConfig = {
   },
   reactStrictMode: true,
   trailingSlash: true,
+  compress: true,
+  swcMinify: true,
+  productionBrowserSourceMaps: true,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline' ${
+              process.env.NODE_ENV === 'development' ? "'unsafe-eval'" : ''
+            }; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://storage.googleapis.com; media-src 'self' blob:; connect-src 'self' https://api.ergoplatform.com https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app https://storage.googleapis.com; frame-src 'self' https://docs.google.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'`,
+          },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+    ];
+  },
   i18n: {
     locales: [
       'default',
@@ -112,7 +134,7 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['storage.googleapis.com'],
+    domains: ['storage.googleapis.com', 'ergo-platform-cms-nvbpfiue6q-ez.a.run.app'],
   },
 };
 

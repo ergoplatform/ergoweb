@@ -91,16 +91,18 @@ export default function UsingErg() {
         <div className="lg:grid flex grid-cols-4 grid-rows-1 ml-4 overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10">
           {cards.map((card: any, i: number) => (
             <Link key={i} href={card.url} passHref>
-              <div className="cursor-pointer z-20">
-                <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
+              <a aria-label={typeof card.title === 'string' ? card.title : undefined}>
+                <div className="cursor-pointer z-20">
+                  <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                    {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
+                  </div>
+                  <div className="hidden dark:flex h-[350px] min-w-[238px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
+                    {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
+                  </div>
+                  <p className="font-subtitle-3 mb-3">{card.title}</p>
+                  <p>{card.text}</p>
                 </div>
-                <div className="hidden dark:flex h-[350px] min-w-[238px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
-                </div>
-                <p className="font-subtitle-3 mb-3">{card.title}</p>
-                <p>{card.text}</p>
-              </div>
+              </a>
             </Link>
           ))}
         </div>

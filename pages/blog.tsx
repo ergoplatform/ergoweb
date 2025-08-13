@@ -56,11 +56,11 @@ export default function Blog(props: Props) {
   );
 }
 
-export const getServerSideProps = async (context: any) => {
+export const getStaticProps = async ({ locale }: any) => {
   const posts = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=' +
-      context.locale,
+      locale,
   )
     .then((response) => response.json())
     .then((response) => response.data)
@@ -69,7 +69,7 @@ export const getServerSideProps = async (context: any) => {
   const news = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=news&locale=' +
-      context.locale,
+      locale,
   )
     .then((response) => response.json())
     .then((response) => response.data)
@@ -83,9 +83,7 @@ export const getServerSideProps = async (context: any) => {
     .catch((err) => null);
 
   const categories = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/categories?pagination[pageSize]=20&locale=' +
-      context.locale,
+    process.env.NEXT_PUBLIC_STRAPI_API + '/api/categories?pagination[pageSize]=20&locale=' + locale,
   )
     .then((response) => response.json())
     .then((response) => response.data)
@@ -93,5 +91,6 @@ export const getServerSideProps = async (context: any) => {
 
   return {
     props: { posts, news, categories, media },
+    revalidate: 60,
   };
 };

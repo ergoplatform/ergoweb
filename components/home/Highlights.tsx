@@ -29,8 +29,9 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/mining/emission/"
               style={{ color: 'orange', fontWeight: 'bold' }}
+              aria-label="Read More about A Fair Start"
             >
-              Read More
+              Read More: A Fair Start
             </a>
           ),
         }}
@@ -66,8 +67,9 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/uses/lets/"
               style={{ color: 'orange', fontWeight: 'bold' }}
+              aria-label="Read More about Alternative Economics"
             >
-              Read More
+              Read More: Alternative Economics
             </a>
           ),
         }}
@@ -103,8 +105,9 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/dev/protocol/zkp/"
               style={{ color: 'orange', fontWeight: 'bold' }}
+              aria-label="Read More about Optional Privacy"
             >
-              Read More
+              Read More: Optional Privacy
             </a>
           ),
         }}

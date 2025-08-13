@@ -51,20 +51,22 @@ export default function Button({
   return (
     <>
       {url ? (
-        <Link href={url}>
-          <a target={target}>
-            <button className={className}>
-              <span>{text}</span>
-              {icon == 'none' ? (
-                ``
-              ) : (
-                <span className="w-4 h-4 ml-2">
-                  {getIconComponentByName(
-                    'ArrowRight' + iconColor.charAt(0).toUpperCase() + iconColor.slice(1),
-                  )}
-                </span>
-              )}
-            </button>
+        <Link href={url} passHref>
+          <a
+            className={className}
+            target={target}
+            aria-label={typeof text === 'string' ? text : undefined}
+          >
+            <span>{text}</span>
+            {icon === 'none' ? (
+              ``
+            ) : (
+              <span className="w-4 h-4 ml-2">
+                {getIconComponentByName(
+                  'ArrowRight' + iconColor.charAt(0).toUpperCase() + iconColor.slice(1),
+                )}
+              </span>
+            )}
           </a>
         </Link>
       ) : null}

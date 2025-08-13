@@ -27,7 +27,7 @@ export default function HomeInfo({
       <div className="hidden md:flex mt-30 justify-end">
         <div className="mx-4 md:flex flex-row bg-white md:pr-18 lg:pr-20 xl:pr-36 rounded-l-xl md:mx-0 homeInfo-shadow">
           <div className="mx-8 my-4 text-center">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="BLOCK REWARD"
                 id="components.homeInfo.blockReward"
@@ -39,7 +39,7 @@ export default function HomeInfo({
           </div>
           <div className="verticalLine h-14 my-auto"></div>
           <div className="mx-8 my-4 text-center">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="CIRCULATING SUPPLY"
                 id="components.homeInfo.circulatingSupply"
@@ -51,7 +51,7 @@ export default function HomeInfo({
           </div>
           <div className="verticalLine h-14 my-auto"></div>
           <div className="mx-8 my-4 text-center">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="TRANSACTIONS PER DAY"
                 id="components.homeInfo.transactionPerDay"
@@ -63,7 +63,7 @@ export default function HomeInfo({
           </div>
           <div className="verticalLine h-14 my-auto"></div>
           <div className="mx-8 my-4 text-center">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">
@@ -76,7 +76,7 @@ export default function HomeInfo({
       <div className="md:hidden mt-36 justify-end">
         <div className="bg-white mx-4 rounded-xl py-1 homeInfo-shadow">
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="BLOCK REWARD"
                 id="components.homeInfo.blockReward"
@@ -88,7 +88,7 @@ export default function HomeInfo({
           </div>
           <div className="horizontallLine"></div>
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="CIRCULATING SUPPLY"
                 id="components.homeInfo.circulatingSupply"
@@ -100,7 +100,7 @@ export default function HomeInfo({
           </div>
           <div className="horizontallLine"></div>
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage
                 defaultMessage="TRANSACTIONS PER DAY"
                 id="components.homeInfo.transactionPerDay"
@@ -112,7 +112,7 @@ export default function HomeInfo({
           </div>
           <div className="horizontallLine"></div>
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange">
+            <b className="text-black dark:text-brand-orange">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <p className="font-vinila-extended text-[20px] text-black dark:text-black">

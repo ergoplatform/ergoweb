@@ -4,11 +4,14 @@ import { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { getIconComponentByName } from '../utils/icons-map';
 import { BpsaaLogo, LogoWithText } from './icons';
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 export default function Footer() {
   const [postsData, setPostsData] = useState([]);
   const [newsData, setNewsData] = useState([]);
   const { locale } = useRouter();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,43 +40,118 @@ export default function Footer() {
 
   return (
     <footer id="Footer" className="relative z-10">
-      <div className="max-w-[1300px] mx-auto py-12 px-4 footer-image">
+      <div className="max-w-[1300px] mx-auto py-12 px-4">
+        <div className="absolute inset-0 -z-10">
+          {/* Mobile Light */}
+          {theme === 'light' && (
+            <div className="md:hidden">
+              <Image
+                src="/assets/footer-small-light.png"
+                alt="Ergo Footer Background"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="bottom center"
+              />
+            </div>
+          )}
+          {/* Mobile Dark */}
+          {theme === 'dark' && (
+            <div className="md:hidden">
+              <Image
+                src="/assets/footer-small.png"
+                alt="Ergo Footer Background"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="bottom center"
+              />
+            </div>
+          )}
+          {/* Desktop Light */}
+          {theme === 'light' && (
+            <div className="hidden md:block">
+              <Image
+                src="/assets/footer-light.png"
+                alt="Ergo Footer Background"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="bottom center"
+              />
+            </div>
+          )}
+          {/* Desktop Dark */}
+          {theme === 'dark' && (
+            <div className="hidden md:block">
+              <Image
+                src="/assets/footer.png"
+                alt="Ergo Footer Background"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="bottom center"
+              />
+            </div>
+          )}
+        </div>
         <div className="md:flex justify-between">
           <div className="my-6 md:my-auto flex justify-start md:justify-center">
             <Link href="/" passHref>
-              <button>
+              <a aria-label="Ergo Platform Home">
                 <LogoWithText viewBox="0 0 213 82" className="w-40 md:w-52" />
-              </button>
+              </a>
             </Link>
           </div>
           <div className="grid absolute right-10 top-20 space-y-4 md:right-auto md:top-auto md:relative overflow-hidden grid-cols-1 gap-2 text-red md:grid-cols-3 lg:grid-cols-10">
             <div className="box mx-auto my-auto">
-              <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
+              <a
+                href="https://sigmaverse.io"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Sigmaverse website"
+              >
                 {getIconComponentByName('Sigmaverse')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
               <Link href="/ecosystem/#Wiki" passHref>
-                <a>{getIconComponentByName('ErgoWiki')}</a>
+                <a aria-label="Ergo Wiki">{getIconComponentByName('ErgoWiki')}</a>
               </Link>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/ergoplatform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform GitHub"
+              >
                 {getIconComponentByName('Github')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://x.com/Ergo_Platform" target="_blank" rel="noreferrer">
+              <a
+                href="https://x.com/Ergo_Platform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform X (formerly Twitter)"
+              >
                 {getIconComponentByName('X')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.youtube.com/c/ErgoPlatform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform YouTube"
+              >
                 {getIconComponentByName('Youtube')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
+              <a
+                href="https://t.me/Ergo_Chats"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform Telegram"
+              >
                 {getIconComponentByName('Telegram')}
               </a>
             </div>
@@ -82,22 +160,38 @@ export default function Footer() {
                 href="https://discord.gg/ergo-platform-668903786361651200"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Ergo Platform Discord"
               >
                 {getIconComponentByName('Discord')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
+              <a
+                href="https://reddit.com/r/ergonauts"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform Reddit"
+              >
                 {getIconComponentByName('Reddit')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.ergoforum.org/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Forum"
+              >
                 {getIconComponentByName('Discourse')}
               </a>
             </div>
             <div className="box mx-auto my-auto">
-              <a href="https://www.coingecko.com/en/coins/ergo" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.coingecko.com/en/coins/ergo"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo on CoinGecko"
+              >
                 {getIconComponentByName('Coingecko')}
               </a>
             </div>

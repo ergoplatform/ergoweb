@@ -85,13 +85,13 @@ export default function ContributeForm() {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col">
-          <h3 className="mb-4 lg:leading-none text-[70px]">
+          <h2 className="mb-4 lg:leading-none text-[70px]">
             <FormattedMessage
               defaultMessage="I am a <b>developer</b>"
               id="components.ContributeForm.developer.title"
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
-          </h3>
+          </h2>
           <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-8">
             <b>
               <FormattedMessage
@@ -152,13 +152,13 @@ export default function ContributeForm() {
           </div>
         </div>
         <div className="flex flex-col mt-16">
-          <h3 className="mb-4 lg:leading-none md:text-[80px]">
+          <h2 className="mb-4 lg:leading-none md:text-[80px]">
             <FormattedMessage
               defaultMessage="I am a <b>company</b>"
               id="components.ContributeForm.company.title"
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
-          </h3>
+          </h2>
           <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-10">
             <FormattedMessage
               defaultMessage="WANT TO BECOME A PARTNER?"
@@ -196,6 +196,7 @@ export default function ContributeForm() {
                 <button
                   type="submit"
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
+                  aria-label={formButton}
                 >
                   <span>{formButton}</span>
                   <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>

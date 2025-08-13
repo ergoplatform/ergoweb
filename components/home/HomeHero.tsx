@@ -1,9 +1,17 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
+import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 
 export default function HomeHero() {
   const intl = useIntl();
+  const { theme } = useTheme(); // Get the current theme
+  const [mounted, setMounted] = useState(false); // State to track if component is mounted
+
+  useEffect(() => {
+    setMounted(true); // Set mounted to true after component mounts on client side
+  }, []);
+
   const button = intl.formatMessage({
     id: 'components.homeHero.button',
     defaultMessage: 'DIVE IN',
@@ -17,7 +25,7 @@ export default function HomeHero() {
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
         <div className="max-w-lg leading-none md:max-w-4xl relative z-20">
-          <h1 className="md:hidden">
+          <h1 className="md:hidden text-5xl">
             <b>
               <FormattedMessage
                 defaultMessage="Powering the Future of Finance"
@@ -25,14 +33,14 @@ export default function HomeHero() {
               />
             </b>
           </h1>
-          <h3 className="hidden md:block" style={{ height: '140px' }}>
+          <h1 className="hidden md:block text-6xl">
             <b>
               <FormattedMessage
                 defaultMessage="Powering the Future of Finance"
                 id="components.homeHero.title"
               />
             </b>
-          </h3>
+          </h1>
         </div>
         <div className="mt-6 md:mt-10 max-w-lg md:max-w-xl relative z-20">
           <p className="font-subtitle-3-regular">
@@ -66,32 +74,42 @@ export default function HomeHero() {
           />
         </div>
       </div>
-      <div className="hidden dark:block">
-        <video
-          autoPlay={true}
-          playsInline={true}
-          loop={true}
-          muted={true}
-          className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
-          disablePictureInPicture={true}
-          controlsList="nodownload"
-        >
-          <source src="../assets/ergo-dark.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="dark:hidden">
-        <video
-          autoPlay={true}
-          playsInline={true}
-          loop={true}
-          muted={true}
-          className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
-          disablePictureInPicture={true}
-          controlsList="nodownload"
-        >
-          <source src="../assets/ergo-light.mp4" type="video/mp4" />
-        </video>
-      </div>
+      {mounted && theme === 'dark' && (
+        <div>
+          <video
+            autoPlay={true}
+            playsInline={true}
+            loop={true}
+            muted={true}
+            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+            disablePictureInPicture={true}
+            controlsList="nodownload"
+            preload="metadata"
+            poster="/assets/home/frame-1.png"
+          >
+            <source src="../assets/ergo-dark.mp4" type="video/mp4" />
+            <track kind="captions" src="/assets/hero-en.vtt" srcLang="en" label="English" default />
+          </video>
+        </div>
+      )}
+      {mounted && theme === 'light' && (
+        <div>
+          <video
+            autoPlay={true}
+            playsInline={true}
+            loop={true}
+            muted={true}
+            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+            disablePictureInPicture={true}
+            controlsList="nodownload"
+            preload="metadata"
+            poster="/assets/home/frame-1-light.png"
+          >
+            <source src="../assets/ergo-light.mp4" type="video/mp4" />
+            <track kind="captions" src="/assets/hero-en.vtt" srcLang="en" label="English" default />
+          </video>
+        </div>
+      )}
     </div>
   );
 }

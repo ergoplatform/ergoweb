@@ -12,15 +12,24 @@ import dynamic from 'next/dynamic';
 import UniqueErgo from '../components/home/UniqueErgo';
 import HomeFrames from '../components/home/HomeFrames';
 import generateRssFeed from '../utils/generateRssFeed';
-const Partners = dynamic(() => import('../components/home/Partners'), {
-  ssr: false,
-});
+import Partners from '../components/home/Partners'; // Import Partners directly
+
+type Partner = {
+  id: number;
+  attributes: {
+    name: string;
+    url: string;
+    image?: { data: { attributes: { url: string; width: number; height: number } } } | null;
+    image_dark?: { data: { attributes: { url: string; width: number; height: number } } } | null;
+  };
+};
 
 type Props = {
   posts?: any;
   news?: any;
   info?: any;
   blockReward: number;
+  partners?: Partner[]; // Add partners to props
 };
 
 export default function Home(props: Props) {
@@ -49,7 +58,7 @@ export default function Home(props: Props) {
         <Autolykos />
         {props.news ? <News news={props.news} /> : null}
         {props.posts ? <Feed posts={props.posts} /> : null}
-        <Partners />
+        <Partners partners={props.partners || []} /> {/* Pass partners prop, default to empty array */}
         <ContributeForm />
       </Layout>
     </div>
@@ -133,10 +142,22 @@ export const getStaticProps = async (context: any) => {
       }
     : null;
 
+  // Fetch partners data
+  const partnersJson = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/partners?fields[0]=name&fields[1]=url' +
+      '&populate[image][fields][0]=url&populate[image][fields][1]=width&populate[image][fields][2]=height' +
+      '&populate[image_dark][fields][0]=url&populate[image_dark][fields][1]=width&populate[image_dark][fields][2]=height',
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
+
+  const partners = partnersJson?.data ?? [];
+
   generateRssFeed();
 
   return {
-    props: { posts, news, info, blockReward },
+    props: { posts, news, info, blockReward, partners }, // Pass partners to props
     revalidate: 60,
   };
 };

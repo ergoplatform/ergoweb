@@ -22,7 +22,7 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
                 <FormattedDate value={date} day="numeric" month="long" year="numeric" />
               </b>
             </p>
-            <p className="text-[16px] md:text-[24px] font-subtitle-3-bold text-brand-orange dark:text-brand-orange my-2 text-clip">
+            <p className="text-[16px] md:text-[24px] font-subtitle-3-bold text-black dark:text-brand-orange my-2 text-clip">
               {title.length > 60 ? title.substring(0, 60) + '...' : title}
             </p>
             {subtitle ? (
