@@ -6,7 +6,7 @@ import remarkBreaks from 'remark-breaks';
 import rehypeRaw from 'rehype-raw';
 import Image from 'next/image';
 import Button from '../../components/Button';
-import { BlogFacebook, BlogLink, BlogTwitter, LogoBlack } from '../../components/icons';
+import { BlogFacebook, BlogLink, BlogX, LogoBlack } from '../../components/icons';
 import Link from 'next/link';
 import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
@@ -100,7 +100,13 @@ export default function Post(props: Props) {
 
             <div className="flex flex-row justify-center md:mx-32">
               {hasImage == true ? (
-                <img src={imageUrl} alt="" height="100%" width="100%" className="md:rounded-xl" />
+                <Image
+                  src={imageUrl}
+                  alt=""
+                  width={1200}
+                  height={630}
+                  className="md:rounded-xl w-full h-auto"
+                />
               ) : (
                 ''
               )}
@@ -133,7 +139,7 @@ export default function Post(props: Props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BlogTwitter />
+                    <BlogX />
                   </a>
                 </div>
                 {/* <div className="cursor-pointer">

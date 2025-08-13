@@ -2,7 +2,7 @@ import { Tab } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
-import { Github, Linkedin, PersonPlaceholder, Twitter } from '../icons';
+import { Github, Linkedin, PersonPlaceholder, X } from '../icons';
 
 type Props = {
   teamMembers?: any;
@@ -59,7 +59,7 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
           {props.twitter != undefined ? (
             <Link href={props.twitter} passHref>
               <a>
-                <Twitter className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
+                <X className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
               </a>
             </Link>
           ) : null}

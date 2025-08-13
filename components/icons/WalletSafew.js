@@ -27,7 +27,7 @@ const SvgWalletSafew = (props) => (
       />
     </g>
     <style type="text/css" id="style829">
-      {'.wallet-safew_svg__st0{fill-rule:evenodd;clip-rule:evenodd}'}
+      {'.wallet-safew_svg__st0{fillRule:evenodd;clipRule:evenodd}'}
     </style>
     <g
       id="wallet-safew_svg__main"

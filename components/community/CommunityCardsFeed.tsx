@@ -53,17 +53,15 @@ const cards = [
     url: 'https://github.com/ergoplatform',
   },
   {
-    title: (
-      <FormattedMessageFixed defaultMessage="Twitter" id="components.communityHero.Twitter.title" />
-    ),
+    title: <FormattedMessageFixed defaultMessage="X" id="components.communityHero.X.title" />,
     text: (
       <FormattedMessageFixed
-        defaultMessage="Follow us on Twitter."
-        id="components.communityHero.Twitter.text"
+        defaultMessage="Follow us on X."
+        id="components.communityHero.X.text"
       />
     ),
-    icon: 'Twitter',
-    url: 'https://twitter.com/Ergo_Platform',
+    icon: 'X',
+    url: 'https://x.com/Ergo_Platform',
   },
   {
     title: (

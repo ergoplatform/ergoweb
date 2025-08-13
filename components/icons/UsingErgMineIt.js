@@ -9,102 +9,102 @@ const SvgUsingErgMineIt = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clip-path="url(#clip0_1_1488)">
+    <g clipPath="url(#clip0_1_1488)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M1.48193 393.151L20.8379 393.654C37.3482 353.478 51.8133 317.801 65.0631 278.69C69.7168 264.953 72.918 255.005 75.9415 247.07C81.8698 231.971 86.731 224.954 100.129 215.391C115.928 204.288 133.891 196.294 149.038 184.629C154.966 180.04 151.557 173.438 146.311 178.175C142.014 182.123 137.245 185.524 132.112 188.3C122.36 193.926 112.401 198.011 99.9808 204.377C79.8542 214.651 70.7838 225.102 63.4327 251.748C48.4045 306.195 29.5821 342.197 1.48193 393.151Z"
         fill="url(#paint0_linear_1_1488)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M40.9648 394.217L64.2038 394.779L76.7125 354.366C82.2555 336.394 83.3226 322.923 66.1602 311.821C59.9401 308.078 53.2923 305.096 46.3596 302.938C44.0772 308.86 44.0772 308.475 41.5577 314.219C64.441 325.795 64.5891 335.358 56.0227 358.629L40.9648 394.217Z"
         fill="url(#paint1_linear_1_1488)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M42.5062 394.217L48.642 394.394L62.6031 355.668C71.4956 331.095 67.6125 325.38 41.6762 313.952C40.2238 317.475 40.6981 316.321 39.1567 319.874C62.2771 326.89 64.5892 334.677 57.2084 354.662L42.5062 394.217Z"
         fill="url(#paint2_linear_1_1488)"
       />
       <path
         d="M1.48193 393.151C29.5821 342.197 48.4045 306.195 63.4327 251.807C70.7838 225.161 79.8542 214.65 99.9808 204.436C112.401 198.071 122.36 193.985 132.112 188.36C139.286 184.43 145.749 179.326 151.231 173.26C153.276 171.128 155.084 169.5 156.626 169.411C160.538 169.174 163.74 174.888 162.021 181.994C160.403 187.218 157.439 191.925 153.425 195.643C145.421 203.637 134.869 207.308 126.391 214.502C118.536 221.105 124.346 226.079 134.721 221.016C147.378 215.095 156.389 211.157 163.888 207.959C197.324 193.985 207.728 179.714 228.566 164.348C234.109 160.262 244.187 159.226 245.491 168.019C255.036 166.006 260.312 172.194 253.079 179.3L245.728 186.405C251.301 186.583 253.82 192.327 248.277 198.396L233.872 210.239C241.163 210.565 243.535 213.644 242.764 218.144C242.171 221.579 235.976 225.901 233.279 227.944L184.785 264.361C174.262 270.282 163.71 276.203 153.158 282.125C108.28 307.35 110 313.005 98.7952 362.715L91.3551 395.52"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M246.055 167.96C236.332 170.921 222.667 184.955 213.834 192.12C202.948 200.771 191.174 208.244 178.709 214.414"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M245.728 186.494C238.051 187.323 233.457 191.379 227.943 195.968C221.244 201.505 209.062 210.979 202.511 215.568C195.812 220.378 188.665 224.532 181.169 227.973"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M236.243 210.269C231.295 210.896 226.623 212.896 222.756 216.042C202.007 232.533 202.333 233.125 177.227 245.945"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M123.753 217.345C114.268 230.846 119.752 249.527 100.781 261.133"
         stroke="white"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M74.2223 251.896C70.3689 265.278 70.6357 272.621 77.4829 290.03C72.0289 286.447 68.7386 279.727 61.9507 278.601L65.0631 261.459L74.2223 251.896Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M121.234 302.761C120.315 293.612 123.517 290.918 131.283 285.796L145.096 276.914C153.425 271.526 160.154 268.654 168.157 276.677C172.573 281.148 169.965 283.842 166.111 286.152C154.759 293.08 143.554 300.008 132.261 307.202C128.437 310.044 122.123 312.087 121.234 302.761Z"
         fill="white"
         stroke="white"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M121.412 304.063L124.909 309.304H116.076L121.412 304.063Z"
         fill="white"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M85.1898 143.86C93.3867 113.541 108.619 85.5773 129.652 62.234L127.933 54.9507L149.66 33.2192L159.472 36.6536C162.143 34.8861 164.904 33.2557 167.741 31.7685C155.322 24.3371 150.401 20.3993 136.44 32.4198C108.547 56.4902 81.0103 98.2361 76.1788 140.367C75.2895 149.101 83.2038 151.055 85.1898 143.86Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M105.05 79.613L105.702 73.3363L111.186 70.2275L219.022 138.087L216.472 145.755L210.426 151.143L105.05 79.613Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M162.851 116.503L168.779 107.621C169.522 106.522 170.663 105.753 171.963 105.476C173.262 105.2 174.618 105.439 175.745 106.141L217.006 133.824C228.536 141.344 217.183 158.664 205.653 151.144L164.155 123.55C163.599 123.179 163.124 122.7 162.756 122.142C162.389 121.584 162.137 120.958 162.015 120.301C161.894 119.645 161.905 118.97 162.048 118.318C162.192 117.666 162.465 117.049 162.851 116.503Z"
         fill="#FF5E18"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         d="M103.419 13.2047C107.07 13.2047 110.029 10.2487 110.029 6.60236C110.029 2.95598 107.07 0 103.419 0C99.7685 0 96.8091 2.95598 96.8091 6.60236C96.8091 10.2487 99.7685 13.2047 103.419 13.2047Z"
@@ -113,124 +113,124 @@ const SvgUsingErgMineIt = (props) => (
       <path
         d="M127.755 40.5913C103.094 65.3131 80.5956 102.766 76.2679 140.367C75.2898 149.249 83.2041 151.055 85.1604 143.86"
         stroke="#FF5E18"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M155.915 105.815L129.741 89.1763"
         stroke="#121212"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M66.3675 36.5054H75.1117C76.7123 36.5054 78.0758 38.6667 78.0758 41.3313V56.1348C78.0758 58.7994 76.8012 60.9608 75.1117 60.9608H66.3675C64.7965 60.9608 63.4033 58.7994 63.4033 56.1348V41.3313C63.5219 38.6667 64.6779 36.5054 66.3675 36.5054Z"
         fill="#FF5E18"
         stroke="white"
-        stroke-width="3"
-        stroke-miterlimit="10"
+        strokeWidth="3"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M199.043 49.6509H214.664C216.179 49.8439 217.561 50.6137 218.522 51.7996C219.483 52.9855 219.948 54.496 219.822 56.0164V75.557C219.948 77.0773 219.483 78.5879 218.522 79.7738C217.561 80.9597 216.179 81.7294 214.664 81.9225H199.043C197.533 81.7224 196.158 80.9498 195.204 79.7647C194.249 78.5795 193.787 77.0728 193.915 75.557V56.0164C193.787 54.5005 194.249 52.9939 195.204 51.8087C196.158 50.6236 197.533 49.8509 199.043 49.6509V49.6509Z"
         fill="#FF5E18"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M202.155 56.2534H211.403C212.287 56.3789 213.088 56.8397 213.64 57.54C214.192 58.2403 214.453 59.1262 214.368 60.0135V71.5306C214.453 72.4179 214.192 73.3038 213.64 74.0041C213.088 74.7045 212.287 75.1653 211.403 75.2907H202.155C201.272 75.1653 200.471 74.7045 199.919 74.0041C199.367 73.3038 199.106 72.4179 199.191 71.5306V60.0135C199.106 59.1262 199.367 58.2403 199.919 57.54C200.471 56.8397 201.272 56.3789 202.155 56.2534Z"
         fill="white"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M211.729 67.7705H220.948C221.835 67.8889 222.64 68.3479 223.194 69.05C223.747 69.752 224.005 70.6419 223.912 71.5306V83.0477C224.005 83.9365 223.747 84.8263 223.194 85.5284C222.64 86.2304 221.835 86.6894 220.948 86.8078H211.729C210.843 86.6894 210.037 86.2304 209.484 85.5284C208.93 84.8263 208.672 83.9365 208.765 83.0477V71.5306C208.672 70.6419 208.93 69.752 209.484 69.05C210.037 68.3479 210.843 67.8889 211.729 67.7705Z"
         fill="white"
         stroke="#FF5E18"
-        stroke-width="3"
-        stroke-miterlimit="10"
+        strokeWidth="3"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M117.292 128.109H124.406C125.68 128.109 126.718 130.626 126.718 133.735V150.818C126.718 153.927 125.68 156.443 124.406 156.443H117.292C116.047 156.443 115.009 153.927 115.009 150.818V133.735C115.069 130.626 116.047 128.109 117.292 128.109Z"
         fill="#FF5E18"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M117.292 128.109H124.406C125.68 128.109 126.718 130.626 126.718 133.735V150.818C126.718 153.927 125.68 156.443 124.406 156.443H117.292C116.047 156.443 115.009 153.927 115.009 150.818V133.735C115.069 130.626 116.047 128.109 117.292 128.109Z"
         fill="#FF5E18"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M183.244 3.58252H193.618C194.584 3.66554 195.477 4.12575 196.104 4.86314C196.731 5.60053 197.042 6.55547 196.968 7.52025V19.363C197.042 20.3278 196.731 21.2827 196.104 22.0201C195.477 22.7575 194.584 23.2178 193.618 23.3008H183.244C182.282 23.2104 181.393 22.748 180.767 22.0124C180.142 21.2768 179.828 20.3261 179.894 19.363V7.52025C179.828 6.55722 180.142 5.6065 180.767 4.87087C181.393 4.13524 182.282 3.67293 183.244 3.58252V3.58252Z"
         fill="#FF5E18"
         stroke="#FF5E18"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M101.048 233.037C97.6098 241.682 91.148 249.942 83.0558 251.156C70.8732 253.11 69.1539 232.208 81.8405 219.802C95.8906 206.094 110.207 209.854 101.048 233.037Z"
         fill="#FF5E18"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M154.492 220.631C165.933 216.634 168.957 225.842 169.461 238.188C169.589 241.381 168.976 244.561 167.67 247.478C166.364 250.395 164.4 252.971 161.932 255.005C156.003 259.831 125.147 279.816 118.299 281.651C109.199 283.931 103.894 273.243 114.268 264.923C120.73 259.624 124.257 254.383 127.696 241.978C128.548 238.044 130.43 234.407 133.15 231.438C136.914 227.559 149.69 222.348 154.492 220.631Z"
         fill="#FF5E18"
       />
     </g>
     <defs>
       <linearGradient
-        id="paint0_linear_1_1488"
-        x1="59.5015"
-        y1="278"
-        x2="50.5015"
-        y2="383.499"
+        id="using-erg-mine-it-light_svg__b"
+        x1={59.502}
+        y1={278}
+        x2={50.502}
+        y2={383.5}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#343434" stop-opacity="0" />
+        <stop stopColor="#141414" />
+        <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </linearGradient>
       <linearGradient
-        id="paint1_linear_1_1488"
-        x1="56"
-        y1="312"
-        x2="75.5"
-        y2="387.5"
+        id="using-erg-mine-it-light_svg__c"
+        x1={56}
+        y1={312}
+        x2={75.5}
+        y2={387.5}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF5E18" />
-        <stop offset="1" stop-color="#343434" stop-opacity="0" />
+        <stop stopColor="#FF5E18" />
+        <stop offset={1} stopColor="#343434" stopOpacity={0} />
       </linearGradient>
       <linearGradient
-        id="paint2_linear_1_1488"
-        x1="53.0005"
-        y1="328.5"
-        x2="52.9895"
-        y2="378.5"
+        id="using-erg-mine-it-light_svg__d"
+        x1={53}
+        y1={328.5}
+        x2={52.989}
+        y2={378.5}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#343434" stop-opacity="0" />
+        <stop stopColor="#141414" />
+        <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </linearGradient>
-      <clipPath id="clip0_1_1488">
-        <rect width="258" height="397" fill="white" />
+      <clipPath id="using-erg-mine-it-light_svg__a">
+        <path fill="#fff" d="M0 0h258v397H0z" />
       </clipPath>
     </defs>
   </svg>

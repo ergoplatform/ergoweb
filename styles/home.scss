@@ -9,11 +9,11 @@
     
 //     background: #FF5E18;
 //     filter: blur(400px);
-//     // clip-path: polygon(100% 0, 0 0, 100% 100%);
+//     // clipPath: polygon(100% 0, 0 0, 100% 100%);
 //     // transform: rotate(83.09deg);
-//     // clip-path: polygon(100% 0%,1% 0%,100% 100%);
-//     // clip-path: circle(100% at 100% 100%);
-//     // -webkit-clip-path: circle(70% at 70% 20%);
+//     // clipPath: polygon(100% 0%,1% 0%,100% 100%);
+//     // clipPath: circle(100% at 100% 100%);
+//     // -webkit-clipPath: circle(70% at 70% 20%);
 
 // }
 
@@ -23,7 +23,7 @@
     height: 1099px;
     right: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: no-repeat url("/assets/home/frame-1-light.png");
+    background: none;
 }
 
 .dark .home-frame-1 {
@@ -32,7 +32,7 @@
     height: 1107px;
     right: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: no-repeat url("/assets/home/frame-1.png");
+    background: none;
     z-index: 1;
 }
 
@@ -41,12 +41,12 @@
     width: 167px;
     height: 1265px;
     right: 0px;
-    background: no-repeat url("/assets/home/frame-2-light.png");
+    background: none;
     z-index: 1;
 }
 
 .dark .home-frame-2 {
-    background: no-repeat url("/assets/home/frame-2.png");
+    background: none;
 }
 
 .home-frame-3 {
@@ -55,7 +55,7 @@
     height: 1114px;
     top: 500px;
     right: 0px;
-    background: no-repeat url("/assets/home/frame-3-light.png");
+    background: none;
     z-index: 1;
 }
 
@@ -65,7 +65,7 @@
     height: 1240px;
     top: 500px;
     right: 0px;
-    background: no-repeat url("/assets/home/frame-3.png");
+    background: none;
     z-index: 1;
 }
 
@@ -75,11 +75,11 @@
     height: 1031px;
     top: 3500px;
     left: 0px;
-    background: no-repeat url("/assets/home/frame-4-light.png");
+    background: none;
 }
 
 .dark .home-frame-4 {
-    background: no-repeat url("/assets/home/frame-4.png");
+    background: none;
 }
 
 .home-frame-5 {
@@ -88,11 +88,11 @@
     height: 1491px;
     top: 3800px;
     right: 0px;
-    background: no-repeat url("/assets/home/frame-5-light.png");
+    background: none;
 }
 
 .dark .home-frame-5 {
-    background: no-repeat url("/assets/home/frame-5.png");
+    background: none;
 }
 
 .home-blur-1 {
@@ -147,6 +147,11 @@
     background: no-repeat url("/assets/home/blur-4-fixed.svg");
 }
 
+/* Ensure spotlight blog cards keep intended width on home route */
+.blog-post {
+    max-width: 384px;
+}
+
 
 // .dark .home-blur-2 {
 //     position: absolute;
@@ -192,8 +197,7 @@
     }
 
     .home-blur-1 {
-        transform: scale(0.5);
-        transform-origin: top right;        
+        display: none;        
     }
     .home-blur-2 {
         transform: scale(0.5);
@@ -243,8 +247,7 @@
     }
 
     .home-blur-1 {
-        transform: scale(0.2);
-        transform-origin: top right;        
+        display: none;        
     }
     .home-blur-2 {
         transform: scale(0.2);

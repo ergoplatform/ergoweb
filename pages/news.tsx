@@ -10,7 +10,7 @@ type Props = {
 export default function News(props: Props) {
   const intl = useIntl();
   const title = intl.formatMessage({
-    id: 'pages.blog.title',
+    id: 'pages.news.title',
     defaultMessage: 'News',
   });
   return (

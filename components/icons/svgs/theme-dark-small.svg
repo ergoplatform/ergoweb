@@ -2,7 +2,7 @@
 <g filter="url(#filter0_i_604_16290)">
 <path d="M0 19C0 8.50659 8.50659 0 19 0H31C41.4934 0 50 8.50659 50 19C50 29.4934 41.4934 38 31 38H19C8.50659 38 0 29.4934 0 19Z" fill="#141414"/>
 <g filter="url(#filter1_d_604_16290)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M41.3559 22.7354C43.9694 15.305 38.2733 7.67012 30.7013 8.01101C37.9387 14.5552 33.6498 26.8257 24 27.2346C29.696 32.3472 38.8096 30.0977 41.3559 22.7354Z" fill="url(#paint0_linear_604_16290)"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M41.3559 22.7354C43.9694 15.305 38.2733 7.67012 30.7013 8.01101C37.9387 14.5552 33.6498 26.8257 24 27.2346C29.696 32.3472 38.8096 30.0977 41.3559 22.7354Z" fill="url(#paint0_linear_604_16290)"/>
 </g>
 </g>
 <defs>
@@ -27,8 +27,8 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_604_16290" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_604_16290" x1="40.1695" y1="8.00001" x2="22.9532" y2="9.18106" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF7C44"/>
-<stop offset="1" stop-color="#FF5E18"/>
+<stop stopColor="#FF7C44"/>
+<stop offset="1" stopColor="#FF5E18"/>
 </linearGradient>
 </defs>
 </svg>

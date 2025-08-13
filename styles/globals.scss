@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import "./home.scss";
+@import "./fonts.scss";
+@import "./unique-ergo.scss";
 @import "./not-found.scss";
 @import "./community.scss";
 @import "./geterg.scss";
-@import "./fonts.scss";
 @import "./discover.scss";
 @import "./ecosystem.scss";
-@import "./unique-ergo.scss";
 @import "./blog.scss";
+@import "./markdown-body.scss";
 @import "swiper/scss";
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
 @import "react-toastify/scss/main.scss";
-@import "./markdown-body.scss";
 
 .themeShadow {
   -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));

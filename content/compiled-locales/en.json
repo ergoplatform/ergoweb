@@ -1267,6 +1267,12 @@
       "value": "ECOSYSTEM"
     }
   ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "OUR FAVORITES"
+    }
+  ],
   "footer.getErg.1": [
     {
       "type": 0,
@@ -1313,6 +1319,12 @@
     {
       "type": 0,
       "value": "Privacy Policy"
+    }
+  ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Real Life Ergo"
     }
   ],
   "footer.weGotIt": [
@@ -1409,6 +1421,12 @@
     {
       "type": 0,
       "value": "Mobile Wallets"
+    }
+  ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "News"
     }
   ],
   "pages.privacyPolicy.title": [
