@@ -403,7 +403,9 @@ export default function Footer() {
         <div className="md:flex">
           <div className="flex-grow md:flex-grow my-auto">
             <ul className="inline-flex">
-              <li className="mr-6">Ergo Platform &copy; {new Date().getFullYear()}</li>
+              <li className="mr-6 text-black dark:text-white">
+                Ergo Platform &copy; {new Date().getFullYear()}
+              </li>
               <li className="mr-6">
                 <Link href={'/privacy-policy'}>
                   <a>
@@ -421,7 +423,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-5 md:mt-0 text-gray-400">
+        <div className="mt-5 md:mt-0 text-black dark:text-white">
           1 Irving Place, #08/11 The Commerze@irving Singapore (369546)
         </div>
       </div>
