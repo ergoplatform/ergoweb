@@ -131,6 +131,14 @@
     .home-blur-1, .dark .home-blur-1 {
         display: none !important;        
     }
+
+    .home-frame-3, .home-frame-4, .home-frame-5,
+    .home-blur-2, .home-blur-3, .home-blur-4 {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: $sm) {
@@ -148,6 +156,14 @@
 
     .home-blur-1, .dark .home-blur-1 {
         display: none !important;        
+    }
+
+    .home-frame-3, .home-frame-4, .home-frame-5,
+    .home-blur-2, .home-blur-3, .home-blur-4 {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .hide-on-mobile {
