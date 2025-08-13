@@ -44,7 +44,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Larger frame near hero - mark as priority */}
-      <div className="home-frame-3 hidden md:block">
+      <div className="home-frame-3">
         <Image
           src={theme === 'dark' ? '/assets/home/frame-3.png' : '/assets/home/frame-3-light.png'}
           alt=""
@@ -58,7 +58,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Left frames lower on page */}
-      <div className="home-frame-4 hidden md:block">
+      <div className="home-frame-4">
         <Image
           src={theme === 'dark' ? '/assets/home/frame-4.png' : '/assets/home/frame-4-light.png'}
           alt=""
@@ -71,7 +71,7 @@ export default function HomeFrames() {
         />
       </div>
 
-      <div className="home-frame-5 hidden md:block">
+      <div className="home-frame-5">
         <Image
           src={theme === 'dark' ? '/assets/home/frame-5.png' : '/assets/home/frame-5-light.png'}
           alt=""
@@ -87,11 +87,11 @@ export default function HomeFrames() {
       {/* Blurs */}
       {theme === 'dark' && <div className="home-blur-1 hidden md:block"></div>}
 
-      <div className="home-blur-2 hidden md:block"></div>
+      <div className="home-blur-2"></div>
 
-      <div className="home-blur-3 hidden md:block"></div>
+      <div className="home-blur-3"></div>
 
-      <div className="home-blur-4 hidden md:block"></div>
+      <div className="home-blur-4"></div>
     </>
   );
 }

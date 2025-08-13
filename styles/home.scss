@@ -18,21 +18,11 @@
 // }
 
 .home-frame-1 {
-    position: absolute;
-    width: 167px;
-    height: 1099px;
-    right: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: none;
+    display: none !important;
 }
 
 .home-frame-2 {
-    position: absolute;
-    width: 167px;
-    height: 1265px;
-    right: 0px;
-    background: none;
-    z-index: 1;
+    display: none !important;
 }
 
 .home-frame-3 {
@@ -67,12 +57,12 @@
     position: absolute;
     width: 769px;
     height: 895px;
-    top: 260px; /* Push below nav area further to avoid showing near top-right */
+    top: 0px; /* Place at the very top */
     right: 0px;
     background: no-repeat url("/assets/home/blur-1-light.svg");
     background-position: top right;
     pointer-events: none;
-    z-index: -2; /* Push further behind content */
+    z-index: 60; /* Place at the very top as requested */
 }
 
 .dark .home-blur-1 {
@@ -138,32 +128,7 @@
         background-position: bottom center;
     }
 
-    .home-frame-1 {
-        display: none !important;
-    }
-    .home-frame-2 {
-        display: none !important;
-    }
-    .home-frame-3 {
-        display: none !important;
-    }
-    .home-frame-4 {
-        display: none !important;
-    }
-    .home-frame-5 {
-        display: none !important;
-    }
-
     .home-blur-1, .dark .home-blur-1 {
-        display: none !important;        
-    }
-    .home-blur-2, .dark .home-blur-2 {
-        display: none !important;        
-    }
-    .home-blur-3, .dark .home-blur-3 {
-        display: none !important;        
-    }
-    .home-blur-4, .dark .home-blur-4 {
         display: none !important;        
     }
 }
@@ -181,32 +146,7 @@
         background-position: bottom center;
     }
 
-    .home-frame-1 {
-        display: none !important;
-    }
-    .home-frame-2 {
-        display: none !important;
-    }
-    .home-frame-3 {
-        display: none !important;
-    }
-    .home-frame-4 {
-        display: none !important;
-    }
-    .home-frame-5 {
-        display: none !important;
-    }
-
     .home-blur-1, .dark .home-blur-1 {
-        display: none !important;        
-    }
-    .home-blur-2, .dark .home-blur-2 {
-        display: none !important;        
-    }
-    .home-blur-3, .dark .home-blur-3 {
-        display: none !important;        
-    }
-    .home-blur-4, .dark .home-blur-4 {
         display: none !important;        
     }
 
