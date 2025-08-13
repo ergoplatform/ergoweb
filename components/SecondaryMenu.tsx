@@ -8,8 +8,11 @@ function SecondaryMenu() {
         maybe some drop-shadow, or hover animation to make it look more polished.
         links beyond here broken? tried z-index
       */}
-      <div className="justify-between bg-gray-100 dark:bg-gray-800 w-full relative md:flex hidden shadow-md p-2">
-        <div className="max-w-[700px] mx-auto flex justify-between w-full">
+      <div
+        className="justify-between bg-gray-100 dark:bg-gray-800 w-full relative md:flex hidden"
+        style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 100 }}
+      >
+        <div className="max-w-[700px] mx-auto flex justify-between w-full px-4 py-2">
           <Link href="/get-erg#Wallets">
             <a className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300">
               WALLETS

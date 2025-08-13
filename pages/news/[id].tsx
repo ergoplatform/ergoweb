@@ -6,7 +6,7 @@ import remarkBreaks from 'remark-breaks';
 import rehypeRaw from 'rehype-raw';
 import Image from 'next/image';
 import Button from '../../components/Button';
-import { BlogFacebook, BlogLink, BlogTwitter, LogoBlack } from '../../components/icons';
+import { BlogFacebook, BlogLink, BlogX, LogoBlack } from '../../components/icons';
 import Link from 'next/link';
 import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
@@ -123,7 +123,7 @@ export default function Post(props: Props) {
                     href="https://twitter.com/intent/tweet?text={window.location.href}"
                     passHref
                   >
-                    <BlogTwitter />
+                    <BlogX />
                   </Link>
                 </div>
                 {/* <div className="cursor-pointer">
