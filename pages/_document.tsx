@@ -4,18 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.chatbaseConfig = {
-                chatbotId: "zxB2uzZfYoHIpA98eTzgM",
-              }
-            `,
-            }}
-          />
-          <script src="https://www.chatbase.co/embed.min.js" id="zxB2uzZfYoHIpA98eTzgM" defer />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

@@ -10,6 +10,7 @@ import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
 import dynamic from 'next/dynamic';
 import UniqueErgo from '../components/home/UniqueErgo';
+import HomeFrames from '../components/home/HomeFrames';
 import generateRssFeed from '../utils/generateRssFeed';
 const Partners = dynamic(() => import('../components/home/Partners'), {
   ssr: false,
@@ -30,15 +31,7 @@ export default function Home(props: Props) {
   });
   return (
     <div>
-      <div className="home-blur-1"></div>
-      <div className="home-blur-2"></div>
-      <div className="home-blur-3"></div>
-      <div className="home-blur-4"></div>
-      <div className="home-frame-3"></div>
-      <div className="home-frame-1"></div>
-      <div className="home-frame-2"></div>
-      <div className="home-frame-4"></div>
-      <div className="home-frame-5"></div>
+      <HomeFrames />
       <Layout title={title}>
         <HomeHero />
         <Highlights />

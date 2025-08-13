@@ -4,8 +4,9 @@ module.exports = {
   },
   darkMode: 'class',
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './sections/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
