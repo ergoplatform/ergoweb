@@ -1,10 +1,12 @@
 import { useIntl } from 'react-intl';
 import DiscoverHero from '../components/discover/DiscoverHero';
-import Documents from '../components/discover/Documents';
 import ErgoExplorer from '../components/discover/ErgoExplorer';
-import FAQ from '../components/discover/FAQ';
 import GrantsAndBounties from '../components/discover/GrantsAndBounties';
 import Layout from '../components/Layout';
+import dynamic from 'next/dynamic';
+
+const DynamicDocuments = dynamic(() => import('../components/discover/Documents'), { ssr: false });
+const DynamicFAQ = dynamic(() => import('../components/discover/FAQ'), { ssr: false });
 
 type Props = {
   documents?: any;
@@ -28,9 +30,9 @@ export default function Discover(props: Props) {
       <Layout title={title}>
         <DiscoverHero />
         <GrantsAndBounties />
-        {props.faq ? <FAQ faq={props.faq} /> : null}
+        {props.faq ? <DynamicFAQ faq={props.faq} /> : null}
         <ErgoExplorer />
-        {props.documents ? <Documents documents={props.documents} /> : null}
+        {props.documents ? <DynamicDocuments documents={props.documents} /> : null}
       </Layout>
     </div>
   );

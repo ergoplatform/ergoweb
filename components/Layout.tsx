@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Footer from './Footer';
-import Navigation from './Navigation';
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+const DynamicNavigation = dynamic(() => import('./Navigation'), { ssr: false });
 
 type Props = {
   children: React.ReactNode;
@@ -25,7 +27,7 @@ export default function Layout({ children, title, desc, footer = true }: Props) 
           }
         />
       </Head>
-      <Navigation />
+      <DynamicNavigation />
       <div className="">{children}</div>
       {footer && <Footer />}
     </main>

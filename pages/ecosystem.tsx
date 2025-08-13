@@ -4,9 +4,11 @@ import DApps from '../components/ecosystem/DApps';
 import EcosystemHero from '../components/ecosystem/EcosystemHero';
 import Favorites from '../components/ecosystem/Favorites';
 import FeaturesAndProjects from '../components/ecosystem/FeaturesAndProjects';
-import Roadmap from '../components/ecosystem/Roadmap';
 import Wiki from '../components/ecosystem/Wiki';
 import Layout from '../components/Layout';
+import dynamic from 'next/dynamic';
+
+const DynamicRoadmap = dynamic(() => import('../components/ecosystem/Roadmap'), { ssr: false });
 
 type Props = {
   apps?: any;
@@ -35,7 +37,7 @@ export default function Ecosystem(props: Props) {
       <Layout title={title}>
         <EcosystemHero />
         {props.apps ? <DApps apps={props.apps} /> : null}
-        {props.roadmap ? <Roadmap roadmapItems={props.roadmap} /> : null}
+        {props.roadmap ? <DynamicRoadmap roadmapItems={props.roadmap} /> : null}
         <Wiki />
         {props.favorites ? <Favorites favorites={props.favorites} /> : null}
         {props.projects ? <FeaturesAndProjects projects={props.projects} /> : null}

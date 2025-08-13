@@ -11,6 +11,8 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="" />
+          <link rel="preload" href="/assets/home/frame-1.png" as="image" />
+          <link rel="preload" href="/assets/home/frame-1-light.png" as="image" />
         </Head>
         <body>
           <Main />

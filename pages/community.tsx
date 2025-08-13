@@ -2,13 +2,17 @@ import { useIntl } from 'react-intl';
 import CommunityCardsFeed from '../components/community/CommunityCardsFeed';
 import CommunityHero from '../components/community/CommunityHero';
 import ErgoFoundation from '../components/community/ErgoFoundation';
-import HallOfFame from '../components/community/HallOfFame';
 import OurMission from '../components/community/OurMission';
 import Sigmanauts from '../components/community/Sigmanauts';
 import Spotlight from '../components/community/Spotlight';
 import Layout from '../components/Layout';
 import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
+import dynamic from 'next/dynamic';
+
+const DynamicHallOfFame = dynamic(() => import('../components/community/HallOfFame'), {
+  ssr: false,
+});
 
 type Props = {
   posts?: any;
@@ -48,7 +52,7 @@ export default function Community(props: Props) {
             <Feed posts={props.posts} />
           </>
         ) : null}
-        {props.teamMembers ? <HallOfFame teamMembers={props.teamMembers} /> : null}
+        {props.teamMembers ? <DynamicHallOfFame teamMembers={props.teamMembers} /> : null}
         <ErgoFoundation />
         <OurMission />
       </Layout>

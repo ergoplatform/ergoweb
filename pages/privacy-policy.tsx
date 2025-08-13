@@ -1,7 +1,11 @@
 import type { NextPage } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Layout from '../components/Layout';
-import PrivacyPolicyContent from '../content/privacyPolicy.mdx';
+import dynamic from 'next/dynamic';
+
+const DynamicPrivacyPolicyContent = dynamic(() => import('../content/privacyPolicy.mdx'), {
+  ssr: false,
+});
 
 const PrivacyPolicy: NextPage = () => {
   const intl = useIntl();
@@ -17,7 +21,7 @@ const PrivacyPolicy: NextPage = () => {
             <FormattedMessage defaultMessage="Privacy Policy" id="pages.privacyPolicy.title" />
           </p>
           <div className="mdPage  md:w-2/3">
-            <PrivacyPolicyContent />
+            <DynamicPrivacyPolicyContent />
           </div>
         </div>
       </div>

@@ -102,9 +102,9 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: `default-src 'self'; script-src 'self' 'unsafe-inline' ${
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.chatbase.co ${
               process.env.NODE_ENV === 'development' ? "'unsafe-eval'" : ''
-            }; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://storage.googleapis.com; media-src 'self' blob:; connect-src 'self' https://api.ergoplatform.com https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app https://storage.googleapis.com; frame-src 'self' https://docs.google.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'`,
+            }; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://storage.googleapis.com; media-src 'self' blob:; connect-src 'self' https://api.ergoplatform.com https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app https://storage.googleapis.com https://region1.google-analytics.com https://www.chatbase.co; frame-src 'self' https://docs.google.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'`,
           },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },

@@ -1,7 +1,9 @@
 import type { NextPage } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Layout from '../components/Layout';
-import LegalContent from '../content/legal.mdx';
+import dynamic from 'next/dynamic';
+
+const DynamicLegalContent = dynamic(() => import('../content/legal.mdx'), { ssr: false });
 
 const Legal: NextPage = () => {
   const intl = useIntl();
@@ -20,7 +22,7 @@ const Legal: NextPage = () => {
               <FormattedMessage defaultMessage="Legal" id="pages.legal.title" />
             </p>
             <div className="mdPage  md:w-2/3">
-              <LegalContent />
+              <DynamicLegalContent />
             </div>
           </div>
         </div>

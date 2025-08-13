@@ -74,6 +74,7 @@ export default function HomeHero() {
             playsInline={true}
             loop={true}
             muted={true}
+            preload="metadata"
             className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
             disablePictureInPicture={true}
             controlsList="nodownload"
@@ -92,6 +93,7 @@ export default function HomeHero() {
             playsInline={true}
             loop={true}
             muted={true}
+            preload="metadata"
             className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
             disablePictureInPicture={true}
             controlsList="nodownload"
