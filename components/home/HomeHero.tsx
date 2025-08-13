@@ -24,16 +24,8 @@ export default function HomeHero() {
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
       <div className="relative">
-        <div className="max-w-lg leading-none md:max-w-4xl relative z-20">
-          <h1 className="md:hidden text-5xl">
-            <b>
-              <FormattedMessage
-                defaultMessage="Powering the Future of Finance"
-                id="components.homeHero.title"
-              />
-            </b>
-          </h1>
-          <h1 className="hidden md:block text-6xl">
+        <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-20">
+          <h1 className="text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,5vw,4.5rem)]">
             <b>
               <FormattedMessage
                 defaultMessage="Powering the Future of Finance"
@@ -82,7 +74,7 @@ export default function HomeHero() {
             playsInline={true}
             loop={true}
             muted={true}
-            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
             disablePictureInPicture={true}
             controlsList="nodownload"
             poster="/assets/home/frame-1.png"
@@ -100,7 +92,7 @@ export default function HomeHero() {
             playsInline={true}
             loop={true}
             muted={true}
-            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
+            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
             disablePictureInPicture={true}
             controlsList="nodownload"
             poster="/assets/home/frame-1-light.png"

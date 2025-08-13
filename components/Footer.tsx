@@ -48,16 +48,16 @@ export default function Footer() {
       <div className="absolute inset-0 -z-10 w-full h-full">
         {mounted && (
           <>
-            {/* Mobile Background */}
+            {/* Mobile Background (use high-res for crispness on DPR screens) */}
             <div className="md:hidden relative w-full h-full">
               <Image
-                src={
-                  theme === 'dark' ? '/assets/footer-small.png' : '/assets/footer-small-light.png'
-                }
+                src={theme === 'dark' ? '/assets/footer.png' : '/assets/footer-light.png'}
                 alt="Ergo Footer Background"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="bottom center"
+                quality={90}
+                priority={false}
               />
             </div>
             {/* Desktop Background */}

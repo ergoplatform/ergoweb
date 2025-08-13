@@ -123,14 +123,16 @@ export default function UniqueErgo() {
               <div
                 key={index}
                 className={
-                  'bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-14 overflow-hidden relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A]' +
+                  'bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-[260px] sm:min-w-[300px] overflow-hidden relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A]' +
                   (index === 0 ? ' active' : '')
                 }
               >
-                <div className="absolute top-16 lg:top-8 flex label mb-3 ml-4 lg:ml-16 transition-base z-20 text-[16px] lg:text-[24px] flex-col">
+                <div className="absolute top-16 lg:top-8 flex label mb-3 ml-4 lg:ml-16 transition-base z-20 text-[clamp(12px,1.8vw,20px)] lg:text-[clamp(16px,1.5vw,24px)] leading-tight flex-col">
                   <div className="hidden dark:block">{card.icon}</div>
                   <div className="dark:hidden">{card.iconLight}</div>
-                  <div className="mt-8 max-w-[300px]">{card.title}</div>
+                  <div className="mt-8 max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] break-words">
+                    {card.title}
+                  </div>
                 </div>
                 <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-black dark:text-[#807e7e] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                   <div>{card.text}</div>
