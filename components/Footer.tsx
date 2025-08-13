@@ -269,14 +269,17 @@ export default function Footer() {
               <li className="mb-4">
                 <Link href="/ecosystem/#Favorites">
                   <a>
-                    <FormattedMessage defaultMessage="OUR FAVORITES" id="footer.ecosystem.4" />
+                    <FormattedMessage defaultMessage="OUR FAVORITES" id="footer.favorites.title" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem#Videocasts">
                   <a>
-                    <FormattedMessage defaultMessage="Real Life Ergo" id="footer.ecosystem.5" />
+                    <FormattedMessage
+                      defaultMessage="Real Life Ergo"
+                      id="footer.realLifeErgo.title"
+                    />
                   </a>
                 </Link>
               </li>

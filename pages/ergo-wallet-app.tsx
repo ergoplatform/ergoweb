@@ -1,5 +1,6 @@
 import { useIntl } from 'react-intl';
 import Layout from '../components/Layout';
+import Image from 'next/image';
 
 export default function MobileWallets() {
   const intl = useIntl();
@@ -29,7 +30,7 @@ export default function MobileWallets() {
                       className="flex text-base font-medium rounded-2xl text-white md:text-lg"
                       rel="noreferrer"
                     >
-                      <img src="/assets/google.svg" alt="" />
+                      <Image src="/assets/google.svg" alt="" width={198} height={59} />
                     </a>
                     <a
                       target="_blank"
@@ -37,7 +38,7 @@ export default function MobileWallets() {
                       className="flex text-base font-medium rounded-2xl text-white md:text-lg ml-0 lg:ml-2 mt-4 lg:mt-0"
                       rel="noreferrer"
                     >
-                      <img src="/assets/appstore.svg" alt="" />
+                      <Image src="/assets/appstore.svg" alt="" width={198} height={59} />
                     </a>
                   </div>
                   <p className="mt-3 text-lg text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">
@@ -57,7 +58,13 @@ export default function MobileWallets() {
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 hidden lg:block">
             <div className="flex justify-center">
-              <img style={{ maxHeight: '450px' }} src="/assets/application.png" alt="" />
+              <Image
+                src="/assets/application.png"
+                alt=""
+                width={1080}
+                height={2291}
+                style={{ maxHeight: '450px', height: 'auto' }}
+              />
             </div>
           </div>
         </div>
@@ -360,7 +367,7 @@ export default function MobileWallets() {
                   className="flextext-base font-medium rounded-2xl text-white md:text-lg"
                   rel="noreferrer"
                 >
-                  <img src="/assets/google.svg" alt="Android logotype" />
+                  <Image src="/assets/google.svg" alt="Android logotype" width={198} height={59} />
                 </a>
                 <a
                   target="_blank"
@@ -368,7 +375,7 @@ export default function MobileWallets() {
                   className="flex text-base font-medium rounded-2xl text-white md:text-lg ml-0 lg:ml-2 mt-4 lg:mt-0"
                   rel="noreferrer"
                 >
-                  <img src="/assets/appstore.svg" alt="Ios logotype" />
+                  <Image src="/assets/appstore.svg" alt="Ios logotype" width={198} height={59} />
                 </a>
               </div>
             </div>

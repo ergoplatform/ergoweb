@@ -184,6 +184,7 @@
   "footer.ecosystem.4": "Ergo Raffle",
   "footer.ecosystem.5": "Videocasts",
   "footer.ecosystem.title": "ECOSYSTEM",
+  "footer.favorites.title": "OUR FAVORITES",
   "footer.getErg.1": "Mining",
   "footer.getErg.2": "Mining Calculator",
   "footer.getErg.3": "Wallets",
@@ -192,6 +193,7 @@
   "footer.legal": "Legal",
   "footer.news.title": "NEWS",
   "footer.privacyPolicy": "Privacy Policy",
+  "footer.realLifeErgo.title": "Real Life Ergo",
   "footer.weGotIt": "We got it!",
   "navigation.discover": "DISCOVER",
   "navigation.ecosystem": "ECOSYSTEM",
@@ -208,5 +210,6 @@
   "pages.home.title": "Home",
   "pages.legal.title": "Legal",
   "pages.mobile-wallets": "Mobile Wallets",
+  "pages.news.title": "News",
   "pages.privacyPolicy.title": "Privacy Policy"
 }
