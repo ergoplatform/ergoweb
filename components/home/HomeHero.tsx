@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react';
 export default function HomeHero() {
   const intl = useIntl();
   const { theme } = useTheme(); // Get the current theme
-  const [mounted, setMounted] = useState(false); // State to track if component is mounted
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Set mounted to true after component mounts on client side
+    setMounted(true);
   }, []);
 
   const button = intl.formatMessage({
@@ -64,7 +64,7 @@ export default function HomeHero() {
           />
           <Button
             text={secondButton}
-            url="https://docs.google.com/presentation/d/e/2PACX-1vQMR27WLXAQ5NiuBb2EJ5wadU8DoJEzJmsrp_oqVNKmPOAATdF6Cjw9IKaW2InO0Xqr85xTI4luPPUE/pub?start=false&loop=false&delayms=3000&slide=id.g195421e485f_0_4"
+            url="https://docs.google.com/presentation/d/e/2PACX-1vRKsXBoOE7llTGjsh5c_FfU3cLw3DRtsPs4d4iS6OeoAJIbjTGS6uXpofPirRYvK58aKde5j1yqAiFV/pub?start=false&loop=false&delayms=3000"
             newTab={true}
             background={false}
             animation={true}
@@ -74,8 +74,9 @@ export default function HomeHero() {
           />
         </div>
       </div>
-      {mounted && theme === 'dark' && (
-        <div>
+      {/* Dark Theme Video */}
+      {mounted && (
+        <div className="hidden md:block dark:block">
           <video
             autoPlay={true}
             playsInline={true}
@@ -84,7 +85,6 @@ export default function HomeHero() {
             className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
             disablePictureInPicture={true}
             controlsList="nodownload"
-            preload="metadata"
             poster="/assets/home/frame-1.png"
           >
             <source src="../assets/ergo-dark.mp4" type="video/mp4" />
@@ -92,8 +92,9 @@ export default function HomeHero() {
           </video>
         </div>
       )}
-      {mounted && theme === 'light' && (
-        <div>
+      {/* Light Theme Video */}
+      {mounted && (
+        <div className="hidden md:block dark:hidden">
           <video
             autoPlay={true}
             playsInline={true}
@@ -102,7 +103,6 @@ export default function HomeHero() {
             className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:max-w-[96%] md:scale-100"
             disablePictureInPicture={true}
             controlsList="nodownload"
-            preload="metadata"
             poster="/assets/home/frame-1-light.png"
           >
             <source src="../assets/ergo-light.mp4" type="video/mp4" />

@@ -75,7 +75,7 @@ export default function ContributeForm() {
             <FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" />
           </b>
         </h1>
-        <p className="text-[#807e7e] dark:text-[#807e7e] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
+        <p className="text-[#807e7e] dark:text-white w-56 lg:w-72 lg:mt-auto lg:mb-auto">
           <FormattedMessage
             defaultMessage="Ergo operates on an open model where <b>anyone is welcome to contribute.</b>"
             id="components.ContributeForm.text"
@@ -92,7 +92,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-8">
+          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-white mb-8">
             <b>
               <FormattedMessage
                 defaultMessage="HOW CAN I CONTRIBUTE?"
@@ -159,7 +159,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-10">
+          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-white mb-10">
             <FormattedMessage
               defaultMessage="WANT TO BECOME A PARTNER?"
               id="components.ContributeForm.company.subTitle"

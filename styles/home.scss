@@ -183,33 +183,26 @@
         display: none;
     }
     .home-frame-3 {
-        transform: scale(0.5);
-        transform-origin: center right;
+        display: none !important;
     }
     .home-frame-4 {
-        transform: scale(0.5);
-        transform-origin: center left;
-        top: 3900px;
+        display: none !important;
     }
     .home-frame-5 {
-        transform: scale(0.5);
-        transform-origin: center right;
+        display: none !important;
     }
 
-    .home-blur-1 {
-        display: none;        
+    .home-blur-1, .dark .home-blur-1 {
+        display: none !important;        
     }
-    .home-blur-2 {
-        transform: scale(0.5);
-        transform-origin: center left;        
+    .home-blur-2, .dark .home-blur-2 {
+        display: none !important;        
     }
-    .home-blur-3 {
-        transform: scale(0.5);
-        transform-origin: center left;        
+    .home-blur-3, .dark .home-blur-3 {
+        display: none !important;        
     }
-    .home-blur-4 {
-        transform: scale(0.5);
-        transform-origin: center right;        
+    .home-blur-4, .dark .home-blur-4 {
+        display: none !important;        
     }
 }
 
@@ -233,32 +226,33 @@
         display: none;
     }
     .home-frame-3 {
-        transform: scale(0.4);
-        transform-origin: center right;
+        display: none !important;
     }
     .home-frame-4 {
-        transform: scale(0.5);
-        transform-origin: center left;
+        display: none !important;
     }
     .home-frame-5 {
-        transform: scale(0.5);
-        transform-origin: center right;
-        top: 4800px;
+        display: none !important;
     }
 
-    .home-blur-1 {
-        display: none;        
+    .home-blur-1, .dark .home-blur-1 {
+        display: none !important;        
     }
-    .home-blur-2 {
-        transform: scale(0.2);
-        transform-origin: center left;        
+    .home-blur-2, .dark .home-blur-2 {
+        display: none !important;        
     }
-    .home-blur-3 {
-        transform: scale(0.2);
-        transform-origin: center left;        
+    .home-blur-3, .dark .home-blur-3 {
+        display: none !important;        
     }
-    .home-blur-4 {
-        transform: scale(0.2);
-        transform-origin: center right;        
+    .home-blur-4, .dark .home-blur-4 {
+        display: none !important;        
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .hide-video-on-mobile {
+        display: none !important;
     }
 }

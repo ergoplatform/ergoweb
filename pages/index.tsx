@@ -52,13 +52,13 @@ export default function Home(props: Props) {
             transactionPerDay={props.info.transactionAverage}
           />
         ) : null}
-
         <UniqueErgo />
         <UsingErg />
         <Autolykos />
         {props.news ? <News news={props.news} /> : null}
         {props.posts ? <Feed posts={props.posts} /> : null}
-        <Partners partners={props.partners || []} /> {/* Pass partners prop, default to empty array */}
+        <Partners partners={props.partners || []} />
+        {/* Pass partners prop, default to empty array */}
         <ContributeForm />
       </Layout>
     </div>

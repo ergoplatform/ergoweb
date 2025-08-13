@@ -56,7 +56,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Larger frame near hero - mark as priority */}
-      <div className="home-frame-3 dark:hidden">
+      <div className="home-frame-3 dark:hidden hide-on-mobile">
         <Image
           src="/assets/home/frame-3-light.png"
           alt=""
@@ -68,7 +68,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-3 hidden dark:block">
+      <div className="home-frame-3 hidden dark:block hide-on-mobile">
         <Image
           src="/assets/home/frame-3.png"
           alt=""
@@ -82,7 +82,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Left frames lower on page */}
-      <div className="home-frame-4 dark:hidden">
+      <div className="home-frame-4 dark:hidden hide-on-mobile">
         <Image
           src="/assets/home/frame-4-light.png"
           alt=""
@@ -94,7 +94,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-4 hidden dark:block">
+      <div className="home-frame-4 hidden dark:block hide-on-mobile">
         <Image
           src="/assets/home/frame-4.png"
           alt=""
@@ -107,7 +107,7 @@ export default function HomeFrames() {
         />
       </div>
 
-      <div className="home-frame-5 dark:hidden">
+      <div className="home-frame-5 dark:hidden hide-on-mobile">
         <Image
           src="/assets/home/frame-5-light.png"
           alt=""
@@ -119,7 +119,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-5 hidden dark:block">
+      <div className="home-frame-5 hidden dark:block hide-on-mobile">
         <Image
           src="/assets/home/frame-5.png"
           alt=""
@@ -133,13 +133,13 @@ export default function HomeFrames() {
       </div>
 
       {/* Blurs */}
-      <div className="home-blur-1"></div>
+      <div className="home-blur-1 hidden md:block"></div>
 
-      <div className="home-blur-2"></div>
+      <div className="home-blur-2 hidden md:block"></div>
 
-      <div className="home-blur-3"></div>
+      <div className="home-blur-3 hidden md:block"></div>
 
-      <div className="home-blur-4"></div>
+      <div className="home-blur-4 hidden md:block"></div>
     </>
   );
 }

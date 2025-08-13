@@ -66,7 +66,7 @@ export default function UsingErg() {
     >
       <div className="flex flex-col xl:flex-row justify-between">
         <div className="lg:flex lg:flex-col lg:justify-end lg:mb-44">
-          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
+          <p className="text-[#585858] dark:text-white mb-4 font-bold">
             <FormattedMessage
               defaultMessage={'UNSTOPPABLE DEFI'}
               id="components.usingErg.subtitle"
@@ -80,7 +80,7 @@ export default function UsingErg() {
               ></FormattedMessage>
             </b>
           </h2>
-          <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
+          <p className="text-[#807e7e] dark:text-white mt-6 max-w-xs mr-4">
             <FormattedMessage
               defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
               investor, we have you covered."

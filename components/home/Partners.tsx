@@ -38,17 +38,17 @@ export default function Partners({ partners }: Props) {
                 rel="noreferrer"
                 aria-label={partner.attributes.name}
               >
-                {theme == 'dark' && partner.attributes.image_dark?.data != null ? (
+                {theme === 'dark' && partner.attributes.image_dark?.data != null ? (
                   <Image
-                    width={partner.attributes.image_dark.data.attributes.width}
-                    height={partner.attributes.image_dark.data.attributes.height}
+                    width={partner.attributes.image_dark.data.attributes.width || 0}
+                    height={partner.attributes.image_dark.data.attributes.height || 0}
                     src={partner.attributes.image_dark.data.attributes.url}
                     alt={partner.attributes.name}
                   />
                 ) : partner.attributes.image?.data ? (
                   <Image
-                    width={partner.attributes.image.data.attributes.width}
-                    height={partner.attributes.image.data.attributes.height}
+                    width={partner.attributes.image.data.attributes.width || 0}
+                    height={partner.attributes.image.data.attributes.height || 0}
                     src={partner.attributes.image.data.attributes.url}
                     alt={partner.attributes.name}
                   />
@@ -57,17 +57,17 @@ export default function Partners({ partners }: Props) {
             ) : (
               // Render a div or span if no URL is available, to maintain layout
               <div>
-                {theme == 'dark' && partner.attributes.image_dark?.data != null ? (
+                {theme === 'dark' && partner.attributes.image_dark?.data != null ? (
                   <Image
-                    width={partner.attributes.image_dark.data.attributes.width}
-                    height={partner.attributes.image_dark.data.attributes.height}
+                    width={partner.attributes.image_dark.data.attributes.width || 0}
+                    height={partner.attributes.image_dark.data.attributes.height || 0}
                     src={partner.attributes.image_dark.data.attributes.url}
                     alt={partner.attributes.name}
                   />
                 ) : partner.attributes.image?.data ? (
                   <Image
-                    width={partner.attributes.image.data.attributes.width}
-                    height={partner.attributes.image.data.attributes.height}
+                    width={partner.attributes.image.data.attributes.width || 0}
+                    height={partner.attributes.image.data.attributes.height || 0}
                     src={partner.attributes.image.data.attributes.url}
                     alt={partner.attributes.name}
                   />

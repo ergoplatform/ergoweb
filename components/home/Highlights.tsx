@@ -176,7 +176,7 @@ function Highlights() {
                     })}
                   </div>
                   <div className="item w-2/3">
-                    <h3 className="leading-tight">{item.titleMessage}</h3>
+                    <h2 className="leading-tight">{item.titleMessage}</h2>
                     <p className="max-w-lg text-[#585858] mt-6">{item.textMessage}</p>
                     <p className="font-vinila-extended leading-none text-[56px] mt-12">
                       {item.quoteMessage}

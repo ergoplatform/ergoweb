@@ -66,7 +66,7 @@ function Navigation({ enableLanguages = true }) {
               textColor="white"
               background={true}
               underline={pathname == '/get-erg'}
-              customClass=" decoration-black dark:decoration-white underline-offset-2"
+              customClass=" text-white decoration-white dark:decoration-white underline-offset-2"
             />
             <Button
               text={discover}

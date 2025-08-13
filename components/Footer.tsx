@@ -12,6 +12,11 @@ export default function Footer() {
   const [newsData, setNewsData] = useState([]);
   const { locale } = useRouter();
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,57 +45,35 @@ export default function Footer() {
 
   return (
     <footer id="Footer" className="relative z-10">
-      <div className="max-w-[1300px] mx-auto py-12 px-4">
-        <div className="absolute inset-0 -z-10">
-          {/* Mobile Light */}
-          {theme === 'light' && (
-            <div className="md:hidden">
+      <div className="absolute inset-0 -z-10 w-full h-full">
+        {mounted && (
+          <>
+            {/* Mobile Background */}
+            <div className="md:hidden relative w-full h-full">
               <Image
-                src="/assets/footer-small-light.png"
+                src={
+                  theme === 'dark' ? '/assets/footer-small.png' : '/assets/footer-small-light.png'
+                }
                 alt="Ergo Footer Background"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="bottom center"
               />
             </div>
-          )}
-          {/* Mobile Dark */}
-          {theme === 'dark' && (
-            <div className="md:hidden">
+            {/* Desktop Background */}
+            <div className="hidden md:block relative w-full h-full">
               <Image
-                src="/assets/footer-small.png"
+                src={theme === 'dark' ? '/assets/footer.png' : '/assets/footer-light.png'}
                 alt="Ergo Footer Background"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="bottom center"
               />
             </div>
-          )}
-          {/* Desktop Light */}
-          {theme === 'light' && (
-            <div className="hidden md:block">
-              <Image
-                src="/assets/footer-light.png"
-                alt="Ergo Footer Background"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="bottom center"
-              />
-            </div>
-          )}
-          {/* Desktop Dark */}
-          {theme === 'dark' && (
-            <div className="hidden md:block">
-              <Image
-                src="/assets/footer.png"
-                alt="Ergo Footer Background"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="bottom center"
-              />
-            </div>
-          )}
-        </div>
+          </>
+        )}
+      </div>
+      <div className="max-w-[1300px] mx-auto py-12 px-4 relative z-20">
         <div className="md:flex justify-between">
           <div className="my-6 md:my-auto flex justify-start md:justify-center">
             <Link href="/" passHref>
