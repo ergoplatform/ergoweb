@@ -29,6 +29,14 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: black !important;
+  width: 27px; /* Default Swiper arrow width */
+  height: 44px; /* Default Swiper arrow height */
+  line-height: 44px; /* Match height to prevent vertical shift */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-family: sans-serif !important; /* Force a generic font */
+  font-size: 20px; /* Ensure a consistent size */
 }
 .dark .swiper-button-next,
 .dark .swiper-button-prev {
@@ -220,8 +228,6 @@
   );
 }
 
-.flip {
-}
 
 .flip-content {
   transition: transform 0.2s;

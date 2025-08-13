@@ -11,8 +11,34 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="" />
-          <link rel="preload" href="/assets/home/frame-1.png" as="image" />
-          <link rel="preload" href="/assets/home/frame-1-light.png" as="image" />
+          <link
+            rel="preload"
+            href="/fonts/Vinila-Rg-Ex.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Vinila-Bd-Ex.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Vinila-Lt-Ex.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v29-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
           <Main />

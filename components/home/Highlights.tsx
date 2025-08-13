@@ -156,7 +156,9 @@ function Highlights() {
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="mx-16 flex-grow">
+                  <div className="mx-16 flex-grow" style={{ minHeight: '180px' }}>
+                    {' '}
+                    {/* Added minHeight for mobile layout stability */}
                     <p className="font-vinila-extended leading-none text-[24px]">
                       {item.quoteMessage}
                     </p>

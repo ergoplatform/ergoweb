@@ -67,10 +67,17 @@
     position: absolute;
     width: 769px;
     height: 895px;
-    top: 0px;
+    top: 260px; /* Push below nav area further to avoid showing near top-right */
     right: 0px;
     background: no-repeat url("/assets/home/blur-1-light.svg");
-    z-index: 1;
+    background-position: top right;
+    pointer-events: none;
+    z-index: -2; /* Push further behind content */
+}
+
+.dark .home-blur-1 {
+    background: no-repeat url("/assets/home/blur-1.svg");
+    background-position: top right;
 }
 
 .home-blur-2 {

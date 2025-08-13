@@ -2,10 +2,11 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import Image component
 
 export default function HomeHero() {
   const intl = useIntl();
-  const { theme } = useTheme(); // Get the current theme
+  const { resolvedTheme } = useTheme(); // Get the resolved theme
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -21,8 +22,18 @@ export default function HomeHero() {
     defaultMessage: 'PITCH DECK',
   });
 
+  // Determine which video to show based on resolvedTheme
+  const isDarkTheme = resolvedTheme === 'dark';
+  const videoSrc = isDarkTheme ? '../assets/ergo-dark.mp4' : '../assets/ergo-light.mp4';
+  const posterSrc = isDarkTheme ? '/assets/home/frame-1.png' : '/assets/home/frame-1-light.png';
+
+  // Only render the video if mounted and theme is resolved
+  const renderVideo = mounted && resolvedTheme;
+
   return (
     <div id="HomeHero" className="mt-36 max-w-[1300px] mx-auto p-4 relative">
+      {' '}
+      {/* Set z-index to 1 */}
       <div className="relative">
         <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-20">
           <h1 className="text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,5vw,4.5rem)]">
@@ -66,40 +77,20 @@ export default function HomeHero() {
           />
         </div>
       </div>
-      {/* Dark Theme Video */}
-      {mounted && (
-        <div className="dark:block">
+      {renderVideo && (
+        <div className="absolute top-0 left-0 right-0 h-[400px] w-full object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
           <video
-            autoPlay={true}
-            playsInline={true}
-            loop={true}
-            muted={true}
+            key={resolvedTheme} /* Add key to force re-mount on theme change */
+            className="w-full h-full md:object-contain object-cover pointer-events-none"
+            autoPlay
+            playsInline
+            loop
+            muted
             preload="metadata"
-            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
-            disablePictureInPicture={true}
+            disablePictureInPicture
             controlsList="nodownload"
-            poster="/assets/home/frame-1.png"
           >
-            <source src="../assets/ergo-dark.mp4" type="video/mp4" />
-            <track kind="captions" src="/assets/hero-en.vtt" srcLang="en" label="English" default />
-          </video>
-        </div>
-      )}
-      {/* Light Theme Video */}
-      {mounted && (
-        <div className="dark:hidden">
-          <video
-            autoPlay={true}
-            playsInline={true}
-            loop={true}
-            muted={true}
-            preload="metadata"
-            className="absolute -top-[13rem] h-[400px] w-[96%] object-cover md:h-auto md:object-contain md:w-full md:max-w-none md:scale-100 block bg-white dark:bg-transparent outline-none focus:outline-none focus-visible:outline-none overflow-hidden"
-            disablePictureInPicture={true}
-            controlsList="nodownload"
-            poster="/assets/home/frame-1-light.png"
-          >
-            <source src="../assets/ergo-light.mp4" type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
             <track kind="captions" src="/assets/hero-en.vtt" srcLang="en" label="English" default />
           </video>
         </div>

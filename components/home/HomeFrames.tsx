@@ -85,7 +85,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Blurs */}
-      <div className="home-blur-1 hidden md:block"></div>
+      {theme === 'dark' && <div className="home-blur-1 hidden md:block"></div>}
 
       <div className="home-blur-2 hidden md:block"></div>
 

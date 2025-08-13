@@ -234,35 +234,35 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mx-1">
-            <Link href="/get-erg" passHref>
+            <Link href="/get-erg" passHref prefetch={false}>
               <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
-                <Link href="/get-erg/#Mining">
+                <Link href="/get-erg/#Mining" prefetch={false}>
                   <a>
                     <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#MiningCalculator">
+                <Link href="/get-erg/#MiningCalculator" prefetch={false}>
                   <a>
                     <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#Wallets">
+                <Link href="/get-erg/#Wallets" prefetch={false}>
                   <a>
                     <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#Exchanges">
+                <Link href="/get-erg/#Exchanges" prefetch={false}>
                   <a>
                     <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
                   </a>

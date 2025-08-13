@@ -42,7 +42,8 @@ function Navigation({ enableLanguages = true }) {
   return (
     <>
       <SecondaryMenu />
-      <Popover className="max-w-[1300px] mx-auto px-4">
+      <Popover className="max-w-[1300px] mx-auto px-4 relative z-20">
+        {/* Increased z-index */}
         <div className="flex mx-0 mt-2 mb-10 lg:my-5 md:mx-0">
           <div className="my-auto flex-grow z-10">
             <Link href="/" passHref>
@@ -87,7 +88,7 @@ function Navigation({ enableLanguages = true }) {
           </div>
           <div className="inline-flex" style={{ zIndex: 12 }}>
             <div className="my-auto hidden xs:block">
-              {enableLanguages ? <LanguageSwitcher /> : null}{' '}
+              {enableLanguages ? <LanguageSwitcher /> : null}
             </div>
             <div className="my-auto ml-5 lg:ml-10">
               <DarkModeSwitch />
