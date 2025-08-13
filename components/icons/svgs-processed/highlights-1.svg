@@ -31,12 +31,12 @@
 <feBlend mode="normal" in2="shape" result="effect2_innerShadow_705_20471"/>
 </filter>
 <linearGradient id="paint0_linear_705_20471" x1="146.755" y1="135.148" x2="445.478" y2="680.799" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EFEFEF"/>
-<stop offset="1" stop-color="#292835" stop-opacity="0"/>
+<stop stopColor="#EFEFEF"/>
+<stop offset="1" stopColor="#292835" stopOpacity="0"/>
 </linearGradient>
 <linearGradient id="paint1_linear_705_20471" x1="302.54" y1="524.219" x2="120.856" y2="81.2502" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF5E18"/>
-<stop offset="1" stop-color="#FF5E18" stop-opacity="0"/>
+<stop stopColor="#FF5E18"/>
+<stop offset="1" stopColor="#FF5E18" stopOpacity="0"/>
 </linearGradient>
 </defs>
 </svg>

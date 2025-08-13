@@ -9,92 +9,92 @@ const SvgUsingErgStoreIt = (props) => (
     viewBox="0 0 258 388"
     {...props}
   >
-    <g clip-path="url(#clip0_1_1515)">
+    <g clipPath="url(#clip0_1_1515)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M1.45264 384.144L20.7537 384.648C37.2678 344.398 51.7659 308.656 65.078 269.473C69.7328 255.71 72.9348 245.744 75.87 237.795C81.7997 222.668 86.662 215.638 100.152 206.057C115.866 194.934 133.833 186.926 148.983 175.239C154.913 170.642 151.503 164.027 146.344 168.773C142.014 172.728 137.215 176.135 132.054 178.917C122.329 184.553 112.338 188.646 99.9149 195.023C79.8726 205.316 70.7112 215.786 63.3584 242.481C48.4157 297.029 29.5 333.097 1.45264 384.144Z"
         fill="url(#paint0_linear_1_1515)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M40.9741 385.212L64.1888 385.775L76.7597 345.287C82.2446 327.283 83.312 313.787 66.2345 302.664C59.9982 298.903 53.3277 295.915 46.3701 293.766C44.0575 299.698 44.0576 299.312 41.6264 305.067C64.426 316.664 64.6038 326.245 56.0058 349.559L40.9741 385.212Z"
         fill="url(#paint1_linear_1_1515)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M42.4269 385.212L48.5641 385.39L62.5582 346.593C71.4527 321.974 67.5391 316.249 41.6264 304.8C40.144 308.33 40.648 307.173 39.0767 310.732C62.2913 317.762 64.5149 325.563 57.1621 345.584L42.4269 385.212Z"
         fill="url(#paint2_linear_1_1515)"
       />
       <path
         d="M1.45264 384.144C29.5 333.097 48.4157 297.029 63.3584 242.541C70.7112 215.846 79.8726 205.316 99.9149 195.083C112.338 188.706 122.329 184.612 132.054 178.977C139.23 175.063 145.72 170.004 151.266 163.998C153.223 161.862 155.031 160.231 156.662 160.142C160.516 159.904 163.777 165.629 161.969 172.748C160.385 177.99 157.427 182.712 153.4 186.422C145.366 194.43 134.9 198.108 126.332 205.316C118.475 211.93 124.286 216.914 134.663 211.841C147.352 205.909 156.425 201.964 163.926 198.761C197.31 184.761 207.776 170.464 228.529 155.07C234.103 150.976 244.154 149.938 245.459 158.748C255.094 156.731 260.283 162.93 253.049 170.049L245.696 177.167C251.27 177.345 253.79 183.1 248.246 189.18L233.836 201.045C241.219 201.371 243.502 204.456 242.731 208.964C242.168 212.405 236.03 216.736 233.332 218.782L184.768 255.266C174.214 261.198 163.659 267.13 153.104 273.062C108.216 298.334 109.936 303.999 98.7289 353.801L91.554 386.517"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M246.022 158.54C236.298 161.506 222.659 175.566 213.824 182.744C204.558 190.133 194.634 196.657 184.176 202.231"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M245.726 177.108C238.136 177.938 233.481 182.002 227.937 186.6C221.236 192.146 209.051 201.638 202.587 206.235C197.067 210.174 191.248 213.674 185.184 216.706"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M236.208 200.926C231.264 201.57 226.595 203.572 222.719 206.71C201.965 223.231 202.291 223.824 177.268 236.668"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M123.693 208.015C117.081 217.507 117.763 229.549 112.249 239.931C109.596 244.882 105.611 248.992 100.745 251.795"
         stroke="white"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M118.149 27.9707H174.57V223.231L118.149 244.439V27.9707Z"
         fill="url(#paint3_linear_1_1515)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M74.1506 242.63C70.3852 256.037 70.652 263.393 77.5008 280.834C71.9565 277.245 68.6063 270.512 61.9058 269.384L65.0782 252.21L74.1506 242.63Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M121.203 293.588C120.313 284.423 123.485 281.724 131.253 276.592L145.069 267.694C153.43 262.295 160.131 259.418 168.136 267.456C172.553 271.935 169.944 274.635 166.179 276.948C154.735 283.889 143.528 290.83 132.232 298.037C128.377 300.885 122.062 302.931 121.203 293.588Z"
         fill="white"
         stroke="white"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M121.351 294.893L124.879 300.143H116.103L121.351 294.893Z"
         fill="white"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M100.982 223.736C97.5432 232.397 91.0799 240.672 82.9859 241.888C70.8004 243.846 69.0808 222.905 81.7703 210.477C95.8236 196.744 110.203 200.511 100.982 223.736Z"
         fill="#FF5E18"
       />
@@ -103,14 +103,14 @@ const SvgUsingErgStoreIt = (props) => (
         fill="#FF5E18"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M169.441 32.0641L162.71 15.691L146.374 8.92822L130.008 15.691L123.219 32.0641L130.008 48.4371L146.374 55.1406L162.71 48.4371L169.441 32.0641Z"
         fill="#121212"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M144.565 35.5048H155.446V40.6659H137.212V35.9794L144.417 28.0598L137.212 20.5259V15.958H155.446V21.0301H144.802L151.444 27.9709L144.565 35.5048Z"
         fill="white"
       />
@@ -123,14 +123,14 @@ const SvgUsingErgStoreIt = (props) => (
         fill="#FF5E18"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M169.441 122.442L162.71 106.099L146.374 99.3062L130.008 106.099L123.219 122.442L130.008 138.726L146.374 145.519L162.71 138.726L169.441 122.442Z"
         fill="#121212"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M144.565 125.883H155.446V130.955H137.212V126.387L144.417 118.378L137.212 110.933V106.336H155.446V111.408H144.802L151.444 118.378L144.565 125.883Z"
         fill="white"
       />
@@ -143,14 +143,14 @@ const SvgUsingErgStoreIt = (props) => (
         fill="#FF5E18"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M168.744 224.69L162.755 210.156L146.419 203.364L130.053 210.156L123.263 226.5L128.926 240.085L168.744 224.69Z"
         fill="#121212"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M144.565 230.439H155.12L141.956 235.6H137.212V230.943L144.417 222.994L137.212 215.46V210.892H155.446V215.964H144.802L151.444 222.905L144.565 230.439Z"
         fill="white"
       />
@@ -161,9 +161,9 @@ const SvgUsingErgStoreIt = (props) => (
       <path
         d="M177.987 223L117 246.551"
         stroke="#FF5E18"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>
@@ -175,8 +175,8 @@ const SvgUsingErgStoreIt = (props) => (
         y2="368.512"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#25211A" stop-opacity="0" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#25211A" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_1_1515"
@@ -186,8 +186,8 @@ const SvgUsingErgStoreIt = (props) => (
         y2="421.518"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF5E18" />
-        <stop offset="1" stop-color="#121212" stop-opacity="0" />
+        <stop stopColor="#FF5E18" />
+        <stop offset="1" stopColor="#121212" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_1_1515"
@@ -197,8 +197,8 @@ const SvgUsingErgStoreIt = (props) => (
         y2="385.598"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#121212" stop-opacity="0" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#121212" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_1_1515"
@@ -208,8 +208,8 @@ const SvgUsingErgStoreIt = (props) => (
         y2="54.873"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF5E18" stop-opacity="0" />
-        <stop offset="1" stop-color="#FF5E18" />
+        <stop stopColor="#FF5E18" stopOpacity="0" />
+        <stop offset="1" stopColor="#FF5E18" />
       </linearGradient>
       <clipPath id="clip0_1_1515">
         <rect width="258" height="388" fill="white" />

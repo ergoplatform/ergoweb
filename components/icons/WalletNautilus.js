@@ -65,7 +65,7 @@ const SvgWalletNautilus = (props) => (
     </defs>
     <style type="text/css" id="style2">
       {
-        '.wallet-nautilus_svg__st0,.wallet-nautilus_svg__st2{fill:#ffae00}.wallet-nautilus_svg__st2,.wallet-nautilus_svg__st3{stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.wallet-nautilus_svg__st4{fill:#ffeabd}'
+        '.wallet-nautilus_svg__st0,.wallet-nautilus_svg__st2{fill:#ffae00}.wallet-nautilus_svg__st2,.wallet-nautilus_svg__st3{stroke:#000;strokeWidth:3;strokeLinecap:round;strokeLinejoin:round;strokeMiterlimit:10}.wallet-nautilus_svg__st4{fill:#ffeabd}'
       }
     </style>
     <g id="wallet-nautilus_svg__g39" transform="translate(.767 -1.182)">
