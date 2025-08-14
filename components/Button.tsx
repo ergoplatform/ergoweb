@@ -27,12 +27,25 @@ export default function Button({
   customClass = '',
   animation,
 }: Props) {
-  // Determine text color based on background and provided textColor prop
-  // If background is true (orange), use black text for better contrast. Otherwise, use the provided textColor or default.
-  const finalTextColor = background ? 'black' : textColor;
+  let textClasses = '';
+  let darkTextClass = '';
+
+  if (background) {
+    // Orange background button
+    textClasses = 'text-black'; // Black text in light mode
+    darkTextClass = 'dark:text-white'; // White text in dark mode
+  } else {
+    // Transparent background button
+    textClasses = `text-${textColor}`; // Use textColor prop
+    darkTextClass = customClass.includes('dark:') ? '' : 'dark:text-white'; // Add dark:text-white if not already present in customClass
+  }
+
   var className =
-    `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${finalTextColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange` +
-    customClass;
+    `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full font-vinila-extended text-[14px] md:text-[16px]` +
+    (background ? ' bg-brand-orange' : ' bg-transparent') +
+    ` ${textClasses} ${darkTextClass} ` + // Add the dynamic text classes and dark mode class
+    customClass; // Append customClass at the end
+
   var target = '_self';
 
   if (underline == true) {
@@ -41,10 +54,6 @@ export default function Button({
 
   if (newTab == true) {
     target = '_blank';
-  }
-
-  if (background == false) {
-    className += ' bg-transparent';
   }
 
   if (animation) {

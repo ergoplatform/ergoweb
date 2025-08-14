@@ -104,6 +104,12 @@
     max-width: 384px;
 }
 
+/* Fix desktop CLS: reserve stable height for Highlights swiper */
+.SwiperHighlights {
+    height: 720px; /* desktop/tablet default */
+    overflow: hidden;
+}
+
 
 // .dark .home-blur-2 {
 //     position: absolute;

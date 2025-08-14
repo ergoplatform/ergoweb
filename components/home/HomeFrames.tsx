@@ -1,18 +1,10 @@
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 
 const BLUR = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
 export default function HomeFrames() {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <>
@@ -43,22 +35,24 @@ export default function HomeFrames() {
         />
       </div>
 
-      {/* Larger frame near hero - mark as priority */}
-      <div className="home-frame-3">
-        <Image
-          src={theme === 'dark' ? '/assets/home/frame-3.png' : '/assets/home/frame-3-light.png'}
-          alt=""
-          width={theme === 'dark' ? 351 : 304}
-          height={theme === 'dark' ? 1240 : 1114}
-          sizes="(max-width: 768px) 152px, 304px"
-          priority={true}
-          placeholder="blur"
-          blurDataURL={BLUR}
-        />
+      {/* Larger frame near hero - use fixed wrapper size to avoid CLS and fill image */}
+      <div className="home-frame-3 hidden md:block">
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+          <Image
+            src={theme === 'dark' ? '/assets/home/frame-3.png' : '/assets/home/frame-3-light.png'}
+            alt=""
+            layout="fill"
+            sizes="(max-width: 768px) 152px, 351px"
+            priority
+            placeholder="blur"
+            blurDataURL={BLUR}
+            objectFit="contain"
+          />
+        </div>
       </div>
 
       {/* Left frames lower on page */}
-      <div className="home-frame-4">
+      <div className="home-frame-4 hidden md:block">
         <Image
           src={theme === 'dark' ? '/assets/home/frame-4.png' : '/assets/home/frame-4-light.png'}
           alt=""
@@ -71,7 +65,7 @@ export default function HomeFrames() {
         />
       </div>
 
-      <div className="home-frame-5">
+      <div className="home-frame-5 hidden md:block">
         <Image
           src={theme === 'dark' ? '/assets/home/frame-5.png' : '/assets/home/frame-5-light.png'}
           alt=""
@@ -85,7 +79,7 @@ export default function HomeFrames() {
       </div>
 
       {/* Blurs */}
-      {theme === 'dark' && <div className="home-blur-1 hidden md:block"></div>}
+      {theme === 'dark' && <div className="home-blur-1 hidden md:block" />}
 
       <div className="home-blur-2"></div>
 

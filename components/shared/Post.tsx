@@ -92,8 +92,8 @@ export default function Post({
         <div className="flex-1 text-clip">
           <Link href={type == 'news' ? url : '/blog/' + permalink}>
             <a className="block mt-2" rel="noreferrer">
-              <p className="font-roboto text-[20px] text-black dark:text-black mb-4">{title}</p>
-              <p className="font-roboto text-[14px] text-[#585858] dark:text-black mb-0">
+              <p className="font-roboto text-[20px] text-black dark:text-white mb-4">{title}</p>
+              <p className="font-roboto text-[14px] text-[#585858] dark:text-white mb-0">
                 {type == 'news' ? subtitle : removeMd(content)?.slice(0, 130) + '...'}
               </p>
             </a>
@@ -104,9 +104,9 @@ export default function Post({
             <LogoBlack viewBox="0 0 82 82" className="h-10 w-10" />
           </div>
           <div className="ml-3">
-            <b className="text-[14px] text-brand-orange dark:text-white">{author}</b>
+            <b className="text-[14px] text-black dark:text-white">{author}</b>
             <div className="flex space-x-1">
-              <p className="text-[#000000] dark:text-black">
+              <p className="text-[#000000] dark:text-white">
                 <FormattedDate value={date} day="numeric" month="long" year="numeric" />
               </p>
             </div>

@@ -164,7 +164,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
         </>
       )}
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
         <IntlProvider locale={shortLocale} messages={messages} onError={() => null}>
           <NextNProgress color="#e74c3c" />
           <Component {...pageProps} />

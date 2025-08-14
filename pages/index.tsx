@@ -1,6 +1,5 @@
 import { useIntl } from 'react-intl';
 import Autolykos from '../components/home/Autolykos';
-import Highlights from '../components/home/Highlights';
 import HomeHero from '../components/home/HomeHero';
 import HomeInfo from '../components/home/HomeInfo';
 import News from '../components/home/News';
@@ -11,6 +10,7 @@ import Feed from '../components/shared/Feed';
 import dynamic from 'next/dynamic';
 import UniqueErgo from '../components/home/UniqueErgo';
 import HomeFrames from '../components/home/HomeFrames';
+const Highlights = dynamic(() => import('../components/home/Highlights'), { ssr: false });
 import generateRssFeed from '../utils/generateRssFeed';
 import Partners from '../components/home/Partners'; // Import Partners directly
 
@@ -43,7 +43,7 @@ export default function Home(props: Props) {
       <HomeFrames />
       <Layout title={title}>
         <HomeHero />
-        <Highlights />
+        <Highlights /> {/* Highlights is now dynamically imported */}
         {props.blockReward && props.info ? (
           <HomeInfo
             circulatingSupply={props.info.supply}

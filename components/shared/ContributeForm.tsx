@@ -92,7 +92,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-white mb-8">
+          <p className="font-robot text-[14px] lg:text-[20px] text-black dark:text-white mb-8">
             <b>
               <FormattedMessage
                 defaultMessage="HOW CAN I CONTRIBUTE?"
@@ -107,10 +107,11 @@ export default function ContributeForm() {
                 url="https://discord.gg/ergo-platform-668903786361651200"
                 newTab={true}
                 underline={true}
-                textColor="brand-orange"
+                textColor="black"
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -119,10 +120,11 @@ export default function ContributeForm() {
                 url="https://docs.ergoplatform.com/contribute/"
                 newTab={true}
                 underline={true}
-                textColor="brand-orange"
+                textColor="black"
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -131,10 +133,11 @@ export default function ContributeForm() {
                 url="/discover/#DiscoverERG"
                 newTab={false}
                 underline={true}
-                textColor="brand-orange"
+                textColor="black"
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -143,10 +146,11 @@ export default function ContributeForm() {
                 url="/discover/#GrantsAndBounties"
                 newTab={false}
                 underline={true}
-                textColor="brand-orange"
+                textColor="black"
                 background={false}
                 icon="ArrowRight"
                 iconColor="orange"
+                customClass="dark:text-white"
               />
             </div>
           </div>
@@ -159,7 +163,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-white mb-10">
+          <p className="font-robot text-[14px] lg:text-[20px] text-black dark:text-white mb-10">
             <FormattedMessage
               defaultMessage="WANT TO BECOME A PARTNER?"
               id="components.ContributeForm.company.subTitle"

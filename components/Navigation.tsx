@@ -93,10 +93,9 @@ function Navigation({ enableLanguages = true }) {
             <div className="my-auto ml-5 lg:ml-10">
               <DarkModeSwitch />
             </div>
+            {/* Popover.Button removed for testing DarkModeSwitch */}
             <div className="my-auto ml-5 lg:ml-10 z-40">
-              <Popover.Button className="focus:outline-none" aria-label="Open menu">
-                {getIconComponentByName('MenuOpen')}
-              </Popover.Button>
+              {/* {getIconComponentByName('MenuOpen')} */}
             </div>
           </div>
         </div>

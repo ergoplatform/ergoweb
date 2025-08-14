@@ -1,17 +1,8 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
-import Image from 'next/image'; // Import Image component
 
 export default function HomeHero() {
   const intl = useIntl();
-  const { resolvedTheme, theme } = useTheme(); // Get theme
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const button = intl.formatMessage({
     id: 'components.homeHero.button',
@@ -22,85 +13,105 @@ export default function HomeHero() {
     defaultMessage: 'PITCH DECK',
   });
 
-  // Determine which video to show based on resolvedTheme
-  const currentTheme = resolvedTheme || theme;
-  const isDarkTheme = currentTheme === 'dark';
-  const videoSrc = isDarkTheme ? '../assets/ergo-dark.mp4' : '../assets/ergo-light.mp4';
-  const posterSrc = isDarkTheme ? '/assets/home/frame-1.png' : '/assets/home/frame-1-light.png';
-
-  // Only render the video if mounted and theme is resolved
-  const renderVideo = mounted && currentTheme;
-
   return (
     <div id="HomeHero" className="mt-0 md:mt-24 max-w-[1300px] mx-auto p-4 relative z-1">
-      {' '}
       {/* Set z-index to 1 */}
       <div className="relative">
         <>
           {/* Mobile media (always render container to avoid CLS) */}
           <div className="relative block md:hidden -mx-4 -mt-40 h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
-            {renderVideo ? (
-              <video
-                key={currentTheme}
-                className="w-full h-full object-cover pointer-events-none"
-                autoPlay
-                playsInline
-                loop
-                muted
-                preload="metadata"
-                disablePictureInPicture
-                controlsList="nodownload"
-              >
-                <source src={videoSrc} type="video/mp4" />
-                <track
-                  kind="captions"
-                  src="/assets/hero-en.vtt"
-                  srcLang="en"
-                  label="English"
-                  default
-                />
-              </video>
-            ) : (
-              <Image
-                src={posterSrc}
-                alt=""
-                width={1920}
-                height={1080}
-                sizes="100vw"
-                priority
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            <video
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none hidden dark:block"
+              width="1920"
+              height="1080"
+              autoPlay
+              playsInline
+              loop
+              muted
+              preload="metadata"
+              disablePictureInPicture
+              controlsList="nodownload"
+            >
+              <source src="../assets/ergo-dark.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/assets/hero-en.vtt"
+                srcLang="en"
+                label="English"
+                default
               />
-            )}
+            </video>
+            <video
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none block dark:hidden"
+              width="1920"
+              height="1080"
+              autoPlay
+              playsInline
+              loop
+              muted
+              preload="metadata"
+              disablePictureInPicture
+              controlsList="nodownload"
+            >
+              <source src="../assets/ergo-light.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/assets/hero-en.vtt"
+                srcLang="en"
+                label="English"
+                default
+              />
+            </video>
           </div>
 
           {/* Desktop media */}
-          {renderVideo && (
-            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] w-full object-cover md:h-auto md:object-contain md:w/full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
-              <video
-                key={currentTheme}
-                className="w-full h-full md:object-contain object-cover pointer-events-none"
-                autoPlay
-                playsInline
-                loop
-                muted
-                preload="metadata"
-                disablePictureInPicture
-                controlsList="nodownload"
-              >
-                <source src={videoSrc} type="video/mp4" />
-                <track
-                  kind="captions"
-                  src="/assets/hero-en.vtt"
-                  srcLang="en"
-                  label="English"
-                  default
-                />
-              </video>
-            </div>
-          )}
+          <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
+            <video
+              className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none hidden dark:block"
+              width="1920"
+              height="1080"
+              autoPlay
+              playsInline
+              loop
+              muted
+              preload="metadata"
+              disablePictureInPicture
+              controlsList="nodownload"
+            >
+              <source src="../assets/ergo-dark.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/assets/hero-en.vtt"
+                srcLang="en"
+                label="English"
+                default
+              />
+            </video>
+            <video
+              className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none block dark:hidden"
+              width="1920"
+              height="1080"
+              autoPlay
+              playsInline
+              loop
+              muted
+              preload="metadata"
+              disablePictureInPicture
+              controlsList="nodownload"
+            >
+              <source src="../assets/ergo-light.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/assets/hero-en.vtt"
+                srcLang="en"
+                label="English"
+                default
+              />
+            </video>
+          </div>
         </>
         <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-10">
-          <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight">
+          <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight text-black dark:text-white">
             <b>
               <FormattedMessage
                 defaultMessage="Powering the Future of Finance"
@@ -110,7 +121,7 @@ export default function HomeHero() {
           </h1>
         </div>
         <div className="mt-1 md:mt-8 max-w-lg md:max-w-xl relative z-10">
-          <p className="font-subtitle-3-regular">
+          <p className="font-subtitle-3-regular text-black dark:text-white">
             <FormattedMessage
               defaultMessage="Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
               id="components.homeHero.text"
