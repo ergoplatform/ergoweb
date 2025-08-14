@@ -106,8 +106,8 @@
 
 /* Fix desktop CLS: reserve stable height for Highlights swiper */
 .SwiperHighlights {
-    height: 720px; /* desktop/tablet default */
-    overflow: hidden;
+    height: auto; /* desktop/tablet default */
+    /* Removed overflow: hidden to allow content to expand */
 }
 
 
@@ -181,7 +181,7 @@
     }
 
     .SwiperHighlights {
-        height: 600px !important; // Force fixed height for mobile Swiper to prevent layout shifts
-        overflow: hidden !important; // Hide overflowing content if any
+        height: auto !important; // Allow content to expand
+        overflow: visible !important; // Ensure content is not hidden
     }
 }

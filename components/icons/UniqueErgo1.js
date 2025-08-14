@@ -1,7 +1,14 @@
 import * as React from 'react';
 
 const SvgUniqueErgo1 = (props) => (
-  <svg width={290} height={150} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 290 150"
+    width="100%"
+    height="100%"
+    {...props}
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"

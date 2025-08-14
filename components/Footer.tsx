@@ -82,8 +82,8 @@ export default function Footer() {
               </a>
             </Link>
           </div>
-          <div className="grid absolute right-10 top-20 space-y-4 md:right-auto md:top-auto md:relative overflow-hidden grid-cols-1 gap-2 text-red md:grid-cols-3 lg:grid-cols-10">
-            <div className="box mx-auto my-auto">
+          <div className="grid grid-cols-5 gap-4 md:gap-2 lg:gap-4 justify-items-center">
+            <div className="box">
               <a
                 href="https://sigmaverse.io"
                 target="_blank"
@@ -93,12 +93,12 @@ export default function Footer() {
                 {getIconComponentByName('Sigmaverse')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <Link href="/ecosystem/#Wiki" passHref>
                 <a aria-label="Ergo Wiki">{getIconComponentByName('ErgoWiki')}</a>
               </Link>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://github.com/ergoplatform"
                 target="_blank"
@@ -108,7 +108,7 @@ export default function Footer() {
                 {getIconComponentByName('Github')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://x.com/Ergo_Platform"
                 target="_blank"
@@ -118,7 +118,7 @@ export default function Footer() {
                 {getIconComponentByName('X')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://www.youtube.com/c/ErgoPlatform"
                 target="_blank"
@@ -128,7 +128,7 @@ export default function Footer() {
                 {getIconComponentByName('Youtube')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://t.me/Ergo_Chats"
                 target="_blank"
@@ -138,7 +138,7 @@ export default function Footer() {
                 {getIconComponentByName('Telegram')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://discord.gg/ergo-platform-668903786361651200"
                 target="_blank"
@@ -148,7 +148,7 @@ export default function Footer() {
                 {getIconComponentByName('Discord')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://reddit.com/r/ergonauts"
                 target="_blank"
@@ -158,7 +158,7 @@ export default function Footer() {
                 {getIconComponentByName('Reddit')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://www.ergoforum.org/"
                 target="_blank"
@@ -168,7 +168,7 @@ export default function Footer() {
                 {getIconComponentByName('Discourse')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://www.coingecko.com/en/coins/ergo"
                 target="_blank"

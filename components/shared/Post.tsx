@@ -92,8 +92,8 @@ export default function Post({
         <div className="flex-1 text-clip">
           <Link href={type == 'news' ? url : '/blog/' + permalink}>
             <a className="block mt-2" rel="noreferrer">
-              <p className="font-roboto text-[20px] text-black dark:text-white mb-4">{title}</p>
-              <p className="font-roboto text-[14px] text-[#585858] dark:text-white mb-0">
+              <p className="font-roboto text-[20px] text-black dark:text-[#807e7e] mb-4">{title}</p>
+              <p className="font-roboto text-[14px] text-[#585858] dark:text-[#807e7e] mb-0">
                 {type == 'news' ? subtitle : removeMd(content)?.slice(0, 130) + '...'}
               </p>
             </a>

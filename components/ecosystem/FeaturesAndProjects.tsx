@@ -68,13 +68,11 @@ export default function FeaturesAndProjects(props: Props) {
               alt=""
             />
             <div className={'flex flex-col lg:my-auto' + adjustCardText(i)}>
-              <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">
+              <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold">
                 {project.attributes.group}
               </p>
-              <p className="mt-2 font-subtitle-3-bold lg:text-[24px] h-2/5">
-                {project.attributes.title}
-              </p>
-              <p className="mt-2 text-[#807e7e] dark:text-[#807e7e] lg:text-[16px] h-2/5">
+              <p className="mt-2 font-subtitle-3-bold lg:text-[24px]">{project.attributes.title}</p>
+              <p className="mt-2 text-[#807e7e] dark:text-[#807e7e] lg:text-[16px]">
                 {project.attributes.description}
               </p>
               <div className="my-6 h-1/5">
