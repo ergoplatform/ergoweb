@@ -173,4 +173,9 @@
     .hide-video-on-mobile {
         display: none !important;
     }
+
+    .SwiperHighlights {
+        height: 600px !important; // Force fixed height for mobile Swiper to prevent layout shifts
+        overflow: hidden !important; // Hide overflowing content if any
+    }
 }

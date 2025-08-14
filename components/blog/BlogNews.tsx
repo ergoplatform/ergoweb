@@ -26,7 +26,7 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
               {title.length > 60 ? title.substring(0, 60) + '...' : title}
             </p>
             {subtitle ? (
-              <p className="text-[12px] md:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-2 text-clip">
+              <p className="text-[12px] md:text-[16px] text-black dark:text-white mb-2 text-clip">
                 {subtitle?.length > 350 ? subtitle?.substring(0, 320) + '...' : subtitle}
               </p>
             ) : (
@@ -38,8 +38,9 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
                 url={url}
                 newTab={true}
                 underline={true}
-                textColor="brand-orange"
+                textColor="black"
                 background={false}
+                customClass="dark:text-brand-orange"
               />
             </div>
           </div>

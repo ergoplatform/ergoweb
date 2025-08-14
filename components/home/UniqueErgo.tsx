@@ -134,21 +134,22 @@ export default function UniqueErgo() {
                     {card.title}
                   </div>
                 </div>
-                <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-black dark:text-[#807e7e] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
+                <div className="absolute bottom-0 from-transparent h-1/2 inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-black dark:text-white max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                   <div>{card.text}</div>
                 </div>
                 {card.url !== undefined ? (
-                  <div className="absolute bottom-2 from-transparent h-auto inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-black dark:text-[#807e7e] max-w-xs lg:max-w-sm ml-6 lg:ml-16">
+                  <div className="absolute bottom-2 from-transparent h-auto inset-x-0 temphide hidden to-black transform transition-base translate-y-1/2 z-10 text-black dark:text-white max-w-xs lg:max-w-sm ml-6 lg:ml-16">
                     <div className="-ml-4 mt-12 sm:mt-10 lg:mt-16">
                       <Button
                         text={card.buttoText}
                         url={card.url}
                         newTab={true}
                         underline={true}
-                        textColor="brand-orange"
+                        textColor="black"
                         background={false}
                         icon="ArrowRight"
                         iconColor="orange"
+                        customClass="dark:text-brand-orange"
                       />
                     </div>
                   </div>

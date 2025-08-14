@@ -467,11 +467,6 @@ footer
     rgba(255, 255, 255, 0.8);
   border: 1px solid;
   border-color: #807e7e4b;  
-  // border-image-source: linear-gradient(
-  //   77.91deg,
-  //   #807e7e 11.28%,
-  //   rgba(255, 255, 255, 0) 97.02%
-  // );
 }
 
 .dark .blog-news {
@@ -487,6 +482,14 @@ footer
     #585858 11.28%,
     rgba(88, 88, 88, 0) 97.02%
   );
+}
+
+.blog-post {
+  background-color: white;
+}
+
+.dark .blog-post {
+  background-color: #141414; /* Using brand-black from tailwind.config.js */
 }
 
 .tag {

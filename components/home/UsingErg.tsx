@@ -80,7 +80,7 @@ export default function UsingErg() {
               ></FormattedMessage>
             </b>
           </h2>
-          <p className="text-[#807e7e] dark:text-white mt-6 max-w-xs mr-4">
+          <p className="text-black dark:text-white mt-6 max-w-xs mr-4">
             <FormattedMessage
               defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
               investor, we have you covered."

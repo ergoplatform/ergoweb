@@ -27,7 +27,9 @@ export default function Button({
   customClass = '',
   animation,
 }: Props) {
-  const finalTextColor = background ? 'white' : textColor; // Set text to white if background is true
+  // Determine text color based on background and provided textColor prop
+  // If background is true (orange), use black text for better contrast. Otherwise, use the provided textColor or default.
+  const finalTextColor = background ? 'black' : textColor;
   var className =
     `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-${finalTextColor} font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange` +
     customClass;

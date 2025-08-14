@@ -24,7 +24,7 @@ export default function News({ news }: Props) {
           </h1>
         </div>
         <div className="item lg:w-1/2 card-bg rounded-xl py-8 text-right">
-          <p className="font-roboto text-[20px] text-[#585858] dark:text-[#585858] uppercase mx-20">
+          <p className="font-roboto text-[20px] text-black dark:text-white uppercase mx-20">
             <FormattedMessage defaultMessage="latest news" id="components.news.latest" />
           </p>
           <div className="text-left mt-4 mx-8 md:mx-20">
@@ -46,20 +46,19 @@ export default function News({ news }: Props) {
                           />
                         </b>
                       </p>
-                      <p className="font-subtitle-3-bold text-brand-orange dark:text-brand-orange my-2">
+                      <p className="font-subtitle-3-bold text-black dark:text-white my-2">
                         {post.attributes.title}
                       </p>
-                      <p className="text-[#807e7e] dark:text-[#807e7e] mb-2">
-                        {post.attributes.subtitle}
-                      </p>
+                      <p className="text-black dark:text-white mb-2">{post.attributes.subtitle}</p>
                       <div className="-ml-4 mb-6">
                         <Button
                           text="READ"
                           url={post.attributes.url}
                           newTab={true}
                           underline={true}
-                          textColor="brand-orange"
+                          textColor="black"
                           background={false}
+                          customClass="dark:text-brand-orange"
                         />
                       </div>
                     </SwiperSlide>

@@ -191,42 +191,42 @@ export default function Footer() {
         <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6">
           <div className="mx-1">
             <Link href="/community" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/community/#JoinUs" passHref>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Join our channels" id="footer.community.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Sigmanauts" passHref>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Contribute" passHref>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#HallOfFame" passHref>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/community/#Foundation" passHref>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.5" />
                   </a>
                 </Link>
@@ -235,35 +235,35 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/get-erg" passHref prefetch={false}>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/get-erg/#Mining" prefetch={false}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#MiningCalculator" prefetch={false}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#Wallets" prefetch={false}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/get-erg/#Exchanges" prefetch={false}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
                   </a>
                 </Link>
@@ -272,42 +272,42 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/discover" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/discover/#DiscoverERG">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Software Releases" id="footer.discover.1" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#GrantsAndBounties">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#FAQ">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Explore">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Documents">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
                   </a>
                 </Link>
@@ -316,14 +316,14 @@ export default function Footer() {
           </div>
           <div className="mx-1">
             <Link href="/ecosystem" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/ecosystem/#DApps">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
                   </a>
                 </Link>
@@ -331,28 +331,28 @@ export default function Footer() {
 
               <li className="mb-4">
                 <Link href="/ecosystem/#Roadmap">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Wiki">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Favorites">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="OUR FAVORITES" id="footer.favorites.title" />
                   </a>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem#Videocasts">
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage
                       defaultMessage="Real Life Ergo"
                       id="footer.realLifeErgo.title"
@@ -365,7 +365,7 @@ export default function Footer() {
           {postsData.length !== 0 ? (
             <div className="mx-1">
               <Link href="/blog" passHref>
-                <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+                <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                   <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
                 </h3>
               </Link>
@@ -373,7 +373,7 @@ export default function Footer() {
                 {postsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
                     <Link href={attributes.url}>
-                      <a>{attributes.title}</a>
+                      <a className="text-black dark:text-gray-300">{attributes.title}</a>
                     </Link>
                   </li>
                 ))}
@@ -384,7 +384,7 @@ export default function Footer() {
           {newsData.length !== 0 ? (
             <div className="mx-1">
               <Link href="/news" passHref>
-                <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+                <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                   <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
                 </h3>
               </Link>
@@ -392,7 +392,7 @@ export default function Footer() {
                 {newsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
                     <Link href={attributes.url}>
-                      <a>{attributes.title}</a>
+                      <a className="text-black dark:text-gray-300">{attributes.title}</a>
                     </Link>
                   </li>
                 ))}
@@ -408,14 +408,14 @@ export default function Footer() {
               </li>
               <li className="mr-6">
                 <Link href={'/privacy-policy'}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Privacy Policy" id="footer.privacyPolicy" />
                   </a>
                 </Link>
               </li>
               <li className="mr-6">
                 <Link href={'/legal'}>
-                  <a>
+                  <a className="text-black dark:text-gray-300">
                     <FormattedMessage defaultMessage="Legal" id="footer.legal" />
                   </a>
                 </Link>
