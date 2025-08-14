@@ -7,10 +7,9 @@ import UsingErg from '../components/home/UsingErg';
 import Layout from '../components/Layout';
 import ContributeForm from '../components/shared/ContributeForm';
 import Feed from '../components/shared/Feed';
-import dynamic from 'next/dynamic';
 import UniqueErgo from '../components/home/UniqueErgo';
 import HomeFrames from '../components/home/HomeFrames';
-const Highlights = dynamic(() => import('../components/home/Highlights'), { ssr: false });
+import Highlights from '../components/home/Highlights';
 import generateRssFeed from '../utils/generateRssFeed';
 import Partners from '../components/home/Partners'; // Import Partners directly
 
@@ -43,7 +42,7 @@ export default function Home(props: Props) {
       <HomeFrames />
       <Layout title={title}>
         <HomeHero />
-        <Highlights /> {/* Highlights is now dynamically imported */}
+        <Highlights />
         {props.blockReward && props.info ? (
           <HomeInfo
             circulatingSupply={props.info.supply}

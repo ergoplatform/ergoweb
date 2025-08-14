@@ -20,7 +20,7 @@ export default function HomeHero() {
         <>
           {/* Mobile media (always render container to avoid CLS) */}
           {/* Mobile media (always render container to avoid CLS) */}
-          <div className="relative block md:hidden -mx-4 -mt-40 h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
+          <div className="relative block md:hidden -mx-4 -mt-[100px] h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
             <video
               className="absolute inset-0 w-full h-full object-cover pointer-events-none dark:hidden"
               width="1920"

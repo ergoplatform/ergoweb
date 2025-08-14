@@ -107,7 +107,7 @@ export default function UniqueErgo() {
   }, []);
 
   return (
-    <div id="UniqueErgo" className="mt-28 ">
+    <div id="UniqueErgo" className="mt-28 lg:min-h-[600px]">
       <div className="text-center">
         <p className="font-bold text-[#585858] dark:text-[#807e7e] text-[16px] lg:text-[20px]">
           <FormattedMessage

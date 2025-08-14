@@ -1,9 +1,7 @@
 import Head from 'next/head';
 import Footer from './Footer';
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const DynamicNavigation = dynamic(() => import('./Navigation'), { ssr: false });
+import Navigation from './Navigation';
 
 type Props = {
   children: React.ReactNode;
@@ -27,7 +25,10 @@ export default function Layout({ children, title, desc, footer = true }: Props) 
           }
         />
       </Head>
-      <DynamicNavigation />
+      <header className="w-full fixed top-0 left-0 right-0 z-50 h-16 md:h-20 lg:h-24">
+        <Navigation />
+      </header>
+      <div className="h-16 md:h-20 lg:h-24" aria-hidden="true" />
       <div className="flex-grow">{children}</div>
       {footer && <Footer />}
     </main>

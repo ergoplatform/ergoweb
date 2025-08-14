@@ -13,8 +13,8 @@ export default function HomeFrames() {
         <Image
           src={theme === 'dark' ? '/assets/home/frame-1.png' : '/assets/home/frame-1-light.png'}
           alt=""
-          width={theme === 'dark' ? 171 : 167}
-          height={theme === 'dark' ? 1107 : 1099}
+          width={167}
+          height={1099}
           sizes="(max-width: 768px) 167px, 167px"
           priority={false}
           placeholder="blur"
@@ -43,7 +43,6 @@ export default function HomeFrames() {
             alt=""
             layout="fill"
             sizes="(max-width: 768px) 152px, 351px"
-            priority
             placeholder="blur"
             blurDataURL={BLUR}
             objectFit="contain"
