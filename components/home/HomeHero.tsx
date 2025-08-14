@@ -1,8 +1,16 @@
 import { FormattedMessage, useIntl } from 'react-intl';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 import Button from '../Button';
 
 export default function HomeHero() {
   const intl = useIntl();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const button = intl.formatMessage({
     id: 'components.homeHero.button',
@@ -17,100 +25,80 @@ export default function HomeHero() {
     <div id="HomeHero" className="mt-0 md:mt-24 max-w-[1300px] mx-auto p-4 relative z-1">
       {/* Set z-index to 1 */}
       <div className="relative">
-        <>
-          {/* Mobile media (always render container to avoid CLS) */}
-          {/* Mobile media (always render container to avoid CLS) */}
-          <div className="relative block md:hidden -mx-4 -mt-[100px] h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
-            <video
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none dark:hidden"
-              width="1920"
-              height="1080"
-              autoPlay
-              playsInline
-              loop
-              muted
-              preload="metadata"
-              disablePictureInPicture
-              controlsList="nodownload"
-            >
-              <source src="../assets/ergo-light.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src="/assets/hero-en.vtt"
-                srcLang="en"
-                label="English"
-                default
-              />
-            </video>
-            <video
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none hidden dark:block"
-              width="1920"
-              height="1080"
-              autoPlay
-              playsInline
-              loop
-              muted
-              preload="metadata"
-              disablePictureInPicture
-              controlsList="nodownload"
-            >
-              <source src="../assets/ergo-dark.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src="/assets/hero-en.vtt"
-                srcLang="en"
-                label="English"
-                default
-              />
-            </video>
-          </div>
+        {mounted ? (
+          <>
+            {/* Mobile media */}
+            <div className="relative block md:hidden -mx-4 -mt-[100px] h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
+              <video
+                key={resolvedTheme}
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                width="1920"
+                height="1080"
+                autoPlay
+                playsInline
+                loop
+                muted
+                preload="none"
+                disablePictureInPicture
+                controlsList="nodownload"
+              >
+                <source
+                  src={
+                    resolvedTheme === 'dark'
+                      ? '../assets/ergo-dark.mp4'
+                      : '../assets/ergo-light.mp4'
+                  }
+                  type="video/mp4"
+                />
+                <track
+                  kind="captions"
+                  src="/assets/hero-en.vtt"
+                  srcLang="en"
+                  label="English"
+                  default
+                />
+              </video>
+            </div>
 
-          {/* Desktop media */}
-          <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
-            <video
-              className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none dark:hidden"
-              width="1920"
-              height="1080"
-              autoPlay
-              playsInline
-              loop
-              muted
-              preload="metadata"
-              disablePictureInPicture
-              controlsList="nodownload"
-            >
-              <source src="../assets/ergo-light.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src="/assets/hero-en.vtt"
-                srcLang="en"
-                label="English"
-                default
-              />
-            </video>
-            <video
-              className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none hidden dark:block"
-              width="1920"
-              height="1080"
-              autoPlay
-              playsInline
-              loop
-              muted
-              preload="metadata"
-              disablePictureInPicture
-              controlsList="nodownload"
-            >
-              <source src="../assets/ergo-dark.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src="/assets/hero-en.vtt"
-                srcLang="en"
-                label="English"
-                default
-              />
-            </video>
-          </div>
-        </>
+            {/* Desktop media */}
+            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
+              <video
+                key={resolvedTheme}
+                className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+                width="1920"
+                height="1080"
+                autoPlay
+                playsInline
+                loop
+                muted
+                preload="none"
+                disablePictureInPicture
+                controlsList="nodownload"
+              >
+                <source
+                  src={
+                    resolvedTheme === 'dark'
+                      ? '../assets/ergo-dark.mp4'
+                      : '../assets/ergo-light.mp4'
+                  }
+                  type="video/mp4"
+                />
+                <track
+                  kind="captions"
+                  src="/assets/hero-en.vtt"
+                  srcLang="en"
+                  label="English"
+                  default
+                />
+              </video>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="relative block md:hidden -mx-4 -mt-[100px] h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0" />
+            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden" />
+          </>
+        )}
         <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-10">
           <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight text-black dark:text-white">
             <b>
