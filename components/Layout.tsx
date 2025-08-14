@@ -28,7 +28,7 @@ export default function Layout({ children, title, desc, footer = true }: Props) 
         />
       </Head>
       <DynamicNavigation />
-      <div className="">{children}</div>
+      <div className="flex-grow">{children}</div>
       {footer && <Footer />}
     </main>
   );
