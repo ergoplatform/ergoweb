@@ -33,7 +33,7 @@ export default function Button({
   if (background) {
     // Orange background button
     textClasses = 'text-black'; // Black text in light mode
-    darkTextClass = 'dark:text-white'; // White text in dark mode
+    darkTextClass = 'dark:text-black'; // Ensure black text on orange in dark mode for WCAG contrast
   } else {
     // Transparent background button
     textClasses = `text-${textColor}`; // Use textColor prop

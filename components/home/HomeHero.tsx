@@ -138,7 +138,7 @@ export default function HomeHero() {
             textColor="black"
             iconColor="orange"
             icon="ArrowRight"
-            customClass="dark:text-brand-orange"
+            customClass="dark:text-white underline dark:decoration-brand-orange"
           />
         </div>
       </div>

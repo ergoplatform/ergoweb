@@ -63,9 +63,15 @@
 .verticalLine {
   border-left: thin solid rgba(0, 0, 0, 0.15);
 }
+.dark .verticalLine {
+  border-left: thin solid rgba(255, 255, 255, 0.3);
+}
 
 .horizontallLine {
   border-top: thin solid rgba(0, 0, 0, 0.15);
+}
+.dark .horizontallLine {
+  border-top: thin solid rgba(255, 255, 255, 0.3);
 }
 
 .fade-in-section {
