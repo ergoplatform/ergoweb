@@ -18,6 +18,7 @@ export default function HomeInfo({
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
+    rootMargin: '0px 0px -48px 0px', // Added to make observer more robust against initial layout shifts
   });
   hashRate = hashRate / 1000000000000;
   circulatingSupply = circulatingSupply / 1000000000;

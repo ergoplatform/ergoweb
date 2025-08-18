@@ -27,12 +27,20 @@
 
 .home-frame-3 {
     position: absolute;
-    width: 304px;
-    height: 1114px;
+    width: 351px;
+    height: 1240px;
     top: 500px;
-    right: 0px;
-    background: none;
+    right: 0;
+    background: no-repeat url("/assets/home/frame-3-light.png");
+    background-position: right center;
+    background-size: contain;
     z-index: 1;
+    pointer-events: none; /* avoid interaction and layout shifts */
+}
+.dark .home-frame-3 {
+    background: no-repeat url("/assets/home/frame-3.png");
+    background-position: right center;
+    background-size: contain;
 }
 
 .home-frame-4 {
@@ -70,6 +78,34 @@
     background-position: top right;
 }
 
+.dark .home-blur-2 {
+    position: absolute;
+    width: 606px;
+    height: 2402px;
+    top: 2400px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-2.svg");
+    z-index: 1;
+}
+
+.dark .home-blur-3 {
+    position: absolute;
+    width: 524px;
+    height: 1419px;
+    top: 4000px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-3.svg");
+}
+
+.dark .home-blur-4 {
+    position: absolute;
+    width: 459px;
+    height: 1677px;
+    top: 4500px;
+    right: 0px;
+    background: no-repeat url("/assets/home/blur-4.svg");
+}
+
 .home-blur-2 {
     position: absolute;
     width: 606px;
@@ -78,6 +114,9 @@
     top: 2400px;
     left: 0px;
     background: no-repeat url("/assets/home/blur-2-light.svg");
+    background-size: contain;
+    background-position: left top;
+    pointer-events: none;
     z-index: 1;
 }
 
@@ -87,7 +126,19 @@
     height: 1419px;
     top: 4000px;
     left: 0px;
-    background: no-repeat url("/assets/home/blur-3-fixed.svg");
+    background: no-repeat url("/assets/home/blur-3.svg");
+    background-size: contain;
+    background-position: left top;
+    pointer-events: none;
+}
+
+.dark .home-blur-3 {
+    position: absolute;
+    width: 524px;
+    height: 1419px;
+    top: 4000px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-3.svg");
 }
 
 .home-blur-4 {
@@ -97,6 +148,9 @@
     top: 4500px;
     right: 0px;
     background: no-repeat url("/assets/home/blur-4-light.svg");
+    background-size: contain;
+    background-position: right top;
+    pointer-events: none;
 }
 
 /* Ensure spotlight blog cards keep intended width on home route */
@@ -144,6 +198,7 @@
         left: 0;
         right: 0;
         margin: auto;
+        display: none !important; /* hide decorative frames & blurs on small screens to avoid layout/overflow issues */
     }
 }
 
@@ -170,6 +225,7 @@
         left: 0;
         right: 0;
         margin: auto;
+        display: none !important; /* hide decorative frames & blurs on very small screens */
     }
 
     .hide-on-mobile {

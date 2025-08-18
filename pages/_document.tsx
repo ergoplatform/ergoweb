@@ -6,6 +6,16 @@ class MyDocument extends Document {
     return (
       <Html lang="en" suppressHydrationWarning>
         <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){try{
+                var d=document.documentElement;
+                var t=localStorage.getItem('theme');
+                if(t==='dark'){ d.classList.add('dark'); d.style.colorScheme='dark'; }
+                else{ d.classList.remove('dark'); d.style.colorScheme='light'; }
+              }catch(e){}})();`,
+            }}
+          />
           <link
             rel="preconnect"
             href="https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app"
@@ -40,6 +50,8 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <link rel="preload" as="image" href="/assets/home/frame-3.png" />
+          <link rel="preload" as="image" href="/assets/home/frame-3-light.png" />
         </Head>
         <body>
           {process.env.NODE_ENV === 'production' && (

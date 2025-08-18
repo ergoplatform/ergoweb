@@ -6,79 +6,64 @@ const BLUR = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwA
 export default function HomeFrames() {
   const { theme } = useTheme();
 
+  const resolvedDark =
+    typeof window !== 'undefined'
+      ? document.documentElement.classList.contains('dark')
+      : theme === 'dark';
+
   return (
     <>
       {/* Right side frames */}
       <div className="home-frame-1 hidden md:block">
         <Image
-          src={theme === 'dark' ? '/assets/home/frame-1.png' : '/assets/home/frame-1-light.png'}
+          src={resolvedDark ? '/assets/home/frame-1.png' : '/assets/home/frame-1-light.png'}
           alt=""
           width={167}
           height={1099}
           sizes="(max-width: 768px) 167px, 167px"
           priority={false}
-          placeholder="blur"
-          blurDataURL={BLUR}
         />
       </div>
 
       <div className="home-frame-2 hidden md:block">
         <Image
-          src={theme === 'dark' ? '/assets/home/frame-2.png' : '/assets/home/frame-2-light.png'}
+          src={resolvedDark ? '/assets/home/frame-2.png' : '/assets/home/frame-2-light.png'}
           alt=""
           width={167}
           height={1265}
           sizes="(max-width: 768px) 167px, 167px"
           priority={false}
-          placeholder="blur"
-          blurDataURL={BLUR}
         />
       </div>
 
-      {/* Larger frame near hero - use fixed wrapper size to avoid CLS and fill image */}
-      <div className="home-frame-3 hidden md:block">
-        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-          <Image
-            src={theme === 'dark' ? '/assets/home/frame-3.png' : '/assets/home/frame-3-light.png'}
-            alt=""
-            layout="fill"
-            sizes="(max-width: 768px) 152px, 351px"
-            placeholder="blur"
-            blurDataURL={BLUR}
-            objectFit="contain"
-          />
-        </div>
-      </div>
+      {/* Larger frame near hero - CSS background (avoids image flicker/misalignment) */}
+      <div className="home-frame-3 hidden md:block" />
 
       {/* Left frames lower on page */}
       <div className="home-frame-4 hidden md:block">
         <Image
-          src={theme === 'dark' ? '/assets/home/frame-4.png' : '/assets/home/frame-4-light.png'}
+          src={resolvedDark ? '/assets/home/frame-4.png' : '/assets/home/frame-4-light.png'}
           alt=""
           width={667}
           height={1031}
           sizes="(max-width: 768px) 333px, 667px"
           priority={false}
-          placeholder="blur"
-          blurDataURL={BLUR}
         />
       </div>
 
       <div className="home-frame-5 hidden md:block">
         <Image
-          src={theme === 'dark' ? '/assets/home/frame-5.png' : '/assets/home/frame-5-light.png'}
+          src={resolvedDark ? '/assets/home/frame-5.png' : '/assets/home/frame-5-light.png'}
           alt=""
           width={382}
           height={1491}
           sizes="(max-width: 768px) 191px, 382px"
           priority={false}
-          placeholder="blur"
-          blurDataURL={BLUR}
         />
       </div>
 
       {/* Blurs */}
-      {theme === 'dark' && <div className="home-blur-1 hidden md:block" />}
+      <div className="home-blur-1 hidden md:block" />
 
       <div className="home-blur-2"></div>
 

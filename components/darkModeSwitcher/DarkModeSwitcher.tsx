@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
 import { useTheme } from 'next-themes';
 import classNames from 'classnames';
@@ -6,10 +6,15 @@ import classNames from 'classnames';
 export default function DarkModeSwitch() {
   const { theme, setTheme } = useTheme();
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const toggleSwitch = () => {
     console.log('Toggling theme:', theme);
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
+
+  if (!mounted) return null;
 
   return (
     <div
