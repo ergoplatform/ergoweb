@@ -1,10 +1,20 @@
 import { useIntl } from 'react-intl';
-import Mining from '../components/getErg/Mining';
-import MiningCalculator from '../components/getErg/MiningCalculator';
 import Layout from '../components/Layout';
 import dynamic from 'next/dynamic';
-import Wallets from '../components/getErg/Wallets';
-import GetErgHero from '../components/getErg/GetErgHero';
+import LazyInView from '../utils/LazyInView';
+
+const GetErgHero = dynamic(() => import('../components/getErg/GetErgHero'), {
+  ssr: false,
+});
+const Wallets = dynamic(() => import('../components/getErg/Wallets'), {
+  ssr: false,
+});
+const Mining = dynamic(() => import('../components/getErg/Mining'), {
+  ssr: false,
+});
+const MiningCalculator = dynamic(() => import('../components/getErg/MiningCalculator'), {
+  ssr: false,
+});
 const Exchanges = dynamic(() => import('../components/getErg/Exchanges'), {
   ssr: false,
 });
@@ -38,19 +48,28 @@ export default function GetErg(props: Props) {
       <div className="geterg-blur-2"></div>
       <div className="geterg-blur-3"></div>
       <Layout title={title}>
-        <GetErgHero title="Get ERG" />
-        <Wallets />
-        <Mining />
-        {props.currentBlockReward && props.price && props.hashRate && props.difficulty ? (
-          <MiningCalculator
-            currentBlockReward={props.currentBlockReward}
-            currentPrice={props.price}
-            networkHashrate={props.hashRate}
-            difficulty={props.difficulty}
-          />
-        ) : null}
+        <LazyInView rootMargin="200px 0px">{() => <GetErgHero title="Get ERG" />}</LazyInView>
 
-        {props.exchanges ? <Exchanges exchanges={props.exchanges} /> : null}
+        <LazyInView rootMargin="200px 0px">{() => <Wallets />}</LazyInView>
+
+        <LazyInView rootMargin="200px 0px">{() => <Mining />}</LazyInView>
+
+        <LazyInView rootMargin="200px 0px">
+          {() =>
+            props.currentBlockReward && props.price && props.hashRate && props.difficulty ? (
+              <MiningCalculator
+                currentBlockReward={props.currentBlockReward}
+                currentPrice={props.price}
+                networkHashrate={props.hashRate}
+                difficulty={props.difficulty}
+              />
+            ) : null
+          }
+        </LazyInView>
+
+        <LazyInView rootMargin="200px 0px">
+          {() => (props.exchanges ? <Exchanges exchanges={props.exchanges} /> : null)}
+        </LazyInView>
       </Layout>
     </div>
   );

@@ -2,10 +2,22 @@ import Link from 'next/link';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { getIconComponentByName } from '../../utils/icons-map';
 import Button from '../Button';
-import { DiscoverErgHero } from '../icons';
-import { DiscoverErgHeroLight } from '../icons';
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { useTheme } from 'next-themes';
+import LazyInView from '../../utils/LazyInView';
+
+const DiscoverErgHeroDark = dynamic(() => import('../icons/DiscoverErgHero'), {
+  ssr: false,
+});
+const DiscoverErgHeroLightComp = dynamic(() => import('../icons/DiscoverErgHeroLight'), {
+  ssr: false,
+});
 
 export default function DiscoverERG() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: 'components.discoverHero.button1',
@@ -36,18 +48,22 @@ export default function DiscoverERG() {
     <div id="DiscoverERG" className="max-w-[1300px] mx-auto p-4 relative z-10">
       <div className="grid overflow-hidden grid-cols-1 xl:grid-cols-2 gap-2">
         <div className="box xl:order-2">
-          <div className="discover-img hidden dark:block">
-            <DiscoverErgHero
-              viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
-            />
-          </div>
-          <div className="discover-img dark:hidden">
-            <DiscoverErgHeroLight
-              viewBox="0 0 1011 811"
-              className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
-            />
-          </div>
+          <LazyInView>
+            {() => {
+              if (!mounted) return null;
+              return resolvedTheme === 'dark' ? (
+                <DiscoverErgHeroDark
+                  viewBox="0 0 1011 811"
+                  className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
+                />
+              ) : (
+                <DiscoverErgHeroLightComp
+                  viewBox="0 0 1011 811"
+                  className="h-96 w-96 mx-auto md:w-[700px] md:h-[550px] xl:w-[600px] xl:h-[600px]"
+                />
+              );
+            }}
+          </LazyInView>
         </div>
         <div className="discover-container box xl:order-1">
           <h1 className="max-w-xs leading-tight">
