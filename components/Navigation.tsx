@@ -25,7 +25,7 @@ function Navigation({ enableLanguages = true }) {
   const intl = useIntl();
   const ergoCommunity = intl.formatMessage({
     id: 'navigation.ergoCommunity',
-    defaultMessage: 'ERGO COMMUNITY',
+    defaultMessage: 'COMMUNITY',
   });
   const getErg = intl.formatMessage({
     id: 'navigation.getErg',
@@ -42,54 +42,68 @@ function Navigation({ enableLanguages = true }) {
   return (
     <>
       <SecondaryMenu />
-      <Popover className="max-w-[1300px] mx-auto px-4">
-        <div className="flex mx-0 mt-2 mb-10 lg:my-5 md:mx-0">
+      <Popover className="max-w-[1300px] mx-auto px-4 relative z-20">
+        {/* Increased z-index */}
+        <div className="flex mx-0 mt-2 mb-10 lg:my-5 md:mx-0 min-h-[48px] items-center">
           <div className="my-auto flex-grow z-10">
-            <Link href="/" passHref>
-              <button className="flex justify-center align-center">
-                <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
-              </button>
+            <Link
+              href="/"
+              className="flex justify-center align-center"
+              aria-label="Ergo Platform Home"
+            >
+              <LogoWithText viewBox="0 0 213 82" className="w-24 lg:w-32" />
             </Link>
           </div>
-          <div className="hidden lg:block my-auto flex-grow" style={{ zIndex: 12 }}>
+          <div
+            className="hidden lg:flex my-auto flex-grow min-h-[40px] items-center gap-4 whitespace-nowrap"
+            style={{ zIndex: 12 }}
+          >
             <Button
               text={ergoCommunity}
               url="/community"
+              textColor="black"
               background={false}
               underline={pathname == '/community'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              ariaLabel={ergoCommunity}
             />
             <Button
               text={getErg}
               url="/get-erg"
+              textColor="white"
               background={true}
               underline={pathname == '/get-erg'}
-              customClass=" decoration-black dark:decoration-white underline-offset-2"
+              customClass=" decoration-white dark:decoration-white underline-offset-2"
+              ariaLabel={getErg}
             />
             <Button
               text={discover}
               url="/discover"
+              textColor="black"
               background={false}
               underline={pathname == '/discover'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              ariaLabel={discover}
             />
             <Button
               text={ecosystem}
               url="/ecosystem"
+              textColor="black"
               background={false}
               underline={pathname == '/ecosystem'}
               customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              ariaLabel={ecosystem}
             />
           </div>
           <div className="inline-flex" style={{ zIndex: 12 }}>
             <div className="my-auto hidden xs:block">
-              {enableLanguages ? <LanguageSwitcher /> : null}{' '}
+              {enableLanguages ? <LanguageSwitcher /> : null}
             </div>
             <div className="my-auto ml-5 lg:ml-10">
               <DarkModeSwitch />
             </div>
             <div className="my-auto ml-5 lg:ml-10 z-40">
-              <Popover.Button className="focus:outline-none">
+              <Popover.Button aria-label="Open menu">
                 {getIconComponentByName('MenuOpen')}
               </Popover.Button>
             </div>
@@ -108,10 +122,12 @@ function Navigation({ enableLanguages = true }) {
             <div className="max-w-[1300px] mx-auto p-4">
               <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
                 <div className="my-auto flex-grow">
-                  <Link href="/" passHref>
-                    <button className="flex justify-center align-center">
-                      <LogoWithTextWhite viewBox="0 0 213 82" className="w-24 lg:w-32" />
-                    </button>
+                  <Link
+                    href="/"
+                    className="flex justify-center align-center"
+                    aria-label="Ergo Platform Home"
+                  >
+                    <LogoWithTextWhite viewBox="0 0 213 82" className="w-24 lg:w-32" />
                   </Link>
                 </div>
                 <div className="inline-flex">
@@ -122,214 +138,278 @@ function Navigation({ enableLanguages = true }) {
                     <DarkModeSwitch />
                   </div>
                   <div className="my-auto ml-5 lg:ml-10">
-                    <Popover.Button>{getIconComponentByName('MenuClose')}</Popover.Button>
+                    <Popover.Button aria-label="Close menu">
+                      {getIconComponentByName('MenuClose')}
+                    </Popover.Button>
                   </div>
                 </div>
               </div>
               <Search />
               <div className="mx-0 md:mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
                 <div>
-                  <Link href="/community" passHref>
-                    <a>
-                      <h3 className="font-button mt-4 mb-10">
-                        <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
-                      </h3>
-                    </a>
+                  <Link href="/community" aria-label={ergoCommunity}>
+                    <h3 className="font-button mt-4 mb-10">
+                      <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
+                    </h3>
                   </Link>
 
                   <ul className="hidden md:block">
                     <li className="mb-2">
-                      <Link href="/community/#JoinUs" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Join our channels"
-                            id="footer.community.1"
-                          />
-                        </a>
+                      <Link
+                        href="/get-erg#MiningCalculator"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.getErg.2',
+                          defaultMessage: 'Mining Calculator',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/community/#Sigmanauts" passHref>
-                        <a>
-                          <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
-                        </a>
+                      <Link
+                        href="/community/#Sigmanauts"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.community.2',
+                          defaultMessage: 'Sigmanauts',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/community/#Contribute" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Contribute to Ergo"
-                            id="footer.community.3"
-                          />
-                        </a>
+                      <Link
+                        href="/community/#Contribute"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.community.3',
+                          defaultMessage: 'Contribute to Ergo',
+                        })}
+                      >
+                        <FormattedMessage
+                          defaultMessage="Contribute to Ergo"
+                          id="footer.community.3"
+                        />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/community/#HallOfFame" passHref>
-                        <a>
-                          <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
-                        </a>
+                      <Link
+                        href="/community/#HallOfFame"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.community.4',
+                          defaultMessage: 'Hall of Fame',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/community/#Foundation" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Ergo Foundation"
-                            id="footer.community.5"
-                          />
-                        </a>
+                      <Link
+                        href="/community/#Foundation"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.community.5',
+                          defaultMessage: 'Ergo Foundation',
+                        })}
+                      >
+                        <FormattedMessage
+                          defaultMessage="Ergo Foundation"
+                          id="footer.community.5"
+                        />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <Link href="/get-erg" passHref>
-                    <a>
-                      <h3 className="font-button mt-4 mb-10">
-                        <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
-                      </h3>
-                    </a>
+                  <Link href="/get-erg" aria-label={getErg}>
+                    <h3 className="font-button mt-4 mb-10">
+                      <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
+                    </h3>
                   </Link>
 
                   <ul className="hidden md:block">
                     <li className="mb-2">
-                      <Link href="/get-erg/#Mining" passHref>
-                        <a>
-                          <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
-                        </a>
+                      <Link
+                        href="/get-erg/#Mining"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.getErg.1',
+                          defaultMessage: 'Mining',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/get-erg#MiningCalculator" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Mining Calculator"
-                            id="footer.getErg.2"
-                          />
-                        </a>
+                      <Link
+                        href="/get-erg#MiningCalculator"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.getErg.2',
+                          defaultMessage: 'Mining Calculator',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/get-erg/#Wallets" passHref>
-                        <a>
-                          <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
-                        </a>
+                      <Link
+                        href="/get-erg/#Wallets"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.getErg.3',
+                          defaultMessage: 'Wallets',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/get-erg/#Exchanges" passHref>
-                        <a>
-                          <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
-                        </a>
+                      <Link
+                        href="/get-erg/#Exchanges"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.getErg.4',
+                          defaultMessage: 'Exchanges',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <Link href="/discover" passHref>
-                    <a>
-                      <h3 className="font-button mt-4 mb-10">
-                        <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
-                      </h3>
-                    </a>
+                  <Link href="/discover" aria-label={discover}>
+                    <h3 className="font-button mt-4 mb-10">
+                      <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
+                    </h3>
                   </Link>
                   <ul className="hidden md:block">
                     <li className="mb-2">
-                      <Link href="/discover/#DiscoverERG" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Software Releases"
-                            id="footer.discover.1"
-                          />
-                        </a>
+                      <Link
+                        href="/discover/#DiscoverERG"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.discover.1',
+                          defaultMessage: 'Software Releases',
+                        })}
+                      >
+                        <FormattedMessage
+                          defaultMessage="Software Releases"
+                          id="footer.discover.softwareReleases"
+                        />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/discover/#GrantsAndBounties" passHref>
-                        <a>
-                          <FormattedMessage
-                            defaultMessage="Grants & Bounties"
-                            id="footer.discover.2"
-                          />
-                        </a>
+                      <Link
+                        href="/discover/#GrantsAndBounties"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.discover.2',
+                          defaultMessage: 'Grants & Bounties',
+                        })}
+                      >
+                        <FormattedMessage
+                          defaultMessage="Grants & Bounties"
+                          id="footer.discover.2"
+                        />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/discover/#FAQ">
-                        <a>
-                          <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
-                        </a>
+                      <Link
+                        href="/discover/#FAQ"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.discover.3',
+                          defaultMessage: 'FAQ',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/discover/#Explore">
-                        <a>
-                          <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
-                        </a>
+                      <Link
+                        href="/discover/#Explore"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.discover.4',
+                          defaultMessage: 'Explore',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/discover/#Documents">
-                        <a>
-                          <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
-                        </a>
+                      <Link
+                        href="/discover/#Documents"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.discover.5',
+                          defaultMessage: 'Documents',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <Link href="/ecosystem">
-                    <a>
-                      <h3 className="font-button mt-4 mb-8 md:mb-10">
-                        <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
-                      </h3>
-                    </a>
+                  <Link href="/ecosystem" aria-label={ecosystem}>
+                    <h3 className="font-button mt-4 mb-8 md:mb-10">
+                      <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
+                    </h3>
                   </Link>
                   <ul className="hidden md:block">
                     <li className="mb-2">
-                      <Link href="/ecosystem/#dApps">
-                        <a>
-                          <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
-                        </a>
+                      <Link
+                        href="/ecosystem/#dApps"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.1',
+                          defaultMessage: 'DApps',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/ecosystem/#Roadmap">
-                        <a>
-                          <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
-                        </a>
+                      <Link
+                        href="/ecosystem/#Roadmap"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.2',
+                          defaultMessage: 'Roadmap',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/ecosystem/#Wiki">
-                        <a>
-                          <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
-                        </a>
+                      <Link
+                        href="/ecosystem/#Wiki"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.3',
+                          defaultMessage: 'Wiki',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
                       </Link>
                     </li>
 
                     <li className="mb-2">
-                      <Link href="/ecosystem/#Favorites">
-                        <a>
-                          <FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" />
-                        </a>
+                      <Link
+                        href="/ecosystem/#Favorites"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.4',
+                          defaultMessage: 'Ergo Raffle',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" />
                       </Link>
                     </li>
                     <li className="mb-2">
-                      <Link href="/ecosystem/#Videocasts">
-                        <a>
-                          <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
-                        </a>
+                      <Link
+                        href="/ecosystem/#Videocasts"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.5',
+                          defaultMessage: 'Videocasts',
+                        })}
+                      >
+                        <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
                       </Link>
                     </li>
                   </ul>
@@ -347,21 +427,29 @@ function Navigation({ enableLanguages = true }) {
                 <div className="my-6 flex-grow md:flex-grow">
                   <ul className="md:inline-flex">
                     <li>
-                      <Link href="/blog" passHref>
-                        <a>
-                          <h3 className="font-button mt-4 mb-14 mr-20">
-                            <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
-                          </h3>
-                        </a>
+                      <Link
+                        href="/blog"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.blog.title',
+                          defaultMessage: 'BLOG',
+                        })}
+                      >
+                        <h3 className="font-button mt-4 mb-14 mr-20">
+                          <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
+                        </h3>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/news" passHref>
-                        <a>
-                          <h3 className="font-button mt-4 mb-14 mr-20">
-                            <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
-                          </h3>
-                        </a>
+                      <Link
+                        href="/news"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.news.title',
+                          defaultMessage: 'NEWS',
+                        })}
+                      >
+                        <h3 className="font-button mt-4 mb-14 mr-20">
+                          <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
+                        </h3>
                       </Link>
                     </li>
                   </ul>
@@ -369,22 +457,43 @@ function Navigation({ enableLanguages = true }) {
                 <div className="my-6 dark">
                   <div className="grid overflow-hidden grid-cols-3 gap-6 text-red md:grid-cols-9">
                     <div className="box mx-auto my-auto">
-                      <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://sigmaverse.io"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Sigmaverse"
+                      >
                         {getIconComponentByName('Sigmaverse')}
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <Link href="/ecosystem/#Wiki" passHref>
-                        <a>{getIconComponentByName('ErgoWiki')}</a>
+                      <Link
+                        href="/ecosystem/#Wiki"
+                        aria-label={intl.formatMessage({
+                          id: 'footer.ecosystem.3',
+                          defaultMessage: 'Wiki',
+                        })}
+                      >
+                        {getIconComponentByName('ErgoWiki')}
                       </Link>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://github.com/ergoplatform"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                      >
                         {getIconComponentByName('Github')}
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <a href="https://x.com/Ergo_Platform" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://x.com/Ergo_Platform"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="X (formerly Twitter)"
+                      >
                         {getIconComponentByName('X')}
                       </a>
                     </div>
@@ -393,12 +502,18 @@ function Navigation({ enableLanguages = true }) {
                         href="https://www.youtube.com/c/ErgoPlatform"
                         target="_blank"
                         rel="noreferrer"
+                        aria-label="YouTube"
                       >
                         {getIconComponentByName('Youtube')}
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://t.me/Ergo_Chats"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Telegram"
+                      >
                         {getIconComponentByName('Telegram')}
                       </a>
                     </div>
@@ -407,17 +522,28 @@ function Navigation({ enableLanguages = true }) {
                         href="https://discord.gg/ergo-platform-668903786361651200"
                         target="_blank"
                         rel="noreferrer"
+                        aria-label="Discord"
                       >
                         {getIconComponentByName('Discord')}
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://reddit.com/r/ergonauts"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Reddit"
+                      >
                         {getIconComponentByName('Reddit')}
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
-                      <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://www.ergoforum.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Ergo Forum"
+                      >
                         {getIconComponentByName('Discourse')}
                       </a>
                     </div>

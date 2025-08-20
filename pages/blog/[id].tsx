@@ -64,15 +64,17 @@ export default function Post(props: Props) {
                   ?.split(',')
                   .filter((word: string) => word.length > 0)
                   .map((item: string) => (
-                    <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
-                      <div className="my-2 cursor-pointer">
-                        <b
-                          key={item.trim()}
-                          className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                        >
-                          {item.trim()}
-                        </b>
-                      </div>
+                    <Link
+                      href={`/category/${item.trim()}`}
+                      key={item.trim()}
+                      className="my-2 cursor-pointer"
+                    >
+                      <b
+                        key={item.trim()}
+                        className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                      >
+                        {item.trim()}
+                      </b>
                     </Link>
                   ))}
               </div>

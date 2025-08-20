@@ -33,27 +33,23 @@ export default function Explore() {
           id="components.explore.description"
         />
       </p>
-      <Link href="https://explorer.ergoplatform.com/" passHref>
-        <a target="_blank" rel="noopener noreferrer">
-          <button
-            type="submit"
-            className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[400px]"
-          >
-            <span>{button1Text}</span>
-            <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
-          </button>
-        </a>
+      <Link href="https://explorer.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
+        <button
+          type="submit"
+          className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[400px]"
+        >
+          <span>{button1Text}</span>
+          <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+        </button>
       </Link>
-      <Link href="https://ergo.watch/" passHref>
-        <a target="_blank" rel="noopener noreferrer">
-          <button
-            type="submit"
-            className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[10px]"
-          >
-            <span>{button2Text}</span>
-            <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
-          </button>
-        </a>
+      <Link href="https://ergo.watch/" target="_blank" rel="noopener noreferrer">
+        <button
+          type="submit"
+          className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6 xl:ml-[10px]"
+        >
+          <span>{button2Text}</span>
+          <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+        </button>
       </Link>
     </div>
   );

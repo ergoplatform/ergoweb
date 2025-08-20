@@ -11,7 +11,10 @@ export default function LanguageSwitcher({ color = 'default' }) {
   return (
     <Listbox>
       <div className="relative">
-        <Listbox.Button className="relative py-2 pl-3 pr-8 text-left cursor-pointer sm:text-sm">
+        <Listbox.Button
+          className="relative py-2 pl-3 pr-8 text-left cursor-pointer sm:text-sm"
+          aria-label="Select language"
+        >
           <span className="block truncate font-button-bold underline uppercase">{locale}</span>
           <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
             {color == 'default'
@@ -36,10 +39,13 @@ export default function LanguageSwitcher({ color = 'default' }) {
                   className={`cursor-default select-none relative`}
                   value={loc}
                 >
-                  <Link href={asPath} locale={loc} passHref>
-                    <div className="py-2 pl-3 pr-8">
-                      <span className={`font-button-bold text-[14px] uppercase`}>{loc}</span>
-                    </div>
+                  <Link
+                    href={asPath}
+                    locale={loc}
+                    className="py-2 pl-3 pr-8"
+                    aria-label={`Switch to ${loc}`}
+                  >
+                    <span className={`font-button-bold text-[14px] uppercase`}>{loc}</span>
                   </Link>
                 </Listbox.Option>
               ))}

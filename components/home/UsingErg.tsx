@@ -65,14 +65,14 @@ export default function UsingErg() {
       style={{ zIndex: 13 }}
     >
       <div className="flex flex-col xl:flex-row justify-between">
-        <div className="lg:flex lg:flex-col lg:justify-end lg:mb-44">
-          <p className="text-[#585858] dark:text-[#585858] mb-4 font-bold">
+        <div className="lg:flex lg:flex-col lg:items-start lg:mb-44">
+          <p className="text-black dark:text-white mb-4 font-bold">
             <FormattedMessage
               defaultMessage={'UNSTOPPABLE DEFI'}
               id="components.usingErg.subtitle"
             ></FormattedMessage>
           </p>
-          <h2 className="leading-none">
+          <h2 className="leading-none text-h2">
             <b>
               <FormattedMessage
                 defaultMessage={'GET ERG'}
@@ -80,7 +80,7 @@ export default function UsingErg() {
               ></FormattedMessage>
             </b>
           </h2>
-          <p className="text-[#807e7e] dark:text-[#807e7e] mt-6 max-w-xs mr-4">
+          <p className="text-black dark:text-white mt-6 max-w-xs mr-4">
             <FormattedMessage
               defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
               investor, we have you covered."
@@ -90,7 +90,11 @@ export default function UsingErg() {
         </div>
         <div className="lg:grid flex grid-cols-4 grid-rows-1 ml-4 overflow-x-auto lg:gap-4 gap-8 mt-10 no-scrollbar pb-10">
           {cards.map((card: any, i: number) => (
-            <Link key={i} href={card.url} passHref>
+            <Link
+              key={i}
+              href={card.url}
+              aria-label={typeof card.title === 'string' ? card.title : undefined}
+            >
               <div className="cursor-pointer z-20">
                 <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
                   {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}

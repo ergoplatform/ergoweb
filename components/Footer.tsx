@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { getIconComponentByName } from '../utils/icons-map';
-import { BpsaaLogo, LogoWithText } from './icons';
+import { LogoWithText } from './icons';
 
 export default function Footer() {
   const [postsData, setPostsData] = useState([]);
@@ -12,92 +12,143 @@ export default function Footer() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const posts = await fetch(
-        process.env.NEXT_PUBLIC_STRAPI_API +
-          '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=' +
-          locale,
-      )
-        .then((response) => response.json())
-        .then((response) => response.data)
-        .catch((err) => null);
+      try {
+        const postsRes = await fetch(
+          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=${locale}`,
+        );
+        const posts = await postsRes.json();
+        setPostsData(posts.data || []);
 
-      const news = await fetch(
-        process.env.NEXT_PUBLIC_STRAPI_API +
-          '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=' +
-          locale,
-      )
-        .then((response) => response.json())
-        .then((response) => response.data)
-        .catch((err) => null);
-      setPostsData(posts);
-      setNewsData(news);
+        const newsRes = await fetch(
+          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=${locale}`,
+        );
+        const news = await newsRes.json();
+        setNewsData(news.data || []);
+      } catch (err) {
+        console.error('Failed to fetch data:', err);
+        setPostsData([]);
+        setNewsData([]);
+      }
     };
     fetchData();
   }, [locale]);
 
+  const PlaceholderList = ({ count = 5 }: { count?: number }) => (
+    <ul className="hidden md:block h-[360px] lg:h-[380px]" aria-hidden="true">
+      {Array.from({ length: count }).map((_, i) => (
+        <li key={i} className="mb-4">
+          <div className="h-5 w-56 bg-gray-200 dark:bg-gray-700 rounded" />
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
-    <footer id="Footer" className="relative z-10">
-      <div className="max-w-[1300px] mx-auto py-12 px-4 footer-image">
-        <div className="md:flex justify-between">
+    <footer
+      id="Footer"
+      className="relative z-10 overflow-hidden lg:min-h-[700px] md:min-h-[700px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-bottom before:bg-cover before:bg-no-repeat before:bg-[url('/assets/footer-light.png')] dark:before:bg-[url('/assets/footer.png')]"
+      style={{ contentVisibility: 'auto' }}
+    >
+      <div className="max-w-[1300px] mx-auto py-12 px-4 relative z-20">
+        <div className="md:flex justify-between md:min-h-[120px] items-center">
           <div className="my-6 md:my-auto flex justify-start md:justify-center">
-            <Link href="/" passHref>
-              <button>
-                <LogoWithText viewBox="0 0 213 82" className="w-40 md:w-52" />
-              </button>
+            <Link href="/" aria-label="Ergo Platform Home">
+              <LogoWithText viewBox="0 0 213 82" className="w-40 md:w-52" />
             </Link>
           </div>
-          <div className="grid absolute right-10 top-20 space-y-4 md:right-auto md:top-auto md:relative overflow-hidden grid-cols-1 gap-2 text-red md:grid-cols-3 lg:grid-cols-10">
-            <div className="box mx-auto my-auto">
-              <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
+          <div className="my-auto flex flex-wrap md:flex-nowrap justify-center md:justify-start gap-4 md:gap-2 lg:gap-4">
+            <div className="box">
+              <a
+                href="https://sigmaverse.io"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Sigmaverse website"
+              >
                 {getIconComponentByName('Sigmaverse')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <Link href="/ecosystem/#Wiki" passHref>
-                <a>{getIconComponentByName('ErgoWiki')}</a>
+            <div className="box">
+              <Link href="/ecosystem/#Wiki" aria-label="Ergo Wiki">
+                {getIconComponentByName('ErgoWiki')}
               </Link>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://github.com/ergoplatform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform GitHub"
+              >
                 {getIconComponentByName('Github')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://x.com/Ergo_Platform" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://x.com/Ergo_Platform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform X (formerly Twitter)"
+              >
                 {getIconComponentByName('X')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://www.youtube.com/c/ErgoPlatform"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform YouTube"
+              >
                 {getIconComponentByName('Youtube')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://t.me/Ergo_Chats"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform Telegram"
+              >
                 {getIconComponentByName('Telegram')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
+            <div className="box">
               <a
                 href="https://discord.gg/ergo-platform-668903786361651200"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Ergo Platform Discord"
               >
                 {getIconComponentByName('Discord')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://reddit.com/r/ergonauts"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Platform Reddit"
+              >
                 {getIconComponentByName('Reddit')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://www.ergoforum.org/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo Forum"
+              >
                 {getIconComponentByName('Discourse')}
               </a>
             </div>
-            <div className="box mx-auto my-auto">
-              <a href="https://www.coingecko.com/en/coins/ergo" target="_blank" rel="noreferrer">
+            <div className="box">
+              <a
+                href="https://www.coingecko.com/en/coins/ergo"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ergo on CoinGecko"
+              >
                 {getIconComponentByName('Coingecko')}
               </a>
             </div>
@@ -111,243 +162,256 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6">
-          <div className="mx-1">
-            <Link href="/community" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+        <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-10 min-h-[560px]">
+          <div>
+            <Link href="/community">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
-                <Link href="/community/#JoinUs" passHref>
-                  <a>
+                <Link href="/community/#JoinUs">
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Join our channels" id="footer.community.1" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/community/#Sigmanauts" passHref>
-                  <a>
+                <Link href="/community/#Sigmanauts">
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Sigmanauts" id="footer.community.2" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/community/#Contribute" passHref>
-                  <a>
-                    <FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" />
-                  </a>
+                <Link
+                  href="/community/#Contribute"
+                  className="text-black dark:text-gray-300 cursor-pointer"
+                >
+                  <FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" />
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/community/#HallOfFame" passHref>
-                  <a>
-                    <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
-                  </a>
+                <Link
+                  href="/community/#HallOfFame"
+                  className="text-black dark:text-gray-300 cursor-pointer"
+                >
+                  <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/community/#Foundation" passHref>
-                  <a>
-                    <FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.5" />
-                  </a>
+                <Link
+                  href="/community/#Foundation"
+                  className="text-black dark:text-gray-300 cursor-pointer"
+                >
+                  <FormattedMessage defaultMessage="Ergo Foundation" id="footer.community.5" />
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="mx-1">
-            <Link href="/get-erg" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+          <div>
+            <Link href="/get-erg" prefetch={false}>
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
-                <Link href="/get-erg/#Mining">
-                  <a>
+                <Link href="/get-erg/#Mining" prefetch={false}>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Mining" id="footer.getErg.1" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#MiningCalculator">
-                  <a>
+                <Link href="/get-erg/#MiningCalculator" prefetch={false}>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Mining Calculator" id="footer.getErg.2" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#Wallets">
-                  <a>
+                <Link href="/get-erg/#Wallets" prefetch={false}>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Wallets" id="footer.getErg.3" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/get-erg/#Exchanges">
-                  <a>
+                <Link href="/get-erg/#Exchanges" prefetch={false}>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Exchanges" id="footer.getErg.4" />
-                  </a>
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="mx-1">
-            <Link href="/discover" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+          <div>
+            <Link href="/discover">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/discover/#DiscoverERG">
-                  <a>
-                    <FormattedMessage defaultMessage="Software Releases" id="footer.discover.1" />
-                  </a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
+                    <FormattedMessage
+                      defaultMessage="Discover ERG"
+                      id="footer.discover.discoverErg"
+                    />
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#GrantsAndBounties">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#FAQ">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Explore">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/discover/#Documents">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
-                  </a>
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="mx-1">
-            <Link href="/ecosystem" passHref>
-              <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
+          <div>
+            <Link href="/ecosystem">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
                 <Link href="/ecosystem/#DApps">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
-                  </a>
+                  </span>
                 </Link>
               </li>
-
               <li className="mb-4">
                 <Link href="/ecosystem/#Roadmap">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Wiki">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem/#Favorites">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="OUR FAVORITES" id="footer.favorites.title" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mb-4">
                 <Link href="/ecosystem#Videocasts">
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage
                       defaultMessage="Real Life Ergo"
                       id="footer.realLifeErgo.title"
                     />
-                  </a>
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
-          {postsData.length !== 0 ? (
-            <div className="mx-1">
-              <Link href="/blog" passHref>
-                <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                  <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
-                </h3>
-              </Link>
+          <div>
+            <Link href="/blog">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+                <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
+              </h3>
+            </Link>
+            {postsData && postsData.length > 0 ? (
               <ul className="hidden md:block">
                 {postsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
-                    <Link href={attributes.url}>
-                      <a>{attributes.title}</a>
+                    <Link
+                      href={attributes.url}
+                      className="text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5"
+                    >
+                      {attributes.title}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
-          ) : null}
-
-          {newsData.length !== 0 ? (
-            <div className="mx-1">
-              <Link href="/news" passHref>
-                <h3 className="font-button text-[#585858] dark:text-[#807e7e] my-4 cursor-pointer">
-                  <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
-                </h3>
-              </Link>
+            ) : (
+              <PlaceholderList />
+            )}
+          </div>
+          <div>
+            <Link href="/news">
+              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+                <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
+              </h3>
+            </Link>
+            {newsData && newsData.length > 0 ? (
               <ul className="hidden md:block">
                 {newsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
-                    <Link href={attributes.url}>
-                      <a>{attributes.title}</a>
+                    <Link
+                      href={attributes.url}
+                      className="text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5"
+                    >
+                      {attributes.title}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
-          ) : null}
-        </div>
-        <div className="md:flex">
-          <div className="my-6 order-2">
-            {<BpsaaLogo viewBox="0 0 227 102" width="158" height="88" />}
+            ) : (
+              <PlaceholderList />
+            )}
           </div>
+        </div>
+        <div className="md:flex mt-8">
           <div className="flex-grow md:flex-grow my-auto">
-            <ul className="inline-flex">
-              <li className="mr-6">Ergo Platform &copy; {new Date().getFullYear()}</li>
+            <ul className="inline-flex items-center">
+              <li className="mr-6 text-black dark:text-white">
+                Ergo Platform &copy; {new Date().getFullYear()}
+              </li>
               <li className="mr-6">
                 <Link href={'/privacy-policy'}>
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Privacy Policy" id="footer.privacyPolicy" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="mr-6">
                 <Link href={'/legal'}>
-                  <a>
+                  <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Legal" id="footer.legal" />
-                  </a>
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-5 md:mt-0 text-gray-400">
+        <div className="mt-5 md:mt-0 text-black dark:text-white">
           1 Irving Place, #08/11 The Commerze@irving Singapore (369546)
         </div>
       </div>

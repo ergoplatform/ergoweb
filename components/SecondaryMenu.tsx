@@ -13,44 +13,54 @@ function SecondaryMenu() {
         style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 100 }}
       >
         <div className="max-w-[700px] mx-auto flex justify-between w-full px-4 py-2">
-          <Link href="/get-erg#Wallets">
-            <a className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300">
-              WALLETS
-            </a>
+          <Link
+            href="/get-erg#Wallets"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            aria-label="Wallets"
+          >
+            WALLETS
           </Link>
-          <span className="text-xs mx-2 text-gray-400">•</span>
-          <Link href="/get-erg#Exchanges">
-            <a className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300">
-              EXCHANGES
-            </a>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
+          <Link
+            href="/get-erg#Exchanges"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            aria-label="Exchanges"
+          >
+            EXCHANGES
           </Link>
-          <span className="text-xs mx-2 text-gray-400">•</span>
-          <Link href="/ecosystem#Roadmap">
-            <a className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300">
-              ROADMAP
-            </a>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
+          <Link
+            href="/ecosystem#Roadmap"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            aria-label="Roadmap"
+          >
+            ROADMAP
           </Link>
-          <span className="text-xs mx-2 text-gray-400">•</span>
-          <Link href="/blog">
-            <a className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300">
-              BLOG
-            </a>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
+          <Link
+            href="/blog"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            aria-label="Blog"
+          >
+            BLOG
           </Link>
-          <span className="text-xs mx-2 text-gray-400">•</span>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <a
             href="https://docs.ergoplatform.org/"
             target="_blank"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
             rel="noreferrer"
+            aria-label="Documentation"
           >
             DOCUMENTATION
           </a>
-          <span className="text-xs mx-2 text-gray-400">•</span>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <a
             href="https://sigmaverse.io/"
             target="_blank"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
             rel="noreferrer"
+            aria-label="Sigmaverse"
           >
             SIGMAVERSE
           </a>

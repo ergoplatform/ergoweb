@@ -33,8 +33,8 @@ export default function Wiki() {
           </div>
           <Image
             src={'/assets/ecosystem/ergonaut.png'}
-            width="405px"
-            height="349px"
+            width={405}
+            height={349}
             className="rounded-br-2xl"
             alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane on top of a moon."
           />

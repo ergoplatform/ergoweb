@@ -28,9 +28,10 @@ const slides = [
           readMoreLink: (
             <a
               href="https://docs.ergoplatform.com/mining/emission/"
-              style={{ color: 'orange', fontWeight: 'bold' }}
+              className="text-black dark:text-white font-bold"
+              aria-label="Read More about A Fair Start"
             >
-              Read More
+              Read More: A Fair Start
             </a>
           ),
         }}
@@ -65,9 +66,10 @@ const slides = [
           readMoreLink: (
             <a
               href="https://docs.ergoplatform.com/uses/lets/"
-              style={{ color: 'orange', fontWeight: 'bold' }}
+              className="text-black dark:text-white font-bold"
+              aria-label="Read More about Alternative Economics"
             >
-              Read More
+              Read More: Alternative Economics
             </a>
           ),
         }}
@@ -102,9 +104,10 @@ const slides = [
           readMoreLink: (
             <a
               href="https://docs.ergoplatform.com/dev/protocol/zkp/"
-              style={{ color: 'orange', fontWeight: 'bold' }}
+              className="text-black dark:text-white font-bold"
+              aria-label="Read More about Optional Privacy"
             >
-              Read More
+              Read More: Optional Privacy
             </a>
           ),
         }}
@@ -125,7 +128,7 @@ function Highlights() {
   return (
     <div
       id="Highlights"
-      className="mt-40 max-w-[1300px] mx-auto p-4 relative"
+      className="mt-40 max-w-[1300px] mx-auto p-4 relative lg:min-h-[560px]"
       style={{ zIndex: 12 }}
     >
       <div className="text-center">
@@ -137,31 +140,36 @@ function Highlights() {
       <Swiper navigation={true} modules={[Navigation]} className="SwiperHighlights">
         {slides.map((item, i) => (
           <SwiperSlide key={i}>
-            <div>
+            <div className="min-h-[600px] flex flex-col justify-between">
+              {/* Added min-h for mobile layout stability */}
               <div className="lg:hidden">
                 <div className="text-center">
                   <p className="font-vinila-extended-light text-[40px]">{item.titleMessage}</p>
                 </div>
-                <div className="flex">
-                  <div className="mx-auto">
+                <div className="flex justify-center items-center w-full h-96">
+                  {' '}
+                  {/* Changed max-h-96 to h-96 for fixed height */}
+                  <div className="mx-auto w-full h-full flex justify-center items-center">
                     {getIconComponentByName(item.svg, {
                       viewBox: item.viewBox,
-                      className: 'highlightsShadow my-auto h-96',
-                      height: item.height,
-                      width: item.height,
+                      className: 'highlightsShadow my-auto max-h-full w-full object-contain',
+                      width: '100%', // Ensure SVG scales to container
+                      height: '100%', // Ensure SVG scales to container
                     })}
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="mx-16 flex-grow">
+                  <div className="mx-16 flex-grow" style={{ minHeight: '180px' }}>
+                    {/* Added minHeight for mobile layout stability */}
                     <p className="font-vinila-extended leading-none text-[24px]">
                       {item.quoteMessage}
                     </p>
-                    <p className="font-body-2-regular text-[#585858] mt-4">{item.textMessage}</p>
+                    <p className="font-body-2-regular text-black dark:text-white mt-4">
+                      {item.textMessage}
+                    </p>
                   </div>
                 </div>
               </div>
-
               <div className="hidden lg:block">
                 <div className="flex mx-20">
                   <div className="item w-1/3">
@@ -173,8 +181,8 @@ function Highlights() {
                     })}
                   </div>
                   <div className="item w-2/3">
-                    <h3 className="leading-tight">{item.titleMessage}</h3>
-                    <p className="max-w-lg text-[#585858] mt-6">{item.textMessage}</p>
+                    <h2 className="leading-tight text-[96px]">{item.titleMessage}</h2>
+                    <p className="max-w-lg text-black dark:text-white mt-6">{item.textMessage}</p>
                     <p className="font-vinila-extended leading-none text-[56px] mt-12">
                       {item.quoteMessage}
                     </p>

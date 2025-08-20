@@ -673,12 +673,6 @@
       "value": "FOUNDATION"
     }
   ],
-  "components.hallOfFame.title": [
-    {
-      "type": 0,
-      "value": "Hall Of Fame"
-    }
-  ],
   "components.highlights.title": [
     {
       "type": 0,
@@ -1225,6 +1219,18 @@
       "value": "Documents"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "Discover ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Software Releases"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1333,6 +1339,12 @@
       "value": "We got it!"
     }
   ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hall of Fame"
+    }
+  ],
   "navigation.discover": [
     {
       "type": 0,
@@ -1348,7 +1360,7 @@
   "navigation.ergoCommunity": [
     {
       "type": 0,
-      "value": "ERGO COMMUNITY"
+      "value": "COMMUNITY"
     }
   ],
   "navigation.getErg": [

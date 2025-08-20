@@ -1,26 +1,38 @@
 import { useIntl } from 'react-intl';
-import Autolykos from '../components/home/Autolykos';
-import Highlights from '../components/home/Highlights';
 import HomeHero from '../components/home/HomeHero';
-import HomeInfo from '../components/home/HomeInfo';
-import News from '../components/home/News';
-import UsingErg from '../components/home/UsingErg';
 import Layout from '../components/Layout';
-import ContributeForm from '../components/shared/ContributeForm';
-import Feed from '../components/shared/Feed';
-import dynamic from 'next/dynamic';
-import UniqueErgo from '../components/home/UniqueErgo';
 import HomeFrames from '../components/home/HomeFrames';
 import generateRssFeed from '../utils/generateRssFeed';
-const Partners = dynamic(() => import('../components/home/Partners'), {
-  ssr: false,
-});
+import LazyInView from '../utils/LazyInView';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+const Highlights = dynamic(() => import('../components/home/Highlights'));
+const HomeInfo = dynamic(() => import('../components/home/HomeInfo'));
+const UniqueErgo = dynamic(() => import('../components/home/UniqueErgo'));
+const UsingErg = dynamic(() => import('../components/home/UsingErg'));
+const Autolykos = dynamic(() => import('../components/home/Autolykos'));
+const News = dynamic(() => import('../components/home/News'));
+const Feed = dynamic(() => import('../components/shared/Feed'));
+const Partners = dynamic(() => import('../components/home/Partners'));
+const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'));
+
+type Partner = {
+  id: number;
+  attributes: {
+    name: string;
+    url: string;
+    image?: { data: { attributes: { url: string; width: number; height: number } } } | null;
+    image_dark?: { data: { attributes: { url: string; width: number; height: number } } } | null;
+  };
+};
 
 type Props = {
   posts?: any;
   news?: any;
   info?: any;
   blockReward: number;
+  partners?: Partner[]; // Add partners to props
 };
 
 export default function Home(props: Props) {
@@ -31,26 +43,64 @@ export default function Home(props: Props) {
   });
   return (
     <div>
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/assets/home/hero-poster-light.webp"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/assets/home/hero-poster-dark.webp"
+          media="(prefers-color-scheme: dark)"
+        />
+      </Head>
       <HomeFrames />
       <Layout title={title}>
         <HomeHero />
-        <Highlights />
+        <LazyInView rootMargin="200px 0px">
+          <Highlights />
+        </LazyInView>
         {props.blockReward && props.info ? (
-          <HomeInfo
-            circulatingSupply={props.info.supply}
-            hashRate={props.info.hashRate}
-            blockReward={props.blockReward}
-            transactionPerDay={props.info.transactionAverage}
-          />
+          <LazyInView rootMargin="200px 0px" ssrReveal className="min-h-[120px] md:min-h-[120px]">
+            <HomeInfo
+              circulatingSupply={props.info.supply}
+              hashRate={props.info.hashRate}
+              blockReward={props.blockReward}
+              transactionPerDay={props.info.transactionAverage}
+            />
+          </LazyInView>
         ) : null}
-
-        <UniqueErgo />
-        <UsingErg />
-        <Autolykos />
-        {props.news ? <News news={props.news} /> : null}
-        {props.posts ? <Feed posts={props.posts} /> : null}
-        <Partners />
-        <ContributeForm />
+        <LazyInView rootMargin="200px 0px">
+          <UniqueErgo />
+        </LazyInView>
+        <LazyInView rootMargin="200px 0px">
+          <UsingErg />
+        </LazyInView>
+        <LazyInView rootMargin="200px 0px">
+          <Autolykos />
+        </LazyInView>
+        {props.news ? (
+          <LazyInView rootMargin="200px 0px">
+            <News news={props.news} />
+          </LazyInView>
+        ) : null}
+        {props.posts ? (
+          <LazyInView rootMargin="200px 0px">
+            <Feed posts={props.posts} />
+          </LazyInView>
+        ) : null}
+        <LazyInView rootMargin="200px 0px">
+          <Partners partners={props.partners || []} />
+        </LazyInView>
+        {/* Pass partners prop, default to empty array */}
+        <LazyInView rootMargin="200px 0px">
+          <ContributeForm />
+        </LazyInView>
       </Layout>
     </div>
   );
@@ -133,10 +183,22 @@ export const getStaticProps = async (context: any) => {
       }
     : null;
 
+  // Fetch partners data
+  const partnersJson = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/partners?fields[0]=name&fields[1]=url' +
+      '&populate[image][fields][0]=url&populate[image][fields][1]=width&populate[image][fields][2]=height' +
+      '&populate[image_dark][fields][0]=url&populate[image_dark][fields][1]=width&populate[image_dark][fields][2]=height',
+  )
+    .then((response) => response.json())
+    .catch((err) => null);
+
+  const partners = partnersJson?.data ?? [];
+
   generateRssFeed();
 
   return {
-    props: { posts, news, info, blockReward },
+    props: { posts, news, info, blockReward, partners }, // Pass partners to props
     revalidate: 60,
   };
 };

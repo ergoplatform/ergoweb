@@ -57,15 +57,17 @@ export default function Post(props: Props) {
                   ?.split(',')
                   .filter((word: string) => word.length > 0)
                   .map((item: string) => (
-                    <Link href={`/category/${item.trim()}`} key={item.trim()} passHref>
-                      <div className="cursor-pointer">
-                        <b
-                          key={item.trim()}
-                          className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                        >
-                          {item.trim()}
-                        </b>
-                      </div>
+                    <Link
+                      href={`/category/${item.trim()}`}
+                      key={item.trim()}
+                      className="cursor-pointer"
+                    >
+                      <b
+                        key={item.trim()}
+                        className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                      >
+                        {item.trim()}
+                      </b>
                     </Link>
                   ))}
               </div>
@@ -117,18 +119,12 @@ export default function Post(props: Props) {
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}"
-                    passHref
-                  >
+                  <Link href="https://www.facebook.com/sharer/sharer.php?u={window.location.href}">
                     <BlogFacebook />
                   </Link>
                 </div>
                 <div className="cursor-pointer">
-                  <Link
-                    href="https://twitter.com/intent/tweet?text={window.location.href}"
-                    passHref
-                  >
+                  <Link href="https://twitter.com/intent/tweet?text={window.location.href}">
                     <BlogX />
                   </Link>
                 </div>

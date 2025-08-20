@@ -114,28 +114,19 @@ function FormattedMessageFixed(props: any) {
 export default function JoinUs() {
   return (
     <div id="JoinUs" className="relative z-10">
-      <div className="flex overflow-x-auto space-x-6 mt-8 no-scrollbar pl-4 py-2 xl:py-8 2xl:hidden">
-        {cards.map((card: any, i: number) => (
-          <CommunityCard
-            key={i}
-            title={card.title}
-            text={card.text}
-            icon={card.icon}
-            url={card.url}
-          />
-        ))}
-        <div className="w-0.1 flex-shrink-0"></div>
-      </div>
-      <div className="hidden max-w-[1300px] mx-auto p-4 py-6 2xl:grid overflow-hidden grid-cols-4 grid-rows-2 gap-6">
-        {cards.map((card: any, i: number) => (
-          <CommunityCard
-            key={i}
-            title={card.title}
-            text={card.text}
-            icon={card.icon}
-            url={card.url}
-          />
-        ))}
+      <div className="mt-8 pl-4 py-2 xl:py-8 max-w-[1300px] mx-auto">
+        <div className="flex overflow-x-auto no-scrollbar space-x-6 2xl:space-x-0 2xl:grid 2xl:overflow-visible 2xl:grid-cols-4 2xl:grid-rows-2 2xl:gap-6 p-4 2xl:p-0">
+          {cards.map((card: any, i: number) => (
+            <CommunityCard
+              key={i}
+              title={card.title}
+              text={card.text}
+              icon={card.icon}
+              url={card.url}
+            />
+          ))}
+          <div className="w-0.1 flex-shrink-0 2xl:hidden"></div>
+        </div>
       </div>
       <div className="max-w-[1300px] text-center mx-auto">
         <p className="text-[#585858] text-sm md:text-lg p-4 mb-0 pb-2" id="ergo-community">

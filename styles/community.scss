@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@use "./_variables.scss" as *;
 
 .community-frame-1 {
   position: absolute;

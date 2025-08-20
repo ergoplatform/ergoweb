@@ -4,8 +4,6 @@ const PUBLIC_FILE = /\.(.*)$/;
 const DEFAULT_LOCALE = 'en';
 
 export function middleware(req: NextRequest) {
-  let res = NextResponse.next();
-
   const shouldHandleLocale =
     !PUBLIC_FILE.test(req.nextUrl.pathname) &&
     !req.nextUrl.pathname.includes('/api/') &&
@@ -16,8 +14,9 @@ export function middleware(req: NextRequest) {
   if (shouldHandleLocale) {
     const url = req.nextUrl.clone();
     url.locale = DEFAULT_LOCALE;
-
-    res = NextResponse.redirect(url);
+    return NextResponse.redirect(url);
   }
-  return res;
+
+  // No CSP here; CSP is applied dynamically in _document.tsx (server-side) with a per-request nonce
+  return NextResponse.next();
 }

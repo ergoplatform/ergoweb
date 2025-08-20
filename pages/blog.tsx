@@ -32,15 +32,17 @@ export default function Blog(props: Props) {
             <div className="flex flex-row flex-wrap">
               {props.categories
                 ? props.categories.map((category: any) => (
-                    <Link href={`/category/${category.attributes.name}`} key={category.id} passHref>
-                      <div className="my-2 sm:my-auto cursor-pointer">
-                        <b
-                          key={category.attributes.name}
-                          className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                        >
-                          {category.attributes.name}
-                        </b>
-                      </div>
+                    <Link
+                      href={`/category/${category.attributes.name}`}
+                      key={category.id}
+                      className="my-2 sm:my-auto cursor-pointer"
+                    >
+                      <b
+                        key={category.attributes.name}
+                        className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
+                      >
+                        {category.attributes.name}
+                      </b>
                     </Link>
                   ))
                 : null}

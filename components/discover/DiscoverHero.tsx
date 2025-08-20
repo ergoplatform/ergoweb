@@ -60,7 +60,7 @@ export default function DiscoverERG() {
               id="components.discoverErgo.text.1"
             />
           </p>
-          <div className="-ml-4 mt-10">
+          <div className="mt-10">
             <Button
               text={button3Text}
               url="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/"
@@ -72,7 +72,7 @@ export default function DiscoverERG() {
               iconColor="orange"
             />
           </div>
-          <div className="-ml-4 mt-10">
+          <div className="mt-10">
             <Button
               text={button1Text}
               url="https://docs.ergoplatform.com/"
@@ -84,7 +84,7 @@ export default function DiscoverERG() {
               iconColor="orange"
             />
           </div>
-          <div className="-ml-4 mt-10">
+          <div className="mt-10">
             <Button
               text={button2Text}
               url="https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew/playlists"
@@ -96,7 +96,7 @@ export default function DiscoverERG() {
               iconColor="orange"
             />
           </div>
-          <div className="-ml-4 mt-10">
+          <div className="mt-10">
             <Button
               text={button4Text}
               url="/category/devs/"
@@ -119,7 +119,7 @@ export default function DiscoverERG() {
               id="components.software.description"
             />
           </p>
-          <div className="-ml-4 mt-10">
+          <div className="mt-10">
             <Button
               text={button5Text}
               url="https://docs.ergoplatform.com/node/install/"
@@ -147,10 +147,10 @@ export default function DiscoverERG() {
               <a target="_blank" rel="noopener noreferrer">
                 <button
                   type="submit"
-                  className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
+                  className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange mt-6"
                 >
                   <span>{button6Text}</span>
-                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightWhite')}</span>
                 </button>
               </a>
             </Link>

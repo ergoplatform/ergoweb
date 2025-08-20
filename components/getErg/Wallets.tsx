@@ -122,7 +122,7 @@ export default function Wallets() {
             </div>
             <div className="w-1/5 p-1 my-auto">
               <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-              <p className="text-center mt-2 text-[12px]">Best for mobile</p>
+              <p className="text-center mt-2 text-[16px]">Best for mobile</p>
             </div>
             <div className="w-1/5 p-1 my-auto">
               <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -151,7 +151,7 @@ export default function Wallets() {
 
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
-            <p className="text-center mt-2 text-[12px]">Best for dApps</p>
+            <p className="text-center mt-2 ">Best for dApps</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -178,7 +178,7 @@ export default function Wallets() {
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletDesktop className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 18 18" />
-            <p className="text-center mt-2 text-[12px]">Desktop</p>
+            <p className="text-center mt-2 ">Desktop</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -206,7 +206,7 @@ export default function Wallets() {
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletWeb className="w-6 h-6 mx-auto lg:hidden" viewBox="0 0 20 20" />
-            <p className="text-center mt-2 text-[12px]">Developer Tooling</p>
+            <p className="text-center mt-2 ">Developer Tooling</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -233,7 +233,7 @@ export default function Wallets() {
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-            <p className="text-center mt-2 text-[12px]">Multi Platform</p>
+            <p className="text-center mt-2 ">Multi Platform</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <RoadmapInProgress className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
@@ -261,7 +261,7 @@ export default function Wallets() {
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletDesktop className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 18 18" />
-            <p className="text-center mt-2 text-[12px]">Server</p>
+            <p className="text-center mt-2 ">Server</p>
           </div>
           <div className="w-1/5 p-1 my-auto">
             <WalletX className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />

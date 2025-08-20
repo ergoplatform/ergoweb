@@ -17,7 +17,7 @@ const SvgErgoWiki = (props) => (
     <defs>
       <style>
         {
-          '.ergo-wiki_svg__str0{stroke:#000;strokeWidth:5.8;strokeMiterlimit:22.9256}.ergo-wiki_svg__fil0{fill:none}'
+          '.ergo-wiki_svg__str0{stroke:#000;stroke-width:4;stroke-miterlimit:22.9256}.ergo-wiki_svg__fil0{fill:none}'
         }
       </style>
     </defs>
@@ -48,7 +48,7 @@ const SvgErgoWiki = (props) => (
     <path
       className="ergo-wiki_svg__fil0"
       stroke="#000"
-      strokeWidth={4.35}
+      strokeWidth={3.5}
       strokeMiterlimit={22.926}
       d="M182.4 353.44h14.99v6.96h-25.06v-6.33l9.86-10.92-9.81-10.22v-6.35h25.01v6.96h-14.67l9.1 9.53z"
     />

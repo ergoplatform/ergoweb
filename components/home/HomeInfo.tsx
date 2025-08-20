@@ -23,7 +23,7 @@ export default function HomeInfo({
   circulatingSupply = circulatingSupply / 1000000000;
 
   return (
-    <div id="HomeInfo" ref={ref} className="relative z-10">
+    <div id="HomeInfo" ref={ref} className="relative z-10 min-h-[160px]">
       <div className="hidden md:flex mt-30 justify-end">
         <div className="mx-4 md:flex flex-row bg-white md:pr-18 lg:pr-20 xl:pr-36 rounded-l-xl md:mx-0 homeInfo-shadow">
           <div className="mx-8 my-4 text-center">
@@ -33,7 +33,7 @@ export default function HomeInfo({
                 id="components.homeInfo.blockReward"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={0} end={blockReward} />}
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function HomeInfo({
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={10000000} end={circulatingSupply} />}{' '}
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function HomeInfo({
                 id="components.homeInfo.transactionPerDay"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={1000} end={transactionPerDay} />}
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function HomeInfo({
             <b className="text-brand-orange dark:text-brand-orange">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," decimals={2} start={10} end={hashRate} />} TH/s
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function HomeInfo({
                 id="components.homeInfo.blockReward"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={0} end={blockReward} />}
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function HomeInfo({
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={10000000} end={circulatingSupply} />}
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function HomeInfo({
                 id="components.homeInfo.transactionPerDay"
               />
             </b>
-            <p className="font-vinila-extended text-[20px] text-black dark:text-black">
+            <p className="font-vinila-extended tabular-nums text-[20px] text-black dark:text-black">
               {inView && <CountUp separator="," start={1000} end={transactionPerDay} />}
             </p>
           </div>

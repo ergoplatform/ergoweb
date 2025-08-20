@@ -85,6 +85,85 @@ const nextConfig = {
   },
   reactStrictMode: true,
   trailingSlash: true,
+  compress: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  productionBrowserSourceMaps: false,
+  webpack: (config, { isServer }) => {
+    // Only enable client source maps during development
+    if (!isServer && process.env.NODE_ENV !== 'production') {
+      config.devtool = 'source-map';
+    }
+
+    // Add PostCSS loader with PurgeCSS for production builds
+    if (process.env.NODE_ENV === 'production') {
+      const cssRule = config.module.rules.find(
+        (rule) => rule.test && rule.test.toString().includes('.scss'),
+      );
+
+      if (cssRule) {
+        cssRule.use.push({
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                require('@fullhuman/postcss-purgecss')({
+                  content: [
+                    './pages/**/*.{js,ts,jsx,tsx}',
+                    './components/**/*.{js,ts,jsx,tsx}',
+                    './sections/**/*.{js,ts,jsx,tsx}',
+                    './content/**/*.{js,ts,jsx,tsx,mdx}',
+                    './docs/**/*.{js,ts,jsx,tsx,mdx}',
+                    './public/**/*.{js,ts,jsx,tsx,mdx}',
+                    './scripts/**/*.{js,ts,jsx,tsx,mdx}',
+                    './stories/**/*.{js,ts,jsx,tsx,mdx}',
+                    './styles/**/*.{js,ts,jsx,tsx,mdx}',
+                    './utils/**/*.{js,ts,jsx,tsx,mdx}',
+                  ],
+                  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+                  safelist: {
+                    standard: [/^swiper-/, /^Toastify__/, /^dark/],
+                  },
+                }),
+              ],
+            },
+          },
+        });
+      }
+    }
+    return config;
+  },
+  async headers() {
+    return [
+      // Immutable caching for Next static assets and images
+      {
+        source: '/_next/(static|image)/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      // Immutable caching for public assets (fonts, images, videos)
+      {
+        source: '/(fonts|assets)/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      // Security headers and default cache for HTML
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+        ],
+      },
+    ];
+  },
   i18n: {
     locales: [
       'default',
@@ -112,7 +191,20 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['storage.googleapis.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ergo-platform-cms-nvbpfiue6q-ez.a.run.app',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

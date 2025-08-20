@@ -47,27 +47,21 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
         </div>
         <div className="mt-0 md:mt-4 flex -ml-2 md:-ml-1 space-x-4">
           {props.linkedin != undefined ? (
-            <Link href={props.linkedin} passHref>
-              <a>
-                <Linkedin
-                  viewBox="0 0 28 28"
-                  className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"
-                />
-              </a>
+            <Link href={props.linkedin}>
+              <Linkedin
+                viewBox="0 0 28 28"
+                className="cursor-pointer scale-50 md:scale-100 fill-brand-orange w-10 h-10"
+              />
             </Link>
           ) : null}
           {props.twitter != undefined ? (
-            <Link href={props.twitter} passHref>
-              <a>
-                <X className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
-              </a>
+            <Link href={props.twitter}>
+              <X className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
             </Link>
           ) : null}
           {props.github != undefined ? (
-            <Link href={props.github} passHref>
-              <a>
-                <Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
-              </a>
+            <Link href={props.github}>
+              <Github className="cursor-pointer scale-50 md:scale-100 fill-brand-orange" />
             </Link>
           ) : null}
         </div>
@@ -108,11 +102,13 @@ export default function HallOfFame(props: Props) {
       id="HallOfFame"
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10"
     >
-      <h2 className="lg:text-center">
-        <b>
-          <FormattedMessage defaultMessage={'Hall Of Fame'} id="components.hallOfFame.title" />
-        </b>
-      </h2>
+      <div className="text-center">
+        <h2>
+          <b>
+            <FormattedMessage defaultMessage="Hall of Fame" id="hallOfFame.title" />
+          </b>
+        </h2>
+      </div>
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
           <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">

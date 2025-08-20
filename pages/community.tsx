@@ -1,14 +1,32 @@
 import { useIntl } from 'react-intl';
 import CommunityCardsFeed from '../components/community/CommunityCardsFeed';
 import CommunityHero from '../components/community/CommunityHero';
-import ErgoFoundation from '../components/community/ErgoFoundation';
-import HallOfFame from '../components/community/HallOfFame';
-import OurMission from '../components/community/OurMission';
-import Sigmanauts from '../components/community/Sigmanauts';
-import Spotlight from '../components/community/Spotlight';
 import Layout from '../components/Layout';
-import ContributeForm from '../components/shared/ContributeForm';
-import Feed from '../components/shared/Feed';
+import dynamic from 'next/dynamic';
+import LazyInView from '../utils/LazyInView';
+
+const Sigmanauts = dynamic(() => import('../components/community/Sigmanauts'), {
+  ssr: false,
+});
+const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'), {
+  ssr: false,
+});
+const Spotlight = dynamic(() => import('../components/community/Spotlight'), {
+  ssr: false,
+});
+const Feed = dynamic(() => import('../components/shared/Feed'), {
+  ssr: false,
+});
+const ErgoFoundation = dynamic(() => import('../components/community/ErgoFoundation'), {
+  ssr: false,
+});
+const OurMission = dynamic(() => import('../components/community/OurMission'), {
+  ssr: false,
+});
+
+const DynamicHallOfFame = dynamic(() => import('../components/community/HallOfFame'), {
+  ssr: false,
+});
 
 type Props = {
   posts?: any;
@@ -23,7 +41,7 @@ export default function Community(props: Props) {
   });
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <div className="community-blur-2"></div>
       <div className="community-frame-3"></div>
       <div className="community-frame-1"></div>
@@ -39,18 +57,38 @@ export default function Community(props: Props) {
       <Layout title={title}>
         <CommunityHero />
         <CommunityCardsFeed />
-        <Sigmanauts />
-        <ContributeForm />
 
-        {props.posts?.data?.length !== 0 ? (
-          <>
-            <Spotlight />
-            <Feed posts={props.posts} />
-          </>
+        <LazyInView rootMargin="200px 0px" className="min-h-[480px]">
+          {() => <Sigmanauts />}
+        </LazyInView>
+
+        <LazyInView rootMargin="200px 0px" className="min-h-[440px]">
+          {() => <ContributeForm />}
+        </LazyInView>
+
+        <LazyInView rootMargin="200px 0px" className="min-h-[900px]">
+          {() =>
+            props.posts?.data?.length !== 0 ? (
+              <>
+                <Spotlight />
+                <Feed posts={props.posts} />
+              </>
+            ) : null
+          }
+        </LazyInView>
+
+        {props.teamMembers ? (
+          <LazyInView rootMargin="200px 0px" className="min-h-[720px]">
+            {() => <DynamicHallOfFame teamMembers={props.teamMembers} />}
+          </LazyInView>
         ) : null}
-        {props.teamMembers ? <HallOfFame teamMembers={props.teamMembers} /> : null}
-        <ErgoFoundation />
-        <OurMission />
+
+        <LazyInView rootMargin="200px 0px" className="min-h-[560px]">
+          {() => <ErgoFoundation />}
+        </LazyInView>
+        <LazyInView rootMargin="200px 0px" className="min-h-[520px]">
+          {() => <OurMission />}
+        </LazyInView>
       </Layout>
     </div>
   );

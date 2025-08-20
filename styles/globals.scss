@@ -1,20 +1,32 @@
+@use "./_variables.scss" as *;
+@use "./home.scss";
+@use "./fonts.scss";
+@use "./unique-ergo.scss";
+@use "./not-found.scss";
+@use "./community.scss";
+@use "./geterg.scss";
+@use "./discover.scss";
+@use "./ecosystem.scss";
+@use "./blog.scss";
+@use "./markdown-body.scss";
+@use "swiper/scss";
+@use "swiper/scss/navigation";
+@use "swiper/scss/pagination";
+@use "react-toastify/scss/main.scss";
 @tailwind base;
+/* Override Tailwind Preflight so headings don't inherit smaller font sizes */
 @tailwind components;
 @tailwind utilities;
-@import "./home.scss";
-@import "./fonts.scss";
-@import "./unique-ergo.scss";
-@import "./not-found.scss";
-@import "./community.scss";
-@import "./geterg.scss";
-@import "./discover.scss";
-@import "./ecosystem.scss";
-@import "./blog.scss";
-@import "./markdown-body.scss";
-@import "swiper/scss";
-@import "swiper/scss/navigation";
-@import "swiper/scss/pagination";
-@import "react-toastify/scss/main.scss";
+
+/* Default heading sizes when no explicit text-* utility is present */
+@layer utilities {
+  h1:not([class*="text-"]) { @apply text-h1 font-bold; }
+  h2:not([class*="text-"]) { @apply text-h2 font-bold; }
+  h3:not([class*="text-"]) { @apply text-h3 font-semibold; }
+  h4:not([class*="text-"]) { @apply text-h4 font-semibold; }
+  h5:not([class*="text-"]) { @apply text-lg font-semibold; }
+  h6:not([class*="text-"]) { @apply text-base font-semibold; }
+}
 
 .themeShadow {
   -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
@@ -29,6 +41,14 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: black !important;
+  width: 27px; /* Default Swiper arrow width */
+  height: 44px; /* Default Swiper arrow height */
+  line-height: 44px; /* Match height to prevent vertical shift */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-family: sans-serif !important; /* Force a generic font */
+  font-size: 20px; /* Ensure a consistent size */
 }
 .dark .swiper-button-next,
 .dark .swiper-button-prev {
@@ -55,9 +75,15 @@
 .verticalLine {
   border-left: thin solid rgba(0, 0, 0, 0.15);
 }
+.dark .verticalLine {
+  border-left: thin solid rgba(255, 255, 255, 0.3);
+}
 
 .horizontallLine {
   border-top: thin solid rgba(0, 0, 0, 0.15);
+}
+.dark .horizontallLine {
+  border-top: thin solid rgba(255, 255, 255, 0.3);
 }
 
 .fade-in-section {
@@ -119,27 +145,6 @@
     list-style-type: disc;
     margin-left: 20px;
   }
-  h1 {
-    font-size: 48px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  h3 {
-    font-size: 32px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-
-  h6 { 
-    font-size: 16px;
-  }
-
   p {
     margin-bottom: 20px;
   }
@@ -151,7 +156,6 @@
 
 .mdPage {
   h1 {
-    font-size: 24px;
     margin-bottom: 20px;
   }
   p {
@@ -220,8 +224,6 @@
   );
 }
 
-.flip {
-}
 
 .flip-content {
   transition: transform 0.2s;
@@ -295,24 +297,13 @@
 .dark .ergo-foundation > li {
   color: #807e7e;
   margin-bottom: 16px;
-  font-size: 14px;
 }
 
 .ergo-foundation > li {
   color: #807e7e;
   margin-bottom: 16px;
-  font-size: 14px;
 }
 
-footer
-  > div
-  > div.my-6.grid.md\:grid-cols-2.lg\:grid-cols-6
-  > div
-  > ul
-  > li
-  > a {
-  color: #585858;
-}
 
 .footer-image {
   background: no-repeat url("/assets/footer-light.png");
@@ -355,7 +346,8 @@ footer
 
 .faq-answer {
   margin-top: 40px;
-  color:black;
+  color: theme('colors.gray.900'); /* Use Tailwind color for better contrast */
+  background-color: theme('colors.gray.50'); /* Explicitly set background for contrast check */
 
   h1,
   h2,
@@ -368,20 +360,18 @@ footer
   .font-subtitle-3-bold,
   .font-subtitle-3-regular,
   .font-subtitle-4,
-  p,
-  li,
   code,
   .font-body-2-bold,
   .font-body-2-regular,
   .font-button,
   .font-button-bold,
   .font-button-regular {
-    color: black;
+    color: theme('colors.gray.900'); /* Use Tailwind color */
   }
 
   code {
     background-color: rgb(255 94 24 / 1);
-    color: white;
+    color: theme('colors.gray.50'); /* Use Tailwind color */
   }
 
   p {
@@ -399,7 +389,8 @@ footer
 }
 
 .dark .faq-answer {
-  color: white;
+  color: theme('colors.gray.50'); /* Use Tailwind color */
+  background-color: theme('colors.brand.black.DEFAULT'); /* Explicitly set background for contrast check */
 
   h1,
   h2,
@@ -412,15 +403,13 @@ footer
   .font-subtitle-3-bold,
   .font-subtitle-3-regular,
   .font-subtitle-4,
-  p,
-  li,
   code,
   .font-body-2-bold,
   .font-body-2-regular,
   .font-button,
   .font-button-bold,
   .font-button-regular {
-    color: white;
+    color: theme('colors.gray.50'); /* Use Tailwind color */
   }
 }
 
@@ -461,11 +450,6 @@ footer
     rgba(255, 255, 255, 0.8);
   border: 1px solid;
   border-color: #807e7e4b;  
-  // border-image-source: linear-gradient(
-  //   77.91deg,
-  //   #807e7e 11.28%,
-  //   rgba(255, 255, 255, 0) 97.02%
-  // );
 }
 
 .dark .blog-news {
@@ -483,6 +467,14 @@ footer
   );
 }
 
+.blog-post {
+  background-color: theme('colors.gray.50'); /* Use Tailwind color */
+}
+
+.dark .blog-post {
+  background-color: theme('colors.white');
+}
+
 .tag {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -494,7 +486,7 @@ footer
 }
 
 blockquote {
-  color: black;
+  color: theme('colors.gray.900'); /* Use Tailwind color */
   margin: 0;
   padding-left: 3em;
   border-left: 0.5em #eee solid;
@@ -502,5 +494,5 @@ blockquote {
 }
 
 code {
-  color: black;
+  color: theme('colors.gray.900'); /* Use Tailwind color */
 }

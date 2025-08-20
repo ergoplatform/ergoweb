@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@use "./_variables.scss" as *;
 
 // .home-blur-1 {
 //     position: absolute;
@@ -18,55 +18,51 @@
 // }
 
 .home-frame-1 {
-    position: absolute;
-    width: 167px;
-    height: 1099px;
-    right: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: none;
-}
-
-.dark .home-frame-1 {
-    position: absolute;
-    width: 171px;
-    height: 1107px;
-    right: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: none;
-    z-index: 1;
+    display: none !important;
 }
 
 .home-frame-2 {
-    position: absolute;
-    width: 167px;
-    height: 1265px;
-    right: 0px;
-    background: none;
-    z-index: 1;
-}
-
-.dark .home-frame-2 {
-    background: none;
+    display: none !important;
 }
 
 .home-frame-3 {
     position: absolute;
-    width: 304px;
-    height: 1114px;
-    top: 500px;
-    right: 0px;
-    background: none;
-    z-index: 1;
-}
-
-.dark .home-frame-3 {
-    position: absolute;
     width: 351px;
     height: 1240px;
     top: 500px;
-    right: 0px;
-    background: none;
+    right: 0;
+    background: no-repeat url("/assets/home/frame-3-light.png");
+    background-position: right center;
+    background-size: contain;
+    /* Serve next-gen formats where supported */
+    background-image: -webkit-image-set(
+        url("/assets/home/frame-3-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-3-light.webp") type("image/webp") 1x,
+        url("/assets/home/frame-3-light.png") type("image/png") 1x
+    );
+    background-image: image-set(
+        url("/assets/home/frame-3-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-3-light.webp") type("image/webp") 1x,
+        url("/assets/home/frame-3-light.png") type("image/png") 1x
+    );
     z-index: 1;
+    pointer-events: none; /* avoid interaction and layout shifts */
+}
+.dark .home-frame-3 {
+    background: no-repeat url("/assets/home/frame-3.png");
+    background-position: right center;
+    background-size: contain;
+    /* Serve next-gen formats where supported */
+    background-image: -webkit-image-set(
+        url("/assets/home/frame-3.avif") type("image/avif") 1x,
+        url("/assets/home/frame-3.webp") type("image/webp") 1x,
+        url("/assets/home/frame-3.png") type("image/png") 1x
+    );
+    background-image: image-set(
+        url("/assets/home/frame-3.avif") type("image/avif") 1x,
+        url("/assets/home/frame-3.webp") type("image/webp") 1x,
+        url("/assets/home/frame-3.png") type("image/png") 1x
+    );
 }
 
 .home-frame-4 {
@@ -75,10 +71,6 @@
     height: 1031px;
     top: 3500px;
     left: 0px;
-    background: none;
-}
-
-.dark .home-frame-4 {
     background: none;
 }
 
@@ -91,23 +83,49 @@
     background: none;
 }
 
-.dark .home-frame-5 {
-    background: none;
-}
-
 .home-blur-1 {
     position: absolute;
     width: 769px;
     height: 895px;
-    top: 0px;
+    top: 0px; /* Place at the very top */
     right: 0px;
     background: no-repeat url("/assets/home/blur-1-light.svg");
-    z-index: 1;
+    background-position: top right;
+    pointer-events: none;
+    z-index: 60; /* Place at the very top as requested */
 }
 
 .dark .home-blur-1 {
-    background: no-repeat url("/assets/home/blur-1-fixed.svg");
+    background: no-repeat url("/assets/home/blur-1.svg");
+    background-position: top right;
+}
+
+.dark .home-blur-2 {
+    position: absolute;
+    width: 606px;
+    height: 2402px;
+    top: 2400px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-2.svg");
     z-index: 1;
+}
+
+.dark .home-blur-3 {
+    position: absolute;
+    width: 524px;
+    height: 1419px;
+    top: 4000px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-3.svg");
+}
+
+.dark .home-blur-4 {
+    position: absolute;
+    width: 459px;
+    height: 1677px;
+    top: 4500px;
+    right: 0px;
+    background: no-repeat url("/assets/home/blur-4.svg");
 }
 
 .home-blur-2 {
@@ -118,12 +136,10 @@
     top: 2400px;
     left: 0px;
     background: no-repeat url("/assets/home/blur-2-light.svg");
+    background-size: contain;
+    background-position: left top;
+    pointer-events: none;
     z-index: 1;
-}
-.dark .home-blur-2 { 
-    background: no-repeat url("/assets/home/blur-2-fixed.svg");
-    z-index: 1;
-    width: 350px;
 }
 
 .home-blur-3 {
@@ -132,7 +148,19 @@
     height: 1419px;
     top: 4000px;
     left: 0px;
-    background: no-repeat url("/assets/home/blur-3-fixed.svg");
+    background: no-repeat url("/assets/home/blur-3.svg");
+    background-size: contain;
+    background-position: left top;
+    pointer-events: none;
+}
+
+.dark .home-blur-3 {
+    position: absolute;
+    width: 524px;
+    height: 1419px;
+    top: 4000px;
+    left: 0px;
+    background: no-repeat url("/assets/home/blur-3.svg");
 }
 
 .home-blur-4 {
@@ -142,14 +170,37 @@
     top: 4500px;
     right: 0px;
     background: no-repeat url("/assets/home/blur-4-light.svg");
-}
-.dark .home-blur-4 { 
-    background: no-repeat url("/assets/home/blur-4-fixed.svg");
+    background-size: contain;
+    background-position: right top;
+    pointer-events: none;
 }
 
 /* Ensure spotlight blog cards keep intended width on home route */
 .blog-post {
     max-width: 384px;
+}
+
+/* Fix desktop CLS: reserve stable height for Highlights swiper */
+.SwiperHighlights {
+    height: auto; /* desktop/tablet default */
+    /* Removed overflow: hidden to allow content to expand */
+}
+
+.SwiperNews {
+    /* Revert to simpler Swiper styles */
+    overflow: hidden; /* Keep hidden to clip overflow */
+
+    .swiper-wrapper {
+        /* Let Swiper manage width and display */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        /* Let Swiper manage width and display */
+        height: auto;
+        flex-shrink: 0; /* Swiper default */
+    }
 }
 
 
@@ -176,40 +227,17 @@
         background-position: bottom center;
     }
 
-    .home-frame-1 {
-        display: none;
-    }
-    .home-frame-2 {
-        display: none;
-    }
-    .home-frame-3 {
-        transform: scale(0.5);
-        transform-origin: center right;
-    }
-    .home-frame-4 {
-        transform: scale(0.5);
-        transform-origin: center left;
-        top: 3900px;
-    }
-    .home-frame-5 {
-        transform: scale(0.5);
-        transform-origin: center right;
+    .home-blur-1, .dark .home-blur-1 {
+        display: none !important;        
     }
 
-    .home-blur-1 {
-        display: none;        
-    }
-    .home-blur-2 {
-        transform: scale(0.5);
-        transform-origin: center left;        
-    }
-    .home-blur-3 {
-        transform: scale(0.5);
-        transform-origin: center left;        
-    }
-    .home-blur-4 {
-        transform: scale(0.5);
-        transform-origin: center right;        
+    .home-frame-3, .home-frame-4, .home-frame-5,
+    .home-blur-2, .home-blur-3, .home-blur-4 {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: none !important; /* hide decorative frames & blurs on small screens to avoid layout/overflow issues */
     }
 }
 
@@ -226,39 +254,29 @@
         background-position: bottom center;
     }
 
-    .home-frame-1 {
-        display: none;
-    }
-    .home-frame-2 {
-        display: none;
-    }
-    .home-frame-3 {
-        transform: scale(0.4);
-        transform-origin: center right;
-    }
-    .home-frame-4 {
-        transform: scale(0.5);
-        transform-origin: center left;
-    }
-    .home-frame-5 {
-        transform: scale(0.5);
-        transform-origin: center right;
-        top: 4800px;
+    .home-blur-1, .dark .home-blur-1 {
+        display: none !important;        
     }
 
-    .home-blur-1 {
-        display: none;        
+    .home-frame-3, .home-frame-4, .home-frame-5,
+    .home-blur-2, .home-blur-3, .home-blur-4 {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: none !important; /* hide decorative frames & blurs on very small screens */
     }
-    .home-blur-2 {
-        transform: scale(0.2);
-        transform-origin: center left;        
+
+    .hide-on-mobile {
+        display: none !important;
     }
-    .home-blur-3 {
-        transform: scale(0.2);
-        transform-origin: center left;        
+
+    .hide-video-on-mobile {
+        display: none !important;
     }
-    .home-blur-4 {
-        transform: scale(0.2);
-        transform-origin: center right;        
+
+    .SwiperHighlights {
+        height: auto !important; // Allow content to expand
+        overflow: visible !important; // Ensure content is not hidden
     }
 }
