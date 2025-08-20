@@ -2,23 +2,17 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
 import Button from '../Button';
-import Image from 'next/image';
 import LazyInView from '../../utils/LazyInView';
 
 export default function HomeHero() {
   const intl = useIntl();
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Gate video loading: start as soon as possible after mount (keeps poster as LCP, then swap)
+  // Ensure the poster image is the true LCP by rendering it on SSR.
+  // Video is mounted only after first paint to avoid being picked as LCP.
   const [enableVideo, setEnableVideo] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
 
-  // Theme handling that mirrors existing behavior
+  // Theme handling similar to previous behavior
   const [isDark, setIsDark] = useState<boolean>(() => {
     if (typeof document !== 'undefined') {
       return document.documentElement.classList.contains('dark');
@@ -39,25 +33,18 @@ export default function HomeHero() {
     }
   }, [resolvedTheme]);
 
-  // Viewport detection to ensure only the correct video is ever rendered/fetched
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  // Defer video mount until after first paint to keep poster as LCP
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mq = window.matchMedia('(max-width: 767px)');
-    const update = () => setIsMobile(mq.matches);
-    update();
-    if (typeof mq.addEventListener === 'function') {
-      mq.addEventListener('change', update);
-      return () => mq.removeEventListener('change', update);
-    } else {
-      // Safari < 14
-      mq.addListener(update);
-      return () => mq.removeListener(update);
+    if (typeof window !== 'undefined') {
+      // rAF ensures we mount video after first paint
+      requestAnimationFrame(() => setEnableVideo(true));
     }
   }, []);
 
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const videoRefMobile = useRef<HTMLVideoElement | null>(null);
+  const videoRefDesktop = useRef<HTMLVideoElement | null>(null);
 
+  // Ensure autoplay resumes (Safari/iOS quirks)
   useEffect(() => {
     const tryPlay = (el?: HTMLVideoElement | null) => {
       if (el && el.paused) {
@@ -68,36 +55,16 @@ export default function HomeHero() {
       }
     };
     if (enableVideo) {
-      tryPlay(videoRef.current);
+      tryPlay(videoRefMobile.current);
+      tryPlay(videoRefDesktop.current);
     }
-  }, [enableVideo, resolvedTheme, isMobile]);
-
-  // When theme or viewport toggles, force <video> to reload the new source and keep playing
-  useEffect(() => {
-    const el = videoRef.current;
-    if (!el) return;
-    try {
-      el.load(); // reload new <source> (via key below); defensively keep
-      if (enableVideo) {
-        const p = el.play();
-        if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
-      }
-    } catch {
-      // ignore
-    }
-  }, [isDark, isMobile, enableVideo]);
-
-  useEffect(() => {
-    setEnableVideo(true);
-  }, []);
+  }, [enableVideo, isDark]);
 
   const posterSrc = isDark
     ? '/assets/home/hero-poster-dark.webp'
     : '/assets/home/hero-poster-light.webp';
 
-  const videoSrc = isMobile
-    ? (isDark ? '/assets/ergo-dark-mobile.mp4' : '/assets/ergo-light-mobile.mp4')
-    : (isDark ? '/assets/ergo-dark.mp4' : '/assets/ergo-light.mp4');
+  const videoSrc = isDark ? '/assets/ergo-dark.mp4' : '/assets/ergo-light.mp4';
 
   const button = intl.formatMessage({
     id: 'components.homeHero.button',
@@ -111,130 +78,90 @@ export default function HomeHero() {
   return (
     <div id="HomeHero" className="mt-0 md:mt-24 max-w-[1300px] mx-auto p-4 relative z-1">
       {/* Set z-index to 1 */}
-      <div className="relative md:min-h-[560px] lg:min-h-[640px]">
-        {mounted ? (
-          <>
-            {/* Mobile media (render only on mobile) */}
-            <div className="relative block md:hidden -mx-4 -mt-6 h-[38vh] sm:h-[45vh] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
-              {isMobile && (
-                <LazyInView
-                  className="relative w-full h-full"
-                  placeholder={
-                    <Image
-                      src={posterSrc}
-                      alt=""
-                      priority
-                      fill
-                      sizes="100vw"
-                      className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
-                    />
-                  }
+      <div className="relative">
+        {/* Mobile media */}
+        <div className="relative block md:hidden -mx-4 -mt-[36px] h-[520px] sm:h-[600px] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0">
+          <LazyInView className="relative w-full h-full">
+            <div className="absolute inset-0 w-full h-full">
+              {/* Base poster image: true LCP (SSR-rendered, priority) */}
+              <img
+                src={posterSrc}
+                alt=""
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
+              />
+              {/* Deferred video: mounts after first paint, won't be considered LCP */}
+              {enableVideo && (
+                <video
+                  ref={videoRefMobile}
+                  key={`${isDark ? 'dark' : 'light'}-m`}
+                  className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
+                  width="1920"
+                  height="1080"
+                  autoPlay
+                  playsInline
+                  loop
+                  muted
+                  preload="none"
+                  poster={posterSrc}
+                  disablePictureInPicture
+                  controlsList="nodownload"
+                  onCanPlay={(e) => {
+                    const el = e.currentTarget as HTMLVideoElement;
+                    const p = el.play();
+                    if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
+                  }}
                 >
-                  {() => (
-                    <div className="absolute inset-0 w-full h-full">
-                      <Image
-                        src={posterSrc}
-                        alt=""
-                        priority
-                        fill
-                        sizes="100vw"
-                        className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
-                      />
-                      {enableVideo && (
-                        <video
-                          ref={videoRef}
-                          key={`${isDark ? 'dark' : 'light'}-m`}
-                          onCanPlay={(e) => {
-                            const el = e.currentTarget as HTMLVideoElement;
-                            const p = el.play();
-                            if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
-                            setVideoReady(true);
-                          }}
-                          className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
-                          width="1920"
-                          height="1080"
-                          autoPlay
-                          playsInline
-                          loop
-                          muted
-                          preload="metadata"
-                          poster={posterSrc}
-                          disablePictureInPicture
-                          controlsList="nodownload"
-                        >
-                          <source src={videoSrc} type="video/mp4" />
-                        </video>
-                      )}
-                    </div>
-                  )}
-                </LazyInView>
+                  <source src={videoSrc} type="video/mp4" />
+                </video>
               )}
             </div>
+          </LazyInView>
+        </div>
 
-            {/* Desktop media (render only on desktop) */}
-            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
-              {!isMobile && (
-                <LazyInView
-                  className="relative w-full h-full"
-                  placeholder={
-                    <Image
-                      src={posterSrc}
-                      alt=""
-                      priority
-                      fill
-                      sizes="100vw"
-                      className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                    />
-                  }
+        {/* Desktop media */}
+        <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
+          <LazyInView className="relative w-full h-full">
+            <div className="absolute inset-0 w-full h-full">
+              {/* Base poster image: true LCP (SSR-rendered, priority) */}
+              <img
+                src={posterSrc}
+                alt=""
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+                className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+              />
+              {/* Deferred video: mounts after first paint, won't be considered LCP */}
+              {enableVideo && (
+                <video
+                  ref={videoRefDesktop}
+                  key={`${isDark ? 'dark' : 'light'}-d`}
+                  className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+                  width="1920"
+                  height="1080"
+                  autoPlay
+                  playsInline
+                  loop
+                  muted
+                  preload="none"
+                  poster={posterSrc}
+                  disablePictureInPicture
+                  controlsList="nodownload"
+                  onCanPlay={(e) => {
+                    const el = e.currentTarget as HTMLVideoElement;
+                    const p = el.play();
+                    if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
+                  }}
                 >
-                  {() => (
-                    <div className="absolute inset-0 w-full h-full">
-                      <Image
-                        src={posterSrc}
-                        alt=""
-                        priority
-                        fill
-                        sizes="100vw"
-                        className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                      />
-                      {enableVideo && (
-                        <video
-                          ref={videoRef}
-                          key={`${isDark ? 'dark' : 'light'}-d`}
-                          onCanPlay={(e) => {
-                            const el = e.currentTarget as HTMLVideoElement;
-                            const p = el.play();
-                            if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
-                            setVideoReady(true);
-                          }}
-                          className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                          width="1920"
-                          height="1080"
-                          autoPlay
-                          playsInline
-                          loop
-                          muted
-                          preload="metadata"
-                          poster={posterSrc}
-                          disablePictureInPicture
-                          controlsList="nodownload"
-                        >
-                          <source src={videoSrc} type="video/mp4" />
-                        </video>
-                      )}
-                    </div>
-                  )}
-                </LazyInView>
+                  <source src={videoSrc} type="video/mp4" />
+                </video>
               )}
             </div>
-          </>
-        ) : (
-          // SSR fallback containers to preserve layout before hydration
-          <>
-            <div className="relative block md:hidden -mx-4 -mt-6 h-[38vh] sm:h-[45vh] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0" />
-            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden" />
-          </>
-        )}
+          </LazyInView>
+        </div>
 
         <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-10">
           <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight text-black dark:text-white">
@@ -246,7 +173,7 @@ export default function HomeHero() {
             </b>
           </h1>
         </div>
-        <div className="mt-2 md:mt-8 max-w-lg md:max-w-xl relative z-10">
+        <div className="mt-1 md:mt-8 max-w-lg md:max-w-xl relative z-10">
           <p className="font-subtitle-3-regular text-black dark:text-white">
             <FormattedMessage
               defaultMessage="Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
@@ -255,7 +182,7 @@ export default function HomeHero() {
             />
           </p>
         </div>
-        <div className="mt-4 md:mt-6 relative z-10 flex gap-4">
+        <div className="mt-1 md:mt-6 relative z-10 flex gap-4">
           <Button
             text={button}
             textColor="black"
