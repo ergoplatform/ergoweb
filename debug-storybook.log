@@ -1,26 +1,31 @@
-[21:33:17.023] [INFO] Checking the health of your Storybook..
-[21:33:17.023] [DEBUG] Getting Storybook info...
-[21:33:17.024] [DEBUG] Loading main config...
-[21:33:17.121] [DEBUG] Getting stories paths...
-[21:33:17.133] [DEBUG] Getting package manager...
-[21:33:17.480] [DEBUG] Getting Storybook version...
-[21:33:18.733] [WARN] .storybook: 1 issue found
-[21:33:18.733] [INFO] You are currently using Storybook 9.1.2 but you have packages which are incompatible with it:
+[17:20:01.694] [INFO] Checking the health of your Storybook..
+[17:20:01.694] [DEBUG] Getting Storybook info...
+[17:20:01.695] [DEBUG] Loading main config...
+[17:20:01.762] [DEBUG] Getting stories paths...
+[17:20:01.773] [DEBUG] Getting package manager...
+[17:20:02.161] [DEBUG] Getting Storybook version...
+[17:20:02.709] [WARN] .storybook: 1 issue found
+[17:20:02.709] [INFO] Attention: The following dependencies are duplicated which might cause unexpected behavior:
+@storybook/client-logger:
+7.6.17, 7.6.20
 
-- @storybook/addon-actions@6.5.16 which depends on 6.5.16
- Repo: https://github.com/storybookjs/storybook/tree/main/addons/actions
-- @storybook/addon-essentials@6.5.16 which depends on 6.5.16
- Repo: https://github.com/storybookjs/storybook/tree/main/addons/essentials
-- @storybook/addon-viewport@6.5.16 which depends on 6.5.16
- Repo: https://github.com/storybookjs/storybook/tree/main/addons/viewport
-- @storybook/manager-webpack5@6.5.16 which depends on 6.5.16
- Repo: https://github.com/storybookjs/storybook/tree/main/lib/core
-- storybook-addon-sass-postcss@0.1.4 which depends on ^6.5.16
+@storybook/types:
+7.6.17, 7.6.20
 
-Please consider updating your packages or contacting the maintainers for compatibility details.
+@storybook/core-events:
+7.6.17, 7.6.20
 
-For more on Storybook 9 compatibility, see the linked GitHub issue:
-https://github.com/storybookjs/storybook/issues/30944
-[21:33:18.737] [INFO] Storybook doctor is complete!
-[21:33:18.737] [INFO] You can always recheck the health of your project(s) by running:
+@storybook/channels:
+7.6.17, 7.6.20
+
+@storybook/react-dom-shim:
+7.6.20, 9.1.2
+
+
+Please try de-duplicating these dependencies by running npm dedupe
+
+
+You can find more information for a given dependency by running npm ls --depth=1 <package-name>
+[17:20:02.713] [INFO] Storybook doctor is complete!
+[17:20:02.713] [INFO] You can always recheck the health of your project(s) by running:
 npx storybook doctor

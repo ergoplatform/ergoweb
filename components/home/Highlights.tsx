@@ -1,7 +1,11 @@
 import { FormattedMessage } from 'react-intl';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import { getIconComponentByName } from '../../utils/icons-map';
+import { useEffect, useState } from 'react';
+import Highlights1 from '../icons/Highlights1';
+import Highlights1big from '../icons/Highlights1big';
+import Highlights2 from '../icons/Highlights2';
+import Highlights2big from '../icons/Highlights2big';
+import Highlights3 from '../icons/Highlights3';
+import Highlights3big from '../icons/Highlights3big';
 
 const slides = [
   {
@@ -37,7 +41,8 @@ const slides = [
         }}
       />
     ),
-    svg: 'Highlights1',
+    Icon: Highlights1,
+    IconBig: Highlights1big,
     viewBox: '0 0 562 562',
     height: 562 * 0.5,
     width: 562 * 0.5,
@@ -75,7 +80,8 @@ const slides = [
         }}
       />
     ),
-    svg: 'Highlights2',
+    Icon: Highlights2,
+    IconBig: Highlights2big,
     viewBox: '0 0 416 402',
     height: 416 * 0.5,
     width: 402 * 0.5,
@@ -113,7 +119,8 @@ const slides = [
         }}
       />
     ),
-    svg: 'Highlights3',
+    Icon: Highlights3,
+    IconBig: Highlights3big,
     viewBox: '0 0 528 257',
     height: 528 * 0.5,
     width: 257 * 0.5,
@@ -125,6 +132,19 @@ function FormattedMessageFixed(props: any) {
 }
 
 function Highlights() {
+  const [mods, setMods] = useState<{ Swiper: any; SwiperSlide: any; Navigation: any } | null>(null);
+  useEffect(() => {
+    let mounted = true;
+    Promise.all([
+      import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
+      import('swiper').then((m) => ({ Navigation: m.Navigation })),
+    ]).then(([a, b]) => {
+      if (mounted) setMods({ ...a, ...b });
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
   return (
     <div
       id="Highlights"
@@ -137,9 +157,10 @@ function Highlights() {
         </p>
       </div>
 
-      <Swiper navigation={true} modules={[Navigation]} className="SwiperHighlights">
+      {mods ? (
+        <mods.Swiper navigation={true} modules={[mods.Navigation]} className="SwiperHighlights">
         {slides.map((item, i) => (
-          <SwiperSlide key={i}>
+          <mods.SwiperSlide key={i}>
             <div className="min-h-[600px] flex flex-col justify-between">
               {/* Added min-h for mobile layout stability */}
               <div className="lg:hidden">
@@ -150,12 +171,12 @@ function Highlights() {
                   {' '}
                   {/* Changed max-h-96 to h-96 for fixed height */}
                   <div className="mx-auto w-full h-full flex justify-center items-center">
-                    {getIconComponentByName(item.svg, {
-                      viewBox: item.viewBox,
-                      className: 'highlightsShadow my-auto max-h-full w-full object-contain',
-                      width: '100%', // Ensure SVG scales to container
-                      height: '100%', // Ensure SVG scales to container
-                    })}
+                    <item.Icon
+                      viewBox={item.viewBox}
+                      className="highlightsShadow my-auto max-h-full w-full object-contain"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                 </div>
                 <div className="flex">
@@ -173,12 +194,12 @@ function Highlights() {
               <div className="hidden lg:block">
                 <div className="flex mx-20">
                   <div className="item w-1/3">
-                    {getIconComponentByName(item.svg + 'big', {
-                      viewBox: item.viewBox,
-                      className: 'highlightsShadow my-auto h-96',
-                      height: item.height,
-                      width: item.height,
-                    })}
+                    <item.IconBig
+                      viewBox={item.viewBox}
+                      className="highlightsShadow my-auto h-96"
+                      height={item.height}
+                      width={item.height}
+                    />
                   </div>
                   <div className="item w-2/3">
                     <h2 className="leading-tight text-[96px]">{item.titleMessage}</h2>
@@ -190,9 +211,12 @@ function Highlights() {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          </mods.SwiperSlide>
         ))}
-      </Swiper>
+        </mods.Swiper>
+      ) : (
+        <div className="SwiperHighlights" />
+      )}
     </div>
   );
 }

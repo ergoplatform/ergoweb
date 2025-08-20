@@ -4,7 +4,8 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "parserOptions": {
     "project": "./tsconfig.json",

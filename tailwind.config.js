@@ -7,7 +7,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './sections/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
     screens: {
@@ -84,5 +83,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tw-elements/dist/plugin')],
+  plugins: [],
 };

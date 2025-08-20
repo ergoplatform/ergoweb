@@ -1,8 +1,7 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import { getIconComponentByName } from '../../utils/icons-map';
 import { ErgoRaffle, Heart } from '../icons';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { useEffect, useState } from 'react';
 import Button from '../Button';
 import Image from 'next/image';
 
@@ -11,6 +10,19 @@ type Props = {
 };
 
 export default function Favorites(props: Props) {
+  const [mods, setMods] = useState<{ Swiper: any; SwiperSlide: any; Pagination: any } | null>(null);
+  useEffect(() => {
+    let mounted = true;
+    Promise.all([
+      import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
+      import('swiper').then((m) => ({ Pagination: m.Pagination })),
+    ]).then(([a, b]) => {
+      if (mounted) setMods({ ...a, ...b });
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
   const intl = useIntl();
   const button1Text = intl.formatMessage({
     id: 'components.favorites.button1',
@@ -49,13 +61,14 @@ export default function Favorites(props: Props) {
           </button>
         </div>
         <div className="lg:w-2/3">
-          <Swiper
+          {mods ? (
+          <mods.Swiper
             className="SwiperFavorites"
             pagination={{ dynamicBullets: true }}
-            modules={[Pagination]}
+            modules={[mods.Pagination]}
           >
             {props.favorites.map((post: any, i: number) => (
-              <SwiperSlide key={i} className="mb-20">
+              <mods.SwiperSlide key={i} className="mb-20">
                 <div className="favorite-card bg-white dark:bg-[#282828] rounded-2xl p-6 my-4 min-h-[335px] mx-1">
                   <div className="flex justify-center lg:justify-end mb-8">
                     {post.attributes.image.data != null ? (
@@ -94,9 +107,10 @@ export default function Favorites(props: Props) {
                     )}
                   </div>
                 </div>
-              </SwiperSlide>
+              </mods.SwiperSlide>
             ))}
-          </Swiper>
+          </mods.Swiper>
+          ) : null}
         </div>
       </div>
     </div>

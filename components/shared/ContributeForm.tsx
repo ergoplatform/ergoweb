@@ -1,7 +1,11 @@
 import { FormattedMessage, useIntl } from 'react-intl';
-import { getIconComponentByName } from '../../utils/icons-map';
 import Button from '../Button';
-import { ToastContainer, toast } from 'react-toastify';
+import dynamic from 'next/dynamic';
+import ArrowRightBlack from '../icons/ArrowRightBlack';
+
+const ToastContainer = dynamic(() => import('react-toastify').then((m) => m.ToastContainer), {
+  ssr: false,
+});
 
 export default function ContributeForm() {
   const intl = useIntl();
@@ -55,6 +59,7 @@ export default function ContributeForm() {
     });
     const result = await res.json();
     if (result != null) {
+      const { toast } = await import('react-toastify');
       toast.success('Message sent! Have a great day!', {
         position: 'top-right',
         autoClose: 3000,
@@ -85,13 +90,13 @@ export default function ContributeForm() {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col">
-          <h3 className="mb-4 lg:leading-none text-[70px]">
+          <h2 className="mb-4 lg:leading-none text-[70px]">
             <FormattedMessage
               defaultMessage="I am a <b>developer</b>"
               id="components.ContributeForm.developer.title"
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
-          </h3>
+          </h2>
           <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-8">
             <b>
               <FormattedMessage
@@ -152,13 +157,13 @@ export default function ContributeForm() {
           </div>
         </div>
         <div className="flex flex-col mt-16">
-          <h3 className="mb-4 lg:leading-none md:text-[80px]">
+          <h2 className="mb-4 lg:leading-none md:text-[80px]">
             <FormattedMessage
               defaultMessage="I am a <b>company</b>"
               id="components.ContributeForm.company.title"
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
-          </h3>
+          </h2>
           <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-10">
             <FormattedMessage
               defaultMessage="WANT TO BECOME A PARTNER?"
@@ -198,7 +203,7 @@ export default function ContributeForm() {
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
                 >
                   <span>{formButton}</span>
-                  <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightBlack')}</span>
+                  <span className="w-4 h-4 ml-2"><ArrowRightBlack /></span>
                 </button>
               </div>
             </div>

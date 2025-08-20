@@ -1,15 +1,26 @@
 import { FormattedDate, FormattedMessage } from 'react-intl';
-import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react'; // Alias Swiper component
-import { Pagination } from 'swiper';
 import Button from '../Button';
-import { useRef, useEffect } from 'react';
-import Swiper from 'swiper'; // Import Swiper as a value and type
+import { useRef, useEffect, useState } from 'react';
+import type Swiper from 'swiper'; // Import Swiper type only to avoid bundling at runtime
 
 type Props = {
   news: any;
 };
 
 export default function News({ news }: Props) {
+  const [mods, setMods] = useState<{ Swiper: any; SwiperSlide: any; Pagination: any } | null>(null);
+  useEffect(() => {
+    let mounted = true;
+    Promise.all([
+      import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
+      import('swiper').then((m) => ({ Pagination: m.Pagination })),
+    ]).then(([a, b]) => {
+      if (mounted) setMods({ ...a, ...b });
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
   const swiperRef = useRef<Swiper | null>(null); // Use Swiper as the type
 
   useEffect(() => {
@@ -41,21 +52,21 @@ export default function News({ news }: Props) {
             <FormattedMessage defaultMessage="latest news" id="components.news.latest" />
           </p>
           <div className="text-left mt-4 overflow-hidden w-full">
-            <SwiperComponent // Use the aliased component
-              className="SwiperNews"
-              pagination={{ dynamicBullets: true }}
-              modules={[Pagination]}
-              autoHeight={true}
-              slidesPerView={1}
-              spaceBetween={0}
-              onSwiper={(swiper: Swiper) => {
-                // Use Swiper as the type
-                swiperRef.current = swiper;
-              }}
-            >
+            {mods ? (
+              <mods.Swiper
+                className="SwiperNews"
+                pagination={{ dynamicBullets: true }}
+                modules={[mods.Pagination]}
+                autoHeight={true}
+                slidesPerView={1}
+                spaceBetween={0}
+                onSwiper={(swiper: Swiper) => {
+                  swiperRef.current = swiper;
+                }}
+              >
               {news
                 ? news.map((post: any, i: number) => (
-                    <SwiperSlide key={i} className="p-3">
+                    <mods.SwiperSlide key={i} className="p-3">
                       <p>
                         <b>
                           <FormattedDate
@@ -89,10 +100,11 @@ export default function News({ news }: Props) {
                           customClass="dark:text-brand-orange"
                         />
                       </div>
-                    </SwiperSlide>
+                    </mods.SwiperSlide>
                   ))
                 : null}
-            </SwiperComponent>
+              </mods.Swiper>
+            ) : null}
           </div>
         </div>
       </div>

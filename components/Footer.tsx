@@ -2,8 +2,17 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { getIconComponentByName } from '../utils/icons-map';
-import { LogoWithText } from './icons';
+import LogoWithText from './icons/LogoWithText';
+import Sigmaverse from './icons/Sigmaverse';
+import ErgoWiki from './icons/ErgoWiki';
+import Github from './icons/Github';
+import X from './icons/X';
+import Youtube from './icons/Youtube';
+import Telegram from './icons/Telegram';
+import Discord from './icons/Discord';
+import Reddit from './icons/Reddit';
+import Discourse from './icons/Discourse';
+import Coingecko from './icons/Coingecko';
 
 export default function Footer() {
   const [postsData, setPostsData] = useState([]);
@@ -64,12 +73,12 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Sigmaverse website"
               >
-                {getIconComponentByName('Sigmaverse')}
+                <Sigmaverse />
               </a>
             </div>
             <div className="box">
-              <Link href="/ecosystem/#Wiki" aria-label="Ergo Wiki">
-                {getIconComponentByName('ErgoWiki')}
+              <Link href="/ecosystem/#Wiki" aria-label="Ergo Wiki" prefetch={false}>
+                <ErgoWiki />
               </Link>
             </div>
             <div className="box">
@@ -79,7 +88,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform GitHub"
               >
-                {getIconComponentByName('Github')}
+                <Github />
               </a>
             </div>
             <div className="box">
@@ -89,7 +98,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform X (formerly Twitter)"
               >
-                {getIconComponentByName('X')}
+                <X />
               </a>
             </div>
             <div className="box">
@@ -99,7 +108,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform YouTube"
               >
-                {getIconComponentByName('Youtube')}
+                <Youtube />
               </a>
             </div>
             <div className="box">
@@ -109,7 +118,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform Telegram"
               >
-                {getIconComponentByName('Telegram')}
+                <Telegram />
               </a>
             </div>
             <div className="box">
@@ -119,7 +128,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform Discord"
               >
-                {getIconComponentByName('Discord')}
+                <Discord />
               </a>
             </div>
             <div className="box">
@@ -129,7 +138,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Platform Reddit"
               >
-                {getIconComponentByName('Reddit')}
+                <Reddit />
               </a>
             </div>
             <div className="box">
@@ -139,7 +148,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo Forum"
               >
-                {getIconComponentByName('Discourse')}
+                <Discourse />
               </a>
             </div>
             <div className="box">
@@ -149,7 +158,7 @@ export default function Footer() {
                 rel="noreferrer"
                 aria-label="Ergo on CoinGecko"
               >
-                {getIconComponentByName('Coingecko')}
+                <Coingecko />
               </a>
             </div>
           </div>
@@ -248,14 +257,14 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <Link href="/discover">
+            <Link href="/discover" prefetch={false}>
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
               </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
-                <Link href="/discover/#DiscoverERG">
+                <Link href="/discover/#DiscoverERG" prefetch={false}>
                   <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage
                       defaultMessage="Discover ERG"
@@ -265,28 +274,28 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/discover/#GrantsAndBounties">
+                <Link href="/discover/#GrantsAndBounties" prefetch={false}>
                   <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Grants & Bounties" id="footer.discover.2" />
                   </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/discover/#FAQ">
+                <Link href="/discover/#FAQ" prefetch={false}>
                   <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="FAQ" id="footer.discover.3" />
                   </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/discover/#Explore">
+                <Link href="/discover/#Explore" prefetch={false}>
                   <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Explore" id="footer.discover.4" />
                   </span>
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/discover/#Documents">
+                <Link href="/discover/#Documents" prefetch={false}>
                   <span className="text-black dark:text-gray-300 cursor-pointer">
                     <FormattedMessage defaultMessage="Documents" id="footer.discover.5" />
                   </span>
@@ -295,7 +304,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <Link href="/ecosystem">
+            <Link href="/ecosystem" prefetch={false}>
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
               </h3>
@@ -342,7 +351,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <Link href="/blog">
+            <Link href="/blog" prefetch={false}>
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
               </h3>
@@ -365,7 +374,7 @@ export default function Footer() {
             )}
           </div>
           <div>
-            <Link href="/news">
+            <Link href="/news" prefetch={false}>
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
               </h3>

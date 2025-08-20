@@ -1,26 +1,29 @@
-import { Popover, Transition } from '@headlessui/react';
+import { Popover, Transition, Portal } from '@headlessui/react';
 import SecondaryMenu from './SecondaryMenu';
-import {
-  LogoWithText,
-  ThemeLightBig,
-  ThemeDarkBig,
-  ThemeLightSmall,
-  ThemeDarkSmall,
-  LogoWithTextWhite,
-} from './icons';
+import LogoWithText from './icons/LogoWithText';
+import LogoWithTextWhite from './icons/LogoWithTextWhite';
+import MenuOpen from './icons/MenuOpen';
+import MenuClose from './icons/MenuClose';
+import Sigmaverse from './icons/Sigmaverse';
+import ErgoWiki from './icons/ErgoWiki';
+import Github from './icons/Github';
+import X from './icons/X';
+import Youtube from './icons/Youtube';
+import Telegram from './icons/Telegram';
+import Discord from './icons/Discord';
+import Reddit from './icons/Reddit';
+import Discourse from './icons/Discourse';
 import Button from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { getIconComponentByName } from '../utils/icons-map';
-import { useTheme } from 'next-themes';
 import { Fragment } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import DarkModeSwitch from './darkModeSwitcher/DarkModeSwitcher';
-import Search from './Search';
+const DarkModeSwitch = dynamic(() => import('./darkModeSwitcher/DarkModeSwitcher'), { ssr: false });
+const Search = dynamic(() => import('./Search'), { ssr: false });
 
 function Navigation({ enableLanguages = true }) {
-  const { theme, setTheme } = useTheme();
   const { pathname } = useRouter();
   const intl = useIntl();
   const ergoCommunity = intl.formatMessage({
@@ -104,22 +107,23 @@ function Navigation({ enableLanguages = true }) {
             </div>
             <div className="my-auto ml-5 lg:ml-10 z-40">
               <Popover.Button aria-label="Open menu">
-                {getIconComponentByName('MenuOpen')}
+                <MenuOpen />
               </Popover.Button>
             </div>
           </div>
         </div>
-        <Transition
-          as={Fragment}
-          enter="transition-opacity duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-300"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <Popover.Panel className="fixed overflow-auto inset-0 bg-brand-orange dark:bg-brand-black z-50">
-            <div className="max-w-[1300px] mx-auto p-4">
+        <Portal>
+          <Transition
+            as={Fragment}
+            enter="transition-opacity duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-300"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+          <Popover.Panel className="fixed inset-0 min-h-screen overflow-y-auto isolate bg-brand-orange dark:bg-brand-black z-[2147483647]">
+            <div className="max-w-[1300px] mx-auto p-4 relative z-[100000]">
               <div className="flex mx-0 mt-2 mb-10 lg:my-10 md:mx-5">
                 <div className="my-auto flex-grow">
                   <Link
@@ -139,7 +143,7 @@ function Navigation({ enableLanguages = true }) {
                   </div>
                   <div className="my-auto ml-5 lg:ml-10">
                     <Popover.Button aria-label="Close menu">
-                      {getIconComponentByName('MenuClose')}
+                      <MenuClose />
                     </Popover.Button>
                   </div>
                 </div>
@@ -148,7 +152,7 @@ function Navigation({ enableLanguages = true }) {
               <div className="mx-0 md:mx-4 mt-16 grid grid-cols-1 md:grid-cols-4 text-white">
                 <div>
                   <Link href="/community" aria-label={ergoCommunity}>
-                    <h3 className="font-button mt-4 mb-10">
+                    <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-10">
                       <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
                     </h3>
                   </Link>
@@ -223,7 +227,7 @@ function Navigation({ enableLanguages = true }) {
                 </div>
                 <div>
                   <Link href="/get-erg" aria-label={getErg}>
-                    <h3 className="font-button mt-4 mb-10">
+                    <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-10">
                       <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
                     </h3>
                   </Link>
@@ -279,7 +283,7 @@ function Navigation({ enableLanguages = true }) {
                 </div>
                 <div>
                   <Link href="/discover" aria-label={discover}>
-                    <h3 className="font-button mt-4 mb-10">
+                    <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-10">
                       <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
                     </h3>
                   </Link>
@@ -351,7 +355,7 @@ function Navigation({ enableLanguages = true }) {
                 </div>
                 <div>
                   <Link href="/ecosystem" aria-label={ecosystem}>
-                    <h3 className="font-button mt-4 mb-8 md:mb-10">
+                    <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-8 md:mb-10">
                       <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
                     </h3>
                   </Link>
@@ -434,7 +438,7 @@ function Navigation({ enableLanguages = true }) {
                           defaultMessage: 'BLOG',
                         })}
                       >
-                        <h3 className="font-button mt-4 mb-14 mr-20">
+                        <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-14 mr-20">
                           <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
                         </h3>
                       </Link>
@@ -447,7 +451,7 @@ function Navigation({ enableLanguages = true }) {
                           defaultMessage: 'NEWS',
                         })}
                       >
-                        <h3 className="font-button mt-4 mb-14 mr-20">
+                        <h3 className="font-button text-[18px] md:text-[20px] leading-tight mt-4 mb-14 mr-20">
                           <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
                         </h3>
                       </Link>
@@ -463,7 +467,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="Sigmaverse"
                       >
-                        {getIconComponentByName('Sigmaverse')}
+                        <Sigmaverse />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -474,7 +478,7 @@ function Navigation({ enableLanguages = true }) {
                           defaultMessage: 'Wiki',
                         })}
                       >
-                        {getIconComponentByName('ErgoWiki')}
+                        <ErgoWiki />
                       </Link>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -484,7 +488,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="GitHub"
                       >
-                        {getIconComponentByName('Github')}
+                        <Github />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -494,7 +498,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="X (formerly Twitter)"
                       >
-                        {getIconComponentByName('X')}
+                        <X />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -504,7 +508,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="YouTube"
                       >
-                        {getIconComponentByName('Youtube')}
+                        <Youtube />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -514,7 +518,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="Telegram"
                       >
-                        {getIconComponentByName('Telegram')}
+                        <Telegram />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -524,7 +528,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="Discord"
                       >
-                        {getIconComponentByName('Discord')}
+                        <Discord />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -534,7 +538,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="Reddit"
                       >
-                        {getIconComponentByName('Reddit')}
+                        <Reddit />
                       </a>
                     </div>
                     <div className="box mx-auto my-auto">
@@ -544,7 +548,7 @@ function Navigation({ enableLanguages = true }) {
                         rel="noreferrer"
                         aria-label="Ergo Forum"
                       >
-                        {getIconComponentByName('Discourse')}
+                        <Discourse />
                       </a>
                     </div>
                   </div>
@@ -552,7 +556,8 @@ function Navigation({ enableLanguages = true }) {
               </div>
             </div>
           </Popover.Panel>
-        </Transition>
+          </Transition>
+        </Portal>
       </Popover>
     </>
   );

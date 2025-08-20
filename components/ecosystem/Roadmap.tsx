@@ -1,4 +1,3 @@
-import * as _ from 'lodash';
 import { FormattedMessage } from 'react-intl';
 import { getIconComponentByName } from '../../utils/icons-map';
 import Button from '../Button';
@@ -8,10 +7,13 @@ type Props = {
 };
 
 function processRoadmap(roadmap: any, sectionName: string) {
-  let result: any;
-  result = _.sortBy(roadmap.data, ['attributes.order']);
-  result = _.filter(result, { attributes: { group: sectionName } });
-  return result;
+  const arr = Array.isArray(roadmap?.data) ? [...roadmap.data] : [];
+  arr.sort((a: any, b: any) => {
+    const ao = a?.attributes?.order ?? 0;
+    const bo = b?.attributes?.order ?? 0;
+    return ao - bo;
+  });
+  return arr.filter((item: any) => item?.attributes?.group === sectionName);
 }
 
 type RoadmapItemProps = {

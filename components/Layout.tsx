@@ -25,7 +25,7 @@ export default function Layout({ children, title, desc, footer = true }: Props) 
           }
         />
       </Head>
-      <header className="w-full fixed top-0 left-0 right-0 z-50 h-[6em] md:h-[9em] bg-white/80 dark:bg-brand-black/60 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/50">
+      <header className="w-full fixed top-0 left-0 right-0 z-[9999] h-[6em] md:h-[9em] bg-white/80 dark:bg-brand-black/60 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/50">
         <Navigation />
       </header>
       <div className="h-[6em] md:h-[9em]" aria-hidden="true" />

@@ -1,6 +1,5 @@
 import { getIconComponentByName } from '../../utils/icons-map';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 type Props = {
@@ -8,15 +7,29 @@ type Props = {
 };
 
 export default function Videocasts(props: Props) {
+  const [mods, setMods] = useState<{ Swiper: any; SwiperSlide: any; Pagination: any } | null>(null);
+  useEffect(() => {
+    let mounted = true;
+    Promise.all([
+      import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
+      import('swiper').then((m) => ({ Pagination: m.Pagination })),
+    ]).then(([a, b]) => {
+      if (mounted) setMods({ ...a, ...b });
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
   return (
     <div id="Videocasts" className="max-w-[1300px] mx-auto p-4 relative z-10">
-      <Swiper
+      {mods ? (
+      <mods.Swiper
         className="SwiperFavorites"
         pagination={{ dynamicBullets: true }}
-        modules={[Pagination]}
+        modules={[mods.Pagination]}
       >
         {props.chagingTheWorldProjects.map((post: any, i: number) => (
-          <SwiperSlide key={i} className="mb-20 lg:mt-20">
+          <mods.SwiperSlide key={i} className="mb-20 lg:mt-20">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-2/3">
                 {post.attributes.image.data != null ? (
@@ -67,9 +80,10 @@ export default function Videocasts(props: Props) {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          </mods.SwiperSlide>
         ))}
-      </Swiper>
+      </mods.Swiper>
+      ) : null}
     </div>
   );
 }

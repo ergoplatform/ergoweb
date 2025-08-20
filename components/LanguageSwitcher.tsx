@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
-import { getIconComponentByName } from '../utils/icons-map';
+import LanguageSelector from './icons/LanguageSelector';
+import LanguageSelectorWhite from './icons/LanguageSelectorWhite';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -17,9 +18,7 @@ export default function LanguageSwitcher({ color = 'default' }) {
         >
           <span className="block truncate font-button-bold underline uppercase">{locale}</span>
           <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
-            {color == 'default'
-              ? getIconComponentByName('LanguageSelector')
-              : getIconComponentByName('LanguageSelectorWhite')}
+            {color == 'default' ? <LanguageSelector /> : <LanguageSelectorWhite />}
           </span>
         </Listbox.Button>
         <Transition

@@ -1,17 +1,14 @@
 import { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Button from '../Button';
-import Link from 'next/link';
-import {
-  UniqueErgo1,
-  UniqueErgo1Light,
-  UniqueErgo2,
-  UniqueErgo2Light,
-  UniqueErgo3,
-  UniqueErgo3Light,
-  UniqueErgo4,
-  UniqueErgo4Light,
-} from '../icons';
+import UniqueErgo1 from '../icons/UniqueErgo1';
+import UniqueErgo1Light from '../icons/UniqueErgo1Light';
+import UniqueErgo2 from '../icons/UniqueErgo2';
+import UniqueErgo2Light from '../icons/UniqueErgo2Light';
+import UniqueErgo3 from '../icons/UniqueErgo3';
+import UniqueErgo3Light from '../icons/UniqueErgo3Light';
+import UniqueErgo4 from '../icons/UniqueErgo4';
+import UniqueErgo4Light from '../icons/UniqueErgo4Light';
 
 let cards = [
   {
@@ -121,8 +118,7 @@ export default function UniqueErgo() {
         <div className="antialiased flex items-center justify-center my-8 min-w-[1000px]">
           <div className="flex items-stretch min-w-md w-full">
             {cards.map((card, index) => (
-              <Link
-                href={card.url}
+              <div
                 key={index}
                 className={
                   'bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-[260px] sm:min-w-[300px] relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A] pb-24' +
@@ -160,7 +156,7 @@ export default function UniqueErgo() {
                     </div>
                   ) : null}
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

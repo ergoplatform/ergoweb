@@ -1,5 +1,4 @@
-import * as _ from 'lodash';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 type Props = {
@@ -7,34 +6,43 @@ type Props = {
 };
 
 function processDocs(documents: any) {
-  let result: any;
-  result = _.sortBy(documents.data, ['attributes.title']);
-  result = _.chain(result)
-    .groupBy('attributes.group')
-    .map(function (items, section) {
-      return {
-        name: section,
-        documents: _.map(items, function adjustDoc(doc) {
-          return {
-            title: doc.attributes.title,
-            download: doc.attributes.url == null ? true : false,
-            url:
-              doc.attributes.url == null
-                ? doc.attributes.file.data?.attributes.url
-                : doc.attributes.url,
-          };
-        }),
-      };
-    })
-    .value();
-  result = _.sortBy(result, ['section']);
-  return result;
+  const items = Array.isArray(documents?.data) ? [...documents.data] : [];
+
+  // Sort by title
+  items.sort((a: any, b: any) => {
+    const at = a?.attributes?.title ?? '';
+    const bt = b?.attributes?.title ?? '';
+    return String(at).localeCompare(String(bt));
+  });
+
+  // Group by attributes.group
+  const groupsMap: Record<string, any[]> = items.reduce((acc: Record<string, any[]>, doc: any) => {
+    const section = doc?.attributes?.group ?? 'Other';
+    if (!acc[section]) acc[section] = [];
+    acc[section].push(doc);
+    return acc;
+  }, {});
+
+  // Build sections and sort by section name
+  const sections = Object.entries(groupsMap)
+    .map(([section, docs]) => ({
+      name: section,
+      documents: docs.map((doc: any) => {
+        const a = doc?.attributes ?? {};
+        return {
+          title: a.title,
+          download: a.url == null,
+          url: a.url ?? a.file?.data?.attributes?.url,
+        };
+      }),
+    }))
+    .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+
+  return sections;
 }
 
 export default function Documents(props: Props) {
-  useEffect(() => {
-    require('tw-elements');
-  }, []);
+  const [open, setOpen] = useState<number | null>(0);
   const processedDocs = processDocs(props.documents);
   return (
     <div id="Documents" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
@@ -58,11 +66,11 @@ export default function Documents(props: Props) {
         {processedDocs.map((section: any, i: number) => (
           <div key={i} className="border-b-[1px]">
             <div
-              data-bs-toggle="collapse"
-              data-bs-target={'#docs-collapse' + i.toString()}
-              aria-expanded={i == 0 ? 'true' : 'false'}
+              onClick={() => setOpen(open === i ? null : i)}
+              role="button"
+              aria-expanded={open === i}
               aria-controls={'docs-collapse' + i.toString()}
-              className="w-full pt-8"
+              className="w-full pt-8 cursor-pointer"
             >
               <a
                 id={'docs-heading' + i.toString()}
@@ -73,11 +81,8 @@ export default function Documents(props: Props) {
             </div>
             <div
               id={'docs-collapse' + i.toString()}
-              className={
-                i == 0 ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'
-              }
+              className={open === i ? 'block' : 'hidden'}
               aria-labelledby={'docs-heading' + i.toString()}
-              data-bs-parent="#docs-accordion"
             >
               {section.documents.map((doc: any) => (
                 <div className="my-4" key={doc.title}>
@@ -92,13 +97,7 @@ export default function Documents(props: Props) {
                 </div>
               ))}
             </div>
-            <div
-              data-bs-toggle="collapse"
-              data-bs-target={'#docs-collapse' + i.toString()}
-              aria-expanded={i == 0 ? 'true' : 'false'}
-              aria-controls={'docs-collapse' + i.toString()}
-              className="w-full pb-8"
-            ></div>
+            <div className="w-full pb-8"></div>
           </div>
         ))}
       </div>

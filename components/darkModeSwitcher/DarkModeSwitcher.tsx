@@ -10,10 +10,12 @@ export default function DarkModeSwitch() {
   const loaded = useLoaded();
 
   useEffect(() => {
-    if (window.localStorage.getItem('theme') === 'light') {
-      return setTheme('light');
+    const stored = window.localStorage.getItem('theme');
+    if (stored === 'dark') {
+      setTheme('dark');
     } else {
-      return setTheme('dark');
+      // Default to light when no preference is stored or any other value
+      setTheme('light');
     }
   }, [setTheme]);
 

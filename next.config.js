@@ -189,6 +189,19 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  // Reduce bundle size by rewriting named imports to per-module paths
+  modularizeImports: {
+    lodash: {
+      transform: 'lodash/{{member}}',
+    },
+    'lodash-es': {
+      transform: 'lodash-es/{{member}}',
+    },
+    // Example: import { FaBeer } from 'react-icons/fa' -> 'react-icons/fa/FaBeer'
+    'react-icons/?(((\\w*)?/?)*)': {
+      transform: 'react-icons/{{ matches.[1] }}/{{ member }}',
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -218,4 +231,12 @@ const withMDX = require('@next/mdx')({
   },
 });
 
-module.exports = withMDX(nextConfig);
+let withBundleAnalyzer = (config) => config;
+try {
+  withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
+  });
+} catch (e) {
+  // Optional: bundle analyzer not installed; ignore unless ANALYZE is used
+}
+module.exports = withBundleAnalyzer(withMDX(nextConfig));

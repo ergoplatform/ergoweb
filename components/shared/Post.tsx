@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedDate } from 'react-intl';
-import { LogoBlack } from '../icons';
+import LogoBlack from '../icons/LogoBlack';
 const removeMd = require('remove-markdown');
 
 type Props = {

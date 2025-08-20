@@ -7,12 +7,12 @@ import LazyInView from '../utils/LazyInView';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const Highlights = dynamic(() => import('../components/home/Highlights'));
+const Highlights = dynamic(() => import('../components/home/Highlights'), { ssr: false });
 const HomeInfo = dynamic(() => import('../components/home/HomeInfo'));
 const UniqueErgo = dynamic(() => import('../components/home/UniqueErgo'));
 const UsingErg = dynamic(() => import('../components/home/UsingErg'));
 const Autolykos = dynamic(() => import('../components/home/Autolykos'));
-const News = dynamic(() => import('../components/home/News'));
+const News = dynamic(() => import('../components/home/News'), { ssr: false });
 const Feed = dynamic(() => import('../components/shared/Feed'));
 const Partners = dynamic(() => import('../components/home/Partners'));
 const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'));
@@ -63,43 +63,43 @@ export default function Home(props: Props) {
       <Layout title={title}>
         <HomeHero />
         <LazyInView rootMargin="200px 0px">
-          <Highlights />
+          {() => <Highlights />}
         </LazyInView>
         {props.blockReward && props.info ? (
           <LazyInView rootMargin="200px 0px" ssrReveal className="min-h-[120px] md:min-h-[120px]">
-            <HomeInfo
+            {() => (<HomeInfo
               circulatingSupply={props.info.supply}
               hashRate={props.info.hashRate}
               blockReward={props.blockReward}
               transactionPerDay={props.info.transactionAverage}
-            />
+            />)}
           </LazyInView>
         ) : null}
         <LazyInView rootMargin="200px 0px">
-          <UniqueErgo />
+          {() => <UniqueErgo />}
         </LazyInView>
         <LazyInView rootMargin="200px 0px">
-          <UsingErg />
+          {() => <UsingErg />}
         </LazyInView>
         <LazyInView rootMargin="200px 0px">
-          <Autolykos />
+          {() => <Autolykos />}
         </LazyInView>
         {props.news ? (
           <LazyInView rootMargin="200px 0px">
-            <News news={props.news} />
+            {() => <News news={props.news} />}
           </LazyInView>
         ) : null}
         {props.posts ? (
           <LazyInView rootMargin="200px 0px">
-            <Feed posts={props.posts} />
+            {() => <Feed posts={props.posts} />}
           </LazyInView>
         ) : null}
         <LazyInView rootMargin="200px 0px">
-          <Partners partners={props.partners || []} />
+          {() => <Partners partners={props.partners || []} />}
         </LazyInView>
         {/* Pass partners prop, default to empty array */}
         <LazyInView rootMargin="200px 0px">
-          <ContributeForm />
+          {() => <ContributeForm />}
         </LazyInView>
       </Layout>
     </div>

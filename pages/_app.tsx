@@ -2,17 +2,8 @@ import '../styles/globals.scss';
 import NextNProgress from 'nextjs-progressbar';
 import type { AppProps } from 'next/app';
 import English from '../content/compiled-locales/en.json';
-import Spanish from '../content/compiled-locales/es.json';
-import German from '../content/compiled-locales/de.json';
-import Italian from '../content/compiled-locales/it.json';
-import Turkish from '../content/compiled-locales/tr.json';
-import Portuguese from '../content/compiled-locales/pt.json';
-import Hungarian from '../content/compiled-locales/hu.json';
-import Chinese from '../content/compiled-locales/cn.json';
-import Russia from '../content/compiled-locales/ru.json';
-import Indonesian from '../content/compiled-locales/id.json';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import dynamic from 'next/dynamic';
 const ThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
@@ -122,31 +113,62 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [shortLocale] = router.locale ? router.locale.split('-') : ['en'];
 
-  const messages = useMemo(() => {
-    switch (shortLocale) {
-      case 'en':
-        return English;
-      case 'es':
-        return Spanish;
-      case 'de':
-        return German;
-      case 'it':
-        return Italian;
-      case 'tr':
-        return Turkish;
-      case 'pt':
-        return Portuguese;
-      case 'hu':
-        return Hungarian;
-      case 'cn':
-        return Chinese;
-      case 'ru':
-        return Russia;
-      case 'id':
-        return Indonesian;
-      default:
-        return English;
+  const [messages, setMessages] = useState<any>(English);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        switch (shortLocale) {
+          case 'default':
+          case 'en': {
+            if (!cancelled) setMessages(English);
+            return;
+          }
+          case 'de': {
+            const m = (await import('../content/compiled-locales/de.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'it': {
+            const m = (await import('../content/compiled-locales/it.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'hu': {
+            const m = (await import('../content/compiled-locales/hu.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'ru': {
+            const m = (await import('../content/compiled-locales/ru.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'cn': {
+            const m = (await import('../content/compiled-locales/cn.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'id': {
+            const m = (await import('../content/compiled-locales/id.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          // 'es' and 'pt' omitted because locales are disabled in next.config.js
+          default: {
+            if (!cancelled) setMessages(English);
+            return;
+          }
+        }
+      } catch {
+        if (!cancelled) setMessages(English);
+      }
     }
+    load();
+    return () => {
+      cancelled = true;
+    };
   }, [shortLocale]);
 
   return (

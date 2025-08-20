@@ -1,25 +1,26 @@
 import { Popover } from '@headlessui/react';
 import SecondaryMenu from './SecondaryMenu';
-import {
-  LogoWithText,
-  ThemeLightBig,
-  ThemeDarkBig,
-  ThemeLightSmall,
-  ThemeDarkSmall,
-  LogoWithTextWhite,
-} from './icons';
+import LogoWithTextWhite from './icons/LogoWithTextWhite';
+import MenuClose from './icons/MenuClose';
+import Sigmaverse from './icons/Sigmaverse';
+import ErgoWiki from './icons/ErgoWiki';
+import Github from './icons/Github';
+import X from './icons/X';
+import Youtube from './icons/Youtube';
+import Telegram from './icons/Telegram';
+import Discord from './icons/Discord';
+import Reddit from './icons/Reddit';
+import Discourse from './icons/Discourse';
 import Button from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { getIconComponentByName } from '../utils/icons-map';
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import DarkModeSwitch from './darkModeSwitcher/DarkModeSwitcher';
-import Search from './Search';
+import dynamic from 'next/dynamic';
+const DarkModeSwitch = dynamic(() => import('./darkModeSwitcher/DarkModeSwitcher'), { ssr: false });
+const Search = dynamic(() => import('./Search'), { ssr: false });
 
 export default function NavigationMobileMenu() {
-  const { theme, setTheme } = useTheme();
   const { pathname } = useRouter();
   const intl = useIntl();
 
@@ -45,7 +46,7 @@ export default function NavigationMobileMenu() {
             </div>
             <div className="my-auto ml-5 lg:ml-10">
               <Popover.Button aria-label="Close menu">
-                {getIconComponentByName('MenuClose')}
+                <MenuClose />
               </Popover.Button>
             </div>
           </div>
@@ -241,30 +242,30 @@ export default function NavigationMobileMenu() {
             <div className="grid overflow-hidden grid-cols-3 gap-6 text-red md:grid-cols-9">
               <div className="box mx-auto my-auto">
                 <a href="https://sigmaverse.io" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Sigmaverse')}
+                  <Sigmaverse />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
-                <Link href="/ecosystem/#Wiki">{getIconComponentByName('ErgoWiki')}</Link>
+                <Link href="/ecosystem/#Wiki"><ErgoWiki /></Link>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Github')}
+                  <Github />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://x.com/Ergo_Platform" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('X')}
+                  <X />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://www.youtube.com/c/ErgoPlatform" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Youtube')}
+                  <Youtube />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://t.me/Ergo_Chats" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Telegram')}
+                  <Telegram />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
@@ -273,17 +274,17 @@ export default function NavigationMobileMenu() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {getIconComponentByName('Discord')}
+                  <Discord />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://reddit.com/r/ergonauts" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Reddit')}
+                  <Reddit />
                 </a>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://www.ergoforum.org/" target="_blank" rel="noreferrer">
-                  {getIconComponentByName('Discourse')}
+                  <Discourse />
                 </a>
               </div>
             </div>

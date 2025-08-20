@@ -1,26 +1,53 @@
-import * as _ from 'lodash';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import remarkBreaks from 'remark-breaks';
-import rehypeRaw from 'rehype-raw';
 
 type Props = {
   faq?: any;
 };
 
 function processFaq(questions: any) {
-  let result: any;
-  result = _.sortBy(questions.data, ['attributes.order']);
-  return result;
+  const arr = Array.isArray(questions?.data) ? [...questions.data] : [];
+  arr.sort((a: any, b: any) => {
+    const ao = a?.attributes?.order ?? 0;
+    const bo = b?.attributes?.order ?? 0;
+    return ao - bo;
+  });
+  return arr;
 }
 
 export default function FAQ(props: Props) {
-  useEffect(() => {
-    require('tw-elements');
-  }, []);
+  const [open, setOpen] = useState<number | null>(0);
+  const [md, setMd] = useState<null | {
+    ReactMarkdown: any;
+    remarkGfm: any;
+    remarkBreaks: any;
+    rehypeRaw: any;
+  }>(null);
   const questions = processFaq(props.faq);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (open !== null && md === null) {
+      Promise.all([
+        import('react-markdown'),
+        import('remark-gfm'),
+        import('remark-breaks'),
+        import('rehype-raw'),
+      ]).then(([rm, gfm, brk, raw]) => {
+        if (!cancelled) {
+          setMd({
+            ReactMarkdown: (rm as any).default || rm,
+            remarkGfm: (gfm as any).default || gfm,
+            remarkBreaks: (brk as any).default || brk,
+            rehypeRaw: (raw as any).default || raw,
+          });
+        }
+      });
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, [open, md]);
   return (
     <div id="FAQ" className="max-w-[1300px] mx-auto p-4 mt-40 relative z-10">
       <div className="flex flex-col lg:flex-row">
@@ -60,11 +87,11 @@ export default function FAQ(props: Props) {
             {questions.map((question: any, i: number) => (
               <div key={i}>
                 <div
-                  data-bs-toggle="collapse"
-                  data-bs-target={'#faq-collapse' + i.toString()}
-                  aria-expanded={i == 0 ? 'true' : 'false'}
+                  onClick={() => setOpen(open === i ? null : i)}
+                  role="button"
+                  aria-expanded={open === i}
                   aria-controls={'faq-collapse' + i.toString()}
-                  className="w-full pt-4"
+                  className="w-full pt-4 cursor-pointer"
                 >
                   <a
                     id={'faq-heading' + i.toString()}
@@ -75,27 +102,24 @@ export default function FAQ(props: Props) {
                 </div>
                 <div
                   id={'faq-collapse' + i.toString()}
-                  className={
-                    i == 0 ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'
-                  }
+                  className={open === i ? 'faq-open block' : 'faq-closed hidden'}
                   aria-labelledby={'faq-heading' + i.toString()}
-                  data-bs-parent="#faq-accordion"
                 >
-                  <ReactMarkdown
-                    remarkPlugins={[remarkGfm, remarkBreaks]}
-                    rehypePlugins={[rehypeRaw]}
-                    className="faq-answer"
-                  >
-                    {question.attributes.answer}
-                  </ReactMarkdown>
+                  {open === i ? (
+                    md ? (
+                      <md.ReactMarkdown
+                        remarkPlugins={[md.remarkGfm, md.remarkBreaks]}
+                        rehypePlugins={[md.rehypeRaw]}
+                        className="faq-answer"
+                      >
+                        {question.attributes.answer}
+                      </md.ReactMarkdown>
+                    ) : (
+                      <div className="faq-answer">Loading...</div>
+                    )
+                  ) : null}
                 </div>
-                <div
-                  data-bs-toggle="collapse"
-                  data-bs-target={'#faq-collapse' + i.toString()}
-                  aria-expanded={i == 0 ? 'true' : 'false'}
-                  aria-controls={'faq-collapse' + i.toString()}
-                  className="w-full pb-4"
-                ></div>
+                <div className="w-full pb-4"></div>
               </div>
             ))}
           </div>

@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { getIconComponentByName } from '../utils/icons-map';
+import ArrowRightBlack from './icons/ArrowRightBlack';
+import ArrowRightWhite from './icons/ArrowRightWhite';
+import ArrowRightOrange from './icons/ArrowRightOrange';
 import React from 'react';
 import { useTheme } from 'next-themes';
 
@@ -15,6 +17,7 @@ type Props = {
   customClass?: string;
   animation?: boolean;
   ariaLabel?: string; // Add ariaLabel to Props
+  prefetch?: boolean; // control Next.js Link prefetch behavior
 };
 
 export default function Button({
@@ -29,6 +32,7 @@ export default function Button({
   customClass = '',
   animation,
   ariaLabel, // Destructure ariaLabel
+  prefetch = false,
 }: Props) {
   const { resolvedTheme } = useTheme();
   let textClasses = '';
@@ -76,7 +80,14 @@ export default function Button({
     effectiveIconColor = 'white';
   }
 
-  const iconName = 'ArrowRight' + effectiveIconColor.charAt(0).toUpperCase() + effectiveIconColor.slice(1);
+  let ArrowIcon: any = ArrowRightBlack;
+  if (effectiveIconColor.toLowerCase() === 'white') {
+    ArrowIcon = ArrowRightWhite;
+  } else if (effectiveIconColor.toLowerCase() === 'orange') {
+    ArrowIcon = ArrowRightOrange;
+  } else {
+    ArrowIcon = ArrowRightBlack;
+  }
 
   const content = (
     <>
@@ -84,7 +95,9 @@ export default function Button({
       {icon === 'none' ? (
         ``
       ) : (
-        <span className="w-4 h-4 ml-2">{getIconComponentByName(iconName)}</span>
+        <span className="w-4 h-4 ml-2">
+          <ArrowIcon />
+        </span>
       )}
     </>
   );
@@ -96,6 +109,7 @@ export default function Button({
         className={className}
         target={target}
         aria-label={ariaLabel || (typeof text === 'string' ? text : undefined)}
+        prefetch={prefetch}
       >
         {content}
       </Link>

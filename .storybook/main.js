@@ -1,21 +1,25 @@
 module.exports = {
   typescript: { reactDocgen: false },
-  "stories": [
+  stories: [
     "../stories/**/*.stories.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    '@storybook/addon-postcss',
-    '@storybook/addon-viewport',
-    'storybook-tailwind-dark-mode',
-    'storybook-react-intl',
-    'storybook-addon-sass-postcss',
-    'storybook-addon-next-router'
+    "@storybook/addon-docs",
+    "@storybook/addon-controls",
+    "@storybook/addon-actions",
+    "@storybook/addon-styling-webpack",
+    "@storybook/addon-themes",
+    "storybook-tailwind-dark-mode", // check compatibility
+    "storybook-react-intl",         // check compatibility
+    "storybook-addon-next-router"
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "webpack5"
+  framework: {
+    name: "@storybook/react",
+    options: {}
+  },
+  core: {
+    builder: "webpack5"
   }
-}
+};

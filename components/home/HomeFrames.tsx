@@ -5,7 +5,7 @@ export default function HomeFrames() {
   return (
     <>
       {/* Right side frames */}
-      <div className="home-frame-1 dark:hidden">
+      <div className="home-frame-1 hidden md:block dark:hidden">
         <Image
           src="/assets/home/frame-1-light.png"
           alt=""
@@ -17,7 +17,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-1 hidden dark:block">
+      <div className="home-frame-1 hidden dark:md:block">
         <Image
           src="/assets/home/frame-1.png"
           alt=""
@@ -30,7 +30,7 @@ export default function HomeFrames() {
         />
       </div>
 
-      <div className="home-frame-2 dark:hidden">
+      <div className="home-frame-2 hidden md:block dark:hidden">
         <Image
           src="/assets/home/frame-2-light.png"
           alt=""
@@ -42,7 +42,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-2 hidden dark:block">
+      <div className="home-frame-2 hidden dark:md:block">
         <Image
           src="/assets/home/frame-2.png"
           alt=""
@@ -55,34 +55,12 @@ export default function HomeFrames() {
         />
       </div>
 
-      {/* Larger frame near hero - mark as priority */}
-      <div className="home-frame-3 dark:hidden">
-        <Image
-          src="/assets/home/frame-3-light.png"
-          alt=""
-          width={304}
-          height={1114}
-          sizes="(max-width: 768px) 152px, 304px"
-          priority={true}
-          placeholder="blur"
-          blurDataURL={BLUR}
-        />
-      </div>
-      <div className="home-frame-3 hidden dark:block">
-        <Image
-          src="/assets/home/frame-3.png"
-          alt=""
-          width={351}
-          height={1240}
-          sizes="(max-width: 768px) 176px, 351px"
-          priority={true}
-          placeholder="blur"
-          blurDataURL={BLUR}
-        />
-      </div>
+      {/* Larger frame near hero - CSS background handles image to avoid layout gaps */}
+      <div className="home-frame-3 hidden md:block dark:hidden" />
+      <div className="home-frame-3 hidden dark:md:block" />
 
       {/* Left frames lower on page */}
-      <div className="home-frame-4 dark:hidden">
+      <div className="home-frame-4 hidden md:block dark:hidden">
         <Image
           src="/assets/home/frame-4-light.png"
           alt=""
@@ -94,7 +72,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-4 hidden dark:block">
+      <div className="home-frame-4 hidden dark:md:block">
         <Image
           src="/assets/home/frame-4.png"
           alt=""
@@ -107,7 +85,7 @@ export default function HomeFrames() {
         />
       </div>
 
-      <div className="home-frame-5 dark:hidden">
+      <div className="home-frame-5 hidden md:block dark:hidden">
         <Image
           src="/assets/home/frame-5-light.png"
           alt=""
@@ -119,7 +97,7 @@ export default function HomeFrames() {
           blurDataURL={BLUR}
         />
       </div>
-      <div className="home-frame-5 hidden dark:block">
+      <div className="home-frame-5 hidden dark:md:block">
         <Image
           src="/assets/home/frame-5.png"
           alt=""
@@ -133,13 +111,13 @@ export default function HomeFrames() {
       </div>
 
       {/* Blurs */}
-      <div className="home-blur-1"></div>
+      <div className="home-blur-1 hidden md:block"></div>
 
-      <div className="home-blur-2"></div>
+      <div className="home-blur-2 hidden md:block"></div>
 
-      <div className="home-blur-3"></div>
+      <div className="home-blur-3 hidden md:block"></div>
 
-      <div className="home-blur-4"></div>
+      <div className="home-blur-4 hidden md:block"></div>
     </>
   );
 }

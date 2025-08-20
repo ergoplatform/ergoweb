@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
-import { getIconComponentByName } from '../../utils/icons-map';
+import UsingErgMineIt from '../icons/UsingErgMineIt';
+import UsingErgMineItLight from '../icons/UsingErgMineItLight';
+import UsingErgBuyIt from '../icons/UsingErgBuyIt';
+import UsingErgBuyItLight from '../icons/UsingErgBuyItLight';
+import UsingErgStoreIt from '../icons/UsingErgStoreIt';
+import UsingErgStoreItLight from '../icons/UsingErgStoreItLight';
+import UsingErgUseIt from '../icons/UsingErgUseIt';
+import UsingErgUseItLight from '../icons/UsingErgUseItLight';
 
 const cards = [
   {
@@ -11,7 +18,8 @@ const cards = [
         id="components.usingErg.MineIt.text"
       />
     ),
-    icon: 'UsingErgMineIt',
+    Icon: UsingErgMineIt,
+    IconLight: UsingErgMineItLight,
     url: '/get-erg/#Mining',
   },
   {
@@ -24,7 +32,8 @@ const cards = [
         id="components.usingErg.BuyIt.text"
       />
     ),
-    icon: 'UsingErgBuyIt',
+    Icon: UsingErgBuyIt,
+    IconLight: UsingErgBuyItLight,
     url: '/get-erg/#Exchanges',
   },
   {
@@ -37,7 +46,8 @@ const cards = [
         id="components.usingErg.StoreIt.text"
       />
     ),
-    icon: 'UsingErgStoreIt',
+    Icon: UsingErgStoreIt,
+    IconLight: UsingErgStoreItLight,
     url: '/get-erg/#Wallets',
   },
   {
@@ -48,7 +58,8 @@ const cards = [
         id="components.getErg.UseIt.text"
       />
     ),
-    icon: 'UsingErgUseIt',
+    Icon: UsingErgUseIt,
+    IconLight: UsingErgUseItLight,
     url: '/ecosystem',
   },
 ];
@@ -97,10 +108,10 @@ export default function UsingErg() {
             >
               <div className="cursor-pointer z-20">
                 <div className="h-[350px] min-w-[238px] flex dark:hidden items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon + 'Light', { width: '100%', height: '100%' })}
+                  <card.IconLight width="100%" height="100%" />
                 </div>
                 <div className="hidden dark:flex h-[350px] min-w-[238px] items-end using-erg-card dark:using-erg-card p-4 mb-8">
-                  {getIconComponentByName(card.icon, { width: '100%', height: '100%' })}
+                  <card.Icon width="100%" height="100%" />
                 </div>
                 <p className="font-subtitle-3 mb-3">{card.title}</p>
                 <p>{card.text}</p>

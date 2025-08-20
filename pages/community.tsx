@@ -66,7 +66,7 @@ export default function Community(props: Props) {
           {() => <ContributeForm />}
         </LazyInView>
 
-        <LazyInView rootMargin="200px 0px" className="min-h-[900px]">
+        <LazyInView rootMargin="200px 0px" className="min-h-[440px]">
           {() =>
             props.posts?.data?.length !== 0 ? (
               <>
