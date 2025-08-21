@@ -50,7 +50,7 @@ export default function DiscoverERG() {
           </div>
         </div>
         <div className="discover-container box xl:order-1">
-          <h1 className="max-w-xs leading-tight">
+          <h1 className="max-w-xs leading-tight text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
             <FormattedMessage id="components.discoverHero.title" defaultMessage="Discover Ergo" />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
@@ -110,7 +110,7 @@ export default function DiscoverERG() {
           </div>
         </div>
         <div className="box xl:order-3">
-          <h1 className="max-w-xs leading-tight mt-36 xl:mt-0">
+          <h1 className="max-w-xs leading-tight mt-36 xl:mt-0 text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
             <FormattedMessage defaultMessage="Software" id="components.software.heading" />
           </h1>
           <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
@@ -134,7 +134,7 @@ export default function DiscoverERG() {
         </div>
         <div className="box xl:order-4">
           <div className="sm:ml-28 mt-16 xl:mt-0">
-            <h1 className="max-w-xs leading-tight">
+            <h1 className="max-w-xs leading-tight text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
               <FormattedMessage defaultMessage="Learn" id="components.learn.heading" />
             </h1>
             <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6">
