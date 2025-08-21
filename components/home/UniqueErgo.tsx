@@ -121,26 +121,30 @@ export default function UniqueErgo() {
               <div
                 key={index}
                 className={
-                  'bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-[260px] sm:min-w-[300px] relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A] pb-24' +
+                  'bg-center bg-cover bg-[#FCFCFC] dark:bg-brand-black card cursor-pointer flex-grow min-w-[260px] sm:min-w-[300px] relative transition-base border-[1px] border-[#625d5d] dark:border-[#2A2A2A] pb-24 overflow-hidden' +
                   (index === 0 ? ' active' : '')
                 }
               >
                 <div className="flex flex-col p-4 pt-16 lg:pt-8">
-                  <div className="flex label mb-3 ml-0 lg:ml-12 transition-base z-20 text-[clamp(12px,1.8vw,20px)] lg:text-[clamp(16px,1.5vw,24px)] leading-tight flex-col">
-                    <div className="hidden dark:block w-full h-auto object-contain">
-                      {card.icon}
+                  <div className="flex label mb-3 px-4 transition-base z-20 text-left text-[24px] sm:text-[28px] lg:text-[clamp(16px,1.5vw,24px)] leading-tight flex-col overflow-hidden">
+                    <div className="h-48 flex items-center justify-center overflow-hidden">
+                      <div className="hidden dark:block w-full h-auto max-w-full object-contain">
+                        {card.icon}
+                      </div>
+                      <div className="dark:hidden w-full h-auto max-w-full object-contain">
+                        {card.iconLight}
+                      </div>
                     </div>
-                    <div className="dark:hidden w-full h-auto object-contain">{card.iconLight}</div>
                     <div className="mt-8 max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] break-words">
                       {card.title}
                     </div>
                   </div>
-                  <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm ml-0 lg:ml-12">
+                  <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm px-4 text-left">
                     <div>{card.text}</div>
                   </div>
                   {card.url !== undefined ? (
-                    <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm ml-0 lg:ml-12">
-                      <div className="-ml-4 mt-12 sm:mt-10 lg:mt-16">
+                    <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm">
+                      <div className="mt-8 sm:mt-10 lg:mt-16 lg:-ml-2">
                         <Button
                           text={card.buttoText}
                           url={card.url}
