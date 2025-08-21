@@ -36,12 +36,12 @@ export default function News({ news }: Props) {
     <div id="News" className="max-w-7xl mx-auto px-2 md:px-4 relative" style={{ zIndex: 12 }}>
       <div className="mt-36 mb-14 max-w-7xl p-4 md:p-0 flex flex-col lg:flex-row">
         <div className="item lg:w-1/2 mb-8 text-right lg:order-last">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl leading-none">
+          <h1 className="text-[56px] md:text-6xl lg:text-7xl leading-none">
             <b>
               <FormattedMessage defaultMessage="News" id="components.news.title" />
             </b>
           </h1>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl leading-none">
+          <h1 className="text-[56px] md:text-6xl lg:text-7xl leading-none">
             <b>
               &<FormattedMessage defaultMessage="Blog" id="components.news.blog" />
             </b>

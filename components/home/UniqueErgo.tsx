@@ -126,7 +126,7 @@ export default function UniqueErgo() {
                 }
               >
                 <div className="flex flex-col p-4 pt-16 lg:pt-8">
-                  <div className="flex label mb-3 ml-0 lg:ml-12 transition-base z-20 text-[clamp(12px,1.8vw,20px)] lg:text-[clamp(16px,1.5vw,24px)] leading-tight flex-col overflow-hidden">
+                  <div className="flex label mb-3 px-4 transition-base z-20 text-left text-[24px] sm:text-[28px] lg:text-[clamp(16px,1.5vw,24px)] leading-tight flex-col overflow-hidden">
                     <div className="h-48 flex items-center justify-center overflow-hidden">
                       <div className="hidden dark:block w-full h-auto max-w-full object-contain">
                         {card.icon}
@@ -139,12 +139,12 @@ export default function UniqueErgo() {
                       {card.title}
                     </div>
                   </div>
-                  <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm ml-0 lg:ml-12">
+                  <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm px-4 text-left">
                     <div>{card.text}</div>
                   </div>
                   {card.url !== undefined ? (
-                    <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm ml-0 lg:ml-12">
-                      <div className="-ml-4 mt-12 sm:mt-10 lg:mt-16">
+                    <div className="mt-4 text-black dark:text-white max-w-xs lg:max-w-sm">
+                      <div className="mt-8 sm:mt-10 lg:mt-16 lg:-ml-2">
                         <Button
                           text={card.buttoText}
                           url={card.url}

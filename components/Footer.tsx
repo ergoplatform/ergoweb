@@ -170,7 +170,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-10 min-h-[560px]">
+        <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-10">
           <div>
             <Link href="/community">
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">

@@ -226,12 +226,12 @@ function Highlights() {
               </mods.SwiperSlide>
             ))}
           </mods.Swiper>
-          <div className="lg:hidden absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 z-30 pointer-events-none">
-            <button className="swiper-prev-mobile text-black dark:text-white text-xl font-bold pointer-events-auto">
+          <div className="lg:hidden absolute inset-0 pointer-events-none">
+            <button className="swiper-prev-mobile pointer-events-auto absolute top-1/2 -translate-y-1/2 left-4 w-10 h-10 flex items-center justify-center">
               <span className="sr-only">Previous</span>
               <ArrowRightOrange className="w-6 h-6 rotate-180" />
             </button>
-            <button className="swiper-next-mobile text-black dark:text-white text-xl font-bold pointer-events-auto">
+            <button className="swiper-next-mobile pointer-events-auto absolute top-1/2 -translate-y-1/2 right-4 w-10 h-10 flex items-center justify-center">
               <span className="sr-only">Next</span>
               <ArrowRightOrange className="w-6 h-6" />
             </button>

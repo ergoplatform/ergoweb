@@ -157,7 +157,7 @@ export default function ContributeForm() {
           </div>
         </div>
         <div className="flex flex-col mt-16">
-          <h2 className="mb-4 lg:leading-none md:text-[80px]">
+          <h2 className="mb-4 lg:leading-none text-[40px] md:text-[80px]">
             <FormattedMessage
               defaultMessage="I am a <b>company</b>"
               id="components.ContributeForm.company.title"
@@ -203,7 +203,9 @@ export default function ContributeForm() {
                   className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
                 >
                   <span>{formButton}</span>
-                  <span className="w-4 h-4 ml-2"><ArrowRightBlack /></span>
+                  <span className="w-4 h-4 ml-2">
+                    <ArrowRightBlack />
+                  </span>
                 </button>
               </div>
             </div>
