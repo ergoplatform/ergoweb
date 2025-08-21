@@ -14,7 +14,7 @@ export default function FeaturesAndProjects(props: Props) {
     >
       <h2
         id="features-projects-title"
-        className="text-[#585858] dark:text-[#585858] font-bold mb-4 md:mb-6 tracking-widest uppercase text-[32px]"
+        className="text-[#585858] dark:text-white font-bold mb-4 md:mb-6 tracking-widest uppercase text-[32px] pl-8"
       >
         NEW FEATURES AND PROJECTS YOU MIGHT LIKE
       </h2>

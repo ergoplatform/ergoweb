@@ -24,8 +24,7 @@ export default function HomeHero() {
   useEffect(() => {
     try {
       const domDark =
-        typeof document !== 'undefined' &&
-        document.documentElement.classList.contains('dark');
+        typeof document !== 'undefined' && document.documentElement.classList.contains('dark');
       if (resolvedTheme === 'dark') setIsDark(true);
       else if (resolvedTheme === 'light') setIsDark(false);
       else setIsDark(!!domDark);
@@ -112,7 +111,8 @@ export default function HomeHero() {
                   onCanPlay={(e) => {
                     const el = e.currentTarget as HTMLVideoElement;
                     const p = el.play();
-                    if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
+                    if (p && typeof (p as any).catch === 'function')
+                      (p as Promise<void>).catch(() => {});
                   }}
                 >
                   <source src={videoSrc} type="video/mp4" />
@@ -153,7 +153,8 @@ export default function HomeHero() {
                   onCanPlay={(e) => {
                     const el = e.currentTarget as HTMLVideoElement;
                     const p = el.play();
-                    if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
+                    if (p && typeof (p as any).catch === 'function')
+                      (p as Promise<void>).catch(() => {});
                   }}
                 >
                   <source src={videoSrc} type="video/mp4" />

@@ -50,7 +50,7 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
     <Link
       href={project.attributes.url}
       className={[
-        'group relative flex flex-col h-full rounded-3xl ring-1 ring-black/5',
+        'group relative flex flex-col h-full rounded-3xl ring-1 ring-black/5 dark:ring-white/10',
         'bg-white/60 dark:bg-zinc-900/40 shadow-sm p-5 md:p-6 pb-0 md:pb-0',
         'transition hover:shadow-lg hover:-translate-y-0.5 focus:outline-none',
         'focus-visible:ring-2 focus-visible:ring-brand-orange/50',
@@ -97,11 +97,11 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
         </p>
       </div>
       <div className="-mx-5 md:-mx-6 mt-auto pt-3">
-        <div className="bg-brand-orange hover:bg-[#ff6e32] transition-colors text-white rounded-b-3xl px-5 md:px-6 py-3 flex items-center justify-between">
+        <div className="bg-brand-orange hover:bg-[#ff6e32] transition-colors text-white rounded-b-3xl px-5 md:px-6 py-3 flex items-center justify-between border border-brand-orange-dark">
           <span className="font-vinila-extended text-[14px] md:text-[16px]">
             {project.attributes.button_text}
           </span>
-          <ArrowRightWhite className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+          <ArrowRightWhite className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ml-2" />
         </div>
       </div>
     </Link>

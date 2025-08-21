@@ -21,16 +21,17 @@ export default function DApps(props: Props) {
           </b>
         </h1>
 
-        <div className="-ml-4 mt-10 lg:my-auto lg:ml-8">
+        <div className="mt-2 lg:my-auto lg:ml-8 flex gap-4">
           <Button
-            text={button1Text}
+            text="VIEW ALL PROJECTS ON SIGMAVERSE.IO"
             url="https://sigmaverse.io/"
             newTab={true}
-            underline={true}
-            textColor="brand-orange"
-            background={false}
-            icon="ArrowRight"
-            iconColor="orange"
+            underline={false}
+            textColor="white"
+            background={true}
+            icon="ArrowRightWhite"
+            iconColor="white"
+            customClass="rounded-full"
           />
         </div>
       </div>

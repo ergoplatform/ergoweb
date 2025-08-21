@@ -246,7 +246,9 @@ export default function NavigationMobileMenu() {
                 </a>
               </div>
               <div className="box mx-auto my-auto">
-                <Link href="/ecosystem/#Wiki"><ErgoWiki /></Link>
+                <Link href="/ecosystem/#Wiki">
+                  <ErgoWiki />
+                </Link>
               </div>
               <div className="box mx-auto my-auto">
                 <a href="https://github.com/ergoplatform" target="_blank" rel="noreferrer">

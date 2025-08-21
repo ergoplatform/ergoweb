@@ -67,7 +67,7 @@ function Navigation({ enableLanguages = true }) {
               textColor="black"
               background={false}
               underline={pathname == '/community'}
-              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2 hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
               ariaLabel={ergoCommunity}
             />
             <Button
@@ -76,7 +76,7 @@ function Navigation({ enableLanguages = true }) {
               textColor="white"
               background={true}
               underline={pathname == '/get-erg'}
-              customClass=" decoration-white dark:decoration-white underline-offset-2"
+              customClass=" decoration-white dark:decoration-white underline-offset-2 hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
               ariaLabel={getErg}
             />
             <Button
@@ -85,7 +85,7 @@ function Navigation({ enableLanguages = true }) {
               textColor="black"
               background={false}
               underline={pathname == '/discover'}
-              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2 hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
               ariaLabel={discover}
             />
             <Button
@@ -94,7 +94,7 @@ function Navigation({ enableLanguages = true }) {
               textColor="black"
               background={false}
               underline={pathname == '/ecosystem'}
-              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2"
+              customClass=" decoration-brand-orange dark:decoration-brand-orange underline-offset-2 hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
               ariaLabel={ecosystem}
             />
           </div>

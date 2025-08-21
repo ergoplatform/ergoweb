@@ -15,7 +15,7 @@ function SecondaryMenu() {
         <div className="max-w-[700px] mx-auto flex justify-between w-full px-4 py-2">
           <Link
             href="/get-erg#Wallets"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             aria-label="Wallets"
           >
             WALLETS
@@ -23,7 +23,7 @@ function SecondaryMenu() {
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/get-erg#Exchanges"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             aria-label="Exchanges"
           >
             EXCHANGES
@@ -31,7 +31,7 @@ function SecondaryMenu() {
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/ecosystem#Roadmap"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             aria-label="Roadmap"
           >
             ROADMAP
@@ -39,7 +39,7 @@ function SecondaryMenu() {
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/blog"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             aria-label="Blog"
           >
             BLOG
@@ -48,7 +48,7 @@ function SecondaryMenu() {
           <a
             href="https://docs.ergoplatform.org/"
             target="_blank"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             rel="noreferrer"
             aria-label="Documentation"
           >
@@ -58,7 +58,7 @@ function SecondaryMenu() {
           <a
             href="https://sigmaverse.io/"
             target="_blank"
-            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             rel="noreferrer"
             aria-label="Sigmaverse"
           >

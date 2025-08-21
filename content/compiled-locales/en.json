@@ -170,7 +170,7 @@
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "MINE ERG"
+      "value": "START MINING ERG TODAY"
     }
   ],
   "components.autolykos.header": [
@@ -325,12 +325,6 @@
     {
       "type": 0,
       "value": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\"."
-    }
-  ],
-  "components.ergoRaffle.heading": [
-    {
-      "type": 0,
-      "value": "Ergo Raffle"
     }
   ],
   "components.ergofoundation.list1": [
@@ -497,12 +491,6 @@
       "value": "Exchanges"
     }
   ],
-  "components.explore.description": [
-    {
-      "type": 0,
-      "value": "The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
-    }
-  ],
   "components.explore.heading": [
     {
       "type": 0,
@@ -551,6 +539,18 @@
     {
       "type": 0,
       "value": "EXPLORE ERGO RAFFLE"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "TRY OUT MEWFUND"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "READ ABOUT RAFFLE V2"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -946,13 +946,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "SOON"
+      "value": "IN PROGRESS"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 & BEYOND"
+      "value": "SOON"
     }
   ],
   "components.roadmap.title": [
@@ -1131,14 +1131,34 @@
   ],
   "components.wiki.description": [
     {
+      "children": [
+        {
+          "type": 0,
+          "value": "ergonaut.space"
+        }
+      ],
+      "type": 8,
+      "value": "link"
+    },
+    {
       "type": 0,
-      "value": "ergonaut.space is our community-run wiki! Jam-packed with tons of great information on the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people. Theres also plenty of guides, tutorials, and user-submitted content. Create an account to start contributing!"
+      "value": " is our community-run wiki! Jam-packed with tons of great information on the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people. Theres also plenty of guides, tutorials, and user-submitted content. Create an account to start contributing!"
     }
   ],
   "components.wiki.description.short": [
     {
+      "children": [
+        {
+          "type": 0,
+          "value": "ergonaut.space"
+        }
+      ],
+      "type": 8,
+      "value": "link"
+    },
+    {
       "type": 0,
-      "value": "ergonaut.space is the community wiki of the Ergo blockchain, a guide translating how to use and the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people."
+      "value": " is the community wiki of the Ergo blockchain, a guide translating how to use and the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people."
     }
   ],
   "components.wiki.heading": [
