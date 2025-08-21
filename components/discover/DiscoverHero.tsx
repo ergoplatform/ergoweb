@@ -143,7 +143,7 @@ export default function DiscoverERG() {
                 id="components.learn.description"
               />
             </p>
-            <Link href="https://ergonaut.space" passHref>
+            <Link href="https://ergonaut.space" passHref legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
                 <button
                   type="submit"

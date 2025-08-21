@@ -21,7 +21,8 @@
 /* Default heading sizes when no explicit text-* utility is present */
 @layer utilities {
   h1:not([class*="text-"]) { @apply text-h1 font-bold; }
-  h2:not([class*="text-"]) { @apply text-h2 font-bold; }
+  #HomeHero h2:not([class*="text-"]),
+  #Highlights h2:not([class*="text-"]) { font-size: 96px; font-weight: 700; }
   h3:not([class*="text-"]) { @apply text-h3 font-semibold; }
   h4:not([class*="text-"]) { @apply text-h4 font-semibold; }
   h5:not([class*="text-"]) { @apply text-lg font-semibold; }
@@ -306,7 +307,6 @@
 
 
 .footer-image {
-  z-index: -1;
   background: no-repeat url("/assets/footer-light.png");
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -324,7 +324,6 @@
 }
 
 .dark .footer-image {
-  z-index: -1;
   background: no-repeat url("/assets/footer.png");
   background-position: bottom center;
   background-repeat: no-repeat;

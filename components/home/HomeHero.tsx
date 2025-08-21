@@ -163,7 +163,7 @@ export default function HomeHero() {
           </LazyInView>
         </div>
 
-        <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-10">
+        <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-3xl relative z-10">
           <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight text-black dark:text-white">
             <b>
               <FormattedMessage

@@ -6,6 +6,7 @@ import Highlights2 from '../icons/Highlights2';
 import Highlights2big from '../icons/Highlights2big';
 import Highlights3 from '../icons/Highlights3';
 import Highlights3big from '../icons/Highlights3big';
+import ArrowRightOrange from '../icons/ArrowRightOrange';
 
 const slides = [
   {
@@ -148,7 +149,7 @@ function Highlights() {
   return (
     <div
       id="Highlights"
-      className="mt-12 md:mt-40 max-w-[1300px] mx-auto p-4 relative min-h-[900px] lg:min-h-[900px]"
+      className="mt-8 md:mt-40 max-w-[1300px] mx-auto p-4 relative isolate min-h-0 lg:min-h-[300px]"
       style={{ zIndex: 12 }}
     >
       <div className="text-center">
@@ -158,65 +159,87 @@ function Highlights() {
       </div>
 
       {mods ? (
-        <mods.Swiper navigation={true} modules={[mods.Navigation]} className="SwiperHighlights">
-        {slides.map((item, i) => (
-          <mods.SwiperSlide key={i}>
-            <div className="min-h-[1100px] lg:min-h-[900px] flex flex-col justify-between">
-              {/* Added min-h for mobile layout stability */}
-              <div className="lg:hidden">
-                <div className="text-center">
-                  <p className="font-vinila-extended-light text-[40px]">{item.titleMessage}</p>
-                </div>
-                <div className="flex justify-center items-center w-full h-96">
-                  {' '}
-                  {/* Changed max-h-96 to h-96 for fixed height */}
-                  <div className="mx-auto w-full h-full flex justify-center items-center">
-                    <item.Icon
-                      viewBox={item.viewBox}
-                      className="highlightsShadow my-auto max-h-full w-full object-contain"
-                      width="100%"
-                      height="100%"
-                    />
+        <>
+          <mods.Swiper
+            navigation={{
+              prevEl: '.swiper-prev-mobile',
+              nextEl: '.swiper-next-mobile',
+            }}
+            modules={[mods.Navigation]}
+            className="SwiperHighlights overflow-hidden"
+            slidesPerView={1}
+            spaceBetween={0}
+            centeredSlides={false}
+          >
+            {slides.map((item, i) => (
+              <mods.SwiperSlide key={i}>
+                <div className="min-h-[300px] lg:min-h-[300px] flex flex-col justify-between overflow-hidden">
+                  {/* Added min-h for mobile layout stability */}
+                  <div className="lg:hidden">
+                    <div className="text-center">
+                      <p className="font-vinila-extended-light text-[40px]">{item.titleMessage}</p>
+                    </div>
+                    <div className="flex justify-center items-center w-full h-72">
+                      {' '}
+                      {/* Changed max-h-96 to h-72 for fixed height */}
+                      <div className="mx-auto w-full h-full flex justify-center items-center">
+                        <item.Icon
+                          viewBox={item.viewBox}
+                          className="highlightsShadow my-auto max-h-full w-full object-contain"
+                          width="100%"
+                          height="100%"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="mx-16 flex-grow" style={{ minHeight: '120px' }}>
+                        {/* Added minHeight for mobile layout stability */}
+                        <p className="font-vinila-extended leading-none text-[28px]">
+                          {item.quoteMessage}
+                        </p>
+                        <p className="font-body-2-regular text-black dark:text-white mt-3 text-[16px]">
+                          {item.textMessage}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block">
+                    <div className="flex mx-20">
+                      <div className="item w-1/3">
+                        <item.IconBig
+                          viewBox={item.viewBox}
+                          className="highlightsShadow my-auto h-96"
+                          height={item.height}
+                          width={item.height}
+                        />
+                      </div>
+                      <div className="item w-2/3">
+                        <h2 className="leading-tight text-[96px]">{item.titleMessage}</h2>
+                        <p className="max-w-lg text-black dark:text-white mt-6">{item.textMessage}</p>
+                        <p className="font-vinila-extended leading-none text-[56px] mt-12">
+                          {item.quoteMessage}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex">
-                  <div className="mx-16 flex-grow" style={{ minHeight: '180px' }}>
-                    {/* Added minHeight for mobile layout stability */}
-                    <p className="font-vinila-extended leading-none text-[24px]">
-                      {item.quoteMessage}
-                    </p>
-                    <p className="font-body-2-regular text-black dark:text-white mt-4">
-                      {item.textMessage}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="hidden lg:block">
-                <div className="flex mx-20">
-                  <div className="item w-1/3">
-                    <item.IconBig
-                      viewBox={item.viewBox}
-                      className="highlightsShadow my-auto h-96"
-                      height={item.height}
-                      width={item.height}
-                    />
-                  </div>
-                  <div className="item w-2/3">
-                    <h2 className="leading-tight text-[96px]">{item.titleMessage}</h2>
-                    <p className="max-w-lg text-black dark:text-white mt-6">{item.textMessage}</p>
-                    <p className="font-vinila-extended leading-none text-[56px] mt-12">
-                      {item.quoteMessage}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </mods.SwiperSlide>
-        ))}
-        </mods.Swiper>
+              </mods.SwiperSlide>
+            ))}
+          </mods.Swiper>
+          <div className="lg:hidden absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 z-30 pointer-events-none">
+            <button className="swiper-prev-mobile text-black dark:text-white text-xl font-bold pointer-events-auto">
+              <span className="sr-only">Previous</span>
+              <ArrowRightOrange className="w-6 h-6 rotate-180" />
+            </button>
+            <button className="swiper-next-mobile text-black dark:text-white text-xl font-bold pointer-events-auto">
+              <span className="sr-only">Next</span>
+              <ArrowRightOrange className="w-6 h-6" />
+            </button>
+          </div>
+        </>
       ) : (
         <div className="SwiperHighlights">
-          <div className="min-h-[1100px] lg:min-h-[900px]" />
+          <div className="min-h-[300px] lg:min-h-[300px]" />
         </div>
       )}
     </div>
