@@ -17,10 +17,10 @@ export default function Sigmanauts() {
         {getIconComponentByName('Sigmanauts')}
       </div>
       <div className="md:ml-20 md:w-2/3">
-        <h1 className="mb-6 md:hidden">
+        <h1 className="mb-6 md:hidden text-[clamp(48px,12vw,100px)] heading-balance">
           <FormattedMessage defaultMessage="Sigmanauts" id="components.Sigmanauts.title" />
         </h1>
-        <h2 className="mb-6 hidden md:block">
+        <h2 className="mb-6 hidden md:block text-[clamp(48px,12vw,100px)] heading-balance">
           <b>
             <FormattedMessage defaultMessage="Sigmanauts" id="components.Sigmanauts.title" />
           </b>
