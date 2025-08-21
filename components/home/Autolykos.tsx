@@ -16,12 +16,12 @@ export default function Autolykos() {
             <FormattedMessage defaultMessage="AUTOLYKOS" id="components.autolykos.header" />
           </b>
         </p>
-        <p className="font-vinila-extended-bold text-[32px] leading-none mt-4">
+        <h2 className="font-vinila-extended-bold text-[clamp(48px,12vw,100px)] leading-none mt-4 heading-balance">
           <FormattedMessage
             defaultMessage="The Future of Proof of Work"
             id="components.autolykos.title"
           />
-        </p>
+        </h2>
         <p className="mt-8">
           <FormattedMessage
             defaultMessage="<b>Autolykos</b> is the underlying memory-hard ASIC-resistant Proof of Work algorithm oriented towards GPUs."

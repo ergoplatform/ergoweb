@@ -64,45 +64,45 @@ export default function News({ news }: Props) {
                   swiperRef.current = swiper;
                 }}
               >
-              {news
-                ? news.map((post: any, i: number) => (
-                    <mods.SwiperSlide key={i} className="p-3">
-                      <p>
-                        <b>
-                          <FormattedDate
-                            value={post.attributes.date}
-                            day="numeric"
-                            month="long"
-                            year="numeric"
+                {news
+                  ? news.map((post: any, i: number) => (
+                      <mods.SwiperSlide key={i} className="p-3">
+                        <p>
+                          <b>
+                            <FormattedDate
+                              value={post.attributes.date}
+                              day="numeric"
+                              month="long"
+                              year="numeric"
+                            />
+                          </b>
+                        </p>
+                        <p
+                          className="font-subtitle-3-bold text-black dark:text-white my-2 w-full"
+                          style={{ whiteSpace: 'normal' }}
+                        >
+                          {post.attributes.title}
+                        </p>
+                        <p
+                          className="text-black dark:text-white mb-2 w-full"
+                          style={{ whiteSpace: 'normal' }}
+                        >
+                          {post.attributes.subtitle}
+                        </p>
+                        <div style={{ marginLeft: '-1rem' }} className="mb-6">
+                          <Button
+                            text="READ"
+                            url={post.attributes.url}
+                            newTab={true}
+                            underline={true}
+                            textColor="black"
+                            background={false}
+                            customClass="dark:text-brand-orange"
                           />
-                        </b>
-                      </p>
-                      <p
-                        className="font-subtitle-3-bold text-black dark:text-white my-2 w-full"
-                        style={{ whiteSpace: 'normal' }}
-                      >
-                        {post.attributes.title}
-                      </p>
-                      <p
-                        className="text-black dark:text-white mb-2 w-full"
-                        style={{ whiteSpace: 'normal' }}
-                      >
-                        {post.attributes.subtitle}
-                      </p>
-                      <div style={{ marginLeft: '-1rem' }} className="mb-6">
-                        <Button
-                          text="READ"
-                          url={post.attributes.url}
-                          newTab={true}
-                          underline={true}
-                          textColor="black"
-                          background={false}
-                          customClass="dark:text-brand-orange"
-                        />
-                      </div>
-                    </mods.SwiperSlide>
-                  ))
-                : null}
+                        </div>
+                      </mods.SwiperSlide>
+                    ))
+                  : null}
               </mods.Swiper>
             ) : null}
           </div>

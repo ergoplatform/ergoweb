@@ -26,7 +26,7 @@ export default function Partners({ partners }: Props) {
   return (
     <div id="Partners" className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10">
       <div className="text-center">
-        <h2 className="text-[40px] md:text-[56px] lg:text-[64px] leading-tight">
+        <h2 className="text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] leading-tight heading-balance">
           <FormattedMessage id="components.partners.title" defaultMessage="Partners" />
         </h2>
       </div>
