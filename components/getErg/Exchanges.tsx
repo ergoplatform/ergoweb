@@ -46,7 +46,7 @@ export default function Exchanges({ exchanges }: Props) {
               id="components.exchanges.heading"
             />
           </p>
-          <h2>
+          <h2 className="text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
             <FormattedMessage defaultMessage="Exchanges" id="components.exchanges.subheading" />
           </h2>
         </div>

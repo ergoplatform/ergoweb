@@ -28,7 +28,7 @@ export default function Blog(props: Props) {
       <div className="blog-blur-2"></div>
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          <div className="flex flex-row justify-between my-10 mx-4">
+          <div className="flex flex-row justify-between mb-10 mx-4">
             <div className="flex flex-row flex-wrap">
               {props.categories
                 ? props.categories.map((category: any) => (
@@ -47,8 +47,8 @@ export default function Blog(props: Props) {
                   ))
                 : null}
             </div>
-            <div>
-              <h1>Blog</h1>
+            <div className="self-end">
+              <h1 className="heading-balance">Blog</h1>
             </div>
           </div>
           <BlogPosts data={props.posts} locale={locale} />

@@ -13,21 +13,30 @@
 @use "swiper/scss/navigation";
 @use "swiper/scss/pagination";
 @use "react-toastify/scss/main.scss";
-@tailwind base;
+@import "tailwindcss/base";
 /* Override Tailwind Preflight so headings don't inherit smaller font sizes */
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-/* Default heading sizes when no explicit text-* utility is present */
-@layer utilities {
-  h1:not([class*="text-"]) { @apply text-h1 font-bold; }
-  #HomeHero h2:not([class*="text-"]),
-  #Highlights h2:not([class*="text-"]) { font-size: 96px; font-weight: 700; }
-  h3:not([class*="text-"]) { @apply text-h3 font-semibold; }
-  h4:not([class*="text-"]) { @apply text-h4 font-semibold; }
-  h5:not([class*="text-"]) { @apply text-lg font-semibold; }
-  h6:not([class*="text-"]) { @apply text-base font-semibold; }
+@layer base {
+  :root {
+    --fluid-h1: clamp(64px, 16vw, 140px); /* Max size increased again for larger impact */
+    --fluid-h2: clamp(56px, 14vw, 120px); /* Max size increased again for larger impact */
+    --fluid-h3: clamp(40px, 10vw, 80px);
+    --fluid-h4: clamp(34px, 9vw, 56px);
+  }
+  h1:not([class*="text-"]) { font-size: var(--fluid-h1); line-height: 1.1; font-weight: 700; }
+  h2:not([class*="text-"]) { font-size: var(--fluid-h2); line-height: 1.15; font-weight: 700; }
+  h3:not([class*="text-"]) { font-size: var(--fluid-h3); line-height: 1.2; font-weight: 600; }
+  h4:not([class*="text-"]) { font-size: var(--fluid-h4); line-height: 1.25; font-weight: 600; }
+  h5:not([class*="text-"]) { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
+  h6:not([class*="text-"]) { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
 }
+
+@layer utilities {
+  .heading-balance { text-wrap: balance; }
+}
+
 
 .themeShadow {
   -webkit-filter: drop-shadow(0px 4px 15px rgba(175, 175, 175, 0.15));
@@ -443,6 +452,7 @@
     margin: 0;
   }
 }
+
 
 .ergonaut-card {
   background: linear-gradient(

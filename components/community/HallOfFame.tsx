@@ -103,7 +103,7 @@ export default function HallOfFame(props: Props) {
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative z-10"
     >
       <div className="text-center">
-        <h2>
+        <h2 className="text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
           <b>
             <FormattedMessage defaultMessage="Hall of Fame" id="hallOfFame.title" />
           </b>
