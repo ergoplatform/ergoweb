@@ -55,7 +55,7 @@ export default function Footer() {
   return (
     <footer
       id="Footer"
-      className="relative z-10 overflow-hidden lg:min-h-[700px] md:min-h-[700px] bg-bottom bg-cover bg-no-repeat bg-[url('/assets/footer-light.png')] dark:bg-[url('/assets/footer.png')]"
+      className="relative z-10 overflow-hidden lg:min-h-[700px] md:min-h-[700px] footer-image bg-bottom bg-cover bg-no-repeat"
     >
       <div className="max-w-[1300px] mx-auto py-12 px-4 relative z-20">
         <div className="md:flex justify-between md:min-h-[120px] items-center">

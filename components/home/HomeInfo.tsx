@@ -1,4 +1,6 @@
 import { FormattedMessage } from 'react-intl';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 type Props = {
   blockReward: number;
@@ -13,26 +15,56 @@ export default function HomeInfo({
   transactionPerDay = 6266,
   hashRate = 20.19,
 }: Props) {
+  // Trigger animation only when the block comes into view (once)
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   // Normalize values for display
   const hr = hashRate / 1000000000000;
   const cs = circulatingSupply / 1000000000;
 
-  // Pre-format strings (static rendering to avoid any animation-induced reflow)
+  // Pre-format strings for placeholder width (prevents CLS)
   const nf0 = new Intl.NumberFormat('en-US');
-  const nf2 = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const nf2 = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
   const brStr = nf0.format(blockReward);
   const csStr = nf0.format(cs);
   const tpdStr = nf0.format(transactionPerDay);
   const hrStr = `${nf2.format(hr)} TH/s`;
 
-  const metricClass =
+  // Shared styles for numbers
+  const metricText =
     'font-roboto tabular-nums text-[20px] text-black dark:text-black whitespace-nowrap min-h-[28px] md:min-h-[32px]';
+
+  // Renders a metric with a placeholder that reserves final width,
+  // and an overlaid animated value that does not affect layout.
+  const Metric = ({
+    finalStr,
+    children,
+  }: {
+    finalStr: string;
+    children: React.ReactNode;
+  }) => (
+    <span className="inline-grid relative align-bottom">
+      {/* Placeholder reserves exact final width and line-height */}
+      <span aria-hidden className={`${metricText} invisible col-start-1 row-start-1`}>
+        {finalStr}
+      </span>
+      {/* Visible animated value overlays in same grid cell (no layout change) */}
+      <span className={`${metricText} col-start-1 row-start-1`}>{children}</span>
+    </span>
+  );
 
   return (
     <div
       id="HomeInfo"
-      className="relative z-10 h-[220px] md:h-[200px] overflow-hidden"
+      ref={ref}
+      className="relative z-10 md:h-[200px] md:overflow-hidden"
       style={{ contain: 'layout paint' }}
     >
       {/* Desktop */}
@@ -45,7 +77,13 @@ export default function HomeInfo({
                 id="components.homeInfo.blockReward"
               />
             </b>
-            <p className={metricClass}>{brStr}</p>
+            <Metric finalStr={brStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={blockReward} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="verticalLine h-14 my-auto"></div>
@@ -57,7 +95,13 @@ export default function HomeInfo({
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
-            <p className={metricClass}>{csStr}</p>
+            <Metric finalStr={csStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={cs} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="verticalLine h-14 my-auto"></div>
@@ -69,7 +113,13 @@ export default function HomeInfo({
                 id="components.homeInfo.transactionPerDay"
               />
             </b>
-            <p className={metricClass}>{tpdStr}</p>
+            <Metric finalStr={tpdStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={transactionPerDay} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="verticalLine h-14 my-auto"></div>
@@ -78,14 +128,29 @@ export default function HomeInfo({
             <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
-            <p className={metricClass}>{hrStr}</p>
+            <Metric finalStr={hrStr}>
+              {inView ? (
+                <>
+                  <CountUp
+                    separator=","
+                    start={0}
+                    end={hr}
+                    duration={1.2}
+                    decimals={2}
+                  />{' '}
+                  TH/s
+                </>
+              ) : (
+                '0.00 TH/s'
+              )}
+            </Metric>
           </div>
         </div>
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden absolute inset-0 flex justify-end items-center">
-        <div className="bg-white mx-4 rounded-xl py-1 homeInfo-shadow overflow-hidden">
+      <div className="md:hidden flex justify-center items-stretch px-4">
+        <div className="bg-white w-full max-w-[360px] mx-auto rounded-xl py-1 homeInfo-shadow overflow-hidden my-4">
           <div className="mx-8 my-6">
             <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
@@ -93,7 +158,13 @@ export default function HomeInfo({
                 id="components.homeInfo.blockReward"
               />
             </b>
-            <p className={metricClass}>{brStr}</p>
+            <Metric finalStr={brStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={blockReward} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="horizontallLine"></div>
@@ -105,7 +176,13 @@ export default function HomeInfo({
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
-            <p className={metricClass}>{csStr}</p>
+            <Metric finalStr={csStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={cs} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="horizontallLine"></div>
@@ -117,7 +194,13 @@ export default function HomeInfo({
                 id="components.homeInfo.transactionPerDay"
               />
             </b>
-            <p className={metricClass}>{tpdStr}</p>
+            <Metric finalStr={tpdStr}>
+              {inView ? (
+                <CountUp separator="," start={0} end={transactionPerDay} duration={1.2} />
+              ) : (
+                '0'
+              )}
+            </Metric>
           </div>
 
           <div className="horizontallLine"></div>
@@ -126,7 +209,22 @@ export default function HomeInfo({
             <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
-            <p className={metricClass}>{hrStr}</p>
+            <Metric finalStr={hrStr}>
+              {inView ? (
+                <>
+                  <CountUp
+                    separator=","
+                    start={0}
+                    end={hr}
+                    duration={1.2}
+                    decimals={2}
+                  />{' '}
+                  TH/s
+                </>
+              ) : (
+                '0.00 TH/s'
+              )}
+            </Metric>
           </div>
         </div>
       </div>

@@ -74,11 +74,16 @@
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: url("/assets/home/frame-4-light.png");
     /* Light theme background to avoid CLS (reserve space, no <img>) */
     background-image: -webkit-image-set(
+        url("/assets/home/frame-4-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-4-light.webp") type("image/webp") 1x,
         url("/assets/home/frame-4-light.png") type("image/png") 1x
     );
     background-image: image-set(
+        url("/assets/home/frame-4-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-4-light.webp") type("image/webp") 1x,
         url("/assets/home/frame-4-light.png") type("image/png") 1x
     );
     pointer-events: none;
@@ -87,11 +92,16 @@
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: url("/assets/home/frame-4.png");
     /* Dark theme background */
     background-image: -webkit-image-set(
+        url("/assets/home/frame-4.avif") type("image/avif") 1x,
+        url("/assets/home/frame-4.webp") type("image/webp") 1x,
         url("/assets/home/frame-4.png") type("image/png") 1x
     );
     background-image: image-set(
+        url("/assets/home/frame-4.avif") type("image/avif") 1x,
+        url("/assets/home/frame-4.webp") type("image/webp") 1x,
         url("/assets/home/frame-4.png") type("image/png") 1x
     );
 }
@@ -105,11 +115,16 @@
     background-position: right top;
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: url("/assets/home/frame-5-light.png");
     /* Light theme background to avoid CLS (reserve space, no <img>) */
     background-image: -webkit-image-set(
+        url("/assets/home/frame-5-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-5-light.webp") type("image/webp") 1x,
         url("/assets/home/frame-5-light.png") type("image/png") 1x
     );
     background-image: image-set(
+        url("/assets/home/frame-5-light.avif") type("image/avif") 1x,
+        url("/assets/home/frame-5-light.webp") type("image/webp") 1x,
         url("/assets/home/frame-5-light.png") type("image/png") 1x
     );
     pointer-events: none;
@@ -118,11 +133,16 @@
     background-position: right top;
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: url("/assets/home/frame-5.png");
     /* Dark theme background */
     background-image: -webkit-image-set(
+        url("/assets/home/frame-5.avif") type("image/avif") 1x,
+        url("/assets/home/frame-5.webp") type("image/webp") 1x,
         url("/assets/home/frame-5.png") type("image/png") 1x
     );
     background-image: image-set(
+        url("/assets/home/frame-5.avif") type("image/avif") 1x,
+        url("/assets/home/frame-5.webp") type("image/webp") 1x,
         url("/assets/home/frame-5.png") type("image/png") 1x
     );
 }

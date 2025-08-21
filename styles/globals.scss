@@ -306,15 +306,39 @@
 
 
 .footer-image {
-  background: no-repeat url("/assets/footer-light.png");
   z-index: -1;
+  background: no-repeat url("/assets/footer-light.png");
   background-position: bottom center;
+  background-repeat: no-repeat;
+  /* Serve next-gen formats with fallback */
+  background-image: -webkit-image-set(
+    url("/assets/footer-light.avif") type("image/avif") 1x,
+    url("/assets/footer-light.webp") type("image/webp") 1x,
+    url("/assets/footer-light.png") type("image/png") 1x
+  );
+  background-image: image-set(
+    url("/assets/footer-light.avif") type("image/avif") 1x,
+    url("/assets/footer-light.webp") type("image/webp") 1x,
+    url("/assets/footer-light.png") type("image/png") 1x
+  );
 }
 
 .dark .footer-image {
-  background: no-repeat url("/assets/footer.png");
   z-index: -1;
+  background: no-repeat url("/assets/footer.png");
   background-position: bottom center;
+  background-repeat: no-repeat;
+  /* Serve next-gen formats with fallback */
+  background-image: -webkit-image-set(
+    url("/assets/footer.avif") type("image/avif") 1x,
+    url("/assets/footer.webp") type("image/webp") 1x,
+    url("/assets/footer.png") type("image/png") 1x
+  );
+  background-image: image-set(
+    url("/assets/footer.avif") type("image/avif") 1x,
+    url("/assets/footer.webp") type("image/webp") 1x,
+    url("/assets/footer.png") type("image/png") 1x
+  );
 }
 
 .dark .legal-frame-1,

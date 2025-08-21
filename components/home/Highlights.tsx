@@ -148,7 +148,7 @@ function Highlights() {
   return (
     <div
       id="Highlights"
-      className="mt-40 max-w-[1300px] mx-auto p-4 relative min-h-[1100px] lg:min-h-[900px]"
+      className="mt-12 md:mt-40 max-w-[1300px] mx-auto p-4 relative min-h-[900px] lg:min-h-[900px]"
       style={{ zIndex: 12 }}
     >
       <div className="text-center">
