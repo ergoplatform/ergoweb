@@ -34,7 +34,7 @@ export default function Favorites(props: Props) {
       <div className="flex flex-col lg:flex-row lg:gap-8">
         <div className="lg:w-1/3">
           <Heart viewBox="0 0 20 18" className="h-3 mb-4" />
-          <p className="text-[#585858] dark:text-[#585858] font-bold mb-3 text-[14px] lg:text-[20px]">
+          <p className="text-[#585858] dark:text-[#585858] font-bold mb-3 lg:text-[20px]">
             <FormattedMessage defaultMessage="OUR FAVORITES" id="components.ourFavorites.heading" />
           </p>
           <ErgoRaffle viewBox="0 0 211 63" className="h-10 w-32 mb-4" />

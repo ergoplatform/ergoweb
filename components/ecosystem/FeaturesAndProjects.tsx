@@ -71,7 +71,7 @@ export default function FeaturesAndProjects(props: Props) {
               <p className="mt-4 text-[#585858] dark:text-[#585858] lg:text-[20px] font-bold h-1/5">
                 {project.attributes.group}
               </p>
-              <h4 className="mt-2 font-subtitle-3-bold heading-balance">
+              <h4 className="mt-2 font-subtitle-3-bold text-[24px] heading-balance">
                 {project.attributes.title}
               </h4>
               <p className="mt-2 text-[#807e7e] dark:text-[#807e7e] lg:text-[16px] h-2/5">
