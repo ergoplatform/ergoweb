@@ -62,54 +62,54 @@ export default function Favorites(props: Props) {
         </div>
         <div className="lg:w-2/3">
           {mods ? (
-          <mods.Swiper
-            className="SwiperFavorites"
-            pagination={{ dynamicBullets: true }}
-            modules={[mods.Pagination]}
-          >
-            {props.favorites.map((post: any, i: number) => (
-              <mods.SwiperSlide key={i} className="mb-20">
-                <div className="favorite-card bg-white dark:bg-[#282828] rounded-2xl p-6 my-4 min-h-[335px] mx-1">
-                  <div className="flex justify-center lg:justify-end mb-8">
-                    {post.attributes.image.data != null ? (
-                      <Image
-                        width={post.attributes.image.data?.attributes.width}
-                        height={post.attributes.image.data?.attributes.height}
-                        src={post.attributes.image.data?.attributes.url}
-                        className=""
-                        alt=""
-                      />
-                    ) : (
-                      <div></div>
-                    )}
+            <mods.Swiper
+              className="SwiperFavorites"
+              pagination={{ dynamicBullets: true }}
+              modules={[mods.Pagination]}
+            >
+              {props.favorites.map((post: any, i: number) => (
+                <mods.SwiperSlide key={i} className="mb-20">
+                  <div className="favorite-card bg-white dark:bg-[#282828] rounded-2xl p-6 my-4 min-h-[335px] mx-1">
+                    <div className="flex justify-center lg:justify-end mb-8">
+                      {post.attributes.image.data != null ? (
+                        <Image
+                          width={post.attributes.image.data?.attributes.width}
+                          height={post.attributes.image.data?.attributes.height}
+                          src={post.attributes.image.data?.attributes.url}
+                          className=""
+                          alt=""
+                        />
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
+                    <p className="font-bold text-[14px] text-[#585858] dark:text-[#585858] mb-4">
+                      {post.attributes.subtitle}
+                    </p>
+                    <p className="font-vinila-extended-bold text-[clamp(36px,9vw,64px)] mb-4 heading-balance">
+                      {post.attributes.title}
+                    </p>
+                    <p className="text=[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
+                      {post.attributes.description}
+                    </p>
+                    <div className="-ml-4">
+                      {post.attributes.url != null ? (
+                        <Button
+                          text={post.attributes.button_text}
+                          url={post.attributes.url}
+                          newTab={true}
+                          underline={true}
+                          textColor="brand-orange"
+                          background={false}
+                        />
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
                   </div>
-                  <p className="font-bold text-[14px] text-[#585858] dark:text-[#585858] mb-4">
-                    {post.attributes.subtitle}
-                  </p>
-                  <p className="font-vinila-extended-bold text-[16px] mb-4">
-                    {post.attributes.title}
-                  </p>
-                  <p className="text=[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
-                    {post.attributes.description}
-                  </p>
-                  <div className="-ml-4">
-                    {post.attributes.url != null ? (
-                      <Button
-                        text={post.attributes.button_text}
-                        url={post.attributes.url}
-                        newTab={true}
-                        underline={true}
-                        textColor="brand-orange"
-                        background={false}
-                      />
-                    ) : (
-                      <div></div>
-                    )}
-                  </div>
-                </div>
-              </mods.SwiperSlide>
-            ))}
-          </mods.Swiper>
+                </mods.SwiperSlide>
+              ))}
+            </mods.Swiper>
           ) : null}
         </div>
       </div>

@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 export default function EcosystemHero() {
   return (
     <div id="EcosystemHero" className="max-w-[1300px] mx-auto p-4 relative z-10">
-      <h1 className="absolute z-10">
+      <h1 className="absolute z-10 text-[clamp(48px,12vw,100px)] md:text-[100px] lg:text-[120px] heading-balance">
         <b>
           <FormattedMessage id="components.ecosystemHero.title" defaultMessage="Ecosystem" />
         </b>
