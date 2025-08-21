@@ -55,8 +55,7 @@ export default function Footer() {
   return (
     <footer
       id="Footer"
-      className="relative z-10 overflow-hidden lg:min-h-[700px] md:min-h-[700px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-bottom before:bg-cover before:bg-no-repeat before:bg-[url('/assets/footer-light.png')] dark:before:bg-[url('/assets/footer.png')]"
-      style={{ contentVisibility: 'auto' }}
+      className="relative z-10 overflow-hidden lg:min-h-[700px] md:min-h-[700px] bg-bottom bg-cover bg-no-repeat bg-[url('/assets/footer-light.png')] dark:bg-[url('/assets/footer.png')]"
     >
       <div className="max-w-[1300px] mx-auto py-12 px-4 relative z-20">
         <div className="md:flex justify-between md:min-h-[120px] items-center">
@@ -357,7 +356,7 @@ export default function Footer() {
               </h3>
             </Link>
             {postsData && postsData.length > 0 ? (
-              <ul className="hidden md:block">
+              <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
                 {postsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
                     <Link
@@ -380,7 +379,7 @@ export default function Footer() {
               </h3>
             </Link>
             {newsData && newsData.length > 0 ? (
-              <ul className="hidden md:block">
+              <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
                 {newsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
                     <Link

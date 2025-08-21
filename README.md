@@ -34,6 +34,7 @@
 - [🌍 Internationalization (react‑intl + FormatJS)](#-internationalization-reactintl--formatjs)
 - [🚢 Deployment](#-deployment)
 - [🤝 Contributing](#-contributing)
+- [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -223,3 +224,11 @@ Sitemaps/SEO
 - If you change user‑facing copy, update i18n:
   - `npm run extract:i18n` then `npm run compile:i18n`
 - Consider updating/adding a Storybook story for component changes
+
+
+## Troubleshooting
+
+logs from the latest revision of your service.
+```bash
+gcloud run services logs read ergo-platform-frontend --region europe-west4 --limit=50
+```

@@ -148,7 +148,7 @@ function Highlights() {
   return (
     <div
       id="Highlights"
-      className="mt-40 max-w-[1300px] mx-auto p-4 relative lg:min-h-[560px]"
+      className="mt-40 max-w-[1300px] mx-auto p-4 relative min-h-[1100px] lg:min-h-[900px]"
       style={{ zIndex: 12 }}
     >
       <div className="text-center">
@@ -161,7 +161,7 @@ function Highlights() {
         <mods.Swiper navigation={true} modules={[mods.Navigation]} className="SwiperHighlights">
         {slides.map((item, i) => (
           <mods.SwiperSlide key={i}>
-            <div className="min-h-[600px] flex flex-col justify-between">
+            <div className="min-h-[1100px] lg:min-h-[900px] flex flex-col justify-between">
               {/* Added min-h for mobile layout stability */}
               <div className="lg:hidden">
                 <div className="text-center">
@@ -215,7 +215,9 @@ function Highlights() {
         ))}
         </mods.Swiper>
       ) : (
-        <div className="SwiperHighlights" />
+        <div className="SwiperHighlights">
+          <div className="min-h-[1100px] lg:min-h-[900px]" />
+        </div>
       )}
     </div>
   );

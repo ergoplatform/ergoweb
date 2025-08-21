@@ -1,6 +1,7 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import Button from '../Button';
 import LazyInView from '../../utils/LazyInView';
 
@@ -84,12 +85,12 @@ export default function HomeHero() {
           <LazyInView className="relative w-full h-full">
             <div className="absolute inset-0 w-full h-full">
               {/* Base poster image: true LCP (SSR-rendered, priority) */}
-              <img
+              <Image
                 src={posterSrc}
                 alt=""
-                fetchPriority="high"
-                loading="eager"
-                decoding="async"
+                priority
+                fill
+                sizes="100vw"
                 className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
               />
               {/* Deferred video: mounts after first paint, won't be considered LCP */}
@@ -126,12 +127,11 @@ export default function HomeHero() {
           <LazyInView className="relative w-full h-full">
             <div className="absolute inset-0 w-full h-full">
               {/* Base poster image: true LCP (SSR-rendered, priority) */}
-              <img
+              <Image
                 src={posterSrc}
                 alt=""
-                fetchPriority="high"
-                loading="eager"
-                decoding="async"
+                fill
+                sizes="100vw"
                 className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
               />
               {/* Deferred video: mounts after first paint, won't be considered LCP */}

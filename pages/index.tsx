@@ -7,12 +7,12 @@ import LazyInView from '../utils/LazyInView';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const Highlights = dynamic(() => import('../components/home/Highlights'), { ssr: false });
-const HomeInfo = dynamic(() => import('../components/home/HomeInfo'));
+const Highlights = dynamic(() => import('../components/home/Highlights'));
+import HomeInfo from '../components/home/HomeInfo';
 const UniqueErgo = dynamic(() => import('../components/home/UniqueErgo'));
 const UsingErg = dynamic(() => import('../components/home/UsingErg'));
 const Autolykos = dynamic(() => import('../components/home/Autolykos'));
-const News = dynamic(() => import('../components/home/News'), { ssr: false });
+const News = dynamic(() => import('../components/home/News'));
 const Feed = dynamic(() => import('../components/shared/Feed'));
 const Partners = dynamic(() => import('../components/home/Partners'));
 const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'));
@@ -62,19 +62,17 @@ export default function Home(props: Props) {
       <HomeFrames />
       <Layout title={title}>
         <HomeHero />
+        {props.blockReward && props.info ? (
+          <HomeInfo
+            circulatingSupply={props.info.supply}
+            hashRate={props.info.hashRate}
+            blockReward={props.blockReward}
+            transactionPerDay={props.info.transactionAverage}
+          />
+        ) : null}
         <LazyInView rootMargin="200px 0px">
           {() => <Highlights />}
         </LazyInView>
-        {props.blockReward && props.info ? (
-          <LazyInView rootMargin="200px 0px" ssrReveal className="min-h-[120px] md:min-h-[120px]">
-            {() => (<HomeInfo
-              circulatingSupply={props.info.supply}
-              hashRate={props.info.hashRate}
-              blockReward={props.blockReward}
-              transactionPerDay={props.info.transactionAverage}
-            />)}
-          </LazyInView>
-        ) : null}
         <LazyInView rootMargin="200px 0px">
           {() => <UniqueErgo />}
         </LazyInView>

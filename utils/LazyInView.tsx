@@ -20,17 +20,15 @@ const LazyInView: React.FC<LazyInViewProps> = ({
   ssrReveal = true,
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isServer = typeof window === 'undefined';
-  // Render children on SSR to reserve space and prevent CLS; on client start hidden unless revealed
-  const [visible, setVisible] = useState(isServer ? ssrReveal : false);
+  // Render children on SSR to reserve space and prevent CLS; also keep them visible on client if ssrReveal is true to avoid hydration flicker/CLS
+  const [visible, setVisible] = useState(ssrReveal);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // If we already rendered children on the server to prevent CLS and we only mount once,
-    // skip setting up the observer to avoid any flicker on hydration.
+    // skip setting up the observer; visible is already true to avoid flicker.
     if (ssrReveal && once) {
-      setVisible(true);
       return;
     }
 
