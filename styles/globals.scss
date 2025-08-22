@@ -160,9 +160,14 @@ a {
   color: white !important;
 }
 
-#Wiki a[href="https://ergonaut.space/"] {
+#Wiki p.hidden.md\:block.absolute a[href="https://ergonaut.space/"] {
   color: white !important;
   font-size: 1.125rem;
+}
+
+#Wiki > div > div > div.my-auto.ml-12 > a {
+  color: black !important;
+  font-size: 1rem;
 }
 
 .post {
