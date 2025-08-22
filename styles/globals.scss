@@ -150,9 +150,14 @@
   scrollbar-width: none; /* Firefox */
 }
 
+
 a {
   color: black !important;
   box-shadow: none !important;
+}
+
+.dark a {
+  color: white !important;
 }
 
 .post {
