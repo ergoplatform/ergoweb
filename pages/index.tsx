@@ -132,7 +132,7 @@ export const getStaticProps = async (context: any) => {
 
   const newsJson = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=3&populate=*&filters[type][$eq]=news',
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=8&populate=*&filters[type][$eq]=news',
   )
     .then((response) => response.json())
     .then((response) => response.data)
@@ -144,7 +144,6 @@ export const getStaticProps = async (context: any) => {
         id: post.id,
         attributes: {
           title: post.attributes?.title,
-          subtitle: post.attributes?.subtitle,
           date: post.attributes?.date,
           url: post.attributes?.url,
         },
