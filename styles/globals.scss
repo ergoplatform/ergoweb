@@ -160,6 +160,11 @@ a {
   color: white !important;
 }
 
+#Wiki a[href="https://ergonaut.space/"] {
+  color: white !important;
+  font-size: 1.125rem;
+}
+
 .post {
   ul {
     list-style-type: disc;
@@ -473,6 +478,27 @@ a {
   }
 }
 
+
+.dark #Wiki > div > div.ergonaut-card > div > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.dark #Wiki p.hidden.md\:block.absolute {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+  margin-top: 0;
+}
+
+#Wiki p.hidden.md\:block.absolute {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+  margin-top: 0;
+}
 .dark .faq-answer {
   color: theme('colors.gray.50'); /* Use Tailwind color */
   background-color: theme('colors.brand.black.DEFAULT'); /* Explicitly set background for contrast check */
