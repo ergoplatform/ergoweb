@@ -228,7 +228,7 @@ function Highlights() {
               </mods.SwiperSlide>
             ))}
           </mods.Swiper>
-          <div className="lg:hidden absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none hidden lg:block">
             <button className="swiper-prev-mobile pointer-events-auto absolute top-1/2 -translate-y-1/2 left-4 w-10 h-10 flex items-center justify-center">
               <span className="sr-only">Previous</span>
               <ArrowRightOrange className="w-6 h-6 rotate-180" />

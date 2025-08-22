@@ -113,10 +113,10 @@ export default function ContributeForm() {
                 url="https://discord.gg/ergo-platform-668903786361651200"
                 newTab={true}
                 underline={true}
-                textColor="white"
+                textColor="black"
                 background={false}
-                icon="ArrowRightWhite"
-                iconColor="white"
+                icon="ArrowRightBlack"
+                iconColor="black"
                 customClass="dark:text-white"
               />
             </div>
@@ -126,10 +126,10 @@ export default function ContributeForm() {
                 url="https://docs.ergoplatform.com/contribute/"
                 newTab={true}
                 underline={true}
-                textColor="white"
+                textColor="black"
                 background={false}
-                icon="ArrowRightWhite"
-                iconColor="white"
+                icon="ArrowRightBlack"
+                iconColor="black"
                 customClass="dark:text-white"
               />
             </div>
@@ -141,8 +141,8 @@ export default function ContributeForm() {
                 underline={true}
                 textColor="brand-orange"
                 background={false}
-                icon="ArrowRightWhite"
-                iconColor="white"
+                icon="ArrowRightBlack"
+                iconColor="black"
                 customClass="dark:text-white"
               />
             </div>
@@ -152,10 +152,10 @@ export default function ContributeForm() {
                 url="/discover/#GrantsAndBounties"
                 newTab={false}
                 underline={true}
-                textColor="white"
+                textColor="black"
                 background={false}
-                icon="ArrowRightWhite"
-                iconColor="white"
+                icon="ArrowRightBlack"
+                iconColor="black"
                 customClass="dark:text-white"
               />
             </div>

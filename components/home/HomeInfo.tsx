@@ -68,8 +68,8 @@ export default function HomeInfo({
       style={{ contain: 'layout paint' }}
     >
       {/* Desktop */}
-      <div className="hidden md:flex absolute inset-0 justify-end items-center">
-        <div className="mx-4 md:flex flex-row items-center bg-white md:pr-18 lg:pr-20 xl:pr-36 md:w-[980px] lg:w-[1040px] xl:w-[1100px] rounded-l-xl md:mx-0 homeInfo-shadow md:h-[140px] overflow-hidden">
+      <div className="hidden md:flex absolute inset-x-0 -bottom-50 justify-end items-center">
+        <div className="mx-4 md:flex flex-row items-center bg-white md:pr-18 lg:pr-20 xl:pr-36 md:w-[980px] lg:w-[1040px] xl:w-[1100px] rounded-l-xl md:mx-0 homeInfo-shadow md:h-[120px] overflow-hidden max-w-full">
           <div className="mx-8 my-4 text-center min-w-[200px]">
             <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
