@@ -14,7 +14,7 @@ type Props = {
   underline?: boolean;
   background?: boolean;
   iconColor?: string;
-  customClass?: string;
+  customClass?: string; // Add customClass to Props
   animation?: boolean;
   ariaLabel?: string; // Add ariaLabel to Props
   prefetch?: boolean; // control Next.js Link prefetch behavior
@@ -29,7 +29,7 @@ export default function Button({
   underline = false,
   background = true,
   iconColor = 'black',
-  customClass = '',
+  customClass = '', // Destructure customClass
   animation,
   ariaLabel, // Destructure ariaLabel
   prefetch = false,
@@ -40,9 +40,9 @@ export default function Button({
 
   if (background) {
     // Orange background button
-    // Light mode: white text on orange; Dark mode: keep black text for contrast
+    // Light mode: white text on orange; Dark mode: keep white text for contrast
     textClasses = 'text-white';
-    darkTextClass = 'dark:text-black';
+    darkTextClass = 'dark:text-white';
   } else {
     // Transparent background button
     textClasses = `text-${textColor}`; // Use textColor prop
@@ -50,7 +50,7 @@ export default function Button({
   }
 
   var className =
-    `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full font-vinila-extended text-[14px] md:text-[16px]` +
+    `py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full font-vinila-extended text-[14px] md:text-[16px] shadow-sm transition-transform duration-200 hover:scale-110` +
     (background ? ' bg-brand-orange' : ' bg-transparent') +
     ` ${textClasses} ${darkTextClass} ` + // Add the dynamic text classes and dark mode class
     customClass; // Append customClass at the end
@@ -75,7 +75,11 @@ export default function Button({
   // Compute effective icon color
   const isDark = resolvedTheme === 'dark';
   let effectiveIconColor = iconColor;
-  if (background && !isDark) {
+
+  // Force white arrow if icon prop is ArrowRightWhite regardless of theme
+  if (icon === 'ArrowRightWhite') {
+    effectiveIconColor = 'white';
+  } else if (background && !isDark) {
     // For orange background in light mode, force white arrow per spec
     effectiveIconColor = 'white';
   }
@@ -91,11 +95,11 @@ export default function Button({
 
   const content = (
     <>
-      <span>{text}</span>
+      <span className="leading-none">{text}</span>
       {icon === 'none' ? (
         ``
       ) : (
-        <span className="w-4 h-4 ml-2">
+        <span className="w-5 h-5 ml-2 flex items-center">
           <ArrowIcon />
         </span>
       )}

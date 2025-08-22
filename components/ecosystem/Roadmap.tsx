@@ -84,13 +84,13 @@ export default function Roadmap(props: Props) {
       tag: 'up_next',
     },
     {
-      name: <FormattedMessage defaultMessage="SOON" id="components.roadmap.section3.title" />,
+      name: (
+        <FormattedMessage defaultMessage="IN PROGRESS" id="components.roadmap.section3.title" />
+      ),
       tag: 'soon',
     },
     {
-      name: (
-        <FormattedMessage defaultMessage="2024 & BEYOND" id="components.roadmap.section4.title" />
-      ),
+      name: <FormattedMessage defaultMessage="SOON" id="components.roadmap.section4.title" />,
       tag: 'this_year',
     },
   ];

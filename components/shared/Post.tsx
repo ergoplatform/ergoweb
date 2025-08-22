@@ -49,12 +49,12 @@ export default function Post({
   }
 
   return (
-    <div className="blog-post flex-shrink-0 shadow-xl rounded-2xl relative z-10 overflow-hidden bg-white">
+    <div className="blog-post flex-shrink-0 shadow-xl rounded-2xl relative z-10 overflow-hidden bg-white dark:bg-zinc-900">
       <div className="flex-shrink-0 relative">
         <Link href={type == 'news' ? url : '/blog/' + permalink} className="block leading-none">
           {hasImage == false ? (
             <div className="post-image-wrap rounded-t-2xl overflow-hidden leading-none">
-              <div className="h-48 bg-gray-200 w-full"></div>
+              <div className="h-48 bg-gray-200 dark:bg-zinc-700 w-full"></div>
             </div>
           ) : (
             <div className="post-image-wrap rounded-t-2xl overflow-hidden leading-none">
@@ -77,7 +77,7 @@ export default function Post({
                 <Link href={`/category/${item.trim()}`} key={item.trim()}>
                   <b
                     key={item.trim()}
-                    className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-black text-white uppercase z-10"
+                    className="items-center px-3 py-0.5 rounded-full text-sm font-medium mr-4 bg-brand-orange text-black dark:bg-brand-orange dark:text-white uppercase z-10"
                   >
                     {item.trim()}
                   </b>
@@ -86,27 +86,36 @@ export default function Post({
           </div>
         </Link>
       </div>
-      <div className="flex-1 p-4 md:p-6 h-72 flex flex-col justify-between rounded-b-2xl">
+      <div className="flex-1 p-4 md:p-6 min-h-[280px] flex flex-col justify-start rounded-b-2xl">
         <div className="flex-1 text-clip">
           <Link
             href={type == 'news' ? url : '/blog/' + permalink}
-            className="block mt-2"
+            className="block"
             rel="noreferrer"
           >
-            <p className="font-roboto text-[20px] text-black dark:text-black mb-4">{title}</p>
-            <p className="font-roboto text-[14px] text-[#585858] dark:text-gray-400 mb-0">
-              {type == 'news' ? subtitle : removeMd(content)?.slice(0, 130) + '...'}
+            <p className="font-roboto text-[20px] text-black dark:text-white mb-2">{title}</p>
+            <p className="font-roboto text-[16px] text-[#585858] dark:text-gray-400 mb-2 leading-snug">
+              {type == 'news'
+                ? subtitle
+                : (() => {
+                    const text = removeMd(content) || '';
+                    if (text.length <= 130) return text.endsWith('.') ? text : text + '.';
+                    const truncated = text.slice(0, 130);
+                    const lastPeriod = truncated.lastIndexOf('.');
+                    if (lastPeriod > 0) return truncated.slice(0, lastPeriod + 1);
+                    return truncated + '.';
+                  })()}
             </p>
           </Link>
         </div>
-        <div className="mt-4 flex items-center">
+        <div className="mt-1 flex items-center">
           <div className="flex-shrink-0">
-            <LogoBlack viewBox="0 0 82 82" className="h-10 w-10" />
+            <LogoBlack viewBox="0 0 82 82" className="h-10 w-10 dark:invert" />
           </div>
           <div className="ml-3">
-            <b className="text-[14px] text-black dark:text-black">{author}</b>
+            <b className="text-[16px] text-black dark:text-white">{author}</b>
             <div className="flex space-x-1">
-              <p className="text-[#000000] dark:text-black">
+              <p className="text-[#000000] dark:text-white">
                 <FormattedDate value={date} day="numeric" month="long" year="numeric" />
               </p>
             </div>

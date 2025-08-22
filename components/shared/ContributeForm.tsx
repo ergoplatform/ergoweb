@@ -2,6 +2,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 import dynamic from 'next/dynamic';
 import ArrowRightBlack from '../icons/ArrowRightBlack';
+import ArrowRightWhite from '../icons/ArrowRightWhite';
 
 const ToastContainer = dynamic(() => import('react-toastify').then((m) => m.ToastContainer), {
   ssr: false,
@@ -112,10 +113,11 @@ export default function ContributeForm() {
                 url="https://discord.gg/ergo-platform-668903786361651200"
                 newTab={true}
                 underline={true}
-                textColor="brand-orange"
+                textColor="white"
                 background={false}
-                icon="ArrowRight"
-                iconColor="orange"
+                icon="ArrowRightWhite"
+                iconColor="white"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -124,10 +126,11 @@ export default function ContributeForm() {
                 url="https://docs.ergoplatform.com/contribute/"
                 newTab={true}
                 underline={true}
-                textColor="brand-orange"
+                textColor="white"
                 background={false}
-                icon="ArrowRight"
-                iconColor="orange"
+                icon="ArrowRightWhite"
+                iconColor="white"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -138,8 +141,9 @@ export default function ContributeForm() {
                 underline={true}
                 textColor="brand-orange"
                 background={false}
-                icon="ArrowRight"
-                iconColor="orange"
+                icon="ArrowRightWhite"
+                iconColor="white"
+                customClass="dark:text-white"
               />
             </div>
             <div className="ml-8 mb-10">
@@ -148,10 +152,11 @@ export default function ContributeForm() {
                 url="/discover/#GrantsAndBounties"
                 newTab={false}
                 underline={true}
-                textColor="brand-orange"
+                textColor="white"
                 background={false}
-                icon="ArrowRight"
-                iconColor="orange"
+                icon="ArrowRightWhite"
+                iconColor="white"
+                customClass="dark:text-white"
               />
             </div>
           </div>
@@ -200,11 +205,11 @@ export default function ContributeForm() {
               <div className="float-right">
                 <button
                   type="submit"
-                  className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-black font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
+                  className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange"
                 >
                   <span>{formButton}</span>
-                  <span className="w-4 h-4 ml-2">
-                    <ArrowRightBlack />
+                  <span className="w-5 h-5 ml-2 flex items-center">
+                    <ArrowRightWhite />
                   </span>
                 </button>
               </div>

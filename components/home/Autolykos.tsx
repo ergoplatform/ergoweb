@@ -5,7 +5,7 @@ export default function Autolykos() {
   const intl = useIntl();
   const button = intl.formatMessage({
     id: 'components.autolykos.button',
-    defaultMessage: 'MINE ERG',
+    defaultMessage: 'START MINING ERG TODAY',
   });
 
   return (
@@ -39,6 +39,7 @@ export default function Autolykos() {
             background={true}
             iconColor="black"
             icon="ArrowRight"
+            customClass="text-lg py-3 px-6"
           />
         </div>
       </div>
@@ -67,6 +68,7 @@ export default function Autolykos() {
                 background={true}
                 iconColor="black"
                 icon="ArrowRight"
+                customClass="text-lg py-3 px-6"
               />
             </div>
           </div>

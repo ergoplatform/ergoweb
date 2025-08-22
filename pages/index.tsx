@@ -70,35 +70,21 @@ export default function Home(props: Props) {
             transactionPerDay={props.info.transactionAverage}
           />
         ) : null}
-        <LazyInView rootMargin="200px 0px">
-          {() => <Highlights />}
-        </LazyInView>
-        <LazyInView rootMargin="200px 0px">
-          {() => <UniqueErgo />}
-        </LazyInView>
-        <LazyInView rootMargin="200px 0px">
-          {() => <UsingErg />}
-        </LazyInView>
-        <LazyInView rootMargin="200px 0px">
-          {() => <Autolykos />}
-        </LazyInView>
+        <LazyInView rootMargin="200px 0px">{() => <Highlights />}</LazyInView>
+        <LazyInView rootMargin="200px 0px">{() => <UniqueErgo />}</LazyInView>
+        <LazyInView rootMargin="200px 0px">{() => <UsingErg />}</LazyInView>
+        <LazyInView rootMargin="200px 0px">{() => <Autolykos />}</LazyInView>
         {props.news ? (
-          <LazyInView rootMargin="200px 0px">
-            {() => <News news={props.news} />}
-          </LazyInView>
+          <LazyInView rootMargin="200px 0px">{() => <News news={props.news} />}</LazyInView>
         ) : null}
         {props.posts ? (
-          <LazyInView rootMargin="200px 0px">
-            {() => <Feed posts={props.posts} />}
-          </LazyInView>
+          <LazyInView rootMargin="200px 0px">{() => <Feed posts={props.posts} />}</LazyInView>
         ) : null}
         <LazyInView rootMargin="200px 0px">
           {() => <Partners partners={props.partners || []} />}
         </LazyInView>
         {/* Pass partners prop, default to empty array */}
-        <LazyInView rootMargin="200px 0px">
-          {() => <ContributeForm />}
-        </LazyInView>
+        <LazyInView rootMargin="200px 0px">{() => <ContributeForm />}</LazyInView>
       </Layout>
     </div>
   );
