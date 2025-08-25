@@ -454,7 +454,7 @@ function Navigation({ enableLanguages = true }) {
                       </li>
                       <li>
                         <Link
-                          href="/news"
+                          href="/blog?type=news"
                           aria-label={intl.formatMessage({
                             id: 'footer.news.title',
                             defaultMessage: 'NEWS',

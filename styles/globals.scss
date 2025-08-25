@@ -25,10 +25,10 @@
     --fluid-h3: clamp(40px, 10vw, 80px);
     --fluid-h4: clamp(34px, 9vw, 56px);
   }
-  h1:not([class*="text-"]) { font-size: var(--fluid-h1); line-height: 1.1; font-weight: 700; }
-  h2:not([class*="text-"]) { font-size: var(--fluid-h2); line-height: 1.15; font-weight: 700; }
-  h3:not([class*="text-"]) { font-size: var(--fluid-h3); line-height: 1.2; font-weight: 600; }
-  h4:not([class*="text-"]) { font-size: var(--fluid-h4); line-height: 1.25; font-weight: 600; }
+  h1:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h1); line-height: 1.1; font-weight: 700; }
+  h2:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h2); line-height: 1.15; font-weight: 700; }
+  h3:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h3); line-height: 1.2; font-weight: 600; }
+  h4:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h4); line-height: 1.25; font-weight: 600; }
   h5:not([class*="text-"]) { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
   h6:not([class*="text-"]) { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
 }
@@ -603,6 +603,26 @@ a {
 
 .tag {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s ease, filter 0.2s ease;
+  will-change: transform, box-shadow, filter;
+}
+.tag:hover,
+.tag:focus-visible {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0px 8px 20px rgba(255, 94, 24, 0.25), 0px 3px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none;
+  }
+  .tag:hover,
+  .tag:focus-visible {
+    transform: none;
+  }
 }
 
 .search-card {

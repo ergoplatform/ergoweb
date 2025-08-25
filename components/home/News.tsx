@@ -78,7 +78,7 @@ export default function News({ news }: Props) {
               )}
             </ul>
           </div>
-          <Link href="/news" passHref>
+          <Link href="/blog?type=news" passHref>
             <a className="mt-2 inline-block text-sm font-semibold text-brand-orange underline hover:no-underline">
               View all news
             </a>
