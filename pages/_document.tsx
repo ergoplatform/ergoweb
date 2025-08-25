@@ -101,6 +101,34 @@ class MyDocument extends Document<MyDocumentProps> {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <link
+            rel="preload"
+            href="/assets/home/hero-poster-dark.webp"
+            as="image"
+            type="image/webp"
+            media="(prefers-color-scheme: dark) and (min-width: 768px)"
+          />
+          <link
+            rel="preload"
+            href="/assets/home/hero-poster-light.webp"
+            as="image"
+            type="image/webp"
+            media="(prefers-color-scheme: light) and (min-width: 768px)"
+          />
+          <link
+            rel="preload"
+            href="/assets/home/hero-poster-dark-mobile.webp"
+            as="image"
+            type="image/webp"
+            media="(prefers-color-scheme: dark)"
+          />
+          <link
+            rel="preload"
+            href="/assets/home/hero-poster-light-mobile.webp"
+            as="image"
+            type="image/webp"
+            media="(prefers-color-scheme: light)"
+          />
         </Head>
         <body>
           <Main />

@@ -81,6 +81,16 @@ const nextConfig = {
         destination: '/ergo-wallet-app/',
         permanent: true,
       },
+      {
+        source: '/news',
+        destination: '/blog?type=news',
+        permanent: true,
+      },
+      {
+        source: '/news/:slug*',
+        destination: '/blog?type=news',
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
