@@ -373,7 +373,7 @@ export default function Footer() {
             )}
           </div>
           <div>
-            <Link href="/news" prefetch={false}>
+            <Link href="/blog?type=news" prefetch={false}>
               <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
               </h3>

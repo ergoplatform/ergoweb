@@ -230,7 +230,7 @@ export default function NavigationMobileMenu() {
                 </Link>
               </li>
               <li>
-                <Link href="/news">
+                <Link href="/blog?type=news">
                   <h3 className="font-button mt-4 mb-14 mr-20">
                     <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
                   </h3>

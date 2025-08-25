@@ -25,10 +25,10 @@
     --fluid-h3: clamp(40px, 10vw, 80px);
     --fluid-h4: clamp(34px, 9vw, 56px);
   }
-  h1:not([class*="text-"]) { font-size: var(--fluid-h1); line-height: 1.1; font-weight: 700; }
-  h2:not([class*="text-"]) { font-size: var(--fluid-h2); line-height: 1.15; font-weight: 700; }
-  h3:not([class*="text-"]) { font-size: var(--fluid-h3); line-height: 1.2; font-weight: 600; }
-  h4:not([class*="text-"]) { font-size: var(--fluid-h4); line-height: 1.25; font-weight: 600; }
+  h1:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h1); line-height: 1.1; font-weight: 700; }
+  h2:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h2); line-height: 1.15; font-weight: 700; }
+  h3:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h3); line-height: 1.2; font-weight: 600; }
+  h4:not([class*="text-"]):not(.blog-title) { font-size: var(--fluid-h4); line-height: 1.25; font-weight: 600; }
   h5:not([class*="text-"]) { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
   h6:not([class*="text-"]) { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
 }
@@ -150,6 +150,26 @@
   scrollbar-width: none; /* Firefox */
 }
 
+
+a {
+  color: black !important;
+  box-shadow: none !important;
+}
+
+.dark a {
+  color: white !important;
+}
+
+#Wiki p.hidden.md\:block.absolute a[href="https://ergonaut.space/"] {
+  color: white !important;
+  font-size: 1.125rem;
+}
+
+#Wiki > div > div > div.my-auto.ml-12 > a {
+  color: black !important;
+  font-size: 1rem;
+}
+
 .post {
   ul {
     list-style-type: disc;
@@ -184,20 +204,63 @@
 
 .using-erg-card {
   background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f6f6f6 100%);
-  box-shadow: 0px 4px 19px rgba(214, 214, 214, 0.25);
-  border-radius: 20px;
+      120deg,
+      #fff 60%,
+      #f6f6f6 100%
+    );
+  box-shadow: 0px 2px 12px rgba(214, 214, 214, 0.18);
+  border-radius: 28px;
+  border: 1.5px solid #f2f2f2;
+  transition: 
+    transform 0.25s cubic-bezier(.4,2,.6,1), 
+    box-shadow 0.25s cubic-bezier(.4,2,.6,1), 
+    background 0.25s, 
+    border 0.25s;
+  cursor: pointer;
+
+  &:hover, &:focus-visible {
+    transform: scale(1.045);
+    box-shadow: 0px 12px 36px 0px rgba(255, 94, 24, 0.13), 0px 4px 19px rgba(214, 214, 214, 0.22);
+    background: linear-gradient(120deg, #fff 40%, #ffe7d9 100%);
+    border: 2px solid #ff5e18;
+    outline: none;
+  }
+  .using-erg-icon {
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+  }
+  &:hover .using-erg-icon, &:focus-visible .using-erg-icon {
+    transform: translateY(-8px) scale(1.08);
+  }
+  &:hover .font-subtitle-3, &:focus-visible .font-subtitle-3 {
+    color: #ff5e18 !important;
+    transition: color 0.2s;
+  }
 }
 
 .dark .using-erg-card {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(180deg, rgba(52, 52, 52, 0) 0%, #343434 100%);
-  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  background: linear-gradient(120deg, #232323 60%, #343434 100%);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.18);
+  border-radius: 28px;
+  border: 1.5px solid #232323;
+  transition: 
+    transform 0.25s cubic-bezier(.4,2,.6,1), 
+    box-shadow 0.25s cubic-bezier(.4,2,.6,1), 
+    background 0.25s, 
+    border 0.25s;
+
+  &:hover, &:focus-visible {
+    transform: scale(1.045);
+    box-shadow: 0px 12px 36px 0px rgba(255, 94, 24, 0.13), 0px 4px 19px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(120deg, #232323 40%, #3a2a1a 100%);
+    border: 2px solid #ff5e18;
+    outline: none;
+  }
+  .using-erg-icon {
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+  }
+  &:hover .using-erg-icon, &:focus-visible .using-erg-icon {
+    transform: translateY(-8px) scale(1.08);
+  }
 }
 
 .dapps-erg-card {
@@ -420,6 +483,27 @@
   }
 }
 
+
+.dark #Wiki > div > div.ergonaut-card > div > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.dark #Wiki p.hidden.md\:block.absolute {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+  margin-top: 0;
+}
+
+#Wiki p.hidden.md\:block.absolute {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+  margin-top: 0;
+}
 .dark .faq-answer {
   color: theme('colors.gray.50'); /* Use Tailwind color */
   background-color: theme('colors.brand.black.DEFAULT'); /* Explicitly set background for contrast check */
@@ -451,6 +535,15 @@
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+.btn.bg-brand-orange {
+  color: white !important;
+}
+
+.btn.bg-brand-orange svg {
+  fill: white !important;
+  stroke: white !important;
 }
 
 
@@ -510,6 +603,26 @@
 
 .tag {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s ease, filter 0.2s ease;
+  will-change: transform, box-shadow, filter;
+}
+.tag:hover,
+.tag:focus-visible {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0px 8px 20px rgba(255, 94, 24, 0.25), 0px 3px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none;
+  }
+  .tag:hover,
+  .tag:focus-visible {
+    transform: none;
+  }
 }
 
 .search-card {

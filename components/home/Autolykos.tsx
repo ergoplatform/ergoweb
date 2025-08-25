@@ -10,7 +10,7 @@ export default function Autolykos() {
 
   return (
     <div id="Autolykos" className="max-w-[1300px] mx-auto relative z-10">
-      <div className="mt-40 md:mt-80 px-4 py-12 mx-4 rounded-xl card-bg md:hidden">
+      <div className="px-4 py-12 mx-4 rounded-xl card-bg md:hidden">
         <p className="font-roboto text-[14px]">
           <b>
             <FormattedMessage defaultMessage="AUTOLYKOS" id="components.autolykos.header" />
@@ -33,7 +33,7 @@ export default function Autolykos() {
           <Button
             text={button}
             textColor="black"
-            url="/get-erg"
+            url="/get-erg/#Mining"
             newTab={false}
             underline={false}
             background={true}
@@ -44,7 +44,7 @@ export default function Autolykos() {
         </div>
       </div>
 
-      <div className="hidden md:block mx-4 px-14 py-12 rounded-xl card-bg mt-52">
+      <div className="hidden md:block mx-4 px-14 py-12 rounded-xl card-bg">
         <p className="font-roboto text-[20px]">
           <b>
             <FormattedMessage defaultMessage="AUTOLYKOS" id="components.autolykos.header" />
@@ -62,7 +62,7 @@ export default function Autolykos() {
               <Button
                 text={button}
                 textColor="black"
-                url="/get-erg"
+                url="/get-erg/#Mining"
                 newTab={false}
                 underline={false}
                 background={true}

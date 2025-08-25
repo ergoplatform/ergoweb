@@ -112,11 +112,11 @@ export default function Roadmap(props: Props) {
         <Button
           text={
             <FormattedMessage
-              defaultMessage="VIEW MORE ON COINMARKETCAL"
+              defaultMessage="VIEW OUR FULL DEVELOPMENT ROADMAP & HISTORY"
               id="components.roadmap.coinmarketcal"
             />
           }
-          url="https://coinmarketcal.com/en/coin/ergo"
+          url="https://docs.ergoplatform.com/roadmap/"
           newTab={false}
           underline={true}
           textColor="brand-orange"

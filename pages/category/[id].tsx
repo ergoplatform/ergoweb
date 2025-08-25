@@ -3,16 +3,22 @@ import { useIntl } from 'react-intl';
 import BlogPosts from '../../components/blog/BlogPosts';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
+import Pagination from '../../components/shared/Pagination';
 
 type Props = {
   posts?: any;
-  news?: any;
-  categories?: any;
+  pagination?: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  } | null;
 };
 
 export default function Category(props: Props) {
   const intl = useIntl();
   const { locale, query } = useRouter();
+  const currentPage = Number((query.page as string) || 1);
   const title = intl.formatMessage({
     id: 'pages.blog.title',
     defaultMessage: 'Blog',
@@ -37,15 +43,17 @@ export default function Category(props: Props) {
                   background={false}
                 />
               </div>
-              <p className="font-vinila-extended text-[40px] md:text-[48px]">
+              <p className="font-vinila-extended text-[40px] md:text-[48px] bg-black/50 text-white px-3 py-2 rounded-md inline-block">
                 Search by tag “{query.id}”
               </p>
             </div>
           </div>
-          <BlogPosts
-            data={props.posts}
-            locale={locale}
-            filter={`&filters[type][$eq]=blog&filters[tag][$contains]=${query.id}`}
+          <BlogPosts data={props.posts} locale={locale} />
+          <Pagination
+            currentPage={currentPage}
+            total={props.pagination?.total ?? 0}
+            pageSize={props.pagination?.pageSize ?? 12}
+            basePath={`/category/${query.id}`}
           />
         </div>
       </Layout>
@@ -54,15 +62,20 @@ export default function Category(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const posts = await fetch(
+  const page = Number(context.query.page || 1);
+  const pageSize = 12;
+
+  const res = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&filters[tag][$contains]=${context.query.id}&locale=` +
-      context.locale,
+      `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*&filters[$or][0][type][$eq]=blog&filters[$or][1][type][$eq]=news&filters[tag][$contains]=${context.query.id}&locale=${context.locale}`,
   )
     .then((response) => response.json())
-    .then((response) => response.data);
+    .catch(() => null);
+
+  const posts = res?.data ?? null;
+  const pagination = res?.meta?.pagination ?? null;
 
   return {
-    props: { posts },
+    props: { posts, pagination },
   };
 };

@@ -40,7 +40,7 @@ export default function Button({
 
   if (background) {
     // Orange background button
-    // Light mode: white text on orange; Dark mode: keep white text for contrast
+    // Always use white text and white arrow regardless of theme or props
     textClasses = 'text-white';
     darkTextClass = 'dark:text-white';
   } else {
@@ -76,11 +76,10 @@ export default function Button({
   const isDark = resolvedTheme === 'dark';
   let effectiveIconColor = iconColor;
 
-  // Force white arrow if icon prop is ArrowRightWhite regardless of theme
-  if (icon === 'ArrowRightWhite') {
+  // For orange background buttons, always use white arrow
+  if (background) {
     effectiveIconColor = 'white';
-  } else if (background && !isDark) {
-    // For orange background in light mode, force white arrow per spec
+  } else if (icon === 'ArrowRightWhite') {
     effectiveIconColor = 'white';
   }
 

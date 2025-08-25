@@ -126,11 +126,15 @@
 
 h1 {
   font-family: "Vinila Extended Bold", sans-serif;
+}
+h1:not([class*="text-"]):not(.blog-title) {
   font-size: 120px;
 }
 
 h2 {
   font-family: "Vinila Extended Bold", sans-serif;
+}
+h2:not([class*="text-"]):not(.blog-title) {
   font-size: 96px;
 }
 
@@ -143,11 +147,15 @@ h3 {
 
 h4 {
   font-family: "Vinila Extended Light", sans-serif;
+}
+h4:not([class*="text-"]):not(.blog-title) {
   font-size: 56px;
-  b {
-    font-family: "Vinila Extended Bold", sans-serif;
-    font-size: 56px;
-  }
+}
+h4 b {
+  font-family: "Vinila Extended Bold", sans-serif;
+}
+h4:not([class*="text-"]):not(.blog-title) b {
+  font-size: 56px;
 }
 
 .font-subtitle-1 {
@@ -221,11 +229,11 @@ li {
 }
 
 @media screen and (max-width: $md) {
-  h1 {
+  h1:not([class*="text-"]):not(.blog-title) {
     font-size: 48px;
   }
 
-  h2 {
+  h2:not([class*="text-"]):not(.blog-title) {
     font-size: 40px;
   }
 
@@ -236,11 +244,11 @@ li {
     }
   }
 
-  h4 {
+  h4:not([class*="text-"]):not(.blog-title) {
     font-size: 24px;
-    b {
-      font-size: 24px;
-    }
+  }
+  h4:not([class*="text-"]):not(.blog-title) b {
+    font-size: 24px;
   }
 
   .font-subtitle-1 {
@@ -299,11 +307,11 @@ li {
 }
 
 @media screen and (max-width: $xs) {
-  h1 {
+  h1:not([class*="text-"]):not(.blog-title) {
     font-size: 32px;
   }
 
-  h2 {
+  h2:not([class*="text-"]):not(.blog-title) {
     font-size: 32px;
   }
 }

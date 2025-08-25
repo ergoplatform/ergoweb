@@ -37,12 +37,12 @@ export default function Post(props: Props) {
   }, []);
 
   return (
-    <div>
-      <div className="blog-frame-1"></div>
-      <div className="blog-frame-2"></div>
-      <div className="blog-frame-3"></div>
-      <div className="blog-blur-1"></div>
+    <div className="single-post">
       <Layout title={props.post.attributes.title}>
+        <div className="blog-frame-1"></div>
+        <div className="blog-frame-2"></div>
+        <div className="blog-frame-3"></div>
+        <div className="blog-blur-1"></div>
         <div className=" max-w-[1300px] mx-auto p-4 relative z-10 min-h-[1800px]">
           <div className="post bg-white rounded-xl px pt-8 border-[1px] border-gray-300 mt-20 mb-40">
             <div className="px-4 md:px-32 md:py-20">
@@ -56,7 +56,7 @@ export default function Post(props: Props) {
                   background={false}
                 />
               </div>
-              <h1 className="text-[40px] text-black dark:text-black">
+              <h1 className="blog-title text-black dark:text-black">
                 {props.post.attributes.title}
               </h1>
               <div className="mb-8 mt-4 flex flex-row flex-wrap">
