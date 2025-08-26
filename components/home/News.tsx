@@ -1,5 +1,7 @@
-import { FormattedDate, FormattedMessage } from 'react-intl';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 type Props = {
   news: any;
@@ -7,6 +9,93 @@ type Props = {
 
 export default function News({ news }: Props) {
   const now = new Date();
+  const { locale } = useRouter();
+  const intl = useIntl();
+  const [items, setItems] = useState<any[]>(Array.isArray(news) ? news : []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function refreshNews() {
+      const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API as string | undefined;
+      if (!STRAPI) return;
+
+      const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
+      const mapped = toStrapiLocale(locale || 'en');
+      const variants = new Set<string>([mapped, locale || 'en']);
+      if ((locale || 'en') === 'cn') {
+        variants.add('zh');
+        variants.add('zh-CN');
+      }
+
+      async function fetchForLocale(loc: string) {
+        try {
+          const res = await fetch(
+            STRAPI +
+              '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=24&populate=*&filters[type][$eq]=news&locale=' +
+              encodeURIComponent(loc),
+            { cache: 'no-store' } as any,
+          );
+          const json = await res.json();
+          return Array.isArray(json?.data) ? json.data : [];
+        } catch {
+          return [];
+        }
+      }
+
+      const localizedArrays = await Promise.all(Array.from(variants).map((v) => fetchForLocale(v)));
+      const enArray = await fetchForLocale('en');
+
+      const bySlug: Record<string, any> = {};
+      for (const arr of localizedArrays) {
+        for (const p of arr) {
+          const slug = p?.attributes?.permalink;
+          if (typeof slug === 'string' && !bySlug[slug]) {
+            bySlug[slug] = p;
+          }
+        }
+      }
+      const localized = Object.values(bySlug);
+
+      const localizedSlugs = new Set(
+        localized
+          .map((p: any) => p?.attributes?.permalink)
+          .filter((s: any) => typeof s === 'string'),
+      );
+
+      const merged = localized
+        .concat(
+          enArray.filter((p: any) => {
+            const slug = p?.attributes?.permalink;
+            return typeof slug === 'string' && !localizedSlugs.has(slug);
+          }),
+        )
+        .sort((a: any, b: any) => {
+          const da = new Date(a?.attributes?.date || 0).getTime();
+          const db = new Date(b?.attributes?.date || 0).getTime();
+          return db - da;
+        })
+        .slice(0, 8)
+        .map((post: any) => ({
+          id: post.id,
+          attributes: {
+            title: post.attributes?.title,
+            date: post.attributes?.date,
+            permalink: post.attributes?.permalink,
+            url: post.attributes?.url,
+          },
+        }));
+
+      if (!cancelled) {
+        setItems(merged);
+      }
+    }
+
+    refreshNews();
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
 
   return (
     <div id="News" className="max-w-7xl mx-auto px-2 md:px-4 relative" style={{ zIndex: 12 }}>
@@ -29,14 +118,17 @@ export default function News({ news }: Props) {
           </p>
 
           <div
-            className="group relative text-left mt-4 max-h-[12rem] w-full overflow-hidden hover:overflow-auto focus-within:overflow-auto"
+            className="group relative text-left mt-4 max-h-[12rem] w-full overflow-hidden"
             role="region"
-            aria-label="Latest news"
+            aria-label={intl.formatMessage({
+              id: 'components.news.latestAria',
+              defaultMessage: 'Latest news',
+            })}
             tabIndex={0}
           >
             <ul role="list" className="list-disc pl-5 space-y-2">
-              {news && news.length > 0 ? (
-                news.map((post: any, i: number) => {
+              {items && items.length > 0 ? (
+                items.map((post: any, i: number) => {
                   const postDate = new Date(post.attributes.date);
                   const daysSince = (now.getTime() - postDate.getTime()) / (1000 * 3600 * 24);
                   const isNew = daysSince <= 7;
@@ -56,32 +148,43 @@ export default function News({ news }: Props) {
                           year={showYear ? 'numeric' : undefined}
                         />
                       </span>
-                      <a
-                        href={post.attributes.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={post.attributes.title}
-                        className="underline hover:no-underline dark:text-brand-orange flex-1 min-w-0 truncate"
-                      >
-                        {post.attributes.title}
-                      </a>
+                      {post.attributes.permalink ? (
+                        <Link
+                          href={`/blog/${post.attributes.permalink}`}
+                          title={post.attributes.title}
+                          className="underline hover:no-underline dark:text-brand-orange flex-1 min-w-0 truncate"
+                        >
+                          {post.attributes.title}
+                        </Link>
+                      ) : (
+                        <a
+                          href={post.attributes.url}
+                          title={post.attributes.title}
+                          className="underline hover:no-underline dark:text-brand-orange flex-1 min-w-0 truncate"
+                        >
+                          {post.attributes.title}
+                        </a>
+                      )}
                       {isNew ? (
                         <span className="ml-2 shrink-0 inline-block rounded bg-red-500 px-1 text-xs font-semibold text-white">
-                          New
+                          <FormattedMessage id="components.news.newBadge" defaultMessage="New" />
                         </span>
                       ) : null}
                     </li>
                   );
                 })
               ) : (
-                <li className="text-black dark:text-white">No news available.</li>
+                <li className="text-black dark:text-white">
+                  <FormattedMessage id="components.news.none" defaultMessage="No news available." />
+                </li>
               )}
             </ul>
           </div>
-          <Link href="/blog?type=news" passHref>
-            <a className="mt-2 inline-block text-sm font-semibold text-brand-orange underline hover:no-underline">
-              View all news
-            </a>
+          <Link
+            href="/blog?type=news"
+            className="mt-2 inline-block text-sm font-semibold text-brand-orange underline hover:no-underline"
+          >
+            <FormattedMessage id="components.news.viewAll" defaultMessage="View all news" />
           </Link>
         </div>
       </div>

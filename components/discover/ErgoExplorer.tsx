@@ -28,19 +28,31 @@ export default function Explore() {
         </b>
       </h1>
       <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-12 xl:ml-[400px] xl:max-w-lg">
-        The Ergo Explorer is your interface with the blockchain. Watch every transaction made in
-        real-time. Or, view community curated metrics on ergo.watch.
+        <FormattedMessage
+          id="components.ergoExplorer.description"
+          defaultMessage="The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
+        />
       </p>
 
       <div className="flex flex-col xl:flex-row xl:ml-[400px] gap-6 mt-6">
         <div className="flex flex-col gap-4">
-          <h2 className="font-bold text-lg">Blockchain Explorers</h2>
+          <h2 className="font-bold text-lg">
+            <FormattedMessage
+              id="components.ergoExplorer.blockchainExplorers"
+              defaultMessage="Blockchain Explorers"
+            />
+          </h2>
           <Link href="https://explorer.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
             <button
               type="submit"
               className="py-1 px-4 inline-flex items-center whitespace-nowrap inline-block rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             >
-              <span>Ergo Explorer</span>
+              <span>
+                <FormattedMessage
+                  id="components.ergoExplorer.ergoExplorer"
+                  defaultMessage="Ergo Explorer"
+                />
+              </span>
               <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightWhite')}</span>
             </button>
           </Link>
@@ -49,7 +61,12 @@ export default function Explore() {
               type="submit"
               className="py-1 px-4 inline-flex items-center whitespace-nowrap inline-block rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             >
-              <span>SigmaSpace (alternative backend)</span>
+              <span>
+                <FormattedMessage
+                  id="components.ergoExplorer.sigmaSpaceAltBackend"
+                  defaultMessage="SigmaSpace (alternative backend)"
+                />
+              </span>
               <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightWhite')}</span>
             </button>
           </Link>
@@ -58,19 +75,31 @@ export default function Explore() {
               type="submit"
               className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             >
-              <span>ErgExplorer (alternative frontend)</span>
+              <span>
+                <FormattedMessage
+                  id="components.ergoExplorer.ergExplorerAltFrontend"
+                  defaultMessage="ErgExplorer (alternative frontend)"
+                />
+              </span>
               <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightWhite')}</span>
             </button>
           </Link>
         </div>
         <div className="flex flex-col gap-4">
-          <h2 className="font-bold text-lg">Metrics</h2>
+          <h2 className="font-bold text-lg">
+            <FormattedMessage id="components.ergoExplorer.metrics" defaultMessage="Metrics" />
+          </h2>
           <Link href="https://ergo.watch/" target="_blank" rel="noopener noreferrer">
             <button
               type="submit"
               className="py-1 px-4 inline-flex items-center whitespace-nowrap btn rounded-full text-white font-vinila-extended text-[14px] md:text-[16px] bg-brand-orange hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             >
-              <span>Ergo.Watch</span>
+              <span>
+                <FormattedMessage
+                  id="components.ergoExplorer.ergoWatch"
+                  defaultMessage="Ergo.Watch"
+                />
+              </span>
               <span className="w-4 h-4 ml-2">{getIconComponentByName('ArrowRightWhite')}</span>
             </button>
           </Link>

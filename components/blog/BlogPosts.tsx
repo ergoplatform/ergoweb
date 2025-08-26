@@ -27,13 +27,10 @@ const BlogPosts = (props: Props) => {
                   permalink={post.attributes.permalink}
                   type={post.attributes.type}
                   content={post.attributes.content}
-                  image={
-                    post.attributes.image.data != null
-                      ? post.attributes.image.data?.attributes?.formats?.medium?.url
-                      : null
-                  }
+                  image={post.attributes.image?.data?.attributes?.formats?.medium?.url ?? null}
                   blogPhoto={post.attributes.blogPhoto}
                   authorPhoto={post.attributes.authorPhoto}
+                  needsTranslation={post.attributes.needsTranslation}
                 />
               </div>
             ))}

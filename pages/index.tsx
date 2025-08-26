@@ -91,18 +91,85 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps = async (context: any) => {
-  // Fetch raw data
-  const postsJson = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=6&populate=*&filters[type][$eq]=blog',
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
+  // Fetch raw data (localized, with EN fallback)
+  const loc = (context?.locale as string) || 'en';
+  const strapiLoc = loc === 'cn' ? 'zh' : loc;
 
-  // Trim posts to reduce page size (keep only fields used on the homepage)
-  const posts = postsJson?.data
+  async function fetchJson(url: string) {
+    try {
+      const res = await fetch(url);
+      return await res.json();
+    } catch {
+      return null;
+    }
+  }
+
+  // Fetch localized and English posts, then merge by permalink
+  const localPostsJson = await fetchJson(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=' +
+      encodeURIComponent(strapiLoc),
+  );
+
+  const enPostsJson = await fetchJson(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=en',
+  );
+
+  const localArr: any[] = Array.isArray(localPostsJson?.data) ? localPostsJson.data : [];
+  const enArr: any[] = Array.isArray(enPostsJson?.data) ? enPostsJson.data : [];
+
+  // Map English posts by permalink for fallback of media fields when localized entry lacks them
+  const enBySlug: Record<string, any> = {};
+  enArr.forEach((p: any) => {
+    const slug = p?.attributes?.permalink;
+    if (typeof slug === 'string') enBySlug[slug] = p;
+  });
+
+  const seen = new Set(
+    localArr.map((p: any) => p?.attributes?.permalink).filter((s: any) => typeof s === 'string'),
+  );
+
+  const merged: any[] = localArr.concat(
+    enArr
+      .filter((p: any) => {
+        const slug = p?.attributes?.permalink;
+        return typeof slug === 'string' && !seen.has(slug);
+      })
+      .map((p: any) => ({
+        ...p,
+        attributes: { ...p.attributes, needsTranslation: true },
+      })),
+  );
+
+  // Ensure localized entries inherit image/blogPhoto from English if missing
+  const mergedFinal: any[] = merged.map((p: any) => {
+    const a = p?.attributes || {};
+    const slug = a?.permalink as string | undefined;
+    if (!slug) return p;
+    const en = enBySlug[slug]?.attributes || {};
+    const hasImage = Boolean(a?.image?.data);
+    const hasBlogPhoto = typeof a?.blogPhoto === 'string' && a.blogPhoto.length > 0;
+    return {
+      ...p,
+      attributes: {
+        ...a,
+        image: hasImage ? a.image : en?.image ?? a?.image,
+        blogPhoto: hasBlogPhoto ? a.blogPhoto : en?.blogPhoto ?? a?.blogPhoto,
+      },
+    };
+  });
+
+  // Pick top items by date across localized and English fallback, then trim fields for homepage
+  const mergedSorted: any[] = mergedFinal.slice().sort((a: any, b: any) => {
+    const da = new Date(a?.attributes?.date || 0).getTime();
+    const db = new Date(b?.attributes?.date || 0).getTime();
+    return db - da;
+  });
+
+  const posts = mergedSorted.length
     ? {
-        data: postsJson.data.slice(0, 6).map((post: any) => {
+        data: mergedSorted.slice(0, 6).map((post: any) => {
           const a = post.attributes || {};
           const mediumUrl = a.image?.data?.attributes?.formats?.medium?.url ?? null;
           return {
@@ -124,27 +191,63 @@ export const getStaticProps = async (context: any) => {
                 : null,
               blogPhoto: a.blogPhoto ?? null,
               authorPhoto: a.authorPhoto ?? null,
+              needsTranslation: Boolean(a.needsTranslation),
             },
           };
         }),
       }
     : null;
 
-  const newsJson = await fetch(
+  // Fetch localized and English news, then merge by permalink to prefer localized titles with EN fallback
+  const localNewsJson = await fetchJson(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=8&populate=*&filters[type][$eq]=news',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=12&populate=*&filters[type][$eq]=news&locale=' +
+      encodeURIComponent(strapiLoc),
+  );
+
+  const enNewsJson = await fetchJson(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=12&populate=*&filters[type][$eq]=news&locale=en',
+  );
+
+  const localNewsArr: any[] = Array.isArray(localNewsJson?.data) ? localNewsJson.data : [];
+  const enNewsArr: any[] = Array.isArray(enNewsJson?.data) ? enNewsJson.data : [];
+
+  const enNewsBySlug: Record<string, any> = {};
+  enNewsArr.forEach((p: any) => {
+    const slug = p?.attributes?.permalink;
+    if (typeof slug === 'string') enNewsBySlug[slug] = p;
+  });
+
+  const localizedNewsSlugs = new Set(
+    localNewsArr
+      .map((p: any) => p?.attributes?.permalink)
+      .filter((s: any) => typeof s === 'string'),
+  );
+
+  const mergedNews = localNewsArr
+    .concat(
+      enNewsArr.filter((p: any) => {
+        const slug = p?.attributes?.permalink;
+        return typeof slug === 'string' && !localizedNewsSlugs.has(slug);
+      }),
+    )
+    // Ensure stable ordering and trim to a fixed size
+    .sort((a: any, b: any) => {
+      const da = new Date(a?.attributes?.date || 0).getTime();
+      const db = new Date(b?.attributes?.date || 0).getTime();
+      return db - da;
+    })
+    .slice(0, 8);
 
   // Trim news to only fields used by the News component
-  const news = newsJson
-    ? newsJson.map((post: any) => ({
+  const news = mergedNews.length
+    ? mergedNews.map((post: any) => ({
         id: post.id,
         attributes: {
           title: post.attributes?.title,
           date: post.attributes?.date,
+          permalink: post.attributes?.permalink,
           url: post.attributes?.url,
         },
       }))
@@ -182,6 +285,6 @@ export const getStaticProps = async (context: any) => {
 
   return {
     props: { posts, news, info, blockReward, partners }, // Pass partners to props
-    revalidate: 60,
+    revalidate: 10,
   };
 };

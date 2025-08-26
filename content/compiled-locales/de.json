@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "LESEN"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "LESEN"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "ZURÜCK ZU ALLEN BEITRÄGEN"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Diese Seite ist maschinell übersetzt."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Beitrag teilen"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "Übersetzung vorübergehend nicht verfügbar. Das englische Original wird angezeigt."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Kategorien"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Schließen"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Weiter"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Zurück"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -229,6 +289,18 @@
       "value": "Die Zukunft von Proof of Work"
     }
   ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Nichts mehr anzuzeigen"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Laden..."
+    }
+  ],
   "components.communityHero.Discord.text": [
     {
       "type": 0,
@@ -334,7 +406,7 @@
   "components.communityHero.title": [
     {
       "type": 0,
-      "value": "Ökosystem"
+      "value": "Community"
     }
   ],
   "components.communitySection.communityHero.linkText": [
@@ -409,6 +481,12 @@
       "value": "BESUCH ERGONAUT.SPACE"
     }
   ],
+  "components.discoverHero.title": [
+    {
+      "type": 0,
+      "value": "Entdecke Ergo"
+    }
+  ],
   "components.documents.description": [
     {
       "type": 0,
@@ -427,6 +505,12 @@
       "value": "Ökosystem"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Blockchain-Explorer"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -437,6 +521,42 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Der Ergo Explorer ist deine Schnittstelle zur Blockchain. Beobachte jede Transaktion in Echtzeit. Oder sieh dir von der Community kuratierte Metriken auf ergo.watch an."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (alternatives Frontend)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Metriken"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (alternatives Backend)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -647,6 +767,12 @@
       "value": "Häufig gestellte Fragen"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Laden..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -665,6 +791,24 @@
     {
       "type": 0,
       "value": "ERKUNDE ERGO RAFFLE"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "PROBIERE MEWFUND AUS"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "LIES MEHR ÜBER RAFFLE V2"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Kein Bild"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -688,25 +832,31 @@
   "components.getErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Abbau"
+      "value": "Minen"
     }
   ],
   "components.getErg.StoreIt.text": [
     {
       "type": 0,
-      "value": "Einfache und sichere nicht-kustodiale Brieftaschen, um Ihre ERG sicher aufzubewahren."
+      "value": "Einfache und sichere Non-Custodial Wallets, um deine ERG sicher aufzubewahren."
     }
   ],
   "components.getErg.StoreIt.title": [
     {
       "type": 0,
-      "value": "Brieftaschen"
+      "value": "Wallets"
+    }
+  ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Setze dein ERG heute in unserem wachsenden Ökosystem ein."
     }
   ],
   "components.getErg.UseIt.title": [
     {
       "type": 0,
-      "value": "Setzen Sie Ihr ERG heute in unserem wachsenden Ökosystem ein."
+      "value": "Ökosystem"
     }
   ],
   "components.getErg.description": [
@@ -867,6 +1017,12 @@
       "value": "TAUCHE EIN"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "PITCH DECK"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
@@ -945,6 +1101,12 @@
       "value": "Mining-Blog-Posts"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "EMISSION & TOKENOMICS"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -963,16 +1125,40 @@
       "value": "Autolykos ist der zugrunde liegende memory-hard ASIC-resistente Proof of Work (PoW)-Algorithmus, der auf GPUs ausgerichtet ist."
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Deine Hashrate"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Netzwerk-Hashrate"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Hashrate-Wert"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Tägliche Einnahmen"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -984,7 +1170,7 @@
   "components.mining.minersTitle": [
     {
       "type": 0,
-      "value": "Bergleute"
+      "value": "Miner"
     }
   ],
   "components.mining.miningPoolsTitle": [
@@ -1029,10 +1215,34 @@
       "value": "Aktuelle News"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "Aktuelle News"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Neu"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Keine News verfügbar."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "News"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Alle News ansehen"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1083,6 +1293,12 @@
       "value": "Partner"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Übersetzen"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1110,13 +1326,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "BALD"
+      "value": "IN ARBEIT"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 & DANACH"
+      "value": "BALD"
     }
   ],
   "components.roadmap.title": [
@@ -1236,7 +1452,7 @@
   "components.usingErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Abbau"
+      "value": "Minen"
     }
   ],
   "components.usingErg.StoreIt.text": [
@@ -1248,7 +1464,7 @@
   "components.usingErg.StoreIt.title": [
     {
       "type": 0,
-      "value": "Brieftaschen"
+      "value": "Wallets"
     }
   ],
   "components.usingErg.UseIt.title": [
@@ -1275,6 +1491,12 @@
       "value": "HOL DIR ERG"
     }
   ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
   "components.wallets.chooseYours": [
     {
       "type": 0,
@@ -1285,6 +1507,12 @@
     {
       "type": 0,
       "value": "Kaltspeicherung"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "dApp-Connector"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1326,13 +1554,13 @@
   "components.wallets.walletsHeader": [
     {
       "type": 0,
-      "value": "Brieftaschen"
+      "value": "Wallets"
     }
   ],
   "components.wallets.walletsTitle": [
     {
       "type": 0,
-      "value": "Brieftaschen"
+      "value": "Wallets"
     }
   ],
   "components.wiki.description": [
@@ -1425,6 +1653,18 @@
       "value": "Dokumente"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "ENTDECKE ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Software-Veröffentlichungen"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1465,6 +1705,12 @@
     {
       "type": 0,
       "value": "ÖKOSYSTEM"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "UNSERE FAVORITEN"
     }
   ],
   "footer.getErg.1": [
@@ -1515,10 +1761,22 @@
       "value": "Datenschutzhinweise"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Ergo im echten Leben"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "We got it!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hall of Fame"
     }
   ],
   "navigation.discover": [
@@ -1605,16 +1863,76 @@
       "value": "Rechtliches"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "Medien über uns"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "Mobile Wallets"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "News"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Datenschutzrichtlinie"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Übersetze"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Übersetze..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "DOKUMENTATION"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "BÖRSEN"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "ROADMAP"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "WALLETS"
     }
   ]
 }

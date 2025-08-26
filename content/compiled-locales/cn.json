@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "阅读"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "阅读"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "返回所有文章"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "此页面为机器翻译。"
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "分享文章"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "翻译暂时不可用。显示原始英文内容。"
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "分类"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "关闭"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "下一步"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "上一步"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -199,6 +259,18 @@
     {
       "type": 0,
       "value": "工作量证明的未来"
+    }
+  ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "没有更多内容"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "加载中..."
     }
   ],
   "components.communityHero.Discord.text": [
@@ -405,6 +477,12 @@
       "value": "生态系统"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "区块链浏览器"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -415,6 +493,42 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Ergo浏览器是您与区块链的接口。实时查看每一笔交易。或者，在ergo.watch上查看社区整理的指标。"
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (备用前端)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo 浏览器"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "指标"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (备用后端)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -625,6 +739,12 @@
       "value": "常见问题解答"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "加载中..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -643,6 +763,24 @@
     {
       "type": 0,
       "value": "探索ERGO RAFFLE"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "试用 MEWFUND"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "阅读关于 RAFFLE V2"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "无图片"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -690,7 +828,7 @@
   "components.getErg.UseIt.title": [
     {
       "type": 0,
-      "value": "用它"
+      "value": "生态系统"
     }
   ],
   "components.getErg.description": [
@@ -851,6 +989,12 @@
       "value": "深入了解"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "项目介绍"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
@@ -929,6 +1073,12 @@
       "value": "挖矿博客文章"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "代币释放与经济模型"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -947,16 +1097,40 @@
       "value": "Autolykos 是面向 GPU 的底层内存硬ASIC抗性工作证明（PoW）算法。"
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "您的算力"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "网络哈希率"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "算力值"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "每日收入"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -1013,10 +1187,34 @@
       "value": "最新新闻"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "最新新闻"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "新"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "无可用新闻。"
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "新闻"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "查看全部新闻"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1067,6 +1265,12 @@
       "value": "伙伴"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "翻译"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1094,13 +1298,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "很快"
+      "value": "进行中"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024年及以后"
+      "value": "即将推出"
     }
   ],
   "components.roadmap.title": [
@@ -1253,16 +1457,22 @@
       "value": "Ergo之上有一个丰富的生态系统正在萌芽。无论您是开发者、矿工还是投资者 —— 我们都欢迎您的加入。"
     }
   ],
-  "components.usingErg.subtitle": [
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "获取ERG"
+    }
+  ],
+  "components.usingErgo.subtitle": [
     {
       "type": 0,
       "value": "DEFI势不可挡"
     }
   ],
-  "components.usingErg.title": [
+  "components.wallets.ErgoPay": [
     {
       "type": 0,
-      "value": "获取ERG"
+      "value": "ErgoPay"
     }
   ],
   "components.wallets.chooseYours": [
@@ -1275,6 +1485,12 @@
     {
       "type": 0,
       "value": "冷存储"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "dApp 连接器"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1415,6 +1631,18 @@
       "value": "文档"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "发现 ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "软件发布"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1455,6 +1683,12 @@
     {
       "type": 0,
       "value": "生态系统"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "我们的最爱"
     }
   ],
   "footer.getErg.1": [
@@ -1505,10 +1739,22 @@
       "value": "隐私政策"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "现实生活中的 Ergo"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "我们已获得它！"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "名人堂"
     }
   ],
   "navigation.discover": [
@@ -1595,16 +1841,76 @@
       "value": "法律"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "媒体报道"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "移动钱包"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "新闻"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "隐私政策"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "翻译中"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "翻译中..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "博客"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "文档"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "交易所"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "路线图"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "钱包"
     }
   ]
 }

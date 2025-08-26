@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 function SecondaryMenu() {
+  const intl = useIntl();
   return (
     <>
       {/* 
@@ -16,33 +18,45 @@ function SecondaryMenu() {
           <Link
             href="/get-erg#Wallets"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
-            aria-label="Wallets"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.wallets',
+              defaultMessage: 'WALLETS',
+            })}
           >
-            WALLETS
+            <FormattedMessage id="secondaryMenu.wallets" defaultMessage="WALLETS" />
           </Link>
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/get-erg#Exchanges"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
-            aria-label="Exchanges"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.exchanges',
+              defaultMessage: 'EXCHANGES',
+            })}
           >
-            EXCHANGES
+            <FormattedMessage id="secondaryMenu.exchanges" defaultMessage="EXCHANGES" />
           </Link>
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/ecosystem#Roadmap"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
-            aria-label="Roadmap"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.roadmap',
+              defaultMessage: 'ROADMAP',
+            })}
           >
-            ROADMAP
+            <FormattedMessage id="secondaryMenu.roadmap" defaultMessage="ROADMAP" />
           </Link>
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <Link
             href="/blog"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
-            aria-label="Blog"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.blog',
+              defaultMessage: 'BLOG',
+            })}
           >
-            BLOG
+            <FormattedMessage id="secondaryMenu.blog" defaultMessage="BLOG" />
           </Link>
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <a
@@ -50,9 +64,12 @@ function SecondaryMenu() {
             target="_blank"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             rel="noreferrer"
-            aria-label="Documentation"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.documentation',
+              defaultMessage: 'DOCUMENTATION',
+            })}
           >
-            DOCUMENTATION
+            <FormattedMessage id="secondaryMenu.documentation" defaultMessage="DOCUMENTATION" />
           </a>
           <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
           <a
@@ -60,9 +77,12 @@ function SecondaryMenu() {
             target="_blank"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
             rel="noreferrer"
-            aria-label="Sigmaverse"
+            aria-label={intl.formatMessage({
+              id: 'secondaryMenu.sigmaverse',
+              defaultMessage: 'SIGMAVERSE',
+            })}
           >
-            SIGMAVERSE
+            <FormattedMessage id="secondaryMenu.sigmaverse" defaultMessage="SIGMAVERSE" />
           </a>
         </div>
       </div>

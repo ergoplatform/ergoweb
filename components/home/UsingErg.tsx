@@ -1,5 +1,6 @@
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import UsingErgMineIt from '../icons/UsingErgMineIt';
 import UsingErgMineItLight from '../icons/UsingErgMineItLight';
 import UsingErgBuyIt from '../icons/UsingErgBuyIt';
@@ -67,27 +68,83 @@ function FormattedMessageFixed(props: any) {
 }
 
 export default function UsingErg() {
+  const intl = useIntl();
+  const titleRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [fontSize, setFontSize] = useState<number>(96); // desktop target for short English title
+
+  useEffect(() => {
+    function adjustFontSize() {
+      if (!titleRef.current || !containerRef.current) return;
+
+      const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1024;
+      const containerWidth = containerRef.current.offsetWidth * (isDesktop ? 0.3 : 1); // 30% on desktop, full width on mobile
+      let newFontSize = 96; // start at desktop target for short titles
+
+      // Measure width of each word separately and sum with line breaks
+      const words = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+      const totalChars = words.join('').length;
+      const minBound = totalChars <= 7 ? 72 : 32; // keep short titles larger
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      if (!context) return;
+
+      context.font = `${newFontSize}px Arial, sans-serif`;
+      let totalWidth = 0;
+      words.forEach(word => {
+        const metrics = context.measureText(word);
+        totalWidth = Math.max(totalWidth, metrics.width);
+      });
+
+      // Reduce font size if max word width exceeds container width
+      while (totalWidth > containerWidth && newFontSize > minBound) {
+        newFontSize -= 1;
+        context.font = `${newFontSize}px Arial, sans-serif`;
+        totalWidth = 0;
+        words.forEach(word => {
+          const metrics = context.measureText(word);
+          totalWidth = Math.max(totalWidth, metrics.width);
+        });
+      }
+
+      setFontSize(newFontSize);
+    }
+
+    adjustFontSize();
+    window.addEventListener('resize', adjustFontSize);
+    return () => window.removeEventListener('resize', adjustFontSize);
+  }, [intl]);
+
+  const titleWords = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+
   return (
     <div
       id="UsingErg"
       className="max-w-[1300px] mx-auto py-12 px-4 lg:py-16 lg:px-4 relative"
       style={{ zIndex: 13 }}
+      ref={containerRef}
     >
       <div className="px-4">
         <div className="flex flex-col xl:flex-row justify-between">
-          <div className="lg:flex lg:flex-col lg:items-start lg:mb-0 lg:ml-12 mt-10">
+          <div className="w-full lg:max-w-[30%] lg:flex lg:flex-col lg:items-start lg:mb-0 lg:ml-12 mt-10 flex-shrink-0">
             <p className="text-black dark:text-white mb-4 font-bold pl-4 md:pl-0 text-left">
               <FormattedMessage
                 defaultMessage={'UNSTOPPABLE DEFI'}
                 id="components.usingErg.subtitle"
-              ></FormattedMessage>
+              />
             </p>
-            <h2 className="leading-none text-h2 pl-4 md:pl-0 text-left">
+            <h2
+              ref={titleRef}
+              className="leading-none text-h2 pl-4 md:pl-0 text-left responsive-title"
+              style={{ whiteSpace: 'normal', fontSize: `${fontSize}px` }}
+            >
               <b>
-                <FormattedMessage
-                  defaultMessage={'GET ERG'}
-                  id="components.usingErg.title"
-                ></FormattedMessage>
+                {titleWords.map((word, idx) => (
+                  <React.Fragment key={idx}>
+                    {word}
+                    {idx < titleWords.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </b>
             </h2>
             <p className="text-black dark:text-white mt-6 max-w-xs mr-4 pl-4 md:pl-0 text-left md:text-lg lg:text-xl">
@@ -95,12 +152,13 @@ export default function UsingErg() {
                 defaultMessage="There is a rich ecosystem budding on top of Ergo. Whether you are a developer, miner, or
                 investor, we have you covered."
                 id="components.usingErg.description"
-              ></FormattedMessage>
+              />
             </p>
           </div>
           <div
-            className="lg:grid flex grid-cols-4 grid-rows-1 gap-2 lg:gap-8 xl:gap-[5rem] no-scrollbar pb-2 overflow-x-auto lg:overflow-visible mt-12 lg:ml-12 relative"
+            className="flex gap-4 no-scrollbar pb-2 overflow-x-auto mt-12 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:ml-12 relative"
             id="erg-card-row"
+            style={{ minWidth: '0' }}
           >
             {cards.map((card: any, i: number) => (
               <Link
@@ -108,7 +166,7 @@ export default function UsingErg() {
                 href={card.url}
                 aria-label={typeof card.title === 'string' ? card.title : undefined}
               >
-                <div className="cursor-pointer z-20 min-w-[238px] flex flex-col justify-between using-erg-card dark:using-erg-card p-4 md:p-5 lg:p-4 mx-1 md:mx-2 lg:mx-0 transition-all duration-300 h-[630px] md:h-[612px] overflow-hidden">
+                <div className="cursor-pointer z-20 min-w-[200px] flex flex-col justify-between using-erg-card dark:using-erg-card p-4 md:p-5 lg:p-4 mx-1 md:mx-2 lg:mx-0 transition-all duration-300 h-[630px] md:h-[612px] overflow-visible">
                   <div className="w-full flex flex-col items-center text-center pt-2 pb-4 mt-8">
                     <p className="font-subtitle-3 mb-2 text-2xl md:text-xl">
                       {typeof card.title === 'string' ? card.title : card.title}

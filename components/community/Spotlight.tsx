@@ -24,7 +24,7 @@ export default function Spotlight() {
         <Button
           text={buttonText}
           url="/blog"
-          newTab={true}
+          newTab={false}
           underline={true}
           textColor="brand-orange"
           background={false}

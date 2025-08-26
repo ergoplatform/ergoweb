@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowRightWhite from '../icons/ArrowRightWhite';
+import { FormattedMessage } from 'react-intl';
 
 type Project = {
   id: number;
@@ -81,7 +82,9 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
             priority={effectiveSpan === 'tall'}
           />
         ) : (
-          <div className="text-xs text-zinc-500">No image</div>
+          <div className="text-xs text-zinc-500">
+            <FormattedMessage id="components.featureCard.noImage" defaultMessage="No image" />
+          </div>
         )}
       </div>
 

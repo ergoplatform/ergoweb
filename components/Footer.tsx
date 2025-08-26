@@ -18,18 +18,19 @@ export default function Footer() {
   const [postsData, setPostsData] = useState([]);
   const [newsData, setNewsData] = useState([]);
   const { locale } = useRouter();
+  const apiLocale = locale === 'cn' ? 'zh' : locale === 'default' ? 'en' : locale || 'en';
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const postsRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=${locale}`,
+          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=${apiLocale}`,
         );
         const posts = await postsRes.json();
         setPostsData(posts.data || []);
 
         const newsRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=${locale}`,
+          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=${apiLocale}`,
         );
         const news = await newsRes.json();
         setNewsData(news.data || []);
@@ -40,7 +41,7 @@ export default function Footer() {
       }
     };
     fetchData();
-  }, [locale]);
+  }, [apiLocale, locale]);
 
   const PlaceholderList = ({ count = 5 }: { count?: number }) => (
     <ul className="hidden md:block h-[360px] lg:h-[380px]" aria-hidden="true">
@@ -359,12 +360,23 @@ export default function Footer() {
               <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
                 {postsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
-                    <Link
-                      href={attributes.url}
-                      className="text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5"
-                    >
-                      {attributes.title}
-                    </Link>
+                    {(() => {
+                      const href =
+                        (typeof attributes?.url === 'string' && attributes.url) ||
+                        (attributes?.permalink ? `/blog/${attributes.permalink}` : '/blog');
+                      const isExternal = typeof href === 'string' && /^https?:\/\//i.test(href);
+                      const commonClass =
+                        'text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5';
+                      return isExternal ? (
+                        <a href={href} target="_blank" rel="noreferrer" className={commonClass}>
+                          {attributes?.title || attributes?.permalink || 'Post'}
+                        </a>
+                      ) : (
+                        <Link href={href} className={commonClass}>
+                          {attributes?.title || attributes?.permalink || 'Post'}
+                        </Link>
+                      );
+                    })()}
                   </li>
                 ))}
               </ul>
@@ -382,12 +394,25 @@ export default function Footer() {
               <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
                 {newsData.map(({ attributes, id }: { attributes: any; id: string }) => (
                   <li key={id} className="mb-4">
-                    <Link
-                      href={attributes.url}
-                      className="text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5"
-                    >
-                      {attributes.title}
-                    </Link>
+                    {(() => {
+                      const href =
+                        (typeof attributes?.url === 'string' && attributes.url) ||
+                        (attributes?.permalink
+                          ? `/blog/${attributes.permalink}`
+                          : '/blog?type=news');
+                      const isExternal = typeof href === 'string' && /^https?:\/\//i.test(href);
+                      const commonClass =
+                        'text-black dark:text-gray-300 cursor-pointer block w-full truncate leading-5';
+                      return isExternal ? (
+                        <a href={href} target="_blank" rel="noreferrer" className={commonClass}>
+                          {attributes?.title || attributes?.permalink || 'News'}
+                        </a>
+                      ) : (
+                        <Link href={href} className={commonClass}>
+                          {attributes?.title || attributes?.permalink || 'News'}
+                        </Link>
+                      );
+                    })()}
                   </li>
                 ))}
               </ul>

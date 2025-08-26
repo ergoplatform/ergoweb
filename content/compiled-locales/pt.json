@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "LER"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "LER"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "VOLTAR PARA TODOS OS POSTS"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Esta página foi traduzida por máquina."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Compartilhar post"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "Tradução temporariamente indisponível. Exibindo o original em inglês."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Categorias"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Fechar"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Próximo"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Anterior"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -134,7 +194,19 @@
   "components.Sigmanauts.text": [
     {
       "type": 0,
-      "value": "Inscreva-se no Programa de Treinamento Sigmanauta para ajudar a moldar e crescer Ergo."
+      "value": "Inscreva-se no Programa de Treinamento Sigmanauta para ajudar a moldar e crescer Ergo. "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": " Vamos criar finanças de base popular."
     }
   ],
   "components.Sigmanauts.title": [
@@ -187,6 +259,18 @@
     {
       "type": 0,
       "value": "O Futuro da Prova-de-Trabalho"
+    }
+  ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Nada mais para mostrar"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Carregando..."
     }
   ],
   "components.communityHero.Discord.text": [
@@ -294,7 +378,7 @@
   "components.communityHero.title": [
     {
       "type": 0,
-      "value": "Ecossistema"
+      "value": "Comunidade"
     }
   ],
   "components.communitySection.communityHero.linkText": [
@@ -393,6 +477,12 @@
       "value": "Ecossistema"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Exploradores de Blockchain"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -403,6 +493,42 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "O Ergo Explorer é sua interface com a blockchain. Acompanhe cada transação em tempo real. Ou veja as métricas selecionadas pela comunidade em ergo.watch."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (frontend alternativo)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Métricas"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (backend alternativo)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -560,13 +686,13 @@
   "components.exchanges.available": [
     {
       "type": 0,
-      "value": "Disponível em exchanges populares e descentralizadas."
+      "value": "Disponível em corretoras populares e descentralizadas."
     }
   ],
   "components.exchanges.disclaimer": [
     {
       "type": 0,
-      "value": "Aviso: As exchanges oferecem graus altamente variáveis ​​de segurança, privacidade e controle sobre seus fundos e informações. Recomendamos enfaticamente que você seja custodiante de seus próprios fundos e use uma das opções de carteira fornecidas acima."
+      "value": "Aviso: As corretoras oferecem graus altamente variáveis ​​de segurança, privacidade e controle sobre seus fundos e informações. Recomendamos enfaticamente que você seja custodiante de seus próprios fundos e use uma das opções de carteira fornecidas acima."
     }
   ],
   "components.exchanges.heading": [
@@ -578,7 +704,7 @@
   "components.exchanges.subheading": [
     {
       "type": 0,
-      "value": "Exchanges"
+      "value": "Corretoras"
     }
   ],
   "components.explore.description": [
@@ -617,6 +743,12 @@
       "value": "Perguntas frequentes"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Carregando..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -637,16 +769,34 @@
       "value": "EXPLORE O ERGO RAFFLE"
     }
   ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "EXPERIMENTE O MEWFUND"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "LEIA SOBRE O RAFFLE V2"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Sem imagem"
+    }
+  ],
   "components.getErg.BuyIt.text": [
     {
       "type": 0,
-      "value": "Disponível em trocas centralizadas e descentralizadas populares."
+      "value": "Disponível em corretoras centralizadas e descentralizadas populares."
     }
   ],
   "components.getErg.BuyIt.title": [
     {
       "type": 0,
-      "value": "Exchanges"
+      "value": "Corretoras"
     }
   ],
   "components.getErg.MineIt.text": [
@@ -676,13 +826,13 @@
   "components.getErg.UseIt.text": [
     {
       "type": 0,
-      "value": "Use seus ERGs agora mesmo em nosso ecossistema em constante crescimento."
+      "value": "Use seus ERGs hoje em nosso ecossistema em crescimento."
     }
   ],
   "components.getErg.UseIt.title": [
     {
       "type": 0,
-      "value": "Use seus ERGs hoje em nosso ecossistema em crescimento."
+      "value": "Ecossistema"
     }
   ],
   "components.getErg.description": [
@@ -843,6 +993,12 @@
       "value": "SAIBA MAIS"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "APRESENTAÇÃO"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
@@ -921,6 +1077,12 @@
       "value": "POSTS DE BLOG DE MINERAÇÃO"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "EMISSÃO E TOKENOMICS"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -939,16 +1101,40 @@
       "value": "Autolykos é o algoritmo de Prova de Trabalho (PoW) resistente a ASIC baseado em memória voltado para GPUs."
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Sua hashrate"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Taxa de hash da rede"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Valor da hashrate"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Receita diária"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -1005,10 +1191,34 @@
       "value": "últimas notícias"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "Últimas notícias"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Novo"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Nenhuma notícia disponível."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "Notícias"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Ver todas as notícias"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1059,6 +1269,12 @@
       "value": "Parceiros"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Traduzir"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1086,13 +1302,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "BREVE"
+      "value": "EM ANDAMENTO"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 E ALÉM"
+      "value": "EM BREVE"
     }
   ],
   "components.roadmap.title": [
@@ -1194,13 +1410,13 @@
   "components.usingErg.BuyIt.text": [
     {
       "type": 0,
-      "value": "Disponível em exchanges centralizadas e descentralizadas populares."
+      "value": "Disponível em corretoras centralizadas e descentralizadas populares."
     }
   ],
   "components.usingErg.BuyIt.title": [
     {
       "type": 0,
-      "value": "Exchanges"
+      "value": "Corretoras"
     }
   ],
   "components.usingErg.MineIt.text": [
@@ -1227,12 +1443,6 @@
       "value": "Carteiras"
     }
   ],
-  "components.usingErg.UseIt.text": [
-    {
-      "type": 0,
-      "value": "Use seus ERGs agora mesmo em nosso ecossistema em constante crescimento."
-    }
-  ],
   "components.usingErg.UseIt.title": [
     {
       "type": 0,
@@ -1257,16 +1467,28 @@
       "value": "OBTER ERG"
     }
   ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
   "components.wallets.chooseYours": [
     {
       "type": 0,
-      "value": "ESCOLHA O SEU"
+      "value": "ESCOLHA A SUA"
     }
   ],
   "components.wallets.coldStorageHeader": [
     {
       "type": 0,
       "value": "Armazenamento a frio"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "Conector dApp"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1356,7 +1578,7 @@
   "footer.community.3": [
     {
       "type": 0,
-      "value": "Contribu com Ergo"
+      "value": "Contribuir com Ergo"
     }
   ],
   "footer.community.4": [
@@ -1407,6 +1629,18 @@
       "value": "Documentos"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "DESCUBRA ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Lançamentos de Software"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1447,6 +1681,12 @@
     {
       "type": 0,
       "value": "ECOSSISTEMA"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "NOSSOS FAVORITOS"
     }
   ],
   "footer.getErg.1": [
@@ -1497,10 +1737,22 @@
       "value": "Política de Privacidade"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Ergo na Vida Real"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
-      "value": "We got it!"
+      "value": "Entendido!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hall da Fama"
     }
   ],
   "navigation.discover": [
@@ -1518,7 +1770,7 @@
   "navigation.ergoCommunity": [
     {
       "type": 0,
-      "value": "COMUNIDADE ERGO"
+      "value": "COMUNIDADE"
     }
   ],
   "navigation.getErg": [
@@ -1587,16 +1839,76 @@
       "value": "Legal"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "Mídia Sobre Nós"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "Carteiras Mobile"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "Notícias"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Política de Privacidade"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Traduzindo"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Traduzindo..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "DOCUMENTAÇÃO"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "CORRETORAS"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "ROADMAP"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "CARTEIRAS"
     }
   ]
 }

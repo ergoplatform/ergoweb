@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FormattedDate } from 'react-intl';
+import { useRouter } from 'next/router';
+import { FormattedDate, FormattedMessage } from 'react-intl';
 import LogoBlack from '../icons/LogoBlack';
 const removeMd = require('remove-markdown');
 
@@ -18,6 +19,7 @@ type Props = {
   permalink: string;
   blogPhoto: string;
   authorPhoto: string;
+  needsTranslation?: boolean;
 };
 
 export default function Post({
@@ -34,7 +36,9 @@ export default function Post({
   permalink,
   blogPhoto,
   authorPhoto,
+  needsTranslation,
 }: Props) {
+  const { locale } = useRouter();
   let hasImage = false;
   let imageUrl = '';
 
@@ -67,6 +71,13 @@ export default function Post({
         type === 'news' ? 'border-brand-orange/50' : 'border-transparent'
       }`}
     >
+      {locale !== 'en' && needsTranslation ? (
+        <div className="pointer-events-none absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span className="px-3 py-1 rounded-full bg-brand-orange text-white text-sm font-semibold shadow">
+            <FormattedMessage id="components.post.translate" defaultMessage="Translate" />
+          </span>
+        </div>
+      ) : null}
       {isExternal ? (
         <a
           href={href}

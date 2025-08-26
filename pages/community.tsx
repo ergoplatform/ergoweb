@@ -95,21 +95,114 @@ export default function Community(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const posts = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=' +
-      context.locale,
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
+  // Map app locale -> Strapi locale (cn -> zh)
+  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
+
+  const appLocale = context.locale as string;
+  const mapped = toStrapiLocale(appLocale);
+  const variants = new Set<string>([mapped, appLocale]);
+  if (appLocale === 'cn') {
+    variants.add('zh');
+    variants.add('zh-CN');
+  }
+
+  // Helper to fetch ALL spotlight posts across pages for one or more locales and de-duplicate by permalink
+  const fetchAllSpotlightForLocales = async (locales: string[]) => {
+    const pageSize = 200;
+    const bySlug: Record<string, any> = {};
+    for (const loc of locales) {
+      let page = 1;
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const res = await fetch(
+          process.env.NEXT_PUBLIC_STRAPI_API +
+            `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}` +
+            `&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=${encodeURIComponent(
+              loc,
+            )}`,
+        )
+          .then((r) => r.json())
+          .catch(() => null);
+        if (!res) break;
+        const data = res?.data ?? [];
+        const meta = res?.meta?.pagination;
+        for (const p of data) {
+          const slug = p?.attributes?.permalink;
+          if (typeof slug === 'string' && !bySlug[slug]) {
+            bySlug[slug] = p;
+          }
+        }
+        if (!meta || page >= (meta.pageCount ?? 1)) break;
+        page += 1;
+      }
+    }
+    return Object.values(bySlug);
+  };
+
+  // Fetch localized spotlight posts and English spotlight posts
+  const localPosts = await fetchAllSpotlightForLocales(Array.from(variants));
+  const enPosts = await fetchAllSpotlightForLocales(['en']);
+
+  // Map English posts by slug for media/title/subtitle fallback
+  const enBySlug: Record<string, any> = {};
+  enPosts.forEach((p: any) => {
+    const slug = p?.attributes?.permalink;
+    if (typeof slug === 'string') enBySlug[slug] = p;
+  });
+
+  // Build set of localized slugs
+  const localizedSlugs = new Set(
+    localPosts.map((p: any) => p?.attributes?.permalink).filter((s: any) => typeof s === 'string'),
+  );
+
+  // Merge: prefer localized; inherit media from EN if missing; then append EN-only with needsTranslation flag
+  const merged = localPosts
+    .map((lp: any) => {
+      const slug = lp?.attributes?.permalink as string | undefined;
+      if (!slug) return lp;
+      const a = lp.attributes || {};
+      const en = enBySlug[slug]?.attributes || {};
+      const hasImage = Boolean(a?.image?.data);
+      const hasBlogPhoto = typeof a?.blogPhoto === 'string' && a.blogPhoto.length > 0;
+      const mergedAttrs = {
+        ...a,
+        image: hasImage ? a.image : en?.image ?? a?.image,
+        blogPhoto: hasBlogPhoto ? a.blogPhoto : en?.blogPhoto ?? a?.blogPhoto,
+      };
+      return { ...lp, attributes: mergedAttrs };
+    })
+    .concat(
+      enPosts
+        .filter((p: any) => {
+          const slug = p?.attributes?.permalink;
+          return typeof slug === 'string' && !localizedSlugs.has(slug);
+        })
+        .map((p: any) => ({
+          ...p,
+          attributes: { ...p.attributes, needsTranslation: true },
+        })),
+    );
+
+  // Sort by date desc to ensure stable ordering after merge
+  merged.sort((a: any, b: any) => {
+    const da = new Date(a?.attributes?.date || 0).getTime();
+    const db = new Date(b?.attributes?.date || 0).getTime();
+    return db - da;
+  });
+
+  // Keep the shape expected by <Feed/> (posts.data)
+  const posts = { data: merged };
+
+  // Team members localized to current locale
   const teamMembers = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/team-members?pagination[pageSize]=100&populate=*&locale=' +
-      context.locale,
+      encodeURIComponent(mapped),
   )
     .then((response) => response.json())
     .then((response) => response.data)
-    .catch((err) => null);
+    .catch(() => null);
+
   return {
     props: { posts, teamMembers },
   };

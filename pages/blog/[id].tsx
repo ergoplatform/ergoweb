@@ -1,4 +1,4 @@
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Layout from '../../components/Layout';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -11,6 +11,9 @@ import Link from 'next/link';
 import BlogPosts from '../../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { translateFields, aiProviderAvailable } from '../../utils/aiTranslation';
+import { getCachedTranslation, setCachedTranslation } from '../../utils/translationCache';
+import { ensureLocalizationFromCanonical } from '../../utils/strapiTranslations';
 
 type Props = {
   post?: any;
@@ -19,6 +22,7 @@ type Props = {
 
 export default function Post(props: Props) {
   const { locale } = useRouter();
+  const intl = useIntl();
   let hasImage = false;
   let imageUrl = '';
 
@@ -26,7 +30,7 @@ export default function Post(props: Props) {
     hasImage = true;
     imageUrl = 'https://storage.googleapis.com/ergo-cms-media' + props.post.attributes.blogPhoto;
   }
-  if (props.post.attributes.image.data) {
+  if (props.post.attributes.image?.data) {
     hasImage = true;
     imageUrl = props.post.attributes.image.data.attributes.url;
   }
@@ -48,17 +52,39 @@ export default function Post(props: Props) {
             <div className="px-4 md:px-32 md:py-20">
               <div className="-ml-4">
                 <Button
-                  text="BACK TO ALL POSTS"
+                  text={intl.formatMessage({
+                    id: 'blog.post.backToAll',
+                    defaultMessage: 'BACK TO ALL POSTS',
+                  })}
                   url="/blog"
                   newTab={false}
                   underline={true}
                   textColor="brand-orange"
                   background={false}
+                  ariaLabel={intl.formatMessage({
+                    id: 'blog.post.backToAll',
+                    defaultMessage: 'BACK TO ALL POSTS',
+                  })}
                 />
               </div>
               <h1 className="blog-title text-black dark:text-black">
                 {props.post.attributes.title}
               </h1>
+              {props.post?.attributes?.translationFailed ? (
+                <div className="mt-2 text-xs text-red-600">
+                  <FormattedMessage
+                    id="blog.post.translationUnavailable"
+                    defaultMessage="Translation temporarily unavailable. Showing original English."
+                  />
+                </div>
+              ) : props.post?.attributes?.isAiTranslation ? (
+                <div className="mt-2 text-xs text-gray-600">
+                  <FormattedMessage
+                    id="blog.post.machineTranslated"
+                    defaultMessage="This page is machine-translated."
+                  />
+                </div>
+              ) : null}
               <div className="mb-8 mt-4 flex flex-row flex-wrap">
                 {props.post.attributes.tag
                   ?.split(',')
@@ -123,7 +149,7 @@ export default function Post(props: Props) {
                 {props.post.attributes.content}
               </ReactMarkdown>
               <p className="mt-10 text-black dark:text-black font-vinila-extended text-[24px]">
-                Share post
+                <FormattedMessage id="blog.post.sharePost" defaultMessage="Share post" />
               </p>
               <div className="flex flex-row gap-x-16 pb-10">
                 <div className="cursor-pointer">
@@ -160,25 +186,160 @@ export default function Post(props: Props) {
 }
 
 export async function getServerSideProps(context: any) {
-  const post = await fetch(
+  const { query, locale } = context;
+  const permalink = encodeURIComponent(query.id);
+  // Map app locale to Strapi locale (cn -> zh) so we can find newly persisted CN posts
+  const strapiLocale = locale === 'cn' ? 'zh' : locale;
+
+  // Try to fetch localized post first
+  const localizedRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?&filters[permalink][$eq]=' +
-      encodeURIComponent(context.query.id) +
+      permalink +
       '&populate=*&locale=' +
-      context.locale,
+      strapiLocale,
   ).then((response) => response.json());
 
-  const posts = await fetch(
+  // Fetch posts list for current locale (unchanged)
+  const postsRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
       '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=' +
-      context.locale,
+      strapiLocale,
   ).then((response) => response.json());
-  if (post.data.length === 0) {
+
+  if (localizedRes?.data?.length > 0) {
+    return {
+      props: { post: localizedRes.data[0], posts: postsRes.data },
+    };
+  }
+
+  // Fallback: fetch canonical (en) and AI-translate fields, cache, and serve
+  const canonicalLocale = 'en';
+  const canonicalRes = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_API +
+      '/api/posts?&filters[permalink][$eq]=' +
+      permalink +
+      '&populate=*&locale=' +
+      canonicalLocale,
+  ).then((response) => response.json());
+
+  if (!canonicalRes?.data || canonicalRes.data.length === 0) {
     return {
       notFound: true,
     };
   }
+
+  const canonical = canonicalRes.data[0];
+
+  // Build canonical fields to translate
+  const fields = {
+    title: canonical.attributes?.title || '',
+    subtitle: canonical.attributes?.subtitle || '',
+    content: canonical.attributes?.content || '',
+  };
+
+  // Helper to detect no-op translations
+  const equal = (
+    a: { title: string; subtitle: string; content: string },
+    b: { title: string; subtitle: string; content: string },
+  ) => {
+    const norm = (s: string) => (s || '').trim();
+    return (
+      norm(a.title) === norm(b.title) &&
+      norm(a.subtitle) === norm(b.subtitle) &&
+      norm(a.content) === norm(b.content)
+    );
+  };
+
+  // Try cache first; invalidate if cache holds an un-translated (no-op) result
+  let cached = await getCachedTranslation(query.id, locale);
+  if (cached && equal(cached, fields)) {
+    cached = null;
+  }
+  let translated = cached;
+
+  if (!translated) {
+    translated = await translateFields(fields, canonicalLocale, locale);
+    const changed = !equal(translated, fields);
+
+    // Only cache and persist if translation actually changed content
+    if (changed) {
+      await setCachedTranslation(query.id, locale, translated);
+
+      // Persist translation into Strapi as a real localization if possible
+      if (aiProviderAvailable()) {
+        try {
+          const persisted = await ensureLocalizationFromCanonical(canonical, locale, {
+            title: translated?.title || fields.title,
+            subtitle: translated?.subtitle || fields.subtitle,
+            content: translated?.content || fields.content,
+          });
+          if (persisted) {
+            // Re-fetch the just-created localization and serve it (no AI banner)
+            const persistedRes = await fetch(
+              process.env.NEXT_PUBLIC_STRAPI_API +
+                '/api/posts?&filters[permalink][$eq]=' +
+                permalink +
+                '&populate=*&locale=' +
+                strapiLocale,
+            ).then((response) => response.json());
+            if (persistedRes?.data?.length > 0) {
+              // Ensure media relations (image/blogPhoto) are present; fallback to canonical if missing
+              const persistedPost = persistedRes.data[0];
+              const mergedPost = JSON.parse(JSON.stringify(persistedPost));
+
+              const hasImageData = Boolean(mergedPost?.attributes?.image?.data);
+              const hasBlogPhoto = Boolean(mergedPost?.attributes?.blogPhoto);
+              const canonicalHasImage = Boolean(canonical?.attributes?.image?.data);
+              const canonicalHasBlogPhoto = Boolean(canonical?.attributes?.blogPhoto);
+
+              mergedPost.attributes = {
+                ...mergedPost.attributes,
+                image: hasImageData
+                  ? mergedPost.attributes.image
+                  : canonicalHasImage
+                  ? canonical.attributes.image
+                  : mergedPost.attributes?.image,
+                blogPhoto: hasBlogPhoto
+                  ? mergedPost.attributes.blogPhoto
+                  : canonicalHasBlogPhoto
+                  ? canonical.attributes.blogPhoto
+                  : mergedPost.attributes?.blogPhoto,
+              };
+
+              return {
+                props: { post: mergedPost, posts: postsRes.data },
+              };
+            }
+          }
+        } catch (e) {
+          // Non-fatal: fall back to synthetic rendering below
+          console.error('Persist localization failed:', e);
+        }
+      }
+    } else {
+      // Translation provider returned effectively the same content; log and fall back to canonical
+      console.warn('Translation returned unchanged content; falling back to English', {
+        permalink: query.id,
+        locale,
+      });
+    }
+  }
+
+  // Build a synthetic localized post object by cloning canonical and overriding text fields
+  const synthetic = JSON.parse(JSON.stringify(canonical));
+  const changedFinal = translated ? !equal(translated, fields) : false;
+  synthetic.attributes = {
+    ...canonical.attributes,
+    title: changedFinal ? translated!.title : canonical.attributes?.title,
+    subtitle: changedFinal ? translated!.subtitle : canonical.attributes?.subtitle,
+    content: changedFinal ? translated!.content : canonical.attributes?.content,
+    isAiTranslation: changedFinal ? true : false,
+    translationFailed: changedFinal ? false : true,
+    locale,
+  };
+
   return {
-    props: { post: post.data[0], posts: posts.data },
+    props: { post: synthetic, posts: postsRes.data },
   };
 }

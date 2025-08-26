@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 type MediaPostProps = {
@@ -10,6 +10,7 @@ type MediaPostProps = {
 };
 
 function MediaPost({ Title, Description, Date, Link: link }: MediaPostProps) {
+  const intl = useIntl();
   return (
     <>
       {link ? (
@@ -32,12 +33,13 @@ function MediaPost({ Title, Description, Date, Link: link }: MediaPostProps) {
             )}
             <div className="-ml-4 absolute bottom-4 md:bottom-12">
               <Button
-                text="READ"
+                text={<FormattedMessage id="blog.media.read" defaultMessage="READ" />}
                 url={link}
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
                 background={false}
+                ariaLabel={intl.formatMessage({ id: 'blog.media.read', defaultMessage: 'READ' })}
               />
             </div>
           </div>
@@ -54,7 +56,9 @@ type Props = {
 export default function Media({ mediaPosts }: Props) {
   return (
     <div className="mt-4">
-      <h1>Media About Us</h1>
+      <h1>
+        <FormattedMessage id="pages.media.title" defaultMessage="Media About Us" />
+      </h1>
       <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar relative">
         {mediaPosts?.map((post: any) => (
           <MediaPost key={post.id} {...post.attributes} />

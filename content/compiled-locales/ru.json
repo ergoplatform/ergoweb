@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "ЧИТАТЬ"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "ЧИТАТЬ"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "НАЗАД КО ВСЕМ ЗАПИСЯМ"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Эта страница переведена автоматически."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Поделиться записью"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "Перевод временно недоступен. Отображается оригинал на английском языке."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Категории"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Закрыть"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Далее"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Назад"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -198,7 +258,19 @@
   "components.autolykos.title": [
     {
       "type": 0,
-      "value": "Будущее принципа «Доказательство выполнения работы» (Proof of Work)"
+      "value": "Будущее Proof of Work"
+    }
+  ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Больше ничего нет"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Загрузка..."
     }
   ],
   "components.communityHero.Discord.text": [
@@ -306,7 +378,7 @@
   "components.communityHero.title": [
     {
       "type": 0,
-      "value": "Экосистема"
+      "value": "Сообщество"
     }
   ],
   "components.communitySection.communityHero.linkText": [
@@ -405,6 +477,12 @@
       "value": "Экосистема"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Обозреватели блокчейна"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -417,10 +495,46 @@
       "value": "ERGO.WATCH"
     }
   ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer — это ваш интерфейс к блокчейну. Наблюдайте за каждой транзакцией в режиме реального времени. Или просматривайте метрики, собранные сообществом, на ergo.watch."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (альтернативный фронтенд)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Метрики"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (альтернативный бэкенд)"
+    }
+  ],
   "components.ergoRaffle.description": [
     {
       "type": 0,
-      "value": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a \"raffle reward\"."
+      "value": "ErgoRaffle - это краудфандинговый сервис, построенный на платформе Ergo, который позволяет любому собирать деньги на проект. Этот проект может варьироваться от прямого пожертвования на благотворительность, академического или бизнес-плана до всего, на что вы можете убедить людей потратить свои с трудом заработанные ERG! В качестве дополнительного бонуса после завершения розыгрыша проводится лотерея, и один счастливый участник выигрывает установленный процент от розыгрыша в качестве «награды за розыгрыш»."
     }
   ],
   "components.ergoRaffle.heading": [
@@ -625,6 +739,12 @@
       "value": "Часто задаваемые вопросы"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Загрузка..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -643,6 +763,24 @@
     {
       "type": 0,
       "value": "УЗНАТЬ ОБ ERGO RAFFLE"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "ПОПРОБОВАТЬ MEWFUND"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "ПРОЧИТАТЬ О RAFFLE V2"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Нет изображения"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -666,7 +804,7 @@
   "components.getErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Добыть"
+      "value": "Майнить"
     }
   ],
   "components.getErg.StoreIt.text": [
@@ -681,10 +819,16 @@
       "value": "Кошельки"
     }
   ],
-  "components.getErg.UseIt.title": [
+  "components.getErg.UseIt.text": [
     {
       "type": 0,
       "value": "Используйте ERG уже сегодня в нашей развивающейся экосистеме."
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Экосистема"
     }
   ],
   "components.getErg.description": [
@@ -696,7 +840,7 @@
   "components.getErg.heroTitle": [
     {
       "type": 0,
-      "value": "НЕПОБЕДИМЫЙ ДЕЦЕНТРАЛИЗОВАННЫЙ ФИНАНС"
+      "value": "НЕОСТАНОВИМЫЙ DEFI"
     }
   ],
   "components.getErg.title": [
@@ -818,7 +962,7 @@
   "components.highlights.slide.3.quote": [
     {
       "type": 0,
-      "value": "Σ-protocols"
+      "value": "Σ-protocolos"
     }
   ],
   "components.highlights.slide.3.text": [
@@ -843,6 +987,12 @@
     {
       "type": 0,
       "value": "УЗНАТЬ БОЛЬШЕ"
+    }
+  ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "ПРЕЗЕНТАЦИЯ"
     }
   ],
   "components.homeHero.text": [
@@ -923,6 +1073,12 @@
       "value": "ПОСТЫ БЛОГА О МАЙНИНГЕ"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "ЭМИССИЯ И ТОКЕНОМИКА"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -941,16 +1097,40 @@
       "value": "Autolykos - это алгоритм, ориентированный на GPU, основанный на устойчивой к ASIC технологии Proof of Work (PoW) с жестким доступом к памяти."
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Ваш хешрейт"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Хешрейт сети"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Значение хешрейта"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Дневной доход"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -1007,10 +1187,34 @@
       "value": "Последние новости"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "Последние новости"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Новое"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Нет доступных новостей."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "Новости"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Посмотреть все новости"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1061,6 +1265,12 @@
       "value": "Партнеры"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Перевести"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1088,13 +1298,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "СКОРО"
+      "value": "В РАЗРАБОТКЕ"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 И ДАЛЕЕ"
+      "value": "СКОРО"
     }
   ],
   "components.roadmap.title": [
@@ -1253,6 +1463,12 @@
       "value": "ПОЛУЧИТЬ ERG"
     }
   ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
+    }
+  ],
   "components.wallets.chooseYours": [
     {
       "type": 0,
@@ -1263,6 +1479,12 @@
     {
       "type": 0,
       "value": "Холодное хранилище"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "Коннектор dApp"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1328,7 +1550,7 @@
   "components.wiki.heading": [
     {
       "type": 0,
-      "value": "Wiki"
+      "value": "Вики"
     }
   ],
   "footer.blog.title": [
@@ -1358,7 +1580,7 @@
   "footer.community.4": [
     {
       "type": 0,
-      "value": "Зал СЛавы"
+      "value": "Зал Славы"
     }
   ],
   "footer.community.5": [
@@ -1403,6 +1625,18 @@
       "value": "Документы"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "ИЗУЧИТЬ ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Релизы ПО"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1442,7 +1676,13 @@
   "footer.ecosystem.title": [
     {
       "type": 0,
-      "value": "ЭКО-СИСТЕМА"
+      "value": "ЭКОСИСТЕМА"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "НАШИ ИЗБРАННЫЕ"
     }
   ],
   "footer.getErg.1": [
@@ -1478,7 +1718,7 @@
   "footer.legal": [
     {
       "type": 0,
-      "value": "Законность"
+      "value": "Правовая информация"
     }
   ],
   "footer.news.title": [
@@ -1493,10 +1733,22 @@
       "value": "Политика конфиденциальности"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Ergo в реальной жизни"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "У нас есть!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Зал Славы"
     }
   ],
   "navigation.discover": [
@@ -1508,13 +1760,13 @@
   "navigation.ecosystem": [
     {
       "type": 0,
-      "value": "ЭКО-СИСТЕМА"
+      "value": "ЭКОСИСТЕМА"
     }
   ],
   "navigation.ergoCommunity": [
     {
       "type": 0,
-      "value": "ERGO СООБЩЕСТВО"
+      "value": "СООБЩЕСТВО ERGO"
     }
   ],
   "navigation.getErg": [
@@ -1562,7 +1814,7 @@
   "pages.ecosystem.title": [
     {
       "type": 0,
-      "value": "Эко-система"
+      "value": "Экосистема"
     }
   ],
   "pages.get-erg.title": [
@@ -1574,13 +1826,19 @@
   "pages.home.title": [
     {
       "type": 0,
-      "value": "Начало"
+      "value": "Главная"
     }
   ],
   "pages.legal.title": [
     {
       "type": 0,
-      "value": "Законность"
+      "value": "Правовая информация"
+    }
+  ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "СМИ о нас"
     }
   ],
   "pages.mobile-wallets": [
@@ -1589,10 +1847,64 @@
       "value": "Мобильные кошельки"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "Новости"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Политика конфиденциальности"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Перевод"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Перевод..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "БЛОГ"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "ДОКУМЕНТАЦИЯ"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "БИРЖИ"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "ДОРОЖНАЯ КАРТА"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "КОШЕЛЬКИ"
     }
   ]
 }

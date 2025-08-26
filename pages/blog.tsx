@@ -42,7 +42,10 @@ export default function Blog(props: Props) {
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
           <div className="mx-4 mb-4 md:hidden">
-            <CategoryPicker categories={props.categories ?? []} categoryCounts={props.categoryCounts ?? {}} />
+            <CategoryPicker
+              categories={props.categories ?? []}
+              categoryCounts={props.categoryCounts ?? {}}
+            />
           </div>
           <div className="flex flex-row justify-between mb-10 mx-4">
             <div className="hidden md:flex flex-row flex-wrap gap-x-2 gap-y-3">
@@ -169,12 +172,49 @@ export const getServerSideProps = async (context: any) => {
     type === 'news' || type === 'blog' ? `&filters[type][$eq]=${type}` : baseTypesParam;
   const dateParam = `&filters[date][$gte]=${start}&filters[date][$lt]=${end}`;
 
-  const postsRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=200&populate=*&locale=${context.locale}${typeParam}${dateParam}`,
-  )
-    .then((response) => response.json())
-    .catch(() => null);
+  // Map app locale -> Strapi locale (cn -> zh)
+  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
+
+  // Helper to fetch ALL posts across pages for one or more locales and de-duplicate by permalink
+  const fetchAllPostsForLocales = async (locales: string[]) => {
+    const pageSize = 200;
+    const bySlug: Record<string, any> = {};
+    for (const loc of locales) {
+      let page = 1;
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const res = await fetch(
+          process.env.NEXT_PUBLIC_STRAPI_API +
+            `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*&locale=${loc}${typeParam}${dateParam}`,
+        )
+          .then((r) => r.json())
+          .catch(() => null);
+        if (!res) break;
+        const data = res?.data ?? [];
+        const meta = res?.meta?.pagination;
+        for (const p of data) {
+          const slug = p?.attributes?.permalink;
+          if (typeof slug === 'string' && !bySlug[slug]) {
+            bySlug[slug] = p;
+          }
+        }
+        if (!meta || page >= (meta.pageCount ?? 1)) break;
+        page += 1;
+      }
+    }
+    return Object.values(bySlug);
+  };
+
+  // Build a robust locale list (handle cn/zh-variants) and fetch all localized + English posts for the selected year/type
+  const appLoc = context.locale as string;
+  const mapped = toStrapiLocale(appLoc);
+  const variants = new Set<string>([mapped, appLoc]);
+  if (appLoc === 'cn') {
+    variants.add('zh');
+    variants.add('zh-CN');
+  }
+  const localPosts = await fetchAllPostsForLocales(Array.from(variants));
+  const enPosts = await fetchAllPostsForLocales(['en']);
 
   // Fetch ALL categories across pages to avoid missing tags
   const fetchAllCategories = async (locale: string) => {
@@ -198,21 +238,67 @@ export const getServerSideProps = async (context: any) => {
     }
     return all;
   };
-  const categories = (await fetchAllCategories(context.locale)) || [];
+  // Use English categories to mirror English site exactly
+  const categories = (await fetchAllCategories('en')) || [];
 
-  const posts = Array.isArray(postsRes?.data) ? postsRes.data : [];
-  const pagination = postsRes?.meta?.pagination ?? null;
+  // localPosts and enPosts already computed above
+
+  // Merge by permalink: prefer localized entries, include EN-only entries marked as needsTranslation
+  const seen = new Set(
+    localPosts.map((p: any) => p?.attributes?.permalink).filter((s: any) => typeof s === 'string'),
+  );
+  // Create a map of English posts for fallback fields (e.g., image/blogPhoto)
+  const enBySlug: Record<string, any> = {};
+  enPosts.forEach((p: any) => {
+    const slug = p?.attributes?.permalink;
+    if (typeof slug === 'string') enBySlug[slug] = p;
+  });
+
+  // Merge lists and ensure localized entries inherit image/blogPhoto if missing
+  const posts = localPosts
+    .map((lp: any) => {
+      const slug = lp?.attributes?.permalink as string | undefined;
+      if (!slug) return lp;
+      const a = lp.attributes || {};
+      const en = enBySlug[slug]?.attributes || {};
+      const hasImage = Boolean(a?.image?.data);
+      const hasBlogPhoto = typeof a?.blogPhoto === 'string' && a.blogPhoto.length > 0;
+      const mergedAttrs = {
+        ...a,
+        image: hasImage ? a.image : en?.image ?? a?.image,
+        blogPhoto: hasBlogPhoto ? a.blogPhoto : en?.blogPhoto ?? a?.blogPhoto,
+      };
+      return { ...lp, attributes: mergedAttrs };
+    })
+    .concat(
+      enPosts
+        .filter((p: any) => {
+          const slug = p?.attributes?.permalink;
+          return typeof slug === 'string' && !seen.has(slug);
+        })
+        .map((p: any) => ({
+          ...p,
+          attributes: { ...p.attributes, needsTranslation: true },
+        })),
+    )
+    .sort((a: any, b: any) => {
+      const da = new Date(a?.attributes?.date || 0).getTime();
+      const db = new Date(b?.attributes?.date || 0).getTime();
+      return db - da;
+    });
+  const pagination = null;
 
   // Determine available years (min and max across blog + news)
+  // Compute years from English corpus to mirror English site structure
   const oldestRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:asc&pagination[page]=1&pagination[pageSize]=1&locale=${context.locale}${baseTypesParam}`,
+      `/api/posts?sort=date:asc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
   )
     .then((r) => r.json())
     .catch(() => null);
   const newestRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=1&locale=${context.locale}${baseTypesParam}`,
+      `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
   )
     .then((r) => r.json())
     .catch(() => null);
@@ -223,34 +309,33 @@ export const getServerSideProps = async (context: any) => {
   const years: number[] = [];
   for (let y = newestYear; y >= oldestYear; y--) years.push(y);
 
-  // Compute counts (restricted to selected year)
-  const allCountRes = await fetch(
+  // Totals identical to English site across the entire corpus (not restricted by year)
+  const totalsAllRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=${context.locale}` +
-      `${baseTypesParam}`,
+      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en`,
   )
     .then((r) => r.json())
     .catch(() => null);
-  const totalsAll = allCountRes?.meta?.pagination?.total ?? 0;
+  const totalsAll = totalsAllRes?.meta?.pagination?.total ?? 0;
 
-  const newsCountRes = await fetch(
+  const totalsNewsRes = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=${context.locale}` +
+      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
       `&filters[type][$eq]=news`,
   )
     .then((r) => r.json())
     .catch(() => null);
-  const totalsNews = newsCountRes?.meta?.pagination?.total ?? 0;
+  const totalsNews = totalsNewsRes?.meta?.pagination?.total ?? 0;
 
-  // Per-category counts for selected year across blog + news
+  // Per-category counts identical to English site across entire corpus (not restricted by year)
   const categoryCounts: Record<string, number> = {};
   if (Array.isArray(categories)) {
     const names = categories.map((c: any) => c?.attributes?.name).filter(Boolean);
     const countPromises = names.map((name: string) =>
       fetch(
         process.env.NEXT_PUBLIC_STRAPI_API +
-          `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=${context.locale}` +
-          `&filters[tag][$contains]=${encodeURIComponent(name)}${baseTypesParam}`,
+          `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
+          `&filters[tag][$contains]=${encodeURIComponent(name)}`,
       )
         .then((r) => r.json())
         .then((json) => ({ name, total: json?.meta?.pagination?.total ?? 0 }))
@@ -262,17 +347,7 @@ export const getServerSideProps = async (context: any) => {
     });
   }
 
-  // If the requested year has no posts, redirect to the latest year that has content.
-  if (Array.isArray(posts) && posts.length === 0 && Array.isArray(years) && years.length > 0) {
-    const latest = years[0];
-    const dest = `/blog?year=${latest}${type === 'news' ? '&type=news' : ''}`;
-    return {
-      redirect: {
-        destination: dest,
-        permanent: false,
-      },
-    };
-  }
+  // Do not redirect when a locale has no localized posts; we show EN entries instead (merged above).
 
   return {
     props: {

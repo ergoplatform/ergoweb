@@ -115,7 +115,9 @@ export default function FAQ(props: Props) {
                         {question.attributes.answer}
                       </md.ReactMarkdown>
                     ) : (
-                      <div className="faq-answer">Loading...</div>
+                      <div className="faq-answer">
+                        <FormattedMessage id="components.faq.loading" defaultMessage="Loading..." />
+                      </div>
                     )
                   ) : null}
                 </div>
