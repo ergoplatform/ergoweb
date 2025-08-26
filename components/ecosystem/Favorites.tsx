@@ -62,11 +62,11 @@ export default function Favorites(props: Props) {
             <Button
               text={
                 <FormattedMessage
-                  defaultMessage="TRY OUT MEWFUND"
-                  id="components.favorites.mewFund"
+                  defaultMessage="ALL CROWDFUNDING OPTIONS ON ERGO"
+                  id="components.favorites.crowdFund"
                 />
               }
-              url="http://fund.mewfinance.com"
+              url="https://docs.ergoplatform.com/uses/crowdfunding/"
               newTab={true}
               background={true}
               textColor="white"

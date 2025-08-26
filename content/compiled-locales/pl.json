@@ -765,10 +765,10 @@
       "value": "ODKRYJ ERGO RAFFLE"
     }
   ],
-  "components.favorites.mewFund": [
+  "components.favorites.crowdFund": [
     {
       "type": 0,
-      "value": "WYPRÓBUJ MEWFUND"
+      "value": "WSZYSTKIE OPCJE CROWDFUNDINGU NA ERGO"
     }
   ],
   "components.favorites.raffleV2": [
