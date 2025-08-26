@@ -661,10 +661,10 @@
       "value": "EXPLORE ERGO RAFFLE"
     }
   ],
-  "components.favorites.mewFund": [
+  "components.favorites.crowdFund": [
     {
       "type": 0,
-      "value": "TRY OUT MEWFUND"
+      "value": "ALL CROWDFUNDING OPTIONS ON ERGO"
     }
   ],
   "components.favorites.raffleV2": [

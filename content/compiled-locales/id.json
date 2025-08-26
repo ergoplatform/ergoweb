@@ -669,10 +669,10 @@
       "value": "JELAJAHI ERGO RAFFLE"
     }
   ],
-  "components.favorites.mewFund": [
+  "components.favorites.crowdFund": [
     {
       "type": 0,
-      "value": "COBA MEWFUND"
+      "value": "SEMUA OPSI CROWDFUNDING DI ERGO"
     }
   ],
   "components.favorites.raffleV2": [

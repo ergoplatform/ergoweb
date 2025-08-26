@@ -82,7 +82,9 @@ export default function UsingErg() {
       let newFontSize = 96; // start at desktop target for short titles
 
       // Measure width of each word separately and sum with line breaks
-      const words = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+      const words = intl
+        .formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' })
+        .split(' ');
       const totalChars = words.join('').length;
       const minBound = totalChars <= 7 ? 72 : 32; // keep short titles larger
       const canvas = document.createElement('canvas');
@@ -91,7 +93,7 @@ export default function UsingErg() {
 
       context.font = `${newFontSize}px Arial, sans-serif`;
       let totalWidth = 0;
-      words.forEach(word => {
+      words.forEach((word) => {
         const metrics = context.measureText(word);
         totalWidth = Math.max(totalWidth, metrics.width);
       });
@@ -101,7 +103,7 @@ export default function UsingErg() {
         newFontSize -= 1;
         context.font = `${newFontSize}px Arial, sans-serif`;
         totalWidth = 0;
-        words.forEach(word => {
+        words.forEach((word) => {
           const metrics = context.measureText(word);
           totalWidth = Math.max(totalWidth, metrics.width);
         });
@@ -115,7 +117,9 @@ export default function UsingErg() {
     return () => window.removeEventListener('resize', adjustFontSize);
   }, [intl]);
 
-  const titleWords = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+  const titleWords = intl
+    .formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' })
+    .split(' ');
 
   return (
     <div
