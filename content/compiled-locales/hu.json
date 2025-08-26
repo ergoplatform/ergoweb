@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "OLVASÁS"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "OLVASÁS"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "VISSZA AZ ÖSSZES BEJEGYZÉSHEZ"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Ez az oldal gépi fordítással készült."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Bejegyzés megosztása"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "A fordítás átmenetileg nem érhető el. Az eredeti angol nyelvű tartalom jelenik meg."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Kategóriák"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Bezárás"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Következő"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Előző"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -193,6 +253,18 @@
       "value": "A munka bizonyítéka (Proof of Work) jövője"
     }
   ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Nincs több megjeleníthető tartalom"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Betöltés..."
+    }
+  ],
   "components.communityHero.Discord.text": [
     {
       "type": 0,
@@ -265,18 +337,6 @@
       "value": "Twitter"
     }
   ],
-  "components.communityHero.Wiki.text": [
-    {
-      "type": 0,
-      "value": "Közösségi wikid. Tegyél hozzá bármilyen nyelven!"
-    }
-  ],
-  "components.communityHero.Wiki.title": [
-    {
-      "type": 0,
-      "value": "Wiki"
-    }
-  ],
   "components.communityHero.Youtube.text": [
     {
       "type": 0,
@@ -298,7 +358,7 @@
   "components.communityHero.title": [
     {
       "type": 0,
-      "value": "Ökoszisztéma"
+      "value": "Közösség"
     }
   ],
   "components.communitySection.communityHero.linkText": [
@@ -397,6 +457,12 @@
       "value": "Ökoszisztéma"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Blokklánc Felfedezők"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -407,6 +473,42 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Az Ergo Explorer a te felületed a blokklánchoz. Kövesd nyomon az összes tranzakciót valós időben. Vagy nézd meg a közösség által összeállított metrikákat az ergo.watch oldalon."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (alternatív frontend)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Felfedező"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Metrikák"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (alternatív backend)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -621,6 +723,12 @@
       "value": "GYIK"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Betöltés..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -641,6 +749,30 @@
       "value": "ERGO RAFFLE FELFEDEZÉSE"
     }
   ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "PRÓBÁLD KI A MEWFUND-OT"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "OLVASS A RAFFLE V2-RŐL"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Nincs kép"
+    }
+  ],
+  "components.getErg.BuyIt.text": [
+    {
+      "type": 0,
+      "value": "Elérhető a népszerű központi és decentralizált tőzsdéken."
+    }
+  ],
   "components.getErg.BuyIt.title": [
     {
       "type": 0,
@@ -657,6 +789,30 @@
     {
       "type": 0,
       "value": "Bányászd Ki"
+    }
+  ],
+  "components.getErg.StoreIt.text": [
+    {
+      "type": 0,
+      "value": "Egyszerű és biztonságos, nem letétkezelői tárcák az ERG biztonságos tárolásához."
+    }
+  ],
+  "components.getErg.StoreIt.title": [
+    {
+      "type": 0,
+      "value": "Tárcák"
+    }
+  ],
+  "components.getErg.UseIt.text": [
+    {
+      "type": 0,
+      "value": "Helyezd használatba az ERG-det még ma a növekvő ökoszisztémánkban."
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Ökoszisztéma"
     }
   ],
   "components.getErg.description": [
@@ -817,6 +973,12 @@
       "value": "MERÜLJ EL"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "BEMUTATÓ"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
@@ -895,6 +1057,12 @@
       "value": "BÁNYÁSZATI BLOG BEJEGYZÉSEK"
     }
   ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "KIBOCSÁTÁS ÉS TOKENOMIKA"
+    }
+  ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
@@ -913,16 +1081,40 @@
       "value": "Az Autolykos az ASIC-rezisztens memóriaigényes Proof of Work (PoW) algoritmus, amely GPU-k számára optimalizált."
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "A te hashrate-ed"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Hálózati hash érték"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Hashrate érték"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Napi Bevétel"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -979,10 +1171,34 @@
       "value": "legfrissebb hírek"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "Legfrissebb hírek"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Új"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Nincsenek elérhető hírek."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "Hírek"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Összes hír megtekintése"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1033,6 +1249,12 @@
       "value": "Partnerek"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Fordítás"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1060,13 +1282,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "HAMAR"
+      "value": "FOLYAMATBAN"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 ÉS TÚL"
+      "value": "HAMAROSAN"
     }
   ],
   "components.roadmap.title": [
@@ -1189,22 +1411,28 @@
       "value": "Használd az ERG-t ma a növekvő ökoszisztémánkban."
     }
   ],
-  "components.usingErg.description": [
+  "components.usingErg.title": [
+    {
+      "type": 0,
+      "value": "SZEREZD BE AZ ERGO-T"
+    }
+  ],
+  "components.usingErgo.description": [
     {
       "type": 0,
       "value": "Az Ergo tetején virágzó gazdag ökoszisztéma van kialakulóban. Legyen szó fejlesztőről, bányászról vagy befektetőről, mi segítünk neked."
     }
   ],
-  "components.usingErg.subtitle": [
+  "components.usingErgo.subtitle": [
     {
       "type": 0,
       "value": "FOLYAMATOSAN BŐVÜLŐ DEFI"
     }
   ],
-  "components.usingErg.title": [
+  "components.wallets.ErgoPay": [
     {
       "type": 0,
-      "value": "SZEREZD BE AZ ERGO-T"
+      "value": "ErgoPay"
     }
   ],
   "components.wallets.chooseYours": [
@@ -1217,6 +1445,12 @@
     {
       "type": 0,
       "value": "Hideg tárolás"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "dApp Csatlakozó"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1357,6 +1591,18 @@
       "value": "Dokumentumok"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "FEDEZD FEL AZ ERG-T"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Szoftverkiadások"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1397,6 +1643,12 @@
     {
       "type": 0,
       "value": "ÖKOSZISZTÉMA"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "KEDVENCEINK"
     }
   ],
   "footer.getErg.1": [
@@ -1447,10 +1699,22 @@
       "value": "Adatvédelmi nyilatkozat"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Ergo a való életben"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "Képesek vagyunk rá!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Hírességek Csarnoka"
     }
   ],
   "navigation.discover": [
@@ -1510,7 +1774,7 @@
   "pages.discover.title": [
     {
       "type": 0,
-      "value": "Láncfelfedező"
+      "value": "Felfedezés"
     }
   ],
   "pages.ecosystem.title": [
@@ -1537,10 +1801,76 @@
       "value": "Legalitások"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "Média rólunk"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "Mobil tárcák"
+    }
+  ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "Hírek"
+    }
+  ],
+  "pages.privacyPolicy.title": [
+    {
+      "type": 0,
+      "value": "Adatvédelmi irányelvek"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Fordítás"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Fordítás..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "DOKUMENTÁCIÓ"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "TŐZSDÉK"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "ÜTEMTERV"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "TÁRCÁK"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 type Category = {
   id: number | string;
@@ -50,7 +51,9 @@ export default function CategoryPicker({ categories, categoryCounts, className =
           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange
         "
       >
-        <span className="uppercase tracking-widest text-xs font-semibold">Categories</span>
+        <span className="uppercase tracking-widest text-xs font-semibold">
+          <FormattedMessage id="categoryPicker.categories" defaultMessage="Categories" />
+        </span>
         <svg
           className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`}
           viewBox="0 0 20 20"
@@ -130,7 +133,7 @@ export default function CategoryPicker({ categories, categoryCounts, className =
                 transition
               "
             >
-              Close
+              <FormattedMessage id="common.close" defaultMessage="Close" />
             </button>
           </div>
         </div>

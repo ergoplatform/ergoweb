@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "OKU"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "OKU"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "TÜM YAZILARA GERİ DÖN"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Bu sayfa makine tarafından çevrilmiştir."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Yazıyı paylaş"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "Çeviri geçici olarak kullanılamıyor. İngilizce orijinali gösteriliyor."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Kategoriler"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Kapat"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Sonraki"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Önceki"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -8,17 +68,21 @@
   "components.ContributeForm.company.title": [
     {
       "type": 0,
-      "value": "Biz "
+      "value": "Bir "
     },
     {
       "children": [
         {
           "type": 0,
-          "value": "şirketiz"
+          "value": "şirketi"
         }
       ],
       "type": 8,
       "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " temsil ediyorum"
     }
   ],
   "components.ContributeForm.developer.subTitle": [
@@ -29,14 +93,10 @@
   ],
   "components.ContributeForm.developer.title": [
     {
-      "type": 0,
-      "value": "Ben bir  "
-    },
-    {
       "children": [
         {
           "type": 0,
-          "value": "geliştiriciyim."
+          "value": "Geliştiriciyim"
         }
       ],
       "type": 8,
@@ -66,7 +126,7 @@
   "components.ContributeForm.title": [
     {
       "type": 0,
-      "value": "Katkı yap"
+      "value": "Katkıda Bulun"
     }
   ],
   "components.DApps.seeAllProjects": [
@@ -78,7 +138,7 @@
   "components.Sigmanauts.button": [
     {
       "type": 0,
-      "value": "DAHA FAZLA & UYGULA"
+      "value": "DAHA FAZLA OKU & BAŞVUR"
     }
   ],
   "components.Sigmanauts.button.buttonContribute": [
@@ -96,13 +156,13 @@
   "components.Sigmanauts.button.grantsAndBounties": [
     {
       "type": 0,
-      "value": "BAĞIŞLAR & ÖDÜLLLER"
+      "value": "BAĞIŞLAR & ÖDÜLLER"
     }
   ],
   "components.Sigmanauts.button.writeAndReviewCode": [
     {
       "type": 0,
-      "value": "ERGO'YA DALIŞ"
+      "value": "ERGO'YA DALIŞ YAP"
     }
   ],
   "components.Sigmanauts.formInput.button": [
@@ -156,7 +216,7 @@
   "components.Sigmanauts.title": [
     {
       "type": 0,
-      "value": "Sigmanauts"
+      "value": "Sigmanautlar"
     }
   ],
   "components.Spotlight.button": [
@@ -174,7 +234,7 @@
   "components.autolykos.button": [
     {
       "type": 0,
-      "value": "ERG EDİN"
+      "value": "BUGÜN ERG KAZMAYA BAŞLA"
     }
   ],
   "components.autolykos.header": [
@@ -196,7 +256,7 @@
     },
     {
       "type": 0,
-      "value": " GPU'lara yönelik, ASIC'e dayanıklı İş Kanıtı algoritmasıdır."
+      "value": " GPU'lara yönelik, belleği yoğun kullanan, ASIC'e dayanıklı bir İş Kanıtı algoritmasıdır."
     }
   ],
   "components.autolykos.title": [
@@ -205,10 +265,22 @@
       "value": "İş Kanıtı'nın Geleceği"
     }
   ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Gösterilecek başka bir şey yok"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Yükleniyor..."
+    }
+  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
-      "value": "SIFIRDAN FİNANSMAN"
+      "value": "TABAN FİNANSMANI"
     }
   ],
   "components.communityHero.title": [
@@ -220,31 +292,31 @@
   "components.communitySection.communityHero.linkText": [
     {
       "type": 0,
-      "value": "Katkı"
+      "value": "Katkıda Bulunma"
     }
   ],
   "components.communitySection.communityHero.text1": [
     {
       "type": 0,
-      "value": "Ergo sıfırdan oluşturulan merkezi olmayan bir platformdur ve kendi topluluğu tarafından desteklenir."
+      "value": "Ergo, topluluğu tarafından desteklenen, tabandan gelen merkeziyetsiz bir platformdur."
     }
   ],
   "components.communitySection.communityHero.text2": [
     {
       "type": 0,
-      "value": "Sosyalden bize katılın ve dahil olun. Kontrol edin"
+      "value": "Katılmak için sosyal medyada bize katılın, daha fazla bilgi için"
     }
   ],
   "components.communitySection.communityHero.text3": [
     {
       "type": 0,
-      "value": "daha fazla bilgi için sayfasına bakın"
+      "value": "sayfasına göz atın"
     }
   ],
   "components.dApps.heading": [
     {
       "type": 0,
-      "value": "DApps"
+      "value": "dApp'ler"
     }
   ],
   "components.discoverErgo.text.1": [
@@ -256,37 +328,37 @@
   "components.discoverHero.button1": [
     {
       "type": 0,
-      "value": "DÖKÜMANLARI OKUYUN"
+      "value": "DOKÜMANLARI OKU"
     }
   ],
   "components.discoverHero.button2": [
     {
       "type": 0,
-      "value": "DECO İLE ÖĞRENİN"
+      "value": "DECO İLE ÖĞREN"
     }
   ],
   "components.discoverHero.button3": [
     {
       "type": 0,
-      "value": "MANİFESTO'YU OKUYUN"
+      "value": "MANIFESTO'YU OKU"
     }
   ],
   "components.discoverHero.button4": [
     {
       "type": 0,
-      "value": "BLOG'A BAKIN"
+      "value": "BLOG'A GÖZ AT"
     }
   ],
   "components.discoverHero.button5": [
     {
       "type": 0,
-      "value": "KURULUM DOSYASI ALIN"
+      "value": "KURULUMU YAP"
     }
   ],
   "components.discoverHero.button6": [
     {
       "type": 0,
-      "value": "ERGONAUT.SPACE'İ ZİYARET EDİN"
+      "value": "ERGONAUT.SPACE'İ ZİYARET ET"
     }
   ],
   "components.discoverHero.title": [
@@ -310,19 +382,61 @@
   "components.ecosystemHero.title": [
     {
       "type": 0,
-      "value": "Eko sistem"
+      "value": "Ekosistem"
+    }
+  ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Blok Zinciri Gezginleri"
     }
   ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
-      "value": "TARAYICI"
+      "value": "GEZGİN"
     }
   ],
   "components.ergoExplorer.button2": [
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Ergo Gezgini, blok zinciri ile arayüzünüzdür. Her işlemi gerçek zamanlı olarak izleyin. Veya topluluk tarafından derlenen metrikleri ergo.watch'ta görüntüleyin."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (alternatif arayüz)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Gezgini"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Metrikler"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (alternatif arka uç)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -334,7 +448,7 @@
   "components.ergoRaffle.heading": [
     {
       "type": 0,
-      "value": "Ergo Çekiliş"
+      "value": "Ergo Çekilişi"
     }
   ],
   "components.ergofoundation.list1": [
@@ -426,7 +540,7 @@
     },
     {
       "type": 0,
-      "value": " destekleyin ve;"
+      "value": " sürdürmek; ve"
     }
   ],
   "components.ergofoundation.list6": [
@@ -458,7 +572,7 @@
     },
     {
       "type": 0,
-      "value": ", topluluk odaklı bir kuruluş olup,"
+      "value": ", topluluk odaklı bir kuruluş olup şunlara odaklanmaktadır"
     }
   ],
   "components.exchanges.available": [
@@ -488,7 +602,7 @@
   "components.explore.description": [
     {
       "type": 0,
-      "value": "Ergo Explorer, blockchain arayüzüdür. Gerçek zamanlı olarak yapılan her işlemi izleyin. Veya ergo.watch'ta topluluğun seçtiği ölçümleri görüntüleyin."
+      "value": "Ergo Gezgini, blok zinciri arayüzünüzdür. Gerçek zamanlı olarak yapılan her işlemi izleyin. Veya ergo.watch'ta topluluğun seçtiği ölçümleri görüntüleyin."
     }
   ],
   "components.explore.heading": [
@@ -506,7 +620,7 @@
   "components.faq.anyQuestions": [
     {
       "type": 0,
-      "value": "HERHANGİ BİR SORU?"
+      "value": "SORUNUZ VAR MI?"
     }
   ],
   "components.faq.description": [
@@ -521,10 +635,16 @@
       "value": "SSS"
     }
   ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Yükleniyor..."
+    }
+  ],
   "components.faq.text.2": [
     {
       "type": 0,
-      "value": "ARADIĞINIZ ŞEYİ "
+      "value": "ARADIĞINIZI "
     },
     {
       "type": 1,
@@ -532,13 +652,31 @@
     },
     {
       "type": 0,
-      "value": " BULAMADINIZ MI?"
+      "value": " BULAMIYOR MUSUNUZ?"
     }
   ],
   "components.favorites.button1": [
     {
       "type": 0,
       "value": "ERGO ÇEKİLİŞLERİNİ KEŞFET"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "MEWFUND'U DENE"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "RAFFLE V2 HAKKINDA OKU"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Resim yok"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -556,19 +694,19 @@
   "components.getErg.MineIt.text": [
     {
       "type": 0,
-      "value": "Autolykos, ASIC'e dayanıklı ve yaygın olarak kullanılan GPU'lara (Ekran Kartları) uygun bir İş Kanıtı algoritması."
+      "value": "Autolykos, ASIC'e dayanıklı ve adil bir şekilde çıkarılan, yaygın GPU'larla dost bir İş Kanıtı algoritması."
     }
   ],
   "components.getErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Kazmaya başla"
+      "value": "Madencilik Yap"
     }
   ],
   "components.getErg.StoreIt.text": [
     {
       "type": 0,
-      "value": "ERG'nizi güvende tutmak için basit ve güvenli gözetlenemeyen cüzdanlar."
+      "value": "ERG'nizi güvende tutmak için basit ve güvenli vesayetsiz cüzdanlar."
     }
   ],
   "components.getErg.StoreIt.title": [
@@ -604,7 +742,7 @@
   "components.grantsAndBounties.button1": [
     {
       "type": 0,
-      "value": "KATKI"
+      "value": "KATKIDA BULUN"
     }
   ],
   "components.grantsAndBounties.button2": [
@@ -616,7 +754,7 @@
   "components.grantsAndBounties.button3": [
     {
       "type": 0,
-      "value": "TEMAS SAĞLAYIN"
+      "value": "İLETİŞİME GEÇİN"
     }
   ],
   "components.grantsAndBounties.description": [
@@ -628,7 +766,7 @@
   "components.grantsAndBounties.heading": [
     {
       "type": 0,
-      "value": "Yardımlar & Ödüller"
+      "value": "Hibeler & Ödüller"
     }
   ],
   "components.hallOfFame.description1": [
@@ -678,17 +816,13 @@
     },
     {
       "type": 0,
-      "value": " Halk'a Tahsis"
+      "value": " Halka Tahsis"
     }
   ],
   "components.highlights.slide.1.text": [
     {
       "type": 0,
-      "value": "Ergo, 2019'da başka hiçbir akıllı sözleşme platformuna benzemeyen bir dağıtımla hayata geçirilen, topluluk odaklı bir projedir; fonların %4,43'ü Ergo Vakfı Hazinesine tahsis edilmiş olup, sağlam ve merkezi olmayan bir ekosistemi teşvik etme kararlılığımızın altını çizmektedir. "
-    },
-    {
-      "type": 1,
-      "value": "breakingLine"
+      "value": "Ergo, 2019'da başka hiçbir akıllı sözleşme platformuna benzemeyen bir dağıtımla hayata geçirilen, topluluk odaklı bir projedir; fonların %4,43'ü Ergo Vakfı Hazinesine tahsis edilmiş olup, sağlam ve merkezi olmayan bir ekosistemi teşvik etme kararlılığımızın altını çizmektedir."
     }
   ],
   "components.highlights.slide.1.title": [
@@ -706,11 +840,7 @@
   "components.highlights.slide.2.text": [
     {
       "type": 0,
-      "value": "Geleneksel bankacılığın karşılayamayacağı daha yenilikçi, hedefe yönelik uygulamaları mümkün kılmak. Ergo, akıllı sözleşmeyle desteklenen mikrokredi olanakları ve Yerel Borsa Ticaret Sistemleri (LETS) ile güçlü araçlar sunar. "
-    },
-    {
-      "type": 1,
-      "value": "breakingLine"
+      "value": "Geleneksel bankacılığın karşılayamayacağı daha yenilikçi, hedefe yönelik uygulamaları mümkün kılmak. Ergo, akıllı sözleşmeyle desteklenen mikrokredi olanakları ve Yerel Borsa Ticaret Sistemleri (LETS) ile güçlü araçlar sunar."
     }
   ],
   "components.highlights.slide.2.title": [
@@ -728,11 +858,7 @@
   "components.highlights.slide.3.text": [
     {
       "type": 0,
-      "value": "Özerkliği korumak için gizlilik bir seçenek olarak kalmalıdır. Mahremiyet, bireye alan yaratmak için bariyerler yaratma ve sınırlar koyma yeteneğidir. Hangi sınırları çizmek istediği kişiye bağlıdır. Bu, güvenli ve zengin bir kodlama dili. ErgoScript, esnek ve güçlü Sıfır Bilgi kanıtlarıyla desteklenen yeni finansal etkileşim modellerine olanak tanır. "
-    },
-    {
-      "type": 1,
-      "value": "breakingLine"
+      "value": "Özerkliği korumak için gizlilik bir seçenek olarak kalmalıdır. Mahremiyet, bireye alan yaratmak için bariyerler yaratma ve sınırlar koyma yeteneğidir. Hangi sınırları çizmek istediği kişiye bağlıdır. Bu, güvenli ve zengin bir kodlama dili olan ErgoScript ve esnek ve güçlü Sıfır Bilgi kanıtlarıyla desteklenen yeni finansal etkileşim modellerine olanak tanır."
     }
   ],
   "components.highlights.slide.3.title": [
@@ -768,7 +894,7 @@
   "components.homeHero.title": [
     {
       "type": 0,
-      "value": "Finansın Geleceğine Verilen Güç"
+      "value": "Finansın Geleceğine Güç Vermek"
     }
   ],
   "components.homeInfo.blockReward": [
@@ -816,7 +942,7 @@
   "components.mining.button2": [
     {
       "type": 0,
-      "value": "MADENCİ HAVUZ İSTATİSTİKLERİ"
+      "value": "MADENCİLİK HAVUZU İSTATİSTİKLERİ"
     }
   ],
   "components.mining.button3": [
@@ -834,13 +960,13 @@
   "components.mining.button5": [
     {
       "type": 0,
-      "value": "MADENCİ BLOG YAZILARI"
+      "value": "MADENCİLİK BLOG YAZILARI"
     }
   ],
   "components.mining.button6": [
     {
       "type": 0,
-      "value": "EMİSYON & TOKENOMICS"
+      "value": "EMİSYON & TOKENOMİ"
     }
   ],
   "components.mining.calculator.currentBlockReward": [
@@ -867,16 +993,34 @@
       "value": "Hash oranınız"
     }
   ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Ağ hash oranı"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Hashrate değeri"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Günlük gelir"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -933,10 +1077,34 @@
       "value": "en son haberler"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "En son haberler"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Yeni"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Kullanılabilir haber yok."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "Haberler"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Tüm haberleri gör"
     }
   ],
   "components.ourFavorites.heading": [
@@ -954,7 +1122,7 @@
   "components.ourmission.emissionAndTokenomics": [
     {
       "type": 0,
-      "value": "EMİSYON VE TOKENOMICS"
+      "value": "EMİSYON VE TOKENOMİ"
     }
   ],
   "components.ourmission.ergofoundation": [
@@ -987,6 +1155,12 @@
       "value": "Ortaklar"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Çevir"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1002,7 +1176,7 @@
   "components.roadmap.section1.title": [
     {
       "type": 0,
-      "value": "ŞUANA KADAR"
+      "value": "ŞİMDİYE KADAR"
     }
   ],
   "components.roadmap.section2.title": [
@@ -1014,13 +1188,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "YAKINDA"
+      "value": "DEVAM EDİYOR"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2023 VE SONRASI"
+      "value": "YAKINDA"
     }
   ],
   "components.roadmap.title": [
@@ -1056,7 +1230,7 @@
   "components.uniqueErgo.card1.title": [
     {
       "type": 0,
-      "value": "ARAŞTIRMA VE GERÇEK DÜNYAYA ODAKLI"
+      "value": "ARAŞTIRMA ODAKLI VE GERÇEK DÜNYA İÇİN"
     }
   ],
   "components.uniqueErgo.card2.button": [
@@ -1092,7 +1266,7 @@
   "components.uniqueErgo.card3.title": [
     {
       "type": 0,
-      "value": "AKILLI VE BASİT"
+      "value": "AKILLI VE ANLAŞILIR"
     }
   ],
   "components.uniqueErgo.card4.button": [
@@ -1119,52 +1293,22 @@
       "value": "ERGO'YU BENZERSİZ YAPAN NEDİR?"
     }
   ],
-  "components.usingErg.BuyIt.text": [
-    {
-      "type": 0,
-      "value": "Popüler merkezi ve merkezi olmayan borsalarda mevcuttur."
-    }
-  ],
-  "components.usingErg.BuyIt.title": [
-    {
-      "type": 0,
-      "value": "Borsalar"
-    }
-  ],
-  "components.usingErg.MineIt.text": [
-    {
-      "type": 0,
-      "value": "Autolykos, ASIC'e dayanıklı ve yaygın olarak kullanılan GPU'lara (Ekran Kartları) uygun bir İş Kanıtı algoritması."
-    }
-  ],
-  "components.usingErg.MineIt.title": [
-    {
-      "type": 0,
-      "value": "Kazmaya başla"
-    }
-  ],
-  "components.usingErg.StoreIt.text": [
-    {
-      "type": 0,
-      "value": "ERG'nizi güvende tutmak için basit ve güvenli gözetlenemeyen cüzdanlar."
-    }
-  ],
   "components.usingErg.description": [
     {
       "type": 0,
       "value": "Ergo zengin bir ekosistem gelişmektedir. Geliştirici, madenci veya yatırımcı olmanız fark etmez, herkesi destekleriz."
     }
   ],
-  "components.usingErg.subtitle": [
-    {
-      "type": 0,
-      "value": "DURDURULAMAZ DEFI"
-    }
-  ],
   "components.usingErg.title": [
     {
       "type": 0,
       "value": "ERG EDİN"
+    }
+  ],
+  "components.usingErgo.subtitle": [
+    {
+      "type": 0,
+      "value": "DURDURULAMAZ DEFI"
     }
   ],
   "components.wallets.ErgoPay": [
@@ -1176,7 +1320,7 @@
   "components.wallets.chooseYours": [
     {
       "type": 0,
-      "value": "SENİNKİNİ SEÇ"
+      "value": "KENDİNİZİNKİNİ SEÇİN"
     }
   ],
   "components.wallets.coldStorageHeader": [
@@ -1260,7 +1404,7 @@
   "footer.community.2": [
     {
       "type": 0,
-      "value": "Sigmanauts"
+      "value": "Sigmanautlar"
     }
   ],
   "footer.community.3": [
@@ -1317,6 +1461,18 @@
       "value": "Belgeler"
     }
   ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "ERGO'YU KEŞFET"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Yazılım Sürümleri"
+    }
+  ],
   "footer.discover.title": [
     {
       "type": 0,
@@ -1326,7 +1482,7 @@
   "footer.ecosystem.1": [
     {
       "type": 0,
-      "value": "DApps"
+      "value": "DApp'ler"
     }
   ],
   "footer.ecosystem.2": [
@@ -1357,6 +1513,12 @@
     {
       "type": 0,
       "value": "EKOSİSTEM"
+    }
+  ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "FAVORİLERİMİZ"
     }
   ],
   "footer.getErg.1": [
@@ -1407,10 +1569,22 @@
       "value": "Gizlilik Politikası"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Gerçek Hayatta Ergo"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "Anladık!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Onur Listesi"
     }
   ],
   "navigation.discover": [
@@ -1497,16 +1671,76 @@
       "value": "Yasal"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "Hakkımızdaki Haberler"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "Mobil Cüzdanlar"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "Haberler"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Gizlilik Politikası"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Çevriliyor"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Çevriliyor..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "DOKÜMANTASYON"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "BORSALAR"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "YOL HARİTASI"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "CÜZDANLAR"
     }
   ]
 }

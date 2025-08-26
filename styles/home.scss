@@ -1,11 +1,36 @@
 @use "./_variables.scss" as *;
 
-// .home-blur-1 {
-//     position: absolute;
-//     width: 1603px;
-//     height: 1482.99px;
-//     left: 1200.23px;
-//     top: -1191px;
+.responsive-title {
+  max-width: 100%; /* Full width on mobile */
+  white-space: normal; /* Allow line breaks */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: inline-block;
+  line-height: 1.1;
+  letter-spacing: 0.02em; /* Subtle tracking, avoid forcing breaks */
+}
+
+/* Constrain title width only on desktop */
+@media screen and (min-width: $lg) {
+  .responsive-title {
+    max-width: 30vw; /* 30% on large screens */
+  }
+}
+
+#erg-card-row > a {
+  margin-right: 0; /* Spacing controlled by Tailwind gap utilities */
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+#erg-card-row > a:hover {
+  transform: translateY(-2px); /* Subtle lift without horizontal growth */
+  z-index: 80; /* Ensure on top when hovered */
+  box-shadow: 0 8px 24px rgba(255, 94, 24, 0.3);
+  border-radius: 28px;
+  overflow: visible; /* Allow shadow overflow */
+}
     
 //     background: #FF5E18;
 //     filter: blur(400px);

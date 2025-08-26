@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 type Props = {
   currentPrice: number;
@@ -9,6 +9,7 @@ type Props = {
 };
 
 export default function MiningCalculator(props: Props) {
+  const intl = useIntl();
   const [hashRate, setHashRate] = useState('');
   let dailyRevenueERG = 0;
   const blockTime = 120;
@@ -52,11 +53,14 @@ export default function MiningCalculator(props: Props) {
                   name="hashrate"
                   id="hashrate"
                   className="block w-full h-12 pl-4 pr-10 sm:text-sm rounded-2xl bg-transparent border-[1px] border-white text-white"
-                  placeholder="Hashrate value"
+                  placeholder={intl.formatMessage({
+                    id: 'components.mining.calculator.placeholder',
+                    defaultMessage: 'Hashrate value',
+                  })}
                   onChange={(e) => setHashRate(e.target.value)}
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-white">
-                  MH/s
+                  <FormattedMessage id="components.mining.calculator.mhs" defaultMessage="MH/s" />
                 </div>
               </div>
             </div>
@@ -120,7 +124,9 @@ export default function MiningCalculator(props: Props) {
                 <p className="text-white">
                   {(props.networkHashrate / 1000000000000).toFixed(2)}&nbsp;
                 </p>
-                <p className="text-white">TH/s</p>
+                <p className="text-white">
+                  <FormattedMessage id="components.mining.calculator.ths" defaultMessage="TH/s" />
+                </p>
               </div>
             </div>
           </div>

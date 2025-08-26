@@ -50,3 +50,4 @@ workbox*.js.map
 memory-bank/*
 /memory-bank
 /.0notes
+/scripts/reports

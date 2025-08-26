@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
 
 type NewsPostProps = {
@@ -12,6 +12,7 @@ type NewsPostProps = {
 };
 
 function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
+  const intl = useIntl();
   return (
     <>
       {url ? (
@@ -34,12 +35,13 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
             )}
             <div className="-ml-4 absolute bottom-4 md:bottom-12">
               <Button
-                text="READ"
+                text={<FormattedMessage id="blog.news.read" defaultMessage="READ" />}
                 url={url}
                 newTab={true}
                 underline={true}
                 textColor="brand-orange"
                 background={false}
+                ariaLabel={intl.formatMessage({ id: 'blog.news.read', defaultMessage: 'READ' })}
               />
             </div>
           </div>
@@ -75,7 +77,9 @@ export default function BlogNews({ news }: Props) {
 
   return (
     <div>
-      <h1>News</h1>
+      <h1>
+        <FormattedMessage id="pages.news.title" defaultMessage="News" />
+      </h1>
 
       <InfiniteScroll
         dataLength={posts.length}
@@ -83,12 +87,19 @@ export default function BlogNews({ news }: Props) {
         hasMore={hasMore}
         loader={
           <div className="text-center mt-20 mb-8">
-            <h4>Loading...</h4>
+            <h4>
+              <FormattedMessage id="components.blogNews.loading" defaultMessage="Loading..." />
+            </h4>
           </div>
         }
         endMessage={
           <div className="text-center mt-20 mb-8">
-            <h4>Nothing more to show</h4>
+            <h4>
+              <FormattedMessage
+                id="components.blogNews.end"
+                defaultMessage="Nothing more to show"
+              />
+            </h4>
           </div>
         }
         className="w-full"

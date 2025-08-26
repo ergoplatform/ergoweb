@@ -6,6 +6,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/cn/:path*',
+        destination: '/zh/:path*',
+        permanent: true,
+      },
+      {
         source: '/docs/:path*',
         destination: 'https://storage.googleapis.com/ergo-cms-media/docs/:path*',
         permanent: true,
@@ -175,23 +180,7 @@ const nextConfig = {
     ];
   },
   i18n: {
-    locales: [
-      'default',
-      'en',
-      //'es',
-      'de',
-      'it',
-      //'pt',
-      'hu',
-      'ru',
-      'cn',
-      'id',
-      // 'hi',
-      'tr',
-      // 'ro',
-      // 'sk',
-      // 'zh',
-    ],
+    locales: ['default', 'en', 'es', 'de', 'it', 'pl', 'pt', 'sk', 'zh', 'hu', 'ru', 'id', 'tr'],
     defaultLocale: 'default',
     localeDetection: false,
   },

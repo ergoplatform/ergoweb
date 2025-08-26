@@ -211,6 +211,7 @@ a {
   box-shadow: 0px 2px 12px rgba(214, 214, 214, 0.18);
   border-radius: 28px;
   border: 1.5px solid #f2f2f2;
+  position: relative;
   transition: 
     transform 0.25s cubic-bezier(.4,2,.6,1), 
     box-shadow 0.25s cubic-bezier(.4,2,.6,1), 
@@ -219,7 +220,8 @@ a {
   cursor: pointer;
 
   &:hover, &:focus-visible {
-    transform: scale(1.045);
+    transform: translateY(-4px);
+    z-index: 100;
     box-shadow: 0px 12px 36px 0px rgba(255, 94, 24, 0.13), 0px 4px 19px rgba(214, 214, 214, 0.22);
     background: linear-gradient(120deg, #fff 40%, #ffe7d9 100%);
     border: 2px solid #ff5e18;
@@ -229,7 +231,7 @@ a {
     transition: transform 0.25s cubic-bezier(.4,2,.6,1);
   }
   &:hover .using-erg-icon, &:focus-visible .using-erg-icon {
-    transform: translateY(-8px) scale(1.08);
+    transform: translateY(-6px);
   }
   &:hover .font-subtitle-3, &:focus-visible .font-subtitle-3 {
     color: #ff5e18 !important;
@@ -242,6 +244,7 @@ a {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.18);
   border-radius: 28px;
   border: 1.5px solid #232323;
+  position: relative;
   transition: 
     transform 0.25s cubic-bezier(.4,2,.6,1), 
     box-shadow 0.25s cubic-bezier(.4,2,.6,1), 
@@ -249,7 +252,8 @@ a {
     border 0.25s;
 
   &:hover, &:focus-visible {
-    transform: scale(1.045);
+    transform: translateY(-4px);
+    z-index: 100;
     box-shadow: 0px 12px 36px 0px rgba(255, 94, 24, 0.13), 0px 4px 19px rgba(0, 0, 0, 0.22);
     background: linear-gradient(120deg, #232323 40%, #3a2a1a 100%);
     border: 2px solid #ff5e18;
@@ -259,7 +263,7 @@ a {
     transition: transform 0.25s cubic-bezier(.4,2,.6,1);
   }
   &:hover .using-erg-icon, &:focus-visible .using-erg-icon {
-    transform: translateY(-8px) scale(1.08);
+    transform: translateY(-6px);
   }
 }
 

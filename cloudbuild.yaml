@@ -20,7 +20,7 @@ steps:
       - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/ergo-platform-frontend:$COMMIT_SHA
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'ergo-platform-frontend', '--image', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/ergo-platform-frontend:$COMMIT_SHA', '--region', 'europe-west4']
+    args: ['run', 'deploy', 'ergo-platform-frontend', '--image', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/ergo-platform-frontend:$COMMIT_SHA', '--region', 'europe-west4', '--set-secrets', 'OPENAI_API_KEY=OPENAI_API_KEY:latest']
 
 images:
   - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/ergo-platform-frontend:$COMMIT_SHA

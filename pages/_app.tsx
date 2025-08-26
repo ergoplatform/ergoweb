@@ -11,6 +11,7 @@ const ThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.Them
 });
 import Script from 'next/script';
 import ClientOnly from '../components/ClientOnly';
+import RouteSpinner from '../components/RouteSpinner';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -155,7 +156,36 @@ function MyApp({ Component, pageProps }: AppProps) {
             if (!cancelled) setMessages(m);
             return;
           }
-          // 'es' and 'pt' omitted because locales are disabled in next.config.js
+          case 'zh': {
+            const m = (await import('../content/compiled-locales/cn.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'es': {
+            const m = (await import('../content/compiled-locales/es.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'pl': {
+            const m = (await import('../content/compiled-locales/pl.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'pt': {
+            const m = (await import('../content/compiled-locales/pt.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'sk': {
+            const m = (await import('../content/compiled-locales/sk.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
+          case 'tr': {
+            const m = (await import('../content/compiled-locales/tr.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
           default: {
             if (!cancelled) setMessages(English);
             return;
@@ -236,6 +266,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </ClientOnly>
       <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
         <IntlProvider locale={shortLocale} messages={messages} onError={() => null}>
+          <RouteSpinner />
           <NextNProgress color="#e74c3c" />
           <Component {...pageProps} />
         </IntlProvider>

@@ -1,64 +1,4 @@
 {
-  "blog.media.read": [
-    {
-      "type": 0,
-      "value": "READ"
-    }
-  ],
-  "blog.news.read": [
-    {
-      "type": 0,
-      "value": "READ"
-    }
-  ],
-  "blog.post.backToAll": [
-    {
-      "type": 0,
-      "value": "BACK TO ALL POSTS"
-    }
-  ],
-  "blog.post.machineTranslated": [
-    {
-      "type": 0,
-      "value": "This page is machine-translated."
-    }
-  ],
-  "blog.post.sharePost": [
-    {
-      "type": 0,
-      "value": "Share post"
-    }
-  ],
-  "blog.post.translationUnavailable": [
-    {
-      "type": 0,
-      "value": "Translation temporarily unavailable. Showing original English."
-    }
-  ],
-  "categoryPicker.categories": [
-    {
-      "type": 0,
-      "value": "Categories"
-    }
-  ],
-  "common.close": [
-    {
-      "type": 0,
-      "value": "Close"
-    }
-  ],
-  "common.next": [
-    {
-      "type": 0,
-      "value": "Next"
-    }
-  ],
-  "common.previous": [
-    {
-      "type": 0,
-      "value": "Previous"
-    }
-  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -261,18 +201,6 @@
       "value": "The Future of Proof of Work"
     }
   ],
-  "components.blogNews.end": [
-    {
-      "type": 0,
-      "value": "Nothing more to show"
-    }
-  ],
-  "components.blogNews.loading": [
-    {
-      "type": 0,
-      "value": "Loading..."
-    }
-  ],
   "components.communityHero.subtitle": [
     {
       "type": 0,
@@ -381,12 +309,6 @@
       "value": "Ecosystem"
     }
   ],
-  "components.ergoExplorer.blockchainExplorers": [
-    {
-      "type": 0,
-      "value": "Blockchain Explorers"
-    }
-  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -397,42 +319,6 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
-    }
-  ],
-  "components.ergoExplorer.description": [
-    {
-      "type": 0,
-      "value": "The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
-    }
-  ],
-  "components.ergoExplorer.ergExplorerAltFrontend": [
-    {
-      "type": 0,
-      "value": "ErgExplorer (alternative frontend)"
-    }
-  ],
-  "components.ergoExplorer.ergoExplorer": [
-    {
-      "type": 0,
-      "value": "Ergo Explorer"
-    }
-  ],
-  "components.ergoExplorer.ergoWatch": [
-    {
-      "type": 0,
-      "value": "Ergo.Watch"
-    }
-  ],
-  "components.ergoExplorer.metrics": [
-    {
-      "type": 0,
-      "value": "Metrics"
-    }
-  ],
-  "components.ergoExplorer.sigmaSpaceAltBackend": [
-    {
-      "type": 0,
-      "value": "SigmaSpace (alternative backend)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -635,12 +521,6 @@
       "value": "FAQ"
     }
   ],
-  "components.faq.loading": [
-    {
-      "type": 0,
-      "value": "Loading..."
-    }
-  ],
   "components.faq.text.2": [
     {
       "type": 0,
@@ -671,12 +551,6 @@
     {
       "type": 0,
       "value": "READ ABOUT RAFFLE V2"
-    }
-  ],
-  "components.featureCard.noImage": [
-    {
-      "type": 0,
-      "value": "No image"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -925,34 +799,16 @@
       "value": "Your hashrate"
     }
   ],
-  "components.mining.calculator.mhs": [
-    {
-      "type": 0,
-      "value": "MH/s"
-    }
-  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Network hashrate"
     }
   ],
-  "components.mining.calculator.placeholder": [
-    {
-      "type": 0,
-      "value": "Hashrate value"
-    }
-  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
       "value": "Daily revenue"
-    }
-  ],
-  "components.mining.calculator.ths": [
-    {
-      "type": 0,
-      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
@@ -1009,34 +865,10 @@
       "value": "latest news"
     }
   ],
-  "components.news.latestAria": [
-    {
-      "type": 0,
-      "value": "Latest news"
-    }
-  ],
-  "components.news.newBadge": [
-    {
-      "type": 0,
-      "value": "New"
-    }
-  ],
-  "components.news.none": [
-    {
-      "type": 0,
-      "value": "No news available."
-    }
-  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "News"
-    }
-  ],
-  "components.news.viewAll": [
-    {
-      "type": 0,
-      "value": "View all news"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1623,12 +1455,6 @@
       "value": "Legal"
     }
   ],
-  "pages.media.title": [
-    {
-      "type": 0,
-      "value": "Media About Us"
-    }
-  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
@@ -1645,54 +1471,6 @@
     {
       "type": 0,
       "value": "Privacy Policy"
-    }
-  ],
-  "routeSpinner.translating": [
-    {
-      "type": 0,
-      "value": "Translating"
-    }
-  ],
-  "routeSpinner.translatingEllipsis": [
-    {
-      "type": 0,
-      "value": "Translating…"
-    }
-  ],
-  "secondaryMenu.blog": [
-    {
-      "type": 0,
-      "value": "BLOG"
-    }
-  ],
-  "secondaryMenu.documentation": [
-    {
-      "type": 0,
-      "value": "DOCUMENTATION"
-    }
-  ],
-  "secondaryMenu.exchanges": [
-    {
-      "type": 0,
-      "value": "EXCHANGES"
-    }
-  ],
-  "secondaryMenu.roadmap": [
-    {
-      "type": 0,
-      "value": "ROADMAP"
-    }
-  ],
-  "secondaryMenu.sigmaverse": [
-    {
-      "type": 0,
-      "value": "SIGMAVERSE"
-    }
-  ],
-  "secondaryMenu.wallets": [
-    {
-      "type": 0,
-      "value": "WALLETS"
     }
   ]
 }

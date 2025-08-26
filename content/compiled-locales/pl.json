@@ -1,4 +1,64 @@
 {
+  "blog.media.read": [
+    {
+      "type": 0,
+      "value": "CZYTAJ"
+    }
+  ],
+  "blog.news.read": [
+    {
+      "type": 0,
+      "value": "CZYTAJ"
+    }
+  ],
+  "blog.post.backToAll": [
+    {
+      "type": 0,
+      "value": "POWRÓT DO WSZYSTKICH WPISÓW"
+    }
+  ],
+  "blog.post.machineTranslated": [
+    {
+      "type": 0,
+      "value": "Ta strona została przetłumaczona maszynowo."
+    }
+  ],
+  "blog.post.sharePost": [
+    {
+      "type": 0,
+      "value": "Udostępnij wpis"
+    }
+  ],
+  "blog.post.translationUnavailable": [
+    {
+      "type": 0,
+      "value": "Tłumaczenie tymczasowo niedostępne. Wyświetlanie oryginalnej wersji angielskiej."
+    }
+  ],
+  "categoryPicker.categories": [
+    {
+      "type": 0,
+      "value": "Kategorie"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Zamknij"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Dalej"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Wstecz"
+    }
+  ],
   "components.ContributeForm.company.subTitle": [
     {
       "type": 0,
@@ -201,6 +261,18 @@
       "value": "Przyszłość Proof of Work"
     }
   ],
+  "components.blogNews.end": [
+    {
+      "type": 0,
+      "value": "Nic więcej do pokazania"
+    }
+  ],
+  "components.blogNews.loading": [
+    {
+      "type": 0,
+      "value": "Ładowanie..."
+    }
+  ],
   "components.communityHero.Discord.text": [
     {
       "type": 0,
@@ -276,7 +348,7 @@
   "components.communityHero.Wiki.text": [
     {
       "type": 0,
-      "value": "Twój wiki społeczności. Współtwórz w dowolnym języku!"
+      "value": "Twoja wiki społeczności. Współtwórz w dowolnym języku!"
     }
   ],
   "components.communityHero.Wiki.title": [
@@ -306,7 +378,7 @@
   "components.communityHero.title": [
     {
       "type": 0,
-      "value": "Ekosystem"
+      "value": "Społeczność"
     }
   ],
   "components.communitySection.communityHero.linkText": [
@@ -405,6 +477,12 @@
       "value": "Ekosystem"
     }
   ],
+  "components.ergoExplorer.blockchainExplorers": [
+    {
+      "type": 0,
+      "value": "Eksploratory Blockchain"
+    }
+  ],
   "components.ergoExplorer.button1": [
     {
       "type": 0,
@@ -415,6 +493,42 @@
     {
       "type": 0,
       "value": "ERGO.WATCH"
+    }
+  ],
+  "components.ergoExplorer.description": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer to twój interfejs do blockchaina. Obserwuj każdą transakcję w czasie rzeczywistym. Możesz też przeglądać metryki społeczności na ergo.watch."
+    }
+  ],
+  "components.ergoExplorer.ergExplorerAltFrontend": [
+    {
+      "type": 0,
+      "value": "ErgExplorer (alternatywny frontend)"
+    }
+  ],
+  "components.ergoExplorer.ergoExplorer": [
+    {
+      "type": 0,
+      "value": "Ergo Explorer"
+    }
+  ],
+  "components.ergoExplorer.ergoWatch": [
+    {
+      "type": 0,
+      "value": "Ergo.Watch"
+    }
+  ],
+  "components.ergoExplorer.metrics": [
+    {
+      "type": 0,
+      "value": "Metryki"
+    }
+  ],
+  "components.ergoExplorer.sigmaSpaceAltBackend": [
+    {
+      "type": 0,
+      "value": "SigmaSpace (alternatywny backend)"
     }
   ],
   "components.ergoRaffle.description": [
@@ -580,7 +694,7 @@
   "components.exchanges.heading": [
     {
       "type": 0,
-      "value": "KUP, SPRZEDAJ I HANDLUJ ERGO"
+      "value": "KUPUJ, SPRZEDAWAJ I HANDLUJ ERGO"
     }
   ],
   "components.exchanges.subheading": [
@@ -592,7 +706,7 @@
   "components.explore.description": [
     {
       "type": 0,
-      "value": "Ergo Explorer to twoje interfejs z blockchain. Oglądaj każdą transakcję w czasie rzeczywistym. Lub przeglądaj społecznościowe metryki na ergo.watch."
+      "value": "Ergo Explorer to twój interfejs z blockchain. Oglądaj każdą transakcję w czasie rzeczywistym. Lub przeglądaj społecznościowe metryki na ergo.watch."
     }
   ],
   "components.explore.heading": [
@@ -610,7 +724,7 @@
   "components.faq.anyQuestions": [
     {
       "type": 0,
-      "value": "JAKIE MASZ PYTANIA?"
+      "value": "MASZ PYTANIA?"
     }
   ],
   "components.faq.description": [
@@ -623,6 +737,12 @@
     {
       "type": 0,
       "value": "Najczęściej zadawane pytania"
+    }
+  ],
+  "components.faq.loading": [
+    {
+      "type": 0,
+      "value": "Ładowanie..."
     }
   ],
   "components.faq.text.2": [
@@ -643,6 +763,24 @@
     {
       "type": 0,
       "value": "ODKRYJ ERGO RAFFLE"
+    }
+  ],
+  "components.favorites.mewFund": [
+    {
+      "type": 0,
+      "value": "WYPRÓBUJ MEWFUND"
+    }
+  ],
+  "components.favorites.raffleV2": [
+    {
+      "type": 0,
+      "value": "PRZECZYTAJ O RAFFLE V2"
+    }
+  ],
+  "components.featureCard.noImage": [
+    {
+      "type": 0,
+      "value": "Brak obrazu"
     }
   ],
   "components.getErg.BuyIt.text": [
@@ -666,7 +804,7 @@
   "components.getErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Kop to"
+      "value": "Wydobywaj"
     }
   ],
   "components.getErg.StoreIt.text": [
@@ -681,10 +819,16 @@
       "value": "Portfele"
     }
   ],
-  "components.getErg.UseIt.title": [
+  "components.getErg.UseIt.text": [
     {
       "type": 0,
       "value": "Wykorzystaj swoje ERG już dziś w naszym rozwijającym się ekosystemie."
+    }
+  ],
+  "components.getErg.UseIt.title": [
+    {
+      "type": 0,
+      "value": "Ekosystem"
     }
   ],
   "components.getErg.description": [
@@ -696,7 +840,7 @@
   "components.getErg.heroTitle": [
     {
       "type": 0,
-      "value": "NIETRZYMAJĄCA SIĘ DEFI"
+      "value": "NIEPOWSTRZYMANE DEFI"
     }
   ],
   "components.getErg.title": [
@@ -845,6 +989,12 @@
       "value": "SPRAWDŹ"
     }
   ],
+  "components.homeHero.pitchDeckButton": [
+    {
+      "type": 0,
+      "value": "PREZENTACJA"
+    }
+  ],
   "components.homeHero.text": [
     {
       "type": 0,
@@ -902,7 +1052,7 @@
   "components.mining.button2": [
     {
       "type": 0,
-      "value": "STATYSTYKI BASENU KOPANIA"
+      "value": "STATYSTYKI PULI WYDOBYWCZEJ"
     }
   ],
   "components.mining.button3": [
@@ -920,13 +1070,19 @@
   "components.mining.button5": [
     {
       "type": 0,
-      "value": "POSTY BLOGOWE O KOPANIU"
+      "value": "WPISY NA BLOGU O WYDOBYCIU"
+    }
+  ],
+  "components.mining.button6": [
+    {
+      "type": 0,
+      "value": "EMISJA I TOKENOMIA"
     }
   ],
   "components.mining.calculator.currentBlockReward": [
     {
       "type": 0,
-      "value": "Aktualna nagroda blokowa"
+      "value": "Aktualna nagroda za blok"
     }
   ],
   "components.mining.calculator.currentPrice": [
@@ -941,22 +1097,46 @@
       "value": "Autolykos to podstawowy algorytm Proof of Work (PoW) odporny na ASIC i przyjazny dla GPU."
     }
   ],
+  "components.mining.calculator.hash": [
+    {
+      "type": 0,
+      "value": "Twój hashrate"
+    }
+  ],
+  "components.mining.calculator.mhs": [
+    {
+      "type": 0,
+      "value": "MH/s"
+    }
+  ],
   "components.mining.calculator.networkHashrate": [
     {
       "type": 0,
       "value": "Hashrate sieci"
     }
   ],
+  "components.mining.calculator.placeholder": [
+    {
+      "type": 0,
+      "value": "Wartość hashrate"
+    }
+  ],
   "components.mining.calculator.rev": [
     {
       "type": 0,
-      "value": "Dochód dzienny"
+      "value": "Dzienny przychód"
+    }
+  ],
+  "components.mining.calculator.ths": [
+    {
+      "type": 0,
+      "value": "TH/s"
     }
   ],
   "components.mining.calculator.title": [
     {
       "type": 0,
-      "value": "Kalkulator kopania"
+      "value": "Kalkulator wydobycia"
     }
   ],
   "components.mining.minersTitle": [
@@ -968,13 +1148,13 @@
   "components.mining.miningPoolsTitle": [
     {
       "type": 0,
-      "value": "Pule miningowe"
+      "value": "Pule wydobywcze"
     }
   ],
   "components.mining.text.1": [
     {
       "type": 0,
-      "value": "EWydobywanie Ergo opiera się na algorytmie Proof of Work Autolykos, odpornym na układy ASIC, zaprogramowanym w Scali. Wydobywanie możliwe jest na większości układów GPU w stosunkowo niższych temperaturach niż inne algorytmy, co zwiększa żywotność sprzętu górniczego. W połączeniu z modelem eUTXO i przeniesieniem cięższych obliczeń poza łańcuch, tworzy wysoce wydajny Proof of Work."
+      "value": "Wydobywanie Ergo opiera się na algorytmie Proof of Work Autolykos, odpornym na układy ASIC, zaprogramowanym w Scali. Wydobywanie możliwe jest na większości układów GPU w stosunkowo niższych temperaturach niż inne algorytmy, co zwiększa żywotność sprzętu górniczego. W połączeniu z modelem eUTXO i przeniesieniem cięższych obliczeń poza łańcuch, tworzy wysoce wydajny Proof of Work."
     }
   ],
   "components.mining.text.2": [
@@ -992,7 +1172,7 @@
   "components.mining.title": [
     {
       "type": 0,
-      "value": "Mining"
+      "value": "Wydobycie"
     }
   ],
   "components.news.blog": [
@@ -1007,10 +1187,34 @@
       "value": "najnowsze wiadomości"
     }
   ],
+  "components.news.latestAria": [
+    {
+      "type": 0,
+      "value": "Najnowsze wiadomości"
+    }
+  ],
+  "components.news.newBadge": [
+    {
+      "type": 0,
+      "value": "Nowe"
+    }
+  ],
+  "components.news.none": [
+    {
+      "type": 0,
+      "value": "Brak dostępnych wiadomości."
+    }
+  ],
   "components.news.title": [
     {
       "type": 0,
       "value": "Wiadomości"
+    }
+  ],
+  "components.news.viewAll": [
+    {
+      "type": 0,
+      "value": "Zobacz wszystkie wiadomości"
     }
   ],
   "components.ourFavorites.heading": [
@@ -1061,6 +1265,12 @@
       "value": "Partnerzy"
     }
   ],
+  "components.post.translate": [
+    {
+      "type": 0,
+      "value": "Przetłumacz"
+    }
+  ],
   "components.roadmap.coinmarketcal": [
     {
       "type": 0,
@@ -1088,13 +1298,13 @@
   "components.roadmap.section3.title": [
     {
       "type": 0,
-      "value": "WKRÓTCE"
+      "value": "W TRAKCIE"
     }
   ],
   "components.roadmap.section4.title": [
     {
       "type": 0,
-      "value": "2024 i PÓŹNIEJ"
+      "value": "WKRÓTCE"
     }
   ],
   "components.roadmap.title": [
@@ -1214,7 +1424,7 @@
   "components.usingErg.MineIt.title": [
     {
       "type": 0,
-      "value": "Kop to"
+      "value": "Wydobywaj"
     }
   ],
   "components.usingErg.StoreIt.text": [
@@ -1250,7 +1460,13 @@
   "components.usingErg.title": [
     {
       "type": 0,
-      "value": "OBTENGA ERG"
+      "value": "ZDOBĄDŹ ERG"
+    }
+  ],
+  "components.wallets.ErgoPay": [
+    {
+      "type": 0,
+      "value": "ErgoPay"
     }
   ],
   "components.wallets.chooseYours": [
@@ -1262,7 +1478,13 @@
   "components.wallets.coldStorageHeader": [
     {
       "type": 0,
-      "value": "Chłodne przechowywanie"
+      "value": "Przechowywanie offline"
+    }
+  ],
+  "components.wallets.dAppConnectorHeader": [
+    {
+      "type": 0,
+      "value": "Łącznik dApp"
     }
   ],
   "components.wallets.featureHeader": [
@@ -1274,7 +1496,7 @@
   "components.wallets.hotStorageHeader": [
     {
       "type": 0,
-      "value": "Gorące przechowywanie"
+      "value": "Przechowywanie online"
     }
   ],
   "components.wallets.mobileAppHeader": [
@@ -1370,7 +1592,7 @@
   "footer.community.title": [
     {
       "type": 0,
-      "value": "Społeczność"
+      "value": "SPOŁECZNOŚĆ"
     }
   ],
   "footer.discover.1": [
@@ -1401,6 +1623,18 @@
     {
       "type": 0,
       "value": "Dokumenty"
+    }
+  ],
+  "footer.discover.discoverErg": [
+    {
+      "type": 0,
+      "value": "ODKRYJ ERG"
+    }
+  ],
+  "footer.discover.softwareReleases": [
+    {
+      "type": 0,
+      "value": "Wydania oprogramowania"
     }
   ],
   "footer.discover.title": [
@@ -1445,6 +1679,12 @@
       "value": "EKOSYSTEM"
     }
   ],
+  "footer.favorites.title": [
+    {
+      "type": 0,
+      "value": "NASZE ULUBIONE"
+    }
+  ],
   "footer.getErg.1": [
     {
       "type": 0,
@@ -1472,7 +1712,7 @@
   "footer.getErg.title": [
     {
       "type": 0,
-      "value": "Zdobądź ERG"
+      "value": "ZDOBĄDŹ ERG"
     }
   ],
   "footer.legal": [
@@ -1493,10 +1733,22 @@
       "value": "Polityka prywatności"
     }
   ],
+  "footer.realLifeErgo.title": [
+    {
+      "type": 0,
+      "value": "Ergo w prawdziwym życiu"
+    }
+  ],
   "footer.weGotIt": [
     {
       "type": 0,
       "value": "Mamy to!"
+    }
+  ],
+  "hallOfFame.title": [
+    {
+      "type": 0,
+      "value": "Galeria Sław"
     }
   ],
   "navigation.discover": [
@@ -1514,13 +1766,13 @@
   "navigation.ergoCommunity": [
     {
       "type": 0,
-      "value": "SPOŁECZNOŚĆ ERGO"
+      "value": "SPOŁECZNOŚĆ"
     }
   ],
   "navigation.getErg": [
     {
       "type": 0,
-      "value": "Zdobądź ERG"
+      "value": "ZDOBĄDŹ ERG"
     }
   ],
   "navigation.moreContent": [
@@ -1583,16 +1835,76 @@
       "value": "Informacje prawne"
     }
   ],
+  "pages.media.title": [
+    {
+      "type": 0,
+      "value": "Media o nas"
+    }
+  ],
   "pages.mobile-wallets": [
     {
       "type": 0,
       "value": "Portfele mobilne"
     }
   ],
+  "pages.news.title": [
+    {
+      "type": 0,
+      "value": "Wiadomości"
+    }
+  ],
   "pages.privacyPolicy.title": [
     {
       "type": 0,
       "value": "Polityka prywatności"
+    }
+  ],
+  "routeSpinner.translating": [
+    {
+      "type": 0,
+      "value": "Tłumaczenie"
+    }
+  ],
+  "routeSpinner.translatingEllipsis": [
+    {
+      "type": 0,
+      "value": "Tłumaczenie..."
+    }
+  ],
+  "secondaryMenu.blog": [
+    {
+      "type": 0,
+      "value": "BLOG"
+    }
+  ],
+  "secondaryMenu.documentation": [
+    {
+      "type": 0,
+      "value": "DOKUMENTACJA"
+    }
+  ],
+  "secondaryMenu.exchanges": [
+    {
+      "type": 0,
+      "value": "GIEŁDY"
+    }
+  ],
+  "secondaryMenu.roadmap": [
+    {
+      "type": 0,
+      "value": "ROADMAP"
+    }
+  ],
+  "secondaryMenu.sigmaverse": [
+    {
+      "type": 0,
+      "value": "SIGMAVERSE"
+    }
+  ],
+  "secondaryMenu.wallets": [
+    {
+      "type": 0,
+      "value": "PORTFELE"
     }
   ]
 }
