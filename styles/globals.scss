@@ -160,6 +160,14 @@ a {
   color: white !important;
 }
 
+.dark .blog-post a {
+  color: black !important;
+}
+
+.dark .single-post .blog-md a {
+  color: black !important;
+}
+
 #Wiki p.hidden.md\:block.absolute a[href="https://ergonaut.space/"] {
   color: white !important;
   font-size: 1.125rem;
