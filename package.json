@@ -13,10 +13,8 @@
     "i18n": "npm run extract:i18n && npm run compile:i18n",
     "svgr": "svgr -d components/icons components/icons/svgs"
   },
-
   "dependencies": {
     "@headlessui/react": "^1.5.0",
-    "react-intl": "7.1.11",
     "@mdx-js/loader": "^2.0.0",
     "@next/bundle-analyzer": "^15.5.0",
     "@next/mdx": "^12.1.0",
@@ -30,12 +28,14 @@
     "next-sitemap": "^3.1.30",
     "next-themes": "^0.0.15",
     "nextjs-progressbar": "0.0.14",
+    "nodemailer": "^7.0.11",
     "react": "^18.3.1",
     "react-countup": "^6.1.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.4.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-intersection-observer": "^8.33.1",
+    "react-intl": "7.1.11",
     "react-markdown": "^8.0.0",
     "react-toastify": "^8.2.0",
     "rehype-raw": "^6.1.1",
@@ -58,6 +58,7 @@
     "@storybook/react": "^9.1.2",
     "@svgr/cli": "^6.2.0",
     "@types/node": "17.0.9",
+    "@types/nodemailer": "^7.0.4",
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
