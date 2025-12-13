@@ -45,13 +45,12 @@ export default function ContributeForm() {
 
   const sendMessage = async (event: any) => {
     event.preventDefault();
-    const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
+    const res = await fetch('/api/contact', {
       body: JSON.stringify({
-        data: {
-          name: event.target.name.value,
-          text: event.target.text.value,
-          email: event.target.email.value,
-        },
+        name: event.target.name.value,
+        text: event.target.text.value,
+        email: event.target.email.value,
+        confirm_email: event.target.confirm_email.value,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -176,6 +175,14 @@ export default function ContributeForm() {
             />
           </p>
           <form className="flex flex-col" onSubmit={sendMessage}>
+            <input
+              id="confirm_email"
+              name="confirm_email"
+              type="text"
+              style={{ display: 'none' }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <input
               id="name"
               name="name"
