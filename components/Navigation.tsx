@@ -202,7 +202,7 @@ function Navigation({ enableLanguages = true }) {
 
                       <li className="mb-2">
                         <Link
-                          href="/community/#HallOfFame"
+                          href="/hall-of-fame"
                           aria-label={intl.formatMessage({
                             id: 'footer.community.4',
                             defaultMessage: 'Hall of Fame',

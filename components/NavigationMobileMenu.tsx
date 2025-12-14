@@ -80,7 +80,7 @@ export default function NavigationMobileMenu() {
               </li>
 
               <li className="mb-2">
-                <Link href="/community/#HallOfFame">
+                <Link href="/hall-of-fame">
                   <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
                 </Link>
               </li>

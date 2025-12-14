@@ -201,12 +201,9 @@ export default function Footer() {
                   <FormattedMessage defaultMessage="Contribute to Ergo" id="footer.community.3" />
                 </Link>
               </li>
-              <li className="mb-4">
-                <Link
-                  href="/community/#HallOfFame"
-                  className="text-black dark:text-gray-300 cursor-pointer"
-                >
-                  <FormattedMessage defaultMessage="Hall of Fame" id="footer.community.4" />
+              <li className="mb-2">
+                <Link href="/hall-of-fame">
+                  <FormattedMessage id="footer.community.4" defaultMessage="Hall of Fame" />
                 </Link>
               </li>
               <li className="mb-4">
