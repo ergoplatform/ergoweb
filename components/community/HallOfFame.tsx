@@ -1,8 +1,7 @@
-import { Tab } from '@headlessui/react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
 import { Github, Linkedin, PersonPlaceholder, X } from '../icons';
+import Image from 'next/image';
+import Link from 'next/link';
 
 type Props = {
   teamMembers?: any;
@@ -70,13 +69,13 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
   );
 }
 
-function GroupPersons(data: any, group: string) {
+function AllPersons(data: any) {
+  // Combine all groups into one array
   let persons: Array<any> = [];
   data.forEach(function (person: any) {
-    if (group == person.attributes.group) {
-      persons.push(person);
-    }
+    persons.push(person);
   });
+  
   return (
     <div className="flex overflow-x-auto space-x-8 mt-8 no-scrollbar pb-10 lg:grid lg:grid-cols-3 lg:justify-around lg:space-x-0 lg:gap-y-20 lg:gap-x-8">
       {persons?.map((person: any, i: number) => (
@@ -135,48 +134,10 @@ export default function HallOfFame(props: Props) {
         </div>
       </div>
       <div>
-        <Tab.Group>
-          <Tab.List className="flex justify-around mt-16">
-            <Tab
-              className={({ selected }) =>
-                selected
-                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
-                  : 'font-subtitle-3-uppercase'
-              }
-            >
-              <FormattedMessage defaultMessage={`CORE`} id="components.hallOfFame.tab1" />
-            </Tab>
-            <Tab
-              className={({ selected }) =>
-                selected
-                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
-                  : 'font-subtitle-3-uppercase'
-              }
-            >
-              <FormattedMessage defaultMessage={`COMMUNITY`} id="components.hallOfFame.tab2" />
-            </Tab>
-            <Tab
-              className={({ selected }) =>
-                selected
-                  ? 'font-subtitle-3-uppercase text-brand-orange dark:text-brand-orange underline underline-offset-4'
-                  : 'font-subtitle-3-uppercase'
-              }
-            >
-              <FormattedMessage defaultMessage={`FOUNDATION`} id="components.hallOfFame.tab3" />
-            </Tab>
-          </Tab.List>
-          <Tab.Panels className="mt-16">
-            <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, 'ecosystem_core')}
-            </Tab.Panel>
-            <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, 'community')}
-            </Tab.Panel>
-            <Tab.Panel className="outline-none">
-              {GroupPersons(props.teamMembers, 'ergo_foundation')}
-            </Tab.Panel>
-          </Tab.Panels>
-        </Tab.Group>
+        {/* Removed tabs and displaying all members together */}
+        <div className="mt-16">
+          {AllPersons(props.teamMembers)}
+        </div>
       </div>
     </div>
   );

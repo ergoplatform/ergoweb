@@ -62,7 +62,7 @@ const nextConfig = {
       },
       {
         source: '/hall_of_fame/',
-        destination: '/community/#HallOfFame',
+        destination: '/hall-of-fame',
         permanent: true,
       },
       {
