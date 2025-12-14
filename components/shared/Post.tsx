@@ -107,6 +107,9 @@ export default function Post({
                 alt=""
                 layout="fill"
                 sizes="(max-width: 1280px) 100vw, 384px"
+                priority={false}
+                quality={75}
+                placeholder="empty"
               />
             </div>
           )}

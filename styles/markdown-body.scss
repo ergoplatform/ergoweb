@@ -5,6 +5,9 @@
  
   body > *:first-child {
       margin-top: 0 !important; }
+.dark .markdown-body table tr th {
+  color: black;
+}
   body > *:last-child {
       margin-bottom: 0 !important; }
 

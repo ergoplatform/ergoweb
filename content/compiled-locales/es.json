@@ -769,10 +769,10 @@
       "value": "EXPLORAR SORTEO DE ERGO"
     }
   ],
-  "components.favorites.mewFund": [
+  "components.favorites.crowdFund": [
     {
       "type": 0,
-      "value": "PRUEBA MEWFUND"
+      "value": "TODAS LAS OPCIONES DE CROWDFUNDING EN ERGO"
     }
   ],
   "components.favorites.raffleV2": [

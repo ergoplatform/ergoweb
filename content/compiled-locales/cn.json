@@ -765,10 +765,10 @@
       "value": "探索ERGO RAFFLE"
     }
   ],
-  "components.favorites.mewFund": [
+  "components.favorites.crowdFund": [
     {
       "type": 0,
-      "value": "试用 MEWFUND"
+      "value": "所有 ERGO 众筹选项"
     }
   ],
   "components.favorites.raffleV2": [
