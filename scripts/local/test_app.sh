@@ -30,7 +30,8 @@ done
 echo "App is running on http://localhost:3000"
 
 echo "Running Lighthouse audit..."
-npx lighthouse http://localhost:3000 --quiet --chrome-flags="--headless" --output=json --output-path=./lighthouse-report.json
+mkdir -p reports
+npx lighthouse http://localhost:3000 --quiet --chrome-flags="--headless" --output=json --output-path=./reports/lighthouse-report.json
 
 echo "Killing the background app (PID: $APP_PID)..."
 kill $APP_PID || true # Use || true to prevent script from exiting if process is already gone
@@ -38,7 +39,7 @@ kill $APP_PID || true # Use || true to prevent script from exiting if process is
 echo "Parsing Lighthouse report..."
 node -e '
 const fs = require("fs");
-const reportPath = "./lighthouse-report.json";
+const reportPath = "./reports/lighthouse-report.json";
 
 try {
   const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));

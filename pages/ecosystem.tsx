@@ -1,5 +1,4 @@
 import { useIntl } from 'react-intl';
-import Videocasts from '../components/ecosystem/Videocasts';
 import DApps from '../components/ecosystem/DApps';
 import EcosystemHero from '../components/ecosystem/EcosystemHero';
 import Favorites from '../components/ecosystem/Favorites';
@@ -14,7 +13,6 @@ type Props = {
   roadmap?: any;
   projects?: any;
   favorites?: any;
-  chagingTheWorldProjects?: any;
 };
 
 export default function Ecosystem(props: Props) {
@@ -40,9 +38,7 @@ export default function Ecosystem(props: Props) {
         <Wiki />
         {props.favorites ? <Favorites favorites={props.favorites} /> : null}
         {props.projects ? <FeaturesAndProjects projects={props.projects} /> : null}
-        {props.chagingTheWorldProjects ? (
-          <Videocasts chagingTheWorldProjects={props.chagingTheWorldProjects} />
-        ) : null}
+        {/* Videocasts hidden: weekly AMAs are no longer running. */}
       </Layout>
     </div>
   );
@@ -61,11 +57,7 @@ export const getServerSideProps = async (context: any) => {
     '/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100',
   );
   const favorites = favoritesJson?.data ?? null;
-  const chagingTheWorldProjectsJson = await strapiFetchJson<{ data?: any[] }>(
-    '/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100',
-  );
-  const chagingTheWorldProjects = chagingTheWorldProjectsJson?.data ?? null;
   return {
-    props: { apps, roadmap, projects, favorites, chagingTheWorldProjects },
+    props: { apps, roadmap, projects, favorites },
   };
 };

@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 import BlogPosts from '../components/blog/BlogPosts';
 import Layout from '../components/Layout';
-import YearPagination from '../components/shared/YearPagination';
 import CategoryPicker from '../components/shared/CategoryPicker';
 import { toStrapiLocale } from '../utils/locales';
 import { strapiFetchJson } from '../utils/strapiClient';
@@ -19,16 +17,14 @@ type Props = {
   } | null;
   categoryCounts?: Record<string, number> | null;
   totals?: { all: number; news: number } | null;
-  years?: number[] | null;
 };
 
 export default function Blog(props: Props) {
   const intl = useIntl();
-  const { locale, query } = useRouter();
-  const currentYear = Number(
-    (query.year as string) || (props.years?.[0] ?? new Date().getFullYear()),
-  );
+  const router = useRouter();
+  const { locale, query } = router;
   const type = typeof query.type === 'string' ? (query.type as string) : 'all';
+  const blogCount = Math.max(0, (props.totals?.all ?? 0) - (props.totals?.news ?? 0));
   const title = intl.formatMessage({
     id: 'pages.blog.title',
     defaultMessage: 'Blog',
@@ -43,102 +39,40 @@ export default function Blog(props: Props) {
       <div className="blog-blur-2"></div>
       <Layout title={title}>
         <div id="Blog" className="max-w-[1300px] mx-auto p-4 relative z-10">
-          <div className="mx-4 mb-4 md:hidden">
-            <CategoryPicker
-              categories={props.categories ?? []}
-              categoryCounts={props.categoryCounts ?? {}}
-            />
-          </div>
-          <div className="flex flex-row justify-between mb-10 mx-4">
-            <div className="hidden md:flex flex-row flex-wrap gap-x-2 gap-y-3">
-              {props.categories
-                ? [...props.categories]
-                    .sort((a: any, b: any) => {
-                      const an = a.attributes.name as string;
-                      const bn = b.attributes.name as string;
-                      const ac = props.categoryCounts?.[an] ?? 0;
-                      const bc = props.categoryCounts?.[bn] ?? 0;
-                      if (bc !== ac) return bc - ac;
-                      return an.localeCompare(bn);
-                    })
-                    .map((category: any) => {
-                      const name = category.attributes.name as string;
-                      const count = props.categoryCounts?.[name] ?? 0;
-                      return (
-                        <Link
-                          href={`/category/${name}`}
-                          key={category.id}
-                          className="my-2 sm:my-auto cursor-pointer"
-                        >
-                          <b
-                            key={name}
-                            className="items-center px-3 py-2 rounded-full text-sm font-[12px] mr-4 bg-brand-orange text-white uppercase z-10 tag"
-                          >
-                            {`${name} (${count})`}
-                          </b>
-                        </Link>
-                      );
-                    })
-                : null}
-            </div>
-            <div className="self-end flex flex-col items-end gap-3">
-              <nav
-                aria-label="Filter posts"
-                className="
-                  inline-flex items-center gap-0.5 rounded-full
-                  px-2 py-1.5
-                  backdrop-blur-md
-                  border shadow-md
-                  bg-white/70 border-white/40
-                  dark:bg-white/5 dark:border-white/15
-                "
-              >
-                <Link href={`/blog?year=${currentYear}`} className="no-underline">
-                  <span
-                    className={`
-                      text-sm font-[12px] px-2.5 py-1 rounded-full transition
-                      ${
-                        type === 'all'
-                          ? 'bg-brand-orange text-white shadow-sm'
-                          : 'text-gray-900 dark:text-white/85 hover:bg-white/60 dark:hover:bg-white/10 hover:text-brand-orange'
-                      }
-                    `}
+          <div className="mb-10 mx-4">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:flex-wrap">
+                <CategoryPicker
+                  categories={props.categories ?? []}
+                  categoryCounts={props.categoryCounts ?? {}}
+                  className="mx-0"
+                />
+                <div>
+                  <label className="sr-only" htmlFor="post-type-filter">
+                    Filter posts
+                  </label>
+                  <select
+                    id="post-type-filter"
+                    aria-label="Filter posts"
+                    value={type}
+                    onChange={(event) => {
+                      const value = event.target.value;
+                      router.push(value === 'all' ? '/blog' : `/blog?type=${value}`);
+                    }}
+                    className="
+                      min-w-[220px] rounded-full border px-4 py-2 text-sm font-semibold
+                      bg-white/85 text-gray-950 border-black/10 shadow-md backdrop-blur-md
+                      dark:bg-black/70 dark:text-white dark:border-white/20
+                      focus:outline-none focus:ring-2 focus:ring-brand-orange
+                    "
                   >
-                    {`All (${props.totals?.all ?? 0})`}
-                  </span>
-                </Link>
-                <span className="mx-1 h-4 w-px bg-black/10 dark:bg-white/20" aria-hidden="true" />
-                <Link href={`/blog?year=${currentYear}&type=news`} className="no-underline">
-                  <span
-                    className={`
-                      text-sm font-[12px] px-2.5 py-1 rounded-full transition
-                      ${
-                        type === 'news'
-                          ? 'bg-brand-orange text-white shadow-sm'
-                          : 'text-gray-900 dark:text-white/85 hover:bg-white/60 dark:hover:bg-white/10 hover:text-brand-orange'
-                      }
-                    `}
-                  >
-                    {`News (${props.totals?.news ?? 0})`}
-                  </span>
-                </Link>
-                <span className="mx-1 h-4 w-px bg-black/10 dark:bg-white/20" aria-hidden="true" />
-                <Link href={`/blog?year=${currentYear}&type=blog`} className="no-underline">
-                  <span
-                    className={`
-                      text-sm font-[12px] px-2.5 py-1 rounded-full transition
-                      ${
-                        type === 'blog'
-                          ? 'bg-brand-orange text-white shadow-sm'
-                          : 'text-gray-900 dark:text-white/85 hover:bg-white/60 dark:hover:bg-white/10 hover:text-brand-orange'
-                      }
-                    `}
-                  >
-                    {`Blogs (${Math.max(0, (props.totals?.all ?? 0) - (props.totals?.news ?? 0))})`}
-                  </span>
-                </Link>
-              </nav>
-              <h1 className="heading-balance heading-contrast inline-block px-2.5 py-1 rounded-md bg-white/70 dark:bg-black/40 backdrop-blur-sm shadow-sm md:bg-transparent md:backdrop-blur-0 md:shadow-none">
+                    <option value="all">{`All (${props.totals?.all ?? 0})`}</option>
+                    <option value="news">{`News (${props.totals?.news ?? 0})`}</option>
+                    <option value="blog">{`Blogs (${blogCount})`}</option>
+                  </select>
+                </div>
+              </div>
+              <h1 className="self-start md:self-end heading-balance heading-contrast inline-block px-2.5 py-1 rounded-md bg-white/70 dark:bg-black/40 backdrop-blur-sm shadow-sm md:bg-transparent md:backdrop-blur-0 md:shadow-none">
                 {heading}
               </h1>
             </div>
@@ -146,15 +80,9 @@ export default function Blog(props: Props) {
           <BlogPosts data={props.posts} locale={locale} />
           {(props.posts?.length ?? 0) === 0 ? (
             <div className="text-center text-gray-500 dark:text-gray-300 my-10">
-              No posts found for {currentYear}.
+              No posts found.
             </div>
           ) : null}
-          <YearPagination
-            currentYear={currentYear}
-            years={props.years ?? []}
-            basePath="/blog"
-            query={{ type: type !== 'all' ? type : undefined }}
-          />
         </div>
       </Layout>
     </div>
@@ -162,46 +90,32 @@ export default function Blog(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const nowYear = new Date().getFullYear();
-  const requestedYear = Number(context.query.year || nowYear);
-  const year = isNaN(requestedYear) ? nowYear : requestedYear;
   const type = typeof context.query.type === 'string' ? (context.query.type as string) : 'all';
-  const start = `${year}-01-01`;
-  const end = `${year + 1}-01-01`;
+  const latestLimit = 18;
 
   const baseTypesParam = `&filters[$or][0][type][$eq]=blog&filters[$or][1][type][$eq]=news`;
   const typeParam =
     type === 'news' || type === 'blog' ? `&filters[type][$eq]=${type}` : baseTypesParam;
-  const dateParam = `&filters[date][$gte]=${start}&filters[date][$lt]=${end}`;
 
   // Helper to fetch ALL posts across pages for one or more locales and de-duplicate by permalink
   const fetchAllPostsForLocales = async (locales: string[]) => {
-    const pageSize = 200;
     const bySlug: Record<string, any> = {};
     for (const loc of locales) {
-      let page = 1;
-      // eslint-disable-next-line no-constant-condition
-      while (true) {
-        const res = await strapiFetchJson<{ data?: any[]; meta?: any }>(
-          `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*&locale=${loc}${typeParam}${dateParam}`,
-        );
-        if (!res) break;
-        const data = res?.data ?? [];
-        const meta = res?.meta?.pagination;
-        for (const p of data) {
-          const slug = p?.attributes?.permalink;
-          if (typeof slug === 'string' && !bySlug[slug]) {
-            bySlug[slug] = p;
-          }
+      const res = await strapiFetchJson<{ data?: any[] }>(
+        `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=${latestLimit}&populate=*&locale=${loc}${typeParam}`,
+      );
+      const data = res?.data ?? [];
+      for (const p of data) {
+        const slug = p?.attributes?.permalink;
+        if (typeof slug === 'string' && !bySlug[slug]) {
+          bySlug[slug] = p;
         }
-        if (!meta || page >= (meta.pageCount ?? 1)) break;
-        page += 1;
       }
     }
     return Object.values(bySlug);
   };
 
-  // Build a robust locale list (handle cn/zh-variants) and fetch all localized + English posts for the selected year/type
+  // Build a robust locale list (handle cn/zh-variants) and fetch recent localized + English posts for the selected type
   const appLoc = context.locale as string;
   const mapped = toStrapiLocale(appLoc);
   const variants = new Set<string>([mapped, appLoc]);
@@ -278,23 +192,9 @@ export const getServerSideProps = async (context: any) => {
       const da = new Date(a?.attributes?.date || 0).getTime();
       const db = new Date(b?.attributes?.date || 0).getTime();
       return db - da;
-    });
+    })
+    .slice(0, latestLimit);
   const pagination = null;
-
-  // Determine available years (min and max across blog + news)
-  // Compute years from English corpus to mirror English site structure
-  const oldestRes = await strapiFetchJson<{ data?: any[] }>(
-    `/api/posts?sort=date:asc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
-  );
-  const newestRes = await strapiFetchJson<{ data?: any[] }>(
-    `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
-  );
-  const oldestDateStr = oldestRes?.data?.[0]?.attributes?.date as string | undefined;
-  const newestDateStr = newestRes?.data?.[0]?.attributes?.date as string | undefined;
-  const oldestYear = oldestDateStr ? new Date(oldestDateStr).getFullYear() : year;
-  const newestYear = newestDateStr ? new Date(newestDateStr).getFullYear() : year;
-  const years: number[] = [];
-  for (let y = newestYear; y >= oldestYear; y--) years.push(y);
 
   // Totals identical to English site across the entire corpus (not restricted by year)
   const totalsAllRes = await strapiFetchJson<{ meta?: any }>(
@@ -335,7 +235,6 @@ export const getServerSideProps = async (context: any) => {
       pagination,
       categoryCounts,
       totals: { all: totalsAll, news: totalsNews },
-      years,
     },
   };
 };

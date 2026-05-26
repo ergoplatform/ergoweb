@@ -2,6 +2,189 @@
 
 Continuously updated after each Codex run.
 
+## 2026-05-26 - Fix blog dropdown visibility and placement
+
+Files:
+
+- `components/shared/CategoryPicker.tsx`
+- `pages/blog.tsx`
+- `docs/changelog.md`
+
+What changed:
+
+- Widened category dropdown menu so category names have room beside counts.
+- Strengthened category item contrast in light and dark mode.
+- Moved category and post-type dropdowns into the top-left control area above articles on desktop.
+- Kept heading aligned separately so filters use empty upper-left space.
+
+Why:
+
+- Category names were clipped/invisible; only count badges showed.
+- Desktop controls were not using the empty space above article grid.
+
+Review risk:
+
+- Category menu is wider than button and can overlay nearby content while open.
+
+Verification:
+
+```bash
+npm run check
+npm run build
+```
+
+Result:
+
+- `npm run check`: pass.
+- `npm run build`: pass, no warnings.
+
+## 2026-05-26 - Convert blog category tags to dropdown
+
+Files:
+
+- `pages/blog.tsx`
+- `docs/changelog.md`
+
+What changed:
+
+- Replaced desktop category tag cloud with same dropdown category picker used on mobile.
+- Blog filter area now stacks on mobile and aligns horizontally on desktop.
+
+Why:
+
+- User asked category tags to be dropdown too.
+
+Review risk:
+
+- Category links are now hidden behind one dropdown instead of visible as many tags.
+
+Verification:
+
+```bash
+npm run check
+npm run build
+```
+
+Result:
+
+- `npm run check`: pass.
+- `npm run build`: pass, no warnings.
+
+## 2026-05-26 - Update blog filters and hide videocasts
+
+Files:
+
+- `pages/blog.tsx`
+- `pages/ecosystem.tsx`
+- `docs/changelog.md`
+
+What changed:
+
+- Replaced blog type filter buttons with one dropdown selector.
+- Removed year filtering and year pagination from blog page.
+- Blog page now loads recent posts across all years, capped to 18 posts.
+- Fixed dark-mode visibility issue by using dark-safe select text/background.
+- Hid ecosystem Videocasts section and stopped fetching changing-the-world data.
+
+Why:
+
+- Blog default year filter showed only sparse 2026 content.
+- Weekly AMAs are not currently running.
+
+Review risk:
+
+- Blog page no longer exposes year navigation.
+- Blog page shows first 18 recent posts for current type instead of all posts in one year.
+- Videocast CMS entries remain unused by ecosystem page.
+
+Verification:
+
+```bash
+npm run check
+npm run build
+```
+
+Result:
+
+- `npm run check`: pass.
+- `npm run build`: pass, no warnings.
+
+## 2026-05-26 - Move changelog out of root
+
+Files:
+
+- `docs/changelog.md`
+
+What changed:
+
+- Moved changelog from root `changelog.md` to `docs/changelog.md`.
+
+Why:
+
+- User asked to move everything possible out of main directory.
+- Filename remains `changelog.md`; location now under docs.
+
+Review risk:
+
+- Any external workflow expecting root `changelog.md` must use `docs/changelog.md`.
+
+Verification:
+
+```bash
+rg "changelog\.md|Changelog" -n . -g '!node_modules' -g '!package-lock.json'
+```
+
+Result:
+
+- Changelog now lives at `docs/changelog.md`.
+- Root directory no longer contains `changelog.md`.
+
+## 2026-05-26 - Tidy root project files
+
+Files:
+
+- `Dockerfile`
+- `README.md`
+- `tsconfig.json`
+- `scripts/entrypoint.sh`
+- `scripts/local/test_app.sh`
+- `scripts/local/test_and_verify.sh`
+- `reports/lighthouse-report.json`
+- `reports/debug-storybook.log`
+- `public/assets/misc/x_logo.svg`
+- `changelog.md`
+
+What changed:
+
+- Moved container startup script from root to `scripts/entrypoint.sh`.
+- Moved local test helpers from root to `scripts/local/`.
+- Moved generated Lighthouse report and Storybook log into `reports/`.
+- Moved loose `x_logo.svg` into `public/assets/misc/`.
+- Updated Dockerfile and README paths.
+- Configured TypeScript incremental cache under `.next/cache/` and removed root `tsconfig.tsbuildinfo`.
+
+Why:
+
+- Reduce root-directory clutter without moving files that common tooling expects at root.
+
+Review risk:
+
+- External docs/scripts that call `./entrypoint.sh`, `./test_app.sh`, or `./test_and_verify.sh` need new paths.
+- Root config/deploy files intentionally remain at root for Next, npm, Docker, and Cloud Build defaults.
+
+Verification:
+
+```bash
+npm run check
+npm run build
+```
+
+Result:
+
+- `npm run check`: pass.
+- `npm run build`: pass, no warnings.
+- Simulated Docker runner filesystem with moved `scripts/entrypoint.sh`: `/en/` returned `HTTP 200`.
+
 ## 2026-05-26 - Harden Cloud Run deployment path
 
 Files:

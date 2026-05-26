@@ -31,7 +31,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/entrypoint.sh ./entrypoint.sh
+COPY --from=builder /app/scripts/entrypoint.sh ./scripts/entrypoint.sh
 COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/utils/localeConfig.js ./utils/localeConfig.js
 
@@ -40,5 +40,5 @@ EXPOSE 3000
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+ENTRYPOINT ["sh", "/app/scripts/entrypoint.sh"]
 CMD ["npm", "run", "start"]

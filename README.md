@@ -57,10 +57,10 @@
 - Tooling
   - Storybook for components
   - ESLint/Prettier for consistency
-  - Lighthouse report included for perf reference (see `lighthouse-report.json`)
+  - Lighthouse report included for perf reference (see `reports/lighthouse-report.json`)
 - Containers & CI/CD
   - Multi‑stage Dockerfile builds a small production image
-  - `entrypoint.sh` injects the CMS URL into the built assets on container start
+  - `scripts/entrypoint.sh` injects the CMS URL into the built assets on container start
   - `cloudbuild.yaml` for Google Cloud Build pipelines
 
 ---
@@ -151,7 +151,7 @@ Open http://localhost:3000
 
 Notes
 
-- `entrypoint.sh` replaces a placeholder in built assets with `NEXT_PUBLIC_STRAPI_API` at container startup, so always pass it to `docker run`.
+- `scripts/entrypoint.sh` replaces a placeholder in built assets with `NEXT_PUBLIC_STRAPI_API` at container startup, so always pass it to `docker run`.
 
 ---
 
@@ -167,9 +167,9 @@ Notes
 │  └─ compiled-locales/   # Compiled runtime artifacts
 ├─ public/                # Static assets, robots.txt, sitemaps
 ├─ utils/                 # Utilities (RSS, hooks, helpers)
-├─ scripts/               # Project scripts (e.g., media)
+├─ scripts/               # Project and deployment scripts
+├─ reports/               # Local generated reports/logs
 ├─ Dockerfile             # Multi-stage production build
-├─ entrypoint.sh          # Injects Strapi URL at startup
 ├─ cloudbuild.yaml        # Google Cloud Build
 ├─ next-sitemap.config.js # Sitemap config
 └─ tailwind.config.js     # Tailwind config

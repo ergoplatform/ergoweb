@@ -34,7 +34,6 @@ export default function CategoryPicker({ categories, categoryCounts, className =
   }, [categories, categoryCounts]);
 
   return (
-    // Mobile-only by default; parent can toggle visibility with responsive utilities
     <div className={`relative z-20 ${className}`}>
       <button
         type="button"
@@ -73,16 +72,16 @@ export default function CategoryPicker({ categories, categoryCounts, className =
           role="listbox"
           tabIndex={-1}
           className="
-            absolute left-0 right-0 mt-2
+            absolute left-0 mt-2 w-[min(90vw,32rem)]
             rounded-2xl overflow-hidden
             border border-white/40 dark:border-white/15
-            bg-white/80 dark:bg-zinc-900/80
+            bg-white/95 dark:bg-zinc-950/95
             backdrop-blur-md
             shadow-2xl
           "
         >
           <div className="max-h-80 overflow-auto p-2">
-            <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {sorted.map(({ id, name, count }) => (
                 <Link
                   href={`/category/${encodeURIComponent(name)}`}
@@ -92,7 +91,7 @@ export default function CategoryPicker({ categories, categoryCounts, className =
                     group no-underline
                     rounded-xl
                     border border-gray-200/70 dark:border-white/10
-                    bg-white/70 dark:bg-white/5
+                    bg-white/90 dark:bg-zinc-900
                     px-3 py-2
                     flex items-center justify-between
                     transition
@@ -100,7 +99,7 @@ export default function CategoryPicker({ categories, categoryCounts, className =
                     focus:outline-none focus:ring-2 focus:ring-brand-orange
                   "
                 >
-                  <span className="truncate mr-2 text-sm text-gray-900 dark:text-white">
+                  <span className="min-w-0 flex-1 truncate mr-3 text-sm font-semibold text-gray-950 dark:text-white">
                     {name}
                   </span>
                   <span
