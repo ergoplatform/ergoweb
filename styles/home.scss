@@ -1,4 +1,4 @@
-@use "./_variables.scss" as *;
+@use './_variables.scss' as *;
 
 .responsive-title {
   max-width: 100%; /* Full width on mobile */
@@ -31,7 +31,7 @@
   border-radius: 28px;
   overflow: visible; /* Allow shadow overflow */
 }
-    
+
 //     background: #FF5E18;
 //     filter: blur(400px);
 //     // clipPath: polygon(100% 0, 0 0, 100% 100%);
@@ -43,255 +43,266 @@
 // }
 
 .home-frame-1 {
-    display: none !important;
+  display: none !important;
 }
 
 .home-frame-2 {
-    display: none !important;
+  display: none !important;
+}
+
+.home-hero-poster-dark {
+  display: none;
+}
+
+.dark .home-hero-poster-light {
+  display: none;
+}
+
+.dark .home-hero-poster-dark {
+  display: block;
 }
 
 .home-frame-3 {
-    position: absolute;
-    width: 351px;
-    height: 1240px;
-    top: 500px;
-    right: 0;
-    background: no-repeat url("/assets/home/frame-3-light.png");
-    background-position: right center;
-    background-size: contain;
-    /* Serve next-gen formats where supported */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-3-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-3-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-3-light.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-3-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-3-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-3-light.png") type("image/png") 1x
-    );
-    z-index: 1;
-    pointer-events: none; /* avoid interaction and layout shifts */
+  position: absolute;
+  width: 351px;
+  height: 1240px;
+  top: 500px;
+  right: 0;
+  background: no-repeat url('/assets/home/frame-3-light.png');
+  background-position: right center;
+  background-size: contain;
+  /* Serve next-gen formats where supported */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-3-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-3-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-3-light.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-3-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-3-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-3-light.png') type('image/png') 1x
+  );
+  z-index: 1;
+  pointer-events: none; /* avoid interaction and layout shifts */
 }
 .dark .home-frame-3 {
-    background: no-repeat url("/assets/home/frame-3.png");
-    background-position: right center;
-    background-size: contain;
-    /* Serve next-gen formats where supported */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-3.avif") type("image/avif") 1x,
-        url("/assets/home/frame-3.webp") type("image/webp") 1x,
-        url("/assets/home/frame-3.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-3.avif") type("image/avif") 1x,
-        url("/assets/home/frame-3.webp") type("image/webp") 1x,
-        url("/assets/home/frame-3.png") type("image/png") 1x
-    );
+  background: no-repeat url('/assets/home/frame-3.png');
+  background-position: right center;
+  background-size: contain;
+  /* Serve next-gen formats where supported */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-3.avif') type('image/avif') 1x,
+    url('/assets/home/frame-3.webp') type('image/webp') 1x,
+    url('/assets/home/frame-3.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-3.avif') type('image/avif') 1x,
+    url('/assets/home/frame-3.webp') type('image/webp') 1x,
+    url('/assets/home/frame-3.png') type('image/png') 1x
+  );
 }
 
 .home-frame-4 {
-    position: absolute;
-    width: 667px;
-    height: 1031px;
-    top: 3500px;
-    left: 0px;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("/assets/home/frame-4-light.png");
-    /* Light theme background to avoid CLS (reserve space, no <img>) */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-4-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-4-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-4-light.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-4-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-4-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-4-light.png") type("image/png") 1x
-    );
-    pointer-events: none;
+  position: absolute;
+  width: 667px;
+  height: 1031px;
+  top: 3500px;
+  left: 0px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/home/frame-4-light.png');
+  /* Light theme background to avoid CLS (reserve space, no <img>) */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-4-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-4-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-4-light.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-4-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-4-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-4-light.png') type('image/png') 1x
+  );
+  pointer-events: none;
 }
 .dark .home-frame-4 {
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("/assets/home/frame-4.png");
-    /* Dark theme background */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-4.avif") type("image/avif") 1x,
-        url("/assets/home/frame-4.webp") type("image/webp") 1x,
-        url("/assets/home/frame-4.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-4.avif") type("image/avif") 1x,
-        url("/assets/home/frame-4.webp") type("image/webp") 1x,
-        url("/assets/home/frame-4.png") type("image/png") 1x
-    );
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/home/frame-4.png');
+  /* Dark theme background */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-4.avif') type('image/avif') 1x,
+    url('/assets/home/frame-4.webp') type('image/webp') 1x,
+    url('/assets/home/frame-4.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-4.avif') type('image/avif') 1x,
+    url('/assets/home/frame-4.webp') type('image/webp') 1x,
+    url('/assets/home/frame-4.png') type('image/png') 1x
+  );
 }
 
 .home-frame-5 {
-    position: absolute;
-    width: 382px;
-    height: 1491px;
-    top: 3800px;
-    right: 0px;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("/assets/home/frame-5-light.png");
-    /* Light theme background to avoid CLS (reserve space, no <img>) */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-5-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-5-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-5-light.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-5-light.avif") type("image/avif") 1x,
-        url("/assets/home/frame-5-light.webp") type("image/webp") 1x,
-        url("/assets/home/frame-5-light.png") type("image/png") 1x
-    );
-    pointer-events: none;
+  position: absolute;
+  width: 382px;
+  height: 1491px;
+  top: 3800px;
+  right: 0px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/home/frame-5-light.png');
+  /* Light theme background to avoid CLS (reserve space, no <img>) */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-5-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-5-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-5-light.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-5-light.avif') type('image/avif') 1x,
+    url('/assets/home/frame-5-light.webp') type('image/webp') 1x,
+    url('/assets/home/frame-5-light.png') type('image/png') 1x
+  );
+  pointer-events: none;
 }
 .dark .home-frame-5 {
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("/assets/home/frame-5.png");
-    /* Dark theme background */
-    background-image: -webkit-image-set(
-        url("/assets/home/frame-5.avif") type("image/avif") 1x,
-        url("/assets/home/frame-5.webp") type("image/webp") 1x,
-        url("/assets/home/frame-5.png") type("image/png") 1x
-    );
-    background-image: image-set(
-        url("/assets/home/frame-5.avif") type("image/avif") 1x,
-        url("/assets/home/frame-5.webp") type("image/webp") 1x,
-        url("/assets/home/frame-5.png") type("image/png") 1x
-    );
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/home/frame-5.png');
+  /* Dark theme background */
+  background-image: -webkit-image-set(
+    url('/assets/home/frame-5.avif') type('image/avif') 1x,
+    url('/assets/home/frame-5.webp') type('image/webp') 1x,
+    url('/assets/home/frame-5.png') type('image/png') 1x
+  );
+  background-image: image-set(
+    url('/assets/home/frame-5.avif') type('image/avif') 1x,
+    url('/assets/home/frame-5.webp') type('image/webp') 1x,
+    url('/assets/home/frame-5.png') type('image/png') 1x
+  );
 }
 
 .home-blur-1 {
-    position: absolute;
-    width: 769px;
-    height: 895px;
-    top: 0px; /* Place at the very top */
-    right: 0px;
-    background: no-repeat url("/assets/home/blur-1-light.svg");
-    background-position: top right;
-    pointer-events: none;
-    z-index: 60; /* Place at the very top as requested */
+  position: absolute;
+  width: 769px;
+  height: 895px;
+  top: 0px; /* Place at the very top */
+  right: 0px;
+  background: no-repeat url('/assets/home/blur-1-light.svg');
+  background-position: top right;
+  pointer-events: none;
+  z-index: 60; /* Place at the very top as requested */
 }
 
 .dark .home-blur-1 {
-    background: no-repeat url("/assets/home/blur-1.svg");
-    background-position: top right;
+  background: no-repeat url('/assets/home/blur-1.svg');
+  background-position: top right;
 }
 
 .dark .home-blur-2 {
-    position: absolute;
-    width: 606px;
-    height: 2402px;
-    top: 2400px;
-    left: 0px;
-    background: no-repeat url("/assets/home/blur-2.svg");
-    z-index: 1;
+  position: absolute;
+  width: 606px;
+  height: 2402px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url('/assets/home/blur-2.svg');
+  z-index: 1;
 }
 
 .dark .home-blur-3 {
-    position: absolute;
-    width: 524px;
-    height: 1419px;
-    top: 4000px;
-    left: 0px;
-    background: no-repeat url("/assets/home/blur-3.svg");
+  position: absolute;
+  width: 524px;
+  height: 1419px;
+  top: 4000px;
+  left: 0px;
+  background: no-repeat url('/assets/home/blur-3.svg');
 }
 
 .dark .home-blur-4 {
-    position: absolute;
-    width: 459px;
-    height: 1677px;
-    top: 4500px;
-    right: 0px;
-    background: no-repeat url("/assets/home/blur-4.svg");
+  position: absolute;
+  width: 459px;
+  height: 1677px;
+  top: 4500px;
+  right: 0px;
+  background: no-repeat url('/assets/home/blur-4.svg');
 }
 
 .home-blur-2 {
-    position: absolute;
-    width: 606px;
-   
-    height: 2402px;
-    top: 2400px;
-    left: 0px;
-    background: no-repeat url("/assets/home/blur-2-light.svg");
-    background-size: contain;
-    background-position: left top;
-    pointer-events: none;
-    z-index: 1;
+  position: absolute;
+  width: 606px;
+
+  height: 2402px;
+  top: 2400px;
+  left: 0px;
+  background: no-repeat url('/assets/home/blur-2-light.svg');
+  background-size: contain;
+  background-position: left top;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .home-blur-3 {
-    position: absolute;
-    width: 524px;
-    height: 1419px;
-    top: 4000px;
-    left: 0px;
-    background: no-repeat url("/assets/home/blur-3.svg");
-    background-size: contain;
-    background-position: left top;
-    pointer-events: none;
+  position: absolute;
+  width: 524px;
+  height: 1419px;
+  top: 4000px;
+  left: 0px;
+  background: no-repeat url('/assets/home/blur-3.svg');
+  background-size: contain;
+  background-position: left top;
+  pointer-events: none;
 }
 
 .dark .home-blur-3 {
-    position: absolute;
-    width: 524px;
-    height: 1419px;
-    top: 4000px;
-    left: 0px;
-    background: no-repeat url("/assets/home/blur-3.svg");
+  position: absolute;
+  width: 524px;
+  height: 1419px;
+  top: 4000px;
+  left: 0px;
+  background: no-repeat url('/assets/home/blur-3.svg');
 }
 
 .home-blur-4 {
-    position: absolute;
-    width: 459px;
-    height: 1677px;
-    top: 4500px;
-    right: 0px;
-    background: no-repeat url("/assets/home/blur-4-light.svg");
-    background-size: contain;
-    background-position: right top;
-    pointer-events: none;
+  position: absolute;
+  width: 459px;
+  height: 1677px;
+  top: 4500px;
+  right: 0px;
+  background: no-repeat url('/assets/home/blur-4-light.svg');
+  background-size: contain;
+  background-position: right top;
+  pointer-events: none;
 }
 
 /* Ensure spotlight blog cards keep intended width on home route */
 .blog-post {
-    max-width: 384px;
+  max-width: 384px;
 }
 
 /* Fix desktop CLS: reserve stable height for Highlights swiper */
 .SwiperHighlights {
-    height: auto; /* desktop/tablet default */
-    /* Removed overflow: hidden to allow content to expand */
+  height: auto; /* desktop/tablet default */
+  /* Removed overflow: hidden to allow content to expand */
 }
 
 .SwiperNews {
-    /* Revert to simpler Swiper styles */
-    overflow: hidden; /* Keep hidden to clip overflow */
+  /* Revert to simpler Swiper styles */
+  overflow: hidden; /* Keep hidden to clip overflow */
 
-    .swiper-wrapper {
-        /* Let Swiper manage width and display */
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .swiper-wrapper {
+    /* Let Swiper manage width and display */
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .swiper-slide {
-        /* Let Swiper manage width and display */
-        height: auto;
-        flex-shrink: 0; /* Swiper default */
-    }
+  .swiper-slide {
+    /* Let Swiper manage width and display */
+    height: auto;
+    flex-shrink: 0; /* Swiper default */
+  }
 }
-
 
 // .dark .home-blur-2 {
 //     position: absolute;
@@ -302,6 +313,49 @@
 //     background: no-repeat url("/assets/home/blur-2.svg");
 // }
 
+.dark #HomeHero .home-hero-desktop-media {
+  -webkit-mask-image: radial-gradient(
+    ellipse 62% 54% at 55% 43%,
+    #000 0%,
+    #000 42%,
+    rgba(0, 0, 0, 0.64) 58%,
+    transparent 78%
+  );
+  mask-image: radial-gradient(
+    ellipse 62% 54% at 55% 43%,
+    #000 0%,
+    #000 42%,
+    rgba(0, 0, 0, 0.64) 58%,
+    transparent 78%
+  );
+}
+
+.dark #HomeHero .home-hero-desktop-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+      90deg,
+      transparent 58%,
+      rgba(0, 0, 0, 0.18) 78%,
+      rgba(0, 0, 0, 0.38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      transparent 24%,
+      transparent 72%,
+      rgba(0, 0, 0, 0.22) 100%
+    );
+  mix-blend-mode: multiply;
+}
+
+.dark #HomeHero .home-hero-desktop-media img,
+.dark #HomeHero .home-hero-video-dark {
+  mix-blend-mode: screen;
+  filter: brightness(0.92) contrast(0.96);
+}
 
 @media screen and (max-width: $md) {
   .home-hero-mobile-media {
@@ -313,68 +367,78 @@
     overflow: hidden;
     background: #181818;
   }
-    .footer-image {
-        background: no-repeat url("/assets/footer-small-light.png");
-        z-index: -1;
-        background-position: bottom center;
-    }
+  .footer-image {
+    background: no-repeat url('/assets/footer-small-light.png');
+    z-index: -1;
+    background-position: bottom center;
+  }
 
-    .dark .footer-image {
-        background: no-repeat url("/assets/footer-small.png");
-        z-index: -1;
-        background-position: bottom center;
-    }
+  .dark .footer-image {
+    background: no-repeat url('/assets/footer-small.png');
+    z-index: -1;
+    background-position: bottom center;
+  }
 
-    .home-blur-1, .dark .home-blur-1 {
-        display: none !important;        
-    }
+  .home-blur-1,
+  .dark .home-blur-1 {
+    display: none !important;
+  }
 
-    .home-frame-3, .home-frame-4, .home-frame-5,
-    .home-blur-2, .home-blur-3, .home-blur-4 {
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        display: none !important; /* hide decorative frames & blurs on small screens to avoid layout/overflow issues */
-    }
+  .home-frame-3,
+  .home-frame-4,
+  .home-frame-5,
+  .home-blur-2,
+  .home-blur-3,
+  .home-blur-4 {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none !important; /* hide decorative frames & blurs on small screens to avoid layout/overflow issues */
+  }
 }
 
 @media screen and (max-width: $sm) {
-    .footer-image {
-        background: no-repeat url("/assets/footer-small-light.png");
-        z-index: -1;
-        background-position: bottom center;
-    }
+  .footer-image {
+    background: no-repeat url('/assets/footer-small-light.png');
+    z-index: -1;
+    background-position: bottom center;
+  }
 
-    .dark .footer-image {
-        background: no-repeat url("/assets/footer-small.png");
-        z-index: -1;
-        background-position: bottom center;
-    }
+  .dark .footer-image {
+    background: no-repeat url('/assets/footer-small.png');
+    z-index: -1;
+    background-position: bottom center;
+  }
 
-    .home-blur-1, .dark .home-blur-1 {
-        display: none !important;        
-    }
+  .home-blur-1,
+  .dark .home-blur-1 {
+    display: none !important;
+  }
 
-    .home-frame-3, .home-frame-4, .home-frame-5,
-    .home-blur-2, .home-blur-3, .home-blur-4 {
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        display: none !important; /* hide decorative frames & blurs on very small screens */
-    }
+  .home-frame-3,
+  .home-frame-4,
+  .home-frame-5,
+  .home-blur-2,
+  .home-blur-3,
+  .home-blur-4 {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none !important; /* hide decorative frames & blurs on very small screens */
+  }
 
-    .hide-on-mobile {
-        display: none !important;
-    }
+  .hide-on-mobile {
+    display: none !important;
+  }
 
-    .hide-video-on-mobile {
-        display: none !important;
-    }
+  .hide-video-on-mobile {
+    display: none !important;
+  }
 
-    .SwiperHighlights {
-        height: auto !important; // Allow content to expand
-        overflow: visible !important; // Ensure content is not hidden
-    }
+  .SwiperHighlights {
+    height: auto !important; // Allow content to expand
+    overflow: visible !important; // Ensure content is not hidden
+  }
 }

@@ -22,10 +22,10 @@ function HallOfFamePerson(props: HallOfFamePersonProps) {
     <div className="h-[400px] w-56 lg:w-80 mx-auto md:mb-16">
       <div className="flip">
         <div className="flip-content h-56 w-56 lg:w-80 lg:h-80">
-          <div className="flip-front object-cover w-full h-full ">
+          <div className="flip-front relative object-cover w-full h-full ">
             {props.image?.attributes.formats?.small?.url != undefined ? (
               <Image
-                layout="fill"
+                fill
                 src={props.image?.attributes.formats.small.url}
                 className="hall-of-fame-person-card object-cover w-full h-full grayscale"
                 alt="Hall of fame card of the person."
@@ -111,7 +111,7 @@ export default function HallOfFame(props: Props) {
       </div>
       <div className="flex flex-row justify-center">
         <div className="lg:max-w-3xl lg:text-center">
-          <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
+          <p className="text-[#666666] dark:text-[#666666] mt-10">
             <FormattedMessage
               defaultMessage={`
                 Ergo was founded with a team who have solid backgrounds in core development with
@@ -122,7 +122,7 @@ export default function HallOfFame(props: Props) {
               id="components.hallOfFame.description1"
             />
           </p>
-          <p className="text-[#807e7e] dark:text-[#807e7e] mt-10">
+          <p className="text-[#666666] dark:text-[#666666] mt-10">
             <FormattedMessage
               defaultMessage={`
                 Ergo is grassroots, and most core team members (and even foundation members) started out

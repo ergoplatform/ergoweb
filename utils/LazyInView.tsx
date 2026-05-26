@@ -68,11 +68,13 @@ const LazyInView: React.FC<LazyInViewProps> = ({
     };
   }, [rootMargin, threshold, once, ssrReveal]);
 
-  const content = typeof children === 'function' ? (children as () => ReactNode)() : children;
-
   return (
     <div ref={ref} className={className}>
-      {visible ? content : placeholder}
+      {visible
+        ? typeof children === 'function'
+          ? (children as () => ReactNode)()
+          : children
+        : placeholder}
     </div>
   );
 };

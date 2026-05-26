@@ -5,6 +5,8 @@ import {
   ensureLocalizationFromCanonical,
   getPostByPermalink,
 } from '../../../utils/strapiTranslations';
+import { postListPath, strapiFetchJson } from '../../../utils/strapiClient';
+import { hasBearerSecret } from '../../../utils/apiAuth';
 
 type BackfillResult = {
   ok: boolean;
@@ -15,12 +17,11 @@ type BackfillResult = {
   errors?: Array<{ permalink: string; locale: string; error: string }>;
 };
 
-const STRAPI_API = process.env.NEXT_PUBLIC_STRAPI_API as string;
 const SECRET = process.env.TRANSLATION_BACKFILL_SECRET as string | undefined;
 
 /**
  * Backfills AI translations for the most recent N English blog posts into all non-default locales.
- * Security: No auth required (temporarily disabled by request)
+ * Security: In production, require Authorization: Bearer TRANSLATION_BACKFILL_SECRET.
  *
  * Query params:
  *   - count: number of latest EN posts to consider (default 5)
@@ -30,36 +31,13 @@ const SECRET = process.env.TRANSLATION_BACKFILL_SECRET as string | undefined;
  *   curl -X POST -H "Authorization: Bearer $TRANSLATION_BACKFILL_SECRET" \
  *        "http://localhost:3000/api/translate/backfill?count=12"
  */
-function withTimeout<T>(p: Promise<T>, ms = 15000): Promise<T> {
-  const ac = new AbortController();
-  const t = setTimeout(() => ac.abort(), ms);
-  // Note: Only works if the promise respects AbortController; for fetch we'll pass the signal
-  return Promise.race([
-    p,
-    new Promise<T>((_, rej) => setTimeout(() => rej(new Error('timeout')), ms)),
-  ]).finally(() => clearTimeout(t));
-}
-
-async function fetchJson(url: string, opts?: RequestInit, timeoutMs = 15000) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const r = await fetch(url, { ...opts, signal: controller.signal });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return await r.json();
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse<BackfillResult>) {
   if (req.method !== 'POST') {
     res.status(405).json({ ok: false, message: 'Method not allowed' });
     return;
   }
 
-  // Authorization disabled by request to allow immediate backfill runs
-  const authorized = true;
+  const authorized = process.env.NODE_ENV !== 'production' || hasBearerSecret(req, SECRET);
   if (!authorized) {
     res.status(401).json({ ok: false, message: 'Unauthorized' });
     return;
@@ -73,7 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     return;
   }
 
-  if (!STRAPI_API) {
+  if (!process.env.NEXT_PUBLIC_STRAPI_API) {
     res.status(500).json({ ok: false, message: 'Missing NEXT_PUBLIC_STRAPI_API' });
     return;
   }
@@ -91,13 +69,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   try {
     // Fetch latest EN blog posts (with timeout and error handling)
     const en = 'en';
-    const listUrl =
-      STRAPI_API +
-      `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=${encodeURIComponent(
-        String(count),
-      )}&populate=*&filters[type][$eq]=blog&locale=${encodeURIComponent(en)}`;
-
-    const listJson = await fetchJson(listUrl, undefined, 15000).catch(() => null);
+    const listJson = await strapiFetchJson<{ data?: any[] }>(
+      postListPath({
+        sort: 'date:desc',
+        page: 1,
+        pageSize: count,
+        populate: '*',
+        type: 'blog',
+        locale: en,
+      }),
+      undefined,
+      15000,
+    );
 
     const posts: any[] = listJson?.data || [];
     const created: Record<string, number> = {};

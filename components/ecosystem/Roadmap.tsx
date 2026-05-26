@@ -55,7 +55,7 @@ function RoadmapItem({ title, url, description, status }: RoadmapItemProps) {
           <div className="my-auto">{getIconComponentByName(iconName)}</div>
           <div className="my-auto ml-3">
             <p className="font-bold">{title}</p>
-            <p className="text-[#807e7e] dark:text-[#807e7e]">{description}</p>
+            <p className="text-[#666666] dark:text-[#666666]">{description}</p>
           </div>
         </div>
       ) : (
@@ -64,7 +64,7 @@ function RoadmapItem({ title, url, description, status }: RoadmapItemProps) {
             <div className="my-auto">{getIconComponentByName(iconName)}</div>
             <div className="my-auto ml-3">
               <p className="font-bold underline">{title}</p>
-              <p className="text-[#807e7e] dark:text-[#807e7e]">{description}</p>
+              <p className="text-[#666666] dark:text-[#666666]">{description}</p>
             </div>
           </div>
         </a>

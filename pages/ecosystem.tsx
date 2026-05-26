@@ -7,6 +7,7 @@ import FeaturesAndProjects from '../components/ecosystem/FeaturesAndProjects';
 import Roadmap from '../components/ecosystem/Roadmap';
 import Wiki from '../components/ecosystem/Wiki';
 import Layout from '../components/Layout';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 type Props = {
   apps?: any;
@@ -48,38 +49,22 @@ export default function Ecosystem(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const apps = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/dapps?populate=*')
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
-  const roadmap = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + '/api/roadmaps?populate=*&pagination[pageSize]=100',
-    // "/api/roadmaps?populate=*&pagination[pageSize]=100&locale="+ context.locale
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
-  const projects = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+  const appsJson = await strapiFetchJson<{ data?: any[] }>('/api/dapps?populate=*');
+  const apps = appsJson?.data ?? null;
+  const roadmap = await strapiFetchJson('/api/roadmaps?populate=*&pagination[pageSize]=100');
+  const projectsJson = await strapiFetchJson<{ data?: any[] }>(
+    '/api/features-and-projects?populate=*&pagination[page]=1&pagination[pageSize]=4&sort=order:asc',
+  );
+  const projects = projectsJson?.data ?? null;
 
-  const favorites = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
-  const chagingTheWorldProjects = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+  const favoritesJson = await strapiFetchJson<{ data?: any[] }>(
+    '/api/our-favorites?populate=*&pagination[page]=1&pagination[pageSize]=100',
+  );
+  const favorites = favoritesJson?.data ?? null;
+  const chagingTheWorldProjectsJson = await strapiFetchJson<{ data?: any[] }>(
+    '/api/changing-the-worlds?populate=*&pagination[page]=1&pagination[pageSize]=100',
+  );
+  const chagingTheWorldProjects = chagingTheWorldProjectsJson?.data ?? null;
   return {
     props: { apps, roadmap, projects, favorites, chagingTheWorldProjects },
   };

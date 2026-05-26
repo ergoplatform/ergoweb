@@ -60,7 +60,7 @@ export default function FAQ(props: Props) {
           <a className="font-vinila-extended text-[48px] lg:text-[120px]">
             <FormattedMessage defaultMessage="FAQ" id="components.faq.heading" />
           </a>
-          <p className="text-[#585858] dark:text-[#807e7e]">
+          <p className="text-[#585858] dark:text-[#666666]">
             <FormattedMessage
               defaultMessage="We’ve compiled some of the most frequently asked questions."
               id="components.faq.description"

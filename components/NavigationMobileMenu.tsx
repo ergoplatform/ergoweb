@@ -165,47 +165,35 @@ export default function NavigationMobileMenu() {
           </div>
           <div>
             <Link href="/ecosystem">
-              <a>
-                <h3 className="font-button mt-4 mb-8 md:mb-10">
-                  <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
-                </h3>
-              </a>
+              <h3 className="font-button mt-4 mb-8 md:mb-10">
+                <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
+              </h3>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-2">
                 <Link href="/ecosystem/#dApps">
-                  <a>
-                    <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
-                  </a>
+                  <FormattedMessage defaultMessage="DApps" id="footer.ecosystem.1" />
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/ecosystem/#Roadmap">
-                  <a>
-                    <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
-                  </a>
+                  <FormattedMessage defaultMessage="Roadmap" id="footer.ecosystem.2" />
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/ecosystem/#Wiki">
-                  <a>
-                    <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
-                  </a>
+                  <FormattedMessage defaultMessage="Wiki" id="footer.ecosystem.3" />
                 </Link>
               </li>
 
               <li className="mb-2">
                 <Link href="/ecosystem/#Favorites">
-                  <a>
-                    <FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" />
-                  </a>
+                  <FormattedMessage defaultMessage="Ergo Raffle" id="footer.ecosystem.4" />
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/ecosystem/#Videocasts">
-                  <a>
-                    <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
-                  </a>
+                  <FormattedMessage defaultMessage="Videocasts" id="footer.ecosystem.5" />
                 </Link>
               </li>
             </ul>

@@ -393,16 +393,10 @@
       "value": "EXPLORER"
     }
   ],
-  "components.ergoExplorer.button2": [
-    {
-      "type": 0,
-      "value": "ERGO.WATCH"
-    }
-  ],
   "components.ergoExplorer.description": [
     {
       "type": 0,
-      "value": "The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time. Or, view community curated metrics on ergo.watch."
+      "value": "The Ergo Explorer is your interface with the blockchain. Watch every transaction made in real-time."
     }
   ],
   "components.ergoExplorer.ergExplorerAltFrontend": [
@@ -415,18 +409,6 @@
     {
       "type": 0,
       "value": "Ergo Explorer"
-    }
-  ],
-  "components.ergoExplorer.ergoWatch": [
-    {
-      "type": 0,
-      "value": "Ergo.Watch"
-    }
-  ],
-  "components.ergoExplorer.metrics": [
-    {
-      "type": 0,
-      "value": "Metrics"
     }
   ],
   "components.ergoExplorer.sigmaSpaceAltBackend": [

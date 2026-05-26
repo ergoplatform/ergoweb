@@ -1,27 +1,29 @@
 import fs from 'fs';
 import { Feed } from 'feed';
+import { postListPath, strapiFetchJson } from './strapiClient';
 
-const mdConverter = require('showdown');
-
-const converter = new mdConverter.Converter();
+const removeMd = require('remove-markdown');
 
 export default async function generateRssFeed() {
-  const posts = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog',
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
+  const posts = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 5,
+      populate: '*',
+      type: 'blog',
+    }),
+  );
 
-  const news = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+  const news = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 5,
+      populate: '*',
+      type: 'news',
+    }),
+  );
 
-  const contentPosts = [...posts.data, ...news]
+  const contentPosts = [...(posts?.data ?? []), ...(news?.data ?? [])]
     .map((item) => {
       if (item.attributes) {
         return item.attributes;
@@ -67,7 +69,7 @@ export default async function generateRssFeed() {
       id: url,
       link: url,
       description: post.subtitle,
-      content: converter.makeHtml(post.content),
+      content: removeMd(typeof post.content === 'string' ? post.content : ''),
       author: [author],
       contributor: [author],
       date: new Date(post.publishedAt),

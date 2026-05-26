@@ -1,6 +1,7 @@
 import { FormattedMessage } from 'react-intl';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import type { ReactNode } from 'react';
 
 type Props = {
   blockReward: number;
@@ -43,13 +44,7 @@ export default function HomeInfo({
 
   // Renders a metric with a placeholder that reserves final width,
   // and an overlaid animated value that does not affect layout.
-  const Metric = ({
-    finalStr,
-    children,
-  }: {
-    finalStr: string;
-    children: React.ReactNode;
-  }) => (
+  const Metric = ({ finalStr, children }: { finalStr: string; children: ReactNode }) => (
     <span className="inline-grid relative align-bottom">
       {/* Placeholder reserves exact final width and line-height */}
       <span aria-hidden className={`${metricText} invisible col-start-1 row-start-1`}>
@@ -71,43 +66,35 @@ export default function HomeInfo({
       <div className="hidden md:flex absolute inset-x-0 -bottom-50 justify-end items-center">
         <div className="mx-4 md:flex flex-row items-center bg-white md:pr-18 lg:pr-20 xl:pr-36 md:w-[980px] lg:w-[1040px] xl:w-[1100px] rounded-l-xl md:mx-0 homeInfo-shadow md:h-[120px] overflow-hidden max-w-full">
           <div className="mx-8 my-4 text-center min-w-[200px]">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="BLOCK REWARD"
                 id="components.homeInfo.blockReward"
               />
             </b>
             <Metric finalStr={brStr}>
-              {inView ? (
-                <CountUp separator="," start={0} end={blockReward} duration={1.2} />
-              ) : (
-                '0'
-              )}
+              {inView ? <CountUp separator="," start={0} end={blockReward} duration={1.2} /> : '0'}
             </Metric>
           </div>
 
           <div className="verticalLine h-14 my-auto"></div>
 
           <div className="mx-8 my-4 text-center min-w-[200px]">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="CIRCULATING SUPPLY"
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
             <Metric finalStr={csStr}>
-              {inView ? (
-                <CountUp separator="," start={0} end={cs} duration={1.2} />
-              ) : (
-                '0'
-              )}
+              {inView ? <CountUp separator="," start={0} end={cs} duration={1.2} /> : '0'}
             </Metric>
           </div>
 
           <div className="verticalLine h-14 my-auto"></div>
 
           <div className="mx-8 my-4 text-center min-w-[200px]">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="TRANSACTIONS PER DAY"
                 id="components.homeInfo.transactionPerDay"
@@ -125,20 +112,13 @@ export default function HomeInfo({
           <div className="verticalLine h-14 my-auto"></div>
 
           <div className="mx-8 my-4 text-center min-w-[200px]">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <Metric finalStr={hrStr}>
               {inView ? (
                 <>
-                  <CountUp
-                    separator=","
-                    start={0}
-                    end={hr}
-                    duration={1.2}
-                    decimals={2}
-                  />{' '}
-                  TH/s
+                  <CountUp separator="," start={0} end={hr} duration={1.2} decimals={2} /> TH/s
                 </>
               ) : (
                 '0.00 TH/s'
@@ -152,43 +132,35 @@ export default function HomeInfo({
       <div className="md:hidden flex justify-center items-stretch px-4">
         <div className="bg-white w-full max-w-[360px] mx-auto rounded-xl py-1 homeInfo-shadow overflow-hidden my-4">
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="BLOCK REWARD"
                 id="components.homeInfo.blockReward"
               />
             </b>
             <Metric finalStr={brStr}>
-              {inView ? (
-                <CountUp separator="," start={0} end={blockReward} duration={1.2} />
-              ) : (
-                '0'
-              )}
+              {inView ? <CountUp separator="," start={0} end={blockReward} duration={1.2} /> : '0'}
             </Metric>
           </div>
 
           <div className="horizontallLine"></div>
 
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="CIRCULATING SUPPLY"
                 id="components.homeInfo.circulatingSupply"
               />
             </b>
             <Metric finalStr={csStr}>
-              {inView ? (
-                <CountUp separator="," start={0} end={cs} duration={1.2} />
-              ) : (
-                '0'
-              )}
+              {inView ? <CountUp separator="," start={0} end={cs} duration={1.2} /> : '0'}
             </Metric>
           </div>
 
           <div className="horizontallLine"></div>
 
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage
                 defaultMessage="TRANSACTIONS PER DAY"
                 id="components.homeInfo.transactionPerDay"
@@ -206,20 +178,13 @@ export default function HomeInfo({
           <div className="horizontallLine"></div>
 
           <div className="mx-8 my-6">
-            <b className="text-brand-orange dark:text-brand-orange block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
+            <b className="text-[#a63a00] dark:text-[#a63a00] block whitespace-nowrap leading-none h-[20px] md:h-[24px]">
               <FormattedMessage defaultMessage="HASH RATE" id="components.homeInfo.hashRate" />
             </b>
             <Metric finalStr={hrStr}>
               {inView ? (
                 <>
-                  <CountUp
-                    separator=","
-                    start={0}
-                    end={hr}
-                    duration={1.2}
-                    decimals={2}
-                  />{' '}
-                  TH/s
+                  <CountUp separator="," start={0} end={hr} duration={1.2} decimals={2} /> TH/s
                 </>
               ) : (
                 '0.00 TH/s'

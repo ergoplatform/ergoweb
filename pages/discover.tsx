@@ -5,6 +5,7 @@ import ErgoExplorer from '../components/discover/ErgoExplorer';
 import FAQ from '../components/discover/FAQ';
 import GrantsAndBounties from '../components/discover/GrantsAndBounties';
 import Layout from '../components/Layout';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 type Props = {
   documents?: any;
@@ -37,20 +38,12 @@ export default function Discover(props: Props) {
 }
 
 export const getStaticProps = async (context: any) => {
-  const documents = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/documents?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=' +
-      context.locale,
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
-  const faq = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/f-a-qs?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=' +
-      context.locale,
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
+  const documents = await strapiFetchJson(
+    `/api/documents?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=${context.locale}`,
+  );
+  const faq = await strapiFetchJson(
+    `/api/f-a-qs?pagination[page]=1&pagination[pageSize]=500&populate=*&locale=${context.locale}`,
+  );
   return {
     props: { documents, faq },
 

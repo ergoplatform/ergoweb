@@ -3,6 +3,7 @@ import { useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
+import { strapiFetchJson } from '../../utils/strapiClient';
 
 type NewsPostProps = {
   title: string;
@@ -27,7 +28,7 @@ function NewsPost({ title, subtitle, date, url }: NewsPostProps) {
               {title.length > 60 ? title.substring(0, 60) + '...' : title}
             </p>
             {subtitle ? (
-              <p className="text-[12px] md:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-2 text-clip">
+              <p className="text-[12px] md:text-[16px] text-[#666666] dark:text-[#666666] mb-2 text-clip">
                 {subtitle?.length > 350 ? subtitle?.substring(0, 320) + '...' : subtitle}
               </p>
             ) : (
@@ -60,12 +61,10 @@ export default function BlogNews({ news }: Props) {
   const [hasMore, setHasMore] = useState(true);
 
   const getMorePost = async () => {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_STRAPI_API +
-        `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[start]=${posts.length}&pagination[limit]=9&populate=*&filters[type][$eq]=news&locale=` +
-        'en',
+    const newPosts = await strapiFetchJson<any>(
+      `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[start]=${posts.length}&pagination[limit]=9&populate=*&filters[type][$eq]=news&locale=en`,
     );
-    const newPosts = await res.json();
+    if (!newPosts?.data) return;
     setPosts((post: any) => [...post, ...newPosts.data]);
     if (
       newPosts.meta.pagination.start + newPosts.meta.pagination.limit >

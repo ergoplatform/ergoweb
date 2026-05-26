@@ -1,18 +1,11 @@
-export const SUPPORTED_LOCALES = [
-  'en',
-  'es',
-  'de',
-  'it',
-  'pl',
-  'pt',
-  'sk',
-  'zh',
-  'hu',
-  'ru',
-  'id',
-  'tr',
-];
+import localeConfig from './localeConfig';
+
+export const DEFAULT_LOCALE: string = localeConfig.DEFAULT_LOCALE;
+export const SUPPORTED_LOCALES: string[] = localeConfig.SUPPORTED_LOCALES;
+export const NEXT_I18N_LOCALES: string[] = localeConfig.NEXT_I18N_LOCALES;
 export const NON_DEFAULT_LOCALES = SUPPORTED_LOCALES.filter((l) => l !== 'en');
+export const toSiteLocale = localeConfig.toSiteLocale as (locale: string) => string | null;
+export const toStrapiLocale = localeConfig.toStrapiLocale as (locale: string) => string;
 
 export type LocaleMeta = {
   nativeName: string;
@@ -28,8 +21,16 @@ export const LOCALE_META: Record<string, LocaleMeta> = {
   pl: { nativeName: 'Polski', englishName: 'Polish', flag: 'pl' },
   pt: { nativeName: 'Português', englishName: 'Portuguese', flag: 'pt' },
   sk: { nativeName: 'Slovenčina', englishName: 'Slovak', flag: 'sk' },
-  zh: { nativeName: '简体中文', englishName: 'Chinese (Simplified)', flag: 'cn' },
-  cn: { nativeName: '简体中文', englishName: 'Chinese (Simplified)', flag: 'cn' }, // alias for compatibility
+  zh: {
+    nativeName: '简体中文',
+    englishName: 'Chinese (Simplified)',
+    flag: 'cn',
+  },
+  cn: {
+    nativeName: '简体中文',
+    englishName: 'Chinese (Simplified)',
+    flag: 'cn',
+  }, // alias for compatibility
   hu: { nativeName: 'Magyar', englishName: 'Hungarian', flag: 'hu' },
   ru: { nativeName: 'Русский', englishName: 'Russian', flag: 'ru' },
   id: { nativeName: 'Bahasa Indonesia', englishName: 'Indonesian', flag: 'id' },

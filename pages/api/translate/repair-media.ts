@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { hasBearerSecret } from '../../../utils/apiAuth';
+import { strapiFetch as sharedStrapiFetch } from '../../../utils/strapiClient';
 
 type RepairResult = {
   ok: boolean;
@@ -11,20 +13,11 @@ type RepairResult = {
   enItemsScanned?: number;
 };
 
-const STRAPI_API = process.env.NEXT_PUBLIC_STRAPI_API as string;
 const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN as string | undefined;
 const SECRET = process.env.TRANSLATION_BACKFILL_SECRET as string | undefined;
 
 async function strapiFetch(path: string, init?: RequestInit) {
-  if (!STRAPI_API) throw new Error('Missing NEXT_PUBLIC_STRAPI_API');
-  const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
-  };
-  if (STRAPI_API_TOKEN) headers.Authorization = `Bearer ${STRAPI_API_TOKEN}`;
-  return fetch(`${STRAPI_API}${path}`, {
-    ...init,
-    headers: { ...headers, ...(init?.headers || {}) },
-  });
+  return sharedStrapiFetch(path, init);
 }
 
 /**
@@ -46,16 +39,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   // Authorization
   const isDev = process.env.NODE_ENV !== 'production';
-  const auth = req.headers.authorization || '';
-  const token = auth.startsWith('Bearer ') ? auth.slice('Bearer '.length) : '';
-  const authorized = isDev ? true : Boolean(SECRET && token === SECRET);
+  const authorized = isDev ? true : hasBearerSecret(req, SECRET);
   if (!authorized) {
     res.status(401).json({ ok: false, message: 'Unauthorized' });
     return;
   }
 
   if (!STRAPI_API_TOKEN) {
-    res.status(400).json({ ok: false, message: 'Missing STRAPI_API_TOKEN for write access' });
+    res.status(400).json({
+      ok: false,
+      message: 'Missing STRAPI_API_TOKEN for write access',
+    });
     return;
   }
 
@@ -151,12 +145,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             });
             if (!up.ok) {
               const text = await up.text();
-              errors.push({ id: locId, locale: locLocale, error: text.slice(0, 300) });
+              errors.push({
+                id: locId,
+                locale: locLocale,
+                error: text.slice(0, 300),
+              });
             } else {
               updated++;
             }
           } catch (e: any) {
-            errors.push({ id: locId, locale: locLocale, error: e?.message || String(e) });
+            errors.push({
+              id: locId,
+              locale: locLocale,
+              error: e?.message || String(e),
+            });
           }
         }
       }

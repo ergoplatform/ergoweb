@@ -1,15 +1,13 @@
 import { FormattedMessage, useIntl } from 'react-intl';
+import { useState } from 'react';
 import Button from '../Button';
-import dynamic from 'next/dynamic';
 import ArrowRightBlack from '../icons/ArrowRightBlack';
 import ArrowRightWhite from '../icons/ArrowRightWhite';
-
-const ToastContainer = dynamic(() => import('react-toastify').then((m) => m.ToastContainer), {
-  ssr: false,
-});
+import { strapiFetch } from '../../utils/strapiClient';
 
 export default function ContributeForm() {
   const intl = useIntl();
+  const [statusMessage, setStatusMessage] = useState('');
   const buttonContribute = intl.formatMessage({
     id: 'components.Sigmanauts.button.buttonContribute',
     defaultMessage: 'CONTRIBUTING GUIDELINES',
@@ -45,31 +43,24 @@ export default function ContributeForm() {
 
   const sendMessage = async (event: any) => {
     event.preventDefault();
-    const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_API + '/api/contact-requests', {
-      body: JSON.stringify({
-        data: {
-          name: event.target.name.value,
-          text: event.target.text.value,
-          email: event.target.email.value,
+    try {
+      const res = await strapiFetch('/api/contact-requests', {
+        body: JSON.stringify({
+          data: {
+            name: event.target.name.value,
+            text: event.target.text.value,
+            email: event.target.email.value,
+          },
+        }),
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
-    const result = await res.json();
-    if (result != null) {
-      const { toast } = await import('react-toastify');
-      toast.success('Message sent! Have a great day!', {
-        position: 'top-right',
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+        method: 'POST',
       });
+      const result = await res.json();
+      setStatusMessage(result != null ? 'Message sent! Have a great day!' : 'Message failed.');
+    } catch {
+      setStatusMessage('Message failed.');
     }
   };
 
@@ -81,7 +72,7 @@ export default function ContributeForm() {
             <FormattedMessage defaultMessage="Contribute" id="components.ContributeForm.title" />
           </b>
         </h1>
-        <p className="text-[#807e7e] dark:text-[#807e7e] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
+        <p className="text-[#666666] dark:text-[#666666] w-56 lg:w-72 lg:mt-auto lg:mb-auto">
           <FormattedMessage
             defaultMessage="Ergo operates on an open model where <b>anyone is welcome to contribute.</b>"
             id="components.ContributeForm.text"
@@ -98,7 +89,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-8">
+          <p className="font-robot text-[14px] lg:text-[20px] text-[#666666] dark:text-[#666666] mb-8">
             <b>
               <FormattedMessage
                 defaultMessage="HOW CAN I CONTRIBUTE?"
@@ -169,7 +160,7 @@ export default function ContributeForm() {
               values={{ b: (...chunks: any) => <b>{chunks}</b> }}
             />
           </h2>
-          <p className="font-robot text-[14px] lg:text-[20px] text-[#807e7e] dark:text-[#807e7e] mb-10">
+          <p className="font-robot text-[14px] lg:text-[20px] text-[#666666] dark:text-[#666666] mb-10">
             <FormattedMessage
               defaultMessage="WANT TO BECOME A PARTNER?"
               id="components.ContributeForm.company.subTitle"
@@ -214,10 +205,14 @@ export default function ContributeForm() {
                 </button>
               </div>
             </div>
+            {statusMessage ? (
+              <p className="mt-4 text-right text-sm text-brand-orange" aria-live="polite">
+                {statusMessage}
+              </p>
+            ) : null}
           </form>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 }

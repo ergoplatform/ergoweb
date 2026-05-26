@@ -14,7 +14,7 @@ function SecondaryMenu() {
         className="justify-between bg-gray-100 dark:bg-gray-800 w-full relative md:flex hidden"
         style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 100 }}
       >
-        <div className="max-w-[700px] mx-auto flex justify-between w-full px-4 py-2">
+        <div className="max-w-[900px] mx-auto flex justify-between w-full px-4 py-2">
           <Link
             href="/get-erg#Wallets"
             className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
@@ -83,6 +83,15 @@ function SecondaryMenu() {
             })}
           >
             <FormattedMessage id="secondaryMenu.sigmaverse" defaultMessage="SIGMAVERSE" />
+          </a>
+          <span className="text-xs mx-2 text-gray-900 dark:text-white">•</span>
+          <a
+            href="https://ergoblockchain.org/"
+            target="_blank"
+            className="text-xs mr-2 hover:text-orange-500 transition-colors duration-300 text-gray-900 dark:text-white hover:brightness-125 hover:scale-110 transform transition-transform ease-in-out"
+            rel="noreferrer"
+          >
+            ERGOBLOCKCHAIN
           </a>
         </div>
       </div>

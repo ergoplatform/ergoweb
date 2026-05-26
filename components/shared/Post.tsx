@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 import LogoBlack from '../icons/LogoBlack';
+import { safeExternalUrl, safeInternalPath } from '../../utils/safeUrl';
 const removeMd = require('remove-markdown');
 
 type Props = {
@@ -52,7 +53,7 @@ export default function Post({
     imageUrl = image;
   }
 
-  const href =
+  const rawHref =
     type === 'news'
       ? url && typeof url === 'string' && url.trim().length > 0
         ? url
@@ -63,7 +64,9 @@ export default function Post({
       ? '/blog/' + permalink
       : '#';
 
-  const isExternal = href.startsWith('http://') || href.startsWith('https://');
+  const externalHref = safeExternalUrl(rawHref);
+  const href = externalHref || safeInternalPath(rawHref) || '#';
+  const isExternal = Boolean(externalHref);
 
   return (
     <div
@@ -73,7 +76,7 @@ export default function Post({
     >
       {locale !== 'en' && needsTranslation ? (
         <div className="pointer-events-none absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span className="px-3 py-1 rounded-full bg-brand-orange text-white text-sm font-semibold shadow">
+          <span className="px-3 py-1 rounded-full bg-brand-orange text-black text-sm font-semibold shadow">
             <FormattedMessage id="components.post.translate" defaultMessage="Translate" />
           </span>
         </div>
@@ -105,7 +108,7 @@ export default function Post({
                 className="object-cover"
                 src={imageUrl}
                 alt=""
-                layout="fill"
+                fill
                 sizes="(max-width: 1280px) 100vw, 384px"
               />
             </div>
@@ -119,7 +122,7 @@ export default function Post({
                 <Link href={`/category/${item.trim()}`} key={item.trim()}>
                   <span
                     key={item.trim()}
-                    className="inline-flex w-fit items-center px-3.5 py-1.5 rounded-full uppercase tracking-widest text-xs md:text-sm font-semibold text-white bg-brand-orange border border-brand-orange-dark"
+                    className="inline-flex w-fit items-center px-3.5 py-1.5 rounded-full uppercase tracking-widest text-xs md:text-sm font-semibold text-black bg-brand-orange border border-brand-orange-dark"
                   >
                     {item.trim()}
                   </span>
@@ -182,7 +185,7 @@ export default function Post({
         </div>
       </div>
       {type === 'news' ? (
-        <span className="absolute bottom-3 right-3 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white shadow-md">
+        <span className="absolute bottom-3 right-3 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange text-black shadow-md">
           📣 News
         </span>
       ) : null}

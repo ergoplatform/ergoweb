@@ -24,7 +24,7 @@ export default function GrantsAndBounties() {
           id="components.grantsAndBounties.heading"
         />
       </h1>
-      <p className="max-w-xs text-[#807e7e] dark:text-[#807e7e] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
+      <p className="max-w-xs text-[#666666] dark:text-[#666666] mt-6 xl:mt-24 xl:ml-[600px] xl:max-w-lg">
         <FormattedMessage
           defaultMessage="In general, anything educative for the community is subject to some bounty even if not specifically listed. We are looking to fund grants for projects that focus on building key ecosystem infrastructure. However, the quickest way to get some funding is to start a Raffle."
           id="components.grantsAndBounties.description"

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { safeExternalUrl, safeInternalPath } from '../../utils/safeUrl';
 
 type Props = {
   documents?: any;
@@ -53,7 +54,7 @@ export default function Documents(props: Props) {
           </b>
         </a>
         <div className="lg:w-1/3">
-          <p className="text-[#807e7e] dark:text-[#807e7e]">
+          <p className="text-[#666666] dark:text-[#666666]">
             <FormattedMessage
               defaultMessage="Ergo takes a research-based approach and uses stable well-tested solutions to provide a robust platform for developers to build on for years to come. Most of Ergo solutions are formalized in papers presented at peer-reviewed conferences and have been widely discussed in the community."
               id="components.documents.description"
@@ -84,18 +85,22 @@ export default function Documents(props: Props) {
               className={open === i ? 'block' : 'hidden'}
               aria-labelledby={'docs-heading' + i.toString()}
             >
-              {section.documents.map((doc: any) => (
-                <div className="my-4" key={doc.title}>
-                  <a
-                    className="font-vinila-extended text-[14px] md:text-[16px] text-brand-orange dark:text-brand-orange underline"
-                    href={doc.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {doc.title}
-                  </a>
-                </div>
-              ))}
+              {section.documents.map((doc: any) => {
+                const href = safeExternalUrl(doc.url) || safeInternalPath(doc.url);
+                if (!href) return null;
+                return (
+                  <div className="my-4" key={doc.title}>
+                    <a
+                      className="font-vinila-extended text-[14px] md:text-[16px] text-brand-orange dark:text-brand-orange underline"
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {doc.title}
+                    </a>
+                  </div>
+                );
+              })}
             </div>
             <div className="w-full pb-8"></div>
           </div>

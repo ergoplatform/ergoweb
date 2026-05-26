@@ -2,6 +2,9 @@ import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { toStrapiLocale } from '../../utils/locales';
+import { strapiFetchJson } from '../../utils/strapiClient';
+import { safeExternalUrl } from '../../utils/safeUrl';
 
 type Props = {
   news: any;
@@ -17,10 +20,6 @@ export default function News({ news }: Props) {
     let cancelled = false;
 
     async function refreshNews() {
-      const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API as string | undefined;
-      if (!STRAPI) return;
-
-      const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
       const mapped = toStrapiLocale(locale || 'en');
       const variants = new Set<string>([mapped, locale || 'en']);
       if ((locale || 'en') === 'cn') {
@@ -29,18 +28,13 @@ export default function News({ news }: Props) {
       }
 
       async function fetchForLocale(loc: string) {
-        try {
-          const res = await fetch(
-            STRAPI +
-              '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=24&populate=*&filters[type][$eq]=news&locale=' +
-              encodeURIComponent(loc),
-            { cache: 'no-store' } as any,
-          );
-          const json = await res.json();
-          return Array.isArray(json?.data) ? json.data : [];
-        } catch {
-          return [];
-        }
+        const json = await strapiFetchJson<{ data?: any[] }>(
+          `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=24&populate=*&filters[type][$eq]=news&locale=${encodeURIComponent(
+            loc,
+          )}`,
+          { cache: 'no-store' } as any,
+        );
+        return Array.isArray(json?.data) ? json.data : [];
       }
 
       const localizedArrays = await Promise.all(Array.from(variants).map((v) => fetchForLocale(v)));
@@ -108,7 +102,8 @@ export default function News({ news }: Props) {
           </h1>
           <h1 className="text-[112px] md:text-[12rem] lg:text-[6rem] leading-none">
             <b>
-              &<FormattedMessage defaultMessage="Blog" id="components.news.blog" />
+              &
+              <FormattedMessage defaultMessage="Blog" id="components.news.blog" />
             </b>
           </h1>
         </div>
@@ -133,6 +128,7 @@ export default function News({ news }: Props) {
                   const daysSince = (now.getTime() - postDate.getTime()) / (1000 * 3600 * 24);
                   const isNew = daysSince <= 7;
                   const showYear = postDate.getFullYear() !== now.getFullYear();
+                  const externalHref = safeExternalUrl(post.attributes.url);
 
                   return (
                     <li
@@ -156,15 +152,15 @@ export default function News({ news }: Props) {
                         >
                           {post.attributes.title}
                         </Link>
-                      ) : (
+                      ) : externalHref ? (
                         <a
-                          href={post.attributes.url}
+                          href={externalHref}
                           title={post.attributes.title}
                           className="underline hover:no-underline dark:text-brand-orange flex-1 min-w-0 truncate"
                         >
                           {post.attributes.title}
                         </a>
-                      )}
+                      ) : null}
                       {isNew ? (
                         <span className="ml-2 shrink-0 inline-block rounded bg-red-500 px-1 text-xs font-semibold text-white">
                           <FormattedMessage id="components.news.newBadge" defaultMessage="New" />

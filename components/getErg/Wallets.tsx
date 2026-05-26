@@ -29,21 +29,21 @@ export default function Wallets() {
           </p>
         </div>
         <div className="my-auto">
-          <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+          <p className="font-roboto font-bold text-[14px] lg:text-[16px] text-[#666666] dark:text-[#666666]">
             <FormattedMessage
               defaultMessage="Digital wallets can help keep your digital currency safe, private and in your control."
               id="components.wallets.walletDescription1"
             />
           </p>
           <br />
-          <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+          <p className="font-roboto text-[14px] lg:text-[16px] text-[#666666] dark:text-[#666666]">
             <FormattedMessage
               defaultMessage="Note that wallets are supported by third parties, we only provide the information below as a courtesy, in order to simplify the overall digital currency experience for you."
               id="components.wallets.walletDescription2"
             />
           </p>
           <br />
-          <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+          <p className="font-roboto text-[14px] lg:text-[16px] text-[#666666] dark:text-[#666666]">
             <Button
               text={
                 <FormattedMessage
@@ -89,7 +89,7 @@ export default function Wallets() {
             <FormattedMessage defaultMessage="ErgoPay" id="components.wallets.ErgoPay" />
           </p>
         </div>
-        <p className="font-roboto text-[14px] lg:text-[16px] text-[#807e7e] dark:text-[#807e7e]">
+        <p className="font-roboto text-[14px] lg:text-[16px] text-[#666666] dark:text-[#666666]">
           <br />
           <Button
             text="WHICH WALLET IS RIGHT FOR ME?"
@@ -111,29 +111,27 @@ export default function Wallets() {
             <div className="grow h-3 lg:h-4 my-auto border-b-[1px] border-[#585858] ml-2"></div>
           </div>
         </div>
-        <Link href="/ergo-wallet-app">
-          <a
-            rel="noreferrer"
-            className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
-          >
-            <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
-              <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
-              <p className="text-center lg:my-auto">Ergo Wallet App</p>
-            </div>
-            <div className="w-1/5 p-1 my-auto">
-              <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
-              <p className="text-center mt-2 text-[16px]">Best for mobile</p>
-            </div>
-            <div className="w-1/5 p-1 my-auto">
-              <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
-            </div>
-            <div className="w-1/5 p-1 my-auto">
-              <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
-            </div>
-            <div className="w-1/5 p-1 my-auto">
-              <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
-            </div>
-          </a>
+        <Link
+          href="/ergo-wallet-app"
+          className="flex flex-row h-28 border-x-[1px] border-[#585858] lg:border-0"
+        >
+          <div className="w-1/5 p-1 my-auto flex flex-col lg:flex-row lg:justify-start lg:gap-4 lg:ml-4">
+            <Logo className="w-6 h-6 mx-auto lg:mx-0 lg:w-12 lg:h-12" viewBox="0 0 82 82" />
+            <p className="text-center lg:my-auto">Ergo Wallet App</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletMobile className="w-4 h-4 mx-auto lg:hidden" viewBox="0 0 12 18" />
+            <p className="text-center mt-2 text-[16px]">Best for mobile</p>
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletXGray className="w-7 h-7 mx-auto lg:w-11 lg:h-11" viewBox="0 0 44 42" />
+          </div>
+          <div className="w-1/5 p-1 my-auto">
+            <WalletCheck className="w-8 h-8 mx-auto lg:w-12 lg:h-12" viewBox="0 0 33 32" />
+          </div>
         </Link>
         <a
           href="https://github.com/capt-nemo429/nautilus-wallet"

@@ -13,27 +13,26 @@ import Discord from './icons/Discord';
 import Reddit from './icons/Reddit';
 import Discourse from './icons/Discourse';
 import Coingecko from './icons/Coingecko';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 export default function Footer() {
-  const [postsData, setPostsData] = useState([]);
-  const [newsData, setNewsData] = useState([]);
+  const [postsData, setPostsData] = useState<any[]>([]);
+  const [newsData, setNewsData] = useState<any[]>([]);
   const { locale } = useRouter();
   const apiLocale = locale === 'cn' ? 'zh' : locale === 'default' ? 'en' : locale || 'en';
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const postsRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=${apiLocale}`,
+        const posts = await strapiFetchJson<{ data?: any[] }>(
+          `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=blog&locale=${apiLocale}`,
         );
-        const posts = await postsRes.json();
-        setPostsData(posts.data || []);
+        setPostsData(posts?.data || []);
 
-        const newsRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API}/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=${apiLocale}`,
+        const news = await strapiFetchJson<{ data?: any[] }>(
+          `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=5&populate=*&filters[type][$eq]=news&locale=${apiLocale}`,
         );
-        const news = await newsRes.json();
-        setNewsData(news.data || []);
+        setNewsData(news?.data || []);
       } catch (err) {
         console.error('Failed to fetch data:', err);
         setPostsData([]);
@@ -174,9 +173,9 @@ export default function Footer() {
         <div className="my-6 grid md:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-10">
           <div>
             <Link href="/community">
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="COMMUNITY" id="footer.community.title" />
-              </h3>
+              </p>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
@@ -221,9 +220,9 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/get-erg" prefetch={false}>
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="GET ERG" id="footer.getErg.title" />
-              </h3>
+              </p>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
@@ -258,9 +257,9 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/discover" prefetch={false}>
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="DISCOVER" id="footer.discover.title" />
-              </h3>
+              </p>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
@@ -305,9 +304,9 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/ecosystem" prefetch={false}>
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="ECOSYSTEM" id="footer.ecosystem.title" />
-              </h3>
+              </p>
             </Link>
             <ul className="hidden md:block">
               <li className="mb-4">
@@ -352,9 +351,9 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/blog" prefetch={false}>
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="BLOG" id="footer.blog.title" />
-              </h3>
+              </p>
             </Link>
             {postsData && postsData.length > 0 ? (
               <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
@@ -386,9 +385,9 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/blog?type=news" prefetch={false}>
-              <h3 className="font-button text-black dark:text-white my-4 cursor-pointer">
+              <p className="font-button text-black dark:text-white my-4 cursor-pointer">
                 <FormattedMessage defaultMessage="NEWS" id="footer.news.title" />
-              </h3>
+              </p>
             </Link>
             {newsData && newsData.length > 0 ? (
               <ul className="hidden md:block h-[360px] lg:h-[380px] overflow-hidden">
@@ -443,9 +442,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="mt-5 md:mt-0 text-black dark:text-white">
-          1 Irving Place, #08/11 The Commerze@irving Singapore (369546)
         </div>
       </div>
     </footer>

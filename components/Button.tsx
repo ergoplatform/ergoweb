@@ -3,7 +3,7 @@ import ArrowRightBlack from './icons/ArrowRightBlack';
 import ArrowRightWhite from './icons/ArrowRightWhite';
 import ArrowRightOrange from './icons/ArrowRightOrange';
 import React from 'react';
-import { useTheme } from 'next-themes';
+import { safeHref } from '../utils/safeUrl';
 
 type Props = {
   text: React.ReactNode;
@@ -34,15 +34,13 @@ export default function Button({
   ariaLabel, // Destructure ariaLabel
   prefetch = false,
 }: Props) {
-  const { resolvedTheme } = useTheme();
   let textClasses = '';
   let darkTextClass = '';
 
   if (background) {
     // Orange background button
-    // Always use white text and white arrow regardless of theme or props
-    textClasses = 'text-white';
-    darkTextClass = 'dark:text-white';
+    textClasses = 'text-black';
+    darkTextClass = 'dark:text-black';
   } else {
     // Transparent background button
     textClasses = `text-${textColor}`; // Use textColor prop
@@ -69,16 +67,14 @@ export default function Button({
     className += ' animate-pulse';
   }
 
-  // Determine if it should be a link or a button
-  const isLink = url && url.trim() !== '';
+  const href = safeHref(url);
 
   // Compute effective icon color
-  const isDark = resolvedTheme === 'dark';
   let effectiveIconColor = iconColor;
 
   // For orange background buttons, always use white arrow
   if (background) {
-    effectiveIconColor = 'white';
+    effectiveIconColor = 'black';
   } else if (icon === 'ArrowRightWhite') {
     effectiveIconColor = 'white';
   }
@@ -105,12 +101,13 @@ export default function Button({
     </>
   );
 
-  if (isLink) {
+  if (href) {
     return (
       <Link
-        href={url as string}
+        href={href}
         className={className}
         target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
         aria-label={ariaLabel || (typeof text === 'string' ? text : undefined)}
         prefetch={prefetch}
       >

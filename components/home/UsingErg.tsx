@@ -82,7 +82,12 @@ export default function UsingErg() {
       let newFontSize = 96; // start at desktop target for short titles
 
       // Measure width of each word separately and sum with line breaks
-      const words = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+      const words = intl
+        .formatMessage({
+          id: 'components.usingErg.title',
+          defaultMessage: 'GET ERG',
+        })
+        .split(' ');
       const totalChars = words.join('').length;
       const minBound = totalChars <= 7 ? 72 : 32; // keep short titles larger
       const canvas = document.createElement('canvas');
@@ -91,7 +96,7 @@ export default function UsingErg() {
 
       context.font = `${newFontSize}px Arial, sans-serif`;
       let totalWidth = 0;
-      words.forEach(word => {
+      words.forEach((word) => {
         const metrics = context.measureText(word);
         totalWidth = Math.max(totalWidth, metrics.width);
       });
@@ -101,7 +106,7 @@ export default function UsingErg() {
         newFontSize -= 1;
         context.font = `${newFontSize}px Arial, sans-serif`;
         totalWidth = 0;
-        words.forEach(word => {
+        words.forEach((word) => {
           const metrics = context.measureText(word);
           totalWidth = Math.max(totalWidth, metrics.width);
         });
@@ -115,7 +120,12 @@ export default function UsingErg() {
     return () => window.removeEventListener('resize', adjustFontSize);
   }, [intl]);
 
-  const titleWords = intl.formatMessage({ id: 'components.usingErg.title', defaultMessage: 'GET ERG' }).split(' ');
+  const titleWords = intl
+    .formatMessage({
+      id: 'components.usingErg.title',
+      defaultMessage: 'GET ERG',
+    })
+    .split(' ');
 
   return (
     <div
@@ -161,11 +171,7 @@ export default function UsingErg() {
             style={{ minWidth: '0' }}
           >
             {cards.map((card: any, i: number) => (
-              <Link
-                key={i}
-                href={card.url}
-                aria-label={typeof card.title === 'string' ? card.title : undefined}
-              >
+              <Link key={i} href={card.url}>
                 <div className="cursor-pointer z-20 min-w-[200px] flex flex-col justify-between using-erg-card dark:using-erg-card p-4 md:p-5 lg:p-4 mx-1 md:mx-2 lg:mx-0 transition-all duration-300 h-[630px] md:h-[612px] overflow-visible">
                   <div className="w-full flex flex-col items-center text-center pt-2 pb-4 mt-8">
                     <p className="font-subtitle-3 mb-2 text-2xl md:text-xl">

@@ -11,6 +11,7 @@ import Link from 'next/link';
 import BlogPosts from '../components/blog/BlogPosts';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 type Props = {
   post?: any;
@@ -155,19 +156,15 @@ export default function Post(props: Props) {
 }
 
 export async function getServerSideProps(context: any) {
-  const post = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?&filters[permalink][$eq]=' +
-      encodeURIComponent('2021-04-26-the-ergo-manifesto') +
-      '&populate=*&locale=' +
-      context.locale,
-  ).then((response) => response.json());
+  const post = await strapiFetchJson<any>(
+    `/api/posts?&filters[permalink][$eq]=${encodeURIComponent(
+      '2021-04-26-the-ergo-manifesto',
+    )}&populate=*&locale=${context.locale}`,
+  );
 
-  const posts = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=' +
-      context.locale,
-  ).then((response) => response.json());
+  const posts = await strapiFetchJson<any>(
+    `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=${context.locale}`,
+  );
 
   if (post.data.length === 0) {
     return {

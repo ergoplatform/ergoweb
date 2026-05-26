@@ -34,7 +34,6 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/mining/emission/"
               className="text-black dark:text-white font-bold"
-              aria-label="Read More about A Fair Start"
             >
               Read More: A Fair Start
             </a>
@@ -73,7 +72,6 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/uses/lets/"
               className="text-black dark:text-white font-bold"
-              aria-label="Read More about Alternative Economics"
             >
               Read More: Alternative Economics
             </a>
@@ -112,7 +110,6 @@ const slides = [
             <a
               href="https://docs.ergoplatform.com/dev/protocol/zkp/"
               className="text-black dark:text-white font-bold"
-              aria-label="Read More about Optional Privacy"
             >
               Read More: Optional Privacy
             </a>
@@ -138,7 +135,7 @@ function Highlights() {
     let mounted = true;
     Promise.all([
       import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
-      import('swiper').then((m) => ({ Navigation: m.Navigation })),
+      import('swiper/modules').then((m) => ({ Navigation: m.Navigation })),
     ]).then(([a, b]) => {
       if (mounted) setMods({ ...a, ...b });
     });

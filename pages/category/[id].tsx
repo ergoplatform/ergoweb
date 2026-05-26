@@ -4,6 +4,8 @@ import BlogPosts from '../../components/blog/BlogPosts';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/shared/Pagination';
+import { toStrapiLocale } from '../../utils/locales';
+import { strapiFetchJson } from '../../utils/strapiClient';
 
 type Props = {
   posts?: any;
@@ -67,9 +69,6 @@ export const getServerSideProps = async (context: any) => {
   const tag = String(context.query.id || '');
   const appLocale = context.locale as string;
 
-  // Map app locale -> Strapi locale (cn -> zh)
-  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
-
   // Build robust variants for Chinese
   const mapped = toStrapiLocale(appLocale);
   const variants = new Set<string>([mapped, appLocale]);
@@ -86,16 +85,13 @@ export const getServerSideProps = async (context: any) => {
       let p = 1;
       // eslint-disable-next-line no-constant-condition
       while (true) {
-        const res = await fetch(
-          process.env.NEXT_PUBLIC_STRAPI_API +
-            `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${p}&pagination[pageSize]=${pageSizeFetch}&populate=*&locale=${encodeURIComponent(
-              loc,
-            )}` +
+        const res = await strapiFetchJson<any>(
+          `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${p}&pagination[pageSize]=${pageSizeFetch}&populate=*&locale=${encodeURIComponent(
+            loc,
+          )}` +
             `&filters[$or][0][type][$eq]=blog&filters[$or][1][type][$eq]=news` +
             `&filters[tag][$contains]=${encodeURIComponent(tag)}`,
-        )
-          .then((r) => r.json())
-          .catch(() => null);
+        );
         if (!res) break;
         const data = res?.data ?? [];
         const meta = res?.meta?.pagination;

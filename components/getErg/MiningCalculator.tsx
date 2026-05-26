@@ -33,7 +33,7 @@ export default function MiningCalculator(props: Props) {
               id="components.mining.calculator.title"
             />
           </h2>
-          <p className="text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-7 lg:hidden">
+          <p className="text-[16px] text-[#666666] dark:text-[#666666] mb-7 lg:hidden">
             <FormattedMessage
               defaultMessage="Autolykos is the underlying memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs."
               id="components.mining.calculator.description"

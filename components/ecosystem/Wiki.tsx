@@ -70,7 +70,7 @@ export default function Wiki() {
             alt="The Ergo Mascot, The Ergonaut - is shown standing on a horizontal plane on top of a moon."
           />
         </div>
-        <p className="text-[18px] text-[#807e7e] dark:text-[#807e7e] mb-4 pl-8">
+        <p className="text-[18px] text-[#666666] dark:text-[#666666] mb-4 pl-8">
           <FormattedMessage
             defaultMessage="<link>ergonaut.space</link> is the community wiki of the Ergo blockchain, a guide translating how to use and the underlying technical details of the Ergo blockchain in easy to understand language for non-technical people."
             id="components.wiki.description.short"

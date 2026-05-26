@@ -3,21 +3,14 @@ import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
 import Button from '../Button';
 import Image from 'next/image';
-import LazyInView from '../../utils/LazyInView';
 
 export default function HomeHero() {
   const intl = useIntl();
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   // Gate video loading: start as soon as possible after mount (keeps poster as LCP, then swap)
   const [enableVideo, setEnableVideo] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [posterLoaded, setPosterLoaded] = useState(false);
 
   // Theme handling that mirrors existing behavior
   const [isDark, setIsDark] = useState<boolean>(() => {
@@ -92,22 +85,12 @@ export default function HomeHero() {
   }, []);
 
   useEffect(() => {
-    if (posterLoaded) {
-      // Only mount video after poster is loaded and a long delay (simulate after LCP)
-      const timer = setTimeout(() => {
-        setShowVideo(true);
-      }, 6500); // 6.5s delay to ensure LCP is measured on poster
-      return () => clearTimeout(timer);
-    }
-  }, [posterLoaded]);
-
-  const posterSrc = isDark
-    ? '/assets/home/hero-poster-dark.webp'
-    : '/assets/home/hero-poster-light.webp';
-
-  const posterSrcMobile = isDark
-    ? '/assets/home/hero-poster-dark-mobile.webp'
-    : '/assets/home/hero-poster-light-mobile.webp';
+    const timer = setTimeout(() => {
+      setEnableVideo(true);
+      setShowVideo(true);
+    }, 6500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const videoSrc = isMobile
     ? isDark
@@ -130,24 +113,85 @@ export default function HomeHero() {
     <div id="HomeHero" className="mt-0 md:mt-24 max-w-[1300px] mx-auto p-4 relative z-1">
       {/* Set z-index to 1 */}
       <div className="relative md:min-h-[560px] lg:min-h-[640px]">
-        {/* Mobile media (render only on mobile) */}
-        {isMobile && (
-          <div className="home-hero-mobile-media block md:hidden -mx-4 -mt-6 w-[calc(100%+2rem)] pointer-events-none z-0">
-            <Image
-              src={posterSrcMobile}
-              alt=""
-              width={640}
-              height={360}
-              className="pointer-events-none"
-              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-              onLoad={() => setPosterLoaded(true)}
-              loading="eager"
-              priority={true}
-            />
-            {showVideo && (
+        <div className="home-hero-mobile-media block md:hidden -mx-4 -mt-6 w-[calc(100%+2rem)] pointer-events-none z-0">
+          <Image
+            src="/assets/home/hero-poster-light-mobile.webp"
+            alt=""
+            width={640}
+            height={360}
+            sizes="100vw"
+            className="home-hero-poster-light pointer-events-none"
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            loading="eager"
+            unoptimized
+          />
+          <Image
+            src="/assets/home/hero-poster-dark-mobile.webp"
+            alt=""
+            width={640}
+            height={360}
+            sizes="100vw"
+            className="home-hero-poster-dark absolute inset-0 pointer-events-none"
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            loading="eager"
+            unoptimized
+          />
+          {showVideo && (
+            <video
+              ref={videoRef}
+              key={`${isDark ? 'dark' : 'light'}-m`}
+              onCanPlay={(e) => {
+                const el = e.currentTarget as HTMLVideoElement;
+                const p = el.play();
+                if (p && typeof (p as any).catch === 'function')
+                  (p as Promise<void>).catch(() => {});
+                setVideoReady(true);
+              }}
+              className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
+              width="1920"
+              height="1080"
+              autoPlay
+              playsInline
+              loop
+              muted
+              preload="none"
+              poster={
+                isDark
+                  ? '/assets/home/hero-poster-dark-mobile.webp'
+                  : '/assets/home/hero-poster-light-mobile.webp'
+              }
+              disablePictureInPicture
+              controlsList="nodownload"
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          )}
+        </div>
+        <div className="home-hero-desktop-media absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
+          <Image
+            src="/assets/home/hero-poster-light.webp"
+            alt=""
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            className="home-hero-poster-light absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+            loading="eager"
+          />
+          <Image
+            src="/assets/home/hero-poster-dark.webp"
+            alt=""
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            className="home-hero-poster-dark absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+            loading="eager"
+          />
+          {enableVideo &&
+            showVideo &&
+            (isDark ? (
               <video
                 ref={videoRef}
-                key={`${isDark ? 'dark' : 'light'}-m`}
+                key="dark-d"
                 onCanPlay={(e) => {
                   const el = e.currentTarget as HTMLVideoElement;
                   const p = el.play();
@@ -155,7 +199,7 @@ export default function HomeHero() {
                     (p as Promise<void>).catch(() => {});
                   setVideoReady(true);
                 }}
-                className="absolute inset-0 w-full h-full object-cover md:object-contain pointer-events-none"
+                className="home-hero-video home-hero-video-dark absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
                 width="1920"
                 height="1080"
                 autoPlay
@@ -163,106 +207,39 @@ export default function HomeHero() {
                 loop
                 muted
                 preload="none"
-                poster={posterSrcMobile}
+                poster="/assets/home/hero-poster-dark.webp"
                 disablePictureInPicture
                 controlsList="nodownload"
               >
-                <source src={videoSrc} type="video/mp4" />
+                <source src="/assets/ergo-dark.mp4" type="video/mp4" />
               </video>
-            )}
-          </div>
-        )}
-        {/* No mobile image on desktop */}
-
-        {/* Desktop media (render only on desktop) */}
-        {!isMobile && mounted && (
-          <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden">
-            <LazyInView
-              className="relative w-full h-full"
-              placeholder={
-                <Image
-                  src={posterSrc}
-                  alt=""
-                  fill
-                  sizes="100vw"
-                  className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                />
-              }
-            >
-              {() => (
-                <div className="absolute inset-0 w-full h-full">
-                  <Image
-                    src={posterSrc}
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                    priority={true}
-                  />
-                  {enableVideo &&
-                    (isDark ? (
-                      <video
-                        ref={videoRef}
-                        key="dark-d"
-                        onCanPlay={(e) => {
-                          const el = e.currentTarget as HTMLVideoElement;
-                          const p = el.play();
-                          if (p && typeof (p as any).catch === 'function')
-                            (p as Promise<void>).catch(() => {});
-                          setVideoReady(true);
-                        }}
-                        className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                        width="1920"
-                        height="1080"
-                        autoPlay
-                        playsInline
-                        loop
-                        muted
-                        preload="metadata"
-                        poster="/assets/home/hero-poster-dark.webp"
-                        disablePictureInPicture
-                        controlsList="nodownload"
-                      >
-                        <source src="/assets/ergo-dark.mp4" type="video/mp4" />
-                      </video>
-                    ) : (
-                      <video
-                        ref={videoRef}
-                        key="light-d"
-                        onCanPlay={(e) => {
-                          const el = e.currentTarget as HTMLVideoElement;
-                          const p = el.play();
-                          if (p && typeof (p as any).catch === 'function')
-                            (p as Promise<void>).catch(() => {});
-                          setVideoReady(true);
-                        }}
-                        className="absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
-                        width="1920"
-                        height="1080"
-                        autoPlay
-                        playsInline
-                        loop
-                        muted
-                        preload="metadata"
-                        poster="/assets/home/hero-poster-light.webp"
-                        disablePictureInPicture
-                        controlsList="nodownload"
-                      >
-                        <source src="/assets/ergo-light.mp4" type="video/mp4" />
-                      </video>
-                    ))}
-                </div>
-              )}
-            </LazyInView>
-          </div>
-        )}
-        {/* SSR fallback containers to preserve layout before hydration */}
-        {!isMobile && !mounted && (
-          <>
-            <div className="relative block md:hidden -mx-4 -mt-6 h-[38vh] sm:h-[45vh] w-[calc(100%+2rem)] overflow-hidden pointer-events-none z-0" />
-            <div className="absolute hidden md:block -top-20 lg:-top-28 left-0 right-0 h-[400px] md:h-[560px] lg:h-[640px] w-full object-cover md:object-contain md:w-full md:max-w-none md:scale-100 bg-transparent dark:bg-transparent pointer-events-none z-0 outline-none focus:outline-none focus-visible:outline-none overflow-hidden" />
-          </>
-        )}
+            ) : (
+              <video
+                ref={videoRef}
+                key="light-d"
+                onCanPlay={(e) => {
+                  const el = e.currentTarget as HTMLVideoElement;
+                  const p = el.play();
+                  if (p && typeof (p as any).catch === 'function')
+                    (p as Promise<void>).catch(() => {});
+                  setVideoReady(true);
+                }}
+                className="home-hero-video absolute inset-0 w-full h-full md:object-contain object-cover pointer-events-none"
+                width="1920"
+                height="1080"
+                autoPlay
+                playsInline
+                loop
+                muted
+                preload="none"
+                poster="/assets/home/hero-poster-light.webp"
+                disablePictureInPicture
+                controlsList="nodownload"
+              >
+                <source src="/assets/ergo-light.mp4" type="video/mp4" />
+              </video>
+            ))}
+        </div>
 
         <div className="max-w-lg leading-none md:max-w-3xl lg:max-w-4xl relative z-10">
           <h1 className="text-[clamp(3.25rem,10.5vw,4.5rem)] md:text-[clamp(3.25rem,5vw,5rem)] leading-tight text-black dark:text-white">

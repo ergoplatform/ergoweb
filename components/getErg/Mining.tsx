@@ -167,21 +167,21 @@ export default function Mining() {
         <div className="hidden lg:block">{urlsComponent}</div>
       </div>
       <div className="lg:w-1/2">
-        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
+        <p className="text-[#666666] dark:text-[#666666] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
             defaultMessage="Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. Miners can adjust parameters with on-chain voting, with larger changes implemented by a supermajority via a soft-fork. As well as participate in any of the exciting developments such as voting tokens, subpooling, and log-space mining. Ergo focuses on simplicity in the core, with advanced features built on the application layer to create resilient, contractual money. "
             id={'components.mining.text.1'}
             values={{ breakingLine: <br /> }}
           />
         </p>
-        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 text-bold text-[14px] lg:text-[24px]  max-w-lg">
+        <p className="text-[#666666] dark:text-[#666666] mt-8 text-bold text-[14px] lg:text-[24px]  max-w-lg">
           <FormattedMessage
             defaultMessage="Welcome to the future of Proof of Work."
             id={'components.mining.text.2'}
             values={{ breakingLine: <br /> }}
           />
         </p>
-        <p className="text-[#807e7e] dark:text-[#807e7e] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
+        <p className="text-[#666666] dark:text-[#666666] mt-8 lg:mt-16 text-[14px] lg:text-[16px] max-w-sm">
           <FormattedMessage
             defaultMessage="To get started, check out the community-built Mining Handbook, Documentation or join the mining discussion spaces."
             id={'components.mining.text.3'}

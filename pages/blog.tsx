@@ -5,6 +5,8 @@ import BlogPosts from '../components/blog/BlogPosts';
 import Layout from '../components/Layout';
 import YearPagination from '../components/shared/YearPagination';
 import CategoryPicker from '../components/shared/CategoryPicker';
+import { toStrapiLocale } from '../utils/locales';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 type Props = {
   posts?: any;
@@ -172,9 +174,6 @@ export const getServerSideProps = async (context: any) => {
     type === 'news' || type === 'blog' ? `&filters[type][$eq]=${type}` : baseTypesParam;
   const dateParam = `&filters[date][$gte]=${start}&filters[date][$lt]=${end}`;
 
-  // Map app locale -> Strapi locale (cn -> zh)
-  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
-
   // Helper to fetch ALL posts across pages for one or more locales and de-duplicate by permalink
   const fetchAllPostsForLocales = async (locales: string[]) => {
     const pageSize = 200;
@@ -183,12 +182,9 @@ export const getServerSideProps = async (context: any) => {
       let page = 1;
       // eslint-disable-next-line no-constant-condition
       while (true) {
-        const res = await fetch(
-          process.env.NEXT_PUBLIC_STRAPI_API +
-            `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*&locale=${loc}${typeParam}${dateParam}`,
-        )
-          .then((r) => r.json())
-          .catch(() => null);
+        const res = await strapiFetchJson<{ data?: any[]; meta?: any }>(
+          `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=*&locale=${loc}${typeParam}${dateParam}`,
+        );
         if (!res) break;
         const data = res?.data ?? [];
         const meta = res?.meta?.pagination;
@@ -223,12 +219,9 @@ export const getServerSideProps = async (context: any) => {
     let all: any[] = [];
     // eslint-disable-next-line no-constant-condition
     while (true) {
-      const res = await fetch(
-        process.env.NEXT_PUBLIC_STRAPI_API +
-          `/api/categories?pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&locale=${locale}`,
-      )
-        .then((r) => r.json())
-        .catch(() => null);
+      const res = await strapiFetchJson<{ data?: any[]; meta?: any }>(
+        `/api/categories?pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}&locale=${locale}`,
+      );
       if (!res) break;
       const data = res?.data ?? [];
       const meta = res?.meta?.pagination;
@@ -290,18 +283,12 @@ export const getServerSideProps = async (context: any) => {
 
   // Determine available years (min and max across blog + news)
   // Compute years from English corpus to mirror English site structure
-  const oldestRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:asc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
-  )
-    .then((r) => r.json())
-    .catch(() => null);
-  const newestRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
-  )
-    .then((r) => r.json())
-    .catch(() => null);
+  const oldestRes = await strapiFetchJson<{ data?: any[] }>(
+    `/api/posts?sort=date:asc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
+  );
+  const newestRes = await strapiFetchJson<{ data?: any[] }>(
+    `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=1&locale=en${baseTypesParam}`,
+  );
   const oldestDateStr = oldestRes?.data?.[0]?.attributes?.date as string | undefined;
   const newestDateStr = newestRes?.data?.[0]?.attributes?.date as string | undefined;
   const oldestYear = oldestDateStr ? new Date(oldestDateStr).getFullYear() : year;
@@ -310,21 +297,15 @@ export const getServerSideProps = async (context: any) => {
   for (let y = newestYear; y >= oldestYear; y--) years.push(y);
 
   // Totals identical to English site across the entire corpus (not restricted by year)
-  const totalsAllRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en`,
-  )
-    .then((r) => r.json())
-    .catch(() => null);
+  const totalsAllRes = await strapiFetchJson<{ meta?: any }>(
+    `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en`,
+  );
   const totalsAll = totalsAllRes?.meta?.pagination?.total ?? 0;
 
-  const totalsNewsRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
+  const totalsNewsRes = await strapiFetchJson<{ meta?: any }>(
+    `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
       `&filters[type][$eq]=news`,
-  )
-    .then((r) => r.json())
-    .catch(() => null);
+  );
   const totalsNews = totalsNewsRes?.meta?.pagination?.total ?? 0;
 
   // Per-category counts identical to English site across entire corpus (not restricted by year)
@@ -332,12 +313,10 @@ export const getServerSideProps = async (context: any) => {
   if (Array.isArray(categories)) {
     const names = categories.map((c: any) => c?.attributes?.name).filter(Boolean);
     const countPromises = names.map((name: string) =>
-      fetch(
-        process.env.NEXT_PUBLIC_STRAPI_API +
-          `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
+      strapiFetchJson<{ meta?: any }>(
+        `/api/posts?pagination[withCount]=true&pagination[page]=1&pagination[pageSize]=1&locale=en` +
           `&filters[tag][$contains]=${encodeURIComponent(name)}`,
       )
-        .then((r) => r.json())
         .then((json) => ({ name, total: json?.meta?.pagination?.total ?? 0 }))
         .catch(() => ({ name, total: 0 })),
     );

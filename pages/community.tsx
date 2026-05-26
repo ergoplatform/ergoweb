@@ -4,6 +4,8 @@ import CommunityHero from '../components/community/CommunityHero';
 import Layout from '../components/Layout';
 import dynamic from 'next/dynamic';
 import LazyInView from '../utils/LazyInView';
+import { toStrapiLocale } from '../utils/locales';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 const Sigmanauts = dynamic(() => import('../components/community/Sigmanauts'), {
   ssr: false,
@@ -95,9 +97,6 @@ export default function Community(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  // Map app locale -> Strapi locale (cn -> zh)
-  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
-
   const appLocale = context.locale as string;
   const mapped = toStrapiLocale(appLocale);
   const variants = new Set<string>([mapped, appLocale]);
@@ -114,15 +113,12 @@ export const getServerSideProps = async (context: any) => {
       let page = 1;
       // eslint-disable-next-line no-constant-condition
       while (true) {
-        const res = await fetch(
-          process.env.NEXT_PUBLIC_STRAPI_API +
-            `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}` +
+        const res = await strapiFetchJson<any>(
+          `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}` +
             `&populate=*&filters[type][$eq]=blog&filters[spotlight][$eq]=true&locale=${encodeURIComponent(
               loc,
             )}`,
-        )
-          .then((r) => r.json())
-          .catch(() => null);
+        );
         if (!res) break;
         const data = res?.data ?? [];
         const meta = res?.meta?.pagination;
@@ -194,14 +190,10 @@ export const getServerSideProps = async (context: any) => {
   const posts = { data: merged };
 
   // Team members localized to current locale
-  const teamMembers = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/team-members?pagination[pageSize]=100&populate=*&locale=' +
-      encodeURIComponent(mapped),
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch(() => null);
+  const teamMembersJson = await strapiFetchJson<{ data?: any[] }>(
+    `/api/team-members?pagination[pageSize]=100&populate=*&locale=${encodeURIComponent(mapped)}`,
+  );
+  const teamMembers = teamMembersJson?.data ?? null;
 
   return {
     props: { posts, teamMembers },

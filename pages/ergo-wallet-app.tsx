@@ -58,11 +58,13 @@ export default function MobileWallets() {
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 hidden lg:block">
             <div className="flex justify-center">
-              <div style={{width: '30%'}}>
-                <img
+              <div style={{ width: '30%' }}>
+                <Image
                   src="/assets/application.png"
                   alt=""
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  width={300}
+                  height={600}
+                  style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                 />
               </div>
             </div>

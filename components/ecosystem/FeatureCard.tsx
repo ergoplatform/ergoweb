@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowRightWhite from '../icons/ArrowRightWhite';
 import { FormattedMessage } from 'react-intl';
+import { safeExternalUrl, safeInternalPath } from '../../utils/safeUrl';
 
 type Project = {
   id: number;
@@ -33,7 +34,9 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
   const spanClasses =
     effectiveSpan === 'tall' ? 'lg:row-span-2' : effectiveSpan === 'wide' ? 'lg:col-span-2' : '';
 
-  const isExternal = /^https?:\/\//i.test(project.attributes.url);
+  const externalUrl = safeExternalUrl(project.attributes.url);
+  const href = externalUrl || safeInternalPath(project.attributes.url) || '#';
+  const isExternal = Boolean(externalUrl);
 
   const imageHeight =
     effectiveSpan === 'tall'
@@ -49,7 +52,7 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
     : 'border border-gray-200/50 dark:border-white/10 bg-white/40 dark:bg-zinc-800/50';
   return (
     <Link
-      href={project.attributes.url}
+      href={href}
       className={[
         'group relative flex flex-col h-full rounded-3xl ring-1 ring-black/5 dark:ring-white/10',
         'bg-white/60 dark:bg-zinc-900/40 shadow-sm p-5 md:p-6 pb-0 md:pb-0',
@@ -95,7 +98,7 @@ function FeatureCard({ project, span }: { project: Project; span?: 'tall' | 'wid
         <h4 className="pl-2.5 font-subtitle-3-bold text-[32px] leading-tight heading-balance line-clamp-2">
           {project.attributes.title}
         </h4>
-        <p className="pl-2.5 text-base md:text-[17px] text-[#807e7e] dark:text-[#807e7e] line-clamp-3">
+        <p className="pl-2.5 text-base md:text-[17px] text-[#666666] dark:text-[#666666] line-clamp-3">
           {project.attributes.description}
         </p>
       </div>

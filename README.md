@@ -82,14 +82,20 @@ Create a `.env` file in the project root (a sample is present in the repo):
 # Required: Strapi CMS base URL
 NEXT_PUBLIC_STRAPI_API=https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app
 
+# Required only for protected translation maintenance endpoints
+TRANSLATION_BACKFILL_SECRET=replace-with-a-long-random-secret
+
 # Local Strapi example
 # NEXT_PUBLIC_STRAPI_API=http://localhost:1337
 ```
 
 Notes
+
 - This value is used both server‑side (SSR) and client‑side where needed.
 - SSR pages will fail to load dynamic content if this is not set.
 - Ensure Strapi CORS/public permissions are configured for the frontend origin(s).
+- Production calls to `/api/translate/backfill` and `/api/translate/repair-media` must include
+  `Authorization: Bearer $TRANSLATION_BACKFILL_SECRET`.
 
 ---
 
@@ -144,6 +150,7 @@ docker run -e NEXT_PUBLIC_STRAPI_API="https://ergo-platform-cms-nvbpfiue6q-ez.a.
 Open http://localhost:3000
 
 Notes
+
 - `entrypoint.sh` replaces a placeholder in built assets with `NEXT_PUBLIC_STRAPI_API` at container startup, so always pass it to `docker run`.
 
 ---
@@ -212,6 +219,7 @@ npm run compile:i18n
 - Run the container on your platform of choice (Cloud Run, Kubernetes, VM, …).
 
 Sitemaps/SEO
+
 - Sitemaps are configured via `next-sitemap.config.js` and also checked in under `public/`.
 - `public/robots.txt` is included.
 
@@ -225,10 +233,10 @@ Sitemaps/SEO
   - `npm run extract:i18n` then `npm run compile:i18n`
 - Consider updating/adding a Storybook story for component changes
 
-
 ## Troubleshooting
 
 logs from the latest revision of your service.
+
 ```bash
 gcloud run services logs read ergo-platform-frontend --region europe-west4 --limit=50
 ```

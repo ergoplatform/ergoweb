@@ -8,7 +8,7 @@ export default function OurMission() {
         <FormattedMessage defaultMessage="Our Mission" id="components.ourmission.title" />
       </p>
       <div className="md:mx-auto md:w-[758px]">
-        <p className="mb-8 text-[#807e7e] dark:text-[#807e7e] font-bold md:text-[24px] md:max-w-3xl">
+        <p className="mb-8 text-[#666666] dark:text-[#666666] font-bold md:text-[24px] md:max-w-3xl">
           <FormattedMessage
             defaultMessage="Ergo Foundation is committed to organic and non-breaking development of Ergo Platform protocol."
             id="components.ourmission.description"
@@ -64,7 +64,7 @@ export default function OurMission() {
           iconColor="orange"
           customClass=" -ml-4 mb-8"
         />
-        <p className="text-[#807e7e] dark:text-[#807e7e] md:text-[16px] md:max-w-3xl">
+        <p className="text-[#666666] dark:text-[#666666] md:text-[16px] md:max-w-3xl">
           <FormattedMessage
             defaultMessage="The Ergo Foundation is committed to make efforts to maximize the number of valuable ecosystem developments done in an open-source way with the least permissive license possible."
             id="components.ourmission.subdescription"

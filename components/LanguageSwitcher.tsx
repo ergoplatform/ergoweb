@@ -7,6 +7,7 @@ import { LOCALE_META } from '../utils/locales';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import type React from 'react';
+import { buildStrapiUrl } from '../utils/strapiClient';
 
 export default function LanguageSwitcher({ color = 'default' }) {
   const data = useRouter();
@@ -26,19 +27,18 @@ export default function LanguageSwitcher({ color = 'default' }) {
 
       let showSpinner = false;
       const basePath = asPath.split('?')[0] || '/';
-      const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API as string | undefined;
 
       // Map site locale to Strapi locale (e.g., cn -> zh)
       const mapToStrapi = (l: string) => (l === 'cn' ? 'zh' : l);
 
-      if (STRAPI && basePath.startsWith('/blog/')) {
+      if (basePath.startsWith('/blog/')) {
         const slug = decodeURIComponent(basePath.slice('/blog/'.length));
         if (slug) {
-          const url =
-            STRAPI +
+          const url = buildStrapiUrl(
             `/api/posts?pagination[page]=1&pagination[pageSize]=1&filters[permalink][$eq]=${encodeURIComponent(
               slug,
-            )}&locale=${encodeURIComponent(mapToStrapi(targetLocale))}`;
+            )}&locale=${encodeURIComponent(mapToStrapi(targetLocale))}`,
+          );
           try {
             const res = await fetch(url, { credentials: 'omit', cache: 'no-store' } as any);
             const json = await res.json();

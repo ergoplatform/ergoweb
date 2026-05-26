@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
+const { NEXT_I18N_LOCALES } = require('./utils/localeConfig');
 
 const nextConfig = {
   async redirects() {
@@ -101,9 +102,6 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   compress: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   productionBrowserSourceMaps: false,
   webpack: (config, { isServer }) => {
     // Only enable client source maps during development
@@ -154,12 +152,22 @@ const nextConfig = {
       // Immutable caching for Next static assets and images
       {
         source: '/_next/(static|image)/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
       // Immutable caching for public assets (fonts, images, videos)
       {
         source: '/(fonts|assets)/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
       // Security headers and default cache for HTML
       {
@@ -168,7 +176,10 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
@@ -180,12 +191,13 @@ const nextConfig = {
     ];
   },
   i18n: {
-    locales: ['default', 'en', 'es', 'de', 'it', 'pl', 'pt', 'sk', 'zh', 'hu', 'ru', 'id', 'tr'],
+    locales: NEXT_I18N_LOCALES,
     defaultLocale: 'default',
     localeDetection: false,
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
+    quietDeps: true,
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   // Reduce bundle size by rewriting named imports to per-module paths

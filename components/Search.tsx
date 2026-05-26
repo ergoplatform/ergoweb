@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import Link from 'next/link';
+import { buildStrapiUrl } from '../utils/strapiClient';
 
 export default function Search() {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -8,8 +9,13 @@ export default function Search() {
   const [results, setResults] = useState([]);
 
   const searchEndpoint = (query: string) =>
-    process.env.NEXT_PUBLIC_STRAPI_API +
-    `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[pageSize]=100&[$or][0][title][$containsi]=${query}&filters[$or][1][subtitle][$containsi]=${query}&filters[$or][2][content][$containsi]=${query}`;
+    buildStrapiUrl(
+      `/api/posts?sort=date:desc&pagination[withCount]=true&pagination[pageSize]=100&[$or][0][title][$containsi]=${encodeURIComponent(
+        query,
+      )}&filters[$or][1][subtitle][$containsi]=${encodeURIComponent(
+        query,
+      )}&filters[$or][2][content][$containsi]=${encodeURIComponent(query)}`,
+    );
 
   const onChange = useCallback((event) => {
     const query = event.target.value;

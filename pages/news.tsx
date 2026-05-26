@@ -1,6 +1,7 @@
 import { useIntl } from 'react-intl';
 import BlogNews from '../components/blog/BlogNews';
 import Layout from '../components/Layout';
+import { strapiFetchJson } from '../utils/strapiClient';
 
 type Props = {
   news?: any;
@@ -30,20 +31,14 @@ export default function News(props: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const news = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=news&locale=' +
-      context.locale,
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
-  const media = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API + '/api/media-posts?pagination[pageSize]=20',
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+  const newsJson = await strapiFetchJson<{ data?: any[] }>(
+    `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=news&locale=${context.locale}`,
+  );
+  const mediaJson = await strapiFetchJson<{ data?: any[] }>(
+    '/api/media-posts?pagination[pageSize]=20',
+  );
+  const news = newsJson?.data ?? null;
+  const media = mediaJson?.data ?? null;
 
   return {
     props: { news, media },

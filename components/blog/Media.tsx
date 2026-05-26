@@ -25,7 +25,7 @@ function MediaPost({ Title, Description, Date, Link: link }: MediaPostProps) {
               {Title.length > 60 ? Title.substring(0, 60) + '...' : Title}
             </p>
             {Description ? (
-              <p className="text-[12px] md:text-[16px] text-[#807e7e] dark:text-[#807e7e] mb-2 text-clip">
+              <p className="text-[12px] md:text-[16px] text-[#666666] dark:text-[#666666] mb-2 text-clip">
                 {Description?.length > 120 ? Description?.substring(0, 120) + '...' : Description}
               </p>
             ) : (

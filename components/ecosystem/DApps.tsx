@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Button from '../Button';
+import { safeHref } from '../../utils/safeUrl';
 
 type Props = {
   apps?: any;
@@ -36,31 +37,38 @@ export default function DApps(props: Props) {
         </div>
       </div>
       <div className="flex overflow-x-auto space-x-8 mt-10 no-scrollbar pb-10">
-        {props.apps.map((app: any, i: number) => (
-          <div key={i} className="w-[200px]">
-            <a href={app.attributes.url}>
-              {app.attributes.image.data == null ? (
-                <div className="h-[200px] w-[200px] rounded-md dapps-erg-card"></div>
-              ) : (
-                <div className="h-[200px] w-[200px]">
-                  <Image
-                    className="h-[200px] w-[200px]"
-                    width={app.attributes.image.data?.attributes.width}
-                    height={app.attributes.image.data?.attributes.height}
-                    src={app.attributes.image.data?.attributes.url}
-                    alt={app.attributes.title}
-                  />
-                </div>
-              )}
-            </a>
-            <div className="mt-6 mb-3">
-              <a className="font-subtitle-3-bold mb-3" href={app.attributes.url}>
-                {app.attributes.title}
-              </a>
+        {props.apps.map((app: any, i: number) => {
+          const href = safeHref(app.attributes.url);
+          const image =
+            app.attributes.image.data == null ? (
+              <div className="h-[200px] w-[200px] rounded-md dapps-erg-card"></div>
+            ) : (
+              <div className="h-[200px] w-[200px]">
+                <Image
+                  className="h-[200px] w-[200px]"
+                  width={app.attributes.image.data?.attributes.width}
+                  height={app.attributes.image.data?.attributes.height}
+                  src={app.attributes.image.data?.attributes.url}
+                  alt={app.attributes.title}
+                />
+              </div>
+            );
+          return (
+            <div key={i} className="w-[200px]">
+              {href ? <a href={href}>{image}</a> : image}
+              <div className="mt-6 mb-3">
+                {href ? (
+                  <a className="font-subtitle-3-bold mb-3" href={href}>
+                    {app.attributes.title}
+                  </a>
+                ) : (
+                  <span className="font-subtitle-3-bold mb-3">{app.attributes.title}</span>
+                )}
+              </div>
+              <p className="text-[#585858] dark:text-[#666666]">{app.attributes.description}</p>
             </div>
-            <p className="text-[#585858] dark:text-[#807e7e]">{app.attributes.description}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -1,29 +1,44 @@
 import { useIntl } from 'react-intl';
+import dynamic from 'next/dynamic';
 import HomeHero from '../components/home/HomeHero';
 import Layout from '../components/Layout';
 import HomeFrames from '../components/home/HomeFrames';
 import generateRssFeed from '../utils/generateRssFeed';
 import LazyInView from '../utils/LazyInView';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-
-const Highlights = dynamic(() => import('../components/home/Highlights'));
+import { toStrapiLocale } from '../utils/locales';
+import { postListPath, strapiFetchJson } from '../utils/strapiClient';
 import HomeInfo from '../components/home/HomeInfo';
-const UniqueErgo = dynamic(() => import('../components/home/UniqueErgo'));
-const UsingErg = dynamic(() => import('../components/home/UsingErg'));
-const Autolykos = dynamic(() => import('../components/home/Autolykos'));
-const News = dynamic(() => import('../components/home/News'));
-const Feed = dynamic(() => import('../components/shared/Feed'));
-const Partners = dynamic(() => import('../components/home/Partners'));
-const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'));
+
+const Highlights = dynamic(() => import('../components/home/Highlights'), {
+  ssr: false,
+});
+const UniqueErgo = dynamic(() => import('../components/home/UniqueErgo'), {
+  ssr: false,
+});
+const UsingErg = dynamic(() => import('../components/home/UsingErg'), {
+  ssr: false,
+});
+const Autolykos = dynamic(() => import('../components/home/Autolykos'), {
+  ssr: false,
+});
+const News = dynamic(() => import('../components/home/News'), { ssr: false });
+const Feed = dynamic(() => import('../components/shared/Feed'), { ssr: false });
+const Partners = dynamic(() => import('../components/home/Partners'), {
+  ssr: false,
+});
+const ContributeForm = dynamic(() => import('../components/shared/ContributeForm'), { ssr: false });
 
 type Partner = {
   id: number;
   attributes: {
     name: string;
     url: string;
-    image?: { data: { attributes: { url: string; width: number; height: number } } } | null;
-    image_dark?: { data: { attributes: { url: string; width: number; height: number } } } | null;
+    image?: {
+      data: { attributes: { url: string; width: number; height: number } };
+    } | null;
+    image_dark?: {
+      data: { attributes: { url: string; width: number; height: number } };
+    } | null;
   };
 };
 
@@ -43,22 +58,6 @@ export default function Home(props: Props) {
   });
   return (
     <div>
-      <Head>
-        <link
-          rel="preload"
-          as="image"
-          type="image/webp"
-          href="/assets/home/hero-poster-light.webp"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          rel="preload"
-          as="image"
-          type="image/webp"
-          href="/assets/home/hero-poster-dark.webp"
-          media="(prefers-color-scheme: dark)"
-        />
-      </Head>
       <HomeFrames />
       <Layout title={title}>
         <HomeHero />
@@ -70,21 +69,35 @@ export default function Home(props: Props) {
             transactionPerDay={props.info.transactionAverage}
           />
         ) : null}
-        <LazyInView rootMargin="200px 0px">{() => <Highlights />}</LazyInView>
-        <LazyInView rootMargin="200px 0px">{() => <UniqueErgo />}</LazyInView>
-        <LazyInView rootMargin="200px 0px">{() => <UsingErg />}</LazyInView>
-        <LazyInView rootMargin="200px 0px">{() => <Autolykos />}</LazyInView>
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+          {() => <Highlights />}
+        </LazyInView>
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+          {() => <UniqueErgo />}
+        </LazyInView>
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+          {() => <UsingErg />}
+        </LazyInView>
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+          {() => <Autolykos />}
+        </LazyInView>
         {props.news ? (
-          <LazyInView rootMargin="200px 0px">{() => <News news={props.news} />}</LazyInView>
+          <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+            {() => <News news={props.news} />}
+          </LazyInView>
         ) : null}
         {props.posts ? (
-          <LazyInView rootMargin="200px 0px">{() => <Feed posts={props.posts} />}</LazyInView>
+          <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+            {() => <Feed posts={props.posts} />}
+          </LazyInView>
         ) : null}
-        <LazyInView rootMargin="200px 0px">
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
           {() => <Partners partners={props.partners || []} />}
         </LazyInView>
         {/* Pass partners prop, default to empty array */}
-        <LazyInView rootMargin="200px 0px">{() => <ContributeForm />}</LazyInView>
+        <LazyInView rootMargin="300px 0px" ssrReveal={false}>
+          {() => <ContributeForm />}
+        </LazyInView>
       </Layout>
     </div>
   );
@@ -93,27 +106,27 @@ export default function Home(props: Props) {
 export const getStaticProps = async (context: any) => {
   // Fetch raw data (localized, with EN fallback)
   const loc = (context?.locale as string) || 'en';
-  const strapiLoc = loc === 'cn' ? 'zh' : loc;
-
-  async function fetchJson(url: string) {
-    try {
-      const res = await fetch(url);
-      return await res.json();
-    } catch {
-      return null;
-    }
-  }
+  const strapiLoc = toStrapiLocale(loc);
 
   // Fetch localized and English posts, then merge by permalink
-  const localPostsJson = await fetchJson(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=' +
-      encodeURIComponent(strapiLoc),
+  const localPostsJson = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 20,
+      populate: '*',
+      type: 'blog',
+      locale: strapiLoc,
+    }),
   );
 
-  const enPostsJson = await fetchJson(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=20&populate=*&filters[type][$eq]=blog&locale=en',
+  const enPostsJson = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 20,
+      populate: '*',
+      type: 'blog',
+      locale: 'en',
+    }),
   );
 
   const localArr: any[] = Array.isArray(localPostsJson?.data) ? localPostsJson.data : [];
@@ -187,7 +200,11 @@ export const getStaticProps = async (context: any) => {
               content: typeof a.content === 'string' ? a.content.slice(0, 180) : null,
               // Preserve the shape expected by <Post/> but only keep the medium URL
               image: mediumUrl
-                ? { data: { attributes: { formats: { medium: { url: mediumUrl } } } } }
+                ? {
+                    data: {
+                      attributes: { formats: { medium: { url: mediumUrl } } },
+                    },
+                  }
                 : null,
               blogPhoto: a.blogPhoto ?? null,
               authorPhoto: a.authorPhoto ?? null,
@@ -199,15 +216,24 @@ export const getStaticProps = async (context: any) => {
     : null;
 
   // Fetch localized and English news, then merge by permalink to prefer localized titles with EN fallback
-  const localNewsJson = await fetchJson(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=12&populate=*&filters[type][$eq]=news&locale=' +
-      encodeURIComponent(strapiLoc),
+  const localNewsJson = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 12,
+      populate: '*',
+      type: 'news',
+      locale: strapiLoc,
+    }),
   );
 
-  const enNewsJson = await fetchJson(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=12&populate=*&filters[type][$eq]=news&locale=en',
+  const enNewsJson = await strapiFetchJson<{ data?: any[] }>(
+    postListPath({
+      sort: 'date:desc',
+      pageSize: 12,
+      populate: '*',
+      type: 'news',
+      locale: 'en',
+    }),
   );
 
   const localNewsArr: any[] = Array.isArray(localNewsJson?.data) ? localNewsJson.data : [];
@@ -270,14 +296,11 @@ export const getStaticProps = async (context: any) => {
     : null;
 
   // Fetch partners data
-  const partnersJson = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/partners?fields[0]=name&fields[1]=url' +
+  const partnersJson = await strapiFetchJson<{ data?: Partner[] }>(
+    '/api/partners?fields[0]=name&fields[1]=url' +
       '&populate[image][fields][0]=url&populate[image][fields][1]=width&populate[image][fields][2]=height' +
       '&populate[image_dark][fields][0]=url&populate[image_dark][fields][1]=width&populate[image_dark][fields][2]=height',
-  )
-    .then((response) => response.json())
-    .catch((err) => null);
+  );
 
   const partners = partnersJson?.data ?? [];
 

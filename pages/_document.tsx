@@ -6,7 +6,6 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document';
-import Script from 'next/script';
 
 interface MyDocumentProps {
   nonce?: string;
@@ -65,70 +64,19 @@ class MyDocument extends Document<MyDocumentProps> {
         <Head>
           {/* Expose nonce for client-side script usage as a last resort fallback */}
           <meta name="csp-nonce" content={nonce || ''} />
-          {/* Set theme class before first paint to avoid dark/light swaps causing CLS */}
-          <Script src="/theme-init.js" strategy="beforeInteractive" nonce={nonce} />
+          <script
+            nonce={nonce}
+            dangerouslySetInnerHTML={{
+              __html:
+                "(function(){try{var d=document.documentElement,t=localStorage.getItem('theme'),m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches,dk=t==='dark'||(!t&&m);if(dk){d.classList.add('dark');d.style.colorScheme='dark'}else{d.classList.remove('dark');d.style.colorScheme='light'}var mob=window.matchMedia&&window.matchMedia('(max-width: 767px)').matches,l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/home/hero-poster-'+(dk?'dark':'light')+(mob?'-mobile':'')+'.webp';document.head.appendChild(l)}catch(e){}})();",
+            }}
+          />
           <link
             rel="preconnect"
             href="https://ergo-platform-cms-nvbpfiue6q-ez.a.run.app"
             crossOrigin=""
           />
           <link rel="dns-prefetch" href="https://storage.googleapis.com" />
-          <link
-            rel="preload"
-            href="/fonts/Vinila-Rg-Ex.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Vinila-Bd-Ex.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Vinila-Lt-Ex.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/roboto-v29-latin-regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/home/hero-poster-dark.webp"
-            as="image"
-            type="image/webp"
-            media="(prefers-color-scheme: dark) and (min-width: 768px)"
-          />
-          <link
-            rel="preload"
-            href="/assets/home/hero-poster-light.webp"
-            as="image"
-            type="image/webp"
-            media="(prefers-color-scheme: light) and (min-width: 768px)"
-          />
-          <link
-            rel="preload"
-            href="/assets/home/hero-poster-dark-mobile.webp"
-            as="image"
-            type="image/webp"
-            media="(prefers-color-scheme: dark)"
-          />
-          <link
-            rel="preload"
-            href="/assets/home/hero-poster-light-mobile.webp"
-            as="image"
-            type="image/webp"
-            media="(prefers-color-scheme: light)"
-          />
         </Head>
         <body>
           <Main />

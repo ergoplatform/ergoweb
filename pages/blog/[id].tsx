@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import { translateFields, aiProviderAvailable } from '../../utils/aiTranslation';
 import { getCachedTranslation, setCachedTranslation } from '../../utils/translationCache';
 import { ensureLocalizationFromCanonical } from '../../utils/strapiTranslations';
+import { strapiFetchJson } from '../../utils/strapiClient';
 
 type Props = {
   post?: any;
@@ -192,20 +193,14 @@ export async function getServerSideProps(context: any) {
   const strapiLocale = locale === 'cn' ? 'zh' : locale;
 
   // Try to fetch localized post first
-  const localizedRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?&filters[permalink][$eq]=' +
-      permalink +
-      '&populate=*&locale=' +
-      strapiLocale,
-  ).then((response) => response.json());
+  const localizedRes = await strapiFetchJson<any>(
+    `/api/posts?&filters[permalink][$eq]=${permalink}&populate=*&locale=${strapiLocale}`,
+  );
 
   // Fetch posts list for current locale (unchanged)
-  const postsRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=' +
-      strapiLocale,
-  ).then((response) => response.json());
+  const postsRes = await strapiFetchJson<any>(
+    `/api/posts?sort=date:desc&pagination[page]=1&pagination[pageSize]=21&populate=*&filters[type][$eq]=blog&locale=${strapiLocale}`,
+  );
 
   if (localizedRes?.data?.length > 0) {
     return {
@@ -215,13 +210,9 @@ export async function getServerSideProps(context: any) {
 
   // Fallback: fetch canonical (en) and AI-translate fields, cache, and serve
   const canonicalLocale = 'en';
-  const canonicalRes = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/posts?&filters[permalink][$eq]=' +
-      permalink +
-      '&populate=*&locale=' +
-      canonicalLocale,
-  ).then((response) => response.json());
+  const canonicalRes = await strapiFetchJson<any>(
+    `/api/posts?&filters[permalink][$eq]=${permalink}&populate=*&locale=${canonicalLocale}`,
+  );
 
   if (!canonicalRes?.data || canonicalRes.data.length === 0) {
     return {
@@ -276,13 +267,9 @@ export async function getServerSideProps(context: any) {
           });
           if (persisted) {
             // Re-fetch the just-created localization and serve it (no AI banner)
-            const persistedRes = await fetch(
-              process.env.NEXT_PUBLIC_STRAPI_API +
-                '/api/posts?&filters[permalink][$eq]=' +
-                permalink +
-                '&populate=*&locale=' +
-                strapiLocale,
-            ).then((response) => response.json());
+            const persistedRes = await strapiFetchJson<any>(
+              `/api/posts?&filters[permalink][$eq]=${permalink}&populate=*&locale=${strapiLocale}`,
+            );
             if (persistedRes?.data?.length > 0) {
               // Ensure media relations (image/blogPhoto) are present; fallback to canonical if missing
               const persistedPost = persistedRes.data[0];

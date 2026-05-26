@@ -1,3 +1,7 @@
+import { strapiFetch } from './strapiClient';
+import type { StrapiResponse } from './strapiClient';
+import { toStrapiLocale } from './locales';
+
 /**
  * Strapi localization helpers (v4)
  *
@@ -5,51 +9,16 @@
  * and editable by humans later.
  */
 
-const STRAPI_API = process.env.NEXT_PUBLIC_STRAPI_API as string;
 const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN as string | undefined;
-
-type StrapiResponse<T = any> = {
-  data: T;
-  meta?: any;
-  error?: any;
-};
 
 function hasStrapiToken(): boolean {
   return Boolean(STRAPI_API_TOKEN);
-}
-
-async function strapiFetch(path: string, init?: RequestInit, timeoutMs = 15000): Promise<Response> {
-  if (!STRAPI_API) {
-    throw new Error('Missing NEXT_PUBLIC_STRAPI_API');
-  }
-  const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
-  };
-  if (STRAPI_API_TOKEN) {
-    headers['Authorization'] = `Bearer ${STRAPI_API_TOKEN}`;
-  }
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    return await fetch(`${STRAPI_API}${path}`, {
-      ...init,
-      headers: {
-        ...headers,
-        ...(init?.headers || {}),
-      },
-      signal: controller.signal,
-    });
-  } finally {
-    clearTimeout(timer);
-  }
 }
 
 export async function getPostByPermalink(
   permalink: string,
   locale: string,
 ): Promise<StrapiResponse> {
-  // Map app locale to Strapi locale (cn -> zh)
-  const toStrapiLocale = (l: string) => (l === 'cn' ? 'zh' : l);
   const params = new URLSearchParams();
   params.set('filters[permalink][$eq]', permalink);
   params.set('populate', '*');

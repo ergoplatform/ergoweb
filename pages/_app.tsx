@@ -1,17 +1,19 @@
 import '../styles/globals.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import NextNProgress from 'nextjs-progressbar';
 import type { AppProps } from 'next/app';
 import English from '../content/compiled-locales/en.json';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { type ComponentType, type PropsWithChildren, useEffect, useState } from 'react';
 import { IntlProvider } from 'react-intl';
-import dynamic from 'next/dynamic';
-const ThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
-  ssr: false,
-});
+import { ThemeProvider as NextThemeProvider, type ThemeProviderProps } from 'next-themes';
 import Script from 'next/script';
 import ClientOnly from '../components/ClientOnly';
 import RouteSpinner from '../components/RouteSpinner';
+
+const ThemeProvider = NextThemeProvider as ComponentType<PropsWithChildren<ThemeProviderProps>>;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -19,7 +21,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   // Env-based switch to skip third-party during local and preview builds
   const isDev = process.env.NODE_ENV === 'development';
   const isPreview = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
-  const skipThirdParty = isDev || isPreview;
+  const isLocalBrowser =
+    typeof window !== 'undefined' &&
+    ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
+  const skipThirdParty = isDev || isPreview || isLocalBrowser;
   // Allow forcing Chatbase in dev/preview by setting NEXT_PUBLIC_ENABLE_CHATBASE=1
   const chatbaseOverride = process.env.NEXT_PUBLIC_ENABLE_CHATBASE === '1';
   // GTM (lazy and gated behind enableThirdParty)
@@ -264,7 +269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </>
         )}
       </ClientOnly>
-      <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
+      <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
         <IntlProvider locale={shortLocale} messages={messages} onError={() => null}>
           <RouteSpinner />
           <NextNProgress color="#e74c3c" />

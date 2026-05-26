@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { DEFAULT_LOCALE, toSiteLocale } from './utils/locales';
 
 const PUBLIC_FILE = /\.(.*)$/;
-const DEFAULT_LOCALE = 'en';
 
 export function middleware(req: NextRequest) {
   const isPublicFile = PUBLIC_FILE.test(req.nextUrl.pathname);
@@ -11,8 +11,6 @@ export function middleware(req: NextRequest) {
   const isDefaultLocale = req.nextUrl.locale === 'default';
 
   if (!isPublicFile && !isApi && !isRss && !isImage && isDefaultLocale) {
-    // Supported locales should mirror next.config.js (excluding "default")
-    const supported = ['en', 'de', 'it', 'hu', 'ru', 'cn', 'id', 'tr'];
     const accept = req.headers.get('accept-language') || '';
 
     const best = (() => {
@@ -32,15 +30,7 @@ export function middleware(req: NextRequest) {
         const lower = lang.toLowerCase();
         const base = lower.split('-')[0];
 
-        // Map Chinese variants to "cn" (site locale)
-        if (lower.startsWith('zh')) return 'cn';
-
-        // Exact match
-        if (supported.includes(lower)) return lower;
-        // Base language match
-        if (supported.includes(base)) return base;
-
-        return null;
+        return toSiteLocale(lower) || toSiteLocale(base);
       };
 
       for (const cand of candidates) {
@@ -61,11 +51,15 @@ export function middleware(req: NextRequest) {
         IT: 'it',
         HU: 'hu',
         RU: 'ru',
-        CN: 'cn',
-        TW: 'cn',
-        HK: 'cn',
+        CN: 'zh',
+        TW: 'zh',
+        HK: 'zh',
         ID: 'id',
         TR: 'tr',
+        ES: 'es',
+        PL: 'pl',
+        PT: 'pt',
+        SK: 'sk',
       };
       const headerCountry = (
         req.headers.get('x-vercel-ip-country') ||

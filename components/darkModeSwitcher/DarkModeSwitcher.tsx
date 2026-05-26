@@ -6,20 +6,10 @@ import classNames from 'classnames';
 import { useLoaded } from '../../utils/useLoaded';
 
 export default function DarkModeSwitch() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const loaded = useLoaded();
 
-  useEffect(() => {
-    const stored = window.localStorage.getItem('theme');
-    if (stored === 'dark') {
-      setTheme('dark');
-    } else {
-      // Default to light when no preference is stored or any other value
-      setTheme('light');
-    }
-  }, [setTheme]);
-
-  const toggleSwitch = () => setTheme(theme === 'light' ? 'dark' : 'light');
+  const toggleSwitch = () => setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
 
   const spring = {
     type: 'tween',
@@ -28,16 +18,16 @@ export default function DarkModeSwitch() {
   };
 
   useEffect(() => {
-    if (theme === 'light') {
+    if (resolvedTheme === 'light') {
       document.documentElement.classList.remove('dark');
       window.localStorage.setItem('theme', 'light');
     }
 
-    if (theme === 'dark') {
+    if (resolvedTheme === 'dark') {
       document.documentElement.classList.add('dark');
       window.localStorage.setItem('theme', 'dark');
     }
-  }, [theme]);
+  }, [resolvedTheme]);
 
   return (
     <div
@@ -45,7 +35,7 @@ export default function DarkModeSwitch() {
       className={classNames(
         `flex-start flex h-[40px] w-[80px] rounded-[50px] bg-zinc-100  shadow-inner hover:cursor-pointer dark:bg-black `,
         {
-          'place-content-end': loaded && theme === 'light',
+          'place-content-end': loaded && resolvedTheme === 'light',
         },
       )}
     >
@@ -55,7 +45,7 @@ export default function DarkModeSwitch() {
         transition={spring}
       >
         <motion.div>
-          {loaded && theme === 'light' ? (
+          {loaded && resolvedTheme === 'light' ? (
             <RiSunFill className="h-6 w-6 text-orange-500" />
           ) : (
             <RiMoonClearFill className="h-6 w-6 text-slate-200" />

@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import dynamic from 'next/dynamic';
 import Wallets from '../components/getErg/Wallets';
 import GetErgHero from '../components/getErg/GetErgHero';
+import { strapiFetchJson } from '../utils/strapiClient';
 const Exchanges = dynamic(() => import('../components/getErg/Exchanges'), {
   ssr: false,
 });
@@ -57,14 +58,10 @@ export default function GetErg(props: Props) {
 }
 
 export const getStaticProps = async (context: any) => {
-  const exchanges = await fetch(
-    process.env.NEXT_PUBLIC_STRAPI_API +
-      '/api/exchanges?sort=order:asc&populate=*&locale=' +
-      context.locale,
-  )
-    .then((response) => response.json())
-    .then((response) => response.data)
-    .catch((err) => null);
+  const exchangesJson = await strapiFetchJson<{ data?: any[] }>(
+    `/api/exchanges?sort=order:asc&populate=*&locale=${context.locale}`,
+  );
+  const exchanges = exchangesJson?.data ?? null;
   const price = await fetch(
     'https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=USD',
   )

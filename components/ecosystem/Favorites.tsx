@@ -15,7 +15,7 @@ export default function Favorites(props: Props) {
     let mounted = true;
     Promise.all([
       import('swiper/react').then((m) => ({ Swiper: m.Swiper, SwiperSlide: m.SwiperSlide })),
-      import('swiper').then((m) => ({ Pagination: m.Pagination })),
+      import('swiper/modules').then((m) => ({ Pagination: m.Pagination })),
     ]).then(([a, b]) => {
       if (mounted) setMods({ ...a, ...b });
     });
@@ -38,7 +38,7 @@ export default function Favorites(props: Props) {
             <FormattedMessage defaultMessage="OUR FAVORITES" id="components.ourFavorites.heading" />
           </p>
           <ErgoRaffle viewBox="0 0 211 63" className="h-28 w-80 mb-8 pl-8" />
-          <p className="text-[16px] lg:text-[18px] text-[#807e7e] dark:text-[#807e7e] mb-8 pl-8">
+          <p className="text-[16px] lg:text-[18px] text-[#666666] dark:text-[#666666] mb-8 pl-8">
             <FormattedMessage
               defaultMessage='ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a "raffle reward".'
               id="components.ergoRaffle.description"
@@ -118,7 +118,7 @@ export default function Favorites(props: Props) {
                     <p className="font-vinila-extended-bold text-[clamp(28px,7vw,48px)] mb-2 heading-balance">
                       {post.attributes.title}
                     </p>
-                    <p className="text-[14px] text-[#807e7e] dark:text-[#807e7e] mb-4">
+                    <p className="text-[14px] text-[#666666] dark:text-[#666666] mb-4">
                       {post.attributes.description}
                     </p>
                     <div>
