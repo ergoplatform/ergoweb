@@ -141,6 +141,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             if (!cancelled) setMessages(m);
             return;
           }
+          case 'jv': {
+            const m = (await import('../content/compiled-locales/jv.json')).default;
+            if (!cancelled) setMessages(m);
+            return;
+          }
           case 'hu': {
             const m = (await import('../content/compiled-locales/hu.json')).default;
             if (!cancelled) setMessages(m);
