@@ -43,6 +43,8 @@ function normalizeSiteLocaleToOpenAI(locale: string): string {
       return 'Italian';
     case 'es':
       return 'Spanish';
+    case 'jv':
+      return 'Basa Jawa';
     case 'pl':
       return 'Polish';
     case 'pt':
@@ -77,6 +79,8 @@ function normalizeSiteLocaleToDeepL(locale: string): { source?: string; target: 
       return { target: 'IT' };
     case 'es':
       return { target: 'ES' };
+    case 'jv':
+      return { target: 'JV' };
     case 'pl':
       return { target: 'PL' };
     case 'pt':
