@@ -20,6 +20,7 @@ export const LOCALE_META: Record<string, LocaleMeta> = {
   it: { nativeName: 'Italiano', englishName: 'Italian', flag: 'it' },
   pl: { nativeName: 'Polski', englishName: 'Polish', flag: 'pl' },
   pt: { nativeName: 'Português', englishName: 'Portuguese', flag: 'pt' },
+  jv: { nativeName: 'Basa Jawa', englishName: 'javanese', flag: 'id' },
   sk: { nativeName: 'Slovenčina', englishName: 'Slovak', flag: 'sk' },
   zh: {
     nativeName: '简体中文',
