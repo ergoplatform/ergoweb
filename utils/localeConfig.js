@@ -1,4 +1,4 @@
-const SUPPORTED_LOCALES = ['en', 'es', 'de', 'it', 'pl', 'pt', 'sk', 'zh', 'hu', 'ru', 'id', 'tr'];
+const SUPPORTED_LOCALES = ['en', 'es', 'de', 'it', 'pl', 'pt', 'sk', 'zh', 'hu', 'ru', 'id', 'jv','tr'];
 
 const DEFAULT_LOCALE = 'en';
 const NEXT_I18N_LOCALES = ['default', ...SUPPORTED_LOCALES];
